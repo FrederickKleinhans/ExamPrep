@@ -1,0 +1,44 @@
+{
+  "certifications": [
+    {
+      "id": "az-900",
+      "name": "Microsoft Azure Fundamentals",
+      "provider": "Microsoft",
+      "examCode": "AZ-900",
+      "version": "2024-01",
+      "questionCount": 40,
+      "passingScore": 70,
+      "timeLimitMinutes": 60,
+      "topics": [
+        {
+          "id": "describe-cloud-concepts",
+          "name": "Describe Cloud Concepts",
+          "weight": 25
+        },
+        {
+          "id": "describe-azure-architecture",
+          "name": "Describe Azure Architecture and Services",
+          "weight": 35
+        },
+        {
+          "id": "describe-azure-management",
+          "name": "Describe Azure Management and Governance",
+          "weight": 30
+        },
+        {
+          "id": "describe-azure-identity",
+          "name": "Describe Azure Identity, Access, and Security",
+          "weight": 10
+        }
+      ],
+      "icon": "/icons/azure.svg",
+      "resources": [
+        { "title": "Microsoft Learn — AZ-900 Learning Path", "url": "https://learn.microsoft.com/en-us/training/paths/az-900-describe-cloud-concepts/" },
+        { "title": "AZ-900 Study Guide (Official)", "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900" },
+        { "title": "Azure Fundamentals — Free Practice Assessment", "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification" },
+        { "title": "John Savill's AZ-900 Cram (YouTube)", "url": "https://www.youtube.com/watch?v=pY0LnKiDwRA" },
+        { "title": "Azure Documentation", "url": "https://learn.microsoft.com/en-us/azure/" }
+      ]
+    }
+  ]
+}
