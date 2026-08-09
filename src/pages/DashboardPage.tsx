@@ -9,6 +9,7 @@ import {
   ClipboardCheck,
   ChevronRight,
   ExternalLink,
+  AlertCircle,
 } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { AnalyticsService } from '../services/AnalyticsService';
@@ -45,6 +46,7 @@ export function DashboardPage() {
   );
   const strongest = AnalyticsService.getStrongestTopics(topicAccuracies);
   const weakest = AnalyticsService.getWeakestTopics(topicAccuracies);
+  const missedQuestions = AnalyticsService.getMissedQuestions(questionBank.questions, progress.questionStats);
   const recentExams = progress.examHistory.slice(-5).reverse();
 
   return (
@@ -123,6 +125,49 @@ export function DashboardPage() {
           <p className="text-xs text-[var(--text-secondary)] mt-1">
             {progress.examHistory.filter((e) => e.passed).length} passed
           </p>
+        </div>
+      </div>
+
+      {/* Review wrong answers */}
+      <div className="glass-card rounded-2xl p-5">
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h3 className="text-sm font-semibold text-[var(--text-primary)] flex items-center gap-2">
+              <AlertCircle className="w-4 h-4 text-[var(--error)]" aria-hidden="true" />
+              Review Wrong Answers
+            </h3>
+            <p className="text-xs text-[var(--text-secondary)] mt-1">
+              Revisit questions you answered incorrectly most often.
+            </p>
+          </div>
+          <button
+            onClick={() => navigate('/analytics')}
+            className="text-xs text-[var(--accent)] hover:text-[var(--accent-hover)] flex items-center gap-1"
+          >
+            See details <ChevronRight className="w-3 h-3" />
+          </button>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div className="p-4 rounded-2xl bg-[var(--bg-tertiary)]">
+            <div className="text-xs text-[var(--text-secondary)] uppercase tracking-wide font-medium">Missed Questions</div>
+            <div className="text-2xl font-bold text-[var(--error)] mt-2">{missedQuestions.length}</div>
+          </div>
+          <div className="p-4 rounded-2xl bg-[var(--bg-tertiary)]">
+            <div className="text-xs text-[var(--text-secondary)] uppercase tracking-wide font-medium">Most Recent</div>
+            <div className="text-lg font-semibold text-[var(--text-primary)] mt-2">
+              {missedQuestions[0]?.id ?? 'None'}
+            </div>
+          </div>
+          <div className="p-4 rounded-2xl bg-[var(--bg-tertiary)]">
+            <div className="text-xs text-[var(--text-secondary)] uppercase tracking-wide font-medium">Top Weak Topic</div>
+            <div className="text-lg font-semibold text-[var(--text-primary)] mt-2">
+              {weakest[0]?.topicName ?? 'N/A'}
+            </div>
+          </div>
+          <div className="p-4 rounded-2xl bg-[var(--bg-tertiary)]">
+            <div className="text-xs text-[var(--text-secondary)] uppercase tracking-wide font-medium">Review Now</div>
+            <div className="text-lg font-semibold text-[var(--accent)] mt-2">Go to analytics</div>
+          </div>
         </div>
       </div>
 

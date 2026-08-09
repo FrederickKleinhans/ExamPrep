@@ -144,6 +144,7 @@ export interface UserProgress {
   examHistory: ExamResult[];
   weakTopics: string[];
   bookmarks: string[];
+  studyGroupIndex?: Record<string, number>;
 }
 
 export interface StudyStreak {

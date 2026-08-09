@@ -18,6 +18,11 @@ export function StudyPage() {
     getNextStudyQuestion,
     submitStudyAnswer,
     resetStudySession,
+    studyFilter,
+    setStudyFilter,
+    studySessionLimit,
+    setStudySessionLimit,
+    isStudyExhausted,
   } = useStore();
 
   useEffect(() => {
@@ -38,9 +43,8 @@ export function StudyPage() {
     );
   }
 
-  const totalQuestions = questionBank.questions.length;
   const answeredThisSession = studySessionHistory.length;
-  const sessionComplete = !currentStudyQuestion && answeredThisSession > 0;
+  const sessionComplete = answeredThisSession > 0 && (answeredThisSession >= studySessionLimit || isStudyExhausted);
 
   return (
     <div className="space-y-4 animate-fade-in">
@@ -54,8 +58,43 @@ export function StudyPage() {
           <p className="text-base text-[var(--text-secondary)] mt-1">
             Adaptive practice — questions tailored to your weak areas
           </p>
+          <p className="text-xs text-[var(--text-secondary)] italic mt-1">
+            Disclaimer: These are practice questions created from public Microsoft documentation and community sources — they are not official Microsoft exam items.
+          </p>
         </div>
-        {answeredThisSession > 0 && (
+        <div className="flex items-center gap-3">
+          <div className="text-sm text-[var(--text-secondary)] hidden sm:block">Filter:</div>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setStudyFilter('all')}
+              className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studyFilter === 'all' ? 'bg-[var(--accent)] text-white' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'}`}>
+              Everything
+            </button>
+            <button
+              onClick={() => setStudyFilter('cloud')}
+              className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studyFilter === 'cloud' ? 'bg-[var(--accent)] text-white' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'}`}>
+              Cloud Concepts / Architecture
+            </button>
+            <button
+              onClick={() => setStudyFilter('management')}
+              className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studyFilter === 'management' ? 'bg-[var(--accent)] text-white' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'}`}>
+              Management & Governance
+            </button>
+          </div>
+
+          <div className="text-sm text-[var(--text-secondary)] hidden sm:block ml-3">Session:</div>
+          <div className="flex gap-2">
+            {[30,40,50].map((n) => (
+              <button
+                key={n}
+                onClick={() => setStudySessionLimit(n)}
+                className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studySessionLimit === n ? 'bg-[var(--accent)] text-white' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'}`}>
+                {n}
+              </button>
+            ))}
+          </div>
+
+          {answeredThisSession > 0 && (
           <button
             onClick={resetStudySession}
             className="px-3 py-2 rounded-lg text-sm text-[var(--text-secondary)] 
@@ -64,19 +103,20 @@ export function StudyPage() {
             <RotateCcw className="w-4 h-4" aria-hidden="true" />
             Reset Session
           </button>
-        )}
+          )}
+        </div>
       </div>
 
       {/* Progress bar */}
       <div className="glass-card rounded-2xl p-4">
         <div className="flex items-center justify-between text-xs text-[var(--text-secondary)] mb-2">
           <span>Session progress</span>
-          <span>{answeredThisSession} / {totalQuestions} answered this session</span>
+          <span>{answeredThisSession} / {studySessionLimit} answered this session</span>
         </div>
         <div className="w-full h-2 bg-[var(--bg-tertiary)] rounded-full overflow-hidden">
           <div
             className="h-full bg-[var(--accent)] rounded-full transition-all duration-500"
-            style={{ width: `${(answeredThisSession / totalQuestions) * 100}%` }}
+            style={{ width: `${Math.min(100, (answeredThisSession / studySessionLimit) * 100)}%` }}
           />
         </div>
       </div>
@@ -86,9 +126,11 @@ export function StudyPage() {
         <div className="glass-card rounded-2xl p-8 text-center">
           <CheckCircle className="w-12 h-12 text-[var(--success)] mx-auto mb-4" aria-hidden="true" />
           <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">Session Complete!</h2>
-          <p className="text-[var(--text-secondary)] mb-6">
-            You've answered all {totalQuestions} questions in this session.
-          </p>
+            <p className="text-[var(--text-secondary)] mb-6">
+              {answeredThisSession >= studySessionLimit
+                ? `You've answered all ${studySessionLimit} questions in this session.`
+                : `No more questions available for this selection. You've answered ${answeredThisSession} question${answeredThisSession !== 1 ? 's' : ''}.`}
+            </p>
           <button
             onClick={resetStudySession}
             className="px-6 py-3 rounded-lg bg-[var(--accent)] text-white font-semibold text-sm

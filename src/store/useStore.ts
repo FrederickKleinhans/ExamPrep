@@ -24,6 +24,10 @@ interface Store {
   // Study Mode
   studySessionHistory: string[];
   currentStudyQuestion: Question | null;
+  studyFilter: 'all' | 'cloud' | 'management';
+  studyGroup: number;
+  studySessionLimit: number;
+  isStudyExhausted: boolean;
   showExplanation: boolean;
   selectedAnswer: string | string[] | null;
   isAnswerCorrect: boolean | null;
@@ -34,6 +38,9 @@ interface Store {
 
   // Actions
   initialize: () => Promise<void>;
+  setStudyFilter: (filter: 'all' | 'cloud' | 'management') => void;
+  setStudySessionLimit: (limit: number) => void;
+  rotateStudyGroup: () => void;
   selectCertification: (certId: string) => Promise<void>;
   refreshProgress: () => void;
 
@@ -63,6 +70,10 @@ export const useStore = create<Store>((set, get) => ({
 
   studySessionHistory: [],
   currentStudyQuestion: null,
+  studyFilter: 'all',
+  studyGroup: 0,
+  studySessionLimit: 30,
+  isStudyExhausted: false,
   showExplanation: false,
   selectedAnswer: null,
   isAnswerCorrect: null,
@@ -77,7 +88,12 @@ export const useStore = create<Store>((set, get) => ({
       const progress = ProgressService.getProgress();
       const certId = progress.selectedCertification || manifest.certifications[0]?.id;
       const questionBank = certId ? await DataLoader.loadQuestionBank(certId) : null;
-      set({ manifest, questionBank, progress, isLoading: false });
+      // Rotate study group on load so each reload cycles groups
+      let studyGroup = 0;
+      if (certId) {
+        studyGroup = ProgressService.incrementStudyGroupIndex(certId);
+      }
+      set({ manifest, questionBank, progress, isLoading: false, studyGroup, isStudyExhausted: false });
     } catch (e) {
       set({ error: (e as Error).message, isLoading: false });
     }
@@ -95,6 +111,8 @@ export const useStore = create<Store>((set, get) => ({
         isLoading: false,
         studySessionHistory: [],
         currentStudyQuestion: null,
+        studyFilter: 'all',
+        isStudyExhausted: false,
         showExplanation: false,
         selectedAnswer: null,
         isAnswerCorrect: null,
@@ -108,20 +126,87 @@ export const useStore = create<Store>((set, get) => ({
     set({ progress: ProgressService.getProgress() });
   },
 
+  setStudyFilter: (filter: 'all' | 'cloud' | 'management') => {
+    set({
+      studyFilter: filter,
+      studySessionHistory: [],
+      currentStudyQuestion: null,
+      showExplanation: false,
+      selectedAnswer: null,
+      isAnswerCorrect: null,
+      isStudyExhausted: false,
+    });
+  },
+
+  setStudySessionLimit: (limit: number) => {
+    set({
+      studySessionLimit: limit,
+      studySessionHistory: [],
+      currentStudyQuestion: null,
+      showExplanation: false,
+      selectedAnswer: null,
+      isAnswerCorrect: null,
+      isStudyExhausted: false,
+    });
+  },
+
+  rotateStudyGroup: () => {
+    const { progress } = get();
+    const certId = progress.selectedCertification;
+    if (!certId) return;
+    const next = ProgressService.incrementStudyGroupIndex(certId);
+    set({ studyGroup: next, studySessionHistory: [], currentStudyQuestion: null, isStudyExhausted: false });
+  },
+
   getNextStudyQuestion: () => {
-    const { questionBank, progress, studySessionHistory } = get();
+    const { questionBank, progress, studySessionHistory, studyFilter, studyGroup, studySessionLimit } = get();
     if (!questionBank) return;
 
+    // If we've reached the session limit, mark session complete (no current question)
+    if (studySessionLimit && studySessionHistory.length >= studySessionLimit) {
+      set({ currentStudyQuestion: null, isStudyExhausted: true });
+      return;
+    }
+    // Apply study filter (cloud / management / all)
+    const filtered = questionBank.questions.filter((q) => {
+      if (studyFilter === 'all') return true;
+      if (studyFilter === 'cloud') {
+        return (
+          q.topicId.includes('cloud') ||
+          q.topicId.includes('architecture') ||
+          q.topicId.includes('service')
+        );
+      }
+      // management
+      return (
+        q.topicId.includes('management') ||
+        q.topicId.includes('govern') ||
+        q.topicId.includes('identity')
+      );
+    });
+
+    const candidateQuestions = filtered.length > 0 ? filtered : questionBank.questions;
+
+    // Partition into 3 groups and pick the group for studyGroup
+    const grouped = candidateQuestions.filter((_, idx) => idx % 3 === studyGroup);
+    const questionsForSession = grouped.length > 0 ? grouped : candidateQuestions;
+
     const weakTopics = AdaptiveEngine.computeWeakTopics(
-      questionBank.questions,
+      questionsForSession,
       progress.questionStats
     );
     const nextQuestion = AdaptiveEngine.selectNextQuestion(
-      questionBank.questions,
+      questionsForSession,
       progress.questionStats,
       weakTopics,
       studySessionHistory
     );
+
+    if (!nextQuestion) {
+      // No available question (filtered/group exhausted)
+      set({ currentStudyQuestion: null, isStudyExhausted: true });
+      return;
+    }
 
     set({
       currentStudyQuestion: nextQuestion,
@@ -129,6 +214,7 @@ export const useStore = create<Store>((set, get) => ({
       selectedAnswer: null,
       isAnswerCorrect: null,
       questionStartTime: Date.now(),
+      isStudyExhausted: false,
     });
   },
 
@@ -151,6 +237,13 @@ export const useStore = create<Store>((set, get) => ({
   },
 
   resetStudySession: () => {
+    const progress = ProgressService.getProgress();
+    const certId = progress.selectedCertification;
+    if (certId) {
+      const next = ProgressService.incrementStudyGroupIndex(certId);
+      set({ studyGroup: next, isStudyExhausted: false });
+    }
+
     set({
       studySessionHistory: [],
       currentStudyQuestion: null,

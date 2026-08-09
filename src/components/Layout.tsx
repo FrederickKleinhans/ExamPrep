@@ -93,8 +93,8 @@ export function Layout() {
                       {isActive && (
                         <span className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-4 rounded-r-full bg-[var(--accent)]" />
                       )}
-                      <Icon className="w-4 h-4 shrink-0 ml-0.5 lg:ml-0" aria-hidden="true" />
-                      <span className="hidden lg:block text-sm font-medium">{label}</span>
+                      <Icon className="w-5 h-5 shrink-0 ml-0.5 lg:ml-0" aria-hidden="true" />
+                      <span className="hidden lg:block text-base font-medium">{label}</span>
                     </>
                   )}
                 </NavLink>

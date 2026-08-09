@@ -19,6 +19,7 @@ function getDefaultProgress(): UserProgress {
     examHistory: [],
     weakTopics: [],
     bookmarks: [],
+    studyGroupIndex: {},
   };
 }
 
@@ -124,6 +125,23 @@ export class ProgressService {
       progress.bookmarks.push(questionId);
     }
     this.saveProgress(progress);
+  }
+
+  static getStudyGroupIndex(certId: string): number {
+    const progress = this.getProgress();
+    if (!progress.studyGroupIndex) progress.studyGroupIndex = {};
+    const idx = progress.studyGroupIndex[certId];
+    return typeof idx === 'number' ? idx : 0;
+  }
+
+  static incrementStudyGroupIndex(certId: string): number {
+    const progress = this.getProgress();
+    if (!progress.studyGroupIndex) progress.studyGroupIndex = {};
+    const current = typeof progress.studyGroupIndex[certId] === 'number' ? progress.studyGroupIndex[certId] : 0;
+    const next = (current + 1) % 3;
+    progress.studyGroupIndex[certId] = next;
+    this.saveProgress(progress);
+    return next;
   }
 
   static isBookmarked(questionId: string): boolean {
