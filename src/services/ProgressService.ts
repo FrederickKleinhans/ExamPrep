@@ -58,12 +58,27 @@ export class ProgressService {
     timeMs: number,
     confidence: Confidence = 'medium'
   ): void {
+    // Backwards-compatible wrapper that records a 1/1 point for boolean correctness
+    const earned = isCorrect ? 1 : 0;
+    this.recordAnswerPoints(questionId, earned, 1, timeMs, confidence);
+  }
+
+  /**
+   * Record an answer using earned/total points (supports partial credit).
+   */
+  static recordAnswerPoints(
+    questionId: string,
+    earned: number,
+    total: number,
+    timeMs: number,
+    confidence: Confidence = 'medium'
+  ): void {
     const progress = this.getProgress();
-    const existing = progress.questionStats[questionId];
+    const existing = progress.questionStats[questionId] as (QuestionStat & { pointsEarned?: number; pointsTotal?: number }) | undefined;
 
     if (existing) {
       existing.attempts += 1;
-      if (isCorrect) {
+      if (earned >= total) {
         existing.correct += 1;
       } else {
         existing.incorrect += 1;
@@ -73,16 +88,21 @@ export class ProgressService {
         (existing.averageTimeMs * (existing.attempts - 1) + timeMs) / existing.attempts
       );
       existing.confidence = confidence;
+
+      existing.pointsEarned = (existing.pointsEarned || 0) + earned;
+      existing.pointsTotal = (existing.pointsTotal || 0) + total;
     } else {
-      const stat: QuestionStat = {
+      const stat: QuestionStat & { pointsEarned?: number; pointsTotal?: number } = {
         attempts: 1,
-        correct: isCorrect ? 1 : 0,
-        incorrect: isCorrect ? 0 : 1,
+        correct: earned >= total ? 1 : 0,
+        incorrect: earned >= total ? 0 : 1,
         lastAttempted: new Date().toISOString(),
         averageTimeMs: timeMs,
         confidence,
       };
-      progress.questionStats[questionId] = stat;
+      stat.pointsEarned = earned;
+      stat.pointsTotal = total;
+      progress.questionStats[questionId] = stat as QuestionStat;
     }
 
     this.updateStreak(progress);

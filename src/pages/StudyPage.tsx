@@ -143,7 +143,7 @@ export function StudyPage() {
 
       {/* Current question */}
       {currentStudyQuestion && (
-        <div>
+        <div className="mb-6">
           <div className="text-xs text-[var(--text-secondary)] mb-3">
             Question {answeredThisSession + 1}
           </div>

@@ -162,6 +162,9 @@ export interface QuestionStat {
   lastAttempted: string;
   averageTimeMs: number;
   confidence: Confidence;
+  // Optional per-selection points accumulated across study attempts
+  pointsEarned?: number;
+  pointsTotal?: number;
 }
 
 export interface ExamResult {

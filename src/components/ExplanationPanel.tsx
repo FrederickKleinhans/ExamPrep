@@ -51,7 +51,7 @@ export function ExplanationPanel({ explanation, isCorrect, onNext }: Props) {
           onClick={onNext}
           className="mt-4 w-full py-3 px-6 rounded-xl font-semibold text-base transition-all duration-200
             bg-[var(--accent)] text-white hover:bg-[var(--accent-dark)] hover:shadow-[0_0_24px_-4px_var(--glow)] btn-glow
-            hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4
+            hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-2 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-2
             min-h-[44px] flex items-center justify-center gap-2"
         >
           Next Question

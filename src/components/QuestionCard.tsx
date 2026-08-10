@@ -351,7 +351,7 @@ export function QuestionCard({
           disabled={!isSubmitEnabled()}
           className="w-full py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-200
             bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-cool)] text-white hover:shadow-[0_0_24px_-4px_var(--glow)] btn-glow
-            hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4
+            hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-2 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-2
             disabled:opacity-40 disabled:cursor-not-allowed
             min-h-[44px]"
         >

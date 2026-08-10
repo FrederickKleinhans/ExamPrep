@@ -47,6 +47,38 @@ export function MatchingInput({ categories, items, assignments, showResult, onAs
     setDraggedItem(null);
   };
 
+  // Pointer-based touch support for mobile/tablets
+  const handlePointerDown = (e: React.PointerEvent, itemId: string) => {
+    if (disabled) return;
+    e.preventDefault();
+    setDraggedItem(itemId);
+
+    const onPointerMove = (_pe: PointerEvent) => {
+      // could add visual follow logic here in future
+    };
+
+    const onPointerUp = (pe: PointerEvent) => {
+      try {
+        const el = document.elementFromPoint(pe.clientX, pe.clientY);
+        if (el) {
+          const dropEl = (el as HTMLElement).closest('[data-category-id]') as HTMLElement | null;
+          if (dropEl) {
+            const catId = dropEl.getAttribute('data-category-id');
+            if (catId) onAssign(itemId, catId);
+          }
+        }
+      } catch (err) {
+        // ignore
+      }
+      setDraggedItem(null);
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', onPointerUp);
+    };
+
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', onPointerUp);
+  };
+
   // Fallback: select-based assignment for mobile
   const handleSelectAssign = (itemId: string, categoryId: string) => {
     if (disabled) return;
@@ -72,6 +104,7 @@ export function MatchingInput({ categories, items, assignments, showResult, onAs
                 draggable={!disabled}
                 onDragStart={() => handleDragStart(item.id)}
                 onDragEnd={handleDragEnd}
+                onPointerDown={(e) => handlePointerDown(e, item.id)}
                 className={`px-3 py-2 rounded-lg border border-[var(--warning)]/30 bg-[var(--warning)]/5
                   text-sm text-[var(--text-primary)] cursor-grab active:cursor-grabbing
                   hover:border-[var(--warning)] transition-colors
@@ -93,6 +126,7 @@ export function MatchingInput({ categories, items, assignments, showResult, onAs
           return (
             <div
               key={category.id}
+              data-category-id={category.id}
               onDragOver={handleDragOver}
               onDrop={() => handleDrop(category.id)}
               className={`p-3 rounded-xl border-2 border-dashed transition-colors min-h-[80px]
@@ -115,6 +149,7 @@ export function MatchingInput({ categories, items, assignments, showResult, onAs
                       draggable={!disabled}
                       onDragStart={() => handleDragStart(item.id)}
                       onDragEnd={handleDragEnd}
+                      onPointerDown={(e) => handlePointerDown(e, item.id)}
                       className={`px-3 py-1.5 rounded-lg border text-sm text-[var(--text-primary)] flex items-center justify-between
                         ${disabled ? 'cursor-default' : 'cursor-grab'} ${itemClass}`}
                     >

@@ -223,12 +223,13 @@ export const useStore = create<Store>((set, get) => ({
     const { currentStudyQuestion, studySessionHistory, questionStartTime } = get();
     if (!currentStudyQuestion) return;
 
-    const isCorrect = ExamService.isQuestionCorrect(currentStudyQuestion, answer);
+    const points = ExamService.calculateQuestionPoints(currentStudyQuestion, answer);
+    const isCorrect = points.earned === points.total;
 
     const timeMs = Date.now() - questionStartTime;
-    ProgressService.recordAnswer(currentStudyQuestion.id, isCorrect, timeMs, confidence);
+    ProgressService.recordAnswerPoints(currentStudyQuestion.id, points.earned, points.total, timeMs, confidence);
 
-    if (!isCorrect) {
+    if (points.earned !== points.total) {
       TrackingService.questionMissed(currentStudyQuestion.id, currentStudyQuestion.topicId);
     }
 

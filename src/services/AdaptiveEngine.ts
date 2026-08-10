@@ -58,25 +58,29 @@ export class AdaptiveEngine {
     questions: Question[],
     stats: Record<string, QuestionStat>
   ): string[] {
-    const topicAccuracy: Record<string, { correct: number; total: number }> = {};
+    const topicAccuracy: Record<string, { earned: number; total: number }> = {};
 
     for (const question of questions) {
       const stat = stats[question.id];
       if (!stat) continue;
 
       if (!topicAccuracy[question.topicId]) {
-        topicAccuracy[question.topicId] = { correct: 0, total: 0 };
+        topicAccuracy[question.topicId] = { earned: 0, total: 0 };
       }
 
-      topicAccuracy[question.topicId].correct += stat.correct;
-      topicAccuracy[question.topicId].total += stat.attempts;
+      // Prefer point-based tracking when available; otherwise fall back to boolean counts
+      const earned = (stat as any).pointsEarned ?? stat.correct;
+      const total = (stat as any).pointsTotal ?? stat.attempts;
+
+      topicAccuracy[question.topicId].earned += earned;
+      topicAccuracy[question.topicId].total += total;
     }
 
     // Sort topics by accuracy (lowest first), filter those below 60%
     const weakTopics = Object.entries(topicAccuracy)
-      .map(([topicId, { correct, total }]) => ({
+      .map(([topicId, { earned, total }]) => ({
         topicId,
-        accuracy: total > 0 ? correct / total : 0,
+        accuracy: total > 0 ? earned / total : 0,
       }))
       .filter((t) => t.accuracy < 0.6)
       .sort((a, b) => a.accuracy - b.accuracy)
