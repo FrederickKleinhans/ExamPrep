@@ -1,11 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Flame,
   TrendingUp,
   TrendingDown,
   Target,
-  BookOpen,
   ClipboardCheck,
   ChevronRight,
   ExternalLink,
@@ -13,10 +12,14 @@ import {
 } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { AnalyticsService } from '../services/AnalyticsService';
+import { QuestionCard } from '../components/QuestionCard';
+import { TrackingService } from '../services/TrackingService';
 
 export function DashboardPage() {
   const navigate = useNavigate();
   const { manifest, questionBank, progress, initialize, isLoading } = useStore();
+  const [previewQuestion, setPreviewQuestion] = useState<any | null>(null);
+  const [showPreview, setShowPreview] = useState(false);
 
   useEffect(() => {
     if (!manifest) initialize();
@@ -61,22 +64,28 @@ export function DashboardPage() {
         </div>
         <div className="flex gap-3">
           <button
-            onClick={() => navigate('/study')}
-            className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[var(--accent)] to-blue-500 text-white font-medium text-sm 
-              hover:shadow-[0_0_24px_-4px_var(--glow)] transition-all min-h-[44px] flex items-center gap-2 btn-glow"
+            onClick={() => {
+              TrackingService.studyStart();
+              navigate('/study');
+            }}
+            className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-cool)] text-white font-medium text-sm 
+              hover:shadow-[0_8px_30px_-8px_var(--glow)] hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4 transition-all min-h-[44px] btn-glow text-center"
           >
-            <BookOpen className="w-4 h-4" aria-hidden="true" />
-            Study Now
+            Start Studying 🚀
           </button>
           <button
             onClick={() => navigate('/exam')}
-            className="px-5 py-2.5 rounded-xl bg-[var(--bg-tertiary)] text-[var(--text-primary)] font-medium text-sm
-              hover:bg-[var(--border)] transition-all min-h-[44px] flex items-center gap-2 border border-[var(--border)]"
+            className="px-6 py-2.5 rounded-full bg-[var(--accent-hover)]/10 text-[var(--accent-alt)] font-medium text-sm
+              hover:bg-[var(--accent-hover)]/20 hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4 transition-all min-h-[48px] border border-[var(--accent-alt)]/15 text-center"
           >
-            <ClipboardCheck className="w-4 h-4" aria-hidden="true" />
-            Take Exam
+            Try a Practice Exam ⚡
           </button>
         </div>
+      </div>
+
+      {/* Road to AZ-900 hero */}
+      <div className="glass-card rounded-2xl p-6">
+        <h2 className="text-lg font-bold text-[var(--text-primary)]">Road to AZ-900 🚀</h2>
       </div>
 
       {/* Stats Grid */}
@@ -148,10 +157,19 @@ export function DashboardPage() {
           </button>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          <div className="p-4 rounded-2xl bg-[var(--bg-tertiary)]">
+          <button
+            onClick={() => {
+              const q = missedQuestions[0];
+              if (q) {
+                setPreviewQuestion(q);
+                setShowPreview(true);
+              }
+            }}
+            className="p-4 rounded-2xl bg-[var(--bg-tertiary)] text-left"
+          >
             <div className="text-xs text-[var(--text-secondary)] uppercase tracking-wide font-medium">Missed Questions</div>
             <div className="text-2xl font-bold text-[var(--error)] mt-2">{missedQuestions.length}</div>
-          </div>
+          </button>
           <div className="p-4 rounded-2xl bg-[var(--bg-tertiary)]">
             <div className="text-xs text-[var(--text-secondary)] uppercase tracking-wide font-medium">Most Recent</div>
             <div className="text-lg font-semibold text-[var(--text-primary)] mt-2">
@@ -164,12 +182,61 @@ export function DashboardPage() {
               {weakest[0]?.topicName ?? 'N/A'}
             </div>
           </div>
-          <div className="p-4 rounded-2xl bg-[var(--bg-tertiary)]">
-            <div className="text-xs text-[var(--text-secondary)] uppercase tracking-wide font-medium">Review Now</div>
-            <div className="text-lg font-semibold text-[var(--accent)] mt-2">Go to analytics</div>
+          <div className="p-4 rounded-2xl bg-[var(--bg-tertiary)] flex flex-col items-start justify-center">
+            <div className="text-xs text-[var(--text-secondary)] uppercase tracking-wide font-medium">Review Progress</div>
+            <div className="mt-2 flex items-center gap-3">
+              {/* Simple ring */}
+              <svg className="w-12 h-12" viewBox="0 0 36 36">
+                <path
+                  d="M18 2.0845a15.9155 15.9155 0 1 0 0 31.831 15.9155 15.9155 0 1 0 0-31.831"
+                  fill="none"
+                  stroke="var(--bg-tertiary)"
+                  strokeWidth="3"
+                />
+                <path
+                  d="M18 2.0845a15.9155 15.9155 0 1 0 0 31.831"
+                  fill="none"
+                  stroke="var(--accent)"
+                  strokeWidth="3"
+                  strokeDasharray={`${Math.max(0, Math.round(((missedQuestions.filter(q => {
+                    const s = progress.questionStats[q.id];
+                    return s && s.correct > 0;
+                  }).length) / (missedQuestions.length || 1)) * 100))},100`}
+                  strokeDashoffset="25"
+                />
+              </svg>
+              <div>
+                <div className="text-lg font-semibold text-[var(--text-primary)]">
+                  {missedQuestions.length > 0 ? `${Math.round((missedQuestions.filter(q => {
+                    const s = progress.questionStats[q.id];
+                    return s && s.correct > 0;
+                  }).length / missedQuestions.length) * 100)}%` : '—'}
+                </div>
+                <div className="text-xs text-[var(--text-secondary)]">of missed reviewed</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Preview modal */}
+      {showPreview && previewQuestion && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4" role="dialog" aria-modal="true">
+          <div className="max-w-3xl w-full">
+            <div className="flex justify-end mb-3">
+              <button onClick={() => setShowPreview(false)} className="p-2 rounded-full bg-[var(--bg-primary)]">Close</button>
+            </div>
+            <QuestionCard
+              question={previewQuestion}
+              showExplanation={true}
+              selectedAnswer={null}
+              isCorrect={null}
+              onSubmit={() => {}}
+              hideBookmark={false}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Two-column layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

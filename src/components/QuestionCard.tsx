@@ -54,7 +54,7 @@ export function QuestionCard({
       setOrderState([]);
     }
     setMatchingAssignments({});
-  }, [question.id]);
+  }, [question.id, question.orderItems]);
 
   const { progress, toggleBookmark } = useStore();
   const isBookmarked = progress.bookmarks.includes(question.id);
@@ -225,7 +225,7 @@ export function QuestionCard({
   };
 
   return (
-    <div className="glass-card rounded-2xl p-4 lg:p-5 animate-fade-in">
+    <div className="glass-card rounded-2xl p-4 lg:p-5 animate-fade-in border border-transparent transition-all duration-200 hover:border-[var(--warning)]/50 hover:shadow-[0_0_0_2px_rgba(255,174,0,0.15)]">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2 flex-wrap">
@@ -350,7 +350,8 @@ export function QuestionCard({
           onClick={handleSubmit}
           disabled={!isSubmitEnabled()}
           className="w-full py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-200
-            bg-gradient-to-r from-[var(--accent)] to-blue-500 text-white hover:shadow-[0_0_24px_-4px_var(--glow)] btn-glow
+            bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-cool)] text-white hover:shadow-[0_0_24px_-4px_var(--glow)] btn-glow
+            hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4
             disabled:opacity-40 disabled:cursor-not-allowed
             min-h-[44px]"
         >

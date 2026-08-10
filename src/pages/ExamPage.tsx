@@ -46,19 +46,6 @@ export function ExamPage() {
   }, [manifest, initialize]);
 
   // Timer
-  useEffect(() => {
-    if (phase !== 'session' || !examSession) return;
-
-    const interval = setInterval(() => {
-      const remaining = ExamService.getRemainingTime(examSession);
-      setRemainingTime(remaining);
-      if (remaining <= 0) {
-        handleFinishExam();
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [phase, examSession]);
 
   const handleStartExam = () => {
     startExam();
@@ -72,6 +59,20 @@ export function ExamPage() {
       setPhase('results');
     }
   }, [finishExam]);
+
+  useEffect(() => {
+    if (phase !== 'session' || !examSession) return;
+
+    const interval = setInterval(() => {
+      const remaining = ExamService.getRemainingTime(examSession);
+      setRemainingTime(remaining);
+      if (remaining <= 0) {
+        handleFinishExam();
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [phase, examSession, handleFinishExam]);
 
   const handleRetake = () => {
     clearExam();
@@ -101,7 +102,7 @@ export function ExamPage() {
   // --- SETUP PHASE ---
   if (phase === 'setup') {
     return (
-      <div className="max-w-4xl mx-auto animate-fade-in">
+      <div className="w-full animate-fade-in">
         <div className="glass-card rounded-2xl p-8">
           <div className="text-center mb-8">
             <ClipboardCheck className="w-12 h-12 text-[var(--accent)] mx-auto mb-4" aria-hidden="true" />
@@ -137,7 +138,8 @@ export function ExamPage() {
           <button
             onClick={handleStartExam}
             className="w-full py-3 px-6 rounded-lg bg-[var(--accent)] text-white font-semibold text-sm
-              hover:bg-[var(--accent-hover)] transition-colors min-h-[44px]"
+              hover:bg-[var(--accent-hover)] transition-colors min-h-[44px]
+              hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4"
           >
             Start Exam
           </button>
@@ -341,7 +343,7 @@ export function ExamPage() {
     const seconds = timeTaken % 60;
 
     return (
-      <div className="max-w-4xl mx-auto animate-fade-in">
+      <div className="w-full animate-fade-in">
         <div className="glass-card rounded-2xl p-8 text-center">
           {examResult.passed ? (
             <Trophy className="w-16 h-16 text-[var(--success)] mx-auto mb-4" aria-hidden="true" />

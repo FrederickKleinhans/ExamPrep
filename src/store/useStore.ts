@@ -12,6 +12,7 @@ import { DataLoader } from '../services/DataLoader';
 import { ProgressService } from '../services/ProgressService';
 import { AdaptiveEngine } from '../services/AdaptiveEngine';
 import { ExamService } from '../services/ExamService';
+import { TrackingService } from '../services/TrackingService';
 
 interface Store {
   // Data
@@ -227,6 +228,10 @@ export const useStore = create<Store>((set, get) => ({
     const timeMs = Date.now() - questionStartTime;
     ProgressService.recordAnswer(currentStudyQuestion.id, isCorrect, timeMs, confidence);
 
+    if (!isCorrect) {
+      TrackingService.questionMissed(currentStudyQuestion.id, currentStudyQuestion.topicId);
+    }
+
     set({
       showExplanation: true,
       selectedAnswer: answer,
@@ -301,6 +306,13 @@ export const useStore = create<Store>((set, get) => ({
 
     const result = ExamService.calculateResult(examSession, cert.passingScore);
     ProgressService.saveExamResult(result);
+
+    // Track exam submit
+    try {
+      TrackingService.examSubmit(result);
+    } catch {
+      // noop
+    }
 
     set({
       examSession: { ...examSession, isCompleted: true },

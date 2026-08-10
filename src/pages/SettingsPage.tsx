@@ -2,9 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import { Settings, Download, Upload, Trash2, AlertTriangle } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { ProgressService } from '../services/ProgressService';
+import { usePreferences } from '../store/usePreferences';
 
 export function SettingsPage() {
   const { manifest, progress, initialize, isLoading, selectCertification, refreshProgress } = useStore();
+  const { analyticsEnabled, toggleAnalytics, debugMode, toggleDebugMode } = usePreferences();
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [importStatus, setImportStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -133,6 +135,58 @@ export function SettingsPage() {
           {importStatus === 'error' && (
             <p className="text-sm text-[var(--error)] px-4">Invalid file format. Please use a CertReady export file.</p>
           )}
+        </div>
+      </div>
+
+      {/* Analytics & Privacy */}
+      <div className="glass-card rounded-2xl p-5">
+        <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-4">Analytics & Privacy</h3>
+        <div className="space-y-3">
+          <button
+            type="button"
+            onClick={toggleAnalytics}
+            aria-pressed={analyticsEnabled}
+            className="w-full text-left px-4 py-4 rounded-2xl border border-[var(--border)] bg-[var(--bg-tertiary)] hover:bg-[var(--border)] transition-colors"
+          >
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <div className="text-sm font-medium text-[var(--text-primary)]">Anonymous analytics</div>
+                <div className="text-xs text-[var(--text-secondary)]">
+                  Allow CertReady to send anonymous study and exam event data for better progress insights.
+                </div>
+              </div>
+              <span
+                className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                  analyticsEnabled ? 'bg-[var(--success)] text-black' : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
+                }`}
+              >
+                {analyticsEnabled ? 'Enabled' : 'Disabled'}
+              </span>
+            </div>
+          </button>
+
+          <button
+            type="button"
+            onClick={toggleDebugMode}
+            aria-pressed={debugMode}
+            className="w-full text-left px-4 py-4 rounded-2xl border border-[var(--border)] bg-[var(--bg-tertiary)] hover:bg-[var(--border)] transition-colors"
+          >
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <div className="text-sm font-medium text-[var(--text-primary)]">Debug mode</div>
+                <div className="text-xs text-[var(--text-secondary)]">
+                  Show analytics event logs in the console and help troubleshoot behavior.
+                </div>
+              </div>
+              <span
+                className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                  debugMode ? 'bg-[var(--accent)] text-white' : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
+                }`}
+              >
+                {debugMode ? 'On' : 'Off'}
+              </span>
+            </div>
+          </button>
         </div>
       </div>
 

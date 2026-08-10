@@ -25,8 +25,8 @@ export function SingleChoiceInput({ options, selectedAnswer, showResult, onSelec
             bgClass = 'bg-[var(--error)]/10';
           }
         } else if (isSelected) {
-          borderClass = 'border-[var(--accent)]';
-          bgClass = 'bg-[var(--accent)]/10';
+          borderClass = 'border-[var(--warning)]';
+          bgClass = 'bg-[var(--warning)]/10';
         }
 
         return (
@@ -39,11 +39,11 @@ export function SingleChoiceInput({ options, selectedAnswer, showResult, onSelec
             aria-label={`Option ${option.id}: ${option.text}`}
             className={`w-full text-left px-4 py-3 rounded-lg border-2 transition-all duration-200 
               ${borderClass} ${bgClass} 
-              ${disabled ? 'cursor-default' : 'cursor-pointer hover:border-[var(--accent)]/50'}
+              ${disabled ? 'cursor-default' : 'cursor-pointer hover:border-[var(--warning)]/50'}
               min-h-[44px] flex items-center gap-3`}
           >
             <span className={`w-7 h-7 rounded-full border-2 flex items-center justify-center shrink-0 text-sm font-semibold
-              ${isSelected ? 'border-[var(--accent)] text-[var(--accent)]' : 'border-[var(--text-secondary)] text-[var(--text-secondary)]'}`}>
+              ${isSelected ? 'border-[var(--warning)] text-[var(--warning)]' : 'border-[var(--text-secondary)] text-[var(--text-secondary)]'}`}>
               {option.id}
             </span>
             <span className="text-[var(--text-primary)] text-sm">{option.text}</span>

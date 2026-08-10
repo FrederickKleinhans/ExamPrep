@@ -102,7 +102,7 @@ export function OrderingInput({ orderItems, currentOrder, showResult, onReorder,
                   ? isCorrectPosition
                     ? 'bg-[var(--success)]/20 text-[var(--success)]'
                     : 'bg-[var(--error)]/20 text-[var(--error)]'
-                  : 'bg-[var(--accent)]/10 text-[var(--accent)]'
+                  : 'bg-[var(--warning)]/10 text-[var(--warning)]'
                 }`}>
                 {index + 1}
               </span>

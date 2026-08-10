@@ -71,30 +71,30 @@ export function Layout() {
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar Navigation */}
         <nav
-          className="w-12 lg:w-48 shrink-0 flex flex-col py-4 border-r border-[var(--border)] bg-[var(--bg-secondary)]/50"
+          className="w-16 lg:w-64 shrink-0 flex flex-col py-4 border-r border-[var(--sidebar-border)] bg-[var(--sidebar-bg)]"
           aria-label="Main navigation"
         >
-          <ul className="flex flex-col gap-0.5 px-1.5 lg:px-2">
+          <ul className="flex flex-col gap-2 px-3 lg:px-4">
             {navItems.map(({ to, icon: Icon, label }) => (
               <li key={to}>
                 <NavLink
                   to={to}
                   end={to === '/'}
                   className={({ isActive }) =>
-                    `flex items-center gap-2.5 px-2.5 py-2 rounded-lg transition-all duration-200 group relative ${
+                    `flex items-center gap-4 px-4 py-4 rounded-2xl transition-all duration-200 group relative ${
                       isActive
-                        ? 'bg-[var(--accent)]/10 text-[var(--accent)] shadow-[inset_0_0_0_1px_rgba(77,171,247,0.2)]'
-                        : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)]'
+                        ? `bg-[var(--accent)]/10 text-[var(--accent)] shadow-[0_8px_24px_-16px_var(--sidebar-active-shadow)]`
+                        : `text-[var(--text-secondary)] hover:bg-[var(--sidebar-hover)] hover:text-[var(--text-primary)] hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4`
                     }`
                   }
                 >
                   {({ isActive }) => (
                     <>
                       {isActive && (
-                        <span className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-4 rounded-r-full bg-[var(--accent)]" />
+                        <span className="absolute left-0 top-1/2 -translate-y-1/2 w-[4px] h-5 rounded-r-full bg-[var(--accent)]" />
                       )}
-                      <Icon className="w-5 h-5 shrink-0 ml-0.5 lg:ml-0" aria-hidden="true" />
-                      <span className="hidden lg:block text-base font-medium">{label}</span>
+                      <Icon className="w-7 h-7 shrink-0 ml-0.5 lg:ml-0" aria-hidden="true" />
+                      <span className="hidden lg:block text-lg font-semibold">{label}</span>
                     </>
                   )}
                 </NavLink>
@@ -105,11 +105,14 @@ export function Layout() {
 
         {/* Main content */}
         <main className="flex-1 overflow-y-auto">
-          <div className="p-4 lg:p-6 min-h-full">
+          <div className="w-full max-w-[calc(100%-4rem)] mx-auto px-4 lg:px-6 py-4 min-h-full">
             <Outlet />
           </div>
         </main>
       </div>
+      <footer className="h-12 shrink-0 flex items-center justify-center border-t border-[var(--border)] bg-[var(--bg-secondary)]/80 text-xs text-[var(--text-secondary)]">
+        Made by FredInTech
+      </footer>
     </div>
   );
 }

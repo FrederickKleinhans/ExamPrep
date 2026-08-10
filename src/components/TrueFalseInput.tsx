@@ -25,8 +25,8 @@ export function TrueFalseInput({ options, selectedAnswer, showResult, onSelect, 
             bgClass = 'bg-[var(--error)]/10';
           }
         } else if (isSelected) {
-          borderClass = 'border-[var(--accent)]';
-          bgClass = 'bg-[var(--accent)]/10';
+          borderClass = 'border-[var(--warning)]';
+          bgClass = 'bg-[var(--warning)]/10';
         }
 
         return (
@@ -39,10 +39,10 @@ export function TrueFalseInput({ options, selectedAnswer, showResult, onSelect, 
             aria-label={option.text}
             className={`flex-1 px-6 py-4 rounded-lg border-2 transition-all duration-200 text-center
               ${borderClass} ${bgClass}
-              ${disabled ? 'cursor-default' : 'cursor-pointer hover:border-[var(--accent)]/50'}
+              ${disabled ? 'cursor-default' : 'cursor-pointer hover:border-[var(--warning)]/50'}
               min-h-[44px] font-semibold text-lg`}
           >
-            <span className={isSelected ? 'text-[var(--accent)]' : 'text-[var(--text-primary)]'}>
+            <span className={isSelected ? 'text-[var(--warning)]' : 'text-[var(--text-primary)]'}>
               {option.text}
             </span>
           </button>

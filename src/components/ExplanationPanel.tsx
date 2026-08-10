@@ -36,7 +36,7 @@ export function ExplanationPanel({ explanation, isCorrect, onNext }: Props) {
           </p>
         </div>
 
-        <div className="flex items-start gap-2 p-3 rounded-lg bg-[var(--accent)]/5 border border-[var(--accent)]/20">
+        <div className="flex items-start gap-2 p-3 rounded-lg bg-[var(--accent)]/5 border border-[var(--accent)]/20 transition-all duration-200 hover:border-[var(--warning)]/60">
           <Lightbulb className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" aria-hidden="true" />
           <div>
             <span className="font-medium text-[var(--accent)] text-xs uppercase tracking-wide">Exam Tip</span>
@@ -50,7 +50,8 @@ export function ExplanationPanel({ explanation, isCorrect, onNext }: Props) {
         <button
           onClick={onNext}
           className="mt-4 w-full py-3 px-6 rounded-xl font-semibold text-base transition-all duration-200
-            bg-gradient-to-r from-[var(--accent)] to-blue-500 text-white hover:shadow-[0_0_24px_-4px_var(--glow)] btn-glow
+            bg-[var(--accent)] text-white hover:bg-[var(--accent-dark)] hover:shadow-[0_0_24px_-4px_var(--glow)] btn-glow
+            hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4
             min-h-[44px] flex items-center justify-center gap-2"
         >
           Next Question

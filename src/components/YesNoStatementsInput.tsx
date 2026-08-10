@@ -56,13 +56,13 @@ export function YesNoStatementsInput({ statements, answers, showResult, onAnswer
                 aria-checked={userAnswer === 'yes'}
                 aria-label={`${statement.text} — Yes`}
                 className={`w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all
-                  ${disabled ? 'cursor-default' : 'cursor-pointer hover:border-[var(--accent)]/50'}
+                  ${disabled ? 'cursor-default' : 'cursor-pointer hover:border-[var(--warning)]/50'}
                   ${userAnswer === 'yes'
                     ? showResult
                       ? statement.isCorrectYes
                         ? 'border-[var(--success)] bg-[var(--success)]/20 text-[var(--success)]'
                         : 'border-[var(--error)] bg-[var(--error)]/20 text-[var(--error)]'
-                      : 'border-[var(--accent)] bg-[var(--accent)]/20 text-[var(--accent)]'
+                      : 'border-[var(--warning)] bg-[var(--warning)]/20 text-[var(--warning)]'
                     : showResult && statement.isCorrectYes
                       ? 'border-[var(--success)]/50 text-[var(--success)]'
                       : 'border-[var(--border)] text-[var(--text-secondary)]'
@@ -83,13 +83,13 @@ export function YesNoStatementsInput({ statements, answers, showResult, onAnswer
                 aria-checked={userAnswer === 'no'}
                 aria-label={`${statement.text} — No`}
                 className={`w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all
-                  ${disabled ? 'cursor-default' : 'cursor-pointer hover:border-[var(--accent)]/50'}
+                  ${disabled ? 'cursor-default' : 'cursor-pointer hover:border-[var(--warning)]/50'}
                   ${userAnswer === 'no'
                     ? showResult
                       ? !statement.isCorrectYes
                         ? 'border-[var(--success)] bg-[var(--success)]/20 text-[var(--success)]'
                         : 'border-[var(--error)] bg-[var(--error)]/20 text-[var(--error)]'
-                      : 'border-[var(--accent)] bg-[var(--accent)]/20 text-[var(--accent)]'
+                      : 'border-[var(--warning)] bg-[var(--warning)]/20 text-[var(--warning)]'
                     : showResult && !statement.isCorrectYes
                       ? 'border-[var(--success)]/50 text-[var(--success)]'
                       : 'border-[var(--border)] text-[var(--text-secondary)]'

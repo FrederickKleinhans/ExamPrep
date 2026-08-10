@@ -67,17 +67,17 @@ export function StudyPage() {
           <div className="flex gap-2">
             <button
               onClick={() => setStudyFilter('all')}
-              className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studyFilter === 'all' ? 'bg-[var(--accent)] text-white' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'}`}>
+              className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studyFilter === 'all' ? 'bg-[var(--accent-blue)] text-white hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4'}`}>
               Everything
             </button>
             <button
               onClick={() => setStudyFilter('cloud')}
-              className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studyFilter === 'cloud' ? 'bg-[var(--accent)] text-white' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'}`}>
+              className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studyFilter === 'cloud' ? 'bg-[var(--accent-blue)] text-white hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4'}`}>
               Cloud Concepts / Architecture
             </button>
             <button
               onClick={() => setStudyFilter('management')}
-              className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studyFilter === 'management' ? 'bg-[var(--accent)] text-white' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'}`}>
+              className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studyFilter === 'management' ? 'bg-[var(--accent-blue)] text-white hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4'}`}>
               Management & Governance
             </button>
           </div>
@@ -88,7 +88,7 @@ export function StudyPage() {
               <button
                 key={n}
                 onClick={() => setStudySessionLimit(n)}
-                className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studySessionLimit === n ? 'bg-[var(--accent)] text-white' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'}`}>
+                className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studySessionLimit === n ? 'bg-[var(--accent)] text-white hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4'}`}>
                 {n}
               </button>
             ))}

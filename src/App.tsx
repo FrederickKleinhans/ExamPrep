@@ -7,11 +7,14 @@ import { ExamPage } from './pages/ExamPage';
 import { AnalyticsPage } from './pages/AnalyticsPage';
 import { BookmarksPage } from './pages/BookmarksPage';
 import { SettingsPage } from './pages/SettingsPage';
+import { usePreferences } from './store/usePreferences';
 
 function App() {
+  const analyticsEnabled = usePreferences((state) => state.analyticsEnabled);
+
   return (
     <>
-      <Analytics />
+      {analyticsEnabled && <Analytics />}
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>

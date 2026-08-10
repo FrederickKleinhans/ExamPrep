@@ -72,9 +72,9 @@ export function MatchingInput({ categories, items, assignments, showResult, onAs
                 draggable={!disabled}
                 onDragStart={() => handleDragStart(item.id)}
                 onDragEnd={handleDragEnd}
-                className={`px-3 py-2 rounded-lg border border-[var(--accent)]/30 bg-[var(--accent)]/5
+                className={`px-3 py-2 rounded-lg border border-[var(--warning)]/30 bg-[var(--warning)]/5
                   text-sm text-[var(--text-primary)] cursor-grab active:cursor-grabbing
-                  hover:border-[var(--accent)] transition-colors
+                  hover:border-[var(--warning)] transition-colors
                   ${draggedItem === item.id ? 'opacity-50 scale-95' : ''}`}
               >
                 {item.text}
@@ -96,13 +96,13 @@ export function MatchingInput({ categories, items, assignments, showResult, onAs
               onDragOver={handleDragOver}
               onDrop={() => handleDrop(category.id)}
               className={`p-3 rounded-xl border-2 border-dashed transition-colors min-h-[80px]
-                ${isOver && !disabled ? 'border-[var(--accent)]/50 bg-[var(--accent)]/5' : 'border-[var(--border)] bg-[var(--bg-secondary)]'}`}
+                ${isOver && !disabled ? 'border-[var(--warning)]/50 bg-[var(--warning)]/5' : 'border-[var(--border)] bg-[var(--bg-secondary)]'}`}
             >
               <p className="text-sm font-medium text-[var(--text-primary)] mb-2">{category.name}</p>
               <div className="space-y-1.5">
                 {catItems.map((item) => {
                   const isCorrect = correctMapping[item.id] === category.id;
-                  let itemClass = 'border-[var(--accent)]/30 bg-[var(--accent)]/10';
+                  let itemClass = 'border-[var(--warning)]/30 bg-[var(--warning)]/10';
                   if (showResult) {
                     itemClass = isCorrect
                       ? 'border-[var(--success)]/50 bg-[var(--success)]/10'
