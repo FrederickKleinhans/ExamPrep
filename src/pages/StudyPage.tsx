@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BookOpen, RotateCcw, CheckCircle } from 'lucide-react';
+import { BookOpen, RotateCcw, CheckCircle, XCircle } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { QuestionCard } from '../components/QuestionCard';
 
@@ -15,6 +15,7 @@ export function StudyPage() {
     selectedAnswer,
     isAnswerCorrect,
     studySessionHistory,
+    studySessionResults,
     getNextStudyQuestion,
     submitStudyAnswer,
     resetStudySession,
@@ -62,47 +63,51 @@ export function StudyPage() {
             Disclaimer: These are practice questions created from public Microsoft documentation and community sources — they are not official Microsoft exam items.
           </p>
         </div>
-        <div className="flex items-center gap-3">
-          <div className="text-sm text-[var(--text-secondary)] hidden sm:block">Filter:</div>
-          <div className="flex gap-2">
-            <button
-              onClick={() => setStudyFilter('all')}
-              className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studyFilter === 'all' ? 'bg-[var(--accent-blue)] text-white hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4'}`}>
-              Everything
-            </button>
-            <button
-              onClick={() => setStudyFilter('cloud')}
-              className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studyFilter === 'cloud' ? 'bg-[var(--accent-blue)] text-white hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4'}`}>
-              Cloud Concepts / Architecture
-            </button>
-            <button
-              onClick={() => setStudyFilter('management')}
-              className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studyFilter === 'management' ? 'bg-[var(--accent-blue)] text-white hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4'}`}>
-              Management & Governance
-            </button>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+            <label htmlFor="study-filter" className="text-sm text-[var(--text-secondary)]">
+              Filter:
+            </label>
+            <select
+              id="study-filter"
+              value={studyFilter}
+              onChange={(e) => setStudyFilter(e.target.value as 'all' | 'cloud' | 'architecture' | 'governance' | 'management')}
+              className="rounded-lg border border-[var(--bg-tertiary)] bg-[var(--bg-primary)] px-3 py-2 text-sm text-[var(--text-primary)] min-w-[220px]"
+            >
+              <option value="all">Everything</option>
+              <option value="cloud">Cloud Concepts</option>
+              <option value="architecture">Architecture</option>
+              <option value="governance">Governance</option>
+              <option value="management">Management</option>
+            </select>
           </div>
 
-          <div className="text-sm text-[var(--text-secondary)] hidden sm:block ml-3">Session:</div>
-          <div className="flex gap-2">
-            {[30,40,50].map((n) => (
-              <button
-                key={n}
-                onClick={() => setStudySessionLimit(n)}
-                className={`px-3 py-2 rounded-lg text-sm min-h-[44px] ${studySessionLimit === n ? 'bg-[var(--accent)] text-white hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-4 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-4'}`}>
-                {n}
-              </button>
-            ))}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+            <label htmlFor="study-session-limit" className="text-sm text-[var(--text-secondary)]">
+              Session:
+            </label>
+            <select
+              id="study-session-limit"
+              value={studySessionLimit}
+              onChange={(e) => setStudySessionLimit(Number(e.target.value))}
+              className="rounded-lg border border-[var(--bg-tertiary)] bg-[var(--bg-primary)] px-3 py-2 text-sm text-[var(--text-primary)]"
+            >
+              {[10, 20, 30, 40, 50].map((n) => (
+                <option key={n} value={n}>
+                  {n} Questions
+                </option>
+              ))}
+            </select>
           </div>
 
           {answeredThisSession > 0 && (
-          <button
-            onClick={resetStudySession}
-            className="px-3 py-2 rounded-lg text-sm text-[var(--text-secondary)] 
-              hover:bg-[var(--bg-tertiary)] transition-colors flex items-center gap-2 min-h-[44px]"
-          >
-            <RotateCcw className="w-4 h-4" aria-hidden="true" />
-            Reset Session
-          </button>
+            <button
+              onClick={resetStudySession}
+              className="px-3 py-2 rounded-lg text-sm text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] transition-colors flex items-center gap-2 min-h-[44px]"
+            >
+              <RotateCcw className="w-4 h-4" aria-hidden="true" />
+              Reset Session
+            </button>
           )}
         </div>
       </div>
@@ -141,8 +146,53 @@ export function StudyPage() {
         </div>
       )}
 
+      {sessionComplete && studySessionResults.length > 0 && (
+        <div className="glass-card rounded-2xl p-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+            <div>
+              <h3 className="text-sm font-semibold text-[var(--text-primary)]">Session results</h3>
+              <p className="text-xs text-[var(--text-secondary)]">
+                Review which questions were correct or incorrect.
+              </p>
+            </div>
+            <div className="flex items-center gap-4 text-xs text-[var(--text-secondary)]">
+              <span className="inline-flex items-center gap-1">
+                <CheckCircle className="w-4 h-4 text-[var(--success)]" aria-hidden="true" />
+                {studySessionResults.filter((r) => r.isCorrect).length} correct
+              </span>
+              <span className="inline-flex items-center gap-1">
+                <XCircle className="w-4 h-4 text-[var(--error)]" aria-hidden="true" />
+                {studySessionResults.filter((r) => !r.isCorrect).length} incorrect
+              </span>
+            </div>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            {studySessionResults.map((result, index) => {
+              const question = questionBank?.questions.find((q) => q.id === result.questionId);
+              return (
+                <div
+                  key={result.questionId}
+                  className={`p-4 rounded-2xl border ${result.isCorrect ? 'border-[var(--success)] bg-[var(--success)]/10' : 'border-[var(--error)] bg-[var(--error)]/10'}`}
+                >
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-sm font-semibold text-[var(--text-primary)]">Question {index + 1}</span>
+                    <span className={`text-xs font-semibold ${result.isCorrect ? 'text-[var(--success)]' : 'text-[var(--error)]'}`}>
+                      {result.isCorrect ? 'Correct' : 'Incorrect'}
+                    </span>
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    {question?.questionText ?? 'Question details unavailable.'}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
       {/* Current question */}
-      {currentStudyQuestion && (
+      {!sessionComplete && currentStudyQuestion && (
         <div className="mb-6">
           <div className="text-xs text-[var(--text-secondary)] mb-3">
             Question {answeredThisSession + 1}

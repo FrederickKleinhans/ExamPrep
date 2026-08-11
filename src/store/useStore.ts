@@ -7,6 +7,7 @@ import {
   Question,
   Confidence,
   ExamResult,
+  StudySessionResult,
 } from '../types';
 import { DataLoader } from '../services/DataLoader';
 import { ProgressService } from '../services/ProgressService';
@@ -24,8 +25,9 @@ interface Store {
 
   // Study Mode
   studySessionHistory: string[];
+  studySessionResults: StudySessionResult[];
   currentStudyQuestion: Question | null;
-  studyFilter: 'all' | 'cloud' | 'management';
+  studyFilter: 'all' | 'cloud' | 'architecture' | 'governance' | 'management';
   studyGroup: number;
   studySessionLimit: number;
   isStudyExhausted: boolean;
@@ -39,7 +41,7 @@ interface Store {
 
   // Actions
   initialize: () => Promise<void>;
-  setStudyFilter: (filter: 'all' | 'cloud' | 'management') => void;
+  setStudyFilter: (filter: 'all' | 'cloud' | 'architecture' | 'governance' | 'management') => void;
   setStudySessionLimit: (limit: number) => void;
   rotateStudyGroup: () => void;
   selectCertification: (certId: string) => Promise<void>;
@@ -70,6 +72,7 @@ export const useStore = create<Store>((set, get) => ({
   error: null,
 
   studySessionHistory: [],
+  studySessionResults: [],
   currentStudyQuestion: null,
   studyFilter: 'all',
   studyGroup: 0,
@@ -111,6 +114,7 @@ export const useStore = create<Store>((set, get) => ({
         progress,
         isLoading: false,
         studySessionHistory: [],
+        studySessionResults: [],
         currentStudyQuestion: null,
         studyFilter: 'all',
         isStudyExhausted: false,
@@ -127,10 +131,11 @@ export const useStore = create<Store>((set, get) => ({
     set({ progress: ProgressService.getProgress() });
   },
 
-  setStudyFilter: (filter: 'all' | 'cloud' | 'management') => {
+  setStudyFilter: (filter: 'all' | 'cloud' | 'architecture' | 'governance' | 'management') => {
     set({
       studyFilter: filter,
       studySessionHistory: [],
+      studySessionResults: [],
       currentStudyQuestion: null,
       showExplanation: false,
       selectedAnswer: null,
@@ -143,6 +148,7 @@ export const useStore = create<Store>((set, get) => ({
     set({
       studySessionLimit: limit,
       studySessionHistory: [],
+      studySessionResults: [],
       currentStudyQuestion: null,
       showExplanation: false,
       selectedAnswer: null,
@@ -160,7 +166,7 @@ export const useStore = create<Store>((set, get) => ({
   },
 
   getNextStudyQuestion: () => {
-    const { questionBank, progress, studySessionHistory, studyFilter, studyGroup, studySessionLimit } = get();
+    const { questionBank, progress, studySessionHistory, studyFilter, studySessionLimit } = get();
     if (!questionBank) return;
 
     // If we've reached the session limit, mark session complete (no current question)
@@ -168,29 +174,16 @@ export const useStore = create<Store>((set, get) => ({
       set({ currentStudyQuestion: null, isStudyExhausted: true });
       return;
     }
-    // Apply study filter (cloud / management / all)
     const filtered = questionBank.questions.filter((q) => {
       if (studyFilter === 'all') return true;
-      if (studyFilter === 'cloud') {
-        return (
-          q.topicId.includes('cloud') ||
-          q.topicId.includes('architecture') ||
-          q.topicId.includes('service')
-        );
-      }
-      // management
-      return (
-        q.topicId.includes('management') ||
-        q.topicId.includes('govern') ||
-        q.topicId.includes('identity')
-      );
+      if (studyFilter === 'cloud') return q.topicId === 'describe-cloud-concepts';
+      if (studyFilter === 'architecture') return q.topicId === 'describe-azure-architecture';
+      if (studyFilter === 'governance') return q.topicId === 'describe-azure-management';
+      if (studyFilter === 'management') return q.topicId === 'describe-azure-management' || q.topicId === 'describe-azure-identity';
+      return true;
     });
 
-    const candidateQuestions = filtered.length > 0 ? filtered : questionBank.questions;
-
-    // Partition into 3 groups and pick the group for studyGroup
-    const grouped = candidateQuestions.filter((_, idx) => idx % 3 === studyGroup);
-    const questionsForSession = grouped.length > 0 ? grouped : candidateQuestions;
+    const questionsForSession = filtered.length > 0 ? filtered : questionBank.questions;
 
     const weakTopics = AdaptiveEngine.computeWeakTopics(
       questionsForSession,
@@ -220,7 +213,7 @@ export const useStore = create<Store>((set, get) => ({
   },
 
   submitStudyAnswer: (answer: string | string[], confidence: Confidence = 'medium') => {
-    const { currentStudyQuestion, studySessionHistory, questionStartTime } = get();
+    const { currentStudyQuestion, studySessionHistory, studySessionResults, questionStartTime } = get();
     if (!currentStudyQuestion) return;
 
     const points = ExamService.calculateQuestionPoints(currentStudyQuestion, answer);
@@ -238,6 +231,7 @@ export const useStore = create<Store>((set, get) => ({
       selectedAnswer: answer,
       isAnswerCorrect: isCorrect,
       studySessionHistory: [...studySessionHistory, currentStudyQuestion.id],
+      studySessionResults: [...studySessionResults, { questionId: currentStudyQuestion.id, isCorrect }],
       progress: ProgressService.getProgress(),
     });
   },
@@ -252,6 +246,7 @@ export const useStore = create<Store>((set, get) => ({
 
     set({
       studySessionHistory: [],
+      studySessionResults: [],
       currentStudyQuestion: null,
       showExplanation: false,
       selectedAnswer: null,

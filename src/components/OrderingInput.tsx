@@ -32,6 +32,16 @@ export function OrderingInput({ orderItems, currentOrder, showResult, onReorder,
     onReorder(newOrder);
   };
 
+  const reorderTo = (fromIndex: number, toIndex: number) => {
+    if (disabled) return;
+    if (toIndex < 0 || toIndex >= currentOrder.length || toIndex === fromIndex) return;
+
+    const newOrder = [...currentOrder];
+    const [removed] = newOrder.splice(fromIndex, 1);
+    newOrder.splice(toIndex, 0, removed);
+    onReorder(newOrder);
+  };
+
   const handleDragStart = (index: number) => {
     if (disabled) return;
     setDraggedIndex(index);
@@ -41,14 +51,47 @@ export function OrderingInput({ orderItems, currentOrder, showResult, onReorder,
     e.preventDefault();
     if (disabled || draggedIndex === null || draggedIndex === index) return;
 
-    const newOrder = [...currentOrder];
-    const [removed] = newOrder.splice(draggedIndex, 1);
-    newOrder.splice(index, 0, removed);
+    reorderTo(draggedIndex, index);
     setDraggedIndex(index);
-    onReorder(newOrder);
   };
 
   const handleDragEnd = () => {
+    setDraggedIndex(null);
+  };
+
+  const handlePointerDown = (index: number, e: React.PointerEvent<HTMLDivElement>) => {
+    if (disabled) return;
+    e.preventDefault();
+    setDraggedIndex(index);
+    e.currentTarget.setPointerCapture(e.pointerId);
+  };
+
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (disabled || draggedIndex === null) return;
+    const target = document.elementFromPoint(e.clientX, e.clientY) as HTMLElement | null;
+    const itemEl = target?.closest('[data-order-index]') as HTMLElement | null;
+    if (!itemEl) return;
+
+    const hoverIndex = Number(itemEl.dataset.orderIndex);
+    if (!Number.isNaN(hoverIndex) && hoverIndex !== draggedIndex) {
+      reorderTo(draggedIndex, hoverIndex);
+      setDraggedIndex(hoverIndex);
+    }
+  };
+
+  const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (disabled || draggedIndex === null) {
+      setDraggedIndex(null);
+      return;
+    }
+    const target = document.elementFromPoint(e.clientX, e.clientY) as HTMLElement | null;
+    const itemEl = target?.closest('[data-order-index]') as HTMLElement | null;
+    if (itemEl) {
+      const dropIndex = Number(itemEl.dataset.orderIndex);
+      if (!Number.isNaN(dropIndex)) {
+        reorderTo(draggedIndex, dropIndex);
+      }
+    }
     setDraggedIndex(null);
   };
 
@@ -79,12 +122,17 @@ export function OrderingInput({ orderItems, currentOrder, showResult, onReorder,
           return (
             <div
               key={item.id}
+              data-order-index={index}
               draggable={!disabled}
               onDragStart={() => handleDragStart(index)}
               onDragOver={(e) => handleDragOver(e, index)}
               onDragEnd={handleDragEnd}
+              onPointerDown={(e) => handlePointerDown(index, e)}
+              onPointerMove={handlePointerMove}
+              onPointerUp={handlePointerUp}
               role="listitem"
               aria-label={`Step ${index + 1}: ${item.text}`}
+              style={{ touchAction: disabled ? undefined : 'none' }}
               className={`flex items-center gap-3 px-4 py-3 rounded-lg border-2 transition-all
                 ${borderClass} ${bgClass}
                 ${!disabled ? 'cursor-grab active:cursor-grabbing' : 'cursor-default'}

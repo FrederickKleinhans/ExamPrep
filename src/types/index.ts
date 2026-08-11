@@ -167,6 +167,11 @@ export interface QuestionStat {
   pointsTotal?: number;
 }
 
+export interface StudySessionResult {
+  questionId: string;
+  isCorrect: boolean;
+}
+
 export interface ExamResult {
   id: string;
   certificationId: string;
