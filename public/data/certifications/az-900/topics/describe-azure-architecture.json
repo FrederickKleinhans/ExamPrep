@@ -1,0 +1,2675 @@
+{
+  "certificationId": "az-900",
+  "topicId": "describe-azure-architecture",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "az900-005",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the logical container used to group related Azure resources for an application or project?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Management group",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Resource group",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Subscription",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Availability zone",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A resource group is a logical container that holds related Azure resources. All resources must belong to exactly one resource group.",
+        "incorrect": "Management groups manage multiple subscriptions. Subscriptions are billing boundaries. Availability zones are physical locations within a region.",
+        "examTip": "Resource groups cannot be nested. A resource can only exist in one resource group. Deleting a resource group deletes all resources within it.",
+        "relatedTopics": [
+          "azure-resource-hierarchy",
+          "resource-organization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the core architectural components of Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-006",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure compute service is best suited for running event-driven, serverless code that scales automatically and charges only for execution time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Virtual Machines",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure App Service",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Functions",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Container Instances",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Functions is a serverless compute service that runs event-driven code without managing infrastructure. You pay only for the time your code runs.",
+        "incorrect": "VMs require infrastructure management. App Service is PaaS for web apps but not purely event-driven. Container Instances run containers without orchestration but are not serverless functions.",
+        "examTip": "Azure Functions = serverless + event-driven + micro-billing. Ideal for short-lived, triggered workloads.",
+        "relatedTopics": [
+          "serverless-computing",
+          "azure-compute-options"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-007",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure storage service provides a massively scalable object store for unstructured data such as text and binary data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Table Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Queue Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Blob Storage",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Files",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Blob Storage is optimized for storing massive amounts of unstructured data, such as images, videos, documents, and backups.",
+        "incorrect": "Table Storage is for structured NoSQL data. Queue Storage is for message queuing. Azure Files provides managed file shares using SMB/NFS protocols.",
+        "examTip": "Blob = Binary Large Object. Think of it as the 'catch-all' for unstructured data in the cloud.",
+        "relatedTopics": [
+          "azure-storage-services",
+          "blob-storage-tiers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure storage services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-008",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Azure service provides a globally distributed, multi-model database that guarantees single-digit millisecond latency and offers five consistency levels?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Cosmos DB",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Database for PostgreSQL",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Cache for Redis",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Cosmos DB is a globally distributed, multi-model database service with guaranteed low latency. It offers five consistency levels: strong, bounded staleness, session, consistent prefix, and eventual.",
+        "incorrect": "Azure SQL Database is a relational database. Azure Database for PostgreSQL is managed PostgreSQL. Azure Cache for Redis is an in-memory cache, not a multi-model database.",
+        "examTip": "Cosmos DB's five consistency levels (from strongest to weakest): Strong > Bounded Staleness > Session > Consistent Prefix > Eventual.",
+        "relatedTopics": [
+          "azure-database-services",
+          "global-distribution"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure storage services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-009",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You need to ensure that an Azure virtual machine remains available during a planned maintenance event. What should you use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Resource locks",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Availability zones",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Resource tags",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Policy",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Availability zones are physically separate locations within an Azure region. Deploying VMs across availability zones protects against datacenter-level failures and planned maintenance.",
+        "incorrect": "Resource locks prevent accidental deletion/modification. Tags are for organization. Azure Policy enforces governance rules.",
+        "examTip": "Availability zones protect against datacenter failures. Availability sets protect against rack-level failures within a single datacenter.",
+        "relatedTopics": [
+          "high-availability",
+          "availability-zones",
+          "availability-sets"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-017",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO Azure services can be used to run containerized applications without managing virtual machines? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Container Instances (ACI)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Virtual Machines",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Kubernetes Service (AKS)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Batch",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ACI provides serverless containers without managing VMs. AKS is a managed Kubernetes service that orchestrates containers without requiring you to manage the underlying VMs directly.",
+        "incorrect": "Azure VMs require full VM management. Azure Batch is for large-scale parallel computing jobs, not primarily for containerized applications.",
+        "examTip": "ACI = simple, single-container workloads. AKS = complex, multi-container orchestration. Both abstract away VM management.",
+        "relatedTopics": [
+          "azure-containers",
+          "kubernetes",
+          "serverless"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-018",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO statements about Azure regions are correct? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "A region contains one or more datacenters connected with low-latency networking",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "All Azure services are available in every region",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Region pairs provide automatic cross-region replication for all services",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Some regions are restricted to support specific compliance requirements",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Azure regions are sets of datacenters connected by low-latency networks. Some regions (like Azure Government or Azure China) are restricted for compliance reasons.",
+        "incorrect": "Not all services are available in every region. Region pairs provide replication for some services but not all automatically.",
+        "examTip": "Sovereign regions (US Gov, China) have restricted access for compliance. Check service availability by region before deployment.",
+        "relatedTopics": [
+          "azure-regions",
+          "region-pairs",
+          "sovereign-regions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the core architectural components of Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-021",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Blob Storage supports storing relational data in tables.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Azure Blob Storage can store unstructured data such as images and videos.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Azure Blob Storage requires a virtual machine to be provisioned.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Blob Storage is designed for unstructured data (images, videos, backups). It does not store relational data (that is Azure SQL) and does not require a VM.",
+        "incorrect": "Relational data belongs in Azure SQL Database or similar services. Blob Storage is a standalone service with no VM dependency.",
+        "examTip": "Blob Storage tiers: Hot (frequent access), Cool (infrequent, 30+ days), Cold (rare, 90+ days), Archive (rarely accessed, 180+ days).",
+        "relatedTopics": [
+          "blob-storage",
+          "storage-accounts",
+          "access-tiers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure storage services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-022",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A Network Security Group (NSG) can filter traffic between subnets within a virtual network.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A Network Security Group (NSG) can protect against DDoS attacks.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A Network Security Group (NSG) uses rules based on source/destination IP, port, and protocol.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "NSGs filter network traffic using rules based on 5-tuple (source IP, source port, destination IP, destination port, protocol). They work between subnets and on individual NICs.",
+        "incorrect": "DDoS protection requires Azure DDoS Protection service, not NSGs. NSGs are stateful packet filters, not DDoS mitigation tools.",
+        "examTip": "NSG = layer 3/4 filtering. Azure Firewall = layer 3-7 with FQDN filtering. DDoS Protection = volumetric attack mitigation.",
+        "relatedTopics": [
+          "network-security-groups",
+          "azure-networking",
+          "defense-in-depth"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-028",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure App Service can host web applications, REST APIs, and mobile back ends.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure App Service requires you to manage the underlying operating system patches.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure App Service supports automatic scaling based on demand.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "App Service is a PaaS that hosts web apps, APIs, and mobile backends. It handles OS patching automatically and supports autoscale rules.",
+        "incorrect": "App Service is fully managed PaaS. Microsoft handles OS patching, infrastructure maintenance, and security updates.",
+        "examTip": "App Service = PaaS web hosting. Supports .NET, Java, Node.js, Python, PHP. Built-in CI/CD, SSL, custom domains, and autoscale.",
+        "relatedTopics": [
+          "azure-app-service",
+          "paas",
+          "web-hosting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-029",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To connect an on-premises network to Azure using a private dedicated connection, you should use",
+          "options": [
+            "Azure VPN Gateway",
+            "Azure ExpressRoute",
+            "Azure Virtual Network peering",
+            "Azure Front Door"
+          ],
+          "correctAnswer": "Azure ExpressRoute"
+        },
+        {
+          "id": "d2",
+          "prompt": "To filter network traffic to and from Azure resources in a virtual network, you should use",
+          "options": [
+            "Azure Firewall",
+            "Network Security Groups",
+            "Azure DDoS Protection",
+            "Azure Bastion"
+          ],
+          "correctAnswer": "Network Security Groups"
+        }
+      ],
+      "explanation": {
+        "correct": "ExpressRoute provides private, dedicated connectivity from on-premises to Azure (not over the public internet). NSGs filter traffic using security rules based on IP, port, and protocol.",
+        "incorrect": "VPN Gateway uses encrypted tunnels over the internet. Azure Firewall is a managed firewall service (layer 7). DDoS Protection mitigates volumetric attacks. Bastion provides secure RDP/SSH.",
+        "examTip": "ExpressRoute = private, dedicated, high bandwidth. VPN Gateway = encrypted over internet. NSG = basic traffic filtering. Firewall = advanced filtering.",
+        "relatedTopics": [
+          "expressroute",
+          "network-security-groups",
+          "azure-networking"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-032",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To store data that is rarely accessed and requires a minimum retention period of 180 days, you should use the",
+          "options": [
+            "Hot access tier",
+            "Cool access tier",
+            "Cold access tier",
+            "Archive access tier"
+          ],
+          "correctAnswer": "Archive access tier"
+        },
+        {
+          "id": "d2",
+          "prompt": "To host a fully managed relational database with built-in high availability, you should use",
+          "options": [
+            "Azure Cosmos DB",
+            "Azure SQL Database",
+            "Azure Table Storage",
+            "Azure Blob Storage"
+          ],
+          "correctAnswer": "Azure SQL Database"
+        }
+      ],
+      "explanation": {
+        "correct": "Archive tier is for rarely accessed data with 180-day minimum retention. Azure SQL Database is a fully managed relational database with built-in HA and automatic backups.",
+        "incorrect": "Hot tier is for frequently accessed data. Cool tier requires 30-day minimum. Cosmos DB is NoSQL. Table Storage is key-value. Blob is unstructured.",
+        "examTip": "Storage tiers by retention: Hot (no minimum), Cool (30 days), Cold (90 days), Archive (180 days). Lower tier = lower cost, higher access latency.",
+        "relatedTopics": [
+          "storage-tiers",
+          "azure-sql-database",
+          "data-storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure storage services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-036",
+      "type": "ordering",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "You need to deploy a web application to Azure App Service. Arrange the following steps in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a resource group",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create an App Service plan",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create an App Service web app",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Deploy the application code",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "First create a resource group to hold resources, then an App Service plan (defines compute resources), then the web app itself, and finally deploy the code.",
+        "incorrect": "The App Service plan must exist before the web app. The resource group must exist before any resources are created within it.",
+        "examTip": "Resource group is always first (logical container). Plans define capacity. Apps are created within plans. Code deploys last.",
+        "relatedTopics": [
+          "app-service-deployment",
+          "resource-groups",
+          "app-service-plans"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-038",
+      "type": "ordering",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "You need to configure a virtual machine for high availability using availability zones. Arrange the following steps in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Select an Azure region that supports availability zones",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a resource group in the selected region",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Deploy virtual machines across multiple availability zones",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Configure a load balancer to distribute traffic across the VMs",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "First ensure the region supports availability zones, create the resource group, deploy VMs across zones for redundancy, then add a load balancer to distribute traffic.",
+        "incorrect": "Not all regions support availability zones. The load balancer is configured after VMs are deployed across zones to distribute incoming traffic.",
+        "examTip": "Availability zones provide 99.99% VM SLA. Each zone has independent power, cooling, and networking within a region.",
+        "relatedTopics": [
+          "availability-zones",
+          "high-availability",
+          "load-balancing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-041",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service provides a fully managed desktop virtualization experience, allowing users to access Windows desktops and applications from any device?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Virtual Machines",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Virtual Desktop",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure App Service",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Bastion",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Virtual Desktop (AVD) is a desktop and app virtualization service that runs on Azure, providing multi-session Windows 11/10 experiences accessible from any device.",
+        "incorrect": "Azure VMs require manual desktop setup. App Service hosts web apps. Bastion provides secure RDP/SSH access to VMs but is not a desktop virtualization service.",
+        "examTip": "AVD supports multi-session Windows 11/10, which is unique to Azure. It integrates with Microsoft 365 licensing for cost savings.",
+        "relatedTopics": [
+          "azure-virtual-desktop",
+          "desktop-virtualization",
+          "remote-work"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-042",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure storage redundancy option replicates data synchronously across three availability zones within a single region?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Locally Redundant Storage (LRS)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Zone-Redundant Storage (ZRS)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Geo-Redundant Storage (GRS)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Read-Access Geo-Zone-Redundant Storage (RA-GZRS)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ZRS replicates data synchronously across three availability zones in the primary region, providing 99.9999999999% (12 nines) durability.",
+        "incorrect": "LRS replicates within a single datacenter. GRS replicates asynchronously to a secondary region. RA-GZRS combines zone-redundancy with geo-redundancy plus read access.",
+        "examTip": "ZRS protects against zone-level failures. GRS/RA-GRS protects against region-level failures. RA-GZRS provides both protections with read access to the secondary.",
+        "relatedTopics": [
+          "storage-redundancy",
+          "availability-zones",
+          "data-durability"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure storage services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-043",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Azure networking service provides global HTTP load balancing with SSL offloading, URL-based routing, and Web Application Firewall (WAF) capabilities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Load Balancer",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Traffic Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Front Door",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Application Gateway",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Front Door is a global, scalable entry point that provides HTTP load balancing, SSL offloading, URL-based routing, WAF, and CDN capabilities at the edge of Microsoft's global network.",
+        "incorrect": "Load Balancer operates at layer 4 (no HTTP awareness). Traffic Manager uses DNS-based routing (no data path). Application Gateway is regional, not global.",
+        "examTip": "Front Door = global HTTP/HTTPS + WAF + CDN. Application Gateway = regional HTTP/HTTPS + WAF. Load Balancer = regional layer 4. Traffic Manager = DNS-only global.",
+        "relatedTopics": [
+          "azure-front-door",
+          "load-balancing",
+          "waf",
+          "global-networking"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-048",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service allows you to build automated workflows that integrate apps, data, and services across organizations without writing code?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Functions",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Logic Apps",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure DevOps",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Automation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Logic Apps is a cloud-based platform for creating and running automated workflows that integrate apps, data, services, and systems. It uses a visual designer with hundreds of connectors.",
+        "incorrect": "Azure Functions requires code. Azure DevOps is for CI/CD pipelines. Azure Automation is for IT process automation using PowerShell/Python runbooks.",
+        "examTip": "Logic Apps = no-code/low-code integration workflows with 400+ connectors. Functions = code-first event-driven compute. Use Logic Apps for integration, Functions for compute.",
+        "relatedTopics": [
+          "azure-logic-apps",
+          "workflow-automation",
+          "serverless"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-050",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service provides secure, private RDP and SSH access to virtual machines without exposing them to the public internet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure VPN Gateway",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Bastion",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Firewall",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Front Door",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Bastion provides secure and seamless RDP/SSH connectivity to VMs directly from the Azure portal over TLS, without exposing public IP addresses on the VMs.",
+        "incorrect": "VPN Gateway connects networks. Firewall filters traffic. Front Door provides HTTP load balancing. None of these provide direct RDP/SSH access.",
+        "examTip": "Bastion eliminates the need for public IPs on VMs for remote access. It protects against port scanning and zero-day exploits targeting public RDP/SSH.",
+        "relatedTopics": [
+          "azure-bastion",
+          "secure-access",
+          "vm-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/bastion/bastion-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-053",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Azure networking feature allows you to privately access Azure PaaS services (such as Azure Storage and SQL Database) over a private IP address within your virtual network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Service Endpoints",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Private Link",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "VNet Peering",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure DNS",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Private Link provides private connectivity from a virtual network to Azure services via a private endpoint, assigning a private IP from your VNet to the service.",
+        "incorrect": "Service Endpoints route traffic over Microsoft backbone but the service still has a public IP. VNet Peering connects VNets. Azure DNS resolves names.",
+        "examTip": "Private Link = private IP in your VNet (traffic stays private). Service Endpoints = optimized route but service keeps public endpoint. Private Link is more secure.",
+        "relatedTopics": [
+          "private-link",
+          "private-endpoints",
+          "network-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/private-link/private-link-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-056",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service allows you to run containerized microservices with built-in autoscaling, HTTPS ingress, and Dapr integration without managing Kubernetes directly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Kubernetes Service (AKS)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Container Apps",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Container Instances (ACI)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure App Service",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Container Apps is a serverless container platform built on Kubernetes that provides autoscaling (including scale-to-zero), HTTPS ingress, and Dapr integration without exposing Kubernetes complexity.",
+        "incorrect": "AKS gives full Kubernetes control. ACI is for simple single-container scenarios. App Service is for web apps, not general container microservices.",
+        "examTip": "Container Apps = serverless containers (no K8s management). AKS = full Kubernetes control. Choose Container Apps when you want simplicity over control.",
+        "relatedTopics": [
+          "container-apps",
+          "serverless-containers",
+          "microservices"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/container-apps/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-061",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service provides event-driven, reactive messaging that enables you to build event-based architectures by routing events from Azure services to subscribers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Service Bus",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Event Grid",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Event Hubs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Queue Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Event Grid is a fully managed event routing service that enables event-driven architectures. It connects event sources (Azure services) to event handlers using a publish-subscribe model.",
+        "incorrect": "Service Bus is for enterprise messaging with queues/topics. Event Hubs is for big data streaming. Queue Storage is simple FIFO messaging.",
+        "examTip": "Event Grid = reactive events (something happened). Service Bus = commands/transactions. Event Hubs = telemetry streaming (millions of events/sec).",
+        "relatedTopics": [
+          "event-grid",
+          "event-driven-architecture",
+          "messaging"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/event-grid/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-064",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Azure storage lifecycle management feature automatically transitions blobs between access tiers or deletes them based on configured rules and last modification time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Soft delete",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Lifecycle management policies",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Object replication",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Immutable storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Lifecycle management policies define rule-based actions to transition blobs to cooler tiers or delete them based on age, reducing storage costs automatically.",
+        "incorrect": "Soft delete protects against accidental deletion. Object replication copies blobs between accounts. Immutable storage prevents modification (WORM compliance).",
+        "examTip": "Lifecycle policies can: move to cool after X days, move to archive after Y days, delete after Z days. Great for log data and backups.",
+        "relatedTopics": [
+          "lifecycle-management",
+          "storage-tiers",
+          "cost-optimization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure storage services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-066",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO Azure services are classified as serverless compute options? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Functions",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Virtual Machines",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Container Apps",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Virtual Machine Scale Sets",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Functions and Azure Container Apps both offer serverless compute with automatic scaling (including scale-to-zero) and consumption-based pricing.",
+        "incorrect": "VMs require manual provisioning and management. VM Scale Sets autoscale VMs but still require VM management and do not scale to zero.",
+        "examTip": "Serverless = no server management + auto-scale + pay-per-execution/consumption. Functions for code snippets, Container Apps for containerized microservices.",
+        "relatedTopics": [
+          "serverless-computing",
+          "azure-functions",
+          "container-apps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-068",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO services can be used to host a DNS zone and manage DNS records in Azure? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure DNS",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Traffic Manager",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Load Balancer",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Bastion",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure DNS hosts DNS zones and manages records. Traffic Manager also uses DNS-based routing to distribute traffic globally across endpoints.",
+        "incorrect": "Load Balancer operates at layer 4 without DNS involvement. Bastion provides secure VM access without DNS management.",
+        "examTip": "Azure DNS = host zones + manage records. Traffic Manager = DNS-based traffic routing. Both leverage DNS but for different purposes.",
+        "relatedTopics": [
+          "azure-dns",
+          "traffic-manager",
+          "dns-resolution"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/dns/dns-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-071",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO Azure storage redundancy options replicate data to a secondary region? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Locally Redundant Storage (LRS)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Geo-Redundant Storage (GRS)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Zone-Redundant Storage (ZRS)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Read-Access Geo-Zone-Redundant Storage (RA-GZRS)",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "GRS and RA-GZRS both replicate data asynchronously to a paired secondary region. RA-GZRS additionally provides zone-redundancy in the primary region and read access to the secondary.",
+        "incorrect": "LRS replicates within a single datacenter. ZRS replicates across zones but only within one region. Neither provides cross-region protection.",
+        "examTip": "Geo-options (GRS, GZRS, RA-GRS, RA-GZRS) all replicate to a secondary region. RA- prefix = read access to secondary. Z = zone-redundant in primary.",
+        "relatedTopics": [
+          "storage-redundancy",
+          "geo-replication",
+          "disaster-recovery"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure storage services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-074",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO are benefits of using Azure Application Gateway over Azure Load Balancer? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "URL path-based routing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Layer 4 (TCP/UDP) load balancing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Web Application Firewall (WAF) integration",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Cross-region load balancing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Application Gateway provides layer 7 features including URL path-based routing and WAF integration. Load Balancer only operates at layer 4.",
+        "incorrect": "Layer 4 balancing is what Load Balancer does (not a benefit over it). Cross-region load balancing requires Front Door or Traffic Manager.",
+        "examTip": "Application Gateway = layer 7 (HTTP) + WAF + URL routing + SSL termination. Load Balancer = layer 4 (TCP/UDP). Both are regional.",
+        "relatedTopics": [
+          "application-gateway",
+          "load-balancer",
+          "waf",
+          "layer-7"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/application-gateway/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-078",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO Azure services can be used to implement disaster recovery for on-premises workloads? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Site Recovery",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Advisor",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Backup",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Policy",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Site Recovery provides disaster recovery by replicating VMs and physical servers to Azure. Azure Backup protects data with cloud-based backups that can be restored during disasters.",
+        "incorrect": "Advisor gives recommendations. Policy enforces rules. Neither provides disaster recovery or backup functionality.",
+        "examTip": "Site Recovery = full VM replication and failover (RPO: seconds). Backup = data protection and recovery (RPO: hours/days). Use both for comprehensive DR.",
+        "relatedTopics": [
+          "site-recovery",
+          "azure-backup",
+          "disaster-recovery",
+          "business-continuity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/site-recovery/site-recovery-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-081",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Container Apps can scale to zero instances when there is no traffic.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Container Apps requires you to manage the underlying Kubernetes cluster.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Container Apps supports running multiple containers as a single microservice.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Container Apps scale to zero (pay nothing when idle), abstract away Kubernetes management, and support multi-container apps with sidecars.",
+        "incorrect": "Container Apps is built on Kubernetes but you never interact with the cluster directly. That is what AKS is for.",
+        "examTip": "Container Apps = serverless containers on managed Kubernetes. Scale to zero, revision management, Dapr integration, KEDA-based autoscaling.",
+        "relatedTopics": [
+          "container-apps",
+          "serverless-containers",
+          "autoscaling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/container-apps/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-083",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Virtual Desktop supports multi-session Windows 11 Enterprise.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Virtual Desktop can only be accessed from Windows devices.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Virtual Desktop supports integration with Microsoft 365 Apps.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "AVD supports multi-session Windows 11/10 Enterprise (unique to Azure), can be accessed from any device (Windows, Mac, iOS, Android, HTML5 browser), and integrates with M365 Apps.",
+        "incorrect": "AVD has clients for Windows, macOS, iOS, Android, and a web client. It is not limited to Windows devices.",
+        "examTip": "AVD unique features: multi-session Windows 11/10, FSLogix profiles, per-user access pricing with certain M365 licenses.",
+        "relatedTopics": [
+          "azure-virtual-desktop",
+          "remote-desktop",
+          "microsoft-365"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-desktop/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-086",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Private Link assigns a private IP address from your VNet to the Azure service.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Service Endpoints change the public IP address of the Azure service to a private IP.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Private Link can be used to access services from on-premises via VPN or ExpressRoute.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Private Link creates a private endpoint with a VNet IP. Service Endpoints only route traffic over Microsoft backbone but keep the public endpoint. Private Link works with VPN/ExpressRoute for on-premises access.",
+        "incorrect": "Service Endpoints do not assign private IPs. The service retains its public endpoint. Traffic is routed optimally but not truly private.",
+        "examTip": "Private Link = private IP (truly private). Service Endpoints = optimized routing (still public endpoint). Private Link is the more secure option.",
+        "relatedTopics": [
+          "private-link",
+          "service-endpoints",
+          "network-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/private-link/private-link-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-089",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Logic Apps provides a visual designer for building integration workflows.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Logic Apps requires you to write custom code for every integration.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Logic Apps includes hundreds of pre-built connectors for Microsoft and third-party services.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Logic Apps offers a visual designer with 400+ pre-built connectors for services like Office 365, Salesforce, SAP, and more. No code required for most integrations.",
+        "incorrect": "Logic Apps is no-code/low-code. Pre-built connectors handle most integration scenarios. Custom code is optional for advanced cases.",
+        "examTip": "Logic Apps = visual workflow designer + 400+ connectors + no-code. For code-first workflows, use Azure Functions or Durable Functions instead.",
+        "relatedTopics": [
+          "logic-apps",
+          "integration",
+          "connectors",
+          "workflow"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-094",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Event Grid supports push-based delivery of events to subscribers.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Event Grid is designed for streaming millions of events per second like IoT telemetry.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Event Grid can trigger Azure Functions and Logic Apps when an event occurs.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Event Grid pushes events to subscribers (Functions, Logic Apps, webhooks). It is for reactive, discrete events, not high-throughput streaming (that is Event Hubs).",
+        "incorrect": "Event Grid handles discrete events (resource created, blob uploaded). For millions of events per second (IoT, telemetry), use Azure Event Hubs.",
+        "examTip": "Event Grid = discrete events, push delivery, reactive. Event Hubs = streaming, pull/batch, high-throughput. Different patterns for different needs.",
+        "relatedTopics": [
+          "event-grid",
+          "event-hubs",
+          "event-driven"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/event-grid/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-096",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To distribute traffic globally across Azure regions using DNS-based routing, you should use",
+          "options": [
+            "Azure Load Balancer",
+            "Azure Application Gateway",
+            "Azure Traffic Manager",
+            "Azure Front Door"
+          ],
+          "correctAnswer": "Azure Traffic Manager"
+        },
+        {
+          "id": "d2",
+          "prompt": "To distribute traffic within a single region at layer 4 (TCP/UDP), you should use",
+          "options": [
+            "Azure Load Balancer",
+            "Azure Application Gateway",
+            "Azure Traffic Manager",
+            "Azure Front Door"
+          ],
+          "correctAnswer": "Azure Load Balancer"
+        }
+      ],
+      "explanation": {
+        "correct": "Traffic Manager uses DNS to route traffic globally across regions. Load Balancer distributes layer 4 traffic within a region with ultra-low latency.",
+        "incorrect": "Application Gateway is regional layer 7. Front Door is global layer 7. Traffic Manager is global DNS-only. Load Balancer is regional layer 4.",
+        "examTip": "Global routing: Traffic Manager (DNS) or Front Door (HTTP). Regional routing: Load Balancer (L4) or Application Gateway (L7).",
+        "relatedTopics": [
+          "traffic-manager",
+          "load-balancer",
+          "global-routing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-099",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To run serverless containers that scale to zero without managing Kubernetes, you should use",
+          "options": [
+            "Azure Kubernetes Service",
+            "Azure Container Apps",
+            "Azure Container Instances",
+            "Azure App Service"
+          ],
+          "correctAnswer": "Azure Container Apps"
+        },
+        {
+          "id": "d2",
+          "prompt": "To run a single container quickly for a short-lived task without persistent infrastructure, you should use",
+          "options": [
+            "Azure Kubernetes Service",
+            "Azure Container Apps",
+            "Azure Container Instances",
+            "Azure App Service"
+          ],
+          "correctAnswer": "Azure Container Instances"
+        }
+      ],
+      "explanation": {
+        "correct": "Container Apps provides serverless containers with scale-to-zero on managed Kubernetes. ACI runs isolated containers on-demand for quick, short-lived tasks.",
+        "incorrect": "AKS requires Kubernetes management. App Service is for web apps. Container Apps is for microservices. ACI is for burst/task workloads.",
+        "examTip": "Container decision: AKS (full K8s control) > Container Apps (serverless microservices) > ACI (simple burst tasks). Complexity decreases left to right.",
+        "relatedTopics": [
+          "container-apps",
+          "container-instances",
+          "container-decision"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/container-apps/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-102",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To protect web applications from common exploits like SQL injection and cross-site scripting, you should use",
+          "options": [
+            "Azure DDoS Protection",
+            "Web Application Firewall (WAF)",
+            "Network Security Groups",
+            "Azure Bastion"
+          ],
+          "correctAnswer": "Web Application Firewall (WAF)"
+        },
+        {
+          "id": "d2",
+          "prompt": "To protect against volumetric network attacks that attempt to overwhelm network bandwidth, you should use",
+          "options": [
+            "Azure DDoS Protection",
+            "Web Application Firewall (WAF)",
+            "Network Security Groups",
+            "Azure Bastion"
+          ],
+          "correctAnswer": "Azure DDoS Protection"
+        }
+      ],
+      "explanation": {
+        "correct": "WAF protects against layer 7 web exploits (OWASP top 10: SQLi, XSS, etc.). DDoS Protection mitigates volumetric layer 3/4 attacks that flood bandwidth.",
+        "incorrect": "NSGs filter by IP/port/protocol but do not inspect payloads. Bastion provides secure VM access. Neither handles web exploits or volumetric attacks.",
+        "examTip": "WAF = layer 7 protection (web exploits). DDoS = layer 3/4 protection (volumetric floods). NSG = basic packet filtering. Use all together for defense in depth.",
+        "relatedTopics": [
+          "waf",
+          "ddos-protection",
+          "defense-in-depth"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/web-application-firewall/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-105",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To automatically move blobs to a cooler storage tier based on age, you should configure",
+          "options": [
+            "Soft delete",
+            "Lifecycle management policies",
+            "Object replication",
+            "Versioning"
+          ],
+          "correctAnswer": "Lifecycle management policies"
+        },
+        {
+          "id": "d2",
+          "prompt": "To protect against accidental deletion of blobs by retaining deleted data for a specified period, you should enable",
+          "options": [
+            "Soft delete",
+            "Lifecycle management policies",
+            "Object replication",
+            "Versioning"
+          ],
+          "correctAnswer": "Soft delete"
+        }
+      ],
+      "explanation": {
+        "correct": "Lifecycle management policies automate tier transitions based on blob age. Soft delete retains deleted blobs for recovery during a configurable retention period.",
+        "incorrect": "Object replication copies blobs between accounts. Versioning maintains previous versions of blobs. Neither automates tiering or protects against deletion specifically.",
+        "examTip": "Lifecycle policies = automatic tiering/deletion (cost savings). Soft delete = accidental deletion protection. Versioning = maintain history. Different data protection needs.",
+        "relatedTopics": [
+          "lifecycle-management",
+          "soft-delete",
+          "blob-storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure storage services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-109",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To host DNS zones and manage DNS records for your domain in Azure, you should use",
+          "options": [
+            "Azure DNS",
+            "Azure Traffic Manager",
+            "Azure Front Door",
+            "Azure CDN"
+          ],
+          "correctAnswer": "Azure DNS"
+        },
+        {
+          "id": "d2",
+          "prompt": "To securely access Azure VMs via RDP/SSH from the Azure portal without a public IP, you should use",
+          "options": [
+            "Azure VPN Gateway",
+            "Azure Bastion",
+            "Azure ExpressRoute",
+            "Azure Firewall"
+          ],
+          "correctAnswer": "Azure Bastion"
+        }
+      ],
+      "explanation": {
+        "correct": "Azure DNS hosts your domain's DNS zones with high availability and fast performance. Azure Bastion provides portal-based RDP/SSH without needing public IPs on VMs.",
+        "incorrect": "Traffic Manager uses DNS for routing but does not host your zones. VPN Gateway connects networks. ExpressRoute is dedicated connectivity. Firewall filters traffic.",
+        "examTip": "Azure DNS = host zones (100% SLA). Bastion = secure VM access (no public IP). Both improve security by reducing public exposure.",
+        "relatedTopics": [
+          "azure-dns",
+          "azure-bastion",
+          "secure-access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/dns/dns-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-111",
+      "type": "ordering",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You need to configure Azure Private Link to access Azure SQL Database privately. Arrange the following steps in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create an Azure Virtual Network with a subnet",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a private endpoint for the Azure SQL Database",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Configure a private DNS zone to resolve the SQL FQDN to the private IP",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Disable public network access on the Azure SQL Database",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "First create the VNet, then the private endpoint (which gets a private IP from the subnet), configure DNS resolution, then disable public access to enforce private-only connectivity.",
+        "incorrect": "The VNet must exist before a private endpoint can be created in it. DNS must resolve before disabling public access to avoid connectivity issues.",
+        "examTip": "Private Link setup: VNet > Private Endpoint > DNS Zone > Disable Public Access. Always test private connectivity before disabling public.",
+        "relatedTopics": [
+          "private-link",
+          "private-endpoints",
+          "private-dns"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/private-link/private-link-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-114",
+      "type": "ordering",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Arrange the Azure Blob Storage access tiers from most expensive for storage (highest storage cost) to least expensive for storage.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Hot",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Cool",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Cold",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Archive",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Storage cost decreases from Hot (most expensive) to Archive (cheapest). However, access costs increase inversely: Archive has highest retrieval costs.",
+        "incorrect": "Hot tier has the highest per-GB storage cost but lowest access cost. Archive has the lowest storage cost but highest access cost and latency.",
+        "examTip": "Storage cost: Hot > Cool > Cold > Archive. Access cost: Archive > Cold > Cool > Hot. Choose tier based on access frequency.",
+        "relatedTopics": [
+          "access-tiers",
+          "storage-cost",
+          "blob-storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure storage services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-118",
+      "type": "ordering",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You need to configure Azure Blob lifecycle management to optimize storage costs. Arrange the lifecycle stages from newest data to oldest.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Data is actively accessed (Hot tier)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Data is infrequently accessed after 30 days (Cool tier)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Data is rarely accessed after 90 days (Cold tier)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Data is archived for compliance after 180 days (Archive tier)",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Data lifecycle: Hot (active) > Cool (30+ days infrequent) > Cold (90+ days rare) > Archive (180+ days compliance). Lifecycle policies automate these transitions.",
+        "incorrect": "Each tier has minimum retention requirements that must be met before transitioning to avoid early deletion penalties.",
+        "examTip": "Configure lifecycle rules: Move to Cool after 30 days, Cold after 90 days, Archive after 180 days, Delete after X days. Automates cost optimization.",
+        "relatedTopics": [
+          "lifecycle-management",
+          "access-tiers",
+          "cost-optimization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure storage services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-121",
+      "type": "drag-drop",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each item to the correct category.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "IaaS",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "PaaS",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure Virtual Machines"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Virtual Networks"
+        },
+        {
+          "id": "item3",
+          "text": "Azure App Service"
+        },
+        {
+          "id": "item4",
+          "text": "Azure SQL Database"
+        }
+      ],
+      "explanation": {
+        "correct": "Azure VMs and VNets are IaaS (you manage infrastructure). App Service and SQL Database are PaaS (platform handles infrastructure, you manage apps/data).",
+        "incorrect": "IaaS provides raw compute/network that you manage. PaaS abstracts infrastructure so you focus on applications.",
+        "examTip": "IaaS = VMs, VNets, disks (you manage OS). PaaS = App Service, SQL DB, Functions (provider manages OS/runtime). SaaS = M365, Dynamics (use the app).",
+        "relatedTopics": [
+          "service-models",
+          "iaas",
+          "paas"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cloud service types",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-122",
+      "type": "drag-drop",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each item to the correct category.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Global Load Balancing",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Regional Load Balancing",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure Front Door"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Traffic Manager"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Load Balancer"
+        },
+        {
+          "id": "item4",
+          "text": "Azure Application Gateway"
+        }
+      ],
+      "explanation": {
+        "correct": "Front Door and Traffic Manager distribute traffic globally across regions. Load Balancer and Application Gateway operate within a single region.",
+        "incorrect": "Global services route across regions. Regional services distribute within one region. Choose based on scope and protocol layer.",
+        "examTip": "Global: Front Door (HTTP/L7) and Traffic Manager (DNS). Regional: Application Gateway (HTTP/L7) and Load Balancer (TCP-UDP/L4).",
+        "relatedTopics": [
+          "load-balancing",
+          "front-door",
+          "traffic-manager",
+          "application-gateway"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/load-balancing-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-125",
+      "type": "drag-drop",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Drag each item to the correct category.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Compute Services",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Storage Services",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure Functions"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Container Instances"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Blob Storage"
+        },
+        {
+          "id": "item4",
+          "text": "Azure Files"
+        }
+      ],
+      "explanation": {
+        "correct": "Functions and Container Instances are compute services (execute code/containers). Blob Storage and Azure Files are storage services (persist data).",
+        "incorrect": "Compute = processing power (run code). Storage = data persistence (save files). They work together but are distinct service categories.",
+        "examTip": "Compute: VMs, Functions, Container Instances, App Service, AKS. Storage: Blob, Files, Queue, Table, Disk. Know the category for each service.",
+        "relatedTopics": [
+          "compute-services",
+          "storage-services",
+          "azure-categories"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-128",
+      "type": "drag-drop",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each item to the correct category.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Serverless / Event-Driven",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Always-On / VM-Based",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure Functions (Consumption plan)"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Logic Apps (Consumption tier)"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Virtual Machines"
+        },
+        {
+          "id": "item4",
+          "text": "Azure VM Scale Sets"
+        }
+      ],
+      "explanation": {
+        "correct": "Functions and Logic Apps on consumption plans are serverless (scale to zero, pay per execution). VMs and Scale Sets are always-on infrastructure requiring management.",
+        "incorrect": "Serverless runs only when triggered and scales automatically. VM-based runs continuously and requires capacity planning.",
+        "examTip": "Serverless decision: Functions (code tasks) vs Logic Apps (workflows) vs Container Apps (containers). All scale to zero on consumption plans.",
+        "relatedTopics": [
+          "serverless",
+          "event-driven",
+          "vm-based",
+          "compute-decision"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-130",
+      "type": "drag-drop",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each item to the correct category.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Network Security (Perimeter)",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Network Connectivity (Access)",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure Firewall"
+        },
+        {
+          "id": "item2",
+          "text": "Network Security Groups"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Private Link"
+        },
+        {
+          "id": "item4",
+          "text": "Azure ExpressRoute"
+        }
+      ],
+      "explanation": {
+        "correct": "Firewall and NSGs protect the network perimeter by filtering traffic. Private Link and ExpressRoute provide secure connectivity paths to access resources.",
+        "incorrect": "Security tools block unwanted traffic. Connectivity tools establish communication paths. Both contribute to a secure network architecture.",
+        "examTip": "Security: Firewall (L3-L7 filtering), NSG (L3-L4 filtering), WAF (L7 web). Connectivity: Private Link (private access), ExpressRoute (dedicated line), VPN (encrypted tunnel).",
+        "relatedTopics": [
+          "network-security",
+          "network-connectivity",
+          "firewall",
+          "private-link"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/networking/fundamentals/networking-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-131",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "Contoso Ltd is a multinational company with offices in 10 countries. They need to migrate their on-premises workloads to Azure while maintaining compliance with EU data residency requirements.",
+      "questionText": "Which Azure concept should Contoso use to ensure data stays within the EU?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Geographies",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Availability Zones",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Resource Groups",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Management Groups",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Geographies are defined around data residency boundaries, ensuring that data replication stays within the geographic boundary. EU geography contains European regions that meet GDPR requirements.",
+        "incorrect": "Availability Zones are within a single region for HA. Resource Groups are logical containers. Management Groups organize subscriptions but do not enforce data residency.",
+        "examTip": "Geography = data residency boundary. Region = physical location. Zone = fault domain within a region. Use geographies for compliance with data residency laws.",
+        "relatedTopics": [
+          "azure-geographies",
+          "data-residency",
+          "gdpr-compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the core architectural components of Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-133",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "Woodgrove Bank needs to run a microservices application with 15 services that communicate via events. They want serverless scaling but their team has no Kubernetes expertise.",
+      "questionText": "Which Azure compute service is best suited for Woodgrove's requirements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Kubernetes Service (AKS)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Container Apps",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Virtual Machines",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Functions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Container Apps provides serverless containers with built-in event-driven scaling, Dapr integration for microservice communication, and zero Kubernetes management required.",
+        "incorrect": "AKS requires Kubernetes expertise. VMs need full infrastructure management. Functions are better for individual functions than multi-service container architectures.",
+        "examTip": "Container Apps = serverless microservices without K8s knowledge. Built-in: Dapr (service invocation, pub/sub), KEDA (event scaling), Envoy (ingress).",
+        "relatedTopics": [
+          "container-apps",
+          "microservices",
+          "serverless-containers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/container-apps/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-136",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "Litware Inc has a global e-commerce application with users in North America, Europe, and Asia. They need to distribute static content and cache dynamic API responses at edge locations closest to users.",
+      "questionText": "Which Azure service should Litware use for this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Traffic Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Front Door",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Load Balancer",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Application Gateway",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Front Door combines global HTTP load balancing with built-in CDN capabilities, caching static and dynamic content at Microsoft edge locations worldwide.",
+        "incorrect": "Traffic Manager is DNS-only (no caching or content delivery). Load Balancer is regional layer 4. Application Gateway is regional layer 7. None provide CDN caching.",
+        "examTip": "Front Door = global LB + CDN + WAF + SSL offload. For content delivery at the edge with intelligent routing, Front Door is the unified solution.",
+        "relatedTopics": [
+          "azure-front-door",
+          "cdn",
+          "global-distribution"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-139",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "VanArsdel Ltd has 50TB of surveillance video data that must be retained for 7 years for regulatory compliance. The data is written once and never accessed unless required for a legal audit.",
+      "questionText": "Which Azure Blob Storage configuration provides the most cost-effective solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hot tier with LRS redundancy",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Archive tier with GRS redundancy",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Cool tier with ZRS redundancy",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Hot tier with RA-GZRS redundancy",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Archive tier has the lowest storage cost per GB, ideal for rarely accessed data. GRS provides geo-redundancy for compliance data protection. Archive + GRS is the most cost-effective for this scenario.",
+        "incorrect": "Hot tier is most expensive for storage. Cool tier is cheaper but still costlier than Archive. RA-GZRS is the most expensive redundancy option.",
+        "examTip": "For write-once, rarely-read compliance data: Archive tier (cheapest storage) + GRS (cross-region protection). Accept higher access cost since retrieval is rare.",
+        "relatedTopics": [
+          "archive-tier",
+          "compliance-storage",
+          "storage-redundancy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure storage services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-141",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure networking service routes traffic between subnets, VNets, and the internet, and is the fundamental building block of Azure networking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Virtual Network (VNet)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Load Balancer",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure CDN",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure DNS",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Virtual Network (VNet) is the fundamental network building block that enables Azure resources to communicate with each other, the internet, and on-premises networks securely.",
+        "incorrect": "Load Balancer distributes traffic. CDN caches content. DNS resolves names. All operate on top of VNets but VNet is the foundation.",
+        "examTip": "VNet features: subnets, NSGs, route tables, peering, service endpoints, private endpoints. VNets are region-scoped and cannot span regions (use peering).",
+        "relatedTopics": [
+          "azure-vnet",
+          "networking-basics",
+          "subnets"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-142",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service provides a unified operations platform that extends Azure services and management to any infrastructure, including running Azure data services on-premises?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Stack Hub",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Arc",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure ExpressRoute",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure VPN Gateway",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Arc extends Azure management, services, and governance to any infrastructure. It can run Azure data services (SQL Managed Instance, PostgreSQL) on-premises or in other clouds.",
+        "incorrect": "Azure Stack Hub is a separate Azure environment running on-premises hardware. ExpressRoute and VPN Gateway provide network connectivity, not management extension.",
+        "examTip": "Arc capabilities: Arc-enabled servers, Arc-enabled Kubernetes, Arc-enabled data services, Arc-enabled application services. Manage everything from Azure.",
+        "relatedTopics": [
+          "azure-arc",
+          "arc-data-services",
+          "hybrid-cloud"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-arc/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-144",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service provides business continuity by replicating physical and virtual machines from a primary site to a secondary location?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Backup",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Site Recovery",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Migrate",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Storage GRS",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Site Recovery (ASR) continuously replicates VMs and physical servers to Azure or a secondary site, enabling failover during outages with minimal data loss (RPO in seconds).",
+        "incorrect": "Backup protects data but does not replicate running VMs. Migrate is for permanent migration. GRS replicates storage data but not compute resources.",
+        "examTip": "Site Recovery = DR orchestration (replicate + failover + failback). Backup = data protection (snapshots + restore). Use both for comprehensive BCDR.",
+        "relatedTopics": [
+          "site-recovery",
+          "disaster-recovery",
+          "business-continuity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/site-recovery/site-recovery-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-147",
+      "type": "single-choice",
+      "topicId": "describe-azure-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure compute option allows you to quickly run a container without managing any underlying infrastructure or orchestration platform?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Container Instances",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Kubernetes Service",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Virtual Machines",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Batch",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Container Instances (ACI) runs containers on-demand without managing servers or orchestrators. It is the fastest and simplest way to run a container in Azure.",
+        "incorrect": "AKS requires Kubernetes management. VMs need full OS management. Batch is for large-scale parallel workloads, not simple container execution.",
+        "examTip": "ACI = simplest container option (per-second billing, quick start). No orchestration. Best for: quick tasks, build agents, burst compute, dev/test.",
+        "relatedTopics": [
+          "container-instances",
+          "containers",
+          "serverless-compute"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/container-instances/container-instances-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1593 @@
+{
+  "certificationId": "comptia-security-plus",
+  "topicId": "threats-vulnerabilities",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "secplus-019",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "An attacker sends a highly targeted, personalized email to a company's CFO impersonating the CEO, requesting an urgent wire transfer. What type of attack is this?",
+      "explanation": {
+        "correct": "Whaling is a form of spear phishing specifically targeting high-value individuals like C-suite executives, often involving urgent, personalized financial requests — this scenario is a classic Business Email Compromise-style whaling attack.",
+        "incorrect": "Vishing uses voice calls, and smishing uses SMS text messages — neither matches the email vector described. Pretexting is a broader social engineering technique involving a fabricated scenario, but the specific targeting of an executive via email is more precisely whaling.",
+        "examTip": "Whaling = phishing that targets the 'big fish' (executives); think CEO fraud / Business Email Compromise (BEC).",
+        "relatedTopics": [
+          "social-engineering",
+          "whaling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "social-engineering",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Globex Corp's finance department received an urgent email appearing to come from the CEO, requesting an unusual same-day wire transfer.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Whaling",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Vishing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Smishing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Pretexting",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-020",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which type of malware self-replicates across a network without requiring a host file or user interaction to spread?",
+      "explanation": {
+        "correct": "A worm is self-replicating and spreads autonomously across networks by exploiting vulnerabilities, without needing to attach to a host file or require user action, unlike a virus.",
+        "incorrect": "A virus requires a host file and typically some user action (like opening an infected file) to propagate. A trojan disguises itself as legitimate software and doesn't self-replicate. A logic bomb lies dormant until a triggering condition, and doesn't spread on its own.",
+        "examTip": "Worms famously caused rapid, network-wide outbreaks (e.g., WannaCry) specifically because they need no user interaction to spread.",
+        "relatedTopics": [
+          "malware-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "malware-types",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Umbrella Corp's network team observed a single infected workstation rapidly compromising dozens of other machines within minutes, with no user interaction on any of them.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Virus",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Worm",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Trojan",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Logic bomb",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-021",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "An attacker floods a target web server with an overwhelming number of HTTP GET requests designed to exhaust application-layer resources rather than network bandwidth. What category of DDoS attack is this?",
+      "explanation": {
+        "correct": "Application-layer DDoS attacks target Layer 7 resources (like web server processing capacity) using seemingly legitimate requests, distinct from raw bandwidth exhaustion.",
+        "incorrect": "Volumetric attacks aim to saturate available bandwidth with sheer traffic volume. Protocol attacks exploit weaknesses in network/transport protocols (like SYN floods) to exhaust connection state tables. Amplification attacks are a technique to multiply volumetric attack traffic, not a separate category from volumetric.",
+        "examTip": "Application-layer DDoS is often the hardest to detect since the traffic can look like legitimate user requests.",
+        "relatedTopics": [
+          "ddos"
+        ]
+      },
+      "metadata": {
+        "examObjective": "ddos",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Globex Corp's e-commerce site became unresponsive during a flash sale after a sudden surge of seemingly legitimate-looking HTTP requests.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Volumetric attack",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Protocol attack",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Application-layer attack",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Amplification attack",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-022",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "An attacker captures a valid authentication token from network traffic and later replays it to gain unauthorized access without knowing the underlying credentials. What is this attack called?",
+      "explanation": {
+        "correct": "A replay attack involves capturing valid data (such as an authentication token or session credential) and resending it later to impersonate the original sender, without needing to know the underlying secret.",
+        "incorrect": "Pass-the-hash specifically reuses a captured password HASH (not a general token) to authenticate. Kerberoasting targets Kerberos service ticket hashes for offline cracking, a more specific scenario. A downgrade attack forces use of a weaker protocol/cipher rather than replaying captured data.",
+        "examTip": "Defenses against replay attacks include timestamps, nonces, and sequence numbers that make captured traffic unusable after expiry.",
+        "relatedTopics": [
+          "replay-attack"
+        ]
+      },
+      "metadata": {
+        "examObjective": "replay-attack",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pass-the-hash",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Replay attack",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Kerberoasting",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Downgrade attack",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-023",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which web application attack involves injecting malicious SQL statements into an input field to manipulate or extract data from a backend database?",
+      "explanation": {
+        "correct": "SQL injection occurs when unsanitized user input is incorporated directly into a SQL query, allowing an attacker to manipulate query logic and access or modify unauthorized data.",
+        "incorrect": "XSS injects malicious scripts that execute in a victim's browser, not database queries. CSRF tricks a victim's browser into making unwanted authenticated requests, without database query injection. SSRF tricks a server into making requests to unintended internal/external resources.",
+        "examTip": "The best defense against SQL injection is parameterized queries (prepared statements), not just input sanitization alone.",
+        "relatedTopics": [
+          "sql-injection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "sql-injection",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Wayne Enterprises' security team found unusual database query patterns in their web application logs following a customer complaint about missing order records.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cross-site scripting (XSS)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SQL injection",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Cross-site request forgery (CSRF)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Server-side request forgery (SSRF)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-024",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Scenario: Globex Corp's security team notices a web application accepting user-supplied URLs and fetching content from them server-side, which an attacker used to reach an internal metadata service not normally exposed externally. What attack technique does this describe?",
+      "explanation": {
+        "correct": "SSRF occurs when an attacker manipulates a server into making unintended requests to internal or restricted resources (such as a cloud metadata endpoint) on the attacker's behalf.",
+        "incorrect": "XSS executes in the victim's browser, not on the server. Directory traversal manipulates file paths to access unauthorized files, not URLs/network requests. CSRF forces a victim's authenticated browser to make requests, which is a different mechanism than a server making the request itself.",
+        "examTip": "SSRF attacks against cloud metadata endpoints (like 169.254.169.254) can expose sensitive instance credentials — a well-known, high-impact SSRF pattern.",
+        "relatedTopics": [
+          "ssrf"
+        ]
+      },
+      "metadata": {
+        "examObjective": "ssrf",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Globex Corp recently deployed a new internal reporting tool that lets users submit external URLs for the server to fetch and display.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cross-site scripting (XSS)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Server-side request forgery (SSRF)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Directory traversal",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Cross-site request forgery (CSRF)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-025",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which threat actor category is typically characterized by limited technical skill, relying on pre-built tools and scripts developed by others to launch attacks, often for notoriety rather than financial gain?",
+      "explanation": {
+        "correct": "Script kiddies use existing tools/scripts without deep technical understanding, typically motivated by curiosity or notoriety rather than sophisticated objectives.",
+        "incorrect": "Nation-state actors are highly resourced and sophisticated (APT-level). Organized crime is financially motivated with significant resources. Insider threats originate from within the organization, unrelated to skill level.",
+        "examTip": "Script kiddies generally have low sophistication but should not be dismissed — widely available tools can still cause real damage.",
+        "relatedTopics": [
+          "threat-actors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "threat-actors",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Initech's SOC identified an intrusion attempt using a widely available, unmodified exploit script downloaded from a public forum.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nation-state actor",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Organized crime",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Script kiddie",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Insider threat",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-026",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which cryptographic attack relies on the mathematical probability that two different inputs will produce the same hash output, exploited faster than expected due to probability theory?",
+      "explanation": {
+        "correct": "A birthday attack exploits the birthday paradox — the surprisingly high probability of hash collisions occurring faster than brute-force intuition would suggest, based purely on statistical probability.",
+        "incorrect": "Rainbow table attacks use precomputed hash tables to reverse hashes, not collision probability. Downgrade attacks force weaker protocol/cipher use. Dictionary attacks try common password/word lists against a hash or login, unrelated to collision probability.",
+        "examTip": "The birthday attack's name comes from the classic statistics puzzle: in a room of just 23 people, there's a >50% chance two share a birthday.",
+        "relatedTopics": [
+          "birthday-attack",
+          "hashing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "birthday-attack",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rainbow table attack",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Birthday attack",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Downgrade attack",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Dictionary attack",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-027",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which reconnaissance technique involves gathering information about a target exclusively from publicly available sources, such as social media, WHOIS records, and job postings, without directly interacting with the target's systems?",
+      "explanation": {
+        "correct": "Passive reconnaissance (Open Source Intelligence, OSINT) gathers publicly available information without touching the target's systems directly, minimizing detection risk.",
+        "incorrect": "Active reconnaissance directly interacts with target systems (e.g., port scanning), which is detectable. Enumeration is a more detailed active technique to extract system/user information after initial access points are found. Vulnerability scanning is an active technique that directly probes systems for weaknesses.",
+        "examTip": "Tools like Shodan can straddle the line but are generally considered passive/OSINT since they query pre-indexed internet-wide scan data rather than directly probing the target live.",
+        "relatedTopics": [
+          "osint",
+          "reconnaissance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "osint",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Active reconnaissance",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Passive reconnaissance / OSINT",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Enumeration",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Vulnerability scanning",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-028",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which scoring system is used to communicate the severity of a known vulnerability, producing a numeric score from 0 to 10?",
+      "explanation": {
+        "correct": "CVSS (Common Vulnerability Scoring System) produces a standardized numeric severity score (0.0–10.0) based on exploitability and impact metrics.",
+        "incorrect": "CVE is the identifier/catalog naming system for individual vulnerabilities, not a scoring system itself. NVD is the database that aggregates CVE entries with CVSS scores, not the scoring methodology itself. OWASP Top 10 is a list of common web application risk categories, not a numeric scoring system.",
+        "examTip": "A CVSS score of 9.0-10.0 is rated Critical; know the general severity bands (None/Low/Medium/High/Critical) for the exam.",
+        "relatedTopics": [
+          "cvss",
+          "vulnerability-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "cvss",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "CVE",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "CVSS",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "NVD",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "OWASP Top 10",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-029",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "An attacker sets up a rogue wireless access point with the same SSID as a legitimate corporate network to trick users into connecting and exposing their credentials. What is this attack called?",
+      "explanation": {
+        "correct": "An evil twin is a rogue access point mimicking a legitimate network's SSID to lure victims into connecting, enabling credential theft or traffic interception.",
+        "incorrect": "A deauthentication attack forcibly disconnects legitimate clients (often used to push victims toward an evil twin, but is a distinct technique). MAC flooding overwhelms a switch's CAM table to force it into a hub-like broadcast mode. VLAN hopping exploits switch misconfigurations to access unauthorized VLANs.",
+        "examTip": "Deauthentication attacks are frequently paired with evil twin setups to force victims off the legitimate AP and onto the rogue one.",
+        "relatedTopics": [
+          "evil-twin",
+          "wireless-attacks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "evil-twin",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Employees at Umbrella Corp's headquarters reported their laptops connecting to a Wi-Fi network with the company's usual name, but from an unfamiliar location in the parking lot.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deauthentication attack",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Evil twin",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "MAC flooding",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "VLAN hopping",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-030",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which malware type specifically encrypts a victim's files and demands payment for the decryption key?",
+      "explanation": {
+        "correct": "Ransomware encrypts victim data and demands payment (typically cryptocurrency) in exchange for the decryption key, directly monetizing the attack.",
+        "incorrect": "Spyware covertly monitors/exfiltrates user activity without encrypting files. Adware displays unwanted advertisements. A rootkit provides stealthy, privileged persistent access, not file encryption for ransom.",
+        "examTip": "The best defense against ransomware impact is maintaining tested, offline/immutable backups following the 3-2-1 backup rule.",
+        "relatedTopics": [
+          "ransomware"
+        ]
+      },
+      "metadata": {
+        "examObjective": "ransomware",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Globex Corp's file server displayed a message demanding cryptocurrency payment after all shared documents became inaccessible overnight.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Spyware",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Adware",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Ransomware",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Rootkit",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-031",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are examples of social engineering techniques that rely on exploiting human trust or urgency rather than technical vulnerabilities?",
+      "explanation": {
+        "correct": "Pretexting (fabricating a scenario to extract information) and baiting (luring victims with something enticing, like a malicious USB drive) both exploit human psychology rather than technical flaws.",
+        "incorrect": "Buffer overflow and SQL injection are technical application-layer attacks exploiting code/input handling flaws, not human psychology.",
+        "examTip": "Social engineering exploits people; application attacks exploit code — know which bucket each technique belongs to.",
+        "relatedTopics": [
+          "social-engineering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "social-engineering",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pretexting",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Baiting",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Buffer overflow",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SQL injection",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-032",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO of the following attack techniques specifically target the Kerberos authentication protocol?",
+      "explanation": {
+        "correct": "Kerberoasting extracts and cracks service account ticket hashes, while pass-the-ticket reuses a captured Kerberos ticket to impersonate a user — both directly target Kerberos-specific mechanisms.",
+        "incorrect": "ARP poisoning manipulates Layer 2 address resolution, unrelated to Kerberos. SQL injection targets database query handling, also unrelated to the Kerberos protocol.",
+        "examTip": "Kerberoasting works because service account ticket hashes can be requested by any authenticated user and cracked offline — use strong, long service account passwords to mitigate.",
+        "relatedTopics": [
+          "kerberos-attacks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "kerberos-attacks",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kerberoasting",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Pass-the-ticket",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ARP poisoning",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SQL injection",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-033",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid indicators of compromise (IoCs) that a security analyst might investigate?",
+      "explanation": {
+        "correct": "Unusual outbound traffic and unauthorized new privileged accounts are classic IoCs suggesting potential compromise or unauthorized activity.",
+        "incorrect": "A routine scheduled update notification and a user changing their own wallpaper are normal, benign activities with no inherent security significance.",
+        "examTip": "Correlate multiple weak IoCs together (e.g., odd traffic + new account + off-hours login) for higher-confidence detection rather than acting on a single indicator alone.",
+        "relatedTopics": [
+          "ioc"
+        ]
+      },
+      "metadata": {
+        "examObjective": "ioc",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unusual outbound traffic to an unfamiliar external IP address",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A newly created administrative account that wasn't provisioned through normal channels",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A scheduled software update notification",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A user changing their own desktop wallpaper",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-034",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO of the following are considered application-layer web attacks that exploit how user input is processed or trusted by a web application?",
+      "explanation": {
+        "correct": "XSS injects malicious scripts executed in a victim's browser, and CSRF tricks a victim's authenticated browser into making unintended requests — both are web application-layer attacks exploiting trust in user input/sessions.",
+        "incorrect": "ARP poisoning and MAC flooding are Layer 2 network attacks manipulating switch/address resolution behavior, not web application-layer input handling.",
+        "examTip": "XSS exploits the victim's TRUST of the site's content; CSRF exploits the SITE's trust of the victim's authenticated browser — a classic distinction to remember.",
+        "relatedTopics": [
+          "xss",
+          "csrf"
+        ]
+      },
+      "metadata": {
+        "examObjective": "xss",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cross-site scripting (XSS)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Cross-site request forgery (CSRF)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ARP poisoning",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "MAC flooding",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-035",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid file inclusion vulnerability types that allow an attacker to include unauthorized files in a web application's execution?",
+      "explanation": {
+        "correct": "LFI includes files already present on the local server (e.g., via directory traversal), while RFI includes a remote, attacker-controlled file — both are file inclusion vulnerability classes.",
+        "incorrect": "IDOR involves accessing unauthorized objects/records via predictable identifiers, a different vulnerability class. CSRF forces unwanted authenticated requests, unrelated to file inclusion.",
+        "examTip": "RFI is generally considered more dangerous than LFI since it lets an attacker execute entirely attacker-controlled remote code.",
+        "relatedTopics": [
+          "file-inclusion"
+        ]
+      },
+      "metadata": {
+        "examObjective": "file-inclusion",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Local File Inclusion (LFI)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Remote File Inclusion (RFI)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Insecure Direct Object Reference (IDOR)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Cross-Site Request Forgery (CSRF)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-036",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO tools/techniques are commonly associated with active reconnaissance during a penetration test?",
+      "explanation": {
+        "correct": "Port scanning and banner grabbing both directly interact with the target's live systems, making them active reconnaissance techniques.",
+        "incorrect": "Reviewing job postings and WHOIS records are passive reconnaissance (OSINT) techniques that don't touch the target's systems directly.",
+        "examTip": "Active recon is detectable by the target's monitoring tools; passive recon generally is not, since it never touches target infrastructure.",
+        "relatedTopics": [
+          "reconnaissance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "reconnaissance",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Port scanning with Nmap",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Banner grabbing against live services",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Reviewing a company's public LinkedIn job postings",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Searching WHOIS records",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-037",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Vishing (voice phishing) uses phone calls. A rainbow table attack uses precomputed hash-to-plaintext mappings to reverse a captured HASH — it doesn't require already knowing the plaintext password (that would defeat the purpose). Zero-day vulnerabilities are unpatched at time of exploitation, giving defenders zero days of advance warning.",
+        "incorrect": "The false statement inverts the purpose of a rainbow table attack — it's used specifically because the plaintext is NOT already known.",
+        "examTip": "Salting passwords before hashing defeats precomputed rainbow table attacks by making precomputed tables useless.",
+        "relatedTopics": [
+          "vishing",
+          "rainbow-table",
+          "zero-day"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vishing",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Vishing is a social engineering attack conducted over voice calls or voicemail.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A rainbow table attack requires the attacker to already know the victim's plaintext password.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A zero-day vulnerability is one for which no patch or fix is yet available at the time of discovery/exploitation.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "secplus-038",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Trojans masquerade as legitimate software. Botnets are networks of compromised ('zombie') devices under attacker control, commonly weaponized for DDoS. Logic bombs specifically wait for a predefined trigger condition (like a date or event) before executing — they don't run immediately upon installation.",
+        "incorrect": "The false statement misrepresents a logic bomb's defining trait: dormancy until a specific trigger condition is met.",
+        "examTip": "A famous logic bomb pattern: a disgruntled employee sets code to trigger destructive actions only after their employment is terminated.",
+        "relatedTopics": [
+          "malware-types",
+          "botnet"
+        ]
+      },
+      "metadata": {
+        "examObjective": "malware-types",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A trojan disguises itself as legitimate, desirable software to trick users into installing it.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A botnet is a network of compromised devices controlled remotely by an attacker, often used for DDoS attacks.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A logic bomb executes immediately upon installation, regardless of any triggering condition.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-039",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Downgrade attacks coerce use of weaker protocols/ciphers (e.g., forcing TLS 1.0 instead of 1.3). Privilege escalation is exactly gaining unauthorized elevated access. Fileless malware, however, specifically operates in memory or leverages legitimate system tools (like PowerShell) WITHOUT writing traditional executable files to disk — that's precisely how it evades signature-based detection.",
+        "incorrect": "The false statement inverts fileless malware's defining characteristic — it avoids writing files to disk, which is exactly why it evades traditional file-based signature scanning.",
+        "examTip": "Fileless malware often lives entirely in memory or abuses legitimate admin tools (PowerShell, WMI) — a technique sometimes called 'living off the land'.",
+        "relatedTopics": [
+          "fileless-malware",
+          "privilege-escalation",
+          "downgrade-attack"
+        ]
+      },
+      "metadata": {
+        "examObjective": "fileless-malware",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A downgrade attack forces a system to use a weaker, more easily exploitable version of a protocol or cipher.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Fileless malware operates by writing malicious executable files directly to disk to evade signature-based antivirus.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Privilege escalation refers to an attacker gaining higher-level access rights than originally granted or intended.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "secplus-040",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "ARP poisoning corrupts ARP cache entries to intercept traffic. DNS poisoning corrupts cached DNS records to redirect victims to malicious destinations. VLAN hopping can be achieved through techniques like double tagging or switch spoofing over the network, without requiring physical hardware access.",
+        "incorrect": "The false statement incorrectly requires physical access for VLAN hopping — several VLAN hopping techniques work purely over network-layer manipulation.",
+        "examTip": "Disabling unused switch ports and properly configuring trunk ports mitigates most VLAN hopping techniques.",
+        "relatedTopics": [
+          "arp-poisoning",
+          "dns-poisoning",
+          "vlan-hopping"
+        ]
+      },
+      "metadata": {
+        "examObjective": "arp-poisoning",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "ARP poisoning allows an attacker to associate their own MAC address with a legitimate IP address on the local network, enabling traffic interception.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "DNS poisoning involves corrupting DNS cache entries to redirect users to a malicious IP address for a legitimate domain name.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "VLAN hopping is only possible if an attacker has physical access to the network switch hardware.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-041",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Insider threats can be entirely unintentional (careless or negligent employees), not just malicious actors. Watering hole attacks compromise a trusted third-party site frequented by the target group rather than attacking them head-on. CVSS BASE scores are static and reflect the inherent, unchanging characteristics of the vulnerability itself; TEMPORAL and ENVIRONMENTAL metrics can adjust for exploitation trends, but not the base score.",
+        "incorrect": "Two statements are false: insider threats include negligent/unintentional actors, and it's specifically the temporal/environmental CVSS metrics — not the base score — that change over time.",
+        "examTip": "Remember: CVSS has three metric groups — Base (fixed), Temporal (changes with exploit maturity), Environmental (organization-specific).",
+        "relatedTopics": [
+          "insider-threat",
+          "watering-hole",
+          "cvss"
+        ]
+      },
+      "metadata": {
+        "examObjective": "insider-threat",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "An insider threat must always involve malicious intent to be classified as a risk.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "A watering hole attack compromises a website that the target's employees are known to frequently visit, rather than attacking the target directly.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "CVSS base scores can change over time to reflect real-world exploitation trends.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-042",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "Tailgating describes following someone through a secured door without their explicit awareness/consent. Baiting lures victims with a tempting physical or digital item to trigger a compromise.",
+        "incorrect": "Piggybacking is a closely related concept but generally implies the authorized person's awareness/consent — a subtle distinction from tailgating tested here. Vishing and smishing use voice calls and SMS respectively, not physical bait items.",
+        "examTip": "Piggybacking = with consent (holding the door); Tailgating = without consent/awareness — a fine but testable distinction.",
+        "relatedTopics": [
+          "tailgating",
+          "baiting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "tailgating",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "An attacker follows an authorized employee closely through a secured door without using their own credentials, relying on the employee not noticing. This is called __",
+          "options": [
+            "Piggybacking",
+            "Tailgating",
+            "Pretexting",
+            "Baiting"
+          ],
+          "correctAnswer": "Tailgating"
+        },
+        {
+          "id": "d2",
+          "prompt": "An attacker leaves an infected USB drive in a parking lot hoping an employee will plug it into a corporate computer. This is called __",
+          "options": [
+            "Tailgating",
+            "Baiting",
+            "Vishing",
+            "Smishing"
+          ],
+          "correctAnswer": "Baiting"
+        }
+      ]
+    },
+    {
+      "id": "secplus-043",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "IDOR occurs when an application fails to verify authorization on directly referenced object identifiers. Buffer overflow occurs when input exceeds allocated memory bounds, potentially corrupting adjacent memory and enabling code execution.",
+        "incorrect": "SQL injection and XSS both involve different injection mechanisms (database queries and browser scripts respectively), not simple ID manipulation or memory overflow. Directory traversal manipulates file paths, not memory buffers.",
+        "examTip": "IDOR is fundamentally a broken access control issue — the application trusts user-supplied identifiers without verifying ownership/permission.",
+        "relatedTopics": [
+          "idor",
+          "buffer-overflow"
+        ]
+      },
+      "metadata": {
+        "examObjective": "idor",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "An attacker manipulates a URL parameter to access another user's private order record by simply changing an ID number, without any authorization check. This is __",
+          "options": [
+            "SQL injection",
+            "Insecure Direct Object Reference (IDOR)",
+            "Cross-site scripting",
+            "Buffer overflow"
+          ],
+          "correctAnswer": "Insecure Direct Object Reference (IDOR)"
+        },
+        {
+          "id": "d2",
+          "prompt": "An attacker sends more data to an input buffer than it was designed to hold, potentially overwriting adjacent memory and executing arbitrary code. This is a __",
+          "options": [
+            "SQL injection",
+            "Cross-site scripting",
+            "Buffer overflow",
+            "Directory traversal"
+          ],
+          "correctAnswer": "Buffer overflow"
+        }
+      ]
+    },
+    {
+      "id": "secplus-044",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "A dictionary attack uses a predefined wordlist of likely passwords, while a brute force attack exhaustively tries every possible combination without relying on a curated list.",
+        "incorrect": "Rainbow table attacks use precomputed hash mappings rather than live guessing attempts. A birthday attack targets hash collisions, and downgrade attacks target protocol/cipher weakness, neither matching the described guessing techniques.",
+        "examTip": "Account lockout policies and rate limiting are effective mitigations against both dictionary and brute force login attempts.",
+        "relatedTopics": [
+          "dictionary-attack",
+          "brute-force"
+        ]
+      },
+      "metadata": {
+        "examObjective": "dictionary-attack",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "An attacker uses a list of common passwords, trying each systematically against a login form. This is a __ attack.",
+          "options": [
+            "Brute force",
+            "Dictionary",
+            "Rainbow table",
+            "Birthday"
+          ],
+          "correctAnswer": "Dictionary"
+        },
+        {
+          "id": "d2",
+          "prompt": "An attacker systematically tries every possible character combination against a login or encryption key until success. This is a __ attack.",
+          "options": [
+            "Brute force",
+            "Dictionary",
+            "Rainbow table",
+            "Downgrade"
+          ],
+          "correctAnswer": "Brute force"
+        }
+      ]
+    },
+    {
+      "id": "secplus-045",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "A non-intrusive vulnerability scan identifies and reports potential weaknesses without attempting exploitation. A penetration test goes further, actively attempting exploitation to prove real-world impact under authorized rules of engagement.",
+        "incorrect": "Penetration tests, exploitation, and red team exercises all involve active exploitation attempts, unlike a purely observational scan. Passive reconnaissance and OSINT gathering describe information collection, not vulnerability testing.",
+        "examTip": "Vulnerability scans are typically automated and frequent; penetration tests are manual, authorized, and typically conducted less often (e.g., annually).",
+        "relatedTopics": [
+          "vulnerability-scanning",
+          "penetration-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vulnerability-scanning",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A scan that only observes and reports vulnerabilities without attempting to exploit them is called a __ scan.",
+          "options": [
+            "Passive/non-intrusive vulnerability scan",
+            "Penetration test",
+            "Exploitation",
+            "Red team exercise"
+          ],
+          "correctAnswer": "Passive/non-intrusive vulnerability scan"
+        },
+        {
+          "id": "d2",
+          "prompt": "An engagement where testers actively attempt to exploit discovered vulnerabilities to demonstrate real business impact is called a __",
+          "options": [
+            "Vulnerability scan",
+            "Penetration test",
+            "Passive reconnaissance",
+            "OSINT gathering"
+          ],
+          "correctAnswer": "Penetration test"
+        }
+      ]
+    },
+    {
+      "id": "secplus-046",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps of a typical penetration testing methodology in the correct order.",
+      "explanation": {
+        "correct": "A standard pen test methodology begins with reconnaissance, moves to scanning/enumeration to map the attack surface, proceeds to exploitation to prove impact, and concludes with a formal report of findings.",
+        "incorrect": "You cannot exploit a system before first identifying its live hosts/services through scanning, and reconnaissance always precedes active scanning to inform the approach.",
+        "examTip": "Some methodologies add a 'post-exploitation/persistence' phase between exploitation and reporting to demonstrate lateral movement or pivoting.",
+        "relatedTopics": [
+          "penetration-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "penetration-testing",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Reconnaissance (passive and active information gathering)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Scanning and enumeration to identify live hosts and services",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Exploitation of discovered vulnerabilities",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Reporting findings and recommended remediations",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "secplus-047",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to conduct a Kerberoasting attack against a domain environment.",
+      "explanation": {
+        "correct": "Kerberoasting starts by identifying SPN-registered service accounts, requesting a legitimately-issued service ticket for one, extracting its encrypted component, and finally attempting offline cracking of the weak service account password.",
+        "incorrect": "You cannot request a service ticket for an SPN that hasn't been identified yet, and offline cracking requires the extracted ticket data as a prerequisite input.",
+        "examTip": "Kerberoasting is mitigated by using long, random service account passwords or Group Managed Service Accounts (gMSAs) with automatically rotated credentials.",
+        "relatedTopics": [
+          "kerberos-attacks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "kerberos-attacks",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Enumerate service accounts with a registered Service Principal Name (SPN)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Request a Kerberos service ticket for the target SPN as any authenticated user",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Extract the encrypted portion of the returned service ticket",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Perform offline password cracking against the extracted ticket hash",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "secplus-048",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order for exploiting an unpatched vulnerability using a typical exploitation framework workflow.",
+      "explanation": {
+        "correct": "The typical exploitation flow starts with fingerprinting the target to determine exact software versions, researching a matching CVE/exploit, launching the exploit, and establishing persistent access afterward.",
+        "incorrect": "You cannot search for a relevant CVE before knowing the target's specific software/version, and establishing a foothold logically follows successful exploitation, not before.",
+        "examTip": "Metasploit's 'search' command lets testers quickly find exploit modules matching a specific CVE identifier.",
+        "relatedTopics": [
+          "exploitation-frameworks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "exploitation-frameworks",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify the target's software version through scanning/fingerprinting",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Search for a matching known CVE and available exploit module",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Configure and launch the exploit against the target",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Establish and maintain a foothold (e.g., a reverse shell) on the compromised system",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "secplus-049",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Sort each attack into the correct category based on its primary target.",
+      "explanation": {
+        "correct": "ARP poisoning and MAC flooding manipulate network/data-link layer address resolution and switching behavior, while XSS and SQL injection exploit how web applications process and trust user input.",
+        "incorrect": "This distinction reflects the OSI layer at which each attack primarily operates — Layer 2/3 versus the application layer.",
+        "examTip": "Network-layer attacks are typically mitigated with switch/network configuration; web attacks require secure coding practices like input validation.",
+        "relatedTopics": [
+          "network-attacks",
+          "application-attacks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "network-attacks",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "ARP poisoning"
+        },
+        {
+          "id": "item2",
+          "text": "MAC flooding"
+        },
+        {
+          "id": "item3",
+          "text": "Cross-site scripting (XSS)"
+        },
+        {
+          "id": "item4",
+          "text": "SQL injection"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Network/Layer 2-3 attack",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Web application-layer attack",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "secplus-050",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each threat actor type into the correct category based on typical resource level and sophistication.",
+      "explanation": {
+        "correct": "Nation-state actors and organized crime groups typically have significant funding, tools, and expertise, while script kiddies and hacktivists generally operate with more limited resources and technical sophistication (though hacktivists' impact can still be substantial through coordinated numbers).",
+        "incorrect": "This is a generalization for exam purposes — real-world sophistication varies, but Security+ tests the commonly recognized resource/sophistication tiering.",
+        "examTip": "Nation-state actors are the most resourced/sophisticated category, often associated with Advanced Persistent Threats (APTs).",
+        "relatedTopics": [
+          "threat-actors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "threat-actors",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Nation-state actor"
+        },
+        {
+          "id": "item2",
+          "text": "Organized crime"
+        },
+        {
+          "id": "item3",
+          "text": "Script kiddie"
+        },
+        {
+          "id": "item4",
+          "text": "Hacktivist"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "High resources / high sophistication",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Lower resources / lower sophistication",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "secplus-051",
+      "topicId": "threats-vulnerabilities",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each malware type into the correct category based on its primary behavior.",
+      "explanation": {
+        "correct": "Spyware and keyloggers are designed to covertly collect information (browsing habits, keystrokes), while rootkits and backdoors focus on maintaining stealthy, privileged, persistent access to a compromised system.",
+        "incorrect": "Some malware blends both behaviors, but Security+ tests recognizing the PRIMARY defining behavior of each named malware type.",
+        "examTip": "A rootkit often operates at the kernel/OS level specifically to hide its own presence and that of other malware from detection tools.",
+        "relatedTopics": [
+          "malware-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "malware-types",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Spyware"
+        },
+        {
+          "id": "item2",
+          "text": "Keylogger"
+        },
+        {
+          "id": "item3",
+          "text": "Rootkit"
+        },
+        {
+          "id": "item4",
+          "text": "Backdoor"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Primarily focused on covert data collection",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Primarily focused on providing persistent hidden access",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { CheckCircle, XCircle } from 'lucide-react';
 import { Option } from '../types';
 
 interface Props {
@@ -10,23 +11,31 @@ interface Props {
 
 export function SingleChoiceInput({ options, selectedAnswer, showResult, onSelect, disabled }: Props) {
   return (
-    <div className="flex flex-col gap-3" role="radiogroup" aria-label="Answer options">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }} role="radiogroup" aria-label="Answer options">
       {options.map((option) => {
         const isSelected = selectedAnswer === option.id;
-        let borderClass = 'border-[var(--border)]';
-        let bgClass = 'bg-[var(--bg-secondary)]';
+        let borderColor = 'rgba(148,163,184,0.15)';
+        let bg = 'rgba(148,163,184,0.04)';
+        let labelColor = '#a9b9d0';
+        let dotBg = 'rgba(148,163,184,0.15)';
+        let dotText = '#8ea2c2';
 
         if (showResult) {
           if (option.isCorrect) {
-            borderClass = 'border-[var(--success)]';
-            bgClass = 'bg-[var(--success)]/10';
+            borderColor = 'rgba(45,212,191,0.4)';
+            bg = 'rgba(45,212,191,0.07)';
+            labelColor = '#f0f4f8';
           } else if (isSelected && !option.isCorrect) {
-            borderClass = 'border-[var(--error)]';
-            bgClass = 'bg-[var(--error)]/10';
+            borderColor = 'rgba(255,107,107,0.4)';
+            bg = 'rgba(255,107,107,0.07)';
+            labelColor = '#f0f4f8';
           }
         } else if (isSelected) {
-          borderClass = 'border-[var(--warning)]';
-          bgClass = 'bg-[var(--warning)]/10';
+          borderColor = 'rgba(79,124,255,0.5)';
+          bg = 'rgba(79,124,255,0.08)';
+          labelColor = '#f0f4f8';
+          dotBg = '#4f7cff';
+          dotText = '#fff';
         }
 
         return (
@@ -36,22 +45,20 @@ export function SingleChoiceInput({ options, selectedAnswer, showResult, onSelec
             disabled={disabled}
             role="radio"
             aria-checked={isSelected}
-            aria-label={`Option ${option.id}: ${option.text}`}
-            className={`w-full text-left px-4 py-3 rounded-lg border-2 transition-all duration-200 
-              ${borderClass} ${bgClass} 
-              ${disabled ? 'cursor-default' : 'cursor-pointer hover:border-[var(--warning)]/50'}
-              min-h-[44px] flex items-center gap-3`}
+            aria-label={`Option ${option.id}: ${option.text}${showResult ? (option.isCorrect ? ' — correct' : isSelected ? ' — incorrect' : '') : ''}`}
+            style={{ width: '100%', textAlign: 'left', padding: '13px 16px', borderRadius: 12, border: `1px solid ${borderColor}`, background: bg, cursor: disabled ? 'default' : 'pointer', display: 'flex', alignItems: 'center', gap: 12, transition: 'all 0.15s', minHeight: 48 }}
           >
-            <span className={`w-7 h-7 rounded-full border-2 flex items-center justify-center shrink-0 text-sm font-semibold
-              ${isSelected ? 'border-[var(--warning)] text-[var(--warning)]' : 'border-[var(--text-secondary)] text-[var(--text-secondary)]'}`}>
+            {/* Option letter */}
+            <span style={{ width: 28, height: 28, borderRadius: '50%', background: dotBg, color: dotText, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 700, flexShrink: 0, transition: 'all 0.15s' }}>
               {option.id}
             </span>
-            <span className="text-[var(--text-primary)] text-sm">{option.text}</span>
+            <span style={{ fontSize: 14, color: labelColor, flex: 1, lineHeight: 1.5 }}>{option.text}</span>
+            {/* Result icons — aria-hidden because result is encoded in the button aria-label */}
             {showResult && option.isCorrect && (
-              <span className="ml-auto text-[var(--success)] text-xs font-medium" aria-label="Correct answer">✓</span>
+              <CheckCircle style={{ width: 16, height: 16, color: '#2dd4bf', flexShrink: 0 }} aria-hidden="true" />
             )}
             {showResult && isSelected && !option.isCorrect && (
-              <span className="ml-auto text-[var(--error)] text-xs font-medium" aria-label="Incorrect answer">✗</span>
+              <XCircle style={{ width: 16, height: 16, color: '#ff6b6b', flexShrink: 0 }} aria-hidden="true" />
             )}
           </button>
         );

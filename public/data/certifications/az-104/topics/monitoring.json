@@ -1,0 +1,1156 @@
+{
+  "certificationId": "az-104",
+  "topicId": "monitoring",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "az104-128",
+      "topicId": "monitoring",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure Monitor data type stores time-stamped numerical values representing resource performance, such as CPU percentage?",
+      "explanation": {
+        "correct": "Metrics are lightweight, numerical time-series values (like CPU percentage or disk IOPS) collected at regular intervals, optimized for near-real-time alerting and charting.",
+        "incorrect": "Logs store structured/unstructured event and record data queried with KQL. The Activity Log specifically tracks subscription-level control-plane operations. Traces relate to distributed request tracking in Application Insights, not general resource performance metrics.",
+        "examTip": "Metrics data typically has lower latency and longer retention (up to 93 days by default) compared to raw diagnostic logs.",
+        "relatedTopics": [
+          "azure-monitor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-monitor",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/data-platform"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Fabrikam Inc.'s operations team wants near-real-time visibility into CPU utilization trends across their VM fleet.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Logs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Metrics",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Activity Log",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Traces",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-129",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which query language is used to analyze data stored in a Log Analytics workspace?",
+      "explanation": {
+        "correct": "Log Analytics workspaces store data queried using KQL, a language purpose-built for fast, read-only analytics over large log datasets.",
+        "incorrect": "SQL, PowerShell, and GraphQL are not the native query language for Log Analytics, although some KQL syntax elements superficially resemble SQL.",
+        "examTip": "Common KQL operators to know: 'where', 'summarize', 'project', and 'join' for filtering and aggregating log data.",
+        "relatedTopics": [
+          "log-analytics",
+          "kql"
+        ]
+      },
+      "metadata": {
+        "examObjective": "log-analytics",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-query-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Northwind Traders' security analysts need to search through months of collected event data to identify a pattern of failed sign-ins.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "SQL",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "KQL (Kusto Query Language)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "PowerShell",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "GraphQL",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-130",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure Monitor feature must be configured on a resource to send its platform logs and metrics to a Log Analytics workspace, storage account, or Event Hub?",
+      "explanation": {
+        "correct": "Diagnostic settings define which log categories and metrics a resource sends, and to which destination(s) — Log Analytics workspace, storage account, or Event Hub.",
+        "incorrect": "Data collection rules govern data collected by the Azure Monitor Agent for VM-based scenarios specifically, a related but distinct mechanism. Action groups define notification/automation responses to alerts, not data routing. Alert processing rules modify alert behavior, not data collection.",
+        "examTip": "A resource can have up to 5 diagnostic settings, each routing to one or more destinations.",
+        "relatedTopics": [
+          "diagnostic-settings"
+        ]
+      },
+      "metadata": {
+        "examObjective": "diagnostic-settings",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/diagnostic-settings"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data collection rule only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Diagnostic settings",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Action group",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Alert processing rule",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-131",
+      "topicId": "monitoring",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "You need collect performance counters and custom text log data from a fleet of Azure VMs into a Log Analytics workspace using the modern agent architecture. Which combination should you configure?",
+      "explanation": {
+        "correct": "The Azure Monitor Agent (AMA) combined with a Data Collection Rule (DCR) is Microsoft's current, recommended architecture for collecting performance and log data from VMs, replacing the legacy Log Analytics (MMA) agent.",
+        "incorrect": "The legacy MMA agent is being deprecated in favor of AMA. Application Insights SDK is for application-level telemetry, not OS-level performance counters. The Network Watcher agent is unrelated to log/performance data collection.",
+        "examTip": "The legacy Log Analytics (MMA) agent reached retirement — new deployments should always use AMA with DCRs.",
+        "relatedTopics": [
+          "azure-monitor-agent",
+          "data-collection-rules"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-monitor-agent",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Log Analytics agent (MMA) with a workspace configuration only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Monitor Agent (AMA) with a Data Collection Rule (DCR)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Application Insights SDK installed directly on each VM",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Network Watcher agent with flow log export",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-132",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure Monitor alert type would you configure to notify a team when a specific error message pattern appears more than 5 times within a Log Analytics workspace over 15 minutes?",
+      "explanation": {
+        "correct": "Log alerts (log search alerts) run a scheduled KQL query against Log Analytics data and fire based on result thresholds, matching the requirement of counting specific error message occurrences over time.",
+        "incorrect": "Metric alerts evaluate numeric metric time series, not text pattern log searches. Activity Log alerts respond to control-plane events like resource creation, not application log content. Smart Detection is an Application Insights automatic anomaly-detection feature, not a configurable custom threshold alert.",
+        "examTip": "Log alerts support both 'Number of results' and 'Metric measurement' condition types for flexible threshold logic.",
+        "relatedTopics": [
+          "azure-monitor-alerts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-monitor-alerts",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-log-query"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Metric alert",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Log alert (log search alert)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Activity Log alert",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Smart Detection alert",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-133",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Application Insights feature periodically sends synthetic requests to your web application from multiple global locations to verify uptime and response time?",
+      "explanation": {
+        "correct": "Availability tests (URL ping or multi-step web tests) proactively check your application's availability and responsiveness from various global test locations on a schedule.",
+        "incorrect": "Smart Detection automatically flags anomalies in existing telemetry, not proactive synthetic testing. Live Metrics Stream shows near real-time telemetry from live traffic, not synthetic checks. Application Map visualizes component dependencies, not availability testing.",
+        "examTip": "Availability tests can trigger alerts when a defined percentage of test locations report failures within a time window.",
+        "relatedTopics": [
+          "application-insights"
+        ]
+      },
+      "metadata": {
+        "examObjective": "application-insights",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/app/availability-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Adventure Works wants to be alerted the moment their public-facing website becomes unreachable from any major world region.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Smart Detection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Availability tests",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Live Metrics Stream",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Application Map",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-134",
+      "topicId": "monitoring",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Scenario: Tailwind Traders needs to be notified via email and have an Azure Automation runbook triggered automatically whenever a specific metric alert fires on their production VMs. What should they configure alongside the alert rule?",
+      "explanation": {
+        "correct": "Action groups define a reusable set of notification and automated actions (email, SMS, webhook, Automation runbook, Logic App, etc.) that execute whenever an associated alert fires.",
+        "incorrect": "Diagnostic settings route logs/metrics but don't trigger notifications or automation. Saved searches store reusable KQL queries, not response actions. Resource locks are unrelated to alerting workflows.",
+        "examTip": "One action group can be reused across many alert rules, avoiding the need to reconfigure notification/automation logic each time.",
+        "relatedTopics": [
+          "action-groups"
+        ]
+      },
+      "metadata": {
+        "examObjective": "action-groups",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/action-groups"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Tailwind Traders' operations team wants a consistent, automated incident response whenever CPU or memory alerts fire across their VM fleet.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "A diagnostic setting",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An action group with email and Automation runbook actions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A Log Analytics saved search",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A resource lock",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-135",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure Monitor visualization tool allows you to combine metrics, logs, text, and parameters into a single interactive, shareable report?",
+      "explanation": {
+        "correct": "Workbooks combine multiple data sources (metrics, logs, parameters) with rich text and visualizations into flexible, interactive, and shareable reports, more powerful than a static dashboard tile layout.",
+        "incorrect": "Dashboards are simpler pinned-tile collections without the same level of parameterization/interactivity. Application Map visualizes only dependency topology. Service Health reports on Azure platform incidents, not custom reporting.",
+        "examTip": "Workbooks can be saved as templates and shared across teams or published to the Azure Monitor gallery for reuse.",
+        "relatedTopics": [
+          "workbooks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "workbooks",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Woodgrove Bank's platform team needs a single shareable report combining VM metrics and log query results for their weekly ops review.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Dashboard",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Monitor Workbook",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Application Map",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Service Health",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-136",
+      "topicId": "monitoring",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "During a failover test in Azure Site Recovery, what is the primary purpose of performing a 'Test Failover' rather than an actual failover?",
+      "explanation": {
+        "correct": "Test Failover creates isolated test VMs from replicated data in a separate network, allowing validation of the disaster recovery plan without impacting production workloads or interrupting ongoing replication.",
+        "incorrect": "Test Failover does not touch production traffic (that describes a real/planned failover), does not delete replication data, and does not pause ongoing replication — it runs alongside it in isolation.",
+        "examTip": "Always run Test Failover using an isolated (non-production) virtual network to avoid IP address or resource conflicts during validation.",
+        "relatedTopics": [
+          "azure-site-recovery"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-site-recovery",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/site-recovery/tutorial-dr-drill-azure"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "To permanently switch production traffic to the secondary region",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To validate the recovery plan and replicated VMs in an isolated network without impacting production or ongoing replication",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To delete replication data and restart protection from scratch",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To pause replication indefinitely while testing",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-137",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid Azure Backup protected item types supported by a Recovery Services vault?",
+      "explanation": {
+        "correct": "Recovery Services vaults support backing up Azure VMs and SQL Server running inside Azure VMs (via the SQL Server backup extension), among other workload types like Azure Files.",
+        "incorrect": "AKS pod-level snapshots and Load Balancer configuration are not backup item types supported by a Recovery Services vault.",
+        "examTip": "Use a Backup vault (not Recovery Services vault) for newer workloads like Azure Database for PostgreSQL and Blob backup — know the distinction between the two vault types.",
+        "relatedTopics": [
+          "azure-backup"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-backup",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/backup/backup-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Virtual Machines",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure SQL Database in a VM (SQL Server) via extension",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Kubernetes Service pod-level snapshots",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Load Balancer configuration",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-138",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO actions are part of configuring Azure Site Recovery for VM disaster recovery?",
+      "explanation": {
+        "correct": "Site Recovery setup involves defining a replication policy (including RPO threshold and recovery point retention) and enabling replication for the specific VMs that need protection.",
+        "incorrect": "Traffic Manager routing profiles and Blob lifecycle rules are unrelated configuration steps for VM-level disaster recovery via Site Recovery.",
+        "examTip": "The default Site Recovery replication policy captures recovery points every few minutes with additional app-consistent points on a configurable schedule.",
+        "relatedTopics": [
+          "azure-site-recovery"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-site-recovery",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-quickstart"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Defining a replication policy (RPO, retention)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Enabling replication for source VMs to a target region",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Configuring a Traffic Manager weighted routing profile",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Creating a Blob lifecycle management rule",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-139",
+      "topicId": "monitoring",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid data collection methods supported by a Data Collection Rule (DCR) used with the Azure Monitor Agent?",
+      "explanation": {
+        "correct": "DCRs define collection of performance counters and event/syslog data from the Azure Monitor Agent running on VMs, routing it to specified destinations like Log Analytics.",
+        "incorrect": "ARM deployment history and NSG rule priority values are not data types collected via a DCR — those live in the Activity Log/ARM and network configuration respectively, not agent-based telemetry collection.",
+        "examTip": "A single DCR can be associated with multiple VMs, and a VM can be associated with multiple DCRs for flexible telemetry composition.",
+        "relatedTopics": [
+          "data-collection-rules"
+        ]
+      },
+      "metadata": {
+        "examObjective": "data-collection-rules",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-rule-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Windows/Linux performance counters",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Windows Event Logs / Syslog",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Resource Manager deployment history",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "NSG rule priority values",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-140",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following describe valid Azure Service Health / Resource Health capabilities?",
+      "explanation": {
+        "correct": "Service Health surfaces subscription-relevant Azure platform incidents and planned maintenance, while Resource Health reports current/historical status for individual resource instances such as a specific VM.",
+        "incorrect": "Neither Service Health nor Resource Health takes automated remediation action like restarting a VM, and Resource Health provides visibility/alerts, not a guaranteed fix time under SLA.",
+        "examTip": "Configure Resource Health alerts to be notified automatically when a specific resource becomes unavailable due to a platform issue.",
+        "relatedTopics": [
+          "service-health",
+          "resource-health"
+        ]
+      },
+      "metadata": {
+        "examObjective": "service-health",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/service-health/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Service Health reports on Azure platform-wide incidents and planned maintenance affecting your subscriptions",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Resource Health reports the current and historical health status of an individual resource instance",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Service Health can automatically restart an unhealthy VM",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Resource Health guarantees a fix within the resource's SLA time window",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-141",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Platform metrics are retained by default for 93 days, while the Activity Log (queryable via Azure Monitor/Log Analytics) is retained for 90 days by default when not exported — so the comparison in the first statement inverted which typically lasts slightly longer, making it false as stated in this specific framing. Application Map auto-discovers component dependencies from telemetry. Action groups support many action types, including webhooks.",
+        "incorrect": "The first statement's precise retention comparison is not accurate as framed — always verify exact default retention windows in current documentation rather than assuming metrics always outlast activity logs by a wide margin.",
+        "examTip": "For retention beyond default windows, route data to a Log Analytics workspace or storage account and set a custom retention policy.",
+        "relatedTopics": [
+          "azure-monitor",
+          "application-insights",
+          "action-groups"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-monitor",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/fundamentals/data-retention-privacy"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Monitor Metrics data is generally retained for a longer default period than raw activity log data queried through Log Analytics.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Application Insights can automatically map dependencies between application components using the Application Map feature.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "An action group can trigger a webhook in addition to sending email and SMS notifications.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "az104-142",
+      "topicId": "monitoring",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Backup supports both full VM restore and file-level recovery from a VM backup. A vault containing protected items or backup data cannot be deleted until those items are removed/unregistered first. Cross-subscription (and cross-workspace) queries are supported in Log Analytics given appropriate permissions.",
+        "incorrect": "The false statement wrongly claims a vault with active backups can be deleted freely — Azure blocks vault deletion until all backup items are properly removed.",
+        "examTip": "You must stop backup and delete backup data (or disable soft delete/opt for a required delay) before a Recovery Services vault can be deleted.",
+        "relatedTopics": [
+          "azure-backup",
+          "log-analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-backup",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/backup/backup-azure-delete-vault"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Backup allows you to restore an entire VM or individual files from within a VM backup.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A Recovery Services vault can be deleted at any time even while it contains active backup items.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Monitor Log Analytics workspaces can query data from multiple Azure subscriptions if properly configured.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "az104-143",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Smart Detection proactively analyzes telemetry patterns automatically. A single diagnostic setting can route the same categories to multiple destinations (e.g., both Log Analytics and a storage account) at once. Azure Monitor supports metric alerts, log alerts, and Activity Log alerts — not just metrics.",
+        "incorrect": "The false statement wrongly restricts alerts to metrics only, ignoring log search alerts and Activity Log alerts as valid alert types.",
+        "examTip": "Choose log alerts for complex conditions requiring KQL logic; use metric alerts for fast, near-real-time numeric threshold checks.",
+        "relatedTopics": [
+          "application-insights",
+          "diagnostic-settings",
+          "azure-monitor-alerts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "application-insights",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Smart Detection in Application Insights uses machine learning to automatically flag anomalies without requiring manually configured alert rules.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Diagnostic settings can send the same log category to more than one destination simultaneously.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Azure Monitor alerts can only be based on metrics, not on log query results.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "az104-144",
+      "topicId": "monitoring",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Site Recovery supports Azure-to-Azure and on-premises-to-Azure replication scenarios. Failback restores workloads to the original primary site once it's available again, reversing the direction of replication. While Backup and Site Recovery can technically share a Recovery Services vault resource type, their configuration, replication policies, and underlying mechanisms differ significantly — they are not functionally identical processes.",
+        "incorrect": "The false statement oversimplifies by claiming no functional differences exist between Backup and Site Recovery vault usage, when in practice they serve distinct purposes (backup/restore vs. continuous replication/DR) with different configuration models.",
+        "examTip": "A Recovery Services vault can host both Backup and Site Recovery configurations, but plan them as functionally distinct capabilities within that shared vault.",
+        "relatedTopics": [
+          "azure-site-recovery",
+          "azure-backup"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-site-recovery",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-quickstart"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Site Recovery supports replicating VMs from one Azure region to another as well as from on-premises to Azure.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A failback operation in Azure Site Recovery reverses replication direction to move workloads back to the original (primary) location after a failover.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Azure Backup's Recovery Services vault and Site Recovery's replication both require exactly the same vault type with no functional differences.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "az104-145",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "Action groups define the notification/automation response attached to any alert rule. KQL queries in Log Analytics are the correct tool for searching structured/unstructured text log data.",
+        "incorrect": "Metrics Explorer only visualizes numeric metric data, not text pattern searches. Service Health and Resource Health report platform/resource status, not custom log queries.",
+        "examTip": "Metric alerts and log alerts can both reference the same action group, simplifying consistent notification routing across alert types.",
+        "relatedTopics": [
+          "action-groups",
+          "log-analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "action-groups",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/action-groups"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To be notified by email and trigger an Automation runbook when a VM's CPU exceeds 90% for 5 minutes, configure a metric alert with an",
+          "options": [
+            "Activity Log filter",
+            "Action group",
+            "Availability test",
+            "Diagnostic setting export"
+          ],
+          "correctAnswer": "Action group"
+        },
+        {
+          "id": "d2",
+          "prompt": "To query text-based log data for a specific error message pattern occurring across your VM fleet, use",
+          "options": [
+            "Metrics Explorer",
+            "Log Analytics with a KQL query",
+            "Service Health",
+            "Resource Health"
+          ],
+          "correctAnswer": "Log Analytics with a KQL query"
+        }
+      ]
+    },
+    {
+      "id": "az104-146",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "AMA with a DCR is the modern, recommended way to collect telemetry across both Azure and Arc-enabled on-premises VMs. Test failover validates DR readiness in isolation without disrupting production.",
+        "incorrect": "The legacy MMA agent is deprecated for new deployments. Planned/unplanned failover both actually move production workloads, which is not what a pure readiness test requires.",
+        "examTip": "Test failover creates temporary resources you should clean up afterward to avoid ongoing cost accumulation.",
+        "relatedTopics": [
+          "azure-monitor-agent",
+          "azure-site-recovery"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-monitor-agent",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To collect performance counters from a fleet of Azure and on-premises (Arc-enabled) VMs using the current recommended agent, deploy the",
+          "options": [
+            "Log Analytics (MMA) agent",
+            "Azure Monitor Agent with a Data Collection Rule",
+            "Application Insights SDK",
+            "Diagnostics extension only"
+          ],
+          "correctAnswer": "Azure Monitor Agent with a Data Collection Rule"
+        },
+        {
+          "id": "d2",
+          "prompt": "To test disaster recovery readiness without impacting production replication or traffic, perform a",
+          "options": [
+            "Planned failover",
+            "Unplanned failover",
+            "Test failover",
+            "Failback"
+          ],
+          "correctAnswer": "Test failover"
+        }
+      ]
+    },
+    {
+      "id": "az104-147",
+      "topicId": "monitoring",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "Workbooks are purpose-built for combining multiple visualization types with narrative text into one shareable interactive report. Restoring from an Azure Backup recovery point (file-level or full VM) is the correct remediation to recover pre-ransomware data.",
+        "incorrect": "A basic dashboard lacks the same flexible narrative/parameter capabilities as a Workbook. Test failover is a Site Recovery DR-testing concept, not a Backup-based data restore operation.",
+        "examTip": "Backup recovery points are read-only and immutable snapshots — critical for ransomware recovery scenarios where current data cannot be trusted.",
+        "relatedTopics": [
+          "workbooks",
+          "azure-backup"
+        ]
+      },
+      "metadata": {
+        "examObjective": "workbooks",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To build a single interactive report combining a CPU metric chart, a KQL log table, and explanatory text for a team review, create an",
+          "options": [
+            "Azure Dashboard only",
+            "Azure Monitor Workbook",
+            "Activity Log export",
+            "Resource Health alert"
+          ],
+          "correctAnswer": "Azure Monitor Workbook"
+        },
+        {
+          "id": "d2",
+          "prompt": "To restore a Recovery Services vault-protected VM's data to a point 3 days ago after ransomware encrypted current files, perform a",
+          "options": [
+            "Test failover",
+            "File-level or full VM restore from a recovery point",
+            "Resource Health check",
+            "Diagnostic setting reconfiguration"
+          ],
+          "correctAnswer": "File-level or full VM restore from a recovery point"
+        }
+      ]
+    },
+    {
+      "id": "az104-148",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to configure alerting on a custom log query result using Azure Monitor.",
+      "explanation": {
+        "correct": "You must first build and validate the query, then create the alert rule referencing that query as its signal, configure the threshold/frequency logic, and finally attach an action group for the response.",
+        "incorrect": "You cannot select a query as an alert signal before it's written, and attaching an action group before the alert logic is defined would leave the rule incomplete.",
+        "examTip": "Set the evaluation frequency close to (or shorter than) your time window granularity to avoid gaps or overlaps in alert coverage.",
+        "relatedTopics": [
+          "azure-monitor-alerts",
+          "log-analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-monitor-alerts",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-log-query"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Write and validate a KQL query in Log Analytics that identifies the condition",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a new alert rule and select 'Custom log search' as the signal",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Define the alert logic (threshold, evaluation frequency, and time window)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Attach an action group to specify notification and automated response",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "az104-149",
+      "topicId": "monitoring",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to configure and validate Azure Site Recovery for a set of Azure VMs replicating to a secondary region.",
+      "explanation": {
+        "correct": "The vault must exist before replication can be configured, followed by enabling replication with proper network mapping, waiting for the initial sync to finish, and finally validating readiness with a test failover.",
+        "incorrect": "You cannot test failover before initial replication completes, and replication cannot be enabled before the vault and its configuration exist.",
+        "examTip": "Initial replication duration depends on VM disk size and available bandwidth — plan accordingly before scheduling a test failover.",
+        "relatedTopics": [
+          "azure-site-recovery"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-site-recovery",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-quickstart"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a Recovery Services vault in the target region",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Enable replication and select source VMs, target region, and network mapping",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Wait for initial replication to complete and monitor replication health",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Run a Test Failover to validate the recovery plan",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "az104-150",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each Azure Monitor concept into the correct data category.",
+      "explanation": {
+        "correct": "Metrics and performance counters are lightweight numeric time-series values, while the Activity Log and Application Insights traces are structured event/record data queried with KQL.",
+        "incorrect": "This distinction affects which alert type (metric vs. log) and query tool you'd use for each data category.",
+        "examTip": "Metrics generally offer faster alert evaluation latency than log-based queries due to their optimized numeric storage format.",
+        "relatedTopics": [
+          "azure-monitor",
+          "log-analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-monitor",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/data-platform"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Metrics"
+        },
+        {
+          "id": "item2",
+          "text": "Performance counters (via DCR)"
+        },
+        {
+          "id": "item3",
+          "text": "Activity Log"
+        },
+        {
+          "id": "item4",
+          "text": "Application Insights traces"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Numeric time-series data",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Structured/unstructured queryable event data",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "az104-151",
+      "topicId": "monitoring",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Sort each Azure Backup / Site Recovery concept into the correct category.",
+      "explanation": {
+        "correct": "Recovery points and backup policies belong to Azure Backup's snapshot-and-restore model, while test failover and replication policy are core Site Recovery concepts for continuous DR replication.",
+        "incorrect": "Though both services can share a Recovery Services vault, their underlying concepts and use cases (periodic backup vs. continuous replication) are distinct.",
+        "examTip": "Backup answers 'can I restore a past point in time?'; Site Recovery answers 'can I run my workload from another region right now?'",
+        "relatedTopics": [
+          "azure-backup",
+          "azure-site-recovery"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-backup",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/backup/backup-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Recovery point"
+        },
+        {
+          "id": "item2",
+          "text": "Backup policy"
+        },
+        {
+          "id": "item3",
+          "text": "Test failover"
+        },
+        {
+          "id": "item4",
+          "text": "Replication policy"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Backup and restore (Azure Backup)",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Disaster recovery replication (Azure Site Recovery)",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    }
+  ]
+}

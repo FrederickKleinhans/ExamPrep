@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Bookmark, BookmarkCheck, Tag, BarChart2 } from 'lucide-react';
+import { Bookmark, BookmarkCheck } from 'lucide-react';
 import { Question } from '../types';
 import { SingleChoiceInput } from './SingleChoiceInput';
 import { MultipleChoiceInput } from './MultipleChoiceInput';
@@ -10,6 +10,7 @@ import { OrderingInput } from './OrderingInput';
 import { MatchingInput } from './MatchingInput';
 import { ExplanationPanel } from './ExplanationPanel';
 import { useStore } from '../store/useStore';
+import { ProgressService } from '../services/ProgressService';
 
 interface Props {
   question: Question;
@@ -21,6 +22,24 @@ interface Props {
   hideBookmark?: boolean;
   examMode?: boolean;
 }
+
+const difficultyStyle: Record<string, { color: string; bg: string }> = {
+  easy: { color: '#2dd4bf', bg: 'rgba(45,212,191,0.1)' },
+  medium: { color: '#ffae00', bg: 'rgba(255,174,0,0.1)' },
+  hard: { color: '#ff6b6b', bg: 'rgba(255,107,107,0.1)' },
+};
+
+const typeLabels: Record<string, string> = {
+  'single-choice': 'Single choice',
+  'multiple-choice': 'Multiple choice',
+  'true-false': 'True / False',
+  'yes-no-statements': 'Yes / No',
+  'dropdown-select': 'Dropdown',
+  'ordering': 'Ordering',
+  'drag-drop': 'Drag & drop',
+  'matching': 'Matching',
+  'scenario': 'Scenario',
+};
 
 export function QuestionCard({
   question,
@@ -40,10 +59,8 @@ export function QuestionCard({
       ? [...question.orderItems].sort(() => Math.random() - 0.5).map((i) => i.id)
       : []
   );
-  // For drag-drop/matching: store as Record<itemId, categoryId>
   const [matchingAssignments, setMatchingAssignments] = useState<Record<string, string>>({});
 
-  // Reset all local state when question changes
   useEffect(() => {
     setLocalAnswer(null);
     setYesNoAnswers({});
@@ -57,16 +74,16 @@ export function QuestionCard({
   }, [question.id, question.orderItems]);
 
   const { progress, toggleBookmark } = useStore();
-  const isBookmarked = progress.bookmarks.includes(question.id);
+  const isBookmarked = ProgressService
+    .getCertificationProgress(progress, progress.selectedCertification)
+    .bookmarks.includes(question.id);
 
   const currentAnswer = selectedAnswer ?? localAnswer;
+  const ds = difficultyStyle[question.difficulty] ?? difficultyStyle.medium;
 
   const handleSingleSelect = (optionId: string) => {
-    if (examMode) {
-      onSubmit(optionId);
-    } else {
-      setLocalAnswer(optionId);
-    }
+    if (examMode) onSubmit(optionId);
+    else setLocalAnswer(optionId);
   };
 
   const handleMultiToggle = (optionId: string) => {
@@ -74,51 +91,31 @@ export function QuestionCard({
     const updated = current.includes(optionId)
       ? current.filter((id) => id !== optionId)
       : [...current, optionId];
-
-    if (examMode) {
-      onSubmit(updated);
-    } else {
-      setLocalAnswer(updated);
-    }
+    if (examMode) onSubmit(updated);
+    else setLocalAnswer(updated);
   };
 
-  // Yes/No statements handler
   const handleYesNoAnswer = (statementId: string, value: 'yes' | 'no') => {
     const updated = { ...yesNoAnswers, [statementId]: value };
     setYesNoAnswers(updated);
-    if (examMode) {
-      // Serialize as JSON array of "statementId:yes|no"
-      const encoded = Object.entries(updated).map(([id, v]) => `${id}:${v}`);
-      onSubmit(encoded);
-    }
+    if (examMode) onSubmit(Object.entries(updated).map(([id, v]) => `${id}:${v}`));
   };
 
-  // Dropdown select handler
   const handleDropdownSelect = (dropdownId: string, value: string) => {
     const updated = { ...dropdownAnswers, [dropdownId]: value };
     setDropdownAnswers(updated);
-    if (examMode) {
-      const encoded = Object.entries(updated).map(([id, v]) => `${id}:${v}`);
-      onSubmit(encoded);
-    }
+    if (examMode) onSubmit(Object.entries(updated).map(([id, v]) => `${id}:${v}`));
   };
 
-  // Ordering handler
   const handleReorder = (newOrder: string[]) => {
     setOrderState(newOrder);
-    if (examMode) {
-      onSubmit(newOrder);
-    }
+    if (examMode) onSubmit(newOrder);
   };
 
-  // Matching/drag-drop handler
   const handleMatchAssign = (itemId: string, categoryId: string) => {
     const updated = { ...matchingAssignments, [itemId]: categoryId };
     setMatchingAssignments(updated);
-    if (examMode) {
-      const encoded = Object.entries(updated).map(([id, cat]) => `${id}:${cat}`);
-      onSubmit(encoded);
-    }
+    if (examMode) onSubmit(Object.entries(updated).map(([id, cat]) => `${id}:${cat}`));
   };
 
   const handleSubmit = () => {
@@ -138,234 +135,144 @@ export function QuestionCard({
     }
   };
 
-  // Determine if submit button should be enabled
   const isSubmitEnabled = (): boolean => {
-    if (question.type === 'yes-no-statements') {
-      return question.statements ? Object.keys(yesNoAnswers).length === question.statements.length : false;
-    }
-    if (question.type === 'dropdown-select') {
-      return question.dropdowns ? Object.keys(dropdownAnswers).length === question.dropdowns.length : false;
-    }
-    if (question.type === 'ordering') {
-      return orderState.length > 0;
-    }
-    if (question.type === 'drag-drop') {
-      return question.dragItems ? Object.keys(matchingAssignments).length === question.dragItems.length : false;
-    }
+    if (question.type === 'yes-no-statements') return question.statements ? Object.keys(yesNoAnswers).length === question.statements.length : false;
+    if (question.type === 'dropdown-select') return question.dropdowns ? Object.keys(dropdownAnswers).length === question.dropdowns.length : false;
+    if (question.type === 'ordering') return orderState.length > 0;
+    if (question.type === 'drag-drop') return question.dragItems ? Object.keys(matchingAssignments).length === question.dragItems.length : false;
     return localAnswer !== null && !(Array.isArray(localAnswer) && localAnswer.length === 0);
   };
 
-  // Parse yes/no answers from selectedAnswer for review mode
   const getYesNoFromAnswer = (): Record<string, 'yes' | 'no'> => {
     if (showExplanation && selectedAnswer && Array.isArray(selectedAnswer)) {
       const result: Record<string, 'yes' | 'no'> = {};
       for (const entry of selectedAnswer) {
         const [id, val] = entry.split(':');
-        if (id && (val === 'yes' || val === 'no')) result[id] = val;
+        if (id && (val === 'yes' || val === 'no')) result[id] = val as 'yes' | 'no';
       }
       return result;
     }
     return yesNoAnswers;
   };
 
-  // Parse dropdown answers from selectedAnswer for review mode
   const getDropdownFromAnswer = (): Record<string, string> => {
     if (showExplanation && selectedAnswer && Array.isArray(selectedAnswer)) {
       const result: Record<string, string> = {};
       for (const entry of selectedAnswer) {
         const colonIdx = entry.indexOf(':');
-        if (colonIdx > 0) {
-          result[entry.slice(0, colonIdx)] = entry.slice(colonIdx + 1);
-        }
+        if (colonIdx > 0) result[entry.slice(0, colonIdx)] = entry.slice(colonIdx + 1);
       }
       return result;
     }
     return dropdownAnswers;
   };
 
-  // Parse ordering from selectedAnswer for review mode
-  const getOrderFromAnswer = (): string[] => {
-    if (showExplanation && selectedAnswer && Array.isArray(selectedAnswer)) {
-      return selectedAnswer;
-    }
-    return orderState;
-  };
+  const getOrderFromAnswer = (): string[] =>
+    showExplanation && selectedAnswer && Array.isArray(selectedAnswer) ? selectedAnswer : orderState;
 
-  // Parse matching from selectedAnswer for review mode
   const getMatchingFromAnswer = (): Record<string, string> => {
     if (showExplanation && selectedAnswer && Array.isArray(selectedAnswer)) {
       const result: Record<string, string> = {};
       for (const entry of selectedAnswer) {
         const colonIdx = entry.indexOf(':');
-        if (colonIdx > 0) {
-          result[entry.slice(0, colonIdx)] = entry.slice(colonIdx + 1);
-        }
+        if (colonIdx > 0) result[entry.slice(0, colonIdx)] = entry.slice(colonIdx + 1);
       }
       return result;
     }
     return matchingAssignments;
   };
 
-  const difficultyColors: Record<string, string> = {
-    easy: 'text-[var(--success)] bg-[var(--success)]/10',
-    medium: 'text-[var(--warning)] bg-[var(--warning)]/10',
-    hard: 'text-[var(--error)] bg-[var(--error)]/10',
-  };
-
-  const typeLabels: Record<string, string> = {
-    'single-choice': 'Single Choice',
-    'multiple-choice': 'Multiple Choice',
-    'true-false': 'True/False',
-    'yes-no-statements': 'Yes/No Statements',
-    'dropdown-select': 'Dropdown Select',
-    'ordering': 'Ordering',
-    'drag-drop': 'Drag & Drop',
-    'matching': 'Matching',
-    'scenario': 'Scenario',
-  };
-
   return (
-    <div className="glass-card rounded-2xl p-4 lg:p-5 animate-fade-in border border-transparent transition-all duration-200 hover:border-[var(--warning)]/50 hover:shadow-[0_0_0_2px_rgba(255,174,0,0.15)]">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${difficultyColors[question.difficulty]}`}>
+    <div style={{ background: 'linear-gradient(180deg, rgba(17,24,39,0.85), rgba(15,23,35,0.75))', border: '1px solid rgba(148,163,184,0.13)', borderRadius: 22, padding: '24px 24px 20px', boxShadow: '0 16px 48px rgba(0,0,0,0.25)', position: 'relative', overflow: 'hidden' }}>
+      {/* Subtle top glow */}
+      <div style={{ position: 'absolute', top: 0, left: '20%', right: '20%', height: 1, background: 'linear-gradient(90deg, transparent, rgba(79,124,255,0.3), transparent)' }} />
+
+      {/* Meta row */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+          <span style={{ fontSize: 11, fontWeight: 700, padding: '3px 9px', borderRadius: 999, background: ds.bg, color: ds.color, textTransform: 'capitalize' }}>
             {question.difficulty}
           </span>
-          <span className="flex items-center gap-1 text-xs text-[var(--text-secondary)]">
-            <Tag className="w-3 h-3" aria-hidden="true" />
-            {question.topicId.replace(/-/g, ' ')}
+          <span style={{ fontSize: 11, color: '#8ea2c2', background: 'rgba(148,163,184,0.07)', padding: '3px 9px', borderRadius: 999 }}>
+            {typeLabels[question.type] ?? question.type}
           </span>
-          <span className="flex items-center gap-1 text-xs text-[var(--text-secondary)]">
-            <BarChart2 className="w-3 h-3" aria-hidden="true" />
-            {typeLabels[question.type] || question.type}
+          <span style={{ fontSize: 11, color: '#8ea2c2' }}>
+            {question.topicId.replace(/-/g, ' ')}
           </span>
         </div>
         {!hideBookmark && (
           <button
             onClick={() => toggleBookmark(question.id)}
-            aria-label={isBookmarked ? 'Remove bookmark' : 'Add bookmark'}
-            className="p-2 rounded-lg hover:bg-[var(--bg-tertiary)] transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+            aria-label={isBookmarked ? 'Remove bookmark' : 'Bookmark question'}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 6, borderRadius: 8, color: isBookmarked ? '#4f7cff' : '#8ea2c2', display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: 36, minHeight: 36 }}
           >
-            {isBookmarked ? (
-              <BookmarkCheck className="w-5 h-5 text-[var(--accent)]" />
-            ) : (
-              <Bookmark className="w-5 h-5 text-[var(--text-secondary)]" />
-            )}
+            {isBookmarked
+              ? <BookmarkCheck style={{ width: 18, height: 18 }} />
+              : <Bookmark style={{ width: 18, height: 18 }} />
+            }
           </button>
         )}
       </div>
 
-      {/* Scenario text if any */}
+      {/* Scenario */}
       {question.scenarioText && (
-        <div className="mb-4 p-4 rounded-lg bg-[var(--bg-tertiary)] border border-[var(--border)]">
-          <p className="text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wide mb-2">Scenario</p>
-          <p className="text-sm text-[var(--text-primary)] leading-relaxed whitespace-pre-wrap">{question.scenarioText}</p>
+        <div style={{ marginBottom: 16, padding: '12px 16px', background: 'rgba(148,163,184,0.05)', border: '1px solid rgba(148,163,184,0.1)', borderRadius: 12 }}>
+          <p style={{ margin: '0 0 6px', fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8ea2c2' }}>Scenario</p>
+          <p style={{ margin: 0, fontSize: 13, color: '#a9b9d0', lineHeight: 1.7, whiteSpace: 'pre-wrap' }}>{question.scenarioText}</p>
         </div>
       )}
 
       {/* Question text */}
-      <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-4 leading-relaxed">
+      <h2 style={{ margin: '0 0 20px', fontSize: 18, fontWeight: 700, color: '#f0f4f8', lineHeight: 1.5 }}>
         {question.questionText}
       </h2>
 
-      {/* Code snippet if any */}
+      {/* Code snippet */}
       {question.codeSnippet && (
-        <pre className="bg-[var(--bg-primary)] border border-[var(--border)] rounded-lg p-3 mb-4 overflow-x-auto text-sm text-[var(--text-primary)] font-mono">
+        <pre style={{ background: 'rgba(0,0,0,0.4)', border: '1px solid rgba(148,163,184,0.12)', borderRadius: 10, padding: '12px 14px', marginBottom: 16, overflowX: 'auto', fontSize: 13, color: '#a9b9d0', fontFamily: 'monospace', lineHeight: 1.6 }}>
           {question.codeSnippet}
         </pre>
       )}
 
       {/* Answer input */}
-      <div className="mb-4">
+      <div style={{ marginBottom: 16 }}>
         {question.type === 'single-choice' && (
-          <SingleChoiceInput
-            options={question.options}
-            selectedAnswer={currentAnswer as string | null}
-            showResult={showExplanation}
-            onSelect={handleSingleSelect}
-            disabled={showExplanation}
-          />
+          <SingleChoiceInput options={question.options} selectedAnswer={currentAnswer as string | null} showResult={showExplanation} onSelect={handleSingleSelect} disabled={showExplanation} />
         )}
         {question.type === 'multiple-choice' && (
-          <MultipleChoiceInput
-            options={question.options}
-            selectedAnswers={(currentAnswer as string[]) || []}
-            showResult={showExplanation}
-            onToggle={handleMultiToggle}
-            disabled={showExplanation}
-          />
+          <MultipleChoiceInput options={question.options} selectedAnswers={(currentAnswer as string[]) || []} showResult={showExplanation} onToggle={handleMultiToggle} disabled={showExplanation} />
         )}
         {question.type === 'true-false' && (
-          <TrueFalseInput
-            options={question.options}
-            selectedAnswer={currentAnswer as string | null}
-            showResult={showExplanation}
-            onSelect={handleSingleSelect}
-            disabled={showExplanation}
-          />
+          <TrueFalseInput options={question.options} selectedAnswer={currentAnswer as string | null} showResult={showExplanation} onSelect={handleSingleSelect} disabled={showExplanation} />
         )}
         {question.type === 'yes-no-statements' && question.statements && (
-          <YesNoStatementsInput
-            statements={question.statements}
-            answers={getYesNoFromAnswer()}
-            showResult={showExplanation}
-            onAnswer={handleYesNoAnswer}
-            disabled={showExplanation}
-          />
+          <YesNoStatementsInput statements={question.statements} answers={getYesNoFromAnswer()} showResult={showExplanation} onAnswer={handleYesNoAnswer} disabled={showExplanation} />
         )}
         {question.type === 'dropdown-select' && question.dropdowns && (
-          <DropdownSelectInput
-            dropdowns={question.dropdowns}
-            answers={getDropdownFromAnswer()}
-            showResult={showExplanation}
-            onSelect={handleDropdownSelect}
-            disabled={showExplanation}
-          />
+          <DropdownSelectInput dropdowns={question.dropdowns} answers={getDropdownFromAnswer()} showResult={showExplanation} onSelect={handleDropdownSelect} disabled={showExplanation} />
         )}
         {question.type === 'ordering' && question.orderItems && (
-          <OrderingInput
-            orderItems={question.orderItems}
-            currentOrder={getOrderFromAnswer()}
-            showResult={showExplanation}
-            onReorder={handleReorder}
-            disabled={showExplanation}
-          />
+          <OrderingInput orderItems={question.orderItems} currentOrder={getOrderFromAnswer()} showResult={showExplanation} onReorder={handleReorder} disabled={showExplanation} />
         )}
         {question.type === 'drag-drop' && question.dragCategories && question.dragItems && (
-          <MatchingInput
-            categories={question.dragCategories}
-            items={question.dragItems}
-            assignments={getMatchingFromAnswer()}
-            showResult={showExplanation}
-            onAssign={handleMatchAssign}
-            disabled={showExplanation}
-          />
+          <MatchingInput categories={question.dragCategories} items={question.dragItems} assignments={getMatchingFromAnswer()} showResult={showExplanation} onAssign={handleMatchAssign} disabled={showExplanation} />
         )}
       </div>
 
-      {/* Submit button (study mode only) */}
+      {/* Submit button — study mode */}
       {!examMode && !showExplanation && (
         <button
           onClick={handleSubmit}
           disabled={!isSubmitEnabled()}
-          className="w-full py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-200
-            bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-cool)] text-white hover:shadow-[0_0_24px_-4px_var(--glow)] btn-glow
-            hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-2 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-2
-            disabled:opacity-40 disabled:cursor-not-allowed
-            min-h-[44px]"
+          style={{ width: '100%', background: isSubmitEnabled() ? 'linear-gradient(135deg, #4f7cff, #3568e8)' : 'rgba(148,163,184,0.1)', border: 'none', borderRadius: 14, padding: '13px', color: isSubmitEnabled() ? '#fff' : '#8ea2c2', fontWeight: 700, fontSize: 14, cursor: isSubmitEnabled() ? 'pointer' : 'not-allowed', boxShadow: isSubmitEnabled() ? '0 12px 28px rgba(79,124,255,0.3)' : 'none', transition: 'all 0.2s' }}
         >
-          Submit Answer
+          Submit answer
         </button>
       )}
 
-      {/* Explanation panel */}
+      {/* Explanation */}
       {showExplanation && !examMode && (
-        <ExplanationPanel
-          explanation={question.explanation}
-          isCorrect={isCorrect!}
-          onNext={onNext}
-        />
+        <ExplanationPanel explanation={question.explanation} isCorrect={isCorrect!} onNext={onNext} />
       )}
     </div>
   );

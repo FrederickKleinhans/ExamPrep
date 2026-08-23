@@ -1,0 +1,1266 @@
+{
+  "certificationId": "linux-essentials",
+  "topicId": "finding-your-way",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "lx010-012",
+      "type": "single-choice",
+      "topicId": "finding-your-way",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which directory in the Filesystem Hierarchy Standard (FHS) contains system-wide configuration files?",
+      "explanation": {
+        "correct": "/etc contains host-specific system configuration files, such as /etc/passwd and /etc/fstab.",
+        "incorrect": "/var holds variable data like logs, /opt holds optional third-party software, and /tmp holds temporary files that may be cleared on reboot.",
+        "examTip": "'/etc' has no acronym — think 'et cetera,' the catch-all for config files.",
+        "relatedTopics": [
+          "fhs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Basic Commands",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "/var",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "/etc",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "/opt",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "/tmp",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-013",
+      "type": "single-choice",
+      "topicId": "finding-your-way",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command prints the current working directory?",
+      "explanation": {
+        "correct": "pwd stands for 'print working directory' and outputs the full absolute path of the current directory.",
+        "incorrect": "ls lists directory contents, cd changes the directory, and dir is not a standard Linux command (it exists on Windows).",
+        "examTip": "pwd = Print Working Directory — one of the very first commands most people learn.",
+        "relatedTopics": [
+          "navigation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Basic Commands",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "ls",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "cd",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "pwd",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "dir",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-014",
+      "type": "single-choice",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which ls option sorts output by modification time, showing the most recently modified files first?",
+      "explanation": {
+        "correct": "ls -t sorts files by modification time, newest first.",
+        "incorrect": "-S sorts by file size, -R lists recursively through subdirectories, and -h only makes sizes human-readable when combined with -l.",
+        "examTip": "-t = Time, -S = Size, -R = Recursive, -h = Human-readable (needs -l to matter).",
+        "relatedTopics": [
+          "ls-flags"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Basic Commands",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "ls -S",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ls -t",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ls -R",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ls -h",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-015",
+      "type": "single-choice",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In a path, what does a single dot (.) represent?",
+      "explanation": {
+        "correct": "A single dot (.) always refers to the current working directory.",
+        "incorrect": "The parent directory is represented by two dots (..), the home directory by ~, and the root directory by a leading /.",
+        "examTip": ". = here, .. = one level up, ~ = home. Easy to mix up under exam pressure.",
+        "relatedTopics": [
+          "relative-paths"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Basic Commands",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "The parent directory",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The current directory",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The user's home directory",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The root directory",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-016",
+      "type": "single-choice",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A developer at Umbrella Corp is scaffolding a new project and wants to build out a nested folder structure in one command.",
+      "questionText": "Which command creates a directory along with any missing parent directories in one step?",
+      "explanation": {
+        "correct": "mkdir -p creates the full path, including any parent directories that do not yet exist, without raising an error if they already do.",
+        "incorrect": "-r is not a valid mkdir flag, --all does not exist for mkdir, and touch creates files rather than directories.",
+        "examTip": "-p in mkdir = 'parents' (create the whole path); the same -p in cp means 'preserve attributes' — don't confuse them.",
+        "relatedTopics": [
+          "file-operations"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Managing Files and Directories",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "mkdir -p /projects/app/src",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "mkdir -r /projects/app/src",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "mkdir --all /projects/app/src",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "touch -d /projects/app/src",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-017",
+      "type": "single-choice",
+      "topicId": "finding-your-way",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which command searches the filesystem in real time for files modified within the last 2 days?",
+      "explanation": {
+        "correct": "find searches the live filesystem, and -mtime -2 matches files modified less than 2 days ago.",
+        "incorrect": "locate does not support -mtime (it only searches its prebuilt database by name); -atime matches access time, not modification time; which only locates executables in $PATH.",
+        "examTip": "find searches live and supports -mtime/-size/-type; locate is a fast name-only search of a prebuilt database.",
+        "relatedTopics": [
+          "find-command"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Finding Files",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "locate -mtime -2",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "find / -mtime -2",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "find / -atime -2",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "which -mtime 2",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-018",
+      "type": "single-choice",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which command tells you the full path of the executable that would run for a given command name, based on $PATH?",
+      "explanation": {
+        "correct": "which searches the directories listed in $PATH and reports the path of the executable that would be run.",
+        "incorrect": "file identifies a file's type, stat shows detailed metadata about a file, and locate searches a filename database rather than $PATH.",
+        "examTip": "which = 'which executable will run,' searched only within $PATH.",
+        "relatedTopics": [
+          "command-lookup"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Finding Files",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "file",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "which",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "stat",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "locate",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-019",
+      "type": "single-choice",
+      "topicId": "finding-your-way",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command displays only the first 10 lines of a text file by default?",
+      "explanation": {
+        "correct": "head displays the beginning of a file, defaulting to the first 10 lines.",
+        "incorrect": "tail shows the last 10 lines by default, more pages through the entire file, and wc counts lines/words/characters rather than displaying content.",
+        "examTip": "head = top of file, tail = bottom of file. Use -n to change the line count for either.",
+        "relatedTopics": [
+          "file-content"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Working with File Content",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "tail file.txt",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "more file.txt",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "head file.txt",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "wc file.txt",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-020",
+      "type": "single-choice",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which command removes duplicate adjacent lines from sorted input?",
+      "explanation": {
+        "correct": "uniq filters out repeated adjacent lines, which is why it is almost always used after sort to catch all duplicates.",
+        "incorrect": "sort only orders lines (it does not remove duplicates by itself unless combined with uniq via sort -u), cut extracts columns/fields, and tr translates or deletes characters.",
+        "examTip": "uniq only removes ADJACENT duplicates — always pipe through sort first: sort file | uniq.",
+        "relatedTopics": [
+          "text-processing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Working with File Content",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "uniq",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "sort",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "cut",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "tr",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-021",
+      "type": "multiple-choice",
+      "topicId": "finding-your-way",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO commands can be used to display the contents of a text file directly in the terminal?",
+      "explanation": {
+        "correct": "cat prints an entire file to the terminal, and less pages through file content interactively.",
+        "incorrect": "find searches for files by criteria (it does not display file contents), and mkdir creates directories.",
+        "examTip": "Content viewers: cat, less, more, head, tail. Search tools: find, locate.",
+        "relatedTopics": [
+          "file-content"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Working with File Content",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "cat",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "find",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "less",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "mkdir",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-022",
+      "type": "multiple-choice",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO ls options, when combined, list all files (including hidden ones) with detailed, human-readable file sizes?",
+      "explanation": {
+        "correct": "-a shows hidden (dotfile) entries, and -h (used with -l) shows file sizes in human-readable units like K, M, and G.",
+        "incorrect": "-R recurses into subdirectories, which is unrelated to hidden files or size formatting, and -x is not a standard ls option for this purpose.",
+        "examTip": "ls -lah is one of the most common combos: long format + all files + human-readable sizes.",
+        "relatedTopics": [
+          "ls-flags"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Basic Commands",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "-a",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "-R",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "-h",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "-x",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-023",
+      "type": "multiple-choice",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are absolute paths?",
+      "explanation": {
+        "correct": "An absolute path always starts from the root directory (/), such as /home/frederick/notes.txt and /var/log/syslog.",
+        "incorrect": "../shared/notes.txt and ./notes.txt are relative paths because they are interpreted starting from the current working directory.",
+        "examTip": "Absolute paths start with /. Relative paths start with . , .. , or a bare name, and depend on your current location.",
+        "relatedTopics": [
+          "absolute-relative-paths"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Basic Commands",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "/home/frederick/notes.txt",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "../shared/notes.txt",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "/var/log/syslog",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "./notes.txt",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-024",
+      "type": "multiple-choice",
+      "topicId": "finding-your-way",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO find predicates can be used together to search for regular files larger than 100MB?",
+      "explanation": {
+        "correct": "-type f restricts the search to regular files, and -size +100M matches files larger than 100 megabytes.",
+        "incorrect": "-type d matches directories, not files, and -size -100M would match files smaller than 100MB, the opposite of what's needed.",
+        "examTip": "find -size uses + for 'greater than' and - for 'less than'; no sign means exact size.",
+        "relatedTopics": [
+          "find-command"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Finding Files",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "-type f",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "-size +100M",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "-type d",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "-size -100M",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-025",
+      "type": "yes-no-statements",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about find and locate as Yes or No.",
+      "explanation": {
+        "correct": "locate is fast because it queries an index built by updatedb rather than scanning disk; that index is only refreshed periodically (or manually via updatedb), so very recent files may be missing; find supports rich criteria beyond filenames, including -perm, -size, and -mtime.",
+        "incorrect": "locate's database is not real-time — a file created moments ago may not appear until updatedb runs again.",
+        "examTip": "find searches live (slow but current); locate searches an index (fast but can be stale) — run 'sudo updatedb' to refresh it.",
+        "relatedTopics": [
+          "find-command",
+          "locate-command"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Finding Files",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "locate searches a prebuilt database and is generally faster than find for simple name searches.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "locate always reflects files created in the last few seconds, with no need to update its database.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "find can search based on file permissions, size, and modification time, not just filename.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-026",
+      "type": "yes-no-statements",
+      "topicId": "finding-your-way",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about navigating the filesystem as Yes or No.",
+      "explanation": {
+        "correct": "'cd ..' moves to the parent; ~ represents the current user's HOME directory, not the filesystem root; relative paths are indeed resolved relative to wherever you currently are.",
+        "incorrect": "Confusing ~ (home directory) with / (root directory) is a common beginner mistake.",
+        "examTip": "~ = $HOME (e.g. /home/frederick), / = filesystem root. Very different locations!",
+        "relatedTopics": [
+          "navigation",
+          "relative-paths"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Basic Commands",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The command 'cd ..' moves you up one directory level to the parent directory.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The tilde (~) character, when used alone, represents the root directory (/).",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Relative paths are always interpreted based on the current working directory.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-027",
+      "type": "yes-no-statements",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about file and directory management commands as Yes or No.",
+      "explanation": {
+        "correct": "rm -r recurses into and deletes directory trees; rmdir only removes empty directories and fails on non-empty ones; touch either updates the access/modification timestamp of an existing file or creates a new empty file.",
+        "incorrect": "To remove a non-empty directory you need rm -r (or rm -rf), not plain rmdir.",
+        "examTip": "rmdir = empty directories only. rm -r = directories with contents. rm -rf = no confirmation, be careful!",
+        "relatedTopics": [
+          "file-operations"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Managing Files and Directories",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "rm -r deletes a directory and all of its contents recursively.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "rmdir can remove a non-empty directory without any additional flags.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "touch updates a file's timestamp, or creates an empty file if it does not already exist.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-028",
+      "type": "dropdown-select",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by choosing the correct command from its dropdown.",
+      "explanation": {
+        "correct": "tail -f follows a file and prints new lines as they are appended, ideal for watching logs live; wc -l counts the number of lines in a file.",
+        "incorrect": "head shows the beginning of a file rather than following it, and sort/uniq/cut manipulate or reorder content rather than counting lines.",
+        "examTip": "-f in 'tail -f' stands for 'follow' — extremely common for live log monitoring.",
+        "relatedTopics": [
+          "file-content"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Working with File Content",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To display the last 20 lines of a growing log file and keep watching for new lines, you would use",
+          "options": [
+            "head -n 20 file",
+            "tail -f file",
+            "cat -n file",
+            "wc -l file"
+          ],
+          "correctAnswer": "tail -f file"
+        },
+        {
+          "id": "d2",
+          "prompt": "To count the number of lines in a text file, you would use",
+          "options": [
+            "sort file",
+            "uniq file",
+            "wc -l file",
+            "cut file"
+          ],
+          "correctAnswer": "wc -l file"
+        }
+      ]
+    },
+    {
+      "id": "lx010-029",
+      "type": "dropdown-select",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement about the Filesystem Hierarchy Standard by choosing the correct directory.",
+      "explanation": {
+        "correct": "/home holds regular users' personal directories, while /media is the traditional mount point for removable media like USB drives and CDs.",
+        "incorrect": "/usr holds shared program files (not personal data), /root is specifically the superuser's home (not general users), and /proc is a virtual filesystem exposing kernel/process info.",
+        "examTip": "/root is the root USER's home, completely separate from the / root DIRECTORY — a favorite exam trick.",
+        "relatedTopics": [
+          "fhs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Basic Commands",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "User home directories are normally located under",
+          "options": [
+            "/usr",
+            "/home",
+            "/root",
+            "/mnt"
+          ],
+          "correctAnswer": "/home"
+        },
+        {
+          "id": "d2",
+          "prompt": "Temporary removable media, such as a USB drive, is traditionally mounted under",
+          "options": [
+            "/media",
+            "/proc",
+            "/boot",
+            "/dev"
+          ],
+          "correctAnswer": "/media"
+        }
+      ]
+    },
+    {
+      "id": "lx010-030",
+      "type": "dropdown-select",
+      "topicId": "finding-your-way",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by choosing the correct command from its dropdown.",
+      "explanation": {
+        "correct": "cp -r recursively copies directories and their contents, and mv renames or moves files (renaming is just a move within the same directory).",
+        "incorrect": "mv does not create a second copy (cp does), and ln creates a link rather than renaming a file.",
+        "examTip": "mv does double duty: rename in place, or move to a new location — same command, same behavior.",
+        "relatedTopics": [
+          "file-operations"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Managing Files and Directories",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To copy a directory and all of its contents recursively, you would use",
+          "options": [
+            "cp -r",
+            "mv -r",
+            "rm -r",
+            "cat -r"
+          ],
+          "correctAnswer": "cp -r"
+        },
+        {
+          "id": "d2",
+          "prompt": "To rename a file called draft.txt to final.txt, you would use",
+          "options": [
+            "cp draft.txt final.txt",
+            "mv draft.txt final.txt",
+            "ln draft.txt final.txt",
+            "touch draft.txt final.txt"
+          ],
+          "correctAnswer": "mv draft.txt final.txt"
+        }
+      ]
+    },
+    {
+      "id": "lx010-031",
+      "type": "ordering",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A junior developer at Initech is setting up a new Node.js project and needs to prepare the initial folder structure.",
+      "questionText": "A new engineer needs to create a nested project directory, move into it, and create a starter file. Arrange the commands in the correct order.",
+      "explanation": {
+        "correct": "You must first create the nested directories with mkdir -p, then cd into the new location, then create the file with touch, and finally verify it with ls -l.",
+        "incorrect": "Running touch or cd before the directory exists would fail with a 'No such file or directory' error.",
+        "examTip": "Create first, navigate second, act third, verify last — a pattern that applies to most filesystem workflows.",
+        "relatedTopics": [
+          "file-operations",
+          "navigation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Managing Files and Directories",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "mkdir -p ~/projects/webapp/src",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "cd ~/projects/webapp/src",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "touch index.js",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "ls -l",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "lx010-032",
+      "type": "ordering",
+      "topicId": "finding-your-way",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Arrange the steps to locate the most recently modified log file in /var/log and view only its first 5 lines.",
+      "explanation": {
+        "correct": "ls -t sorts files newest-first, so the top entry is the most recently modified file; head -n 5 then shows only its first 5 lines.",
+        "incorrect": "Running head before identifying the correct filename, or sorting with -S (size) instead of -t (time), would not answer the question correctly.",
+        "examTip": "ls -t = newest first, ls -S = largest first. Don't mix these two flags up under time pressure.",
+        "relatedTopics": [
+          "ls-flags",
+          "file-content"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Working with File Content",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "cd /var/log",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "ls -t",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "identify the file listed at the top of the output",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "run head -n 5 on that filename",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "lx010-033",
+      "type": "drag-drop",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each path into the correct category.",
+      "explanation": {
+        "correct": "Absolute paths begin with a leading slash and start from the filesystem root; relative paths begin with . , .. , or a bare name and are resolved from the current directory.",
+        "incorrect": "Any path lacking a leading slash is relative, regardless of how many directories it traverses.",
+        "examTip": "Quick test: does the path start with /? If yes, it's absolute — if no, it's relative.",
+        "relatedTopics": [
+          "absolute-relative-paths"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Basic Commands",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Absolute Path",
+          "acceptsItemIds": [
+            "item65",
+            "item66"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Relative Path",
+          "acceptsItemIds": [
+            "item67",
+            "item68"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item65",
+          "text": "/home/frederick/report.pdf"
+        },
+        {
+          "id": "item66",
+          "text": "/var/log/syslog"
+        },
+        {
+          "id": "item67",
+          "text": "../images/logo.png"
+        },
+        {
+          "id": "item68",
+          "text": "./scripts/run.sh"
+        }
+      ]
+    },
+    {
+      "id": "lx010-034",
+      "type": "drag-drop",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each command into the category describing its primary purpose.",
+      "explanation": {
+        "correct": "find and locate are used to search the filesystem for files matching criteria, while cat and less are used to view the contents of files that have already been located.",
+        "incorrect": "cat and less do not search for files; they display content once you already know the path.",
+        "examTip": "Search first (find/locate), then view (cat/less/head/tail) — two separate stages of working with files.",
+        "relatedTopics": [
+          "find-command",
+          "file-content"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Finding Files",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Searches For Files",
+          "acceptsItemIds": [
+            "item67",
+            "item68"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Displays File Content",
+          "acceptsItemIds": [
+            "item69",
+            "item70"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item67",
+          "text": "find"
+        },
+        {
+          "id": "item68",
+          "text": "locate"
+        },
+        {
+          "id": "item69",
+          "text": "cat"
+        },
+        {
+          "id": "item70",
+          "text": "less"
+        }
+      ]
+    },
+    {
+      "id": "lx010-035",
+      "type": "drag-drop",
+      "topicId": "finding-your-way",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Sort each FHS directory into the category describing what it primarily stores.",
+      "explanation": {
+        "correct": "/etc and /var hold system configuration and variable system data respectively, while /home and /tmp are areas regular users routinely read and write to.",
+        "incorrect": "While /tmp is technically system-managed, it is world-writable and used directly by ordinary users and applications, unlike /etc which regular users typically only read.",
+        "examTip": "/etc = config, /var = logs & spool data, /home = personal files, /tmp = scratch space cleared periodically.",
+        "relatedTopics": [
+          "fhs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Basic Commands",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "System / Administrative Data",
+          "acceptsItemIds": [
+            "item69",
+            "item70"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "User-Accessible Data",
+          "acceptsItemIds": [
+            "item71",
+            "item72"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item69",
+          "text": "/etc"
+        },
+        {
+          "id": "item70",
+          "text": "/var"
+        },
+        {
+          "id": "item71",
+          "text": "/home"
+        },
+        {
+          "id": "item72",
+          "text": "/tmp"
+        }
+      ]
+    },
+    {
+      "id": "lx010-036",
+      "type": "drag-drop",
+      "topicId": "finding-your-way",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Sort each ls -l flag into the category describing what it changes about the output.",
+      "explanation": {
+        "correct": "-t and -S both re-order the listing (by time or by size), while -a reveals additional hidden entries and -R adds recursive subdirectory listings — these affect content shown, not order.",
+        "incorrect": "-a and -R do not change sort order; they change the scope/visibility of what ls reports.",
+        "examTip": "Sorting flags (-t, -S, -X) vs. content flags (-a, -R, -l) serve different purposes — know which category each belongs to.",
+        "relatedTopics": [
+          "ls-flags"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Basic Commands",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Changes Sort Order",
+          "acceptsItemIds": [
+            "item71",
+            "item72"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Changes What Is Shown",
+          "acceptsItemIds": [
+            "item73",
+            "item74"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item71",
+          "text": "-t"
+        },
+        {
+          "id": "item72",
+          "text": "-S"
+        },
+        {
+          "id": "item73",
+          "text": "-a"
+        },
+        {
+          "id": "item74",
+          "text": "-R"
+        }
+      ]
+    },
+    {
+      "id": "lx010-146",
+      "type": "yes-no-statements",
+      "topicId": "finding-your-way",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An analyst at Pied Piper needs to confirm which recent report files exist under /srv/reports before archiving them.",
+      "questionText": "Evaluate each statement about this task as Yes or No.",
+      "explanation": {
+        "correct": "-type f restricts to regular files and -mtime -7 matches modification within the last 7 days; -type d matches directories, not files, so the second statement is false; wc -l counts lines, and since find lists one path per line, this counts the matching files.",
+        "incorrect": "-type d lists directories, not files — the opposite of what the statement claims.",
+        "examTip": "-type f = regular files, -type d = directories, -type l = symbolic links. Easy to mix up under time pressure.",
+        "relatedTopics": [
+          "find-command"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Finding Files",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Running 'find /srv/reports -type f -mtime -7' will list regular files modified within the last 7 days.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Running 'find /srv/reports -type d' would list regular files rather than directories.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Piping the find output into 'wc -l' would report the total number of matching lines (in this case, files).",
+          "isCorrectYes": true
+        }
+      ]
+    }
+  ]
+}

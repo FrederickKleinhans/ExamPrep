@@ -20,6 +20,25 @@ export interface Certification {
   topics: Topic[];
   icon?: string;
   resources?: CertResource[];
+  topicChunks?: TopicChunk[];
+  // Enriched from catalog at compile time
+  vendor?: string;
+  vendorColor?: string;
+  level?: CertLevel;
+  accessTier?: AccessTier;
+  description?: string;
+  examDetails?: {
+    durationMinutes: number;
+    questionCount: number;
+    passingScore: number;
+    priceUSD: number;
+  };
+}
+
+export interface TopicChunk {
+  topicId: string;
+  path: string;
+  questionCount: number;
 }
 
 export interface CertResource {
@@ -37,6 +56,13 @@ export interface Topic {
 
 export interface QuestionBank {
   certificationId: string;
+  version: string;
+  questions: Question[];
+}
+
+export interface QuestionChunk {
+  certificationId: string;
+  topicId: string;
   version: string;
   questions: Question[];
 }
@@ -132,19 +158,54 @@ export interface QuestionMetadata {
   examObjective: string;
   references: string[];
   lastUpdated: string;
+  reviewStatus?: 'draft' | 'peer-reviewed' | 'approved';
+  reviewer?: string;
+  reviewedAt?: string;
+  author?: string;
 }
 
 // --- User Progress Types ---
 
 export interface UserProgress {
+  version: 2;
   userId: string;
   selectedCertification: string;
+  selectedTrackId?: string;
+  /** Product-wide study streak across all certifications. */
   studyStreak: StudyStreak;
+  certifications: Record<string, CertificationProgress>;
+}
+
+export interface CertificationProgress {
   questionStats: Record<string, QuestionStat>;
   examHistory: ExamResult[];
   weakTopics: string[];
   bookmarks: string[];
-  studyGroupIndex?: Record<string, number>;
+  studyGroupIndex: number;
+  /** Study streak for this certification only. */
+  studyStreak: StudyStreak;
+  /** SM-2 schedule per question. Keyed by question ID. */
+  sm2: Record<string, Sm2Schedule>;
+}
+
+// --- SM-2 Scheduling ---
+
+/**
+ * Spaced repetition schedule for a single question.
+ *
+ * Fields follow the SM-2 algorithm:
+ * - repetitions: how many times answered correctly in a row
+ * - easeFactor: multiplier controlling interval growth (min 1.3, starts at 2.5)
+ * - intervalDays: how many days until the next review
+ * - dueDate: ISO date string for next scheduled review
+ * - lastReviewed: ISO date string of last answer
+ */
+export interface Sm2Schedule {
+  repetitions: number;
+  easeFactor: number;
+  intervalDays: number;
+  dueDate: string;
+  lastReviewed: string;
 }
 
 export interface StudyStreak {
@@ -216,11 +277,63 @@ export interface AppState {
   manifest: CertificationManifest | null;
   questionBank: QuestionBank | null;
   progress: UserProgress;
-  
+
   // UI State
   selectedCertification: string | null;
   isLoading: boolean;
   error: string | null;
+}
+
+// --- Career Track Types ---
+
+export type AccessTier = 'free' | 'premium';
+export type CertLevel = 'beginner' | 'intermediate' | 'advanced' | 'expert';
+
+export interface CatalogCert {
+  id: string;
+  code: string;
+  name: string;
+  vendor: string;
+  vendorColor: string;
+  level: CertLevel;
+  accessTier: AccessTier;
+  description: string;
+  examDetails: {
+    durationMinutes: number;
+    questionCount: number;
+    passingScore: number;
+    priceUSD: number;
+  };
+  domains: { id: string; label: string; weight: number }[];
+  prerequisites: string[];
+  nextSteps: string[];
+  domain: string;
+}
+
+export interface TrackCertEntry {
+  certId: string;
+  required: boolean;
+  note?: string;
+  prerequisites?: string[];
+}
+
+export interface TrackLevel {
+  stage: string;
+  label: string;
+  description: string;
+  certs: TrackCertEntry[];
+}
+
+export interface CareerTrack {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  color: string;
+  bg: string;
+  levels: TrackLevel[];
+  crossTrackCerts: string[];
+  estimatedHoursToComplete: number;
 }
 
 // --- Learn Content Types ---

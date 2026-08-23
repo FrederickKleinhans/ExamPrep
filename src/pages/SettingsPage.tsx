@@ -1,24 +1,72 @@
-import { useEffect, useRef, useState } from 'react';
-import { Settings, Download, Upload, Trash2, AlertTriangle } from 'lucide-react';
+import { useEffect, useRef, useState, useCallback } from 'react';
+import { Download, Upload, Trash2, AlertTriangle, Sun, Moon } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { ProgressService } from '../services/ProgressService';
 import { usePreferences } from '../store/usePreferences';
+import { useTheme } from '../store/useTheme';
 
 export function SettingsPage() {
-  const { manifest, progress, initialize, isLoading, selectCertification, refreshProgress } = useStore();
+  const { manifest, progress, initialize, isLoading, selectCertification, refreshProgress, hasActiveSession } = useStore();
   const { analyticsEnabled, toggleAnalytics, debugMode, toggleDebugMode } = usePreferences();
+  const { theme, toggle: toggleTheme } = useTheme();
   const [showResetConfirm, setShowResetConfirm] = useState(false);
+  const [pendingCertId, setPendingCertId] = useState<string | null>(null);
   const [importStatus, setImportStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const resetTriggerRef = useRef<HTMLButtonElement>(null);
+  const cancelBtnRef = useRef<HTMLButtonElement>(null);
+  const certSwitchCancelRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (!manifest) initialize();
   }, [manifest, initialize]);
 
+  // Move focus into modal on open; restore on close
+  useEffect(() => {
+    if (showResetConfirm) {
+      // Defer to next tick so the modal is rendered
+      setTimeout(() => cancelBtnRef.current?.focus(), 10);
+    } else if (pendingCertId === null) {
+      // Only restore focus to reset button when no other modal is open
+      resetTriggerRef.current?.focus();
+    }
+  }, [showResetConfirm, pendingCertId]);
+
+  useEffect(() => {
+    if (pendingCertId !== null) {
+      setTimeout(() => certSwitchCancelRef.current?.focus(), 10);
+    }
+  }, [pendingCertId]);
+
+  // Focus trap inside reset / cert-switch modals
+  const handleModalKeyDown = useCallback((e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Escape') {
+      if (showResetConfirm) setShowResetConfirm(false);
+      else if (pendingCertId !== null) setPendingCertId(null);
+      return;
+    }
+    if (e.key !== 'Tab') return;
+    const focusable = Array.from(
+      e.currentTarget.querySelectorAll<HTMLElement>(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      ),
+    ).filter((el) => !el.hasAttribute('disabled'));
+    if (focusable.length === 0) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }, [showResetConfirm, pendingCertId]);
+
   if (isLoading || !manifest) {
     return (
-      <div className="flex items-center justify-center h-64">
-        <div className="text-[var(--text-secondary)]">Loading...</div>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 256 }}>
+        <div style={{ width: 32, height: 32, borderRadius: '50%', border: '2px solid var(--accent)', borderTopColor: 'transparent', animation: 'spin 0.8s linear infinite' }} />
       </div>
     );
   }
@@ -29,7 +77,7 @@ export function SettingsPage() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `certready-progress-${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `certarc-progress-${new Date().toISOString().split('T')[0]}.json`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -37,7 +85,6 @@ export function SettingsPage() {
   const handleImport = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-
     const reader = new FileReader();
     reader.onload = (event) => {
       const json = event.target?.result as string;
@@ -56,187 +103,291 @@ export function SettingsPage() {
     setShowResetConfirm(false);
   };
 
+  const handleCertChangeRequest = (newCertId: string) => {
+    if (newCertId === '' || newCertId === progress.selectedCertification) return;
+    // If a study or exam session is in progress, require confirmation —
+    // switching certs will wipe the in-flight session.
+    if (hasActiveSession()) {
+      setPendingCertId(newCertId);
+    } else {
+      void selectCertification(newCertId);
+    }
+  };
+
+  const confirmCertSwitch = () => {
+    if (pendingCertId) {
+      void selectCertification(pendingCertId);
+    }
+    setPendingCertId(null);
+  };
+
+  const activeCertId = progress.selectedCertification;
+
   return (
-    <div className="max-w-4xl mx-auto space-y-6 animate-fade-in">
+    <div className="page-root" style={{ maxWidth: 640, margin: '0 auto' }}>
       {/* Header */}
-      <div>
-        <h1 className="text-2xl font-bold text-[var(--text-primary)] flex items-center gap-2">
-          <Settings className="w-6 h-6 text-[var(--accent)]" aria-hidden="true" />
-          Settings
-        </h1>
-        <p className="text-sm text-[var(--text-secondary)] mt-1">
-          Manage your certification, data, and preferences
-        </p>
+      <div style={{ marginBottom: 28 }}>
+        <p className="text-muted" style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.14em', marginBottom: 6 }}>Preferences</p>
+        <h1 className="text-heading" style={{ margin: 0, fontSize: 32, fontWeight: 800, lineHeight: 1.1 }}>Settings</h1>
+        <p className="text-muted" style={{ margin: '6px 0 0', fontSize: 13 }}>Manage your active cert, data, and preferences</p>
       </div>
 
-      {/* Certification Selector */}
-      <div className="glass-card rounded-2xl p-5">
-        <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">Active Certification</h3>
+      {/* Active certification */}
+      <Section title="Active certification" titleId="cert-section-title">
+        <p className="text-muted" style={{ margin: '0 0 10px', fontSize: 13 }}>
+          This is the cert your study, exam, analytics, and bookmarks operate on.
+        </p>
+        <label htmlFor="cert-select" className="text-muted" style={{ display: 'block', fontSize: 12, fontWeight: 600, marginBottom: 6 }}>
+          Select certification
+        </label>
         <select
-          value={progress.selectedCertification}
-          onChange={(e) => selectCertification(e.target.value)}
-          className="w-full px-4 py-3 rounded-lg bg-[var(--bg-tertiary)] border border-[var(--border)] 
-            text-[var(--text-primary)] text-sm focus:outline-none focus:border-[var(--accent)]
-            min-h-[44px] cursor-pointer"
-          aria-label="Select certification"
+          id="cert-select"
+          value={activeCertId}
+          onChange={(e) => handleCertChangeRequest(e.target.value)}
+          className="input-surface"
+          style={{ width: '100%', appearance: 'none' }}
         >
+          <option value="" disabled>Select a certification…</option>
           {manifest.certifications.map((cert) => (
             <option key={cert.id} value={cert.id}>
               {cert.examCode} — {cert.name}
             </option>
           ))}
         </select>
-        <p className="text-xs text-[var(--text-secondary)] mt-2">
-          Switching certifications loads a new question bank. Your progress is saved per certification.
-        </p>
-      </div>
+        {activeCertId && (
+          <p className="text-muted" style={{ margin: '8px 0 0', fontSize: 12, color: 'var(--success)' }}>
+            ✓ Active: {manifest.certifications.find((c) => c.id === activeCertId)?.name ?? activeCertId}
+          </p>
+        )}
+      </Section>
 
-      {/* Data Management */}
-      <div className="glass-card rounded-2xl p-5">
-        <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-4">Data Management</h3>
-        <div className="space-y-3">
-          {/* Export */}
-          <button
+      {/* Data management */}
+      <Section title="Data management" titleId="data-section-title">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+          <ActionRow
+            icon={<Download style={{ width: 18, height: 18, color: 'var(--accent)' }} aria-hidden="true" />}
+            label="Export progress"
+            description="Download your progress as JSON"
             onClick={handleExport}
-            className="w-full flex items-center gap-3 px-4 py-3 rounded-lg bg-[var(--bg-tertiary)]
-              hover:bg-[var(--border)] transition-colors text-left min-h-[44px]"
-          >
-            <Download className="w-5 h-5 text-[var(--accent)] shrink-0" aria-hidden="true" />
-            <div>
-              <div className="text-sm font-medium text-[var(--text-primary)]">Export Progress</div>
-              <div className="text-xs text-[var(--text-secondary)]">Download your progress as JSON</div>
-            </div>
-          </button>
-
-          {/* Import */}
-          <button
+          />
+          <ActionRow
+            icon={<Upload style={{ width: 18, height: 18, color: 'var(--accent)' }} aria-hidden="true" />}
+            label="Import progress"
+            description="Load a previously exported file"
             onClick={() => fileInputRef.current?.click()}
-            className="w-full flex items-center gap-3 px-4 py-3 rounded-lg bg-[var(--bg-tertiary)]
-              hover:bg-[var(--border)] transition-colors text-left min-h-[44px]"
-          >
-            <Upload className="w-5 h-5 text-[var(--accent)] shrink-0" aria-hidden="true" />
-            <div>
-              <div className="text-sm font-medium text-[var(--text-primary)]">Import Progress</div>
-              <div className="text-xs text-[var(--text-secondary)]">Load previously exported progress</div>
-            </div>
-          </button>
+          />
           <input
             ref={fileInputRef}
             type="file"
             accept=".json"
             onChange={handleImport}
-            className="hidden"
-            aria-label="Import progress file"
+            style={{ display: 'none' }}
+            tabIndex={-1}
+            aria-hidden="true"
           />
-
           {importStatus === 'success' && (
-            <p className="text-sm text-[var(--success)] px-4">Progress imported successfully!</p>
+            <p role="status" className="text-muted" style={{ margin: 0, fontSize: 13, color: 'var(--success)', padding: '4px 0' }}>
+              ✓ Progress imported successfully
+            </p>
           )}
           {importStatus === 'error' && (
-            <p className="text-sm text-[var(--error)] px-4">Invalid file format. Please use a CertReady export file.</p>
+            <p role="alert" className="text-muted" style={{ margin: 0, fontSize: 13, color: 'var(--error)', padding: '4px 0' }}>
+              Invalid file. Please use a CertArc export.
+            </p>
           )}
         </div>
-      </div>
+      </Section>
 
-      {/* Analytics & Privacy */}
-      <div className="glass-card rounded-2xl p-5">
-        <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-4">Analytics & Privacy</h3>
-        <div className="space-y-3">
-          <button
-            type="button"
-            onClick={toggleAnalytics}
-            aria-pressed={analyticsEnabled}
-            className="w-full text-left px-4 py-4 rounded-2xl border border-[var(--border)] bg-[var(--bg-tertiary)] hover:bg-[var(--border)] transition-colors"
-          >
-            <div className="flex items-center justify-between gap-4">
-              <div>
-                <div className="text-sm font-medium text-[var(--text-primary)]">Anonymous analytics</div>
-                <div className="text-xs text-[var(--text-secondary)]">
-                  Allow CertReady to send anonymous study and exam event data for better progress insights.
-                </div>
-              </div>
-              <span
-                className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                  analyticsEnabled ? 'bg-[var(--success)] text-black' : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
-                }`}
-              >
-                {analyticsEnabled ? 'Enabled' : 'Disabled'}
-              </span>
-            </div>
-          </button>
-
-          <button
-            type="button"
-            onClick={toggleDebugMode}
-            aria-pressed={debugMode}
-            className="w-full text-left px-4 py-4 rounded-2xl border border-[var(--border)] bg-[var(--bg-tertiary)] hover:bg-[var(--border)] transition-colors"
-          >
-            <div className="flex items-center justify-between gap-4">
-              <div>
-                <div className="text-sm font-medium text-[var(--text-primary)]">Debug mode</div>
-                <div className="text-xs text-[var(--text-secondary)]">
-                  Show analytics event logs in the console and help troubleshoot behavior.
-                </div>
-              </div>
-              <span
-                className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                  debugMode ? 'bg-[var(--accent)] text-white' : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
-                }`}
-              >
-                {debugMode ? 'On' : 'Off'}
-              </span>
-            </div>
-          </button>
+      {/* Preferences */}
+      <Section title="Preferences" titleId="prefs-section-title">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+          <ToggleRow
+            label="Anonymous analytics"
+            description="Send anonymous study and exam events for better insights"
+            enabled={analyticsEnabled}
+            onToggle={toggleAnalytics}
+          />
+          <ToggleRow
+            label="Debug mode"
+            description="Log analytics events to the browser console"
+            enabled={debugMode}
+            onToggle={toggleDebugMode}
+          />
         </div>
-      </div>
+      </Section>
 
-      {/* Danger Zone */}
-      <div className="bg-[var(--bg-secondary)] rounded-lg border border-[var(--error)]/30 p-5">
-        <h3 className="text-sm font-semibold text-[var(--error)] mb-3">Danger Zone</h3>
+      {/* Appearance */}
+      <Section title="Appearance" titleId="appearance-section-title">
+        <ToggleRow
+          label={theme === 'dark' ? 'Dark mode' : 'Light mode'}
+          description="Switch between light and dark theme"
+          enabled={theme === 'dark'}
+          onToggle={toggleTheme}
+          icon={theme === 'dark'
+            ? <Moon style={{ width: 18, height: 18, color: 'var(--accent)' }} aria-hidden="true" />
+            : <Sun style={{ width: 18, height: 18, color: 'var(--warning)' }} aria-hidden="true" />
+          }
+        />
+      </Section>
+
+      {/* Danger zone */}
+      <div className="card-surface" style={{ borderColor: 'rgba(255,107,107,0.25)', padding: '18px 20px' }}>
+        <h3 style={{ margin: '0 0 12px', fontSize: 13, fontWeight: 700, color: 'var(--error)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+          Danger zone
+        </h3>
         <button
+          ref={resetTriggerRef}
           onClick={() => setShowResetConfirm(true)}
-          className="w-full flex items-center gap-3 px-4 py-3 rounded-lg bg-[var(--error)]/10
-            hover:bg-[var(--error)]/20 transition-colors text-left min-h-[44px] border border-[var(--error)]/20"
+          aria-haspopup="dialog"
+          style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 12, padding: '12px 16px', background: 'rgba(255,107,107,0.06)', border: '1px solid rgba(255,107,107,0.18)', borderRadius: 12, cursor: 'pointer', textAlign: 'left' }}
         >
-          <Trash2 className="w-5 h-5 text-[var(--error)] shrink-0" aria-hidden="true" />
+          <Trash2 style={{ width: 18, height: 18, color: 'var(--error)', flexShrink: 0 }} aria-hidden="true" />
           <div>
-            <div className="text-sm font-medium text-[var(--error)]">Reset All Progress</div>
-            <div className="text-xs text-[var(--text-secondary)]">
-              Permanently delete all stats, streaks, and exam history
-            </div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--error)' }}>Reset all progress</div>
+            <div className="text-muted" style={{ fontSize: 12, marginTop: 2 }}>Permanently delete stats, streaks, and exam history</div>
           </div>
         </button>
       </div>
 
-      {/* Reset Confirmation Modal */}
+      {/* Reset confirmation modal — with focus trap, focus management, aria-labelledby, Escape */}
       {showResetConfirm && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4" role="dialog" aria-modal="true">
-          <div className="glass-card rounded-2xl p-6 max-w-md w-full">
-            <AlertTriangle className="w-10 h-10 text-[var(--error)] mx-auto mb-4" aria-hidden="true" />
-            <h2 className="text-lg font-bold text-[var(--text-primary)] text-center mb-2">Reset All Progress?</h2>
-            <p className="text-sm text-[var(--text-secondary)] text-center mb-6">
-              This will permanently delete all your question stats, exam history, study streaks, and bookmarks.
-              This action cannot be undone.
+        <div
+          style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.7)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 50, padding: 16 }}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="reset-dialog-title"
+          onKeyDown={handleModalKeyDown}
+          // Clicking the backdrop closes the modal
+          onClick={(e) => { if (e.target === e.currentTarget) setShowResetConfirm(false); }}
+        >
+          <div className="modal-surface" style={{ padding: '32px 28px', maxWidth: 400, width: '100%', textAlign: 'center' }}>
+            <AlertTriangle style={{ width: 40, height: 40, color: 'var(--error)', margin: '0 auto 16px' }} aria-hidden="true" />
+            <h2 id="reset-dialog-title" className="text-heading" style={{ margin: '0 0 8px', fontSize: 20, fontWeight: 800 }}>
+              Reset all progress?
+            </h2>
+            <p className="text-muted" style={{ margin: '0 0 24px', fontSize: 13, lineHeight: 1.6 }}>
+              This will permanently delete all your question stats, exam history, study streaks, and bookmarks. This cannot be undone.
             </p>
-            <div className="flex gap-3">
+            <div style={{ display: 'flex', gap: 10 }}>
               <button
+                ref={cancelBtnRef}
                 onClick={() => setShowResetConfirm(false)}
-                className="flex-1 py-2 px-4 rounded-lg border border-[var(--border)] text-[var(--text-secondary)]
-                  hover:bg-[var(--bg-tertiary)] transition-colors text-sm min-h-[44px]"
+                className="btn-ghost"
+                style={{ flex: 1, borderRadius: 12, padding: '11px', fontSize: 14, cursor: 'pointer', fontWeight: 600 }}
               >
                 Cancel
               </button>
               <button
                 onClick={handleReset}
-                className="flex-1 py-2 px-4 rounded-lg bg-[var(--error)] text-white font-medium
-                  hover:bg-[var(--error)]/80 transition-colors text-sm min-h-[44px]"
+                style={{ flex: 1, background: 'linear-gradient(135deg, var(--error), #e84545)', border: 'none', borderRadius: 12, padding: '11px', color: '#fff', fontSize: 14, fontWeight: 700, cursor: 'pointer' }}
               >
-                Reset Everything
+                Reset everything
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Cert-switch confirm modal — shown when a session is in progress */}
+      {pendingCertId && (
+        <div
+          style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.7)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 50, padding: 16 }}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="cert-switch-title"
+          aria-describedby="cert-switch-desc"
+          onKeyDown={handleModalKeyDown}
+          onClick={(e) => { if (e.target === e.currentTarget) setPendingCertId(null); }}
+        >
+          <div className="modal-surface" style={{ padding: '32px 28px', maxWidth: 420, width: '100%', textAlign: 'center' }}>
+            <AlertTriangle style={{ width: 40, height: 40, color: 'var(--warning)', margin: '0 auto 16px' }} aria-hidden="true" />
+            <h2 id="cert-switch-title" className="text-heading" style={{ margin: '0 0 8px', fontSize: 20, fontWeight: 800 }}>
+              End your current session?
+            </h2>
+            <p id="cert-switch-desc" className="text-muted" style={{ margin: '0 0 24px', fontSize: 13, lineHeight: 1.6 }}>
+              You have a study or exam session in progress. Switching the active
+              cert will end that session and discard any unsaved answers.
+            </p>
+            <div style={{ display: 'flex', gap: 10 }}>
+              <button
+                ref={certSwitchCancelRef}
+                onClick={() => setPendingCertId(null)}
+                className="btn-ghost"
+                style={{ flex: 1, borderRadius: 12, padding: '11px', fontSize: 14, cursor: 'pointer', fontWeight: 600 }}
+              >
+                Keep current cert
+              </button>
+              <button
+                onClick={confirmCertSwitch}
+                style={{ flex: 1, background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', border: 'none', borderRadius: 12, padding: '11px', color: '#fff', fontSize: 14, fontWeight: 700, cursor: 'pointer' }}
+              >
+                Switch anyway
               </button>
             </div>
           </div>
         </div>
       )}
     </div>
+  );
+}
+
+// ── Sub-components ─────────────────────────────────────────────────────────
+
+function Section({ title, titleId, children }: { title: string; titleId: string; children: React.ReactNode }) {
+  return (
+    <div className="card-surface" style={{ padding: '18px 20px', marginBottom: 14 }}>
+      <h3 id={titleId} className="text-heading" style={{ margin: '0 0 14px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+        {title}
+      </h3>
+      {children}
+    </div>
+  );
+}
+
+function ActionRow({ icon, label, description, onClick }: { icon: React.ReactNode; label: string; description: string; onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', background: 'var(--bg-tertiary)', border: '1px solid var(--border)', borderRadius: 12, cursor: 'pointer', textAlign: 'left', transition: 'border-color 0.15s' }}
+      onMouseEnter={(e) => (e.currentTarget.style.borderColor = 'rgba(79,124,255,0.35)')}
+      onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'var(--border)')}
+    >
+      <span aria-hidden="true">{icon}</span>
+      <div>
+        <div className="text-heading" style={{ fontSize: 14, fontWeight: 600 }}>{label}</div>
+        <div className="text-muted" style={{ fontSize: 12, marginTop: 2 }}>{description}</div>
+      </div>
+    </button>
+  );
+}
+
+function ToggleRow({ label, description, enabled, onToggle, icon }: {
+  label: string;
+  description: string;
+  enabled: boolean;
+  onToggle: () => void;
+  icon?: React.ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      aria-pressed={enabled}
+      style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, padding: '12px 14px', background: 'var(--bg-tertiary)', border: '1px solid var(--border)', borderRadius: 12, cursor: 'pointer', textAlign: 'left' }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        {icon && <span aria-hidden="true" style={{ flexShrink: 0 }}>{icon}</span>}
+        <div>
+          <div className="text-heading" style={{ fontSize: 14, fontWeight: 600 }}>{label}</div>
+          <div className="text-muted" style={{ fontSize: 12, marginTop: 2 }}>{description}</div>
+        </div>
+      </div>
+      <span
+        aria-hidden="true"
+        style={{ flexShrink: 0, padding: '4px 10px', borderRadius: 999, fontSize: 11, fontWeight: 700, background: enabled ? 'rgba(45,212,191,0.15)' : 'var(--bg-tertiary)', color: enabled ? 'var(--success)' : 'var(--text-secondary)', border: `1px solid ${enabled ? 'rgba(45,212,191,0.25)' : 'var(--border)'}` }}
+      >
+        {enabled ? 'On' : 'Off'}
+      </span>
+    </button>
   );
 }

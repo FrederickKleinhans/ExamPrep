@@ -1,0 +1,750 @@
+[
+  {
+    "id": "istqb-001",
+    "type": "single-choice",
+    "topicId": "fundamentals",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "Which of the following is NOT one of the seven testing principles?",
+    "options": [
+      {"id":"A","text":"Testing shows presence of defects, not their absence","isCorrect":false},
+      {"id":"B","text":"Exhaustive testing is possible","isCorrect":true},
+      {"id":"C","text":"Defects cluster together","isCorrect":false},
+      {"id":"D","text":"Testing is context dependent","isCorrect":false}
+    ],
+    "explanation": {
+      "correct":"Exhaustive testing is impossible, not possible. This is a key principle.",
+      "incorrect":"Review the seven principles carefully; exhaustive testing is not feasible.",
+      "examTip":"Memorize the seven principles as they are frequently tested.",
+      "relatedTopics":["Testing Principles"]
+    },
+    "metadata": {
+      "examObjective":"Understand the seven testing principles",
+      "references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],
+      "lastUpdated":"2024-01-15"
+    }
+  },
+  {
+    "id": "istqb-002",
+    "type": "multiple-choice",
+    "topicId": "testing-lifecycle",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Which of the following are typical test levels in the software development lifecycle?",
+    "options": [
+      {"id":"A","text":"Unit testing","isCorrect":true},
+      {"id":"B","text":"Integration testing","isCorrect":true},
+      {"id":"C","text":"System testing","isCorrect":true},
+      {"id":"D","text":"Acceptance testing","isCorrect":true},
+      {"id":"E","text":"Deployment testing","isCorrect":false}
+    ],
+    "explanation": {
+      "correct":"The four main test levels are unit, integration, system, and acceptance.",
+      "incorrect":"Deployment testing is not a standard test level in ISTQB.",
+      "examTip":"Remember the four standard test levels.",
+      "relatedTopics":["Test Levels"]
+    },
+    "metadata": {
+      "examObjective":"Identify test levels in SDLC",
+      "references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],
+      "lastUpdated":"2024-01-15"
+    }
+  },
+  {
+    "id": "istqb-003",
+    "type": "yes-no-statements",
+    "topicId": "static-testing",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "Determine whether the following statements about static testing are true or false.",
+    "statements": [
+      {"id":"s1","text":"Static testing includes reviews and static analysis.","isCorrectYes":true},
+      {"id":"s2","text":"Static testing requires code execution.","isCorrectYes":false},
+      {"id":"s3","text":"Walkthroughs are a type of static testing.","isCorrectYes":true}
+    ],
+    "explanation": {
+      "correct":"Static testing involves reviews and analysis without executing code.",
+      "incorrect":"Static testing does not require code execution.",
+      "examTip":"Differentiate static vs dynamic testing.",
+      "relatedTopics":["Static Testing"]
+    },
+    "metadata": {
+      "examObjective":"Understand static testing methods",
+      "references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],
+      "lastUpdated":"2024-01-15"
+    }
+  },
+  {
+    "id": "istqb-004",
+    "type": "dropdown-select",
+    "topicId": "test-techniques",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Match the black-box technique with its description.",
+    "dropdowns": [
+      {"id":"d1","prompt":"Equivalence Partitioning","options":["Dividing input into valid/invalid classes","Testing boundaries","Modeling states"],"correctAnswer":"Dividing input into valid/invalid classes"},
+      {"id":"d2","prompt":"Boundary Value Analysis","options":["Dividing input into valid/invalid classes","Testing boundaries","Modeling states"],"correctAnswer":"Testing boundaries"},
+      {"id":"d3","prompt":"State Transition Testing","options":["Dividing input into valid/invalid classes","Testing boundaries","Modeling states"],"correctAnswer":"Modeling states"}
+    ],
+    "explanation": {
+      "correct":"Each technique has a distinct purpose: EP for classes, BVA for edges, STT for states.",
+      "incorrect":"Review the definitions of black-box techniques.",
+      "examTip":"Know the definitions of each black-box technique.",
+      "relatedTopics":["Black-box Test Techniques"]
+    },
+    "metadata": {
+      "examObjective":"Apply black-box test techniques",
+      "references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],
+      "lastUpdated":"2024-01-15"
+    }
+  },
+  {
+    "id": "istqb-005",
+    "type": "ordering",
+    "topicId": "test-management",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Order the main activities of the test process.",
+    "orderItems": [
+      {"id":"o1","text":"Test planning","correctPosition":1},
+      {"id":"o2","text":"Test monitoring and control","correctPosition":2},
+      {"id":"o3","text":"Test analysis","correctPosition":3},
+      {"id":"o4","text":"Test design","correctPosition":4},
+      {"id":"o5","text":"Test implementation","correctPosition":5},
+      {"id":"o6","text":"Test execution","correctPosition":6},
+      {"id":"o7","text":"Test completion","correctPosition":7}
+    ],
+    "explanation": {
+      "correct":"The ISTQB test process follows this sequence.",
+      "incorrect":"Review the ISTQB test process order.",
+      "examTip":"Memorize the order of test process activities.",
+      "relatedTopics":["Test Process"]
+    },
+    "metadata": {
+      "examObjective":"Understand the test process activities",
+      "references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],
+      "lastUpdated":"2024-01-15"
+    }
+  },
+  {
+    "id": "istqb-006",
+    "type": "drag-drop",
+    "topicId": "tool-support",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "Drag each tool type to its correct category.",
+    "dragCategories": [
+      {"id":"cat1","name":"Test Management Tools","acceptsItemIds":["item1"]},
+      {"id":"cat2","name":"Defect Tracking Tools","acceptsItemIds":["item2"]},
+      {"id":"cat3","name":"Automation Tools","acceptsItemIds":["item3"]},
+      {"id":"cat4","name":"Performance Testing Tools","acceptsItemIds":["item4"]}
+    ],
+    "dragItems": [
+      {"id":"item1","text":"Requirement traceability"},
+      {"id":"item2","text":"Bug reporting"},
+      {"id":"item3","text":"Regression test execution"},
+      {"id":"item4","text":"Load simulation"}
+    ],
+    "explanation": {
+      "correct":"Each tool type aligns with its category.",
+      "incorrect":"Review tool categories and their functions.",
+      "examTip":"Know the categories of test tools.",
+      "relatedTopics":["Tool Support"]
+    },
+    "metadata": {
+      "examObjective":"Identify categories of test tools",
+      "references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],
+      "lastUpdated":"2024-01-15"
+    }
+  },
+  {
+    "id": "istqb-007",
+    "type": "single-choice",
+    "topicId": "fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "scenarioText": "A banking application must calculate interest rates correctly. During testing, a defect is found where the calculation is wrong for certain inputs.",
+    "questionText": "Which testing principle is illustrated here?",
+    "options": [
+      {"id":"A","text":"Testing shows presence of defects","isCorrect":true},
+      {"id":"B","text":"Absence-of-errors fallacy","isCorrect":false},
+      {"id":"C","text":"Defects cluster together","isCorrect":false},
+      {"id":"D","text":"Testing is context dependent","isCorrect":false}
+    ],
+    "explanation": {
+      "correct":"Testing revealed a defect, showing presence of defects.",
+      "incorrect":"The principle is that testing shows presence, not absence.",
+      "examTip":"Apply principles to scenarios.",
+      "relatedTopics":["Testing Principles"]
+    },
+    "metadata": {
+      "examObjective":"Apply testing principles to scenarios",
+      "references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],
+      "lastUpdated":"2024-01-15"
+    }
+  },
+  [
+  {
+    "id": "istqb-008",
+    "type": "single-choice",
+    "topicId": "testing-lifecycle",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "Which SDLC model emphasizes sequential phases such as requirements, design, implementation, and testing?",
+    "options": [
+      {"id":"A","text":"Waterfall","isCorrect":true},
+      {"id":"B","text":"Agile","isCorrect":false},
+      {"id":"C","text":"Iterative","isCorrect":false},
+      {"id":"D","text":"Spiral","isCorrect":false}
+    ],
+    "explanation": {
+      "correct":"Waterfall follows a linear sequential approach.",
+      "incorrect":"Agile and iterative are incremental, not sequential.",
+      "examTip":"Know the characteristics of SDLC models.",
+      "relatedTopics":["SDLC Models"]
+    },
+    "metadata": {
+      "examObjective":"Identify SDLC models",
+      "references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],
+      "lastUpdated":"2024-01-15"
+    }
+  },
+  {
+    "id": "istqb-009",
+    "type": "multiple-choice",
+    "topicId": "test-techniques",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Which of the following are experience-based test techniques?",
+    "options": [
+      {"id":"A","text":"Exploratory testing","isCorrect":true},
+      {"id":"B","text":"Error guessing","isCorrect":true},
+      {"id":"C","text":"Checklist-based testing","isCorrect":true},
+      {"id":"D","text":"Boundary value analysis","isCorrect":false},
+      {"id":"E","text":"Decision table testing","isCorrect":false}
+    ],
+    "explanation": {
+      "correct":"Exploratory, error guessing, and checklist-based are experience-based.",
+      "incorrect":"BVA and decision tables are black-box techniques.",
+      "examTip":"Differentiate experience-based vs systematic techniques.",
+      "relatedTopics":["Experience-based Techniques"]
+    },
+    "metadata": {
+      "examObjective":"Apply experience-based techniques",
+      "references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],
+      "lastUpdated":"2024-01-15"
+    }
+  },
+  {
+    "id": "istqb-010",
+    "type": "yes-no-statements",
+    "topicId": "test-management",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Evaluate the following statements about defect lifecycle.",
+    "statements": [
+      {"id":"s1","text":"Defects move through states such as new, assigned, fixed, and closed.","isCorrectYes":true},
+      {"id":"s2","text":"Defects can only be reported by testers.","isCorrectYes":false},
+      {"id":"s3","text":"Defect reports should include severity and priority.","isCorrectYes":true}
+    ],
+    "explanation": {
+      "correct":"Defects follow a lifecycle and reports include severity/priority.",
+      "incorrect":"Defects can be reported by anyone, not just testers.",
+      "examTip":"Know defect lifecycle states.",
+      "relatedTopics":["Defect Lifecycle"]
+    },
+    "metadata": {
+      "examObjective":"Understand defect lifecycle",
+      "references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],
+      "lastUpdated":"2024-01-15"
+    }
+  },
+  {
+    "id": "istqb-011",
+    "type": "dropdown-select",
+    "topicId": "tool-support",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "Match the tool category to its function.",
+    "dropdowns": [
+      {"id":"d1","prompt":"Static analysis tools","options":["Find coding standard violations","Manage test cases","Simulate load"],"correctAnswer":"Find coding standard violations"},
+      {"id":"d2","prompt":"Performance testing tools","options":["Find coding standard violations","Manage test cases","Simulate load"],"correctAnswer":"Simulate load"},
+      {"id":"d3","prompt":"Test management tools","options":["Find coding standard violations","Manage test cases","Simulate load"],"correctAnswer":"Manage test cases"}
+    ],
+    "explanation": {
+      "correct":"Static analysis finds violations, performance simulates load, management organizes cases.",
+      "incorrect":"Review tool categories.",
+      "examTip":"Know tool categories and functions.",
+      "relatedTopics":["Tool Support"]
+    },
+    "metadata": {
+      "examObjective":"Identify tool categories",
+      "references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],
+      "lastUpdated":"2024-01-15"
+    }
+  },
+  {
+    "id": "istqb-012",
+    "type": "ordering",
+    "topicId": "fundamentals",
+    "difficulty": "hard",
+    "points": 1,
+    "questionText": "Order the seven testing principles as commonly presented.",
+    "orderItems": [
+      {"id":"o1","text":"Testing shows presence of defects","correctPosition":1},
+      {"id":"o2","text":"Exhaustive testing is impossible","correctPosition":2},
+      {"id":"o3","text":"Early testing saves time and money","correctPosition":3},
+      {"id":"o4","text":"Defects cluster together","correctPosition":4},
+      {"id":"o5","text":"Pesticide paradox","correctPosition":5},
+      {"id":"o6","text":"Testing is context dependent","correctPosition":6},
+      {"id":"o7","text":"Absence-of-errors fallacy","correctPosition":7}
+    ],
+    "explanation": {
+      "correct":"This is the standard order of principles.",
+      "incorrect":"Review the seven principles carefully.",
+      "examTip":"Memorize the principles in order.",
+      "relatedTopics":["Testing Principles"]
+    },
+    "metadata": {
+      "examObjective":"Understand testing principles",
+      "references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],
+      "lastUpdated":"2024-01-15"
+    }
+  }
+ [
+  {
+    "id": "istqb-001",
+    "type": "single-choice",
+    "topicId": "fundamentals",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "Which of the following is a valid objective of testing?",
+    "options": [{"id":"A","text":"To prove that there are no defects in the software","isCorrect":false},{"id":"B","text":"To find defects and failures, provide information for decision-making, and build confidence in the quality of the test object","isCorrect":true},{"id":"C","text":"To eliminate the need for maintenance after release","isCorrect":false},{"id":"D","text":"To demonstrate that the developers have followed coding standards perfectly","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"Testing objectives include finding defects, providing information for stakeholders, and building confidence. It cannot prove absence of defects.","incorrect":"Testing cannot prove there are no defects (principle 1), nor eliminate maintenance or guarantee perfect coding standards.","examTip":"Remember: testing shows presence of defects, not their absence.","relatedTopics":["Testing Principles","Test Objectives"]},
+    "metadata": {"examObjective":"1.1.1 - Identify typical objectives of testing","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-002",
+    "type": "single-choice",
+    "topicId": "fundamentals",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "According to the ISTQB syllabus, which statement BEST describes the difference between testing and debugging?",
+    "options": [{"id":"A","text":"Testing is a static technique, while debugging is a dynamic technique","isCorrect":false},{"id":"B","text":"Testing identifies the cause of defects, while debugging identifies the symptoms","isCorrect":false},{"id":"C","text":"Testing triggers failures to find defects, while debugging analyzes and removes the cause of defects","isCorrect":true},{"id":"D","text":"Testing is performed by developers only, while debugging is performed by testers only","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"Testing involves executing software to find defects (by observing failures), while debugging is the development activity of locating and fixing the root cause.","incorrect":"Both can be dynamic; testing finds symptoms (failures), debugging finds causes; both roles can perform both activities.","examTip":"Testing = finding defects; Debugging = fixing root causes.","relatedTopics":["Testing vs Debugging","Defects"]},
+    "metadata": {"examObjective":"1.1.2 - Distinguish between testing and debugging","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-003",
+    "type": "single-choice",
+    "topicId": "fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "A software system for medical devices is being tested. The test team finds that under specific conditions, the device delivers an incorrect dosage calculation. The test team reports this issue. Which testing principle BEST explains why this finding is valuable even though the system works correctly in most other conditions?",
+    "options": [{"id":"A","text":"Exhaustive testing is impossible","isCorrect":false},{"id":"B","text":"Defects cluster together","isCorrect":false},{"id":"C","text":"Testing shows the presence of defects, not their absence","isCorrect":true},{"id":"D","text":"Absence-of-errors fallacy","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"The principle that testing shows presence of defects means finding even one critical defect proves the system is not defect-free, regardless of how many tests pass.","incorrect":"While other principles are true, this scenario specifically illustrates that finding defects demonstrates the system is not error-free.","examTip":"A single failure is enough to prove defects exist; passing tests cannot prove their absence.","relatedTopics":["Testing Principles","Defects"]},
+    "metadata": {"examObjective":"1.2.1 - Explain the seven testing principles","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-004",
+    "type": "single-choice",
+    "topicId": "fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "A test team has been running the same regression test suite for six months. Recently, the number of new defects found by this suite has dropped significantly. The team has not updated the tests. Which principle explains this phenomenon?",
+    "options": [{"id":"A","text":"Testing is context dependent","isCorrect":false},{"id":"B","text":"The pesticide paradox","isCorrect":true},{"id":"C","text":"Early testing saves time and money","isCorrect":false},{"id":"D","text":"Defects cluster together","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"The pesticide paradox states that if the same tests are repeated, they eventually become ineffective at finding new defects. Tests must be regularly reviewed and revised.","incorrect":"Context dependency means testing approaches vary by domain. Early testing relates to timing. Defect clustering refers to concentration in certain modules.","examTip":"When repeated tests stop finding defects, think 'pesticide paradox'.","relatedTopics":["Testing Principles","Regression Testing"]},
+    "metadata": {"examObjective":"1.2.1 - Explain the seven testing principles","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-005",
+    "type": "single-choice",
+    "topicId": "fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "A project manager argues that because no defects were found during final acceptance testing, the software is guaranteed to be defect-free in production. Which principle directly contradicts this statement?",
+    "options": [{"id":"A","text":"Exhaustive testing is impossible","isCorrect":false},{"id":"B","text":"Testing shows the presence of defects, not their absence","isCorrect":true},{"id":"C","text":"The absence-of-errors fallacy","isCorrect":false},{"id":"D","text":"Defects cluster together","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"This principle explicitly states that testing can show defects exist, but cannot prove they do not exist. No amount of testing guarantees absence of defects.","incorrect":"Absence-of-errors fallacy refers to building the wrong system perfectly. Exhaustive testing being impossible is related but not the direct contradiction.","examTip":"Distinguish between 'testing shows presence not absence' (principle 1) and 'absence-of-errors fallacy' (principle 7).","relatedTopics":["Testing Principles"]},
+    "metadata": {"examObjective":"1.2.1 - Explain the seven testing principles","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-006",
+    "type": "single-choice",
+    "topicId": "fundamentals",
+    "difficulty": "hard",
+    "points": 1,
+    "questionText": "A company invests heavily in formal verification and proves mathematically that their code contains no logical errors. However, after release, users complain that the system does not meet their business needs. Which testing principle does this scenario BEST illustrate?",
+    "options": [{"id":"A","text":"Exhaustive testing is impossible","isCorrect":false},{"id":"B","text":"Testing is context dependent","isCorrect":false},{"id":"C","text":"The absence-of-errors fallacy","isCorrect":true},{"id":"D","text":"Defects cluster together","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"The absence-of-errors fallacy states that finding and fixing defects does not help if the system built is unusable or does not fulfill user needs and expectations.","incorrect":"While other principles apply, this scenario specifically shows that absence of technical defects does not equal a valuable product.","examTip":"Absence-of-errors fallacy = building the wrong thing perfectly is still wrong.","relatedTopics":["Testing Principles","Validation vs Verification"]},
+    "metadata": {"examObjective":"1.2.1 - Explain the seven testing principles","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-007",
+    "type": "single-choice",
+    "topicId": "fundamentals",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "Which of the following is NOT one of the seven testing principles in the ISTQB syllabus?",
+    "options": [{"id":"A","text":"Testing is context dependent","isCorrect":false},{"id":"B","text":"Early testing saves time and money","isCorrect":false},{"id":"C","text":"Automated testing is always more effective than manual testing","isCorrect":true},{"id":"D","text":"Defects cluster together","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"The seven principles are: 1) testing shows presence of defects, 2) exhaustive testing is impossible, 3) early testing, 4) defect clustering, 5) pesticide paradox, 6) testing is context dependent, 7) absence-of-errors fallacy. Automation superiority is not a principle.","incorrect":"The other three options are all official ISTQB testing principles.","examTip":"Memorize all seven principles exactly as stated in the syllabus.","relatedTopics":["Testing Principles"]},
+    "metadata": {"examObjective":"1.2.1 - Explain the seven testing principles","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-008",
+    "type": "single-choice",
+    "topicId": "fundamentals",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "Which principle supports the idea that a small number of modules usually contains most of the defects discovered?",
+    "options": [{"id":"A","text":"The pesticide paradox","isCorrect":false},{"id":"B","text":"Defects cluster together","isCorrect":true},{"id":"C","text":"Exhaustive testing is impossible","isCorrect":false},{"id":"D","text":"Testing shows the presence of defects, not their absence","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"The defect clustering principle states that a small number of components usually contains most of the defects. This is also known as the Pareto principle applied to defects.","incorrect":"Pesticide paradox refers to repeated tests losing effectiveness. Exhaustive testing principle states complete testing is impossible.","examTip":"Defect clustering = 80/20 rule for defects in modules.","relatedTopics":["Testing Principles","Risk-Based Testing"]},
+    "metadata": {"examObjective":"1.2.1 - Explain the seven testing principles","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-009",
+    "type": "single-choice",
+    "topicId": "fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "A test manager decides to focus testing efforts on the requirements and design phases rather than waiting until the code is complete. Which testing principle supports this decision?",
+    "options": [{"id":"A","text":"Testing is context dependent","isCorrect":false},{"id":"B","text":"Early testing saves time and money","isCorrect":true},{"id":"C","text":"The pesticide paradox","isCorrect":false},{"id":"D","text":"Absence-of-errors fallacy","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"The principle of early testing states that testing activities should start as early as possible in the SDLC to find defects early, when they are cheaper to fix.","incorrect":"Context dependency means testing varies by domain. Pesticide paradox relates to test repetition. Absence-of-errors fallacy relates to building the right product.","examTip":"Shift-left and early testing are closely related concepts.","relatedTopics":["Testing Principles","Shift-Left Testing"]},
+    "metadata": {"examObjective":"1.2.1 - Explain the seven testing principles","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-010",
+    "type": "single-choice",
+    "topicId": "fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "A safety-critical aviation system and a casual mobile game will likely use different testing approaches. Which principle explains this?",
+    "options": [{"id":"A","text":"Testing is context dependent","isCorrect":true},{"id":"B","text":"Exhaustive testing is impossible","isCorrect":false},{"id":"C","text":"Defects cluster together","isCorrect":false},{"id":"D","text":"The absence-of-errors fallacy","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"Testing is context dependent means that testing is done differently in different contexts, depending on factors like safety criticality, complexity, and project constraints.","incorrect":"While exhaustive testing is impossible in both cases, the different approaches are explained by context dependency.","examTip":"Context = domain, criticality, regulations, technology, team skills.","relatedTopics":["Testing Principles","Test Strategy"]},
+    "metadata": {"examObjective":"1.2.1 - Explain the seven testing principles","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-011",
+    "type": "multiple-choice",
+    "topicId": "fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Which of the following are typical test activities performed during the 'test analysis' phase of the test process? (Select TWO)",
+    "options": [{"id":"A","text":"Analyzing the test basis to identify testable features","isCorrect":true},{"id":"B","text":"Writing test scripts in the automation framework","isCorrect":false},{"id":"C","text":"Prioritizing test conditions based on risk","isCorrect":true},{"id":"D","text":"Executing test cases and logging results","isCorrect":false},{"id":"E","text":"Evaluating the test objects against exit criteria","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"Test analysis involves analyzing the test basis, identifying test conditions, and prioritizing them. Writing scripts is implementation; execution is a separate phase; evaluating against exit criteria is part of completion.","incorrect":"B is test implementation. D is test execution. E is test completion.","examTip":"Analysis = WHAT to test (conditions). Design = HOW to test (cases). Implementation = prepare everything needed.","relatedTopics":["Test Process","Test Analysis"]},
+    "metadata": {"examObjective":"1.3.1 - Describe the test process in context","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-012",
+    "type": "multiple-choice",
+    "topicId": "fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Which of the following activities are part of the 'test completion' phase? (Select TWO)",
+    "options": [{"id":"A","text":"Checking test results against exit criteria and creating a test summary report","isCorrect":true},{"id":"B","text":"Designing new test cases for the next iteration","isCorrect":false},{"id":"C","text":"Archiving test assets and conducting a retrospective/lessons learned session","isCorrect":true},{"id":"D","text":"Monitoring test progress against the plan","isCorrect":false},{"id":"E","text":"Reporting defects found during test execution","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"Test completion includes finalizing and archiving testware, evaluating achievement of test objectives against criteria, and analyzing lessons learned.","incorrect":"B is test design for future work. D is test monitoring/control. E happens during test execution.","examTip":"Completion = close-out activities: archive, report, lessons learned.","relatedTopics":["Test Process","Test Completion"]},
+    "metadata": {"examObjective":"1.3.1 - Describe the test process in context","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-013",
+    "type": "multiple-choice",
+    "topicId": "fundamentals",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "Which of the following are valid test process activities according to ISTQB? (Select TWO)",
+    "options": [{"id":"A","text":"Test planning","isCorrect":true},{"id":"B","text":"Test marketing","isCorrect":false},{"id":"C","text":"Test monitoring and control","isCorrect":true},{"id":"D","text":"Test sales","isCorrect":false},{"id":"E","text":"Test retirement","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"The ISTQB test process includes: planning, monitoring/control, analysis, design, implementation, execution, and completion.","incorrect":"Marketing, sales, and retirement are not test process activities.","examTip":"Remember the 7 phases: Plan, Monitor, Analyze, Design, Implement, Execute, Complete.","relatedTopics":["Test Process"]},
+    "metadata": {"examObjective":"1.3.1 - Describe the test process in context","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-014",
+    "type": "multiple-choice",
+    "topicId": "fundamentals",
+    "difficulty": "hard",
+    "points": 1,
+    "questionText": "A tester is evaluating whether to continue testing based on the current test results, schedule, and budget. Which test process activities are being performed? (Select TWO)",
+    "options": [{"id":"A","text":"Test monitoring (comparing actual progress against plan)","isCorrect":true},{"id":"B","text":"Test control (taking actions to meet objectives)","isCorrect":true},{"id":"C","text":"Test analysis (identifying test conditions)","isCorrect":false},{"id":"D","text":"Test design (creating test cases)","isCorrect":false},{"id":"E","text":"Test implementation (preparing test data)","isCorrect":false}],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"Monitoring involves checking progress against plans; control involves taking corrective actions based on monitoring information, such as deciding whether to continue.","incorrect":"Analysis, design, and implementation are separate phases focused on creating tests, not evaluating progress.","examTip":"Monitor = measure; Control = act on measurements.","relatedTopics":["Test Process","Test Monitoring"]},
+    "metadata": {"examObjective":"1.3.1 - Describe the test process in context","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-015",
+    "type": "yes-no-statements",
+    "topicId": "fundamentals",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "Evaluate the following statements about testing fundamentals.",
+    "options": [],
+    "statements": [{"id":"s1","text":"One objective of testing is to verify that all specified requirements have been fulfilled.","isCorrectYes":true},{"id":"s2","text":"Testing can prove that a program is completely free of defects.","isCorrectYes":false},{"id":"s3","text":"Debugging and testing are essentially the same activity.","isCorrectYes":false}],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"Verification of requirements is a valid objective. Testing cannot prove absence of defects. Debugging is a development activity separate from testing.","incorrect":"Testing shows presence of defects, not absence. Debugging fixes causes; testing finds failures.","examTip":"Objectives include: find defects, gain confidence, provide information, prevent defects, verify requirements.","relatedTopics":["Test Objectives","Testing vs Debugging"]},
+    "metadata": {"examObjective":"1.1.1 - Identify typical objectives of testing","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-016",
+    "type": "yes-no-statements",
+    "topicId": "fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Evaluate the following statements about the seven testing principles.",
+    "options": [],
+    "statements": [{"id":"s1","text":"The principle 'exhaustive testing is impossible' means that risk-based prioritization should be used to focus testing efforts.","isCorrectYes":true},{"id":"s2","text":"According to the pesticide paradox, running the same tests repeatedly will eventually find all hidden defects.","isCorrectYes":false},{"id":"s3","text":"The absence-of-errors fallacy warns that a system with no defects may still be unusable if it does not meet user needs.","isCorrectYes":true}],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"Exhaustive testing being impossible leads to prioritization. The pesticide paradox states repeated tests become LESS effective. Absence-of-errors fallacy addresses building the wrong thing.","incorrect":"Pesticide paradox means tests lose effectiveness over time, not that they find all defects.","examTip":"Pesticide paradox = tests become stale; absence-of-errors fallacy = perfect wrong product.","relatedTopics":["Testing Principles"]},
+    "metadata": {"examObjective":"1.2.1 - Explain the seven testing principles","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-017",
+    "type": "yes-no-statements",
+    "topicId": "fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Evaluate the following statements about the test process.",
+    "options": [],
+    "statements": [{"id":"s1","text":"Test planning should ideally begin as soon as the test basis is established enough to be analyzed.","isCorrectYes":true},{"id":"s2","text":"Test design and test implementation always occur sequentially and never overlap.","isCorrectYes":false},{"id":"s3","text":"Test completion includes analyzing lessons learned to improve future testing.","isCorrectYes":true}],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"Planning starts early. Activities can and do overlap. Completion includes lessons learned.","incorrect":"Test process activities are not strictly sequential; they often overlap, especially in iterative development.","examTip":"The test process is iterative and overlapping, not strictly waterfall.","relatedTopics":["Test Process"]},
+    "metadata": {"examObjective":"1.3.1 - Describe the test process in context","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-018",
+    "type": "yes-no-statements",
+    "topicId": "fundamentals",
+    "difficulty": "hard",
+    "points": 1,
+    "questionText": "Evaluate the following statements about testing in context.",
+    "options": [],
+    "statements": [{"id":"s1","text":"In safety-critical systems, more rigorous and formal testing techniques are typically required compared to non-critical systems.","isCorrectYes":true},{"id":"s2","text":"The principle 'testing is context dependent' implies that the same test techniques should be applied consistently across all projects regardless of domain.","isCorrectYes":false},{"id":"s3","text":"Early testing primarily means that dynamic test execution should begin before any static testing is performed.","isCorrectYes":false}],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"Safety-critical systems need more rigor. Context dependency means techniques vary. Early testing applies to both static and dynamic activities.","incorrect":"Context dependency means techniques vary by context. Early testing includes static testing (reviews) before dynamic execution.","examTip":"Early testing = start as early as possible, including static techniques on requirements and designs.","relatedTopics":["Testing Principles","Static Testing"]},
+    "metadata": {"examObjective":"1.2.1 - Explain the seven testing principles","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-019",
+    "type": "dropdown-select",
+    "topicId": "fundamentals",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "Complete the following statement about test objectives by selecting the appropriate terms.",
+    "options": [],
+    "statements": [],
+    "dropdowns": [{"id":"d1","prompt":"One key objective of testing is to [___] defects, not to [___] their absence.","options":["prove","find","ignore","guarantee"],"correctAnswer":"find;prove"},{"id":"d2","prompt":"Testing provides [___] to stakeholders about the quality of the test object.","options":["code","information","requirements","guarantees"],"correctAnswer":"information"}],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"Testing finds defects and provides information. It cannot prove absence of defects or guarantee quality.","incorrect":"Testing objectives center on finding defects and providing information for decision-making.","examTip":"Remember: find defects, provide information, build confidence, verify requirements, prevent defects.","relatedTopics":["Test Objectives"]},
+    "metadata": {"examObjective":"1.1.1 - Identify typical objectives of testing","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-020",
+    "type": "dropdown-select",
+    "topicId": "fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Select the correct test process phase for each activity described below.",
+    "options": [],
+    "statements": [],
+    "dropdowns": [{"id":"d1","prompt":"Creating test cases and prioritizing them: [___]","options":["Test Planning","Test Analysis","Test Design","Test Execution"],"correctAnswer":"Test Design"},{"id":"d2","prompt":"Checking actual progress against the test plan: [___]","options":["Test Planning","Test Monitoring","Test Control","Test Completion"],"correctAnswer":"Test Monitoring"},{"id":"d3","prompt":"Finalizing and archiving testware: [___]","options":["Test Execution","Test Control","Test Completion","Test Analysis"],"correctAnswer":"Test Completion"}],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"Test design creates and prioritizes test cases. Monitoring checks progress. Completion finalizes and archives.","incorrect":"Be careful not to confuse monitoring (measuring) with control (acting) or analysis (identifying what to test).","examTip":"Design = HOW to test (cases, coverage). Analysis = WHAT to test (conditions).","relatedTopics":["Test Process"]},
+    "metadata": {"examObjective":"1.3.1 - Describe the test process in context","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-021",
+    "type": "dropdown-select",
+    "topicId": "fundamentals",
+    "difficulty": "hard",
+    "points": 1,
+    "questionText": "Complete the statements by selecting the principle that BEST matches each scenario.",
+    "options": [],
+    "statements": [],
+    "dropdowns": [{"id":"d1","prompt":"A team updates their regression tests regularly to keep finding new defects: [___]","options":["Pesticide Paradox","Defect Clustering","Early Testing","Exhaustive Testing is Impossible"],"correctAnswer":"Pesticide Paradox"},{"id":"d2","prompt":"A project starts reviewing requirements before any code is written: [___]","options":["Pesticide Paradox","Defect Clustering","Early Testing","Testing is Context Dependent"],"correctAnswer":"Early Testing"},{"id":"d3","prompt":"A perfectly coded system is rejected because it solves the wrong problem: [___]","options":["Absence-of-Errors Fallacy","Defect Clustering","Pesticide Paradox","Testing is Context Dependent"],"correctAnswer":"Absence-of-Errors Fallacy"}],
+    "orderItems": [],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"Regular test updates counter the pesticide paradox. Early reviews embody early testing. A perfect wrong product illustrates the absence-of-errors fallacy.","incorrect":"Match the scenario to the principle: test updates = pesticide paradox; early start = early testing; wrong product = absence-of-errors fallacy.","examTip":"Each principle has a distinct meaning—learn them by scenario, not just by name.","relatedTopics":["Testing Principles"]},
+    "metadata": {"examObjective":"1.2.1 - Explain the seven testing principles","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-022",
+    "type": "ordering",
+    "topicId": "fundamentals",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "Arrange the following test process activities in the correct chronological order as defined by ISTQB.",
+    "options": [],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [{"id":"o1","text":"Test Planning","correctPosition":1},{"id":"o2","text":"Test Analysis","correctPosition":2},{"id":"o3","text":"Test Design","correctPosition":3},{"id":"o4","text":"Test Execution","correctPosition":4},{"id":"o5","text":"Test Completion","correctPosition":5}],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"The standard order is: Planning → Monitoring/Control → Analysis → Design → Implementation → Execution → Completion.","incorrect":"While activities may overlap, the logical sequence starts with planning and ends with completion.","examTip":"Remember: P-M-A-D-I-E-C (Plan, Monitor, Analyze, Design, Implement, Execute, Complete).","relatedTopics":["Test Process"]},
+    "metadata": {"examObjective":"1.3.1 - Describe the test process in context","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-023",
+    "type": "ordering",
+    "topicId": "fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Arrange the following testing principles in the order they appear in the ISTQB CTFL syllabus.",
+    "options": [],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [{"id":"o1","text":"Testing shows the presence of defects, not their absence","correctPosition":1},{"id":"o2","text":"Exhaustive testing is impossible","correctPosition":2},{"id":"o3","text":"Early testing saves time and money","correctPosition":3},{"id":"o4","text":"Defects cluster together","correctPosition":4},{"id":"o5","text":"Beware of the pesticide paradox","correctPosition":5},{"id":"o6","text":"Testing is context dependent","correctPosition":6},{"id":"o7","text":"Absence-of-errors is a fallacy","correctPosition":7}],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"The syllabus lists the principles in this exact order.","incorrect":"The order is fixed in the syllabus. Memorize it for the exam.","examTip":"Use the mnemonic: 'Show Exhaustive Early Defects Pesticide Context Absence'.","relatedTopics":["Testing Principles"]},
+    "metadata": {"examObjective":"1.2.1 - Explain the seven testing principles","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-024",
+    "type": "ordering",
+    "topicId": "fundamentals",
+    "difficulty": "hard",
+    "points": 1,
+    "questionText": "Arrange the following activities in the order they would typically occur when a tester finds an anomaly during test execution.",
+    "options": [],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [{"id":"o1","text":"Observe a failure during test execution","correctPosition":1},{"id":"o2","text":"Investigate and reproduce the anomaly","correctPosition":2},{"id":"o3","text":"Log a defect report with details","correctPosition":3},{"id":"o4","text":"Developer debugs and fixes the defect","correctPosition":4},{"id":"o5","text":"Retest the fix (confirmation testing)","correctPosition":5}],
+    "dragCategories": [],
+    "dragItems": [],
+    "explanation": {"correct":"The typical flow is: observe failure → investigate → log defect → developer fixes → confirmation test.","incorrect":"Debugging happens after the defect is logged and assigned. Confirmation testing verifies the fix.","examTip":"Distinguish between testing (finding failures) and debugging (fixing root causes).","relatedTopics":["Test Process","Defect Management"]},
+    "metadata": {"examObjective":"1.3.1 - Describe the test process in context","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-025",
+    "type": "drag-drop",
+    "topicId": "fundamentals",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "Drag each test process activity to its correct description.",
+    "options": [],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [{"id":"cat1","name":"Defines WHAT to test","acceptsItemIds":["item1"]},{"id":"cat2","name":"Defines HOW to test","acceptsItemIds":["item2"]},{"id":"cat3","name":"Prepares the test environment and data","acceptsItemIds":["item3"]}],
+    "dragItems": [{"id":"item1","text":"Test Analysis"},{"id":"item2","text":"Test Design"},{"id":"item3","text":"Test Implementation"}],
+    "explanation": {"correct":"Analysis identifies what to test (conditions). Design defines how to test (cases, coverage). Implementation prepares environment, data, and scripts.","incorrect":"Do not confuse analysis (what) with design (how) or implementation (preparation).","examTip":"A-D-I: Analyze conditions, Design cases, Implement scripts/data.","relatedTopics":["Test Process"]},
+    "metadata": {"examObjective":"1.3.1 - Describe the test process in context","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-026",
+    "type": "drag-drop",
+    "topicId": "fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Drag each testing principle to the scenario that best illustrates it.",
+    "options": [],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [{"id":"cat1","name":"A module with 20% of the code contains 80% of reported defects","acceptsItemIds":["item1"]},{"id":"cat2","name":"A team adds new test cases every sprint to replace stale ones","acceptsItemIds":["item2"]},{"id":"cat3","name":"A bank uses formal methods; a game studio uses exploratory testing","acceptsItemIds":["item3"]}],
+    "dragItems": [{"id":"item1","text":"Defects cluster together"},{"id":"item2","text":"Pesticide paradox"},{"id":"item3","text":"Testing is context dependent"}],
+    "explanation": {"correct":"Defect clustering = concentration in certain areas. Pesticide paradox = need new tests to find new defects. Context dependent = different approaches for different domains.","incorrect":"Match the pattern: concentration = clustering; stale tests = pesticide; different domains = context.","examTip":"Learn principles by example, not just definition.","relatedTopics":["Testing Principles"]},
+    "metadata": {"examObjective":"1.2.1 - Explain the seven testing principles","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  },
+  {
+    "id": "istqb-027",
+    "type": "drag-drop",
+    "topicId": "fundamentals",
+    "difficulty": "hard",
+    "points": 1,
+    "questionText": "Drag each test objective to the stakeholder group that would most directly benefit from it.",
+    "options": [],
+    "statements": [],
+    "dropdowns": [],
+    "orderItems": [],
+    "dragCategories": [{"id":"cat1","name":"Project Manager (release decision)","acceptsItemIds":["item1","item4"]},{"id":"cat2","name":"Development Team (code quality)","acceptsItemIds":["item2"]},{"id":"cat3","name":"End Users (system usability)","acceptsItemIds":["item3"]}],
+    "dragItems": [{"id":"item1","text":"Provide information about quality to support release decisions"},{"id":"item2","text":"Find defects so they can be fixed before release"},{"id":"item3","text":"Verify that user needs and expectations are met"},{"id":"item4","text":"Build confidence that the system works as intended"}],
+    "explanation": {"correct":"Project managers need quality info and confidence for decisions. Developers need defect findings to fix code. Users need verification that needs are met.","incorrect":"Each stakeholder has different primary interests in testing outcomes.","examTip":"Different objectives serve different stakeholders—understand the primary consumer of each test output.","relatedTopics":["Test Objectives","Stakeholders"]},
+    "metadata": {"examObjective":"1.1.1 - Identify typical objectives of testing","references":["https://www.istqb.org/certifications/certified-tester-foundation-level"],"lastUpdated":"2024-01-15"}
+  }
+]
+]
+
+]

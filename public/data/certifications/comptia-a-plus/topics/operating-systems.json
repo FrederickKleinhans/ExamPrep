@@ -1,0 +1,1473 @@
+{
+  "certificationId": "comptia-a-plus",
+  "topicId": "operating-systems",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "aplus-003",
+      "exam": "core2",
+      "type": "single-choice",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Windows tool is used to view system event logs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Task Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Event Viewer",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Device Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Registry Editor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Event Viewer shows application, security, and system logs.",
+        "incorrect": "Task Manager shows processes; Device Manager manages hardware; Registry Editor edits the registry.",
+        "examTip": "Use Event Viewer to troubleshoot system errors and warnings.",
+        "relatedTopics": [
+          "Windows administrative tools",
+          "logging"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-008",
+      "exam": "core2",
+      "type": "drag-drop",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each Windows tool to its primary function.",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Task Manager",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Device Manager",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Event Viewer",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Monitor performance and end processes"
+        },
+        {
+          "id": "item2",
+          "text": "Update drivers and disable hardware"
+        },
+        {
+          "id": "item3",
+          "text": "View system logs and errors"
+        }
+      ],
+      "explanation": {
+        "correct": "Task Manager = end processes; Device Manager = manage drivers; Event Viewer = logs.",
+        "incorrect": "Mismatching functions indicates lack of familiarity.",
+        "examTip": "These tools are commonly used for troubleshooting.",
+        "relatedTopics": [
+          "Windows administrative tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-010",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "You are troubleshooting a Windows 11 system that is slow to boot.",
+      "questionText": "Which of the following tools can help identify startup issues? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "msconfig",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Task Manager (Startup tab)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Disk Cleanup",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "PowerShell Get-Process",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "msconfig and Task Manager's Startup tab can disable startup programs.",
+        "incorrect": "Disk Cleanup frees space but doesn't address startup; Get-Process shows processes.",
+        "examTip": "Slow boot is often caused by too many startup programs.",
+        "relatedTopics": [
+          "Startup management",
+          "Windows performance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4: Given a scenario, use the appropriate Windows OS troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-013",
+      "exam": "core2",
+      "type": "ordering",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Order the steps to perform a clean Windows 11 installation from a USB drive.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Back up important data",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a bootable USB drive with Windows 11 media",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Boot from USB and select installation drive",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Follow the installation wizard and complete setup",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "1: Backup, 2: Create USB, 3: Boot and select drive, 4: Install.",
+        "incorrect": "Skipping backup can lead to data loss.",
+        "examTip": "Always back up data before performing a clean install.",
+        "relatedTopics": [
+          "Windows installation",
+          "clean install"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.5: Given a scenario, install Windows OS upgrades and updates",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-015",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are valid methods to update drivers in Windows? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Device Manager",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Windows Update",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Registry Editor",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "msconfig",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Device Manager allows manual driver update; Windows Update may provide drivers.",
+        "incorrect": "Registry and msconfig are not for driver updates.",
+        "examTip": "Always get drivers from the manufacturer's website if possible.",
+        "relatedTopics": [
+          "Driver management",
+          "Windows Update"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-018",
+      "exam": "core2",
+      "type": "yes-no-statements",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about Windows backup types.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A full backup backs up all selected files.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "An incremental backup backs up files changed since the last full backup.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A differential backup backs up files changed since the last full backup.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Incremental backups require the full backup and all subsequent incrementals to restore.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Full = all; incremental = changes since last incremental (not full); differential = since last full.",
+        "incorrect": "Incremental is since last incremental, not last full.",
+        "examTip": "Differential restores are faster than incremental.",
+        "relatedTopics": [
+          "Backup types",
+          "recovery strategies"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.7: Explain the importance of backups and recovery",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-020",
+      "exam": "core2",
+      "type": "dropdown-select",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the Linux command that matches each description.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "List directory contents",
+          "options": [
+            "ls",
+            "cd",
+            "pwd",
+            "grep"
+          ],
+          "correctAnswer": "ls"
+        },
+        {
+          "id": "d2",
+          "prompt": "Change directory",
+          "options": [
+            "ls",
+            "cd",
+            "pwd",
+            "grep"
+          ],
+          "correctAnswer": "cd"
+        },
+        {
+          "id": "d3",
+          "prompt": "Search text using patterns",
+          "options": [
+            "ls",
+            "cd",
+            "pwd",
+            "grep"
+          ],
+          "correctAnswer": "grep"
+        }
+      ],
+      "explanation": {
+        "correct": "ls lists, cd changes, grep searches.",
+        "incorrect": "pwd shows current directory.",
+        "examTip": "grep is powerful for searching logs.",
+        "relatedTopics": [
+          "Linux commands",
+          "command-line basics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.10: Given a scenario, use the appropriate Linux commands",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-022",
+      "exam": "core2",
+      "type": "ordering",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to use System Restore in Windows.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Open System Properties and select System Restore",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Choose a restore point before the issue occurred",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Confirm the restore point and start the process",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Wait for the system to restart and restore",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "1: Open System Restore, 2: Select restore point, 3: Confirm, 4: Restart.",
+        "incorrect": "Skipping or wrong order can cause the restore to fail.",
+        "examTip": "System Restore does not affect personal files.",
+        "relatedTopics": [
+          "System Restore",
+          "Windows recovery"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.6: Given a scenario, troubleshoot Windows OS problems",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-025",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A user's Windows 10 computer is infected with malware that prevents internet access.",
+      "questionText": "Which of the following commands can help identify network issues? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "ipconfig",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "netstat",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "dir",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "chkdsk",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ipconfig shows IP config; netstat shows active connections and ports.",
+        "incorrect": "dir lists files; chkdsk checks disk.",
+        "examTip": "netstat -an shows all connections in numeric form.",
+        "relatedTopics": [
+          "Network troubleshooting",
+          "Windows commands"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-027",
+      "exam": "core2",
+      "type": "yes-no-statements",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about Windows Registry.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Registry contains configuration settings for Windows.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Registry editing is recommended for daily use.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Registry backups should be made before making changes.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Registry includes HKEY_LOCAL_MACHINE and HKEY_CURRENT_USER.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Registry stores config; editing can be risky; always backup; hives include HKLM and HKCU.",
+        "incorrect": "Registry editing should be done cautiously.",
+        "examTip": "Export a registry key before editing it.",
+        "relatedTopics": [
+          "Windows Registry",
+          "system configuration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-029",
+      "exam": "core2",
+      "type": "single-choice",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Windows feature is used to prevent unauthorized access to files and folders?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Windows Defender",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "NTFS permissions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Task Scheduler",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "PowerShell",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "NTFS permissions control access to files and folders.",
+        "incorrect": "Windows Defender is antivirus; Task Scheduler schedules tasks; PowerShell is scripting.",
+        "examTip": "NTFS permissions include Read, Write, and Full Control.",
+        "relatedTopics": [
+          "NTFS permissions",
+          "file security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.8: Compare and contrast Windows file system and storage",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-032",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "You are tasked with automating a repetitive task on a Windows server.",
+      "questionText": "Which scripting languages are commonly used for Windows automation? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Batch",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "PowerShell",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Bash",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Python",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Batch and PowerShell are native to Windows.",
+        "incorrect": "Bash is Linux; Python is cross-platform but not native.",
+        "examTip": "PowerShell is more powerful and modern than Batch.",
+        "relatedTopics": [
+          "Scripting basics",
+          "Windows automation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.12: Given a scenario, use the appropriate scripting language",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-034",
+      "exam": "core2",
+      "type": "ordering",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to use Disk Cleanup in Windows.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Open Disk Cleanup and select the drive",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Select file types to delete (temporary files, etc.)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Click OK to delete the files",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Confirm deletion",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "1: Open Disk Cleanup, 2: Select files, 3: OK, 4: Confirm.",
+        "incorrect": "Skipping confirmation could delete important files.",
+        "examTip": "Disk Cleanup helps free up space on the system drive.",
+        "relatedTopics": [
+          "Disk management",
+          "Windows performance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.6: Given a scenario, troubleshoot Windows OS problems",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-037",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are features of Windows 11? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Android app support",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Snap Layouts",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Internet Explorer",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Cortana integrated in setup",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Windows 11 supports Android apps and Snap Layouts.",
+        "incorrect": "Internet Explorer is deprecated; Cortana is less prominent.",
+        "examTip": "Windows 11 requires TPM 2.0 and secure boot.",
+        "relatedTopics": [
+          "Windows 11 features",
+          "Windows versions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast Windows versions and features",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-039",
+      "exam": "core2",
+      "type": "yes-no-statements",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about Windows File Explorer.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "File Explorer supports file search.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "File Explorer can map network drives.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "File Explorer does not show file extensions by default.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "File Explorer can create compressed folders.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "File Explorer supports search, mapping, and compressed folders.",
+        "incorrect": "File Explorer does show extensions if enabled.",
+        "examTip": "Enable 'File name extensions' in the View tab.",
+        "relatedTopics": [
+          "File Explorer",
+          "Windows UI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast Windows versions and features",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-042",
+      "exam": "core2",
+      "type": "drag-drop",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each Windows command to its function.",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "chkdsk",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "sfc /scannow",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "diskpart",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "ipconfig",
+          "acceptsItemIds": [
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Check disk for errors"
+        },
+        {
+          "id": "item2",
+          "text": "System File Checker – verify system files"
+        },
+        {
+          "id": "item3",
+          "text": "Disk partition management"
+        },
+        {
+          "id": "item4",
+          "text": "Display IP configuration"
+        }
+      ],
+      "explanation": {
+        "correct": "chkdsk = disk check; sfc = system file check; diskpart = partition; ipconfig = IP config.",
+        "incorrect": "Mismatching commands and functions.",
+        "examTip": "sfc /scannow is used to repair system files.",
+        "relatedTopics": [
+          "Windows commands",
+          "command-line tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-044",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A user cannot log in to their Windows 10 workstation after entering an incorrect password multiple times.",
+      "questionText": "Which of the following actions should you take? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reset the user's password using the administrator account",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Unlock the user account in Active Directory",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Restart the computer",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Reinstall Windows",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Reset password via admin; unlock account in AD if domain-joined.",
+        "incorrect": "Restarting doesn't fix account lockouts; reinstall is extreme.",
+        "examTip": "Account lockout policies can cause this.",
+        "relatedTopics": [
+          "Account management",
+          "Active Directory"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4: Given a scenario, troubleshoot Windows OS problems",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-047",
+      "exam": "core2",
+      "type": "ordering",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Order the steps to perform a malware removal in Windows.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Isolate the system from the network",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Run antivirus/anti-malware scan",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Remove/quarantine detected malware",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Update antivirus and re-scan",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "1: Isolate, 2: Scan, 3: Remove, 4: Update and re-scan.",
+        "incorrect": "Isolation prevents spread.",
+        "examTip": "Always update malware definitions before scanning.",
+        "relatedTopics": [
+          "Malware removal",
+          "security best practices"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4: Given a scenario, use the appropriate security practices",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-049",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are valid PowerShell commands? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Get-Process",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Get-Service",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "List-Process",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Show-Service",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Get-Process and Get-Service are valid cmdlets.",
+        "incorrect": "List-Process and Show-Service are not native.",
+        "examTip": "PowerShell cmdlets follow Verb-Noun pattern.",
+        "relatedTopics": [
+          "PowerShell basics",
+          "cmdlets"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.12: Given a scenario, use the appropriate scripting language",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-052",
+      "exam": "core2",
+      "type": "yes-no-statements",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about Windows Task Manager.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Task Manager can end processes.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Task Manager shows CPU and memory usage.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Task Manager can manage startup programs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Task Manager can change system settings.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Task Manager ends processes, shows usage, manages startup.",
+        "incorrect": "Task Manager cannot change system settings.",
+        "examTip": "Use Task Manager to quickly check system performance.",
+        "relatedTopics": [
+          "Task Manager",
+          "Windows performance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-054",
+      "exam": "core2",
+      "type": "ordering",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to create a new user account in Windows.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Open Settings or Control Panel",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Select 'Add new user'",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Enter username and password",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Select account type (standard/administrator)",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "1: Open Settings, 2: Add user, 3: Credentials, 4: Account type.",
+        "incorrect": "Account type determines permissions.",
+        "examTip": "Minimize administrative account usage.",
+        "relatedTopics": [
+          "User accounts",
+          "Windows administration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4: Given a scenario, troubleshoot Windows OS problems",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-057",
+      "exam": "core2",
+      "type": "drag-drop",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each backup type to its restore complexity.",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Full Backup",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Incremental Backup",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Differential Backup",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Easiest restore – one backup set"
+        },
+        {
+          "id": "item2",
+          "text": "Most complex restore – full + all incrementals"
+        },
+        {
+          "id": "item3",
+          "text": "Medium complexity – full + latest differential"
+        }
+      ],
+      "explanation": {
+        "correct": "Full=1 set; Incremental=full+all incrementals; Differential=full+latest diff.",
+        "incorrect": "Misunderstanding restore complexity.",
+        "examTip": "Differential restores are simpler than incremental.",
+        "relatedTopics": [
+          "Backup types",
+          "restore strategies"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.7: Explain the importance of backups and recovery",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-059",
+      "exam": "core2",
+      "type": "single-choice",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Windows utility is used to manage disk partitions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Disk Management",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Device Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Task Scheduler",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Registry Editor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Disk Management is used to create, format, and manage partitions.",
+        "incorrect": "Device Manager handles hardware; Task Scheduler schedules tasks; Registry Editor edits registry.",
+        "examTip": "Diskpart is the command-line alternative.",
+        "relatedTopics": [
+          "Disk management",
+          "partitioning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-062",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "You are configuring a Windows 11 workstation for a developer who needs to run Linux containers.",
+      "questionText": "Which features should be enabled? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "WSL 2",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Hyper-V",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Windows Sandbox",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "BitLocker",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "WSL 2 and Hyper-V allow running Linux containers.",
+        "incorrect": "Windows Sandbox is for testing; BitLocker is encryption.",
+        "examTip": "WSL 2 is more compatible with Docker.",
+        "relatedTopics": [
+          "Virtualization",
+          "WSL",
+          "Hyper-V"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3: Given a scenario, use the appropriate Windows OS features",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-064",
+      "exam": "core2",
+      "type": "yes-no-statements",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about Group Policy.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Group Policy is used to manage settings in Active Directory.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Group Policy can be applied to local computers only.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Group Policy can enforce password policies.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Group Policy is available in Windows Home edition.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Group Policy manages AD settings, enforces security, not in Home edition.",
+        "incorrect": "Group Policy can be applied to domain and local.",
+        "examTip": "gpedit.msc is the local Group Policy Editor.",
+        "relatedTopics": [
+          "Group Policy",
+          "Active Directory"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.9: Compare and contrast Group Policy and local policy",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-067",
+      "exam": "core2",
+      "type": "ordering",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to enable BitLocker on a Windows system.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Open BitLocker Drive Encryption from Control Panel",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Select the drive to encrypt",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Choose how to unlock the drive (password, smart card, etc.)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Start encryption and wait for completion",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "1: Open BitLocker, 2: Select drive, 3: Unlock method, 4: Encrypt.",
+        "incorrect": "Backup the recovery key before encrypting.",
+        "examTip": "BitLocker requires TPM for maximum security.",
+        "relatedTopics": [
+          "BitLocker",
+          "disk encryption"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2: Explain security best practices, including encryption",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-069",
+      "exam": "core2",
+      "type": "dropdown-select",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Select the correct Windows version for each feature.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Includes BitLocker and Hyper-V",
+          "options": [
+            "Windows 10 Pro",
+            "Windows 10 Home",
+            "Windows 11 Home"
+          ],
+          "correctAnswer": "Windows 10 Pro"
+        },
+        {
+          "id": "d2",
+          "prompt": "Supports Windows Sandbox",
+          "options": [
+            "Windows 10 Pro",
+            "Windows 10 Home",
+            "Windows 11 Home"
+          ],
+          "correctAnswer": "Windows 10 Pro"
+        }
+      ],
+      "explanation": {
+        "correct": "BitLocker, Hyper-V, and Sandbox are in Pro editions.",
+        "incorrect": "Home editions lack these features.",
+        "examTip": "Pro editions are for business use.",
+        "relatedTopics": [
+          "Windows editions",
+          "features comparison"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast Windows versions and features",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-072",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are valid Linux commands for file management? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "cp",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "mv",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "delete",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "remove",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "cp copies files; mv moves/renames files.",
+        "incorrect": "delete and remove are not standard Linux commands.",
+        "examTip": "rm is used to remove files in Linux.",
+        "relatedTopics": [
+          "Linux file commands",
+          "command-line basics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.10: Given a scenario, use the appropriate Linux commands",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-074",
+      "exam": "core2",
+      "type": "yes-no-statements",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about Windows Update.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Windows Update can install security patches.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Windows Update can update drivers.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Windows Update can upgrade to a newer version.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Windows Update cannot be paused.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Windows Update can install patches, drivers, and upgrades.",
+        "incorrect": "Windows Update can be paused for up to 7 days.",
+        "examTip": "Keep Windows updated for security.",
+        "relatedTopics": [
+          "Windows Update",
+          "patch management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.5: Given a scenario, install Windows OS upgrades and updates",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

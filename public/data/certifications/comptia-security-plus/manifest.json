@@ -1,0 +1,85 @@
+{
+  "id": "comptia-security-plus",
+  "name": "CompTIA Security+",
+  "provider": "CompTIA",
+  "examCode": "SY0-701",
+  "version": "2024-01",
+  "questionCount": 152,
+  "passingScore": 75,
+  "timeLimitMinutes": 90,
+  "topics": [
+    {
+      "id": "general-security-concepts",
+      "name": "General security concepts",
+      "weight": 12
+    },
+    {
+      "id": "threats-vulnerabilities",
+      "name": "Threats, vulnerabilities, and mitigations",
+      "weight": 22
+    },
+    {
+      "id": "security-architecture",
+      "name": "Security architecture",
+      "weight": 18
+    },
+    {
+      "id": "security-operations",
+      "name": "Security operations",
+      "weight": 28
+    },
+    {
+      "id": "governance-risk-compliance",
+      "name": "Security program management and oversight",
+      "weight": 20
+    }
+  ],
+  "resources": [
+    {
+      "title": "CompTIA Security+ Exam Objectives (SY0-701)",
+      "url": "https://www.comptia.org/certifications/security"
+    },
+    {
+      "title": "CompTIA Security+ Study Guide",
+      "url": "https://www.comptia.org/training/books/security-sy0-701-study-guide"
+    }
+  ],
+  "vendor": "CompTIA",
+  "vendorColor": "#C8202F",
+  "level": "beginner",
+  "accessTier": "free",
+  "description": "Validates the baseline skills necessary to perform core security functions and pursue an IT security career.",
+  "examDetails": {
+    "durationMinutes": 90,
+    "questionCount": 90,
+    "passingScore": 75,
+    "priceUSD": 404
+  },
+  "topicChunks": [
+    {
+      "topicId": "general-security-concepts",
+      "path": "/data/certifications/comptia-security-plus/topics/general-security-concepts.json",
+      "questionCount": 18
+    },
+    {
+      "topicId": "threats-vulnerabilities",
+      "path": "/data/certifications/comptia-security-plus/topics/threats-vulnerabilities.json",
+      "questionCount": 33
+    },
+    {
+      "topicId": "security-architecture",
+      "path": "/data/certifications/comptia-security-plus/topics/security-architecture.json",
+      "questionCount": 27
+    },
+    {
+      "topicId": "security-operations",
+      "path": "/data/certifications/comptia-security-plus/topics/security-operations.json",
+      "questionCount": 40
+    },
+    {
+      "topicId": "governance-risk-compliance",
+      "path": "/data/certifications/comptia-security-plus/topics/governance-risk-compliance.json",
+      "questionCount": 34
+    }
+  ]
+}

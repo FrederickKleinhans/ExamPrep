@@ -40,26 +40,26 @@
 
 /* Light theme */
 :root.light {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fc;
-  --bg-tertiary: #eef4ff;
-  --border: #d7e2f5;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --accent: #4f7cff;
-  --accent-hover: #3568e8;
-  --accent-blue: #0080ff;
-  --accent-navy: #005da8;
-  --accent-magenta: #a8005d;
-  --accent-cool: #0051ff;
-  --success: #2dd4bf;
-  --error: #ff6b6b;
-  --warning: #ffca28;
-  --glow: rgba(79, 124, 255, 0.16);
-  --sidebar-bg: rgba(248, 249, 252, 0.92);
-  --sidebar-border: #d7e2f5;
-  --sidebar-hover: rgba(15, 23, 42, 0.04);
-  --sidebar-active-shadow: rgba(79, 124, 255, 0.14);
+  --bg-primary: #f0f4ff;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e8eeff;
+  --border: #c8d5f0;
+  --text-primary: #0d1526;
+  --text-secondary: #4a5878;
+  --accent: #3b6ef8;
+  --accent-hover: #2554d6;
+  --accent-blue: #1a56ff;
+  --accent-navy: #1240b8;
+  --accent-magenta: #9c0070;
+  --accent-cool: #1a40e8;
+  --success: #0fa88e;
+  --error: #e03030;
+  --warning: #c07800;
+  --glow: rgba(59, 110, 248, 0.18);
+  --sidebar-bg: rgba(255, 255, 255, 0.92);
+  --sidebar-border: #c8d5f0;
+  --sidebar-hover: rgba(59, 110, 248, 0.06);
+  --sidebar-active-shadow: rgba(59, 110, 248, 0.18);
 }
 
 * {
@@ -68,10 +68,19 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+}
+
+/* Only lock overflow on larger screens where the fixed sidebar layout applies */
+@media (min-width: 768px) {
+
+  html,
+  body {
+    overflow: hidden;
+  }
 }
 
 html {
@@ -119,6 +128,7 @@ body {
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -130,23 +140,51 @@ body {
 
 /* Animations */
 @keyframes pulse-flame {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.15); opacity: 0.85; }
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
 }
 
 @keyframes slide-up {
-  from { transform: translateY(16px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 var(--glow); }
-  50% { box-shadow: 0 0 20px 4px var(--glow); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 var(--glow);
+  }
+
+  50% {
+    box-shadow: 0 0 20px 4px var(--glow);
+  }
 }
 
 .animate-pulse-flame {
@@ -167,16 +205,18 @@ body {
 
 /* Glass card effect */
 .glass-card {
-  background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(245, 247, 255, 0.06));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(245, 247, 255, 0.06));
   backdrop-filter: blur(10px) saturate(140%);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 10px 35px rgba(0, 93, 168, 0.08);
   border-radius: 18px;
 }
 
 :root.light .glass-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 242, 245, 0.7));
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.03);
+  background: linear-gradient(135deg, #ffffff, #f5f7ff);
+  backdrop-filter: blur(12px);
+  border: 1px solid #c8d5f0;
+  box-shadow: 0 2px 8px rgba(59, 110, 248, 0.06), 0 8px 24px rgba(59, 110, 248, 0.04);
 }
 
 /* Gradient text */
@@ -188,7 +228,7 @@ body {
 }
 
 :root.light .gradient-text {
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  background: linear-gradient(135deg, #3b6ef8, #6d28d9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -196,7 +236,7 @@ body {
 
 /* Subtle gradient backgrounds */
 .gradient-card {
-  background: linear-gradient(145deg, rgba(255,242,245,0.06), rgba(241,243,255,0.04));
+  background: linear-gradient(145deg, rgba(255, 242, 245, 0.06), rgba(241, 243, 255, 0.04));
 }
 
 /* Modern button hover effect */
@@ -213,4 +253,218 @@ body {
   border-radius: 999px;
   font-weight: 600;
   font-size: 12px;
+}
+
+/* Spin animation (used for loading spinners) */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Responsive layout helpers ── */
+
+/* Mobile bottom tab bar — shown only on small screens */
+.mobile-tab-bar {
+  display: none;
+}
+
+/* Sidebar — always visible on tablet+ */
+.sidebar-desktop {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+
+  /* On mobile: hide sidebar, show bottom tab bar, add padding so content clears tab bar */
+  .sidebar-desktop {
+    display: none !important;
+  }
+
+  .mobile-tab-bar {
+    display: block !important;
+  }
+
+  /* Main content area needs bottom padding to clear the fixed tab bar (~64px) */
+  main {
+    padding-bottom: 72px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* Tablet: sidebar collapses to icons only */
+  .sidebar-label {
+    display: none !important;
+  }
+
+  .sidebar-cert-widget {
+    display: none !important;
+  }
+
+  .sidebar-inner {
+    width: 64px !important;
+    min-width: 64px !important;
+  }
+
+  .sidebar-brand {
+    font-size: 0 !important;
+    padding: 8px 4px !important;
+  }
+
+  .sidebar-brand::after {
+    content: 'C';
+    font-size: 20px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent), var(--accent-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    text-align: center;
+  }
+
+  .sidebar-nav-item {
+    padding: 10px 4px !important;
+    justify-content: center !important;
+    gap: 0 !important;
+  }
+
+  .sidebar-active-bar {
+    display: none !important;
+  }
+}
+
+/* ── Theme-aware surface classes ─────────────────────────────────────────────
+   Use these instead of hardcoded rgba(17,24,39,...) dark values in inline styles.
+   They automatically adapt to both dark and light themes.
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* Page root — replaces hardcoded #0b1018 / radial gradient backgrounds */
+.page-root {
+  min-height: 100%;
+  color: var(--text-primary);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Card surface — replaces linear-gradient(180deg, rgba(17,24,39,0.78), rgba(15,23,35,0.62)) */
+.card-surface {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+:root:not(.light) .card-surface {
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.78), rgba(15, 23, 35, 0.62));
+  border-color: rgba(148, 163, 184, 0.14);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Smaller card radius variant */
+.card-surface-sm {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+:root:not(.light) .card-surface-sm {
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.78), rgba(15, 23, 35, 0.62));
+  border-color: rgba(148, 163, 184, 0.14);
+}
+
+/* Inset / nested surface — slightly different from card for depth */
+.card-inset {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+:root:not(.light) .card-inset {
+  background: rgba(148, 163, 184, 0.05);
+  border-color: rgba(148, 163, 184, 0.1);
+}
+
+/* Sticky bar — replaces hardcoded #0a0e14 */
+.sticky-bar {
+  background: var(--bg-primary);
+}
+
+/* Modal background — replaces linear-gradient(180deg, #12171f, #0d1117) */
+.modal-surface {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+
+:root:not(.light) .modal-surface {
+  background: linear-gradient(180deg, #12171f, #0d1117);
+  border-color: rgba(148, 163, 184, 0.16);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* Page heading text — replaces #f0f4f8 */
+.text-heading {
+  color: var(--text-primary);
+}
+
+/* Muted label text — replaces #8ea2c2 / #a9b9d0 */
+.text-muted {
+  color: var(--text-secondary);
+}
+
+/* Progress track background — replaces rgba(148,163,184,0.12) */
+.progress-track {
+  background: var(--bg-tertiary);
+}
+
+:root:not(.light) .progress-track {
+  background: rgba(148, 163, 184, 0.12);
+}
+
+/* Select / input dark background — replaces rgba(17,24,39,0.8) */
+.input-surface {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  /* Note: no outline:none — let :focus-visible handle focus rings */
+}
+
+:root:not(.light) .input-surface {
+  background: rgba(17, 24, 39, 0.8);
+  border-color: rgba(148, 163, 184, 0.18);
+  color: #edf3ff;
+}
+
+/* Ghost button — replaces rgba(148,163,184,0.08) bg buttons */
+.btn-ghost {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+:root:not(.light) .btn-ghost {
+  background: rgba(148, 163, 184, 0.08);
+  border-color: rgba(148, 163, 184, 0.18);
+  color: #8ea2c2;
+}
+
+/* Next-up / hint row */
+.hint-row {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+:root:not(.light) .hint-row {
+  background: rgba(148, 163, 184, 0.05);
+  border-color: rgba(148, 163, 184, 0.12);
 }

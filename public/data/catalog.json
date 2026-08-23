@@ -1,0 +1,1751 @@
+[
+  {
+    "id": "az-900",
+    "code": "AZ-900",
+    "name": "Microsoft Azure Fundamentals",
+    "vendor": "Microsoft",
+    "vendorColor": "#0078D4",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "Foundational knowledge of cloud services and how those services are provided with Microsoft Azure.",
+    "examDetails": {
+      "durationMinutes": 60,
+      "questionCount": 40,
+      "passingScore": 70,
+      "priceUSD": 99
+    },
+    "domains": [
+      {
+        "id": "cloud-concepts",
+        "label": "Describe cloud concepts",
+        "weight": 0.25
+      },
+      {
+        "id": "azure-architecture",
+        "label": "Describe Azure architecture and services",
+        "weight": 0.35
+      },
+      {
+        "id": "azure-management",
+        "label": "Describe Azure management and governance",
+        "weight": 0.3
+      },
+      {
+        "id": "azure-workloads",
+        "label": "Describe Azure compute and networking services",
+        "weight": 0.1
+      }
+    ],
+    "prerequisites": [],
+    "nextSteps": [
+      "az-104",
+      "az-204",
+      "az-305",
+      "az-500",
+      "dp-900",
+      "ai-900"
+    ],
+    "domain": "cloud"
+  },
+  {
+    "id": "az-104",
+    "code": "AZ-104",
+    "name": "Azure Administrator",
+    "vendor": "Microsoft",
+    "vendorColor": "#0078D4",
+    "level": "intermediate",
+    "accessTier": "premium",
+    "description": "Manage Azure identities, governance, storage, compute, and virtual networks in a cloud environment.",
+    "examDetails": {
+      "durationMinutes": 120,
+      "questionCount": 40,
+      "passingScore": 70,
+      "priceUSD": 165
+    },
+    "domains": [
+      {
+        "id": "identity",
+        "label": "Manage Azure identities and governance",
+        "weight": 0.2
+      },
+      {
+        "id": "storage",
+        "label": "Implement and manage storage",
+        "weight": 0.15
+      },
+      {
+        "id": "compute",
+        "label": "Deploy and manage Azure compute resources",
+        "weight": 0.25
+      },
+      {
+        "id": "virtual-networking",
+        "label": "Configure and manage virtual networking",
+        "weight": 0.25
+      },
+      {
+        "id": "monitoring",
+        "label": "Monitor and maintain Azure resources",
+        "weight": 0.15
+      }
+    ],
+    "prerequisites": [
+      "az-900"
+    ],
+    "nextSteps": [
+      "az-305",
+      "az-400",
+      "az-500"
+    ],
+    "domain": "cloud"
+  },
+  {
+    "id": "az-305",
+    "code": "AZ-305",
+    "name": "Azure Solutions Architect",
+    "vendor": "Microsoft",
+    "vendorColor": "#0078D4",
+    "level": "advanced",
+    "accessTier": "premium",
+    "description": "Design identity, governance, data storage, business continuity, and infrastructure solutions on Azure.",
+    "examDetails": {
+      "durationMinutes": 120,
+      "questionCount": 40,
+      "passingScore": 70,
+      "priceUSD": 165
+    },
+    "domains": [
+      {
+        "id": "identity-governance",
+        "label": "Design identity, governance, and monitoring solutions",
+        "weight": 0.25
+      },
+      {
+        "id": "data-storage",
+        "label": "Design data storage solutions",
+        "weight": 0.25
+      },
+      {
+        "id": "business-continuity",
+        "label": "Design business continuity solutions",
+        "weight": 0.25
+      },
+      {
+        "id": "infrastructure",
+        "label": "Design infrastructure solutions",
+        "weight": 0.25
+      }
+    ],
+    "prerequisites": [
+      "az-104"
+    ],
+    "nextSteps": [
+      "az-400"
+    ],
+    "domain": "cloud"
+  },
+  {
+    "id": "aws-cp",
+    "code": "CLF-C02",
+    "name": "AWS Certified Cloud Practitioner",
+    "vendor": "AWS",
+    "vendorColor": "#FF9900",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "Foundational understanding of AWS Cloud, services, terminology, and basic security and architecture best practices.",
+    "examDetails": {
+      "durationMinutes": 90,
+      "questionCount": 65,
+      "passingScore": 70,
+      "priceUSD": 100
+    },
+    "domains": [
+      {
+        "id": "cloud-concepts",
+        "label": "Cloud concepts",
+        "weight": 0.24
+      },
+      {
+        "id": "security-compliance",
+        "label": "Security and compliance",
+        "weight": 0.3
+      },
+      {
+        "id": "cloud-technology",
+        "label": "Cloud technology and services",
+        "weight": 0.34
+      },
+      {
+        "id": "billing-pricing",
+        "label": "Billing, pricing, and support",
+        "weight": 0.12
+      }
+    ],
+    "prerequisites": [],
+    "nextSteps": [
+      "aws-saa",
+      "aws-developer",
+      "aws-sysops"
+    ],
+    "domain": "cloud"
+  },
+  {
+    "id": "aws-saa",
+    "code": "SAA-C03",
+    "name": "AWS Solutions Architect Associate",
+    "vendor": "AWS",
+    "vendorColor": "#FF9900",
+    "level": "intermediate",
+    "accessTier": "premium",
+    "description": "Design resilient, high-performing, secure, and cost-optimized architectures on AWS.",
+    "examDetails": {
+      "durationMinutes": 130,
+      "questionCount": 65,
+      "passingScore": 72,
+      "priceUSD": 150
+    },
+    "domains": [
+      {
+        "id": "secure-arch",
+        "label": "Design secure architectures",
+        "weight": 0.3
+      },
+      {
+        "id": "resilient-arch",
+        "label": "Design resilient architectures",
+        "weight": 0.26
+      },
+      {
+        "id": "high-performing",
+        "label": "Design high-performing architectures",
+        "weight": 0.24
+      },
+      {
+        "id": "cost-optimized",
+        "label": "Design cost-optimized architectures",
+        "weight": 0.2
+      }
+    ],
+    "prerequisites": [
+      "aws-cp"
+    ],
+    "nextSteps": [
+      "aws-sap",
+      "aws-devops"
+    ],
+    "domain": "cloud"
+  },
+  {
+    "id": "gcp-digital-leader",
+    "code": "Cloud Digital Leader",
+    "name": "Google Cloud Digital Leader",
+    "vendor": "Google Cloud",
+    "vendorColor": "#4285F4",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "Foundational knowledge of Google Cloud products and services and how they can be used to achieve business goals.",
+    "examDetails": {
+      "durationMinutes": 90,
+      "questionCount": 50,
+      "passingScore": 70,
+      "priceUSD": 99
+    },
+    "domains": [
+      {
+        "id": "digital-transformation",
+        "label": "Digital transformation with Google Cloud",
+        "weight": 0.3
+      },
+      {
+        "id": "data-innovation",
+        "label": "Innovating with data and Google Cloud",
+        "weight": 0.3
+      },
+      {
+        "id": "modern-infra",
+        "label": "Infrastructure and application modernization",
+        "weight": 0.25
+      },
+      {
+        "id": "security-ops",
+        "label": "Understanding Google Cloud security and operations",
+        "weight": 0.15
+      }
+    ],
+    "prerequisites": [],
+    "nextSteps": [
+      "gcp-ace",
+      "gcp-pca"
+    ],
+    "domain": "cloud"
+  },
+  {
+    "id": "comptia-security-plus",
+    "code": "SY0-701",
+    "name": "CompTIA Security+",
+    "vendor": "CompTIA",
+    "vendorColor": "#C8202F",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "Validates the baseline skills necessary to perform core security functions and pursue an IT security career.",
+    "examDetails": {
+      "durationMinutes": 90,
+      "questionCount": 90,
+      "passingScore": 75,
+      "priceUSD": 404
+    },
+    "domains": [
+      {
+        "id": "security-concepts",
+        "label": "General security concepts",
+        "weight": 0.12
+      },
+      {
+        "id": "threats-vulnerabilities",
+        "label": "Threats, vulnerabilities, and mitigations",
+        "weight": 0.22
+      },
+      {
+        "id": "security-architecture",
+        "label": "Security architecture",
+        "weight": 0.18
+      },
+      {
+        "id": "security-operations",
+        "label": "Security operations",
+        "weight": 0.28
+      },
+      {
+        "id": "security-programs",
+        "label": "Security program management and oversight",
+        "weight": 0.2
+      }
+    ],
+    "prerequisites": [],
+    "nextSteps": [
+      "cysa-plus",
+      "casp-plus",
+      "cissp",
+      "sc-200"
+    ],
+    "domain": "security"
+  },
+  {
+    "id": "sc-900",
+    "code": "SC-900",
+    "name": "Microsoft Security, Compliance, and Identity Fundamentals",
+    "vendor": "Microsoft",
+    "vendorColor": "#0078D4",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "Demonstrate foundational knowledge of security, compliance, and identity concepts across cloud-based and related Microsoft services.",
+    "examDetails": {
+      "durationMinutes": 60,
+      "questionCount": 40,
+      "passingScore": 70,
+      "priceUSD": 99
+    },
+    "domains": [
+      {
+        "id": "security-concepts",
+        "label": "Describe security concepts",
+        "weight": 0.15
+      },
+      {
+        "id": "microsoft-security",
+        "label": "Describe Microsoft security capabilities",
+        "weight": 0.35
+      },
+      {
+        "id": "compliance",
+        "label": "Describe Microsoft compliance capabilities",
+        "weight": 0.3
+      },
+      {
+        "id": "identity-access",
+        "label": "Describe identity, access, and governance capabilities",
+        "weight": 0.2
+      }
+    ],
+    "prerequisites": [],
+    "nextSteps": [
+      "sc-200",
+      "sc-300",
+      "az-500"
+    ],
+    "domain": "security"
+  },
+  {
+    "id": "isc2-cc",
+    "code": "CC",
+    "name": "(ISC)² Certified in Cybersecurity",
+    "vendor": "(ISC)²",
+    "vendorColor": "#005A9C",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "Entry-level cybersecurity certification covering security principles, network security, and access controls. Ideal for those new to the field.",
+    "examDetails": {
+      "durationMinutes": 120,
+      "questionCount": 100,
+      "passingScore": 70,
+      "priceUSD": 199
+    },
+    "domains": [
+      {
+        "id": "security-principles",
+        "label": "Security principles",
+        "weight": 0.26
+      },
+      {
+        "id": "business-continuity",
+        "label": "Business continuity, disaster recovery, and incident response",
+        "weight": 0.1
+      },
+      {
+        "id": "access-controls",
+        "label": "Access controls concepts",
+        "weight": 0.22
+      },
+      {
+        "id": "network-security",
+        "label": "Network security",
+        "weight": 0.24
+      },
+      {
+        "id": "security-operations",
+        "label": "Security operations",
+        "weight": 0.18
+      }
+    ],
+    "prerequisites": [],
+    "nextSteps": [
+      "comptia-security-plus",
+      "cissp"
+    ],
+    "domain": "security"
+  },
+  {
+    "id": "sc-200",
+    "code": "SC-200",
+    "name": "Microsoft Security Operations Analyst",
+    "vendor": "Microsoft",
+    "vendorColor": "#0078D4",
+    "level": "intermediate",
+    "accessTier": "premium",
+    "description": "Mitigate threats using Microsoft Sentinel, Microsoft Defender for Cloud, and Microsoft 365 Defender.",
+    "examDetails": {
+      "durationMinutes": 120,
+      "questionCount": 40,
+      "passingScore": 70,
+      "priceUSD": 165
+    },
+    "domains": [
+      {
+        "id": "sentinel",
+        "label": "Mitigate threats using Microsoft Sentinel",
+        "weight": 0.3
+      },
+      {
+        "id": "defender-xdr",
+        "label": "Mitigate threats using Microsoft Defender XDR",
+        "weight": 0.3
+      },
+      {
+        "id": "defender-cloud",
+        "label": "Mitigate threats using Microsoft Defender for Cloud",
+        "weight": 0.2
+      },
+      {
+        "id": "custom-detections",
+        "label": "Create detections and perform investigations",
+        "weight": 0.2
+      }
+    ],
+    "prerequisites": [
+      "sc-900"
+    ],
+    "nextSteps": [
+      "sc-100",
+      "cissp"
+    ],
+    "domain": "security"
+  },
+  {
+    "id": "cissp",
+    "code": "CISSP",
+    "name": "Certified Information Systems Security Professional",
+    "vendor": "(ISC)²",
+    "vendorColor": "#005A9C",
+    "level": "expert",
+    "accessTier": "premium",
+    "description": "The gold standard in cybersecurity certification. Validates deep technical and managerial competence to design, engineer, and manage an organization's security posture.",
+    "examDetails": {
+      "durationMinutes": 180,
+      "questionCount": 125,
+      "passingScore": 70,
+      "priceUSD": 749
+    },
+    "domains": [
+      {
+        "id": "security-risk",
+        "label": "Security and risk management",
+        "weight": 0.15
+      },
+      {
+        "id": "asset-security",
+        "label": "Asset security",
+        "weight": 0.1
+      },
+      {
+        "id": "security-arch",
+        "label": "Security architecture and engineering",
+        "weight": 0.13
+      },
+      {
+        "id": "communication-security",
+        "label": "Communication and network security",
+        "weight": 0.13
+      },
+      {
+        "id": "identity-access",
+        "label": "Identity and access management",
+        "weight": 0.13
+      },
+      {
+        "id": "security-assessment",
+        "label": "Security assessment and testing",
+        "weight": 0.12
+      },
+      {
+        "id": "security-operations",
+        "label": "Security operations",
+        "weight": 0.13
+      },
+      {
+        "id": "software-security",
+        "label": "Software development security",
+        "weight": 0.11
+      }
+    ],
+    "prerequisites": [
+      "5 years experience"
+    ],
+    "nextSteps": [],
+    "domain": "security"
+  },
+  {
+    "id": "oscp",
+    "code": "OSCP",
+    "name": "Offensive Security Certified Professional",
+    "vendor": "Offensive Security",
+    "vendorColor": "#E31837",
+    "level": "advanced",
+    "accessTier": "premium",
+    "description": "Hands-on penetration testing certification. Requires exploiting multiple machines in a 24-hour practical exam.",
+    "examDetails": {
+      "durationMinutes": 1440,
+      "questionCount": 0,
+      "passingScore": 70,
+      "priceUSD": 1599
+    },
+    "domains": [
+      {
+        "id": "reconnaissance",
+        "label": "Information gathering and reconnaissance",
+        "weight": 0.15
+      },
+      {
+        "id": "vulnerability-analysis",
+        "label": "Vulnerability analysis",
+        "weight": 0.2
+      },
+      {
+        "id": "exploitation",
+        "label": "Exploitation and post-exploitation",
+        "weight": 0.35
+      },
+      {
+        "id": "privilege-escalation",
+        "label": "Privilege escalation",
+        "weight": 0.2
+      },
+      {
+        "id": "reporting",
+        "label": "Reporting and documentation",
+        "weight": 0.1
+      }
+    ],
+    "prerequisites": [
+      "comptia-security-plus",
+      "comptia-network-plus"
+    ],
+    "nextSteps": [
+      "oswe",
+      "osep"
+    ],
+    "domain": "security"
+  },
+  {
+    "id": "az-400",
+    "code": "AZ-400",
+    "name": "Azure DevOps Engineer Expert",
+    "vendor": "Microsoft",
+    "vendorColor": "#0078D4",
+    "level": "expert",
+    "accessTier": "premium",
+    "description": "Combine people, process, and technologies to continuously deliver valuable products and services that meet end-user needs and business objectives on Azure.",
+    "examDetails": {
+      "durationMinutes": 120,
+      "questionCount": 40,
+      "passingScore": 70,
+      "priceUSD": 165
+    },
+    "domains": [
+      {
+        "id": "devops-strategy",
+        "label": "Develop an instrumentation strategy",
+        "weight": 0.15
+      },
+      {
+        "id": "sre",
+        "label": "Develop a Site Reliability Engineering (SRE) strategy",
+        "weight": 0.15
+      },
+      {
+        "id": "security-compliance",
+        "label": "Develop a security and compliance plan",
+        "weight": 0.15
+      },
+      {
+        "id": "source-control",
+        "label": "Manage source control",
+        "weight": 0.1
+      },
+      {
+        "id": "communication-collaboration",
+        "label": "Facilitate communication and collaboration",
+        "weight": 0.1
+      },
+      {
+        "id": "continuous-integration",
+        "label": "Define and implement continuous integration",
+        "weight": 0.15
+      },
+      {
+        "id": "continuous-delivery",
+        "label": "Define and implement a continuous delivery and release management strategy",
+        "weight": 0.2
+      }
+    ],
+    "prerequisites": [
+      "az-104",
+      "az-204"
+    ],
+    "nextSteps": [],
+    "domain": "devops"
+  },
+  {
+    "id": "cka",
+    "code": "CKA",
+    "name": "Certified Kubernetes Administrator",
+    "vendor": "CNCF",
+    "vendorColor": "#326CE5",
+    "level": "advanced",
+    "accessTier": "premium",
+    "description": "Demonstrate the skills to perform the responsibilities of a Kubernetes administrator in a production environment.",
+    "examDetails": {
+      "durationMinutes": 120,
+      "questionCount": 0,
+      "passingScore": 66,
+      "priceUSD": 395
+    },
+    "domains": [
+      {
+        "id": "cluster-architecture",
+        "label": "Cluster architecture, installation, and configuration",
+        "weight": 0.25
+      },
+      {
+        "id": "workloads-scheduling",
+        "label": "Workloads and scheduling",
+        "weight": 0.15
+      },
+      {
+        "id": "services-networking",
+        "label": "Services and networking",
+        "weight": 0.2
+      },
+      {
+        "id": "storage",
+        "label": "Storage",
+        "weight": 0.1
+      },
+      {
+        "id": "troubleshooting",
+        "label": "Troubleshooting",
+        "weight": 0.3
+      }
+    ],
+    "prerequisites": [
+      "linux-essentials"
+    ],
+    "nextSteps": [
+      "cks",
+      "ckad"
+    ],
+    "domain": "devops"
+  },
+  {
+    "id": "terraform-associate",
+    "code": "003",
+    "name": "HashiCorp Terraform Associate",
+    "vendor": "HashiCorp",
+    "vendorColor": "#844FBA",
+    "level": "intermediate",
+    "accessTier": "premium",
+    "description": "Demonstrate proficiency in infrastructure as code using HashiCorp Terraform for cloud provisioning.",
+    "examDetails": {
+      "durationMinutes": 60,
+      "questionCount": 50,
+      "passingScore": 70,
+      "priceUSD": 70
+    },
+    "domains": [
+      {
+        "id": "infrastructure-as-code",
+        "label": "Understand infrastructure as code concepts",
+        "weight": 0.15
+      },
+      {
+        "id": "terraform-basics",
+        "label": "Understand Terraform's purpose and basics",
+        "weight": 0.2
+      },
+      {
+        "id": "terraform-usage",
+        "label": "Understand Terraform workflow",
+        "weight": 0.2
+      },
+      {
+        "id": "terraform-modules",
+        "label": "Implement and maintain state",
+        "weight": 0.15
+      },
+      {
+        "id": "terraform-cloud",
+        "label": "Read, generate, and modify configuration",
+        "weight": 0.3
+      }
+    ],
+    "prerequisites": [
+      "cloud-fundamentals"
+    ],
+    "nextSteps": [
+      "terraform-pro"
+    ],
+    "domain": "devops"
+  },
+  {
+    "id": "docker-associate",
+    "code": "DCA",
+    "name": "Docker Certified Associate",
+    "vendor": "Docker",
+    "vendorColor": "#2496ED",
+    "level": "intermediate",
+    "accessTier": "premium",
+    "description": "Validates skills with containerization, Docker images, networking, security, and orchestration.",
+    "examDetails": {
+      "durationMinutes": 90,
+      "questionCount": 55,
+      "passingScore": 70,
+      "priceUSD": 195
+    },
+    "domains": [
+      {
+        "id": "orchestration",
+        "label": "Orchestration",
+        "weight": 0.25
+      },
+      {
+        "id": "image-creation",
+        "label": "Image creation, management, and registry",
+        "weight": 0.2
+      },
+      {
+        "id": "installation-config",
+        "label": "Installation and configuration",
+        "weight": 0.15
+      },
+      {
+        "id": "networking",
+        "label": "Networking",
+        "weight": 0.15
+      },
+      {
+        "id": "security",
+        "label": "Security",
+        "weight": 0.15
+      },
+      {
+        "id": "storage-volumes",
+        "label": "Storage and volumes",
+        "weight": 0.1
+      }
+    ],
+    "prerequisites": [
+      "linux-essentials"
+    ],
+    "nextSteps": [
+      "cka",
+      "aws-devops"
+    ],
+    "domain": "devops"
+  },
+  {
+    "id": "ccna",
+    "code": "200-301",
+    "name": "Cisco Certified Network Associate",
+    "vendor": "Cisco",
+    "vendorColor": "#049FD9",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "Covers networking fundamentals, IP services, security fundamentals, automation and programmability.",
+    "examDetails": {
+      "durationMinutes": 120,
+      "questionCount": 100,
+      "passingScore": 82,
+      "priceUSD": 300
+    },
+    "domains": [
+      {
+        "id": "network-fundamentals",
+        "label": "Network fundamentals",
+        "weight": 0.2
+      },
+      {
+        "id": "network-access",
+        "label": "Network access",
+        "weight": 0.2
+      },
+      {
+        "id": "ip-connectivity",
+        "label": "IP connectivity",
+        "weight": 0.25
+      },
+      {
+        "id": "ip-services",
+        "label": "IP services",
+        "weight": 0.1
+      },
+      {
+        "id": "security-fundamentals",
+        "label": "Security fundamentals",
+        "weight": 0.15
+      },
+      {
+        "id": "automation",
+        "label": "Automation and programmability",
+        "weight": 0.1
+      }
+    ],
+    "prerequisites": [],
+    "nextSteps": [
+      "ccnp-encor",
+      "ccnp-enarsi",
+      "devnet-associate"
+    ],
+    "domain": "networking"
+  },
+  {
+    "id": "ccnp-encor",
+    "code": "350-401",
+    "name": "CCNP Enterprise Core",
+    "vendor": "Cisco",
+    "vendorColor": "#049FD9",
+    "level": "advanced",
+    "accessTier": "premium",
+    "description": "Core enterprise networking knowledge covering dual-stack architecture, virtualization, infrastructure, network assurance, security, and automation.",
+    "examDetails": {
+      "durationMinutes": 120,
+      "questionCount": 90,
+      "passingScore": 82,
+      "priceUSD": 400
+    },
+    "domains": [
+      {
+        "id": "architecture",
+        "label": "Architecture",
+        "weight": 0.15
+      },
+      {
+        "id": "virtualization",
+        "label": "Virtualization",
+        "weight": 0.1
+      },
+      {
+        "id": "infrastructure",
+        "label": "Infrastructure",
+        "weight": 0.3
+      },
+      {
+        "id": "network-assurance",
+        "label": "Network assurance",
+        "weight": 0.1
+      },
+      {
+        "id": "security",
+        "label": "Security",
+        "weight": 0.2
+      },
+      {
+        "id": "automation",
+        "label": "Automation",
+        "weight": 0.15
+      }
+    ],
+    "prerequisites": [
+      "ccna"
+    ],
+    "nextSteps": [
+      "ccie-enterprise"
+    ],
+    "domain": "networking"
+  },
+  {
+    "id": "comptia-network-plus",
+    "code": "N10-009",
+    "name": "CompTIA Network+",
+    "vendor": "CompTIA",
+    "vendorColor": "#C8202F",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "Validates the technical skills needed to securely establish, maintain and troubleshoot the essential networks that businesses rely on.",
+    "examDetails": {
+      "durationMinutes": 90,
+      "questionCount": 90,
+      "passingScore": 72,
+      "priceUSD": 369
+    },
+    "domains": [
+      {
+        "id": "networking-concepts",
+        "label": "Networking concepts",
+        "weight": 0.23
+      },
+      {
+        "id": "network-implementation",
+        "label": "Network implementation",
+        "weight": 0.2
+      },
+      {
+        "id": "network-operations",
+        "label": "Network operations",
+        "weight": 0.19
+      },
+      {
+        "id": "network-security",
+        "label": "Network security",
+        "weight": 0.14
+      },
+      {
+        "id": "network-troubleshooting",
+        "label": "Network troubleshooting",
+        "weight": 0.24
+      }
+    ],
+    "prerequisites": [],
+    "nextSteps": [
+      "security-plus",
+      "ccna",
+      "ccnp-encor"
+    ],
+    "domain": "networking"
+  },
+  {
+    "id": "az-204",
+    "code": "AZ-204",
+    "name": "Azure Developer Associate",
+    "vendor": "Microsoft",
+    "vendorColor": "#0078D4",
+    "level": "intermediate",
+    "accessTier": "premium",
+    "description": "Develop Azure compute solutions, storage, implement security, monitor, troubleshoot, and optimize Azure solutions.",
+    "examDetails": {
+      "durationMinutes": 120,
+      "questionCount": 40,
+      "passingScore": 70,
+      "priceUSD": 165
+    },
+    "domains": [
+      {
+        "id": "azure-compute",
+        "label": "Develop Azure compute solutions",
+        "weight": 0.25
+      },
+      {
+        "id": "azure-storage",
+        "label": "Develop for Azure storage",
+        "weight": 0.15
+      },
+      {
+        "id": "azure-security",
+        "label": "Implement Azure security",
+        "weight": 0.2
+      },
+      {
+        "id": "monitoring",
+        "label": "Monitor, troubleshoot, and optimize Azure solutions",
+        "weight": 0.15
+      },
+      {
+        "id": "azure-services",
+        "label": "Connect to and consume Azure services and third-party services",
+        "weight": 0.25
+      }
+    ],
+    "prerequisites": [
+      "az-900"
+    ],
+    "nextSteps": [
+      "az-400",
+      "az-305"
+    ],
+    "domain": "software-development"
+  },
+  {
+    "id": "aws-developer",
+    "code": "DVA-C02",
+    "name": "AWS Developer Associate",
+    "vendor": "AWS",
+    "vendorColor": "#FF9900",
+    "level": "intermediate",
+    "accessTier": "premium",
+    "description": "Demonstrate proficiency in developing, deploying, and debugging cloud-based applications using AWS.",
+    "examDetails": {
+      "durationMinutes": 130,
+      "questionCount": 65,
+      "passingScore": 72,
+      "priceUSD": 150
+    },
+    "domains": [
+      {
+        "id": "development",
+        "label": "Development with AWS services",
+        "weight": 0.32
+      },
+      {
+        "id": "security",
+        "label": "Security",
+        "weight": 0.26
+      },
+      {
+        "id": "deployment",
+        "label": "Deployment",
+        "weight": 0.24
+      },
+      {
+        "id": "troubleshooting",
+        "label": "Troubleshooting and optimization",
+        "weight": 0.18
+      }
+    ],
+    "prerequisites": [
+      "aws-cp"
+    ],
+    "nextSteps": [
+      "aws-devops",
+      "aws-saa"
+    ],
+    "domain": "software-development"
+  },
+  {
+    "id": "ckad",
+    "code": "CKAD",
+    "name": "Certified Kubernetes Application Developer",
+    "vendor": "CNCF",
+    "vendorColor": "#326CE5",
+    "level": "intermediate",
+    "accessTier": "premium",
+    "description": "Design, build, configure, and expose cloud-native applications for Kubernetes.",
+    "examDetails": {
+      "durationMinutes": 120,
+      "questionCount": 0,
+      "passingScore": 66,
+      "priceUSD": 395
+    },
+    "domains": [
+      {
+        "id": "application-design",
+        "label": "Application design and build",
+        "weight": 0.2
+      },
+      {
+        "id": "application-deployment",
+        "label": "Application deployment",
+        "weight": 0.2
+      },
+      {
+        "id": "application-observability",
+        "label": "Application observability and maintenance",
+        "weight": 0.15
+      },
+      {
+        "id": "services-networking",
+        "label": "Services and networking",
+        "weight": 0.2
+      },
+      {
+        "id": "state-persistence",
+        "label": "State persistence",
+        "weight": 0.25
+      }
+    ],
+    "prerequisites": [
+      "cka"
+    ],
+    "nextSteps": [
+      "cks"
+    ],
+    "domain": "software-development"
+  },
+  {
+    "id": "dp-900",
+    "code": "DP-900",
+    "name": "Azure Data Fundamentals",
+    "vendor": "Microsoft",
+    "vendorColor": "#0078D4",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "Core data concepts and how they are implemented using Microsoft Azure data services.",
+    "examDetails": {
+      "durationMinutes": 60,
+      "questionCount": 40,
+      "passingScore": 70,
+      "priceUSD": 99
+    },
+    "domains": [
+      {
+        "id": "data-concepts",
+        "label": "Describe core data concepts",
+        "weight": 0.25
+      },
+      {
+        "id": "relational-data",
+        "label": "Describe how to work with relational data on Azure",
+        "weight": 0.25
+      },
+      {
+        "id": "non-relational-data",
+        "label": "Describe how to work with non-relational data on Azure",
+        "weight": 0.25
+      },
+      {
+        "id": "analytics-workloads",
+        "label": "Describe an analytics workload on Azure",
+        "weight": 0.25
+      }
+    ],
+    "prerequisites": [
+      "az-900"
+    ],
+    "nextSteps": [
+      "dp-203",
+      "dp-300",
+      "ai-900"
+    ],
+    "domain": "data"
+  },
+  {
+    "id": "dp-203",
+    "code": "DP-203",
+    "name": "Azure Data Engineer",
+    "vendor": "Microsoft",
+    "vendorColor": "#0078D4",
+    "level": "intermediate",
+    "accessTier": "premium",
+    "description": "Design and implement data storage, data processing, and data security solutions on Azure.",
+    "examDetails": {
+      "durationMinutes": 120,
+      "questionCount": 40,
+      "passingScore": 70,
+      "priceUSD": 165
+    },
+    "domains": [
+      {
+        "id": "data-storage",
+        "label": "Design and implement data storage",
+        "weight": 0.25
+      },
+      {
+        "id": "data-processing",
+        "label": "Develop data processing",
+        "weight": 0.3
+      },
+      {
+        "id": "data-security",
+        "label": "Secure, monitor, and optimize data storage and data processing",
+        "weight": 0.25
+      },
+      {
+        "id": "data-integration",
+        "label": "Design and implement data integration",
+        "weight": 0.2
+      }
+    ],
+    "prerequisites": [
+      "dp-900"
+    ],
+    "nextSteps": [
+      "dp-100",
+      "ai-102"
+    ],
+    "domain": "data"
+  },
+  {
+    "id": "ai-900",
+    "code": "AI-900",
+    "name": "Azure AI Fundamentals",
+    "vendor": "Microsoft",
+    "vendorColor": "#0078D4",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "Foundational knowledge of machine learning and AI concepts and related Microsoft Azure services.",
+    "examDetails": {
+      "durationMinutes": 60,
+      "questionCount": 40,
+      "passingScore": 70,
+      "priceUSD": 99
+    },
+    "domains": [
+      {
+        "id": "ai-workloads",
+        "label": "Describe AI workloads and considerations",
+        "weight": 0.2
+      },
+      {
+        "id": "fundamental-ml",
+        "label": "Describe fundamental principles of machine learning on Azure",
+        "weight": 0.3
+      },
+      {
+        "id": "computer-vision",
+        "label": "Describe features of computer vision workloads on Azure",
+        "weight": 0.15
+      },
+      {
+        "id": "nlp",
+        "label": "Describe features of Natural Language Processing workloads on Azure",
+        "weight": 0.15
+      },
+      {
+        "id": "generative-ai",
+        "label": "Describe features of generative AI workloads on Azure",
+        "weight": 0.2
+      }
+    ],
+    "prerequisites": [
+      "az-900"
+    ],
+    "nextSteps": [
+      "ai-102",
+      "dp-100"
+    ],
+    "domain": "data"
+  },
+  {
+    "id": "ai-102",
+    "code": "AI-102",
+    "name": "Azure AI Engineer",
+    "vendor": "Microsoft",
+    "vendorColor": "#0078D4",
+    "level": "intermediate",
+    "accessTier": "premium",
+    "description": "Build, manage, and deploy AI solutions that leverage Azure Cognitive Services, Azure Applied AI services, and Azure Bot Service.",
+    "examDetails": {
+      "durationMinutes": 120,
+      "questionCount": 40,
+      "passingScore": 70,
+      "priceUSD": 165
+    },
+    "domains": [
+      {
+        "id": "plan-manage",
+        "label": "Plan and manage an Azure AI solution",
+        "weight": 0.15
+      },
+      {
+        "id": "vision",
+        "label": "Implement image and video processing solutions",
+        "weight": 0.2
+      },
+      {
+        "id": "nlp",
+        "label": "Implement natural language processing solutions",
+        "weight": 0.2
+      },
+      {
+        "id": "knowledge-mining",
+        "label": "Implement knowledge mining solutions",
+        "weight": 0.2
+      },
+      {
+        "id": "conversational-ai",
+        "label": "Implement conversational AI solutions",
+        "weight": 0.25
+      }
+    ],
+    "prerequisites": [
+      "ai-900"
+    ],
+    "nextSteps": [],
+    "domain": "data"
+  },
+  {
+    "id": "istqb-foundation",
+    "code": "CTFL",
+    "name": "ISTQB Certified Tester Foundation Level",
+    "vendor": "ISTQB",
+    "vendorColor": "#003366",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "The world's most widely recognized software testing certification. Covers fundamentals of software testing, test design, and test management.",
+    "examDetails": {
+      "durationMinutes": 60,
+      "questionCount": 40,
+      "passingScore": 65,
+      "priceUSD": 250
+    },
+    "domains": [
+      {
+        "id": "fundamentals",
+        "label": "Fundamentals of testing",
+        "weight": 0.18
+      },
+      {
+        "id": "testing-lifecycle",
+        "label": "Testing throughout the software development lifecycle",
+        "weight": 0.22
+      },
+      {
+        "id": "static-testing",
+        "label": "Static testing",
+        "weight": 0.1
+      },
+      {
+        "id": "test-techniques",
+        "label": "Test techniques",
+        "weight": 0.25
+      },
+      {
+        "id": "test-management",
+        "label": "Test management",
+        "weight": 0.15
+      },
+      {
+        "id": "tool-support",
+        "label": "Tool support for testing",
+        "weight": 0.1
+      }
+    ],
+    "prerequisites": [],
+    "nextSteps": [
+      "istqb-agile",
+      "istqb-advanced-test-analyst"
+    ],
+    "domain": "testing-qa"
+  },
+  {
+    "id": "istqb-agile",
+    "code": "CTFL-AT",
+    "name": "ISTQB Agile Tester",
+    "vendor": "ISTQB",
+    "vendorColor": "#003366",
+    "level": "intermediate",
+    "accessTier": "premium",
+    "description": "Testing practices in Agile projects, including test-driven development, behavior-driven development, and continuous testing.",
+    "examDetails": {
+      "durationMinutes": 60,
+      "questionCount": 40,
+      "passingScore": 65,
+      "priceUSD": 250
+    },
+    "domains": [
+      {
+        "id": "agile-fundamentals",
+        "label": "The fundamentals of Agile software development",
+        "weight": 0.2
+      },
+      {
+        "id": "agile-testing",
+        "label": "Agile testing methods, techniques, and tools",
+        "weight": 0.35
+      },
+      {
+        "id": "agile-roles",
+        "label": "Agile testing roles and responsibilities",
+        "weight": 0.2
+      },
+      {
+        "id": "agile-processes",
+        "label": "Agile testing processes and practices",
+        "weight": 0.25
+      }
+    ],
+    "prerequisites": [
+      "istqb-foundation"
+    ],
+    "nextSteps": [
+      "istqb-advanced-test-analyst"
+    ],
+    "domain": "testing-qa"
+  },
+  {
+    "id": "aws-devops",
+    "code": "DOP-C02",
+    "name": "AWS DevOps Engineer Professional",
+    "vendor": "AWS",
+    "vendorColor": "#FF9900",
+    "level": "expert",
+    "accessTier": "premium",
+    "description": "Provision, operate, and manage distributed application systems on AWS using automation, CI/CD, and infrastructure as code.",
+    "examDetails": {
+      "durationMinutes": 180,
+      "questionCount": 75,
+      "passingScore": 75,
+      "priceUSD": 300
+    },
+    "domains": [
+      {
+        "id": "sdlc-automation",
+        "label": "SDLC automation",
+        "weight": 0.22
+      },
+      {
+        "id": "configuration-management",
+        "label": "Configuration management and infrastructure as code",
+        "weight": 0.17
+      },
+      {
+        "id": "monitoring-logging",
+        "label": "Monitoring and logging",
+        "weight": 0.15
+      },
+      {
+        "id": "incident-response",
+        "label": "Incident and event response",
+        "weight": 0.18
+      },
+      {
+        "id": "security-compliance",
+        "label": "Security and compliance",
+        "weight": 0.16
+      },
+      {
+        "id": "high-availability",
+        "label": "High availability and resilience",
+        "weight": 0.12
+      }
+    ],
+    "prerequisites": [
+      "aws-saa",
+      "aws-developer"
+    ],
+    "nextSteps": [],
+    "domain": "testing-qa"
+  },
+  {
+    "id": "pmp",
+    "code": "PMP",
+    "name": "Project Management Professional",
+    "vendor": "PMI",
+    "vendorColor": "#003B5C",
+    "level": "expert",
+    "accessTier": "premium",
+    "description": "The gold standard for project management. Validates ability to lead and direct projects across any methodology.",
+    "examDetails": {
+      "durationMinutes": 230,
+      "questionCount": 180,
+      "passingScore": 65,
+      "priceUSD": 555
+    },
+    "domains": [
+      {
+        "id": "people",
+        "label": "People",
+        "weight": 0.42
+      },
+      {
+        "id": "process",
+        "label": "Process",
+        "weight": 0.5
+      },
+      {
+        "id": "business-environment",
+        "label": "Business environment",
+        "weight": 0.08
+      }
+    ],
+    "prerequisites": [
+      "35 hours education",
+      "experience"
+    ],
+    "nextSteps": [
+      "pmi-acp",
+      "pgmp"
+    ],
+    "domain": "project-management"
+  },
+  {
+    "id": "scrum-master",
+    "code": "PSM I",
+    "name": "Professional Scrum Master I",
+    "vendor": "Scrum.org",
+    "vendorColor": "#6B9E1F",
+    "level": "intermediate",
+    "accessTier": "premium",
+    "description": "Demonstrate understanding of Scrum framework, team accountabilities, events, and artifacts as described in the Scrum Guide.",
+    "examDetails": {
+      "durationMinutes": 60,
+      "questionCount": 80,
+      "passingScore": 85,
+      "priceUSD": 150
+    },
+    "domains": [
+      {
+        "id": "scrum-theory",
+        "label": "Understanding and applying the Scrum framework",
+        "weight": 0.4
+      },
+      {
+        "id": "scrum-roles",
+        "label": "Developing people and teams",
+        "weight": 0.25
+      },
+      {
+        "id": "scrum-events",
+        "label": "Managing products with agility",
+        "weight": 0.2
+      },
+      {
+        "id": "scrum-artifacts",
+        "label": "Developing and delivering products professionally",
+        "weight": 0.15
+      }
+    ],
+    "prerequisites": [],
+    "nextSteps": [
+      "psm-ii",
+      "pspo-i"
+    ],
+    "domain": "project-management"
+  },
+  {
+    "id": "comptia-a-plus",
+    "code": "220-1101 / 220-1102",
+    "name": "CompTIA A+",
+    "vendor": "CompTIA",
+    "vendorColor": "#C8202F",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "The industry standard for establishing a career in IT. Covers mobile devices, networking, hardware, virtualization, cloud computing, and operating systems.",
+    "examDetails": {
+      "durationMinutes": 90,
+      "questionCount": 90,
+      "passingScore": 70,
+      "priceUSD": 253
+    },
+    "domains": [
+      {
+        "id": "mobile-devices",
+        "label": "Mobile devices",
+        "weight": 0.15
+      },
+      {
+        "id": "networking",
+        "label": "Networking",
+        "weight": 0.2
+      },
+      {
+        "id": "hardware",
+        "label": "Hardware",
+        "weight": 0.25
+      },
+      {
+        "id": "virtualization-cloud",
+        "label": "Virtualization and cloud computing",
+        "weight": 0.11
+      },
+      {
+        "id": "os",
+        "label": "Operating systems",
+        "weight": 0.29
+      }
+    ],
+    "prerequisites": [],
+    "nextSteps": [
+      "network-plus",
+      "security-plus",
+      "ccna"
+    ],
+    "domain": "systems-admin"
+  },
+  {
+    "id": "linux-essentials",
+    "code": "010-160",
+    "name": "Linux Essentials",
+    "vendor": "LPI",
+    "vendorColor": "#FDC300",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "Validates the foundational skills and knowledge of the Linux operating system, open source concepts, and basic command-line proficiency.",
+    "examDetails": {
+      "durationMinutes": 60,
+      "questionCount": 40,
+      "passingScore": 70,
+      "priceUSD": 120
+    },
+    "domains": [
+      {
+        "id": "linux-community",
+        "label": "The Linux community and a career in open source",
+        "weight": 0.15
+      },
+      {
+        "id": "finding-your-way",
+        "label": "Finding your way on a Linux system",
+        "weight": 0.2
+      },
+      {
+        "id": "power-of-command-line",
+        "label": "The power of the command line",
+        "weight": 0.25
+      },
+      {
+        "id": "linux-filesystem",
+        "label": "The Linux operating system",
+        "weight": 0.2
+      },
+      {
+        "id": "security-filesystems",
+        "label": "Security and file permissions",
+        "weight": 0.2
+      }
+    ],
+    "prerequisites": [],
+    "nextSteps": [
+      "lpic-1",
+      "rhcsa",
+      "cka"
+    ],
+    "domain": "systems-admin"
+  },
+  {
+    "id": "rhcsa",
+    "code": "EX200",
+    "name": "Red Hat Certified System Administrator",
+    "vendor": "Red Hat",
+    "vendorColor": "#EE0000",
+    "level": "intermediate",
+    "accessTier": "premium",
+    "description": "Core system administration skills across a wide range of environments and deployment scenarios on Red Hat Enterprise Linux.",
+    "examDetails": {
+      "durationMinutes": 150,
+      "questionCount": 0,
+      "passingScore": 70,
+      "priceUSD": 400
+    },
+    "domains": [
+      {
+        "id": "essential-tools",
+        "label": "Understand and use essential tools",
+        "weight": 0.2
+      },
+      {
+        "id": "simple-scripts",
+        "label": "Create simple shell scripts",
+        "weight": 0.1
+      },
+      {
+        "id": "operating-systems",
+        "label": "Operate running systems",
+        "weight": 0.2
+      },
+      {
+        "id": "local-storage",
+        "label": "Configure local storage",
+        "weight": 0.1
+      },
+      {
+        "id": "file-systems",
+        "label": "Create and configure file systems",
+        "weight": 0.1
+      },
+      {
+        "id": "users-groups",
+        "label": "Deploy, configure, and maintain systems",
+        "weight": 0.15
+      },
+      {
+        "id": "networking",
+        "label": "Manage basic networking",
+        "weight": 0.1
+      },
+      {
+        "id": "security",
+        "label": "Manage security",
+        "weight": 0.05
+      }
+    ],
+    "prerequisites": [
+      "linux-essentials"
+    ],
+    "nextSteps": [
+      "rhce",
+      "cka"
+    ],
+    "domain": "systems-admin"
+  },
+  {
+    "id": "itil-4-foundation",
+    "code": "ITIL 4 Foundation",
+    "name": "ITIL 4 Foundation",
+    "vendor": "AXELOS / PeopleCert",
+    "vendorColor": "#6B2D5C",
+    "level": "beginner",
+    "accessTier": "free",
+    "description": "Introduces the ITIL 4 framework and how it can be used to improve service management.",
+    "examDetails": {
+      "durationMinutes": 60,
+      "questionCount": 40,
+      "passingScore": 65,
+      "priceUSD": 500
+    },
+    "domains": [
+      {
+        "id": "service-management",
+        "label": "Key concepts of service management",
+        "weight": 0.25
+      },
+      {
+        "id": "four-dimensions",
+        "label": "The four dimensions of service management",
+        "weight": 0.2
+      },
+      {
+        "id": "service-value-system",
+        "label": "The ITIL service value system",
+        "weight": 0.3
+      },
+      {
+        "id": "practices",
+        "label": "ITIL management practices",
+        "weight": 0.25
+      }
+    ],
+    "prerequisites": [],
+    "nextSteps": [
+      "itil-4-managing-professional"
+    ],
+    "domain": "it-service-management"
+  }
+]

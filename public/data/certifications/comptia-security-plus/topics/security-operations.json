@@ -1,0 +1,1938 @@
+{
+  "certificationId": "comptia-security-plus",
+  "topicId": "security-operations",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "secplus-079",
+      "topicId": "security-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which order of volatility principle guides forensic investigators on the sequence in which to collect digital evidence?",
+      "explanation": {
+        "correct": "The order of volatility principle directs investigators to collect the MOST volatile evidence first (like RAM contents, which disappear on power-off), before it degrades or disappears, then move to progressively less volatile sources.",
+        "incorrect": "Collecting least volatile evidence first risks losing highly volatile data (like RAM) that would otherwise degrade or vanish. Alphabetical order has no forensic basis. Limiting collection to non-volatile media ignores critical volatile evidence like running processes and network connections.",
+        "examTip": "Order of volatility (most to least volatile): CPU cache/registers, RAM, network state, running processes, disk, remote logs, archival media.",
+        "relatedTopics": [
+          "order-of-volatility",
+          "digital-forensics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "order-of-volatility",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Wayne Enterprises' incident responders arrived at a compromised server that was still powered on and running, with the clock ticking before evidence could be lost.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Collect the least volatile evidence first, then the most volatile",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Collect the most volatile evidence first, before it is lost",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Collect evidence alphabetically by source type",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Collect only evidence stored on non-volatile media",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-080",
+      "topicId": "security-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which document tracks who has handled a piece of digital evidence, when, and for what purpose, to preserve its integrity and admissibility in legal proceedings?",
+      "explanation": {
+        "correct": "Chain of custody documentation tracks every person who has handled evidence, along with timestamps and purpose, ensuring the evidence remains admissible and untampered in legal proceedings.",
+        "incorrect": "A legal hold notice preserves data from deletion pending litigation but doesn't itself track handling history. An incident report summarizes what happened during a security event. A risk register tracks identified organizational risks, unrelated to evidence handling.",
+        "examTip": "Any gap or inconsistency in chain of custody documentation can be used by opposing counsel to challenge evidence admissibility in court.",
+        "relatedTopics": [
+          "chain-of-custody"
+        ]
+      },
+      "metadata": {
+        "examObjective": "chain-of-custody",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chain of custody",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Legal hold notice",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Incident report",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Risk register",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-081",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which phase of the incident response lifecycle (PICERL) involves removing the root cause of the incident from affected systems, such as deleting malware or closing an exploited vulnerability?",
+      "explanation": {
+        "correct": "Eradication focuses on removing the root cause — deleting malware, disabling compromised accounts, patching the exploited vulnerability — after the incident has been contained.",
+        "incorrect": "Containment limits the spread/impact of an incident but doesn't necessarily remove the root cause yet. Recovery restores systems to normal operation after eradication is complete. Identification is the earlier phase of detecting and confirming that an incident occurred.",
+        "examTip": "PICERL: Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned — a core mnemonic for incident response phases.",
+        "relatedTopics": [
+          "incident-response"
+        ]
+      },
+      "metadata": {
+        "examObjective": "incident-response",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Globex Corp has already isolated the infected hosts from the network and now needs to remove the malware before restoring normal operations.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Containment",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Eradication",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Recovery",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Identification",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-082",
+      "topicId": "security-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Scenario: A security analyst at Umbrella Corp detects an active ransomware infection spreading across the file server network. Following the incident response lifecycle, which action should be prioritized immediately after identification, before eradication begins?",
+      "explanation": {
+        "correct": "Containment (isolating affected systems) should occur immediately after identification to stop further spread, and must happen before eradication and recovery activities begin.",
+        "incorrect": "Restoring from backup (recovery) before containment risks re-infecting the restored systems. Lessons learned occurs at the very end of the process, after the incident is fully resolved. Customer notification, while sometimes required, follows established incident procedures and isn't the immediate technical priority right after identification.",
+        "examTip": "Never skip containment to rush into recovery — restoring from backup onto an uncontained, still-infected network often leads to immediate re-infection.",
+        "relatedTopics": [
+          "incident-response"
+        ]
+      },
+      "metadata": {
+        "examObjective": "incident-response",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Umbrella Corp's SOC just confirmed that a ransomware variant is actively encrypting files on multiple servers within the last 30 minutes.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Restore all systems from the most recent backup",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Contain the infection by isolating affected systems from the network",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Conduct the post-incident lessons learned meeting",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Notify all customers of a data breach",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-083",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which security tool aggregates and correlates log data from across the enterprise, providing centralized analysis, alerting, and dashboards for security monitoring?",
+      "explanation": {
+        "correct": "A SIEM (Security Information and Event Management) system centralizes log aggregation, correlation, and analysis, providing the foundational visibility layer for security monitoring.",
+        "incorrect": "SOAR focuses on automating and orchestrating response actions (often fed BY a SIEM), a complementary but distinct function. EDR focuses specifically on endpoint-level detection/response. DLP prevents unauthorized data exfiltration, a different security function entirely.",
+        "examTip": "SIEM = visibility/correlation ('what happened'); SOAR = automated response ('what do we do about it') — they're complementary, not interchangeable.",
+        "relatedTopics": [
+          "siem"
+        ]
+      },
+      "metadata": {
+        "examObjective": "siem",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Initech's SOC analysts were manually checking a dozen different systems' logs individually and missed a correlated attack pattern spanning multiple hosts.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "SOAR",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SIEM",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "EDR",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DLP",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-084",
+      "topicId": "security-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which intrusion detection approach identifies threats by comparing observed traffic/behavior against known attack patterns stored in a database, but cannot detect novel, previously unseen attacks?",
+      "explanation": {
+        "correct": "Signature-based detection matches traffic against a database of known attack signatures, making it effective against known threats but blind to novel, zero-day attacks lacking a matching signature.",
+        "incorrect": "Anomaly-based and behavior-based detection establish a baseline of normal activity and flag deviations, which CAN catch novel attacks (though with potentially higher false positives). Heuristic-based detection uses rule-of-thumb pattern analysis that can also catch some new variants, unlike pure signature matching.",
+        "examTip": "Signature-based = fast, low false positives, but blind to zero-days; Anomaly/behavior-based = can catch novel attacks, but higher false-positive rates.",
+        "relatedTopics": [
+          "ids-ips"
+        ]
+      },
+      "metadata": {
+        "examObjective": "ids-ips",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Anomaly-based detection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Behavior-based detection",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Signature-based detection",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Heuristic-based detection alone",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-085",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which endpoint security technology provides continuous monitoring, behavioral analysis, and automated response capabilities specifically at the endpoint level, going beyond traditional signature-based antivirus?",
+      "explanation": {
+        "correct": "EDR provides continuous behavioral monitoring, threat hunting, and automated response capabilities at the endpoint level, offering much deeper visibility than traditional signature-based antivirus.",
+        "incorrect": "HIDS focuses primarily on detecting intrusions via log/file integrity monitoring, a narrower scope than full EDR capability. DLP focuses on preventing unauthorized data exfiltration, a different concern. MDM manages mobile device configuration/compliance, not deep behavioral endpoint threat detection.",
+        "examTip": "XDR (Extended Detection and Response) extends EDR's concept across endpoints, network, and cloud telemetry for even broader correlated visibility.",
+        "relatedTopics": [
+          "edr"
+        ]
+      },
+      "metadata": {
+        "examObjective": "edr",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "HIDS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "EDR (Endpoint Detection and Response)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "DLP",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "MDM",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-086",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which secure coding testing technique analyzes an application's source code for vulnerabilities without executing the program?",
+      "explanation": {
+        "correct": "SAST examines source code, bytecode, or binaries for vulnerabilities without running the application, catching issues early in the development lifecycle ('white-box' testing).",
+        "incorrect": "DAST tests a running application from the outside ('black-box' testing), the opposite approach. Fuzzing feeds malformed/random input to a running program to trigger crashes/vulnerabilities, also requiring execution. Penetration testing is a broader manual/automated exploitation exercise against a live system.",
+        "examTip": "SAST = Source code, Static (no execution); DAST = Dynamic, running application (black-box) — a classic Security+ pairing to memorize.",
+        "relatedTopics": [
+          "sast-dast"
+        ]
+      },
+      "metadata": {
+        "examObjective": "sast-dast",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "DAST (Dynamic Application Security Testing)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SAST (Static Application Security Testing)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Fuzzing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Penetration testing",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-087",
+      "topicId": "security-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which data protection technique replaces sensitive data with a non-sensitive, reversible substitute value, often used to protect payment card data while preserving the original data's format for processing systems?",
+      "explanation": {
+        "correct": "Tokenization substitutes sensitive data with a non-sensitive token that maps back to the original value in a secure vault, preserving format for downstream processing while protecting the underlying sensitive data — commonly used in PCI DSS-compliant payment processing.",
+        "incorrect": "Data masking typically obscures data for display purposes (often irreversibly or for non-production use) rather than providing a reversible, securely-mapped substitute for live processing. Obfuscation broadly refers to making data/code harder to understand, a less precise term. Hashing is a one-way transformation, not reversible, unsuitable when the original value must later be retrieved.",
+        "examTip": "Tokenization is reversible via a secure lookup vault; hashing is one-way and irreversible — don't confuse the two for compliance scenarios requiring data recovery.",
+        "relatedTopics": [
+          "tokenization",
+          "data-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "tokenization",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data masking",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Tokenization",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Obfuscation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Hashing",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-088",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which mobile device management (MDM) capability allows an organization to remove only corporate data and applications from an employee's personal (BYOD) device, leaving personal data untouched?",
+      "explanation": {
+        "correct": "Selective wipe, enabled by containerization (segregating corporate data into an isolated container), allows removal of only corporate data/apps while leaving the employee's personal data intact.",
+        "incorrect": "A full device wipe erases the entire device, including personal data — inappropriate for most BYOD scenarios. Geofencing restricts app/data access based on location, not a wipe capability. Jailbreak detection identifies compromised device integrity, a different function.",
+        "examTip": "Containerization is the key enabling technology for selective wipe — it creates a logical boundary between corporate and personal data on the same device.",
+        "relatedTopics": [
+          "mdm",
+          "byod"
+        ]
+      },
+      "metadata": {
+        "examObjective": "mdm",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "An employee at Wayne Enterprises left the company and used their personal phone, which was enrolled in BYOD, to access corporate email.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Full device wipe",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Selective wipe (containerization-based)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Geofencing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Jailbreak detection",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-089",
+      "topicId": "security-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which data protection category best describes maintaining TLS encryption for data actively being transmitted between a client and a web server?",
+      "explanation": {
+        "correct": "Data in transit refers to data actively moving across a network, protected via encryption protocols like TLS during transmission.",
+        "incorrect": "Data at rest refers to stored data (on disk, in a database). Data in use refers to data actively being processed in memory/CPU. 'Data in escrow' is not a standard data-state classification category.",
+        "examTip": "The three standard data states are: at rest (stored), in transit (moving over network), and in use (actively processed) — each typically requires different protective controls.",
+        "relatedTopics": [
+          "data-states"
+        ]
+      },
+      "metadata": {
+        "examObjective": "data-states",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data at rest",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Data in transit",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Data in use",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data in escrow",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-090",
+      "topicId": "security-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which privileged access management (PAM) practice grants elevated access rights only for a limited, predefined time window and automatically revokes them afterward?",
+      "explanation": {
+        "correct": "Just-in-time access grants elevated privileges only when needed, for a limited duration, automatically expiring afterward — significantly reducing the standing attack surface of privileged accounts.",
+        "incorrect": "Standing privileged access keeps elevated rights active continuously, the opposite of the time-limited approach described. Shared administrator accounts undermine accountability and are a poor practice generally. Permanent role assignment similarly maintains continuous elevated access rather than granting it temporarily.",
+        "examTip": "JIT access significantly reduces the window of opportunity for attackers to abuse a compromised privileged credential.",
+        "relatedTopics": [
+          "pam",
+          "just-in-time-access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "pam",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Standing privileged access",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Just-in-time (JIT) access",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Shared administrator accounts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Permanent role assignment",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-091",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which forensic tool/technique creates a bit-for-bit copy of a storage device, preserving the original evidence unaltered for analysis?",
+      "explanation": {
+        "correct": "Forensic disk imaging (using tools like dd) creates an exact bit-for-bit copy of a storage device, capturing all data including deleted/unallocated space, which is essential for thorough forensic analysis.",
+        "incorrect": "A write blocker alone (without imaging) simply prevents writes to the original media during examination but doesn't itself create the analyzable copy. A file-level backup only captures active files, missing deleted data and unallocated space. Live system triage captures volatile data from a running system but isn't the same as full bit-for-bit disk imaging.",
+        "examTip": "Always use a write blocker in conjunction with imaging to guarantee the original evidence is never modified during the acquisition process.",
+        "relatedTopics": [
+          "forensic-imaging"
+        ]
+      },
+      "metadata": {
+        "examObjective": "forensic-imaging",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Write blocker only, without imaging",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Forensic disk imaging (e.g., using dd)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "File-level backup",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Live system triage",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-092",
+      "topicId": "security-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which OWASP Top 10 category specifically addresses risks arising from software components (libraries, frameworks) with known vulnerabilities being used within an application?",
+      "explanation": {
+        "correct": "The 'Vulnerable and Outdated Components' category addresses risks from using third-party libraries/frameworks containing known, unpatched vulnerabilities.",
+        "incorrect": "Injection covers flaws like SQL injection from untrusted input. Broken Access Control covers authorization failures. Security Misconfiguration covers improperly configured security settings — none specifically target third-party component vulnerability risk the way this category does.",
+        "examTip": "Software Composition Analysis (SCA) tools specifically scan for known-vulnerable dependencies, directly addressing this OWASP category.",
+        "relatedTopics": [
+          "owasp-top-10"
+        ]
+      },
+      "metadata": {
+        "examObjective": "owasp-top-10",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Injection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Vulnerable and Outdated Components",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Broken Access Control",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Security Misconfiguration",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-093",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid backup types that capture only data changed since a specific reference point, rather than a full copy of all data?",
+      "explanation": {
+        "correct": "Incremental backups capture changes since the LAST backup (full or incremental), while differential backups capture changes since the LAST FULL backup — both are partial, change-based backup types.",
+        "incorrect": "A full backup copies all selected data every time, not just changes. The snapshot-only option incorrectly implies snapshots can't support incremental behavior, which is inaccurate framing for this specific question's options.",
+        "examTip": "Incremental backups are faster to create but slower to restore (requires replaying multiple increments); differential backups take a middle ground — faster restore than incremental, but growing in size until the next full backup.",
+        "relatedTopics": [
+          "backup-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "backup-types",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Incremental backup",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Differential backup",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Full backup",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Snapshot backup only, with no incremental capability",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-094",
+      "topicId": "security-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid components of a robust vulnerability management program?",
+      "explanation": {
+        "correct": "Regular scanning cadence and risk-based prioritization (informed by CVSS and business context) are core components of an effective, ongoing vulnerability management program.",
+        "incorrect": "Permanently ignoring lower-severity vulnerabilities and scanning only once at deployment both undermine continuous risk reduction — vulnerabilities and environments change constantly, requiring ongoing attention.",
+        "examTip": "Even lower-CVSS vulnerabilities can become critical in combination (chained exploits) — never permanently ignore based on score alone.",
+        "relatedTopics": [
+          "vulnerability-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vulnerability-management",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Regular vulnerability scanning on a defined cadence",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Risk-based remediation prioritization using CVSS scores",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Ignoring vulnerabilities rated below Critical indefinitely",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Only scanning once, at initial system deployment",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-095",
+      "topicId": "security-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO of the following are examples of technical data loss prevention (DLP) enforcement points?",
+      "explanation": {
+        "correct": "Endpoint and network DLP agents are technical controls that actively inspect and can block data movement based on defined sensitive data patterns/policies.",
+        "incorrect": "A verbal agreement and a printed poster are administrative/awareness measures, not technical enforcement mechanisms capable of actually blocking data exfiltration.",
+        "examTip": "DLP can be deployed at the endpoint, network, and cloud/storage layers — comprehensive coverage requires enforcement points across all three.",
+        "relatedTopics": [
+          "dlp"
+        ]
+      },
+      "metadata": {
+        "examObjective": "dlp",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Endpoint DLP agent blocking a USB file transfer",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Network DLP inspecting outbound email attachments for sensitive data patterns",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An employee's verbal agreement not to share confidential data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A printed poster reminding staff about data handling policy",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-096",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid identity lifecycle management activities related to provisioning and deprovisioning?",
+      "explanation": {
+        "correct": "Automated deprovisioning at termination and role-based provisioning at onboarding are both core, well-managed identity lifecycle practices that reduce risk from stale or excessive access.",
+        "incorrect": "Sharing a single administrator account undermines accountability and violates individual account principles. Retaining VPN access for terminated employees is a serious security gap that should never be permitted.",
+        "examTip": "Automating deprovisioning tied directly to HR termination events closes the common security gap of lingering access for former employees.",
+        "relatedTopics": [
+          "iam",
+          "provisioning-deprovisioning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "iam",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automatically disabling an account upon an employee's termination date",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Granting role-based access when a new employee is onboarded",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Sharing one administrator account among the entire IT team indefinitely",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Allowing terminated employees to retain VPN access for convenience",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-097",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following describe valid distinctions between HIDS/HIPS and NIDS/NIPS?",
+      "explanation": {
+        "correct": "HIDS/HIPS operate at the host level (monitoring a single system's logs/files/processes), while NIDS/NIPS monitor network traffic segments. The Detection/Prevention distinction (IDS alerts only vs. IPS actively blocks) applies to both host and network variants.",
+        "incorrect": "NIDS is deployed at network chokepoints (like a span port or inline), not installed on every individual endpoint — that describes HIDS instead. HIDS commonly DOES perform file integrity monitoring, contrary to the claim.",
+        "examTip": "Remember: 'H' = Host-based (one system); 'N' = Network-based (traffic segment); 'D' = Detection (alert only); 'P' = Prevention (can block).",
+        "relatedTopics": [
+          "ids-ips"
+        ]
+      },
+      "metadata": {
+        "examObjective": "ids-ips",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "HIDS/HIPS monitor activity on an individual host, while NIDS/NIPS monitor network traffic segments",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "An IPS can actively block detected malicious traffic, while an IDS can only alert/log",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "NIDS requires software installation on every individual endpoint",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "HIDS cannot detect any file integrity changes on the host",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-098",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are recognized data classification levels commonly used in an organizational data classification scheme?",
+      "explanation": {
+        "correct": "Public and Confidential are standard data classification levels (alongside Internal and Restricted) describing sensitivity and required handling controls.",
+        "incorrect": "'Encrypted' and 'Backed-up' describe a data protection STATE or ACTION applied to data, not a classification LEVEL describing its sensitivity — a data classification and a protection mechanism are distinct concepts.",
+        "examTip": "A common four-tier scheme: Public, Internal, Confidential, Restricted — each tier increasing in required protection.",
+        "relatedTopics": [
+          "data-classification"
+        ]
+      },
+      "metadata": {
+        "examObjective": "data-classification",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Public",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Confidential",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Encrypted",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Backed-up",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-099",
+      "topicId": "security-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Write blockers physically or logically prevent write operations to original evidence. Fuzzing intentionally feeds malformed/random data to surface crashes and vulnerabilities. Whitelisting is actually MORE restrictive than blacklisting — it denies everything by default except explicitly approved software, the opposite of what's claimed.",
+        "incorrect": "The false statement reverses the restrictiveness comparison — whitelisting (default-deny) is stricter than blacklisting (default-allow, block known-bad).",
+        "examTip": "Whitelisting = default deny (only approved software runs); Blacklisting = default allow (block known-bad only) — whitelisting is the stronger control.",
+        "relatedTopics": [
+          "write-blocker",
+          "fuzzing",
+          "application-whitelisting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "write-blocker",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A write blocker prevents any data from being written to original evidence media during forensic acquisition.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Fuzzing tests an application by feeding it large volumes of unexpected or malformed input to identify crashes or vulnerabilities.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Application whitelisting is less restrictive than application blacklisting because it allows more software to run by default.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-100",
+      "topicId": "security-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "SOAR (Security Orchestration, Automation, and Response) automates routine response actions like endpoint isolation. Honeypots are intentional decoys used to study/divert attackers. Data masking obscures data for a specific use case (like non-production testing) but does not destroy the original underlying data.",
+        "incorrect": "The false statement incorrectly claims masking destroys original data — masking creates an altered VIEW or copy while typically leaving the original data intact elsewhere.",
+        "examTip": "Masking is often used to create realistic-looking but non-sensitive data for use in test/dev environments without exposing real production data.",
+        "relatedTopics": [
+          "soar",
+          "honeypot",
+          "data-masking"
+        ]
+      },
+      "metadata": {
+        "examObjective": "soar",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "SOAR platforms can automate routine incident response tasks, such as automatically isolating an infected endpoint.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A honeypot is a decoy system designed to attract and study attacker behavior.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Data masking always physically destroys the original sensitive data it protects.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-101",
+      "topicId": "security-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "RTO actually measures the maximum acceptable DOWNTIME (time to restore operations) — the metric measuring acceptable DATA LOSS is RPO (Recovery Point Objective), not RTO. MTTR correctly measures average repair/restoration time for a failed component. A tabletop exercise is a discussion-based walkthrough of a plan, NOT an actual failover — a full-scale failover test is a different, more intensive exercise type.",
+        "incorrect": "Two statements are false: RTO/RPO were swapped in the first statement (RTO = downtime tolerance, RPO = data loss tolerance), and tabletop exercises are discussion-only, not live failover tests.",
+        "examTip": "RTO = Time (how long can we be DOWN); RPO = Point/data (how much data can we afford to LOSE) — an easy mnemonic pairing to remember.",
+        "relatedTopics": [
+          "rto-rpo",
+          "mttr",
+          "tabletop-exercise"
+        ]
+      },
+      "metadata": {
+        "examObjective": "rto-rpo",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "RTO (Recovery Time Objective) measures the maximum acceptable amount of data loss, measured in time, following a disruption.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "MTTR (Mean Time to Repair) measures the average time required to restore a failed component or system to operation.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A tabletop exercise involves actually failing over production systems to a secondary site to test a disaster recovery plan.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-102",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Code review (peer or automated) catches vulnerabilities before deployment. A hot site is a fully operational, ready backup facility for near-immediate failover. A cold site, by contrast, provides only basic infrastructure (space, power, cooling) WITHOUT pre-configured servers or current data — requiring significant setup time before it can be used, unlike a hot site.",
+        "incorrect": "The false statement describes a hot site's characteristics but incorrectly attributes them to a cold site.",
+        "examTip": "Hot = ready now; Warm = partially ready (some equipment, needs data restore); Cold = empty shell (longest recovery time) — the standard site tiering for BCP/DRP.",
+        "relatedTopics": [
+          "code-review",
+          "hot-warm-cold-sites"
+        ]
+      },
+      "metadata": {
+        "examObjective": "code-review",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Code review, whether manual or automated, is a secure coding practice used to identify vulnerabilities before code reaches production.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A hot site is a fully equipped, ready-to-activate backup facility that can take over operations almost immediately after a disaster.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A cold site includes fully configured, up-to-date servers and data ready for immediate failover.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-103",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "SLAs define measurable commitments like uptime percentage and response times. NDAs are specifically about protecting confidential information, NOT performance/uptime guarantees — that's the SLA's purpose. The 3-2-1 rule is correctly described as 3 copies, 2 media types, 1 offsite.",
+        "incorrect": "The false statement misattributes uptime/performance guarantees to an NDA — that's the SLA's role, while an NDA governs confidentiality obligations.",
+        "examTip": "NDA = confidentiality protection; SLA = performance/uptime commitments; MSA = overarching contract terms; MOU = general mutual understanding — know each agreement's distinct purpose.",
+        "relatedTopics": [
+          "sla",
+          "nda",
+          "3-2-1-backup-rule"
+        ]
+      },
+      "metadata": {
+        "examObjective": "sla",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "An SLA (Service Level Agreement) defines the measurable performance and availability commitments a vendor agrees to provide.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "An NDA (Non-Disclosure Agreement) is primarily used to define uptime and performance guarantees between two parties.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "The 3-2-1 backup rule recommends keeping 3 copies of data, on 2 different media types, with 1 copy stored offsite.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "secplus-104",
+      "topicId": "security-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Right-to-audit clauses grant the customer contractual authority to inspect vendor security/compliance practices. Geofencing enables location-based restriction or enablement of app features. PIAs (or DPIAs under GDPR) are a broader privacy practice used across many regulatory frameworks, not limited exclusively to HIPAA-regulated organizations.",
+        "incorrect": "The false statement wrongly restricts PIA applicability to HIPAA only — privacy impact assessments (or their regional equivalents like DPIAs) are used broadly across privacy frameworks including GDPR.",
+        "examTip": "GDPR specifically calls its version a DPIA (Data Protection Impact Assessment) — functionally similar to a PIA but required under different regulatory triggers.",
+        "relatedTopics": [
+          "right-to-audit",
+          "geofencing",
+          "pia"
+        ]
+      },
+      "metadata": {
+        "examObjective": "right-to-audit",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Right-to-audit clauses in a vendor contract allow the customer organization to inspect the vendor's security controls and compliance posture.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Geofencing on a mobile device restricts or enables specific app functionality based on the device's detected physical location.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A PIA (Privacy Impact Assessment) is only required for organizations subject to HIPAA and has no applicability under other privacy frameworks like GDPR.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-105",
+      "topicId": "security-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "SOAR platforms specifically automate playbook-driven response actions triggered by alerts. Wireshark captures and inspects full packet-level detail, unlike flow-summary tools.",
+        "incorrect": "A SIEM alone centralizes/correlates data but doesn't necessarily automate response actions without SOAR integration. NetFlow provides summarized traffic metadata rather than full packet content, insufficient for deep protocol analysis.",
+        "examTip": "NetFlow is lightweight and scalable for trend analysis; full packet capture (Wireshark) is heavier but necessary for deep forensic-level protocol inspection.",
+        "relatedTopics": [
+          "soar",
+          "packet-capture"
+        ]
+      },
+      "metadata": {
+        "examObjective": "soar",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To automatically execute a predefined response playbook — such as isolating a host — whenever a specific alert fires, without manual intervention, use a __",
+          "options": [
+            "SIEM alone",
+            "SOAR platform",
+            "Vulnerability scanner",
+            "Packet capture tool"
+          ],
+          "correctAnswer": "SOAR platform"
+        },
+        {
+          "id": "d2",
+          "prompt": "To capture and analyze the actual network packets traversing a segment for deep protocol-level investigation, use __",
+          "options": [
+            "NetFlow summary data",
+            "Wireshark packet capture",
+            "A SIEM dashboard",
+            "A CVSS score"
+          ],
+          "correctAnswer": "Wireshark packet capture"
+        }
+      ]
+    },
+    {
+      "id": "secplus-106",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "A tabletop exercise is a low-risk, discussion-based validation of a DR plan. RPO specifically measures the maximum tolerable data loss window, going backward in time from the point of disruption.",
+        "incorrect": "A full interruption or live failover test actually disrupts production, unlike a tabletop discussion. RTO measures downtime tolerance (not data loss), and MTTR/MTBF measure repair time and time-between-failures respectively, not data loss tolerance.",
+        "examTip": "If your backups run every 4 hours and that's your acceptable RPO, you could lose up to 4 hours of data in a worst-case incident.",
+        "relatedTopics": [
+          "tabletop-exercise",
+          "rto-rpo"
+        ]
+      },
+      "metadata": {
+        "examObjective": "tabletop-exercise",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To test a disaster recovery plan through discussion and walkthrough without disrupting live production systems, conduct a __",
+          "options": [
+            "Full interruption test",
+            "Tabletop exercise",
+            "Parallel test",
+            "Live failover drill"
+          ],
+          "correctAnswer": "Tabletop exercise"
+        },
+        {
+          "id": "d2",
+          "prompt": "To determine the maximum tolerable amount of data an organization can afford to lose, measured backward in time from an incident, calculate the __",
+          "options": [
+            "RTO",
+            "RPO",
+            "MTTR",
+            "MTBF"
+          ],
+          "correctAnswer": "RPO"
+        }
+      ]
+    },
+    {
+      "id": "secplus-107",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "JIT access minimizes standing privilege exposure by granting time-limited elevated rights. File Integrity Monitoring detects unauthorized changes by comparing current file hashes to a trusted baseline.",
+        "incorrect": "Standing access, shared credentials, and permanent role assignment all leave elevated privileges active continuously, the opposite of the JIT goal. DLP, MDM, and SOAR serve different security functions unrelated to file hash-based integrity checking.",
+        "examTip": "FIM is commonly applied to critical system files, configuration files, and binaries where unauthorized changes are a strong compromise indicator.",
+        "relatedTopics": [
+          "pam",
+          "file-integrity-monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "pam",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To ensure elevated administrative privileges are granted only for the specific time needed to complete a task and then automatically revoked, implement __",
+          "options": [
+            "Standing access",
+            "Just-in-time (JIT) privileged access",
+            "Shared credentials",
+            "Permanent role assignment"
+          ],
+          "correctAnswer": "Just-in-time (JIT) privileged access"
+        },
+        {
+          "id": "d2",
+          "prompt": "To detect unauthorized modification of critical system files by comparing current file hashes against a known-good baseline, use __",
+          "options": [
+            "File integrity monitoring (FIM)",
+            "DLP",
+            "MDM",
+            "SOAR"
+          ],
+          "correctAnswer": "File integrity monitoring (FIM)"
+        }
+      ]
+    },
+    {
+      "id": "secplus-108",
+      "topicId": "security-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "DAST tests a running application externally without needing source code access. SCA specifically scans dependency trees for known-vulnerable open-source components.",
+        "incorrect": "SAST requires access to source code (the opposite of DAST's black-box approach), and code review is a manual/automated source-level process, not what's described. Fuzzing tests for crash-inducing malformed input, a different goal than dependency vulnerability identification.",
+        "examTip": "Combine SAST (code-level), DAST (running app), and SCA (dependencies) for comprehensive application security testing coverage across the SDLC.",
+        "relatedTopics": [
+          "sast-dast",
+          "sca"
+        ]
+      },
+      "metadata": {
+        "examObjective": "sast-dast",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To identify vulnerabilities in a running web application by sending crafted requests from the outside without access to source code, use __",
+          "options": [
+            "SAST",
+            "DAST",
+            "SCA",
+            "Code review"
+          ],
+          "correctAnswer": "DAST"
+        },
+        {
+          "id": "d2",
+          "prompt": "To identify known-vulnerable open-source libraries embedded within an application's dependency tree, use __",
+          "options": [
+            "SAST",
+            "DAST",
+            "Software Composition Analysis (SCA)",
+            "Fuzzing"
+          ],
+          "correctAnswer": "Software Composition Analysis (SCA)"
+        }
+      ]
+    },
+    {
+      "id": "secplus-109",
+      "topicId": "security-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "Incremental backups capture only changes since the most recent backup of any kind. Data being actively processed in memory is classified as 'data in use'.",
+        "incorrect": "Differential backups instead capture changes since the last FULL backup specifically, a distinct definition from incremental. 'At rest' and 'in transit' describe stored and moving data respectively, not actively processed data.",
+        "examTip": "Data in use is often the hardest data state to protect, since it must be decrypted/accessible in memory for processing to occur — technologies like confidential computing address this gap.",
+        "relatedTopics": [
+          "backup-types",
+          "data-states"
+        ]
+      },
+      "metadata": {
+        "examObjective": "backup-types",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A backup that copies only files changed since the LAST backup of any type is called __",
+          "options": [
+            "Full backup",
+            "Incremental backup",
+            "Differential backup",
+            "Snapshot"
+          ],
+          "correctAnswer": "Incremental backup"
+        },
+        {
+          "id": "d2",
+          "prompt": "Data actively being processed in a system's memory/CPU is classified as data __",
+          "options": [
+            "at rest",
+            "in transit",
+            "in use",
+            "in escrow"
+          ],
+          "correctAnswer": "in use"
+        }
+      ]
+    },
+    {
+      "id": "secplus-110",
+      "topicId": "security-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "'Restricted' typically denotes the highest sensitivity tier, limited to a small authorized group. DevSecOps integrates security practices throughout the entire development pipeline rather than treating it as an afterthought.",
+        "incorrect": "'Confidential' generally sits one tier below 'Restricted' in a four-tier scheme and implies broader (though still limited) access than 'Restricted'. Waterfall, standalone change management, and annual audits don't inherently embed continuous security throughout development.",
+        "examTip": "DevSecOps embodies 'shift-left' security — catching issues as early in the pipeline as possible, ideally before code merges to the main branch.",
+        "relatedTopics": [
+          "data-classification",
+          "devsecops"
+        ]
+      },
+      "metadata": {
+        "examObjective": "data-classification",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To classify a document as accessible only to a small group of authorized individuals within the organization due to its highly sensitive nature, label it __",
+          "options": [
+            "Public",
+            "Internal",
+            "Confidential",
+            "Restricted"
+          ],
+          "correctAnswer": "Restricted"
+        },
+        {
+          "id": "d2",
+          "prompt": "To ensure security responsibilities are proactively built into every stage of the software development pipeline rather than bolted on at the end, adopt __",
+          "options": [
+            "Waterfall development",
+            "DevSecOps",
+            "Change management alone",
+            "A single annual audit"
+          ],
+          "correctAnswer": "DevSecOps"
+        }
+      ]
+    },
+    {
+      "id": "secplus-111",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following phases of the incident response lifecycle (PICERL) in the correct order.",
+      "explanation": {
+        "correct": "PICERL begins with Preparation (having tools/plans ready before an incident), followed by Identification (detecting the incident), Containment (limiting spread), and Eradication (removing the root cause).",
+        "incorrect": "You cannot contain an incident before first identifying that one has occurred, and preparation must happen well in advance of any of the reactive phases.",
+        "examTip": "The full mnemonic is PICERL: Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned.",
+        "relatedTopics": [
+          "incident-response"
+        ]
+      },
+      "metadata": {
+        "examObjective": "incident-response",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Preparation",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Identification",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Containment",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Eradication",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "secplus-112",
+      "topicId": "security-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order for acquiring forensic evidence from a live, running system suspected of compromise.",
+      "explanation": {
+        "correct": "Proper forensic acquisition starts with documenting the initial state, capturing the most volatile data (RAM/network state) before it's lost, imaging the disk with write protection, and finally securely transporting/storing evidence under chain of custody.",
+        "incorrect": "Imaging the disk before capturing volatile RAM/network data would lose critical volatile evidence, violating the order of volatility principle.",
+        "examTip": "Never shut down a live system before capturing volatile data — powering off immediately destroys RAM contents and active network state.",
+        "relatedTopics": [
+          "digital-forensics",
+          "order-of-volatility"
+        ]
+      },
+      "metadata": {
+        "examObjective": "digital-forensics",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Document the current system state (screen, running processes, time) before touching anything",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Capture volatile data such as RAM contents and active network connections",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create a forensic image of the disk using a write blocker",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Securely transport and store the evidence following chain of custody procedures",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "secplus-113",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to onboard a new employee following secure identity and access management practices.",
+      "explanation": {
+        "correct": "Onboarding starts with an HR-triggered request specifying role, followed by role-based account provisioning, mandatory security training, and ongoing periodic access recertification thereafter.",
+        "incorrect": "Provisioning access before the role is specified by HR would lack the necessary role context, and periodic recertification is a repeated, ongoing activity that logically follows initial provisioning rather than preceding it.",
+        "examTip": "Role-based provisioning templates ensure new employees receive consistent, least-privilege access aligned with their specific job function from day one.",
+        "relatedTopics": [
+          "iam",
+          "provisioning-deprovisioning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "iam",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "HR initiates the onboarding request specifying the employee's role",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "IT provisions accounts and access based on the role's predefined access template",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "The employee completes required security awareness training",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Access is periodically reviewed and recertified against the employee's current role",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "secplus-114",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order for handling a suspected malware infection on a corporate laptop, following incident response best practices.",
+      "explanation": {
+        "correct": "Immediate network isolation contains the threat, followed by IR team notification and evidence preservation, malware analysis to extract IoCs, and finally remediation combined with an environment-wide sweep for the same indicators.",
+        "incorrect": "Analyzing the malware before isolating the infected host risks continued spread, and remediation/environment-wide sweeping logically requires the IoCs identified during analysis as a prerequisite input.",
+        "examTip": "Avoid powering off an infected machine immediately — doing so destroys volatile evidence (RAM) that could reveal how the malware operates.",
+        "relatedTopics": [
+          "incident-response",
+          "malware-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "incident-response",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Isolate the laptop from the network (disable Wi-Fi/unplug Ethernet) without powering it off",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Notify the incident response team and begin evidence preservation",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Analyze the malware sample and identify indicators of compromise (IoCs)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Remediate the system and search the environment for the same IoCs on other hosts",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "secplus-115",
+      "topicId": "security-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Sort each security testing technique into the correct category based on whether it requires the application to be running.",
+      "explanation": {
+        "correct": "DAST and fuzzing both interact with a live, running application to surface issues, while SAST and manual code review examine source code/binaries statically without execution.",
+        "incorrect": "This distinction determines WHEN in the SDLC each technique can realistically be applied — static techniques can run earlier, before a working build exists.",
+        "examTip": "Combining both static and dynamic techniques provides more complete coverage than relying on either approach alone.",
+        "relatedTopics": [
+          "sast-dast"
+        ]
+      },
+      "metadata": {
+        "examObjective": "sast-dast",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "DAST"
+        },
+        {
+          "id": "item2",
+          "text": "Fuzzing"
+        },
+        {
+          "id": "item3",
+          "text": "SAST"
+        },
+        {
+          "id": "item4",
+          "text": "Manual code review"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Requires the application to be actively running",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Analyzes code without executing the application",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "secplus-116",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each concept into the correct disaster recovery metric category.",
+      "explanation": {
+        "correct": "RTO and MTTR both relate to how long a system can be down or how long repair takes, while RPO measures acceptable data loss and MTBF measures the average time between failures.",
+        "incorrect": "This grouping tests recognizing which metrics cluster around 'time to restore/availability' versus 'time between/amount of loss'.",
+        "examTip": "MTBF is often used for PREVENTIVE planning (predicting failure frequency), while MTTR is REACTIVE (how fast can we fix it once it fails).",
+        "relatedTopics": [
+          "rto-rpo",
+          "mttr"
+        ]
+      },
+      "metadata": {
+        "examObjective": "rto-rpo",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "RTO"
+        },
+        {
+          "id": "item2",
+          "text": "MTTR"
+        },
+        {
+          "id": "item3",
+          "text": "RPO"
+        },
+        {
+          "id": "item4",
+          "text": "MTBF"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Measures acceptable downtime",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Measures acceptable data loss or failure frequency",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "secplus-117",
+      "topicId": "security-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Sort each forensic concept into the correct category.",
+      "explanation": {
+        "correct": "Chain of custody and legal holds govern the legal handling and preservation obligations around evidence, while disk imaging and RAM capture are the technical methods used to actually acquire that evidence.",
+        "incorrect": "Both categories are essential but serve different purposes — one is about legal/procedural integrity, the other about the technical act of collection itself.",
+        "examTip": "A broken chain of custody can render even a perfectly and technically acquired forensic image inadmissible in court.",
+        "relatedTopics": [
+          "chain-of-custody",
+          "digital-forensics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "chain-of-custody",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Chain of custody"
+        },
+        {
+          "id": "item2",
+          "text": "Legal hold"
+        },
+        {
+          "id": "item3",
+          "text": "Forensic disk imaging"
+        },
+        {
+          "id": "item4",
+          "text": "RAM capture"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Evidence handling/legal integrity process",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Evidence acquisition technique",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "secplus-118",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each data protection technique into the correct category based on reversibility.",
+      "explanation": {
+        "correct": "Tokenization and encryption can both be reversed (via a token vault lookup or decryption key respectively), while hashing and true anonymization are designed to be irreversible.",
+        "incorrect": "This reversibility distinction determines which technique to use when original data must later be recovered versus when it should never be recoverable.",
+        "examTip": "If you ever need to retrieve the original value later, you need a reversible technique (tokenization/encryption) — never rely on hashing for that purpose.",
+        "relatedTopics": [
+          "tokenization",
+          "data-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "tokenization",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Tokenization"
+        },
+        {
+          "id": "item2",
+          "text": "Encryption"
+        },
+        {
+          "id": "item3",
+          "text": "Hashing"
+        },
+        {
+          "id": "item4",
+          "text": "Data anonymization"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Reversible transformation",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Irreversible (one-way) transformation",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,530 @@
+{
+  "certificationId": "linux-essentials",
+  "topicId": "linux-community",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "lx010-001",
+      "type": "single-choice",
+      "topicId": "linux-community",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Who originally created the Linux kernel in 1991?",
+      "explanation": {
+        "correct": "Linus Torvalds, a Finnish student, released the first version of the Linux kernel in 1991.",
+        "incorrect": "Stallman founded the GNU Project and FSF; Ritchie co-created Unix and C; Shuttleworth founded Ubuntu/Canonical.",
+        "examTip": "Remember: Linus Torvalds = kernel, Richard Stallman = GNU userland tools. Together they form 'GNU/Linux'.",
+        "relatedTopics": [
+          "linux-history",
+          "gnu-project"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Linux Evolution and Popular Operating Systems",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Richard Stallman",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Linus Torvalds",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Dennis Ritchie",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Mark Shuttleworth",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-002",
+      "type": "single-choice",
+      "topicId": "linux-community",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Under which license is the Linux kernel primarily distributed?",
+      "explanation": {
+        "correct": "The Linux kernel is licensed under the GNU General Public License version 2 (GPLv2), a copyleft license.",
+        "incorrect": "MIT, Apache, and BSD are permissive licenses that do not require derivative works to stay open source; the kernel uses copyleft GPLv2 instead.",
+        "examTip": "GPL = copyleft, must share source of derivatives. MIT/BSD = permissive, can be closed-sourced.",
+        "relatedTopics": [
+          "open-source-licensing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Open Source Software and Licensing",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "MIT License",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Apache License 2.0",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "GNU General Public License v2",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "BSD 3-Clause License",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-003",
+      "type": "single-choice",
+      "topicId": "linux-community",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which package manager is used natively by Fedora and Red Hat Enterprise Linux?",
+      "explanation": {
+        "correct": "Fedora and RHEL use dnf (the successor to yum) to manage RPM packages.",
+        "incorrect": "apt is Debian/Ubuntu's manager, pacman is Arch Linux's manager, and zypper is used by openSUSE/SUSE.",
+        "examTip": "Match the family: Debian/Ubuntu=apt, Fedora/RHEL=dnf, Arch=pacman, SUSE=zypper.",
+        "relatedTopics": [
+          "distributions",
+          "package-managers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Major Open Source Applications",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "apt",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "pacman",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "dnf",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "zypper",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-004",
+      "type": "single-choice",
+      "topicId": "linux-community",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which organization, founded by Richard Stallman, promotes the philosophy of free software?",
+      "explanation": {
+        "correct": "Richard Stallman founded the Free Software Foundation (FSF) in 1985 to promote free software and launched the GNU Project.",
+        "incorrect": "The Linux Foundation supports kernel development and industry collaboration; the Apache Software Foundation and OSI are separate organizations with different missions.",
+        "examTip": "FSF = Stallman, 'free as in freedom.' GNU = 'GNU's Not Unix,' the FSF's operating system project.",
+        "relatedTopics": [
+          "gnu-project",
+          "fsf"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Linux Evolution and Popular Operating Systems",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "The Linux Foundation",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The Free Software Foundation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The Apache Software Foundation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The Open Source Initiative",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-005",
+      "type": "multiple-choice",
+      "topicId": "linux-community",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are considered copyleft open source licenses?",
+      "explanation": {
+        "correct": "GPL and LGPL are copyleft licenses: derivative works must also be distributed under the same or compatible license terms.",
+        "incorrect": "The MIT and BSD licenses are permissive licenses; they allow derivative works to be relicensed, including as proprietary software.",
+        "examTip": "Copyleft 'shares alike'; permissive lets you do almost anything, including closing the source.",
+        "relatedTopics": [
+          "open-source-licensing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Open Source Software and Licensing",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "GNU General Public License (GPL)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "MIT License",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "GNU Lesser General Public License (LGPL)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "BSD License",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-006",
+      "type": "multiple-choice",
+      "topicId": "linux-community",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO of the following distributions are based on Debian?",
+      "explanation": {
+        "correct": "Ubuntu and Linux Mint are both derived from Debian and use the apt/dpkg package management system.",
+        "incorrect": "Fedora is an independent, Red Hat-sponsored distribution using dnf/rpm, and openSUSE uses zypper/rpm.",
+        "examTip": "Debian family uses .deb packages and apt; Red Hat/SUSE families use .rpm packages.",
+        "relatedTopics": [
+          "distributions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Linux Evolution and Popular Operating Systems",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Ubuntu",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Fedora",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Linux Mint",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "openSUSE",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-007",
+      "type": "yes-no-statements",
+      "topicId": "linux-community",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about Linux and open source concepts as Yes or No.",
+      "explanation": {
+        "correct": "GNU/Linux correctly describes kernel+userland; a distribution bundles the kernel with a package manager, utilities, and often a desktop environment, so it is not the same as the kernel alone; Apache and Nginx are indeed both open source web servers.",
+        "incorrect": "The kernel is only the core of the operating system, not the whole distribution.",
+        "examTip": "Kernel = engine. Distribution = whole car (engine + body + wheels + software).",
+        "relatedTopics": [
+          "linux-history",
+          "distributions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Linux Evolution and Popular Operating Systems",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The term 'GNU/Linux' reflects that a typical Linux distribution combines the Linux kernel with GNU userland utilities.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A Linux 'distribution' is identical to the Linux 'kernel' and the two terms are interchangeable.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Apache HTTP Server and Nginx are both examples of open source web server software.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-008",
+      "type": "yes-no-statements",
+      "topicId": "linux-community",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about Linux in cloud and DevOps environments as Yes or No.",
+      "explanation": {
+        "correct": "Containers share the host kernel (that's what makes them lightweight compared to VMs); all major cloud providers offer Linux VM images; server distributions frequently ship with no GUI at all.",
+        "incorrect": "Many Linux servers, including most cloud and container images, are headless and run without any desktop environment.",
+        "examTip": "Containers vs VMs: containers share the host kernel; VMs each run a full separate kernel via a hypervisor.",
+        "relatedTopics": [
+          "cloud-devops",
+          "containers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Major Open Source Applications",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Docker containers running on a Linux host share that host's kernel rather than each running their own full kernel.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "AWS, Azure, and GCP offer Linux as one of the operating system choices for their virtual machine instances.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A Linux distribution is required to include a graphical desktop environment in order to be a valid distribution.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-009",
+      "type": "dropdown-select",
+      "topicId": "linux-community",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by choosing the correct term from its dropdown.",
+      "explanation": {
+        "correct": "dnf is the modern RPM package manager for Fedora/RHEL, and Ubuntu is Canonical's flagship Debian-based distribution.",
+        "incorrect": "apt belongs to Debian/Ubuntu, pacman to Arch, and zypper to SUSE — mixing these up is a common exam trap.",
+        "examTip": "Associate each company/community with its distro: Canonical=Ubuntu, Red Hat=Fedora/RHEL, SUSE=openSUSE.",
+        "relatedTopics": [
+          "distributions",
+          "package-managers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Linux Evolution and Popular Operating Systems",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The RPM-based package manager used to install software on Fedora and RHEL systems is",
+          "options": [
+            "apt",
+            "dnf",
+            "pacman",
+            "zypper"
+          ],
+          "correctAnswer": "dnf"
+        },
+        {
+          "id": "d2",
+          "prompt": "The Linux distribution primarily developed and sponsored by Canonical Ltd. is",
+          "options": [
+            "Fedora",
+            "Arch Linux",
+            "Ubuntu",
+            "openSUSE"
+          ],
+          "correctAnswer": "Ubuntu"
+        }
+      ]
+    },
+    {
+      "id": "lx010-010",
+      "type": "ordering",
+      "topicId": "linux-community",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the typical steps of contributing a code change to an open source project on a site like GitHub in the correct order.",
+      "explanation": {
+        "correct": "This is the standard open source contribution workflow: fork, clone, commit locally, then submit a pull request for review.",
+        "incorrect": "Skipping the fork step (working directly on the original repo) or opening a pull request before pushing changes would not work in this workflow.",
+        "examTip": "Fork-Clone-Commit-Pull request — the classic four-step open source contribution cycle.",
+        "relatedTopics": [
+          "open-source-collaboration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Major Open Source Applications",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Fork the project's repository into your own account",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Clone your fork to your local machine",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Make and commit your code changes locally",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Push the changes and open a pull request against the original project",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "lx010-011",
+      "type": "drag-drop",
+      "topicId": "linux-community",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Sort each software license into the correct licensing category.",
+      "explanation": {
+        "correct": "GPL and LGPL require derivative works to remain under compatible open terms (copyleft), while MIT and BSD allow much more freedom, including closed-source derivatives (permissive).",
+        "incorrect": "A common mistake is treating LGPL as permissive — it is still copyleft, just with weaker linking restrictions than GPL.",
+        "examTip": "Copyleft = 'share alike'; Permissive = 'do almost anything.'",
+        "relatedTopics": [
+          "open-source-licensing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Open Source Software and Licensing",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Copyleft License",
+          "acceptsItemIds": [
+            "item21",
+            "item22"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Permissive License",
+          "acceptsItemIds": [
+            "item23",
+            "item24"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item21",
+          "text": "GNU General Public License (GPL)"
+        },
+        {
+          "id": "item22",
+          "text": "GNU Lesser General Public License (LGPL)"
+        },
+        {
+          "id": "item23",
+          "text": "MIT License"
+        },
+        {
+          "id": "item24",
+          "text": "BSD License"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "linux-essentials",
+  "name": "Linux Essentials",
+  "provider": "LPI",
+  "examCode": "010-160",
+  "version": "2024-01",
+  "questionCount": 151,
+  "passingScore": 70,
+  "timeLimitMinutes": 60,
+  "topics": [
+    {
+      "id": "linux-community",
+      "name": "The Linux Community and a Career in Open Source",
+      "weight": 15
+    },
+    {
+      "id": "finding-your-way",
+      "name": "Finding Your Way on a Linux System",
+      "weight": 20
+    },
+    {
+      "id": "power-of-cli",
+      "name": "The Power of the Command Line",
+      "weight": 25
+    },
+    {
+      "id": "linux-os",
+      "name": "The Linux Operating System",
+      "weight": 20
+    },
+    {
+      "id": "security-permissions",
+      "name": "Security and File Permissions",
+      "weight": 20
+    }
+  ],
+  "icon": "/icons/lpi.svg",
+  "resources": [
+    {
+      "title": "LPI Linux Essentials Overview",
+      "url": "https://www.lpi.org/our-certifications/linux-essentials-overview"
+    },
+    {
+      "title": "LPI Linux Essentials Exam Objectives",
+      "url": "https://www.lpi.org/our-certifications/exam-010-objectives"
+    }
+  ],
+  "vendor": "LPI",
+  "vendorColor": "#FDC300",
+  "level": "beginner",
+  "accessTier": "free",
+  "description": "Validates the foundational skills and knowledge of the Linux operating system, open source concepts, and basic command-line proficiency.",
+  "examDetails": {
+    "durationMinutes": 60,
+    "questionCount": 40,
+    "passingScore": 70,
+    "priceUSD": 120
+  },
+  "topicChunks": [
+    {
+      "topicId": "linux-community",
+      "path": "/data/certifications/linux-essentials/topics/linux-community.json",
+      "questionCount": 11
+    },
+    {
+      "topicId": "finding-your-way",
+      "path": "/data/certifications/linux-essentials/topics/finding-your-way.json",
+      "questionCount": 26
+    },
+    {
+      "topicId": "power-of-cli",
+      "path": "/data/certifications/linux-essentials/topics/power-of-cli.json",
+      "questionCount": 39
+    },
+    {
+      "topicId": "linux-os",
+      "path": "/data/certifications/linux-essentials/topics/linux-os.json",
+      "questionCount": 30
+    },
+    {
+      "topicId": "security-permissions",
+      "path": "/data/certifications/linux-essentials/topics/security-permissions.json",
+      "questionCount": 45
+    }
+  ]
+}

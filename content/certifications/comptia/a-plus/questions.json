@@ -1,0 +1,2129 @@
+{
+  "certificationId": "comptia-a-plus",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "aplus-001",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following RAM types is commonly used in laptops?",
+      "options": [
+        {"id": "A", "text": "SO-DIMM DDR4", "isCorrect": true},
+        {"id": "B", "text": "DIMM DDR4", "isCorrect": false},
+        {"id": "C", "text": "RIMM DDR3", "isCorrect": false},
+        {"id": "D", "text": "SIMM DDR2", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "SO-DIMM (Small Outline DIMM) is the smaller form factor used in laptops.",
+        "incorrect": "DIMM is used in desktops; RIMM and SIMM are obsolete.",
+        "examTip": "Remember that laptops use SO-DIMM; desktops use DIMM.",
+        "relatedTopics": ["RAM types", "form factors"]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast RAM types and features",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-002",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TCP port is used for HTTPS?",
+      "options": [
+        {"id": "A", "text": "80", "isCorrect": false},
+        {"id": "B", "text": "443", "isCorrect": true},
+        {"id": "C", "text": "25", "isCorrect": false},
+        {"id": "D", "text": "53", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "HTTPS uses port 443 by default.",
+        "incorrect": "Port 80 is HTTP, 25 is SMTP, 53 is DNS.",
+        "examTip": "Memorize common port numbers: HTTP=80, HTTPS=443, SSH=22.",
+        "relatedTopics": ["TCP/IP ports", "web protocols"]
+      },
+      "metadata": {
+        "examObjective": "2.1: Compare and contrast common networking protocols and ports",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-003",
+      "exam": "core2",
+      "type": "single-choice",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Windows tool is used to view system event logs?",
+      "options": [
+        {"id": "A", "text": "Task Manager", "isCorrect": false},
+        {"id": "B", "text": "Event Viewer", "isCorrect": true},
+        {"id": "C", "text": "Device Manager", "isCorrect": false},
+        {"id": "D", "text": "Registry Editor", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "Event Viewer shows application, security, and system logs.",
+        "incorrect": "Task Manager shows processes; Device Manager manages hardware; Registry Editor edits the registry.",
+        "examTip": "Use Event Viewer to troubleshoot system errors and warnings.",
+        "relatedTopics": ["Windows administrative tools", "logging"]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-004",
+      "exam": "core1",
+      "type": "multiple-choice",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A user reports that their computer won't boot and makes beeping sounds. You suspect a hardware issue.",
+      "questionText": "Which of the following could cause this issue? (Choose two.)",
+      "options": [
+        {"id": "A", "text": "Loose RAM module", "isCorrect": true},
+        {"id": "B", "text": "Faulty power supply", "isCorrect": true},
+        {"id": "C", "text": "Corrupted operating system", "isCorrect": false},
+        {"id": "D", "text": "Outdated BIOS", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "Loose RAM and faulty PSU are common hardware causes of beep codes.",
+        "incorrect": "Corrupted OS and outdated BIOS are less likely to cause beep codes.",
+        "examTip": "Beep codes often indicate hardware problems like RAM or video.",
+        "relatedTopics": ["POST beep codes", "hardware troubleshooting"]
+      },
+      "metadata": {
+        "examObjective": "5.2: Given a scenario, troubleshoot hardware and network issues",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-005",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about IP addressing.",
+      "statements": [
+        {"id": "s1", "text": "IPv4 uses 32-bit addresses.", "isCorrectYes": true},
+        {"id": "s2", "text": "IPv6 uses 64-bit addresses.", "isCorrectYes": false},
+        {"id": "s3", "text": "APIPA addresses are in the 169.254.0.0/16 range.", "isCorrectYes": true},
+        {"id": "s4", "text": "DHCP is used for dynamic IP assignment.", "isCorrectYes": true}
+      ],
+      "explanation": {
+        "correct": "IPv4 is 32-bit; IPv6 is 128-bit; APIPA is 169.254.x.x; DHCP assigns IPs dynamically.",
+        "incorrect": "IPv6 is 128-bit, not 64-bit.",
+        "examTip": "Know the difference between IPv4 and IPv6 address lengths.",
+        "relatedTopics": ["IPv4 vs IPv6", "APIPA", "DHCP"]
+      },
+      "metadata": {
+        "examObjective": "2.2: Explain common networking concepts, including IP addressing",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-006",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct RAID level for each description.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Striping with no redundancy",
+          "options": ["RAID 0", "RAID 1", "RAID 5", "RAID 10"],
+          "correctAnswer": "RAID 0"
+        },
+        {
+          "id": "d2",
+          "prompt": "Mirroring",
+          "options": ["RAID 0", "RAID 1", "RAID 5", "RAID 10"],
+          "correctAnswer": "RAID 1"
+        },
+        {
+          "id": "d3",
+          "prompt": "Striping with parity",
+          "options": ["RAID 0", "RAID 1", "RAID 5", "RAID 10"],
+          "correctAnswer": "RAID 5"
+        }
+      ],
+      "explanation": {
+        "correct": "RAID 0 = striping, RAID 1 = mirroring, RAID 5 = striping with parity.",
+        "incorrect": "Other options don't match these definitions.",
+        "examTip": "RAID 5 requires at least 3 drives; RAID 10 is mirrored striped sets.",
+        "relatedTopics": ["RAID levels", "storage redundancy"]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast storage devices and RAID levels",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-007",
+      "exam": "core1",
+      "type": "ordering",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the steps to install a new M.2 NVMe SSD in a desktop PC.",
+      "orderItems": [
+        {"id": "o1", "text": "Power off the PC and unplug it", "correctPosition": 1},
+        {"id": "o2", "text": "Open the case and locate the M.2 slot", "correctPosition": 2},
+        {"id": "o3", "text": "Insert the M.2 drive at an angle and secure with screw", "correctPosition": 3},
+        {"id": "o4", "text": "Close the case and power on", "correctPosition": 4}
+      ],
+      "explanation": {
+        "correct": "1: Power off, 2: Open case, 3: Install drive, 4: Close and power on.",
+        "incorrect": "Ordering errors could damage components.",
+        "examTip": "Always ground yourself before handling internal components.",
+        "relatedTopics": ["M.2 installation", "storage installation"]
+      },
+      "metadata": {
+        "examObjective": "3.1: Given a scenario, install and configure storage devices",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-008",
+      "exam": "core2",
+      "type": "drag-drop",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each Windows tool to its primary function.",
+      "dragCategories": [
+        {"id": "cat1", "name": "Task Manager", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "Device Manager", "acceptsItemIds": ["item2"]},
+        {"id": "cat3", "name": "Event Viewer", "acceptsItemIds": ["item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Monitor performance and end processes"},
+        {"id": "item2", "text": "Update drivers and disable hardware"},
+        {"id": "item3", "text": "View system logs and errors"}
+      ],
+      "explanation": {
+        "correct": "Task Manager = end processes; Device Manager = manage drivers; Event Viewer = logs.",
+        "incorrect": "Mismatching functions indicates lack of familiarity.",
+        "examTip": "These tools are commonly used for troubleshooting.",
+        "relatedTopics": ["Windows administrative tools"]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-009",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which wireless standard operates at 5 GHz and supports speeds up to 1.3 Gbps?",
+      "options": [
+        {"id": "A", "text": "802.11ac", "isCorrect": true},
+        {"id": "B", "text": "802.11n", "isCorrect": false},
+        {"id": "C", "text": "802.11a", "isCorrect": false},
+        {"id": "D", "text": "802.11b", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "802.11ac (Wi-Fi 5) operates at 5 GHz and is faster than 802.11n.",
+        "incorrect": "802.11n supports both 2.4 and 5 GHz but is slower.",
+        "examTip": "802.11ac is the predecessor to Wi-Fi 6 (802.11ax).",
+        "relatedTopics": ["Wireless standards", "Wi-Fi frequencies"]
+      },
+      "metadata": {
+        "examObjective": "2.4: Compare and contrast wireless networking protocols",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-010",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "You are troubleshooting a Windows 11 system that is slow to boot.",
+      "questionText": "Which of the following tools can help identify startup issues? (Choose two.)",
+      "options": [
+        {"id": "A", "text": "msconfig", "isCorrect": true},
+        {"id": "B", "text": "Task Manager (Startup tab)", "isCorrect": true},
+        {"id": "C", "text": "Disk Cleanup", "isCorrect": false},
+        {"id": "D", "text": "PowerShell Get-Process", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "msconfig and Task Manager's Startup tab can disable startup programs.",
+        "incorrect": "Disk Cleanup frees space but doesn't address startup; Get-Process shows processes.",
+        "examTip": "Slow boot is often caused by too many startup programs.",
+        "relatedTopics": ["Startup management", "Windows performance"]
+      },
+      "metadata": {
+        "examObjective": "1.4: Given a scenario, use the appropriate Windows OS troubleshooting tools",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-011",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Determine if each statement about motherboard form factors is true or false.",
+      "statements": [
+        {"id": "s1", "text": "ATX is larger than ITX.", "isCorrectYes": true},
+        {"id": "s2", "text": "mATX supports more expansion slots than ATX.", "isCorrectYes": false},
+        {"id": "s3", "text": "ITX boards are commonly used in small form factor builds.", "isCorrectYes": true},
+        {"id": "s4", "text": "ATX and mATX have the same mounting holes.", "isCorrectYes": false}
+      ],
+      "explanation": {
+        "correct": "ATX > mATX > ITX; mATX has fewer slots; ITX is small; mounting holes differ.",
+        "incorrect": "ATX supports more slots than mATX.",
+        "examTip": "Form factors: ATX (full), mATX (micro), ITX (mini).",
+        "relatedTopics": ["Motherboard form factors", "PC building"]
+      },
+      "metadata": {
+        "examObjective": "1.2: Compare and contrast motherboard form factors",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-012",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match the networking tool to its purpose.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Tests connectivity and measures latency",
+          "options": ["ping", "tracert", "netstat", "nslookup"],
+          "correctAnswer": "ping"
+        },
+        {
+          "id": "d2",
+          "prompt": "Displays active connections and ports",
+          "options": ["ping", "tracert", "netstat", "nslookup"],
+          "correctAnswer": "netstat"
+        },
+        {
+          "id": "d3",
+          "prompt": "Queries DNS for domain name resolution",
+          "options": ["ping", "tracert", "netstat", "nslookup"],
+          "correctAnswer": "nslookup"
+        }
+      ],
+      "explanation": {
+        "correct": "ping = connectivity; netstat = connections; nslookup = DNS.",
+        "incorrect": "Other tools have different purposes.",
+        "examTip": "Use tracert to trace the route to a destination.",
+        "relatedTopics": ["Network troubleshooting tools"]
+      },
+      "metadata": {
+        "examObjective": "2.3: Given a scenario, troubleshoot networking issues using appropriate tools",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-013",
+      "exam": "core2",
+      "type": "ordering",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Order the steps to perform a clean Windows 11 installation from a USB drive.",
+      "orderItems": [
+        {"id": "o1", "text": "Back up important data", "correctPosition": 1},
+        {"id": "o2", "text": "Create a bootable USB drive with Windows 11 media", "correctPosition": 2},
+        {"id": "o3", "text": "Boot from USB and select installation drive", "correctPosition": 3},
+        {"id": "o4", "text": "Follow the installation wizard and complete setup", "correctPosition": 4}
+      ],
+      "explanation": {
+        "correct": "1: Backup, 2: Create USB, 3: Boot and select drive, 4: Install.",
+        "incorrect": "Skipping backup can lead to data loss.",
+        "examTip": "Always back up data before performing a clean install.",
+        "relatedTopics": ["Windows installation", "clean install"]
+      },
+      "metadata": {
+        "examObjective": "1.5: Given a scenario, install Windows OS upgrades and updates",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-014",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which connector is used to provide power to a SATA hard drive?",
+      "options": [
+        {"id": "A", "text": "Molex", "isCorrect": false},
+        {"id": "B", "text": "SATA power", "isCorrect": true},
+        {"id": "C", "text": "PCIe power", "isCorrect": false},
+        {"id": "D", "text": "ATX 12V", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "SATA drives use a SATA power connector (15-pin).",
+        "incorrect": "Molex is older; PCIe power is for GPUs; ATX 12V is for CPU.",
+        "examTip": "SATA data and power cables are different.",
+        "relatedTopics": ["SATA connectors", "power supply connectors"]
+      },
+      "metadata": {
+        "examObjective": "3.2: Compare and contrast common connectors and cables",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-015",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are valid methods to update drivers in Windows? (Choose two.)",
+      "options": [
+        {"id": "A", "text": "Device Manager", "isCorrect": true},
+        {"id": "B", "text": "Windows Update", "isCorrect": true},
+        {"id": "C", "text": "Registry Editor", "isCorrect": false},
+        {"id": "D", "text": "msconfig", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "Device Manager allows manual driver update; Windows Update may provide drivers.",
+        "incorrect": "Registry and msconfig are not for driver updates.",
+        "examTip": "Always get drivers from the manufacturer's website if possible.",
+        "relatedTopics": ["Driver management", "Windows Update"]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-016",
+      "exam": "core1",
+      "type": "drag-drop",
+      "topicId": "networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each TCP port to its service.",
+      "dragCategories": [
+        {"id": "cat1", "name": "FTP", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "SSH", "acceptsItemIds": ["item2"]},
+        {"id": "cat3", "name": "HTTP", "acceptsItemIds": ["item3"]},
+        {"id": "cat4", "name": "HTTPS", "acceptsItemIds": ["item4"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "21"},
+        {"id": "item2", "text": "22"},
+        {"id": "item3", "text": "80"},
+        {"id": "item4", "text": "443"}
+      ],
+      "explanation": {
+        "correct": "FTP=21, SSH=22, HTTP=80, HTTPS=443.",
+        "incorrect": "Mismatching ports and services is common.",
+        "examTip": "Memorize these common ports: 21, 22, 23, 25, 80, 443.",
+        "relatedTopics": ["TCP/IP ports", "common services"]
+      },
+      "metadata": {
+        "examObjective": "2.1: Compare and contrast common networking protocols and ports",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-017",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which type of printer uses heat to transfer dye onto paper?",
+      "options": [
+        {"id": "A", "text": "Laser", "isCorrect": false},
+        {"id": "B", "text": "Inkjet", "isCorrect": false},
+        {"id": "C", "text": "Thermal", "isCorrect": true},
+        {"id": "D", "text": "Impact", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "Thermal printers use heat to produce images on heat-sensitive paper.",
+        "incorrect": "Laser uses toner and heat fusion; inkjet sprays ink; impact strikes ribbon.",
+        "examTip": "Thermal printers are common in POS systems.",
+        "relatedTopics": ["Printer types", "thermal printing"]
+      },
+      "metadata": {
+        "examObjective": "1.5: Compare and contrast printer types and consumables",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-018",
+      "exam": "core2",
+      "type": "yes-no-statements",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about Windows backup types.",
+      "statements": [
+        {"id": "s1", "text": "A full backup backs up all selected files.", "isCorrectYes": true},
+        {"id": "s2", "text": "An incremental backup backs up files changed since the last full backup.", "isCorrectYes": false},
+        {"id": "s3", "text": "A differential backup backs up files changed since the last full backup.", "isCorrectYes": true},
+        {"id": "s4", "text": "Incremental backups require the full backup and all subsequent incrementals to restore.", "isCorrectYes": true}
+      ],
+      "explanation": {
+        "correct": "Full = all; incremental = changes since last incremental (not full); differential = since last full.",
+        "incorrect": "Incremental is since last incremental, not last full.",
+        "examTip": "Differential restores are faster than incremental.",
+        "relatedTopics": ["Backup types", "recovery strategies"]
+      },
+      "metadata": {
+        "examObjective": "1.7: Explain the importance of backups and recovery",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-019",
+      "exam": "core1",
+      "type": "multiple-choice",
+      "topicId": "networking",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "You are setting up a small office network with 5 computers. You need to assign IP addresses automatically.",
+      "questionText": "Which of the following should you configure? (Choose two.)",
+      "options": [
+        {"id": "A", "text": "DHCP server", "isCorrect": true},
+        {"id": "B", "text": "DNS server", "isCorrect": false},
+        {"id": "C", "text": "Router with DHCP enabled", "isCorrect": true},
+        {"id": "D", "text": "Static IP on each computer", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "DHCP server or router with DHCP can assign IPs automatically.",
+        "incorrect": "DNS is for name resolution; static IP requires manual config.",
+        "examTip": "Most SOHO routers have built-in DHCP.",
+        "relatedTopics": ["DHCP", "IP address management"]
+      },
+      "metadata": {
+        "examObjective": "2.5: Given a scenario, configure a SOHO router and wireless network",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-020",
+      "exam": "core2",
+      "type": "dropdown-select",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the Linux command that matches each description.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "List directory contents",
+          "options": ["ls", "cd", "pwd", "grep"],
+          "correctAnswer": "ls"
+        },
+        {
+          "id": "d2",
+          "prompt": "Change directory",
+          "options": ["ls", "cd", "pwd", "grep"],
+          "correctAnswer": "cd"
+        },
+        {
+          "id": "d3",
+          "prompt": "Search text using patterns",
+          "options": ["ls", "cd", "pwd", "grep"],
+          "correctAnswer": "grep"
+        }
+      ],
+      "explanation": {
+        "correct": "ls lists, cd changes, grep searches.",
+        "incorrect": "pwd shows current directory.",
+        "examTip": "grep is powerful for searching logs.",
+        "relatedTopics": ["Linux commands", "command-line basics"]
+      },
+      "metadata": {
+        "examObjective": "1.10: Given a scenario, use the appropriate Linux commands",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-021",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the maximum data transfer rate of SATA III?",
+      "options": [
+        {"id": "A", "text": "1.5 Gbps", "isCorrect": false},
+        {"id": "B", "text": "3 Gbps", "isCorrect": false},
+        {"id": "C", "text": "6 Gbps", "isCorrect": true},
+        {"id": "D", "text": "12 Gbps", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "SATA III supports up to 6 Gbps.",
+        "incorrect": "SATA I is 1.5 Gbps, SATA II is 3 Gbps.",
+        "examTip": "SATA III is often backwards compatible.",
+        "relatedTopics": ["SATA standards", "storage interfaces"]
+      },
+      "metadata": {
+        "examObjective": "3.1: Compare and contrast storage devices and interfaces",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-022",
+      "exam": "core2",
+      "type": "ordering",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to use System Restore in Windows.",
+      "orderItems": [
+        {"id": "o1", "text": "Open System Properties and select System Restore", "correctPosition": 1},
+        {"id": "o2", "text": "Choose a restore point before the issue occurred", "correctPosition": 2},
+        {"id": "o3", "text": "Confirm the restore point and start the process", "correctPosition": 3},
+        {"id": "o4", "text": "Wait for the system to restart and restore", "correctPosition": 4}
+      ],
+      "explanation": {
+        "correct": "1: Open System Restore, 2: Select restore point, 3: Confirm, 4: Restart.",
+        "incorrect": "Skipping or wrong order can cause the restore to fail.",
+        "examTip": "System Restore does not affect personal files.",
+        "relatedTopics": ["System Restore", "Windows recovery"]
+      },
+      "metadata": {
+        "examObjective": "1.6: Given a scenario, troubleshoot Windows OS problems",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-023",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "mobile-devices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Determine if each statement about mobile device connectors is true or false.",
+      "statements": [
+        {"id": "s1", "text": "USB-C supports video output.", "isCorrectYes": true},
+        {"id": "s2", "text": "Lightning is an open standard.", "isCorrectYes": false},
+        {"id": "s3", "text": "micro-USB supports USB OTG.", "isCorrectYes": true},
+        {"id": "s4", "text": "Thunderbolt 3 uses USB-C connector.", "isCorrectYes": true}
+      ],
+      "explanation": {
+        "correct": "USB-C supports video; Lightning is proprietary; micro-USB supports OTG; Thunderbolt 3 uses USB-C.",
+        "incorrect": "Lightning is Apple proprietary.",
+        "examTip": "USB-C is becoming the universal connector.",
+        "relatedTopics": ["Mobile device connectors", "USB standards"]
+      },
+      "metadata": {
+        "examObjective": "1.4: Compare and contrast mobile device connectors and cables",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-024",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which cable type is most commonly used for Ethernet networking?",
+      "options": [
+        {"id": "A", "text": "Coaxial", "isCorrect": false},
+        {"id": "B", "text": "Fiber optic", "isCorrect": false},
+        {"id": "C", "text": "Twisted pair", "isCorrect": true},
+        {"id": "D", "text": "USB", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "Twisted pair (Cat5e/6) is the standard for Ethernet.",
+        "incorrect": "Coaxial is used for cable TV; fiber is high-speed; USB is peripheral.",
+        "examTip": "Cat5e and Cat6 are common twisted pair cables.",
+        "relatedTopics": ["Ethernet cables", "network media"]
+      },
+      "metadata": {
+        "examObjective": "2.6: Compare and contrast network cables and connectors",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-025",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A user's Windows 10 computer is infected with malware that prevents internet access.",
+      "questionText": "Which of the following commands can help identify network issues? (Choose two.)",
+      "options": [
+        {"id": "A", "text": "ipconfig", "isCorrect": true},
+        {"id": "B", "text": "netstat", "isCorrect": true},
+        {"id": "C", "text": "dir", "isCorrect": false},
+        {"id": "D", "text": "chkdsk", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "ipconfig shows IP config; netstat shows active connections and ports.",
+        "incorrect": "dir lists files; chkdsk checks disk.",
+        "examTip": "netstat -an shows all connections in numeric form.",
+        "relatedTopics": ["Network troubleshooting", "Windows commands"]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-026",
+      "exam": "core1",
+      "type": "drag-drop",
+      "topicId": "hardware",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each connector to its primary use.",
+      "dragCategories": [
+        {"id": "cat1", "name": "HDMI", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "DisplayPort", "acceptsItemIds": ["item2"]},
+        {"id": "cat3", "name": "VGA", "acceptsItemIds": ["item3"]},
+        {"id": "cat4", "name": "DVI", "acceptsItemIds": ["item4"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Audio + video for monitors/TVs"},
+        {"id": "item2", "text": "High-resolution video with daisy-chaining"},
+        {"id": "item3", "text": "Analog video (older monitors)"},
+        {"id": "item4", "text": "Digital video (older standard)"}
+      ],
+      "explanation": {
+        "correct": "HDMI=audio+video; DisplayPort=high-res; VGA=analog; DVI=digital.",
+        "incorrect": "VGA is analog, not digital.",
+        "examTip": "DisplayPort supports daisy-chaining.",
+        "relatedTopics": ["Display connectors", "video standards"]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast display connectors and cables",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-027",
+      "exam": "core2",
+      "type": "yes-no-statements",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about Windows Registry.",
+      "statements": [
+        {"id": "s1", "text": "Registry contains configuration settings for Windows.", "isCorrectYes": true},
+        {"id": "s2", "text": "Registry editing is recommended for daily use.", "isCorrectYes": false},
+        {"id": "s3", "text": "Registry backups should be made before making changes.", "isCorrectYes": true},
+        {"id": "s4", "text": "Registry includes HKEY_LOCAL_MACHINE and HKEY_CURRENT_USER.", "isCorrectYes": true}
+      ],
+      "explanation": {
+        "correct": "Registry stores config; editing can be risky; always backup; hives include HKLM and HKCU.",
+        "incorrect": "Registry editing should be done cautiously.",
+        "examTip": "Export a registry key before editing it.",
+        "relatedTopics": ["Windows Registry", "system configuration"]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-028",
+      "exam": "core1",
+      "type": "ordering",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the steps to install a new CPU in a motherboard.",
+      "orderItems": [
+        {"id": "o1", "text": "Unlock the CPU socket lever", "correctPosition": 1},
+        {"id": "o2", "text": "Align the CPU with the socket using the gold triangle", "correctPosition": 2},
+        {"id": "o3", "text": "Place the CPU into the socket without force", "correctPosition": 3},
+        {"id": "o4", "text": "Lock the socket lever and apply thermal paste", "correctPosition": 4}
+      ],
+      "explanation": {
+        "correct": "1: Unlock, 2: Align, 3: Place, 4: Lock and apply paste.",
+        "incorrect": "Forcing the CPU can bend pins.",
+        "examTip": "Match the gold triangle on the CPU to the socket.",
+        "relatedTopics": ["CPU installation", "motherboard setup"]
+      },
+      "metadata": {
+        "examObjective": "3.4: Given a scenario, install and configure CPU and cooling",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-029",
+      "exam": "core2",
+      "type": "single-choice",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Windows feature is used to prevent unauthorized access to files and folders?",
+      "options": [
+        {"id": "A", "text": "Windows Defender", "isCorrect": false},
+        {"id": "B", "text": "NTFS permissions", "isCorrect": true},
+        {"id": "C", "text": "Task Scheduler", "isCorrect": false},
+        {"id": "D", "text": "PowerShell", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "NTFS permissions control access to files and folders.",
+        "incorrect": "Windows Defender is antivirus; Task Scheduler schedules tasks; PowerShell is scripting.",
+        "examTip": "NTFS permissions include Read, Write, and Full Control.",
+        "relatedTopics": ["NTFS permissions", "file security"]
+      },
+      "metadata": {
+        "examObjective": "1.8: Compare and contrast Windows file system and storage",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-030",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct IP address class for each range.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "10.0.0.0 – 10.255.255.255",
+          "options": ["Class A", "Class B", "Class C", "Class D"],
+          "correctAnswer": "Class A"
+        },
+        {
+          "id": "d2",
+          "prompt": "172.16.0.0 – 172.31.255.255",
+          "options": ["Class A", "Class B", "Class C", "Class D"],
+          "correctAnswer": "Class B"
+        },
+        {
+          "id": "d3",
+          "prompt": "192.168.0.0 – 192.168.255.255",
+          "options": ["Class A", "Class B", "Class C", "Class D"],
+          "correctAnswer": "Class C"
+        }
+      ],
+      "explanation": {
+        "correct": "10.x.x.x = Class A; 172.16-31.x.x = Class B; 192.168.x.x = Class C.",
+        "incorrect": "These are private IP ranges.",
+        "examTip": "Private IPs are not routable on the internet.",
+        "relatedTopics": ["IP address classes", "private IP addressing"]
+      },
+      "metadata": {
+        "examObjective": "2.2: Explain common networking concepts, including IP addressing",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-031",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which storage device uses flash memory and has no moving parts?",
+      "options": [
+        {"id": "A", "text": "HDD", "isCorrect": false},
+        {"id": "B", "text": "SSD", "isCorrect": true},
+        {"id": "C", "text": "DVD", "isCorrect": false},
+        {"id": "D", "text": "Magnetic tape", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "SSDs use flash memory and are faster due to no moving parts.",
+        "incorrect": "HDDs have spinning platters; DVD and tape are also mechanical.",
+        "examTip": "SSDs are quieter and more shock-resistant.",
+        "relatedTopics": ["SSD vs HDD", "storage technologies"]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast storage devices and RAID levels",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-032",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "You are tasked with automating a repetitive task on a Windows server.",
+      "questionText": "Which scripting languages are commonly used for Windows automation? (Choose two.)",
+      "options": [
+        {"id": "A", "text": "Batch", "isCorrect": true},
+        {"id": "B", "text": "PowerShell", "isCorrect": true},
+        {"id": "C", "text": "Bash", "isCorrect": false},
+        {"id": "D", "text": "Python", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "Batch and PowerShell are native to Windows.",
+        "incorrect": "Bash is Linux; Python is cross-platform but not native.",
+        "examTip": "PowerShell is more powerful and modern than Batch.",
+        "relatedTopics": ["Scripting basics", "Windows automation"]
+      },
+      "metadata": {
+        "examObjective": "1.12: Given a scenario, use the appropriate scripting language",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-033",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Determine if each statement about power supply connectors is true or false.",
+      "statements": [
+        {"id": "s1", "text": "The 24-pin ATX connector powers the motherboard.", "isCorrectYes": true},
+        {"id": "s2", "text": "The 4/8-pin 12V connector powers the GPU.", "isCorrectYes": false},
+        {"id": "s3", "text": "PCIe power connectors are used for graphics cards.", "isCorrectYes": true},
+        {"id": "s4", "text": "SATA power connectors are used for hard drives and SSDs.", "isCorrectYes": true}
+      ],
+      "explanation": {
+        "correct": "24-pin = motherboard; 4/8-pin = CPU; PCIe = GPU; SATA = drives.",
+        "incorrect": "4/8-pin 12V is for the CPU, not GPU.",
+        "examTip": "Modern GPUs require 6-pin or 8-pin PCIe power.",
+        "relatedTopics": ["PSU connectors", "power supply"]
+      },
+      "metadata": {
+        "examObjective": "3.2: Compare and contrast common connectors and cables",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-034",
+      "exam": "core2",
+      "type": "ordering",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to use Disk Cleanup in Windows.",
+      "orderItems": [
+        {"id": "o1", "text": "Open Disk Cleanup and select the drive", "correctPosition": 1},
+        {"id": "o2", "text": "Select file types to delete (temporary files, etc.)", "correctPosition": 2},
+        {"id": "o3", "text": "Click OK to delete the files", "correctPosition": 3},
+        {"id": "o4", "text": "Confirm deletion", "correctPosition": 4}
+      ],
+      "explanation": {
+        "correct": "1: Open Disk Cleanup, 2: Select files, 3: OK, 4: Confirm.",
+        "incorrect": "Skipping confirmation could delete important files.",
+        "examTip": "Disk Cleanup helps free up space on the system drive.",
+        "relatedTopics": ["Disk management", "Windows performance"]
+      },
+      "metadata": {
+        "examObjective": "1.6: Given a scenario, troubleshoot Windows OS problems",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-035",
+      "exam": "core1",
+      "type": "drag-drop",
+      "topicId": "hardware",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each RAID level to its description.",
+      "dragCategories": [
+        {"id": "cat1", "name": "RAID 0", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "RAID 1", "acceptsItemIds": ["item2"]},
+        {"id": "cat3", "name": "RAID 5", "acceptsItemIds": ["item3"]},
+        {"id": "cat4", "name": "RAID 10", "acceptsItemIds": ["item4"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Striping, no redundancy"},
+        {"id": "item2", "text": "Mirroring, 1:1 copy"},
+        {"id": "item3", "text": "Striping with distributed parity"},
+        {"id": "item4", "text": "Mirrored striped set"}
+      ],
+      "explanation": {
+        "correct": "RAID 0 = striping; RAID 1 = mirroring; RAID 5 = striping with parity; RAID 10 = mirrored striped.",
+        "incorrect": "Mismatching RAID levels indicates confusion.",
+        "examTip": "RAID 5 requires at least 3 drives; RAID 10 requires at least 4.",
+        "relatedTopics": ["RAID levels", "storage redundancy"]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast storage devices and RAID levels",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-036",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which device is used to connect multiple network segments and filter traffic based on MAC addresses?",
+      "options": [
+        {"id": "A", "text": "Router", "isCorrect": false},
+        {"id": "B", "text": "Switch", "isCorrect": true},
+        {"id": "C", "text": "Hub", "isCorrect": false},
+        {"id": "D", "text": "Bridge", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "A switch filters traffic based on MAC addresses.",
+        "incorrect": "Router uses IP addresses; hub broadcasts; bridge connects segments.",
+        "examTip": "Switches are more efficient than hubs.",
+        "relatedTopics": ["Network devices", "switching"]
+      },
+      "metadata": {
+        "examObjective": "2.7: Compare and contrast network devices",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-037",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are features of Windows 11? (Choose two.)",
+      "options": [
+        {"id": "A", "text": "Android app support", "isCorrect": true},
+        {"id": "B", "text": "Snap Layouts", "isCorrect": true},
+        {"id": "C", "text": "Internet Explorer", "isCorrect": false},
+        {"id": "D", "text": "Cortana integrated in setup", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "Windows 11 supports Android apps and Snap Layouts.",
+        "incorrect": "Internet Explorer is deprecated; Cortana is less prominent.",
+        "examTip": "Windows 11 requires TPM 2.0 and secure boot.",
+        "relatedTopics": ["Windows 11 features", "Windows versions"]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast Windows versions and features",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-038",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct display port for each description.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Supports audio and video, uses a small trapezoid connector",
+          "options": ["HDMI", "DisplayPort", "DVI", "VGA"],
+          "correctAnswer": "HDMI"
+        },
+        {
+          "id": "d2",
+          "prompt": "Digital-only, found on older monitors and GPUs",
+          "options": ["HDMI", "DisplayPort", "DVI", "VGA"],
+          "correctAnswer": "DVI"
+        },
+        {
+          "id": "d3",
+          "prompt": "Analog-only, older standard",
+          "options": ["HDMI", "DisplayPort", "DVI", "VGA"],
+          "correctAnswer": "VGA"
+        }
+      ],
+      "explanation": {
+        "correct": "HDMI = audio+video; DVI = digital; VGA = analog.",
+        "incorrect": "DisplayPort also supports audio and video.",
+        "examTip": "VGA is being phased out for digital standards.",
+        "relatedTopics": ["Display connectors", "video standards"]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast display connectors and cables",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-039",
+      "exam": "core2",
+      "type": "yes-no-statements",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about Windows File Explorer.",
+      "statements": [
+        {"id": "s1", "text": "File Explorer supports file search.", "isCorrectYes": true},
+        {"id": "s2", "text": "File Explorer can map network drives.", "isCorrectYes": true},
+        {"id": "s3", "text": "File Explorer does not show file extensions by default.", "isCorrectYes": false},
+        {"id": "s4", "text": "File Explorer can create compressed folders.", "isCorrectYes": true}
+      ],
+      "explanation": {
+        "correct": "File Explorer supports search, mapping, and compressed folders.",
+        "incorrect": "File Explorer does show extensions if enabled.",
+        "examTip": "Enable 'File name extensions' in the View tab.",
+        "relatedTopics": ["File Explorer", "Windows UI"]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast Windows versions and features",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-040",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "mobile-devices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which mobile operating system is open-source?",
+      "options": [
+        {"id": "A", "text": "Android", "isCorrect": true},
+        {"id": "B", "text": "iOS", "isCorrect": false},
+        {"id": "C", "text": "Windows Phone", "isCorrect": false},
+        {"id": "D", "text": "BlackBerry OS", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "Android is open-source; iOS, Windows Phone, and BlackBerry are closed.",
+        "incorrect": "iOS is proprietary.",
+        "examTip": "Android is based on the Linux kernel.",
+        "relatedTopics": ["Mobile OS", "Android vs iOS"]
+      },
+      "metadata": {
+        "examObjective": "1.6: Compare and contrast mobile operating systems",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-041",
+      "exam": "core1",
+      "type": "ordering",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to install a SATA hard drive in a desktop PC.",
+      "orderItems": [
+        {"id": "o1", "text": "Power off PC and open case", "correctPosition": 1},
+        {"id": "o2", "text": "Mount the drive in a drive bay", "correctPosition": 2},
+        {"id": "o3", "text": "Connect SATA data cable to motherboard and drive", "correctPosition": 3},
+        {"id": "o4", "text": "Connect SATA power cable", "correctPosition": 4}
+      ],
+      "explanation": {
+        "correct": "1: Power off, 2: Mount, 3: Data cable, 4: Power cable.",
+        "incorrect": "SATA data and power connectors are different.",
+        "examTip": "SATA drives are hot-swappable but always power down first.",
+        "relatedTopics": ["SATA installation", "storage installation"]
+      },
+      "metadata": {
+        "examObjective": "3.1: Given a scenario, install and configure storage devices",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-042",
+      "exam": "core2",
+      "type": "drag-drop",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each Windows command to its function.",
+      "dragCategories": [
+        {"id": "cat1", "name": "chkdsk", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "sfc /scannow", "acceptsItemIds": ["item2"]},
+        {"id": "cat3", "name": "diskpart", "acceptsItemIds": ["item3"]},
+        {"id": "cat4", "name": "ipconfig", "acceptsItemIds": ["item4"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Check disk for errors"},
+        {"id": "item2", "text": "System File Checker – verify system files"},
+        {"id": "item3", "text": "Disk partition management"},
+        {"id": "item4", "text": "Display IP configuration"}
+      ],
+      "explanation": {
+        "correct": "chkdsk = disk check; sfc = system file check; diskpart = partition; ipconfig = IP config.",
+        "incorrect": "Mismatching commands and functions.",
+        "examTip": "sfc /scannow is used to repair system files.",
+        "relatedTopics": ["Windows commands", "command-line tools"]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-043",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which protocol is used to automatically assign IP addresses?",
+      "options": [
+        {"id": "A", "text": "DHCP", "isCorrect": true},
+        {"id": "B", "text": "DNS", "isCorrect": false},
+        {"id": "C", "text": "HTTP", "isCorrect": false},
+        {"id": "D", "text": "FTP", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "DHCP (Dynamic Host Configuration Protocol) assigns IPs automatically.",
+        "incorrect": "DNS resolves names; HTTP/FTP are transfer protocols.",
+        "examTip": "DHCP uses UDP ports 67 and 68.",
+        "relatedTopics": ["DHCP", "IP addressing"]
+      },
+      "metadata": {
+        "examObjective": "2.2: Explain common networking concepts, including IP addressing",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-044",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A user cannot log in to their Windows 10 workstation after entering an incorrect password multiple times.",
+      "questionText": "Which of the following actions should you take? (Choose two.)",
+      "options": [
+        {"id": "A", "text": "Reset the user's password using the administrator account", "isCorrect": true},
+        {"id": "B", "text": "Unlock the user account in Active Directory", "isCorrect": true},
+        {"id": "C", "text": "Restart the computer", "isCorrect": false},
+        {"id": "D", "text": "Reinstall Windows", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "Reset password via admin; unlock account in AD if domain-joined.",
+        "incorrect": "Restarting doesn't fix account lockouts; reinstall is extreme.",
+        "examTip": "Account lockout policies can cause this.",
+        "relatedTopics": ["Account management", "Active Directory"]
+      },
+      "metadata": {
+        "examObjective": "1.4: Given a scenario, troubleshoot Windows OS problems",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-045",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Determine if each statement about CPU sockets is true or false.",
+      "statements": [
+        {"id": "s1", "text": "Intel uses LGA sockets.", "isCorrectYes": true},
+        {"id": "s2", "text": "AMD uses PGA sockets.", "isCorrectYes": true},
+        {"id": "s3", "text": "LGA sockets have pins on the CPU.", "isCorrectYes": false},
+        {"id": "s4", "text": "PGA sockets have pins on the motherboard.", "isCorrectYes": false}
+      ],
+      "explanation": {
+        "correct": "Intel=LGA (pins on motherboard); AMD=PGA (pins on CPU).",
+        "incorrect": "LGA pins on motherboard; PGA pins on CPU.",
+        "examTip": "Always align CPU properly to avoid damaging pins.",
+        "relatedTopics": ["CPU sockets", "AMD vs Intel"]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast CPU architecture and sockets",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-046",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct storage technology for each characteristic.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Uses NAND flash and has no moving parts",
+          "options": ["SSD", "HDD", "NVMe", "SATA"],
+          "correctAnswer": "SSD"
+        },
+        {
+          "id": "d2",
+          "prompt": "Uses spinning platters and read/write heads",
+          "options": ["SSD", "HDD", "NVMe", "SATA"],
+          "correctAnswer": "HDD"
+        },
+        {
+          "id": "d3",
+          "prompt": "High-speed interface using PCIe",
+          "options": ["SSD", "HDD", "NVMe", "SATA"],
+          "correctAnswer": "NVMe"
+        }
+      ],
+      "explanation": {
+        "correct": "SSD=flash no moving parts; HDD=spinning; NVMe=PCIe interface.",
+        "incorrect": "SATA is an interface, not storage type.",
+        "examTip": "NVMe is faster than SATA SSDs.",
+        "relatedTopics": ["SSD vs HDD", "NVMe", "SATA"]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast storage devices and RAID levels",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-047",
+      "exam": "core2",
+      "type": "ordering",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Order the steps to perform a malware removal in Windows.",
+      "orderItems": [
+        {"id": "o1", "text": "Isolate the system from the network", "correctPosition": 1},
+        {"id": "o2", "text": "Run antivirus/anti-malware scan", "correctPosition": 2},
+        {"id": "o3", "text": "Remove/quarantine detected malware", "correctPosition": 3},
+        {"id": "o4", "text": "Update antivirus and re-scan", "correctPosition": 4}
+      ],
+      "explanation": {
+        "correct": "1: Isolate, 2: Scan, 3: Remove, 4: Update and re-scan.",
+        "incorrect": "Isolation prevents spread.",
+        "examTip": "Always update malware definitions before scanning.",
+        "relatedTopics": ["Malware removal", "security best practices"]
+      },
+      "metadata": {
+        "examObjective": "2.4: Given a scenario, use the appropriate security practices",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-048",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which network protocol is used to resolve domain names to IP addresses?",
+      "options": [
+        {"id": "A", "text": "DNS", "isCorrect": true},
+        {"id": "B", "text": "ARP", "isCorrect": false},
+        {"id": "C", "text": "NAT", "isCorrect": false},
+        {"id": "D", "text": "ICMP", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "DNS resolves hostnames to IP addresses.",
+        "incorrect": "ARP resolves IP to MAC; NAT translates IPs; ICMP is for ping.",
+        "examTip": "DNS uses port 53.",
+        "relatedTopics": ["DNS", "network protocols"]
+      },
+      "metadata": {
+        "examObjective": "2.1: Compare and contrast common networking protocols and ports",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-049",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are valid PowerShell commands? (Choose two.)",
+      "options": [
+        {"id": "A", "text": "Get-Process", "isCorrect": true},
+        {"id": "B", "text": "Get-Service", "isCorrect": true},
+        {"id": "C", "text": "List-Process", "isCorrect": false},
+        {"id": "D", "text": "Show-Service", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "Get-Process and Get-Service are valid cmdlets.",
+        "incorrect": "List-Process and Show-Service are not native.",
+        "examTip": "PowerShell cmdlets follow Verb-Noun pattern.",
+        "relatedTopics": ["PowerShell basics", "cmdlets"]
+      },
+      "metadata": {
+        "examObjective": "1.12: Given a scenario, use the appropriate scripting language",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-050",
+      "exam": "core1",
+      "type": "drag-drop",
+      "topicId": "hardware",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each motherboard form factor to its characteristic.",
+      "dragCategories": [
+        {"id": "cat1", "name": "ATX", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "mATX", "acceptsItemIds": ["item2"]},
+        {"id": "cat3", "name": "ITX", "acceptsItemIds": ["item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Full size, up to 7 expansion slots"},
+        {"id": "item2", "text": "Smaller version of ATX, up to 4 expansion slots"},
+        {"id": "item3", "text": "Mini size, used in compact builds"}
+      ],
+      "explanation": {
+        "correct": "ATX=full; mATX=medium; ITX=mini.",
+        "incorrect": "Mismatching form factors.",
+        "examTip": "mATX fits in most ATX cases.",
+        "relatedTopics": ["Motherboard form factors", "PC building"]
+      },
+      "metadata": {
+        "examObjective": "1.2: Compare and contrast motherboard form factors",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-051",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which printer type uses a print head that strikes an inked ribbon?",
+      "options": [
+        {"id": "A", "text": "Laser", "isCorrect": false},
+        {"id": "B", "text": "Inkjet", "isCorrect": false},
+        {"id": "C", "text": "Thermal", "isCorrect": false},
+        {"id": "D", "text": "Impact", "isCorrect": true}
+      ],
+      "explanation": {
+        "correct": "Impact printers strike a ribbon to print, like dot matrix.",
+        "incorrect": "Laser uses toner; inkjet sprays; thermal uses heat.",
+        "examTip": "Impact printers are used for multi-part forms.",
+        "relatedTopics": ["Printer types", "impact printing"]
+      },
+      "metadata": {
+        "examObjective": "1.5: Compare and contrast printer types and consumables",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-052",
+      "exam": "core2",
+      "type": "yes-no-statements",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about Windows Task Manager.",
+      "statements": [
+        {"id": "s1", "text": "Task Manager can end processes.", "isCorrectYes": true},
+        {"id": "s2", "text": "Task Manager shows CPU and memory usage.", "isCorrectYes": true},
+        {"id": "s3", "text": "Task Manager can manage startup programs.", "isCorrectYes": true},
+        {"id": "s4", "text": "Task Manager can change system settings.", "isCorrectYes": false}
+      ],
+      "explanation": {
+        "correct": "Task Manager ends processes, shows usage, manages startup.",
+        "incorrect": "Task Manager cannot change system settings.",
+        "examTip": "Use Task Manager to quickly check system performance.",
+        "relatedTopics": ["Task Manager", "Windows performance"]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-053",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct wireless standard for each speed.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Up to 9.6 Gbps (Wi-Fi 6)",
+          "options": ["802.11ac", "802.11n", "802.11ax", "802.11a"],
+          "correctAnswer": "802.11ax"
+        },
+        {
+          "id": "d2",
+          "prompt": "Up to 1.3 Gbps (Wi-Fi 5)",
+          "options": ["802.11ac", "802.11n", "802.11ax", "802.11a"],
+          "correctAnswer": "802.11ac"
+        },
+        {
+          "id": "d3",
+          "prompt": "Up to 600 Mbps (Wi-Fi 4)",
+          "options": ["802.11ac", "802.11n", "802.11ax", "802.11a"],
+          "correctAnswer": "802.11n"
+        }
+      ],
+      "explanation": {
+        "correct": "Wi-Fi 6 (802.11ax) > Wi-Fi 5 (802.11ac) > Wi-Fi 4 (802.11n).",
+        "incorrect": "802.11a is older and slower.",
+        "examTip": "Wi-Fi 6 is the latest standard.",
+        "relatedTopics": ["Wireless standards", "Wi-Fi speeds"]
+      },
+      "metadata": {
+        "examObjective": "2.4: Compare and contrast wireless networking protocols",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-054",
+      "exam": "core2",
+      "type": "ordering",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to create a new user account in Windows.",
+      "orderItems": [
+        {"id": "o1", "text": "Open Settings or Control Panel", "correctPosition": 1},
+        {"id": "o2", "text": "Select 'Add new user'", "correctPosition": 2},
+        {"id": "o3", "text": "Enter username and password", "correctPosition": 3},
+        {"id": "o4", "text": "Select account type (standard/administrator)", "correctPosition": 4}
+      ],
+      "explanation": {
+        "correct": "1: Open Settings, 2: Add user, 3: Credentials, 4: Account type.",
+        "incorrect": "Account type determines permissions.",
+        "examTip": "Minimize administrative account usage.",
+        "relatedTopics": ["User accounts", "Windows administration"]
+      },
+      "metadata": {
+        "examObjective": "1.4: Given a scenario, troubleshoot Windows OS problems",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-055",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What type of RAM is designed for servers and supports error checking?",
+      "options": [
+        {"id": "A", "text": "DDR4", "isCorrect": false},
+        {"id": "B", "text": "ECC RAM", "isCorrect": true},
+        {"id": "C", "text": "SO-DIMM", "isCorrect": false},
+        {"id": "D", "text": "DDR5", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "ECC (Error-Correcting Code) RAM is used in servers.",
+        "incorrect": "DDR4/DDR5 are types; SO-DIMM is laptop RAM.",
+        "examTip": "ECC RAM is more expensive but more reliable.",
+        "relatedTopics": ["RAM types", "ECC memory"]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast RAM types and features",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-056",
+      "exam": "core1",
+      "type": "multiple-choice",
+      "topicId": "hardware",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "You are building a high-performance gaming PC and want to maximize storage speed and capacity.",
+      "questionText": "Which of the following storage configurations would you recommend? (Choose two.)",
+      "options": [
+        {"id": "A", "text": "NVMe M.2 SSD for OS and games", "isCorrect": true},
+        {"id": "B", "text": "SATA HDD for mass storage", "isCorrect": true},
+        {"id": "C", "text": "SATA SSD for boot drive", "isCorrect": false},
+        {"id": "D", "text": "M.2 SATA drive for OS", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "NVMe M.2 for speed; HDD for large storage at lower cost.",
+        "incorrect": "SATA SSD is slower than NVMe; M.2 SATA is not as fast as NVMe.",
+        "examTip": "NVMe uses PCIe lanes for faster data transfer.",
+        "relatedTopics": ["NVMe", "SATA", "storage performance"]
+      },
+      "metadata": {
+        "examObjective": "3.1: Given a scenario, install and configure storage devices",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-057",
+      "exam": "core2",
+      "type": "drag-drop",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each backup type to its restore complexity.",
+      "dragCategories": [
+        {"id": "cat1", "name": "Full Backup", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "Incremental Backup", "acceptsItemIds": ["item2"]},
+        {"id": "cat3", "name": "Differential Backup", "acceptsItemIds": ["item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Easiest restore – one backup set"},
+        {"id": "item2", "text": "Most complex restore – full + all incrementals"},
+        {"id": "item3", "text": "Medium complexity – full + latest differential"}
+      ],
+      "explanation": {
+        "correct": "Full=1 set; Incremental=full+all incrementals; Differential=full+latest diff.",
+        "incorrect": "Misunderstanding restore complexity.",
+        "examTip": "Differential restores are simpler than incremental.",
+        "relatedTopics": ["Backup types", "restore strategies"]
+      },
+      "metadata": {
+        "examObjective": "1.7: Explain the importance of backups and recovery",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-058",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Determine if each statement about network devices is true or false.",
+      "statements": [
+        {"id": "s1", "text": "A router connects different networks.", "isCorrectYes": true},
+        {"id": "s2", "text": "A switch connects devices within the same network.", "isCorrectYes": true},
+        {"id": "s3", "text": "A hub sends data only to the intended recipient.", "isCorrectYes": false},
+        {"id": "s4", "text": "A modem modulates and demodulates signals.", "isCorrectYes": true}
+      ],
+      "explanation": {
+        "correct": "Router=inter-networks; Switch=intra-network; Modem=modulate/demodulate.",
+        "incorrect": "Hub broadcasts to all ports.",
+        "examTip": "Switches are more intelligent than hubs.",
+        "relatedTopics": ["Network devices", "routing and switching"]
+      },
+      "metadata": {
+        "examObjective": "2.7: Compare and contrast network devices",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-059",
+      "exam": "core2",
+      "type": "single-choice",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Windows utility is used to manage disk partitions?",
+      "options": [
+        {"id": "A", "text": "Disk Management", "isCorrect": true},
+        {"id": "B", "text": "Device Manager", "isCorrect": false},
+        {"id": "C", "text": "Task Scheduler", "isCorrect": false},
+        {"id": "D", "text": "Registry Editor", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "Disk Management is used to create, format, and manage partitions.",
+        "incorrect": "Device Manager handles hardware; Task Scheduler schedules tasks; Registry Editor edits registry.",
+        "examTip": "Diskpart is the command-line alternative.",
+        "relatedTopics": ["Disk management", "partitioning"]
+      },
+      "metadata": {
+        "examObjective": "1.2: Given a scenario, use the appropriate Microsoft command-line tool",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-060",
+      "exam": "core1",
+      "type": "ordering",
+      "topicId": "mobile-devices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to set up an Android device for the first time.",
+      "orderItems": [
+        {"id": "o1", "text": "Power on the device", "correctPosition": 1},
+        {"id": "o2", "text": "Select language and region", "correctPosition": 2},
+        {"id": "o3", "text": "Connect to Wi-Fi", "correctPosition": 3},
+        {"id": "o4", "text": "Sign in with Google account", "correctPosition": 4}
+      ],
+      "explanation": {
+        "correct": "1: Power on, 2: Language, 3: Wi-Fi, 4: Sign in.",
+        "incorrect": "Wi-Fi is needed to sign in.",
+        "examTip": "Data backup and restore options appear after sign-in.",
+        "relatedTopics": ["Android setup", "mobile device configuration"]
+      },
+      "metadata": {
+        "examObjective": "1.6: Compare and contrast mobile operating systems",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-061",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct display resolution for each standard.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "1920x1080",
+          "options": ["1080p", "4K", "1440p", "720p"],
+          "correctAnswer": "1080p"
+        },
+        {
+          "id": "d2",
+          "prompt": "3840x2160",
+          "options": ["1080p", "4K", "1440p", "720p"],
+          "correctAnswer": "4K"
+        },
+        {
+          "id": "d3",
+          "prompt": "2560x1440",
+          "options": ["1080p", "4K", "1440p", "720p"],
+          "correctAnswer": "1440p"
+        }
+      ],
+      "explanation": {
+        "correct": "1080p=1920x1080; 4K=3840x2160; 1440p=2560x1440.",
+        "incorrect": "720p is 1280x720.",
+        "examTip": "4K is also called Ultra HD.",
+        "relatedTopics": ["Display resolutions", "video standards"]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast display connectors and cables",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-062",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "You are configuring a Windows 11 workstation for a developer who needs to run Linux containers.",
+      "questionText": "Which features should be enabled? (Choose two.)",
+      "options": [
+        {"id": "A", "text": "WSL 2", "isCorrect": true},
+        {"id": "B", "text": "Hyper-V", "isCorrect": true},
+        {"id": "C", "text": "Windows Sandbox", "isCorrect": false},
+        {"id": "D", "text": "BitLocker", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "WSL 2 and Hyper-V allow running Linux containers.",
+        "incorrect": "Windows Sandbox is for testing; BitLocker is encryption.",
+        "examTip": "WSL 2 is more compatible with Docker.",
+        "relatedTopics": ["Virtualization", "WSL", "Hyper-V"]
+      },
+      "metadata": {
+        "examObjective": "1.3: Given a scenario, use the appropriate Windows OS features",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-063",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which IP address is a private IP?",
+      "options": [
+        {"id": "A", "text": "8.8.8.8", "isCorrect": false},
+        {"id": "B", "text": "192.168.1.1", "isCorrect": true},
+        {"id": "C", "text": "172.32.1.1", "isCorrect": false},
+        {"id": "D", "text": "1.1.1.1", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "192.168.x.x is private.",
+        "incorrect": "8.8.8.8 (Google DNS), 1.1.1.1 (Cloudflare), and 172.32.x.x are public.",
+        "examTip": "Private IPs: 10.x.x.x, 172.16-31.x.x, 192.168.x.x.",
+        "relatedTopics": ["Private IP addressing", "IP classes"]
+      },
+      "metadata": {
+        "examObjective": "2.2: Explain common networking concepts, including IP addressing",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-064",
+      "exam": "core2",
+      "type": "yes-no-statements",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about Group Policy.",
+      "statements": [
+        {"id": "s1", "text": "Group Policy is used to manage settings in Active Directory.", "isCorrectYes": true},
+        {"id": "s2", "text": "Group Policy can be applied to local computers only.", "isCorrectYes": false},
+        {"id": "s3", "text": "Group Policy can enforce password policies.", "isCorrectYes": true},
+        {"id": "s4", "text": "Group Policy is available in Windows Home edition.", "isCorrectYes": false}
+      ],
+      "explanation": {
+        "correct": "Group Policy manages AD settings, enforces security, not in Home edition.",
+        "incorrect": "Group Policy can be applied to domain and local.",
+        "examTip": "gpedit.msc is the local Group Policy Editor.",
+        "relatedTopics": ["Group Policy", "Active Directory"]
+      },
+      "metadata": {
+        "examObjective": "1.9: Compare and contrast Group Policy and local policy",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-065",
+      "exam": "core1",
+      "type": "drag-drop",
+      "topicId": "hardware",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each RAM type to its characteristic.",
+      "dragCategories": [
+        {"id": "cat1", "name": "DDR4", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "DDR5", "acceptsItemIds": ["item2"]},
+        {"id": "cat3", "name": "ECC", "acceptsItemIds": ["item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Lower voltage than DDR3, common in desktops"},
+        {"id": "item2", "text": "Newer standard with higher speed and density"},
+        {"id": "item3", "text": "Error-correcting memory for servers"}
+      ],
+      "explanation": {
+        "correct": "DDR4=lower voltage; DDR5=newer; ECC=error correcting.",
+        "incorrect": "Mismatching RAM types.",
+        "examTip": "DDR5 is faster but more expensive.",
+        "relatedTopics": ["RAM types", "memory standards"]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast RAM types and features",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-066",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which connector is used for external hard drives and supports hot-swapping?",
+      "options": [
+        {"id": "A", "text": "eSATA", "isCorrect": true},
+        {"id": "B", "text": "SATA", "isCorrect": false},
+        {"id": "C", "text": "IDE", "isCorrect": false},
+        {"id": "D", "text": "M.2", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "eSATA is external SATA and supports hot-swapping.",
+        "incorrect": "SATA is internal; IDE is obsolete; M.2 is internal.",
+        "examTip": "eSATA is faster than USB 2.0.",
+        "relatedTopics": ["eSATA", "storage connectors"]
+      },
+      "metadata": {
+        "examObjective": "3.2: Compare and contrast common connectors and cables",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-067",
+      "exam": "core2",
+      "type": "ordering",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to enable BitLocker on a Windows system.",
+      "orderItems": [
+        {"id": "o1", "text": "Open BitLocker Drive Encryption from Control Panel", "correctPosition": 1},
+        {"id": "o2", "text": "Select the drive to encrypt", "correctPosition": 2},
+        {"id": "o3", "text": "Choose how to unlock the drive (password, smart card, etc.)", "correctPosition": 3},
+        {"id": "o4", "text": "Start encryption and wait for completion", "correctPosition": 4}
+      ],
+      "explanation": {
+        "correct": "1: Open BitLocker, 2: Select drive, 3: Unlock method, 4: Encrypt.",
+        "incorrect": "Backup the recovery key before encrypting.",
+        "examTip": "BitLocker requires TPM for maximum security.",
+        "relatedTopics": ["BitLocker", "disk encryption"]
+      },
+      "metadata": {
+        "examObjective": "2.2: Explain security best practices, including encryption",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-068",
+      "exam": "core1",
+      "type": "multiple-choice",
+      "topicId": "networking",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "You are troubleshooting a network where users can't access the internet but can ping each other.",
+      "questionText": "What are the most likely causes? (Choose two.)",
+      "options": [
+        {"id": "A", "text": "Default gateway misconfigured", "isCorrect": true},
+        {"id": "B", "text": "DNS server down", "isCorrect": true},
+        {"id": "C", "text": "Switch failure", "isCorrect": false},
+        {"id": "D", "text": "Faulty network card", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "Default gateway and DNS issues can prevent internet access.",
+        "incorrect": "Switch failure would affect internal pings; NIC failure affects connectivity.",
+        "examTip": "Check default gateway and DNS first.",
+        "relatedTopics": ["Network troubleshooting", "default gateway", "DNS"]
+      },
+      "metadata": {
+        "examObjective": "2.5: Given a scenario, troubleshoot network connectivity issues",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-069",
+      "exam": "core2",
+      "type": "dropdown-select",
+      "topicId": "operating-systems",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Select the correct Windows version for each feature.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Includes BitLocker and Hyper-V",
+          "options": ["Windows 10 Pro", "Windows 10 Home", "Windows 11 Home"],
+          "correctAnswer": "Windows 10 Pro"
+        },
+        {
+          "id": "d2",
+          "prompt": "Supports Windows Sandbox",
+          "options": ["Windows 10 Pro", "Windows 10 Home", "Windows 11 Home"],
+          "correctAnswer": "Windows 10 Pro"
+        }
+      ],
+      "explanation": {
+        "correct": "BitLocker, Hyper-V, and Sandbox are in Pro editions.",
+        "incorrect": "Home editions lack these features.",
+        "examTip": "Pro editions are for business use.",
+        "relatedTopics": ["Windows editions", "features comparison"]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast Windows versions and features",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-070",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "mobile-devices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Determine if each statement about iOS is true or false.",
+      "statements": [
+        {"id": "s1", "text": "iOS is developed by Google.", "isCorrectYes": false},
+        {"id": "s2", "text": "iOS uses the App Store for apps.", "isCorrectYes": true},
+        {"id": "s3", "text": "iOS supports third-party app stores.", "isCorrectYes": false},
+        {"id": "s4", "text": "iOS is based on UNIX.", "isCorrectYes": true}
+      ],
+      "explanation": {
+        "correct": "iOS is Apple; uses App Store; no third-party stores; based on UNIX.",
+        "incorrect": "iOS is not by Google.",
+        "examTip": "iOS is closed and tightly controlled.",
+        "relatedTopics": ["iOS", "mobile operating systems"]
+      },
+      "metadata": {
+        "examObjective": "1.6: Compare and contrast mobile operating systems",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-071",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which port is used to connect a keyboard or mouse?",
+      "options": [
+        {"id": "A", "text": "USB-A", "isCorrect": true},
+        {"id": "B", "text": "HDMI", "isCorrect": false},
+        {"id": "C", "text": "DisplayPort", "isCorrect": false},
+        {"id": "D", "text": "Ethernet", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "USB-A is commonly used for keyboards and mice.",
+        "incorrect": "HDMI and DisplayPort are for video; Ethernet is networking.",
+        "examTip": "Older keyboards may use PS/2.",
+        "relatedTopics": ["USB connectors", "peripheral interfaces"]
+      },
+      "metadata": {
+        "examObjective": "3.2: Compare and contrast common connectors and cables",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-072",
+      "exam": "core2",
+      "type": "multiple-choice",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are valid Linux commands for file management? (Choose two.)",
+      "options": [
+        {"id": "A", "text": "cp", "isCorrect": true},
+        {"id": "B", "text": "mv", "isCorrect": true},
+        {"id": "C", "text": "delete", "isCorrect": false},
+        {"id": "D", "text": "remove", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "cp copies files; mv moves/renames files.",
+        "incorrect": "delete and remove are not standard Linux commands.",
+        "examTip": "rm is used to remove files in Linux.",
+        "relatedTopics": ["Linux file commands", "command-line basics"]
+      },
+      "metadata": {
+        "examObjective": "1.10: Given a scenario, use the appropriate Linux commands",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-073",
+      "exam": "core1",
+      "type": "drag-drop",
+      "topicId": "networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each network device to its OSI layer.",
+      "dragCategories": [
+        {"id": "cat1", "name": "Layer 1 – Physical", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "Layer 2 – Data Link", "acceptsItemIds": ["item2"]},
+        {"id": "cat3", "name": "Layer 3 – Network", "acceptsItemIds": ["item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Hub"},
+        {"id": "item2", "text": "Switch"},
+        {"id": "item3", "text": "Router"}
+      ],
+      "explanation": {
+        "correct": "Hub=Physical; Switch=Data Link; Router=Network.",
+        "incorrect": "Mismatching layers and devices.",
+        "examTip": "Switches use MAC addresses; routers use IP addresses.",
+        "relatedTopics": ["OSI model", "networking devices"]
+      },
+      "metadata": {
+        "examObjective": "2.1: Compare and contrast common networking protocols and ports",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-074",
+      "exam": "core2",
+      "type": "yes-no-statements",
+      "topicId": "operating-systems",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about Windows Update.",
+      "statements": [
+        {"id": "s1", "text": "Windows Update can install security patches.", "isCorrectYes": true},
+        {"id": "s2", "text": "Windows Update can update drivers.", "isCorrectYes": true},
+        {"id": "s3", "text": "Windows Update can upgrade to a newer version.", "isCorrectYes": true},
+        {"id": "s4", "text": "Windows Update cannot be paused.", "isCorrectYes": false}
+      ],
+      "explanation": {
+        "correct": "Windows Update can install patches, drivers, and upgrades.",
+        "incorrect": "Windows Update can be paused for up to 7 days.",
+        "examTip": "Keep Windows updated for security.",
+        "relatedTopics": ["Windows Update", "patch management"]
+      },
+      "metadata": {
+        "examObjective": "1.5: Given a scenario, install Windows OS upgrades and updates",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "aplus-075",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does a POST beep code indicate?",
+      "options": [
+        {"id": "A", "text": "The system is fully functional", "isCorrect": false},
+        {"id": "B", "text": "A hardware issue during startup", "isCorrect": true},
+        {"id": "C", "text": "A software update is needed", "isCorrect": false},
+        {"id": "D", "text": "The CMOS battery is low", "isCorrect": false}
+      ],
+      "explanation": {
+        "correct": "POST beep codes indicate hardware problems.",
+        "incorrect": "A single short beep often means success.",
+        "examTip": "Different beep patterns indicate different issues.",
+        "relatedTopics": ["POST", "hardware troubleshooting"]
+      },
+      "metadata": {
+        "examObjective": "5.2: Given a scenario, troubleshoot hardware and network issues",
+        "references": ["https://www.comptia.org/certifications/a"],
+        "lastUpdated": "2024-01-15"
+      }
+    }
+  ]
+}

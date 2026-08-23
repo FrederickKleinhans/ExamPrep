@@ -1,0 +1,76 @@
+{
+  "id": "az-900",
+  "name": "Microsoft Azure Fundamentals",
+  "provider": "Microsoft",
+  "examCode": "AZ-900",
+  "version": "2024-01",
+  "questionCount": 150,
+  "passingScore": 70,
+  "timeLimitMinutes": 60,
+  "topics": [
+    {
+      "id": "describe-cloud-concepts",
+      "name": "Describe Cloud Concepts",
+      "weight": 25
+    },
+    {
+      "id": "describe-azure-architecture",
+      "name": "Describe Azure Architecture and Services",
+      "weight": 35
+    },
+    {
+      "id": "describe-azure-management",
+      "name": "Describe Azure Management and Governance",
+      "weight": 30
+    },
+    {
+      "id": "describe-azure-identity",
+      "name": "Describe Azure Identity, Access, and Security",
+      "weight": 10
+    }
+  ],
+  "icon": "/icons/azure.svg",
+  "resources": [
+    {
+      "title": "Microsoft Learn — AZ-900 Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/az-900-describe-cloud-concepts/"
+    },
+    {
+      "title": "AZ-900 Study Guide (Official)",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900"
+    }
+  ],
+  "vendor": "Microsoft",
+  "vendorColor": "#0078D4",
+  "level": "beginner",
+  "accessTier": "free",
+  "description": "Foundational knowledge of cloud services and how those services are provided with Microsoft Azure.",
+  "examDetails": {
+    "durationMinutes": 60,
+    "questionCount": 40,
+    "passingScore": 70,
+    "priceUSD": 99
+  },
+  "topicChunks": [
+    {
+      "topicId": "describe-cloud-concepts",
+      "path": "/data/certifications/az-900/topics/describe-cloud-concepts.json",
+      "questionCount": 30
+    },
+    {
+      "topicId": "describe-azure-architecture",
+      "path": "/data/certifications/az-900/topics/describe-azure-architecture.json",
+      "questionCount": 54
+    },
+    {
+      "topicId": "describe-azure-management",
+      "path": "/data/certifications/az-900/topics/describe-azure-management.json",
+      "questionCount": 47
+    },
+    {
+      "topicId": "describe-azure-identity",
+      "path": "/data/certifications/az-900/topics/describe-azure-identity.json",
+      "questionCount": 19
+    }
+  ]
+}

@@ -1,0 +1,1467 @@
+{
+  "certificationId": "az-900",
+  "topicId": "describe-cloud-concepts",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "az900-001",
+      "type": "single-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which cloud service model provides the highest level of control over the underlying infrastructure, including virtual machines, storage, and networking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Software as a Service (SaaS)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Platform as a Service (PaaS)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Infrastructure as a Service (IaaS)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Function as a Service (FaaS)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IaaS provides the most control over cloud resources including OS, middleware, and applications.",
+        "incorrect": "SaaS provides the least control. PaaS offers moderate control. FaaS is a subset of PaaS.",
+        "examTip": "Control spectrum: IaaS (most) > PaaS > SaaS (least). More control = more responsibility.",
+        "relatedTopics": [
+          "shared-responsibility-model",
+          "cloud-service-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cloud service types",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-002",
+      "type": "single-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which cloud deployment model combines on-premises infrastructure with cloud resources, allowing data and applications to be shared between them?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Public cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Private cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Hybrid cloud",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Community cloud",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A hybrid cloud combines on-premises infrastructure with public cloud, enabling data and application sharing between environments.",
+        "incorrect": "Public cloud is shared among multiple tenants. Private cloud serves a single organization. Community cloud is not a standard Azure model.",
+        "examTip": "Hybrid cloud is ideal for organizations with regulatory requirements or legacy systems that need cloud flexibility.",
+        "relatedTopics": [
+          "cloud-deployment-models",
+          "hybrid-cloud-benefits"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cloud models",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-003",
+      "type": "single-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A company wants to shift from capital expenditure (CapEx) to operational expenditure (OpEx) for its IT infrastructure. Which benefit of cloud computing best supports this goal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High availability",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Pay-as-you-go pricing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Geo-distribution",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Disaster recovery",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Pay-as-you-go pricing converts CapEx (upfront hardware purchases) to OpEx (ongoing costs based on usage).",
+        "incorrect": "High availability, geo-distribution, and disaster recovery are technical benefits but do not directly address CapEx to OpEx.",
+        "examTip": "CapEx = upfront investment. OpEx = ongoing costs. Cloud's consumption model enables CapEx to OpEx shift.",
+        "relatedTopics": [
+          "consumption-based-model",
+          "cloud-economics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the benefits of using cloud services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-004",
+      "type": "single-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In the shared responsibility model, which responsibility always remains with the cloud customer regardless of the cloud service type?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Physical host security",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Network controls",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Information and data",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Operating system patching",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Regardless of the deployment type (IaaS, PaaS, or SaaS), the customer is always responsible for their information and data, devices, and accounts/identities.",
+        "incorrect": "Physical host security is always the provider's responsibility. Network controls and OS patching responsibilities vary by service model.",
+        "examTip": "Customer always owns: data, endpoints, accounts, access management. Provider always owns: physical datacenter, network, hosts.",
+        "relatedTopics": [
+          "shared-responsibility-model",
+          "cloud-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the shared responsibility model",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-describe-shared-responsibility-model"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-016",
+      "type": "multiple-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO of the following are benefits of cloud computing? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Eliminates the need for any IT staff",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Provides the ability to scale resources on demand",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Guarantees zero downtime for all services",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Reduces the time required to deploy new resources",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Scalability (scaling resources on demand) and agility (reducing deployment time) are core benefits of cloud computing.",
+        "incorrect": "Cloud does not eliminate the need for IT staff, it changes their role. No cloud provider guarantees zero downtime; SLAs define uptime percentages.",
+        "examTip": "Key cloud benefits: scalability, elasticity, agility, geo-distribution, disaster recovery, and cost efficiency.",
+        "relatedTopics": [
+          "cloud-benefits",
+          "scalability",
+          "agility"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the benefits of using cloud services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-020",
+      "type": "multiple-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO of the following are characteristics of a Platform as a Service (PaaS) cloud model? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The cloud provider manages the underlying operating system",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The customer manages the physical servers",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Developers can focus on application development without managing infrastructure",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "The customer has full control over the network configuration",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In PaaS, the provider manages the OS, middleware, and runtime. Developers focus solely on their applications and data without worrying about infrastructure.",
+        "incorrect": "Physical server management is always the provider's responsibility. Full network control is characteristic of IaaS, not PaaS.",
+        "examTip": "PaaS examples: Azure App Service, Azure SQL Database, Azure Functions. The platform handles scaling, patching, and infrastructure.",
+        "relatedTopics": [
+          "paas-model",
+          "cloud-service-types",
+          "developer-productivity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cloud service types",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-023",
+      "type": "yes-no-statements",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "High availability in cloud computing guarantees 100% uptime.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Elasticity allows a system to automatically add or remove resources based on demand.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Scalability refers to the ability to increase capacity to handle growing workloads.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Elasticity is automatic scaling based on demand. Scalability is the ability to increase capacity. No cloud service guarantees 100% uptime.",
+        "incorrect": "High availability targets maximum uptime (e.g., 99.99%) but never guarantees 100%. SLAs define the actual uptime commitment.",
+        "examTip": "Elasticity = automatic scaling (in and out). Scalability = ability to scale (up/out). High availability = uptime guarantees via SLAs.",
+        "relatedTopics": [
+          "elasticity",
+          "scalability",
+          "high-availability",
+          "slas"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the benefits of using cloud services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-026",
+      "type": "yes-no-statements",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "In a public cloud model, the cloud resources are owned and operated by a third-party provider.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A private cloud can only be hosted in an on-premises datacenter.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A public cloud provides resources that are shared among multiple organizations.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Public cloud resources are owned by a third-party provider and shared (multi-tenant). A private cloud can be hosted on-premises or by a third-party provider exclusively for one organization.",
+        "incorrect": "A private cloud can be hosted on-premises OR by a third-party provider. The key is that it is dedicated to a single organization, not where it is physically located.",
+        "examTip": "Private cloud = dedicated to one org (can be on-prem or hosted). Public cloud = shared multi-tenant. Location does not define the model.",
+        "relatedTopics": [
+          "cloud-deployment-models",
+          "public-cloud",
+          "private-cloud"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cloud models",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-031",
+      "type": "dropdown-select",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Microsoft 365 and Salesforce are examples of",
+          "options": [
+            "Infrastructure as a Service (IaaS)",
+            "Platform as a Service (PaaS)",
+            "Software as a Service (SaaS)",
+            "Function as a Service (FaaS)"
+          ],
+          "correctAnswer": "Software as a Service (SaaS)"
+        },
+        {
+          "id": "d2",
+          "prompt": "Azure Virtual Machines and Azure Virtual Networks are examples of",
+          "options": [
+            "Infrastructure as a Service (IaaS)",
+            "Platform as a Service (PaaS)",
+            "Software as a Service (SaaS)",
+            "Function as a Service (FaaS)"
+          ],
+          "correctAnswer": "Infrastructure as a Service (IaaS)"
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft 365 and Salesforce are fully managed applications (SaaS). Azure VMs and VNets provide raw infrastructure that you manage (IaaS).",
+        "incorrect": "PaaS examples would be Azure App Service or Azure SQL Database. FaaS examples would be Azure Functions.",
+        "examTip": "SaaS = use the app. PaaS = deploy your code. IaaS = manage the infrastructure. Know common examples of each.",
+        "relatedTopics": [
+          "cloud-service-types",
+          "saas-examples",
+          "iaas-examples"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cloud service types",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-039",
+      "type": "ordering",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Arrange the Azure resource hierarchy from the broadest scope (top) to the narrowest scope (bottom).",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Management groups",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Subscriptions",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Resource groups",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Resources",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "The Azure hierarchy from broadest to narrowest: Management groups > Subscriptions > Resource groups > Resources. Policies and access controls applied at higher levels are inherited by lower levels.",
+        "incorrect": "Resources are the narrowest scope (individual services). Management groups are the broadest (can contain multiple subscriptions).",
+        "examTip": "Inheritance flows down: management group settings affect all subscriptions, resource groups, and resources beneath them.",
+        "relatedTopics": [
+          "azure-hierarchy",
+          "management-groups",
+          "subscriptions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the core architectural components of Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-052",
+      "type": "single-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which pricing model allows organizations to use their existing on-premises Windows Server or SQL Server licenses on Azure to reduce costs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Savings Plan",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Hybrid Benefit",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Reserved Instances",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Spot VMs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Hybrid Benefit lets you use existing Windows Server and SQL Server licenses with Software Assurance on Azure, saving up to 85% compared to pay-as-you-go.",
+        "incorrect": "Savings Plans commit to hourly spend. Reserved Instances commit to specific VMs. Spot VMs use surplus capacity at discounts.",
+        "examTip": "Hybrid Benefit applies to Windows Server, SQL Server, and Linux (Red Hat/SUSE). Requires active Software Assurance or qualifying subscription.",
+        "relatedTopics": [
+          "azure-hybrid-benefit",
+          "licensing",
+          "cost-optimization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-058",
+      "type": "single-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which type of Azure cost is incurred when data leaves an Azure datacenter (outbound data transfer)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ingress charges",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Egress charges",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Compute charges",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Storage transaction charges",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Egress charges apply to outbound data transfers leaving Azure datacenters. Inbound data (ingress) is generally free, but outbound data (egress) incurs bandwidth costs.",
+        "incorrect": "Ingress (inbound) is typically free. Compute charges are for processing power. Transaction charges are per-operation costs on storage.",
+        "examTip": "Data IN to Azure = free. Data OUT of Azure = egress charges. Data between Azure regions also incurs egress. Plan architecture to minimize egress.",
+        "relatedTopics": [
+          "egress-charges",
+          "bandwidth-pricing",
+          "cost-optimization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-065",
+      "type": "single-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which cost-saving option allows you to commit to a consistent hourly spend for compute services across multiple VM families and regions for one or three years?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Reserved Instances",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Savings Plans for Compute",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Spot Virtual Machines",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Hybrid Benefit",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Savings Plans for Compute offer flexible savings (up to 65%) by committing to a fixed hourly spend for 1 or 3 years, applying across VM families, regions, and compute services.",
+        "incorrect": "Reserved Instances lock you to specific VM size/region. Spot VMs have no commitment. Hybrid Benefit uses existing licenses.",
+        "examTip": "Savings Plans = flexible commitment (any VM size/region). Reservations = specific commitment (one VM size/region). Savings Plans are more flexible but may save slightly less.",
+        "relatedTopics": [
+          "savings-plans",
+          "cost-optimization",
+          "compute-pricing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/cost-management-billing/savings-plan/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-072",
+      "type": "multiple-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO are characteristics of the consumption-based model in cloud computing? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "You pay only for the resources you use",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "You must estimate capacity needs years in advance",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "You can stop paying for resources you no longer need",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "You always pay a fixed monthly fee regardless of usage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The consumption-based model means you pay for what you use and can stop costs by deallocating/deleting resources. No upfront capacity planning or fixed fees required.",
+        "incorrect": "Fixed fees describe reserved pricing, not consumption. Estimating years in advance is the traditional CapEx approach, not cloud consumption.",
+        "examTip": "Consumption model benefits: no upfront costs, no wasted capacity, scale resources up/down, stop paying when done. OpEx model.",
+        "relatedTopics": [
+          "consumption-model",
+          "cloud-economics",
+          "opex"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the benefits of using cloud services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-075",
+      "type": "multiple-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO scenarios would benefit most from using Azure Spot Virtual Machines? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Batch processing jobs that can be interrupted",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Production databases requiring 99.99% uptime",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Development and testing environments",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Domain controller hosting",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Spot VMs offer up to 90% discount but can be evicted when Azure needs capacity. Batch processing and dev/test are ideal because interruptions are acceptable.",
+        "incorrect": "Production databases and domain controllers require guaranteed availability and cannot tolerate eviction. Use reserved instances or standard pricing for those.",
+        "examTip": "Spot VMs = great savings, no SLA, can be evicted anytime. Perfect for: batch jobs, CI/CD, rendering, simulations, dev/test.",
+        "relatedTopics": [
+          "spot-vms",
+          "cost-optimization",
+          "interruptible-workloads"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-079",
+      "type": "multiple-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO of the following are advantages of horizontal scaling (scaling out) compared to vertical scaling (scaling up)? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Supports near-unlimited capacity by adding more instances",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Requires no changes to the application architecture",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Provides better fault tolerance through redundancy",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Always cheaper than vertical scaling",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Scaling out adds more instances for near-unlimited capacity and provides fault tolerance (if one instance fails, others continue). Scaling up has hardware limits.",
+        "incorrect": "Scaling out may require application changes (stateless design). Cost depends on workload; scaling out is not always cheaper.",
+        "examTip": "Scale out = add instances (horizontal). Scale up = bigger machine (vertical). Scale out is preferred for cloud-native apps due to redundancy and elasticity.",
+        "relatedTopics": [
+          "horizontal-scaling",
+          "vertical-scaling",
+          "elasticity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the benefits of using cloud services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-087",
+      "type": "yes-no-statements",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "An SLA of 99.99% allows approximately 4.38 minutes of downtime per month.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A higher SLA percentage always results in higher costs.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure provides financial credits if it fails to meet published SLAs.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "99.99% SLA = ~4.38 min/month downtime. Azure provides service credits when SLAs are not met. Higher SLAs may require architectural changes (zones, redundancy) which add cost, but not always.",
+        "incorrect": "Higher SLAs do not always cost more directly. Some configurations achieve higher SLAs without additional charges (e.g., zone-redundant deployments).",
+        "examTip": "SLA math: 99.9% = 8.76 hrs/year. 99.95% = 4.38 hrs/year. 99.99% = 52.56 min/year. Credits compensate for missed SLAs.",
+        "relatedTopics": [
+          "sla-calculations",
+          "service-credits",
+          "availability"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-090",
+      "type": "yes-no-statements",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The TCO Calculator requires you to have an Azure subscription to use it.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "The TCO Calculator compares on-premises infrastructure costs to Azure equivalents.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "The TCO Calculator provides a report showing potential savings over 1-5 years.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "The TCO Calculator is a free web tool (no subscription needed) that estimates savings by comparing current on-premises costs against equivalent Azure services over time.",
+        "incorrect": "The TCO Calculator is publicly available at azure.microsoft.com/pricing/tco. No Azure account or subscription is required.",
+        "examTip": "TCO Calculator = free, no subscription, compares on-prem vs Azure costs. Factors in: hardware, software, operations, electricity, labor.",
+        "relatedTopics": [
+          "tco-calculator",
+          "migration-planning",
+          "cost-comparison"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-091",
+      "type": "yes-no-statements",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Functions can be triggered by HTTP requests, timers, and queue messages.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Functions on the Consumption plan can run indefinitely without time limits.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Logic Apps is better suited for long-running, stateful workflow orchestration than Azure Functions.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Functions support many triggers (HTTP, timer, queue, blob, etc.). Consumption plan has a 5-10 minute default timeout. Logic Apps excels at long-running stateful workflows with visual orchestration.",
+        "incorrect": "Consumption plan Functions have time limits (5 min default, 10 min max). For long-running compute, use Premium plan, Dedicated plan, or Durable Functions.",
+        "examTip": "Functions = short-lived compute tasks. Logic Apps = long-running workflows with state. Durable Functions = code-based orchestration for complex stateful patterns.",
+        "relatedTopics": [
+          "azure-functions",
+          "logic-apps",
+          "serverless-comparison"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure compute and networking services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-101",
+      "type": "dropdown-select",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The benefit of cloud computing that ensures resources remain accessible during hardware failures is",
+          "options": [
+            "Scalability",
+            "High availability",
+            "Agility",
+            "Elasticity"
+          ],
+          "correctAnswer": "High availability"
+        },
+        {
+          "id": "d2",
+          "prompt": "The benefit of cloud computing that allows quickly deploying new resources in minutes is",
+          "options": [
+            "Scalability",
+            "High availability",
+            "Agility",
+            "Elasticity"
+          ],
+          "correctAnswer": "Agility"
+        }
+      ],
+      "explanation": {
+        "correct": "High availability ensures continued operation during failures (via redundancy, SLAs). Agility means rapid provisioning and deployment of cloud resources.",
+        "incorrect": "Scalability is about handling increased load. Elasticity is automatic scaling. High availability is about uptime. Agility is about speed of change.",
+        "examTip": "High availability = stay running. Scalability = handle more load. Elasticity = auto-adjust capacity. Agility = deploy fast.",
+        "relatedTopics": [
+          "cloud-benefits",
+          "high-availability",
+          "agility"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the benefits of using cloud services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-107",
+      "type": "dropdown-select",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A company that needs to process unpredictable batch workloads at the lowest cost should use",
+          "options": [
+            "Reserved Instances",
+            "Spot Virtual Machines",
+            "Pay-as-you-go pricing",
+            "Azure Hybrid Benefit"
+          ],
+          "correctAnswer": "Spot Virtual Machines"
+        },
+        {
+          "id": "d2",
+          "prompt": "A company with steady-state production workloads that need guaranteed availability should use",
+          "options": [
+            "Reserved Instances",
+            "Spot Virtual Machines",
+            "Pay-as-you-go pricing",
+            "Azure Hybrid Benefit"
+          ],
+          "correctAnswer": "Reserved Instances"
+        }
+      ],
+      "explanation": {
+        "correct": "Spot VMs are cheapest for interruptible workloads. Reserved Instances provide guaranteed capacity with significant savings for steady production workloads.",
+        "incorrect": "Pay-as-you-go is flexible but most expensive per hour. Hybrid Benefit requires existing licenses and works on top of other pricing models.",
+        "examTip": "Match pricing to workload: Spot = interruptible. Reservations = steady-state. Pay-as-you-go = variable/unknown. Hybrid Benefit = on top of any model.",
+        "relatedTopics": [
+          "pricing-models",
+          "spot-vms",
+          "reserved-instances"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-116",
+      "type": "ordering",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Arrange the following cloud service models from the most customer responsibility (most control) to the least customer responsibility.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Infrastructure as a Service (IaaS)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Platform as a Service (PaaS)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Software as a Service (SaaS)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "N/A - placeholder for symmetry",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Customer responsibility decreases from IaaS (manage OS, runtime, apps) to PaaS (manage apps and data) to SaaS (manage data and configuration only).",
+        "incorrect": "SaaS customers have the least responsibility. IaaS customers manage everything except physical infrastructure.",
+        "examTip": "Responsibility spectrum: IaaS (most) > PaaS (moderate) > SaaS (least). More responsibility = more control = more management overhead.",
+        "relatedTopics": [
+          "shared-responsibility",
+          "service-models",
+          "cloud-concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cloud service types",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-120",
+      "type": "ordering",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Arrange the following Azure cost optimization strategies from highest potential savings to lowest for a typical enterprise.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Right-size or shut down underutilized resources",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Purchase Reserved Instances for steady workloads",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Apply Azure Hybrid Benefit for existing licenses",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Use Azure Spot VMs for fault-tolerant workloads",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Right-sizing eliminates waste (largest impact). Reservations save 30-72%. Hybrid Benefit saves 40-85% on license costs. Spot VMs apply to limited interruptible workloads.",
+        "incorrect": "The actual savings depend on workload mix. Right-sizing is universally impactful. Spot VMs have the highest per-VM savings but limited applicability.",
+        "examTip": "Cost optimization order: 1) Eliminate waste (right-size/shut down) 2) Commit (reservations) 3) Reuse licenses (Hybrid Benefit) 4) Spot for eligible workloads.",
+        "relatedTopics": [
+          "cost-optimization",
+          "right-sizing",
+          "reservations"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-123",
+      "type": "drag-drop",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each item to the correct category.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Cost Estimation (Pre-deployment)",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Cost Analysis (Post-deployment)",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure Pricing Calculator"
+        },
+        {
+          "id": "item2",
+          "text": "TCO Calculator"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Cost Management"
+        },
+        {
+          "id": "item4",
+          "text": "Cost Management budgets and alerts"
+        }
+      ],
+      "explanation": {
+        "correct": "Pricing Calculator and TCO Calculator estimate costs before deployment. Cost Management and budgets analyze and control spending after resources are deployed.",
+        "incorrect": "Estimation tools help plan spending. Analysis tools track actual spending. Use estimation before deployment, analysis after.",
+        "examTip": "Before deployment: Pricing Calculator (estimate Azure costs) + TCO Calculator (compare on-prem). After: Cost Management (analyze) + Budgets (control).",
+        "relatedTopics": [
+          "pricing-calculator",
+          "tco-calculator",
+          "cost-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-127",
+      "type": "drag-drop",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Drag each item to the correct category.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Customer Responsibility (Always)",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Cloud Provider Responsibility (Always)",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Information and data classification"
+        },
+        {
+          "id": "item2",
+          "text": "User accounts and access management"
+        },
+        {
+          "id": "item3",
+          "text": "Physical datacenter security"
+        },
+        {
+          "id": "item4",
+          "text": "Physical network infrastructure"
+        }
+      ],
+      "explanation": {
+        "correct": "Customers always own their data and account management. The cloud provider always manages physical security and infrastructure regardless of service model.",
+        "incorrect": "These responsibilities never shift between parties. Data ownership is always the customer's. Physical security is always the provider's.",
+        "examTip": "Always customer: data, accounts, devices. Always provider: physical DC, physical network, physical hosts. Shared responsibilities vary by service model.",
+        "relatedTopics": [
+          "shared-responsibility",
+          "customer-responsibility",
+          "provider-responsibility"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the shared responsibility model",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-describe-shared-responsibility-model"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-138",
+      "type": "single-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "Adventure Works is evaluating whether to migrate their datacenter to Azure. Their CFO wants to understand the potential cost savings over 5 years, including hardware, electricity, labor, and software licensing.",
+      "questionText": "Which Azure tool should Adventure Works use for this analysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Pricing Calculator",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Cost Management",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Total Cost of Ownership (TCO) Calculator",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Advisor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The TCO Calculator compares total on-premises costs (hardware, software, labor, electricity, facilities) against equivalent Azure services to show potential savings over time.",
+        "incorrect": "Pricing Calculator estimates Azure-only costs. Cost Management analyzes existing Azure spending. Advisor provides optimization tips. None compare on-prem to cloud holistically.",
+        "examTip": "TCO Calculator inputs: current servers, databases, storage, networking, labor costs, electricity. Output: multi-year savings report comparing on-prem vs Azure.",
+        "relatedTopics": [
+          "tco-calculator",
+          "migration-roi",
+          "cost-comparison"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-143",
+      "type": "single-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which cloud computing benefit allows a company to deploy resources in datacenters around the world to serve customers with lower latency?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elasticity",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Geo-distribution",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Cost savings",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Fault tolerance",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Geo-distribution means deploying resources in multiple regions worldwide so users connect to the nearest datacenter, reducing latency and improving performance.",
+        "incorrect": "Elasticity handles scaling. Cost savings reduce expenses. Fault tolerance handles failures. Geo-distribution specifically addresses global reach and latency.",
+        "examTip": "Geo-distribution benefits: lower latency, disaster recovery, compliance with data residency. Azure has 60+ regions globally for maximum coverage.",
+        "relatedTopics": [
+          "geo-distribution",
+          "global-reach",
+          "low-latency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the benefits of using cloud services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-145",
+      "type": "single-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which feature of Azure Resource Manager ensures that only one operation can modify a resource at a time, preventing conflicting changes from concurrent deployments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Resource locks",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Deployment mode (complete vs incremental)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Concurrency control (resource-level locking)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Policy",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Resource Manager provides built-in concurrency control that locks resources during modifications, ensuring atomic operations and preventing conflicting simultaneous changes.",
+        "incorrect": "Resource locks prevent deletion/modification by users (not deployments). Deployment modes control what happens to existing resources. Policy enforces rules but not concurrency.",
+        "examTip": "ARM benefits: declarative templates, dependency management, concurrency control, tagging, RBAC integration, audit trail. ARM is the deployment and management layer for all Azure resources.",
+        "relatedTopics": [
+          "azure-resource-manager",
+          "concurrency",
+          "deployment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-148",
+      "type": "single-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service provides automated recommendations including shutting down idle VMs, right-sizing underutilized resources, and purchasing reservations to reduce costs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Cost Management",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Advisor",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Monitor",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Pricing Calculator",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Advisor provides personalized, actionable recommendations across five pillars including Cost. It identifies idle resources, suggests right-sizing, and recommends reservation purchases.",
+        "incorrect": "Cost Management shows spending data but does not generate optimization recommendations. Monitor tracks telemetry. Pricing Calculator estimates future costs.",
+        "examTip": "Advisor cost recommendations: shut down idle VMs, resize underutilized VMs, buy reservations, delete unattached disks, use Hybrid Benefit. Free and always-on.",
+        "relatedTopics": [
+          "azure-advisor",
+          "cost-recommendations",
+          "right-sizing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe monitoring tools in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/advisor/advisor-cost-recommendations"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-149",
+      "type": "single-choice",
+      "topicId": "describe-cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which principle of cloud design recommends that applications should handle failures gracefully and continue operating with reduced functionality rather than failing completely?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scalability",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fault tolerance",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Agility",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Predictability",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fault tolerance is the ability of a system to continue operating properly when one or more components fail, often with degraded functionality rather than complete failure.",
+        "incorrect": "Scalability handles load increases. Agility enables quick deployment. Predictability ensures consistent performance and costs.",
+        "examTip": "Fault tolerance patterns: redundancy, retry logic, circuit breakers, graceful degradation, health probes. Design for failure in distributed systems.",
+        "relatedTopics": [
+          "fault-tolerance",
+          "resilience",
+          "cloud-design-principles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the benefits of using cloud services",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

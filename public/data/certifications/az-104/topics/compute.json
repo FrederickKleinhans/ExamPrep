@@ -1,0 +1,1774 @@
+{
+  "certificationId": "az-104",
+  "topicId": "compute",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "az104-054",
+      "topicId": "compute",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure disk type provides the highest performance and lowest latency, typically used for I/O-intensive production workloads such as SAP HANA?",
+      "explanation": {
+        "correct": "Ultra Disk offers the highest IOPS and throughput with sub-millisecond latency and adjustable performance independent of disk size, making it ideal for the most demanding I/O-intensive workloads.",
+        "incorrect": "Standard HDD is the lowest-performance, lowest-cost option. Standard SSD offers moderate performance for less-critical workloads. Premium SSD is high-performance but still below Ultra Disk's independently tunable IOPS/throughput.",
+        "examTip": "Ultra Disk lets you adjust IOPS and throughput on the fly without detaching the disk, unlike Premium SSD.",
+        "relatedTopics": [
+          "managed-disks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "managed-disks",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Standard HDD",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Standard SSD",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Premium SSD",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Ultra Disk",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": "az104-055",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which feature must you configure when creating a set of VMs to guarantee they are spread across separate physical racks with independent power and network, protecting against a single rack-level hardware failure?",
+      "explanation": {
+        "correct": "An Availability Set distributes VMs across fault domains (racks with separate power/network) and update domains within a single datacenter, protecting against hardware and planned maintenance failures.",
+        "incorrect": "Availability Zones protect against entire datacenter failure at a larger, cross-building scale. Proximity Placement Groups minimize latency by co-locating VMs, the opposite goal. Scale sets alone don't guarantee fault domain separation without configuring it explicitly.",
+        "examTip": "An Availability Set supports up to 3 fault domains and 20 update domains by default.",
+        "relatedTopics": [
+          "availability-sets"
+        ]
+      },
+      "metadata": {
+        "examObjective": "availability-sets",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Woodgrove Bank is deploying a two-VM SQL cluster and must guard against a single rack-level hardware failure taking down both nodes.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Availability Zones",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Availability Set with fault domains",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Proximity Placement Group",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "VM Scale Set flexible orchestration only",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-056",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Scenario: Contoso Ltd runs a stateless web tier that must automatically add instances when CPU exceeds 70% and remove them when CPU drops below 30%, while distributing traffic evenly. Which Azure service should they use?",
+      "explanation": {
+        "correct": "A VM Scale Set with autoscale rules is purpose-built to automatically add/remove VM instances based on metric thresholds like CPU, while a load balancer distributes traffic across the pool.",
+        "incorrect": "Manual scaling doesn't meet the 'automatically' requirement. A single large VM has no horizontal elasticity. Container Instances with a static replica count doesn't autoscale.",
+        "examTip": "Scale set autoscale rules use a Metric, Operator, Threshold, and Action (scale out/in by X instances) — configure separate rules for scale-out and scale-in.",
+        "relatedTopics": [
+          "vmss",
+          "autoscale"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vmss",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/autoscale-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Contoso Ltd runs a stateless web application tier serving unpredictable traffic spikes throughout the day.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure App Service with manual scaling",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Virtual Machine Scale Set with autoscale rules",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A single large VM with Ultra Disk",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Container Instances with static replica count",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-057",
+      "topicId": "compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "During a VM Scale Set rolling upgrade with the 'Rolling' upgrade policy, what determines how many instances are upgraded simultaneously?",
+      "explanation": {
+        "correct": "Rolling upgrades use configurable batch settings such as maxBatchInstancePercent (how many instances upgrade at once) and maxUnhealthyInstancePercent (tolerance for failures) to control the pace and safety of the rollout.",
+        "incorrect": "Fault domains, VM SKU, and autoscale minimum instance count don't directly govern the batching behavior of a rolling upgrade policy.",
+        "examTip": "Rolling upgrades require health probes to determine instance health status during the process.",
+        "relatedTopics": [
+          "vmss",
+          "rolling-upgrade"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vmss",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/virtual-machine-scale-sets-upgrade-policy"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "The maxBatchInstancePercent and maxUnhealthyInstancePercent settings",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The number of fault domains only",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The VM SKU size",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The scale set's autoscale minimum instance count",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-058",
+      "topicId": "compute",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which App Service feature allows you to test a new version of your web app in production-like conditions before swapping it to become the live version, with zero downtime?",
+      "explanation": {
+        "correct": "Deployment slots are separate live App Service instances with their own hostnames, letting you validate a staged deployment before swapping it into production with no downtime.",
+        "incorrect": "Auto-heal restarts unhealthy instances but doesn't provide a staging environment. Diagnostic logging and custom domains are unrelated features to staged deployment.",
+        "examTip": "Slot-specific app settings (marked 'Deployment slot setting') don't swap along with the code, useful for keeping connection strings environment-specific.",
+        "relatedTopics": [
+          "app-service",
+          "deployment-slots"
+        ]
+      },
+      "metadata": {
+        "examObjective": "app-service",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Contoso Ltd's release team was recently burned by a bad production deployment and now requires zero-downtime validation before go-live.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Auto-heal",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Deployment slots",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Diagnostic logging",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Custom domain binding",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-059",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which cloud-init capability allows you to run initialization scripts and install packages automatically the first time a Linux VM boots?",
+      "explanation": {
+        "correct": "cloud-init is a widely-used Linux initialization tool that Azure supports for automating first-boot configuration such as package installation, file writes, and command execution via a YAML configuration.",
+        "incorrect": "cloud-init does far more than SSH key injection, doesn't replace all VM extension functionality (extensions can also do post-deployment configuration later), and is Linux-specific, not Windows.",
+        "examTip": "For Windows equivalent first-boot automation, use the Custom Script Extension or Azure Automation DSC instead of cloud-init.",
+        "relatedTopics": [
+          "cloud-init"
+        ]
+      },
+      "metadata": {
+        "examObjective": "cloud-init",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/linux/using-cloud-init"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "It only supports SSH key injection, not scripting",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It runs a user-provided configuration to install packages, write files, and run commands at first boot",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It replaces the need for VM extensions entirely",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It only works with Windows VMs",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-060",
+      "topicId": "compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Azure networking feature, when enabled on a VM's NIC, reduces latency and CPU utilization by bypassing the host's virtual switch for network traffic processing?",
+      "explanation": {
+        "correct": "Accelerated Networking uses SR-IOV to enable direct NIC-to-VM data path, significantly reducing latency, jitter, and CPU load caused by the virtual switch.",
+        "incorrect": "IP forwarding allows a VM to route traffic on behalf of other resources but doesn't affect switch bypass. Floating IP is a load balancer feature for direct server return scenarios. Network Watcher packet capture is a diagnostic feature, not a performance optimization.",
+        "examTip": "Accelerated Networking requires supported VM sizes and must typically be enabled during VM creation (or while the VM is stopped/deallocated).",
+        "relatedTopics": [
+          "accelerated-networking"
+        ]
+      },
+      "metadata": {
+        "examObjective": "accelerated-networking",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-network/accelerated-networking-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Fabrikam Inc.'s trading application is sensitive to network latency and CPU overhead caused by virtual switch processing.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accelerated Networking",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "IP forwarding",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Load balancer floating IP",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Network Watcher packet capture",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-061",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure compute service allows you to run a single container instance quickly without managing any underlying VMs or orchestration, billed per second?",
+      "explanation": {
+        "correct": "Azure Container Instances (ACI) provides fast, serverless container execution without needing to provision or manage VMs, with per-second billing.",
+        "incorrect": "AKS requires managing a Kubernetes cluster (more overhead for a single quick container). App Service with Docker still involves an App Service Plan. VM Scale Sets are VM-based, not container-native.",
+        "examTip": "ACI is a great fit for burst workloads, batch jobs, or CI/CD build agents that need fast container startup with no cluster overhead.",
+        "relatedTopics": [
+          "aci"
+        ]
+      },
+      "metadata": {
+        "examObjective": "aci",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/container-instances/container-instances-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Kubernetes Service",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Container Instances",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure App Service with Docker",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Virtual Machine Scale Sets",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-062",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Scenario: Fabrikam needs to run a set of microservices as containers with the ability to automatically scale to zero when idle, without managing Kubernetes infrastructure. Which service best fits?",
+      "explanation": {
+        "correct": "Azure Container Apps is built on Kubernetes and KEDA under the hood but abstracts away cluster management, supporting scale-to-zero and event-driven autoscaling for microservices.",
+        "incorrect": "AKS requires managing node pools and cluster operations directly. Plain VMs with Docker require manual scaling and orchestration. Static-count ACI doesn't scale to zero automatically based on demand.",
+        "examTip": "Container Apps supports scaling rules based on HTTP traffic, CPU/memory, or custom KEDA scalers (like queue length).",
+        "relatedTopics": [
+          "container-apps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "container-apps",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/container-apps/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Fabrikam Inc. is modernizing a set of microservices and wants minimal infrastructure management overhead while controlling cost during idle periods.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Kubernetes Service (self-managed node pools)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Container Apps",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Virtual Machines with Docker installed",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Container Instances with a static count",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-063",
+      "topicId": "compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "In Azure Kubernetes Service (AKS), what is the primary purpose of configuring multiple node pools within a single cluster?",
+      "explanation": {
+        "correct": "Multiple node pools let you mix VM sizes (e.g., GPU nodes for ML, burstable nodes for web tiers) or OS types (Linux and Windows) within one cluster, tailoring infrastructure per workload.",
+        "incorrect": "AKS clusters share a single managed control plane regardless of node pool count — node pools don't create separate control planes. API server availability is governed by the AKS SLA/tier, not by node pool count. Windows support requires a Windows node pool but isn't the sole reason for multiple pools.",
+        "examTip": "The default 'system' node pool should be reserved for system pods; add a separate 'user' node pool for application workloads.",
+        "relatedTopics": [
+          "aks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "aks",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/aks/use-multiple-node-pools"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Adventure Works runs both a GPU-based ML workload and a lightweight web API on the same AKS cluster.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "To create separate Kubernetes control planes for isolation",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To run workloads with different VM sizes, OS types, or scaling requirements within the same cluster",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To increase the Kubernetes API server's availability",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To enable AKS support for Windows Server exclusively",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-064",
+      "topicId": "compute",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service lets you run event-driven code without provisioning or managing servers, and is billed based on executions and resource consumption?",
+      "explanation": {
+        "correct": "Azure Functions is the serverless compute offering designed for short-lived, event-triggered code execution, billed per-execution/consumption by default.",
+        "incorrect": "VMs, App Service Basic tier, and AKS all require you to provision and pay for dedicated compute capacity regardless of whether code is actively executing.",
+        "examTip": "Under the Consumption plan, Functions can scale to zero — you pay only for execution time and memory consumed.",
+        "relatedTopics": [
+          "azure-functions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-functions",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Virtual Machines",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Functions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure App Service (Basic tier)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Kubernetes Service",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-065",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which command would you run using Azure CLI to resize an existing virtual machine to a new VM size?",
+      "explanation": {
+        "correct": "The correct Azure CLI syntax is 'az vm resize --resource-group <rg> --name <vm> --size <sku>', which changes the VM size (the VM may need to be deallocated first if the target size isn't available on the current host).",
+        "incorrect": "'az vm update --resize' is not valid syntax, and '--new-size' is not the correct parameter name for this command — it must be '--size'.",
+        "examTip": "If resize fails due to hardware cluster constraints, deallocate the VM first, then resize, then start it again.",
+        "relatedTopics": [
+          "cli-commands"
+        ]
+      },
+      "metadata": {
+        "examObjective": "cli-commands",
+        "references": [
+          "https://learn.microsoft.com/en-us/cli/azure/vm#az-vm-resize"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "az vm update --resize",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "az vm resize --resource-group myRG --name myVM --size Standard_D4s_v5",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "az vm resize --resource-group myRG --name myVM --new-size Standard_D4s_v5",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "az vm resize --resource-group myRG --name myVM --size Standard_D4s_v5",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": "az104-066",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which App Service plan tier is required to use custom domains with free managed TLS/SSL certificates and deployment slots?",
+      "explanation": {
+        "correct": "Deployment slots and TLS/SSL bindings for custom domains generally require at least the Basic tier (though multiple slots specifically require Standard or higher); Free and Shared tiers don't support custom domain TLS bindings.",
+        "incorrect": "Free and Shared tiers don't support custom TLS bindings. Consumption (Y1) is a Functions-specific serverless plan, not an App Service plan tier used for this scenario.",
+        "examTip": "Deployment slots specifically require Standard tier or above; Basic tier alone doesn't support multiple slots.",
+        "relatedTopics": [
+          "app-service"
+        ]
+      },
+      "metadata": {
+        "examObjective": "app-service",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/app-service/overview-hosting-plans"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Free (F1)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Shared (D1)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Basic (B1) or higher",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Consumption (Y1)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-067",
+      "topicId": "compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A VM Scale Set uses Uniform orchestration mode. Which statement correctly distinguishes it from Flexible orchestration mode?",
+      "explanation": {
+        "correct": "Uniform orchestration provisions identical VM instances from a single model with limited per-VM customization, while Flexible orchestration provides greater flexibility (mixing VM sizes/zones per instance) and is Microsoft's recommended mode for new deployments requiring high availability at scale.",
+        "incorrect": "It's actually Flexible that allows more customization/mixing, the reverse of option A's claim. Flexible is the newer, recommended mode, not being deprecated. Both modes support autoscaling.",
+        "examTip": "Microsoft recommends Flexible orchestration for new large-scale, highly available workloads going forward.",
+        "relatedTopics": [
+          "vmss"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vmss",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/orchestration-modes"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uniform mode allows mixing different VM sizes within the same scale set; Flexible does not",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Uniform mode treats instances as largely identical and interchangeable via a single model; Flexible allows more VM customization and integrates better with Availability Zones per-instance",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Flexible mode is being deprecated in favor of Uniform mode",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Uniform mode does not support autoscaling at all",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-068",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid Azure managed disk types?",
+      "explanation": {
+        "correct": "Premium SSD v2 and Standard HDD are both valid Azure managed disk offerings, alongside Standard SSD, Premium SSD, and Ultra Disk.",
+        "incorrect": "'NVMe Direct-Attached' and 'RAID 10 Local Disk' are not Azure managed disk product names — they may reference underlying hardware concepts but aren't disk SKU options you select.",
+        "examTip": "Premium SSD v2 offers independently configurable performance similar to Ultra Disk but at typically lower cost, without requiring a specific VM series in all regions.",
+        "relatedTopics": [
+          "managed-disks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "managed-disks",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Premium SSD v2",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Standard HDD",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "NVMe Direct-Attached",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "RAID 10 Local Disk",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-069",
+      "topicId": "compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO conditions typically trigger the need to deallocate (not just stop) a VM before performing certain resize or configuration operations?",
+      "explanation": {
+        "correct": "Resizing to a size unavailable on the current hardware cluster requires deallocation so Azure can move the VM to compatible hardware; certain VNet-related NIC changes similarly may require deallocation to release network resources.",
+        "incorrect": "Adding data disks doesn't require deallocation. Changing tags is a purely metadata operation with no relation to VM power state.",
+        "examTip": "Run 'az vm deallocate' before size or key network changes to avoid resize failures due to compute cluster incompatibility.",
+        "relatedTopics": [
+          "managed-disks",
+          "vm-resize"
+        ]
+      },
+      "metadata": {
+        "examObjective": "managed-disks",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/resize-vm"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Changing to a VM size not currently available on the underlying hardware cluster",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Adding data disks that exceed the temp storage size",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Simply changing the VM's tags",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Modifying the virtual network the VM's NIC is attached to (in some scenarios)",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": "az104-070",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid Azure VM extension use cases?",
+      "explanation": {
+        "correct": "VM extensions like the Custom Script Extension enable post-deployment configuration such as installing software, and the Azure Monitor Agent extension configures monitoring.",
+        "incorrect": "Extensions cannot move a VM's region (that requires redeployment/migration) or convert managed disks to unmanaged (a different, largely deprecated operation unrelated to extensions).",
+        "examTip": "Use 'az vm extension set' to apply an extension to an existing VM, e.g. the CustomScript extension for Linux.",
+        "relatedTopics": [
+          "vm-extensions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vm-extensions",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Running a custom script for post-deployment software installation",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Configuring monitoring agents on the VM",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Changing the VM's Azure region",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Converting the VM's disk from managed to unmanaged",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-071",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following autoscale trigger types are supported for VM Scale Sets?",
+      "explanation": {
+        "correct": "VM Scale Set autoscale supports metric-based rules (thresholds on metrics like CPU) and schedule-based profiles (fixed date/time or recurring schedules).",
+        "incorrect": "DNS resolution failure count and storage replication lag are not supported autoscale trigger metrics for VM Scale Sets.",
+        "examTip": "Combine a default profile with schedule-specific profiles to handle predictable traffic patterns like month-end processing.",
+        "relatedTopics": [
+          "autoscale"
+        ]
+      },
+      "metadata": {
+        "examObjective": "autoscale",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/autoscale-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Metric-based (e.g., CPU percentage)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Schedule-based (specific date/time ranges)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "DNS resolution failure count",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Storage account replication lag",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-072",
+      "topicId": "compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO statements about Azure Functions hosting plans are correct?",
+      "explanation": {
+        "correct": "The Consumption plan scales to zero and back up on demand (potentially causing cold starts), while the Premium plan offers pre-warmed instances and VNet integration to avoid cold starts and improve networking.",
+        "incorrect": "The Consumption plan does NOT guarantee zero cold-start latency — the opposite is true, it's the plan most susceptible to cold starts. Hosting plans differ significantly in networking and scaling capabilities, not identical.",
+        "examTip": "Choose the Premium plan when you need VNet integration, no cold starts, or longer execution durations than Consumption allows.",
+        "relatedTopics": [
+          "azure-functions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-functions",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Consumption plan can scale to zero instances when idle",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The Premium plan supports VNet integration and avoids cold starts via pre-warmed instances",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The Consumption plan guarantees no cold start latency",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "All hosting plans share identical scaling and networking capabilities",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-073",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid ways to reduce cold-start latency or improve availability for a mission-critical Azure Function app?",
+      "explanation": {
+        "correct": "Premium/Dedicated plans keep pre-warmed instances ready, and 'Always On' (available on Dedicated plans) prevents the app from unloading after idle periods, both reducing cold-start impact.",
+        "incorrect": "The Consumption plan is the plan MOST prone to cold starts, not a fix for them. Disabling Application Insights has no bearing on cold-start latency and removes valuable telemetry.",
+        "examTip": "'Always On' is not available (and not needed) on the Consumption plan, since it always scales to zero by design.",
+        "relatedTopics": [
+          "azure-functions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-functions",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use the Premium or Dedicated (App Service) hosting plan",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Enable 'Always On' where supported",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Switch to the Consumption plan for guaranteed warm instances",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Disable Application Insights",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-074",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Multi-zone VM deployments qualify for the 99.99% SLA. Flexible orchestration explicitly supports spreading instances across zones within one scale set. Ultra Disk support is limited to specific VM series and regions, not universal.",
+        "incorrect": "The false statement overstates Ultra Disk compatibility — it requires specific supported VM sizes and regions.",
+        "examTip": "Always check the Ultra Disk region/VM-size support matrix before designing around it.",
+        "relatedTopics": [
+          "availability-zones",
+          "vmss"
+        ]
+      },
+      "metadata": {
+        "examObjective": "availability-zones",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Availability Zones guarantee a 99.99% VM SLA when at least two VMs are deployed across two or more zones.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A VM Scale Set with Flexible orchestration can span multiple Availability Zones for a single scale set.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Ultra Disks can be attached to any Azure VM size in any region.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "az104-075",
+      "topicId": "compute",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Slots run on the same underlying App Service Plan compute unless configured otherwise. ACI runs containers directly without any cluster requirement. Consumption-plan Functions have a default execution timeout (5 minutes, configurable up to 10) rather than unlimited duration.",
+        "incorrect": "Two statements are false: ACI does not need a Kubernetes cluster, and Consumption plan Functions are not unlimited in duration.",
+        "examTip": "For long-running functions beyond the Consumption plan's timeout limits, use the Premium or Dedicated hosting plan.",
+        "relatedTopics": [
+          "app-service",
+          "aci",
+          "azure-functions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "app-service",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure App Service deployment slots share the same App Service Plan resources as the production slot by default.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Container Instances require you to first create and manage a Kubernetes cluster.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Functions written in the Consumption plan can run for an unlimited duration by default.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "az104-076",
+      "topicId": "compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Node OS patching in AKS is largely automated for security patches but cluster/version upgrades and some maintenance still require administrator scheduling or approval via maintenance windows. The Free tier AKS control plane has no management fee, but node VMs are billed normally. Node pools can be upgraded independently, one at a time.",
+        "incorrect": "The false statement overstates automation — full automatic node OS patching without any administrator involvement is not accurate; node image upgrades typically require a scheduled or manual trigger even with auto-upgrade channels configured.",
+        "examTip": "Configure an AKS cluster auto-upgrade channel and a maintenance window to control when upgrades and patches are applied.",
+        "relatedTopics": [
+          "aks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "aks",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/aks/auto-upgrade-cluster"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "AKS automatically patches the underlying node OS without any administrator action required, by default.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "An AKS cluster's control plane is managed and free of charge on the Free tier, while node pool VMs are still billed.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "You can upgrade an AKS cluster's Kubernetes version one node pool at a time.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "az104-077",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Most managed disks require the VM to be deallocated (or the disk detached) before resizing larger, though some premium SSD v2/Ultra disks support limited online resize. Snapshots are point-in-time, read-only copies usable to create new disks or images. Standard HDD is best suited for backup/infrequent access workloads, not latency-sensitive production use.",
+        "incorrect": "Two statements are false: disk resize generally requires deallocation for most disk types, and Standard HDD is not recommended for latency-sensitive production workloads.",
+        "examTip": "Premium SSD v2 and Ultra Disk are the exceptions that support certain online performance/size adjustments without downtime.",
+        "relatedTopics": [
+          "managed-disks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "managed-disks",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A managed disk can be resized to a larger size while the VM is running, for most disk types.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Snapshots of managed disks can be used to create a new managed disk or VM image.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Standard HDD disks are recommended for production workloads requiring consistent low-latency performance.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "az104-078",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Container Apps uses managed Kubernetes/KEDA under the hood without exposing cluster management. Functions support many trigger types (Timer, Queue, Blob, Event Grid, HTTP, etc.), not just HTTP. Scale sets support Automatic, Rolling, and Manual upgrade policies for OS image updates.",
+        "incorrect": "The false statement wrongly limits Functions triggers to HTTP only, ignoring the many other supported trigger bindings.",
+        "examTip": "Common Function trigger types to know: HTTP, Timer, Blob, Queue, Event Grid, Service Bus, Cosmos DB change feed.",
+        "relatedTopics": [
+          "container-apps",
+          "azure-functions",
+          "vmss"
+        ]
+      },
+      "metadata": {
+        "examObjective": "container-apps",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/container-apps/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Container Apps is built on top of Kubernetes and KEDA but abstracts cluster management from the user.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "An Azure Function can only be triggered by an HTTP request.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "VM Scale Sets can be configured to automatically apply OS image upgrades using the 'Automatic' upgrade policy.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "az104-079",
+      "topicId": "compute",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Availability sets operate within a single datacenter/region, not across regions. Boot diagnostics captures serial console output and a screenshot of the VM's boot screen for troubleshooting. Accelerated Networking requires specific supported VM sizes and is not universally available on all sizes.",
+        "incorrect": "Two statements are false: availability sets are single-region/datacenter constructs, and Accelerated Networking has VM size prerequisites.",
+        "examTip": "Check the 'Accelerated Networking supported' column in the VM sizes documentation before assuming a size supports it.",
+        "relatedTopics": [
+          "availability-sets",
+          "accelerated-networking"
+        ]
+      },
+      "metadata": {
+        "examObjective": "availability-sets",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "An availability set spans multiple Azure regions by default.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "A VM's boot diagnostics feature can help troubleshoot startup issues by capturing console output and screenshots.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Accelerated Networking can be enabled on any VM size, including the smallest burstable B-series.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "az104-080",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "Availability Zones protect against full datacenter failure at the region level. Embedding a VM extension in the scale set model ensures every new instance automatically runs the required setup script at provisioning time.",
+        "incorrect": "An Availability Set alone doesn't protect against a full datacenter outage. Manual per-instance sessions don't scale with automatic scale-out events.",
+        "examTip": "Extensions defined in the scale set model apply automatically to every new instance created during scale-out — no manual step needed.",
+        "relatedTopics": [
+          "availability-zones",
+          "vm-extensions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "availability-zones",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To protect a two-tier application against a full datacenter failure while keeping network latency low between tiers, deploy VMs using",
+          "options": [
+            "A single Availability Set",
+            "Availability Zones",
+            "Proximity Placement Group alone",
+            "A Scale Set with 1 fault domain"
+          ],
+          "correctAnswer": "Availability Zones"
+        },
+        {
+          "id": "d2",
+          "prompt": "To automatically install a required software agent on every new instance as a VM Scale Set scales out, configure a",
+          "options": [
+            "Custom Script VM extension in the scale set model",
+            "Manual RDP/SSH session per new instance",
+            "Storage account lifecycle policy",
+            "Network security group rule"
+          ],
+          "correctAnswer": "Custom Script VM extension in the scale set model"
+        }
+      ]
+    },
+    {
+      "id": "az104-081",
+      "topicId": "compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "ACI is ideal for short-lived, on-demand container jobs without persistent infrastructure. Deallocating (not just stopping) releases the VM's hardware allocation, letting Azure reassign it to hardware supporting the new size.",
+        "incorrect": "AKS and App Service both involve more persistent infrastructure overhead than a single batch job needs. Merely stopping a VM (without deallocating) still leaves it billed and bound to its current hardware, so it won't unblock a resize onto different hardware.",
+        "examTip": "Stopped (not deallocated) VMs still incur compute charges and stay on the same host — always deallocate before a cross-cluster resize.",
+        "relatedTopics": [
+          "aci",
+          "vm-resize"
+        ]
+      },
+      "metadata": {
+        "examObjective": "aci",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/resize-vm"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To run a batch container job that starts, completes, and exits without needing persistent infrastructure, use",
+          "options": [
+            "Azure Kubernetes Service",
+            "Azure Container Instances",
+            "Azure App Service",
+            "A VM Scale Set"
+          ],
+          "correctAnswer": "Azure Container Instances"
+        },
+        {
+          "id": "d2",
+          "prompt": "To achieve the fastest possible resize when moving a VM to a size unavailable on its current host cluster, you must first",
+          "options": [
+            "Detach all data disks",
+            "Stop (not deallocate) the VM",
+            "Deallocate the VM",
+            "Take a snapshot of the OS disk"
+          ],
+          "correctAnswer": "Deallocate the VM"
+        }
+      ]
+    },
+    {
+      "id": "az104-082",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "Deployment slots provide a production-identical staging environment with swap capability. Auto-upgrade channels combined with maintenance windows let AKS apply patches predictably without surprise downtime.",
+        "incorrect": "A separate resource group or new storage account do not provide a swappable staging slot. DaemonSets and Horizontal Pod Autoscaler solve different Kubernetes problems (per-node agents, pod scaling) unrelated to node OS patching schedules.",
+        "examTip": "Maintenance windows let you restrict AKS upgrades/patches to low-traffic periods like weekends.",
+        "relatedTopics": [
+          "app-service",
+          "aks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "app-service",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/aks/auto-upgrade-cluster"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To validate a new app version in an environment identical to production before making it live with zero downtime, use",
+          "options": [
+            "A separate resource group",
+            "An App Service deployment slot",
+            "A new storage account",
+            "A scaled-down App Service Plan"
+          ],
+          "correctAnswer": "An App Service deployment slot"
+        },
+        {
+          "id": "d2",
+          "prompt": "To ensure an AKS cluster automatically applies security patches to node images on a controlled schedule, configure",
+          "options": [
+            "A DaemonSet only",
+            "A node pool auto-upgrade channel and maintenance window",
+            "A Horizontal Pod Autoscaler",
+            "A LoadBalancer service type"
+          ],
+          "correctAnswer": "A node pool auto-upgrade channel and maintenance window"
+        }
+      ]
+    },
+    {
+      "id": "az104-083",
+      "topicId": "compute",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "Blob-triggered Functions are the serverless, event-driven way to react to new file uploads. VM extensions embedded in an ARM template automate post-deployment configuration like agent installation.",
+        "incorrect": "A VM with a cron job requires ongoing server management, unlike serverless Functions. NSGs, availability sets, and public IPs don't install software.",
+        "examTip": "Common built-in triggers/bindings include Blob Storage, Queue Storage, Timer, and HTTP — pick the one matching your event source.",
+        "relatedTopics": [
+          "azure-functions",
+          "vm-extensions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-functions",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To run code only when a new file is uploaded to Blob Storage, without provisioning any servers, use",
+          "options": [
+            "Azure VM with a cron job",
+            "Azure Functions with a Blob trigger",
+            "Azure Container Instances",
+            "Azure Load Balancer"
+          ],
+          "correctAnswer": "Azure Functions with a Blob trigger"
+        },
+        {
+          "id": "d2",
+          "prompt": "To install monitoring software automatically as part of a VM's ARM template deployment, add a/an",
+          "options": [
+            "NSG rule",
+            "VM extension resource",
+            "Availability set",
+            "Public IP address"
+          ],
+          "correctAnswer": "VM extension resource"
+        }
+      ]
+    },
+    {
+      "id": "az104-084",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "Scale sets with autoscale and a load balancer elastically handle unpredictable traffic. Boot diagnostics provides console output/screenshots for troubleshooting boot issues without needing a live remote session.",
+        "incorrect": "A single large VM and a fixed-count availability set both lack elasticity for unpredictable load. NSG flow logs and tag policies don't help diagnose boot failures.",
+        "examTip": "Enable boot diagnostics at VM creation time (uses a storage account or managed storage) to simplify future troubleshooting.",
+        "relatedTopics": [
+          "vmss",
+          "boot-diagnostics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vmss",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/boot-diagnostics"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To distribute unpredictable web traffic across a pool of VMs that grows and shrinks automatically, deploy a",
+          "options": [
+            "Single large VM",
+            "VM Scale Set with autoscale and a load balancer",
+            "Availability Set with fixed instance count",
+            "Storage account with static website hosting"
+          ],
+          "correctAnswer": "VM Scale Set with autoscale and a load balancer"
+        },
+        {
+          "id": "d2",
+          "prompt": "To confirm boot failures on a troublesome VM without establishing a remote session, review the VM's",
+          "options": [
+            "NSG flow logs",
+            "Boot diagnostics screenshot and serial log",
+            "Resource lock history",
+            "Tag inheritance policy"
+          ],
+          "correctAnswer": "Boot diagnostics screenshot and serial log"
+        }
+      ]
+    },
+    {
+      "id": "az104-085",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to perform a blue-green style deployment using Azure App Service deployment slots.",
+      "explanation": {
+        "correct": "The standard slot-swap workflow creates a staging slot, deploys and validates the new version there, warms it up, and only then swaps it into production with near-zero downtime.",
+        "incorrect": "Swapping before testing/warm-up defeats the purpose of using a staging slot for safe validation.",
+        "examTip": "App Service automatically applies swap warm-up steps if 'Auto Swap' or custom warm-up rules are configured before completing the swap.",
+        "relatedTopics": [
+          "deployment-slots"
+        ]
+      },
+      "metadata": {
+        "examObjective": "deployment-slots",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a staging deployment slot",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Deploy and test the new app version in the staging slot",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Warm up the staging slot and verify it is healthy",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Swap the staging slot with the production slot",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "az104-086",
+      "topicId": "compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to provision a highly available VM Scale Set behind a Standard Load Balancer.",
+      "explanation": {
+        "correct": "Networking infrastructure must exist first, followed by the load balancer that will front the scale set, then the scale set itself referencing that backend pool, and finally autoscale rules are layered on top of the running scale set.",
+        "incorrect": "You cannot associate a scale set with a load balancer backend pool that doesn't exist yet, and autoscale rules require an existing scale set to attach to.",
+        "examTip": "A Standard Load Balancer requires resources in its backend pool to also be in a Standard SKU public IP configuration or fully private setup for consistency.",
+        "relatedTopics": [
+          "vmss",
+          "load-balancer"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vmss",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/tutorial-load-balancer-outbound-nat"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create the virtual network and subnet",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a Standard Load Balancer with a backend pool and health probe",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create the VM Scale Set and associate it with the load balancer backend pool",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Configure autoscale rules based on CPU or another metric",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "az104-087",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to migrate a VM's OS disk from Standard HDD to Premium SSD.",
+      "explanation": {
+        "correct": "Changing a managed disk's storage tier from Standard HDD to Premium SSD requires the VM to be deallocated first, then the disk type is changed, the VM restarted, and performance validated afterward.",
+        "incorrect": "You cannot change the underlying disk storage tier while the VM is running and actively using the disk.",
+        "examTip": "Use 'az disk update --sku Premium_LRS' via CLI to change a managed disk's storage tier after deallocating the VM.",
+        "relatedTopics": [
+          "managed-disks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "managed-disks",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Stop (deallocate) the virtual machine",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Navigate to the disk's configuration and change the account/disk type to Premium SSD",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Start the virtual machine",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Verify performance improvements using VM diagnostics or monitoring",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "az104-088",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each Azure compute service into the correct category based on its management model.",
+      "explanation": {
+        "correct": "Scale Sets and AKS node pools still involve managing VM-based compute capacity, while Functions Consumption and ACI abstract away VM management entirely.",
+        "incorrect": "AKS's control plane is managed, but its worker nodes (VMs) still require patching/sizing decisions, distinguishing it from truly serverless options.",
+        "examTip": "'Serverless' doesn't mean no servers exist — it means you don't provision or manage them directly.",
+        "relatedTopics": [
+          "vmss",
+          "aks",
+          "azure-functions",
+          "aci"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vmss",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Virtual Machine Scale Sets"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Kubernetes Service (node pools)"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Functions (Consumption plan)"
+        },
+        {
+          "id": "item4",
+          "text": "Azure Container Instances"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Requires managing underlying VM infrastructure",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Fully serverless / no VM management required",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "az104-089",
+      "topicId": "compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each Azure Disk type into the correct performance tier category.",
+      "explanation": {
+        "correct": "Ultra Disk and Premium SSD v2 target the most demanding, latency-sensitive workloads with independently tunable performance, while Standard HDD and Standard SSD are cost-optimized options for less-demanding workloads.",
+        "incorrect": "This tests knowledge of the full managed disk performance hierarchy across all five disk types.",
+        "examTip": "Only Ultra Disk and Premium SSD v2 allow adjusting IOPS/throughput independently of provisioned disk size.",
+        "relatedTopics": [
+          "managed-disks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "managed-disks",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Ultra Disk"
+        },
+        {
+          "id": "item2",
+          "text": "Premium SSD v2"
+        },
+        {
+          "id": "item3",
+          "text": "Standard HDD"
+        },
+        {
+          "id": "item4",
+          "text": "Standard SSD"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Highest-performance, latency-sensitive workloads",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Cost-optimized, lower-performance workloads",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "az104-090",
+      "topicId": "compute",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Sort each Azure feature into the correct availability protection category.",
+      "explanation": {
+        "correct": "Availability Zones and a zone-redundant Scale Set separate resources across physically distinct datacenters/buildings within a region, while fault domains and update domains within an Availability Set separate resources across racks and maintenance groups within a single datacenter.",
+        "incorrect": "Both categories provide fault isolation but operate at very different physical scales.",
+        "examTip": "Combine zonal deployment with redundant instances per zone for the strongest resiliency posture.",
+        "relatedTopics": [
+          "availability-zones",
+          "availability-sets"
+        ]
+      },
+      "metadata": {
+        "examObjective": "availability-zones",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Availability Zones"
+        },
+        {
+          "id": "item2",
+          "text": "Zone-redundant VM Scale Set"
+        },
+        {
+          "id": "item3",
+          "text": "Availability Set fault domains"
+        },
+        {
+          "id": "item4",
+          "text": "Update domains"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Protects against datacenter/region-level failure",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Protects against rack-level hardware failure within one datacenter",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    }
+  ]
+}

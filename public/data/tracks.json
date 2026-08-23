@@ -1,0 +1,617 @@
+[
+  {
+    "id": "cloud-engineer",
+    "name": "Cloud engineer",
+    "description": "Design, deploy, and manage cloud infrastructure across Azure, AWS, and Google Cloud.",
+    "icon": "☁️",
+    "color": "#58a6ff",
+    "bg": "rgba(88,166,255,0.1)",
+    "levels": [
+      {
+        "stage": "foundation",
+        "label": "Foundation",
+        "description": "Build cloud literacy and choose your primary platform.",
+        "certs": [
+          {
+            "certId": "az-900",
+            "required": false,
+            "note": "Start here if targeting Microsoft Azure"
+          },
+          {
+            "certId": "aws-cp",
+            "required": false,
+            "note": "Start here if targeting AWS"
+          },
+          {
+            "certId": "gcp-digital-leader",
+            "required": false,
+            "note": "Start here if targeting Google Cloud"
+          }
+        ]
+      },
+      {
+        "stage": "associate",
+        "label": "Associate",
+        "description": "Hands-on administration and architecture on your chosen platform.",
+        "certs": [
+          {
+            "certId": "az-104",
+            "required": false,
+            "prerequisites": [
+              "az-900"
+            ],
+            "note": "Azure administrator — manage identities, storage, compute, networking"
+          },
+          {
+            "certId": "aws-saa",
+            "required": false,
+            "prerequisites": [
+              "aws-cp"
+            ],
+            "note": "AWS solutions architect — design resilient, cost-optimized architectures"
+          }
+        ]
+      },
+      {
+        "stage": "professional",
+        "label": "Professional",
+        "description": "Design enterprise-scale solutions and automate deployments.",
+        "certs": [
+          {
+            "certId": "az-305",
+            "required": false,
+            "prerequisites": [
+              "az-104"
+            ],
+            "note": "Azure solutions architect expert"
+          },
+          {
+            "certId": "az-400",
+            "required": false,
+            "prerequisites": [
+              "az-104",
+              "az-204"
+            ],
+            "note": "Azure DevOps engineer — CI/CD, infrastructure as code"
+          }
+        ]
+      }
+    ],
+    "crossTrackCerts": [
+      "az-900",
+      "aws-cp",
+      "gcp-digital-leader"
+    ],
+    "estimatedHoursToComplete": 320
+  },
+  {
+    "id": "security-specialist",
+    "name": "Security specialist",
+    "description": "Protect organizations from threats, manage compliance, and respond to incidents.",
+    "icon": "🛡️",
+    "color": "#f85149",
+    "bg": "rgba(248,81,73,0.1)",
+    "levels": [
+      {
+        "stage": "foundation",
+        "label": "Foundation",
+        "description": "Understand security fundamentals and compliance basics.",
+        "certs": [
+          {
+            "certId": "comptia-security-plus",
+            "required": true,
+            "note": "DoD-approved baseline security certification"
+          },
+          {
+            "certId": "sc-900",
+            "required": false,
+            "note": "Microsoft security, compliance, and identity fundamentals"
+          },
+          {
+            "certId": "isc2-cc",
+            "required": false,
+            "note": "(ISC)² entry-level alternative to Security+"
+          }
+        ]
+      },
+      {
+        "stage": "associate",
+        "label": "Associate",
+        "description": "Operational security — threat detection, incident response, SIEM.",
+        "certs": [
+          {
+            "certId": "sc-200",
+            "required": false,
+            "prerequisites": [
+              "sc-900"
+            ],
+            "note": "Microsoft security operations analyst — Sentinel, Defender XDR"
+          }
+        ]
+      },
+      {
+        "stage": "professional",
+        "label": "Professional",
+        "description": "Enterprise security architecture and offensive security.",
+        "certs": [
+          {
+            "certId": "cissp",
+            "required": false,
+            "prerequisites": [
+              "5 years experience"
+            ],
+            "note": "The gold standard — security architecture and management"
+          },
+          {
+            "certId": "oscp",
+            "required": false,
+            "prerequisites": [
+              "comptia-security-plus",
+              "comptia-network-plus"
+            ],
+            "note": "Hands-on penetration testing — 24-hour practical exam"
+          }
+        ]
+      }
+    ],
+    "crossTrackCerts": [
+      "comptia-security-plus",
+      "sc-900"
+    ],
+    "estimatedHoursToComplete": 400
+  },
+  {
+    "id": "devops-engineer",
+    "name": "DevOps engineer",
+    "description": "Bridge development and operations with automation, containers, and CI/CD pipelines.",
+    "icon": "⚙️",
+    "color": "#3fb950",
+    "bg": "rgba(63,185,80,0.1)",
+    "levels": [
+      {
+        "stage": "foundation",
+        "label": "Foundation",
+        "description": "Linux fundamentals and cloud basics.",
+        "certs": [
+          {
+            "certId": "linux-essentials",
+            "required": true,
+            "note": "Command line, filesystems, permissions — essential for any DevOps role"
+          },
+          {
+            "certId": "az-900",
+            "required": false,
+            "note": "Cloud fundamentals if targeting Azure DevOps"
+          },
+          {
+            "certId": "aws-cp",
+            "required": false,
+            "note": "Cloud fundamentals if targeting AWS DevOps"
+          }
+        ]
+      },
+      {
+        "stage": "associate",
+        "label": "Associate",
+        "description": "Containers, orchestration, and infrastructure as code.",
+        "certs": [
+          {
+            "certId": "docker-associate",
+            "required": false,
+            "prerequisites": [
+              "linux-essentials"
+            ],
+            "note": "Containerization fundamentals"
+          },
+          {
+            "certId": "terraform-associate",
+            "required": false,
+            "note": "Infrastructure as code with HashiCorp Terraform"
+          },
+          {
+            "certId": "cka",
+            "required": true,
+            "prerequisites": [
+              "linux-essentials"
+            ],
+            "note": "Kubernetes administration — the backbone of modern DevOps"
+          }
+        ]
+      },
+      {
+        "stage": "professional",
+        "label": "Professional",
+        "description": "Enterprise-scale DevOps and platform engineering.",
+        "certs": [
+          {
+            "certId": "az-400",
+            "required": false,
+            "prerequisites": [
+              "az-104",
+              "az-204"
+            ],
+            "note": "Azure DevOps engineer expert"
+          },
+          {
+            "certId": "aws-devops",
+            "required": false,
+            "prerequisites": [
+              "aws-saa",
+              "aws-developer"
+            ],
+            "note": "AWS DevOps engineer professional"
+          }
+        ]
+      }
+    ],
+    "crossTrackCerts": [
+      "linux-essentials",
+      "az-900",
+      "aws-cp",
+      "cka"
+    ],
+    "estimatedHoursToComplete": 350
+  },
+  {
+    "id": "network-engineer",
+    "name": "Network engineer",
+    "description": "Design, build, and maintain the networks that connect the world.",
+    "icon": "🔌",
+    "color": "#a371f7",
+    "bg": "rgba(163,113,247,0.1)",
+    "levels": [
+      {
+        "stage": "foundation",
+        "label": "Foundation",
+        "description": "IT fundamentals and basic networking concepts.",
+        "certs": [
+          {
+            "certId": "comptia-a-plus",
+            "required": false,
+            "note": "Broad IT foundation — hardware, OS, troubleshooting"
+          },
+          {
+            "certId": "comptia-network-plus",
+            "required": true,
+            "note": "Vendor-neutral networking fundamentals"
+          }
+        ]
+      },
+      {
+        "stage": "associate",
+        "label": "Associate",
+        "description": "Cisco networking and hands-on configuration.",
+        "certs": [
+          {
+            "certId": "ccna",
+            "required": true,
+            "note": "Cisco's entry cert — routing, switching, security basics"
+          }
+        ]
+      },
+      {
+        "stage": "professional",
+        "label": "Professional",
+        "description": "Enterprise network design and advanced Cisco technologies.",
+        "certs": [
+          {
+            "certId": "ccnp-encor",
+            "required": false,
+            "prerequisites": [
+              "ccna"
+            ],
+            "note": "CCNP enterprise core — architecture, virtualization, automation"
+          }
+        ]
+      }
+    ],
+    "crossTrackCerts": [
+      "comptia-network-plus",
+      "ccna"
+    ],
+    "estimatedHoursToComplete": 280
+  },
+  {
+    "id": "software-developer",
+    "name": "Software developer",
+    "description": "Build cloud-native applications and deploy them at scale.",
+    "icon": "💻",
+    "color": "#d29922",
+    "bg": "rgba(210,153,34,0.1)",
+    "levels": [
+      {
+        "stage": "foundation",
+        "label": "Foundation",
+        "description": "Cloud fundamentals and development basics.",
+        "certs": [
+          {
+            "certId": "az-900",
+            "required": false,
+            "note": "Azure cloud fundamentals"
+          },
+          {
+            "certId": "aws-cp",
+            "required": false,
+            "note": "AWS cloud fundamentals"
+          }
+        ]
+      },
+      {
+        "stage": "associate",
+        "label": "Associate",
+        "description": "Develop and deploy on your chosen cloud platform.",
+        "certs": [
+          {
+            "certId": "az-204",
+            "required": false,
+            "prerequisites": [
+              "az-900"
+            ],
+            "note": "Azure developer — compute, storage, security, monitoring"
+          },
+          {
+            "certId": "aws-developer",
+            "required": false,
+            "prerequisites": [
+              "aws-cp"
+            ],
+            "note": "AWS developer — deployment, security, troubleshooting"
+          },
+          {
+            "certId": "ckad",
+            "required": false,
+            "prerequisites": [
+              "cka"
+            ],
+            "note": "Kubernetes application developer — cloud-native apps"
+          }
+        ]
+      }
+    ],
+    "crossTrackCerts": [
+      "az-900",
+      "aws-cp"
+    ],
+    "estimatedHoursToComplete": 220
+  },
+  {
+    "id": "data-ai-engineer",
+    "name": "Data & AI engineer",
+    "description": "Build data pipelines, analytics platforms, and AI-powered solutions.",
+    "icon": "📊",
+    "color": "#f778ba",
+    "bg": "rgba(247,120,186,0.1)",
+    "levels": [
+      {
+        "stage": "foundation",
+        "label": "Foundation",
+        "description": "Cloud and data fundamentals.",
+        "certs": [
+          {
+            "certId": "az-900",
+            "required": true,
+            "note": "Azure fundamentals — prerequisite for all Azure data certs"
+          },
+          {
+            "certId": "dp-900",
+            "required": true,
+            "prerequisites": [
+              "az-900"
+            ],
+            "note": "Azure data fundamentals — relational, non-relational, analytics"
+          }
+        ]
+      },
+      {
+        "stage": "associate",
+        "label": "Associate",
+        "description": "Data engineering and AI fundamentals.",
+        "certs": [
+          {
+            "certId": "dp-203",
+            "required": false,
+            "prerequisites": [
+              "dp-900"
+            ],
+            "note": "Azure data engineer — storage, processing, security"
+          },
+          {
+            "certId": "ai-900",
+            "required": false,
+            "prerequisites": [
+              "az-900"
+            ],
+            "note": "Azure AI fundamentals — ML, computer vision, NLP, generative AI"
+          }
+        ]
+      },
+      {
+        "stage": "professional",
+        "label": "Professional",
+        "description": "Enterprise AI solutions and advanced data platforms.",
+        "certs": [
+          {
+            "certId": "ai-102",
+            "required": false,
+            "prerequisites": [
+              "ai-900"
+            ],
+            "note": "Azure AI engineer — Cognitive Services, Bot Service, Applied AI"
+          }
+        ]
+      }
+    ],
+    "crossTrackCerts": [
+      "az-900",
+      "dp-900"
+    ],
+    "estimatedHoursToComplete": 260
+  },
+  {
+    "id": "qa-test-engineer",
+    "name": "QA & test engineer",
+    "description": "Ensure software quality through systematic testing and automation.",
+    "icon": "🧪",
+    "color": "#79c0ff",
+    "bg": "rgba(121,192,255,0.1)",
+    "levels": [
+      {
+        "stage": "foundation",
+        "label": "Foundation",
+        "description": "Testing theory and methodology.",
+        "certs": [
+          {
+            "certId": "istqb-foundation",
+            "required": true,
+            "note": "The global standard for software testing fundamentals"
+          }
+        ]
+      },
+      {
+        "stage": "associate",
+        "label": "Associate",
+        "description": "Agile testing and DevOps integration.",
+        "certs": [
+          {
+            "certId": "istqb-agile",
+            "required": false,
+            "prerequisites": [
+              "istqb-foundation"
+            ],
+            "note": "Testing in Agile environments — TDD, BDD, continuous testing"
+          }
+        ]
+      },
+      {
+        "stage": "professional",
+        "label": "Professional",
+        "description": "Test automation and platform engineering.",
+        "certs": [
+          {
+            "certId": "aws-devops",
+            "required": false,
+            "prerequisites": [
+              "aws-saa",
+              "aws-developer"
+            ],
+            "note": "DevOps professional — includes test automation in CI/CD pipelines"
+          }
+        ]
+      }
+    ],
+    "crossTrackCerts": [
+      "istqb-foundation"
+    ],
+    "estimatedHoursToComplete": 180
+  },
+  {
+    "id": "systems-administrator",
+    "name": "Systems administrator",
+    "description": "Keep IT infrastructure running — servers, operating systems, and user support.",
+    "icon": "🖥️",
+    "color": "#8b949e",
+    "bg": "rgba(139,148,158,0.1)",
+    "levels": [
+      {
+        "stage": "foundation",
+        "label": "Foundation",
+        "description": "Hardware, operating systems, and basic networking.",
+        "certs": [
+          {
+            "certId": "comptia-a-plus",
+            "required": true,
+            "note": "The industry standard entry point for IT support"
+          },
+          {
+            "certId": "linux-essentials",
+            "required": false,
+            "note": "Linux command line and open source basics"
+          }
+        ]
+      },
+      {
+        "stage": "associate",
+        "label": "Associate",
+        "description": "Enterprise Linux administration.",
+        "certs": [
+          {
+            "certId": "rhcsa",
+            "required": false,
+            "prerequisites": [
+              "linux-essentials"
+            ],
+            "note": "Red Hat Certified System Administrator — hands-on Linux"
+          }
+        ]
+      },
+      {
+        "stage": "professional",
+        "label": "Professional",
+        "description": "Cloud and automation for modern sysadmin roles.",
+        "certs": [
+          {
+            "certId": "az-104",
+            "required": false,
+            "prerequisites": [
+              "az-900"
+            ],
+            "note": "Azure administrator — cloud sysadmin path"
+          }
+        ]
+      }
+    ],
+    "crossTrackCerts": [
+      "comptia-a-plus",
+      "linux-essentials"
+    ],
+    "estimatedHoursToComplete": 240
+  },
+  {
+    "id": "project-manager",
+    "name": "Project manager",
+    "description": "Lead teams, deliver projects on time, and align technology with business goals.",
+    "icon": "📋",
+    "color": "#ff7b72",
+    "bg": "rgba(255,123,114,0.1)",
+    "levels": [
+      {
+        "stage": "foundation",
+        "label": "Foundation",
+        "description": "IT service management and Agile basics.",
+        "certs": [
+          {
+            "certId": "itil-4-foundation",
+            "required": false,
+            "note": "IT service management framework — widely used in enterprise"
+          },
+          {
+            "certId": "scrum-master",
+            "required": false,
+            "note": "Scrum framework — essential for Agile project management"
+          }
+        ]
+      },
+      {
+        "stage": "professional",
+        "label": "Professional",
+        "description": "Enterprise project and program management.",
+        "certs": [
+          {
+            "certId": "pmp",
+            "required": false,
+            "prerequisites": [
+              "35 hours education",
+              "experience"
+            ],
+            "note": "The gold standard for project management professionals"
+          }
+        ]
+      }
+    ],
+    "crossTrackCerts": [
+      "itil-4-foundation",
+      "scrum-master"
+    ],
+    "estimatedHoursToComplete": 200
+  }
+]

@@ -1,0 +1,858 @@
+{
+  "certificationId": "comptia-a-plus",
+  "topicId": "networking",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "aplus-002",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TCP port is used for HTTPS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "80",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "443",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "25",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "53",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "HTTPS uses port 443 by default.",
+        "incorrect": "Port 80 is HTTP, 25 is SMTP, 53 is DNS.",
+        "examTip": "Memorize common port numbers: HTTP=80, HTTPS=443, SSH=22.",
+        "relatedTopics": [
+          "TCP/IP ports",
+          "web protocols"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1: Compare and contrast common networking protocols and ports",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-005",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about IP addressing.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "IPv4 uses 32-bit addresses.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "IPv6 uses 64-bit addresses.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "APIPA addresses are in the 169.254.0.0/16 range.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "DHCP is used for dynamic IP assignment.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "IPv4 is 32-bit; IPv6 is 128-bit; APIPA is 169.254.x.x; DHCP assigns IPs dynamically.",
+        "incorrect": "IPv6 is 128-bit, not 64-bit.",
+        "examTip": "Know the difference between IPv4 and IPv6 address lengths.",
+        "relatedTopics": [
+          "IPv4 vs IPv6",
+          "APIPA",
+          "DHCP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2: Explain common networking concepts, including IP addressing",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-009",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which wireless standard operates at 5 GHz and supports speeds up to 1.3 Gbps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "802.11ac",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "802.11n",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "802.11a",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "802.11b",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "802.11ac (Wi-Fi 5) operates at 5 GHz and is faster than 802.11n.",
+        "incorrect": "802.11n supports both 2.4 and 5 GHz but is slower.",
+        "examTip": "802.11ac is the predecessor to Wi-Fi 6 (802.11ax).",
+        "relatedTopics": [
+          "Wireless standards",
+          "Wi-Fi frequencies"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4: Compare and contrast wireless networking protocols",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-012",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match the networking tool to its purpose.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Tests connectivity and measures latency",
+          "options": [
+            "ping",
+            "tracert",
+            "netstat",
+            "nslookup"
+          ],
+          "correctAnswer": "ping"
+        },
+        {
+          "id": "d2",
+          "prompt": "Displays active connections and ports",
+          "options": [
+            "ping",
+            "tracert",
+            "netstat",
+            "nslookup"
+          ],
+          "correctAnswer": "netstat"
+        },
+        {
+          "id": "d3",
+          "prompt": "Queries DNS for domain name resolution",
+          "options": [
+            "ping",
+            "tracert",
+            "netstat",
+            "nslookup"
+          ],
+          "correctAnswer": "nslookup"
+        }
+      ],
+      "explanation": {
+        "correct": "ping = connectivity; netstat = connections; nslookup = DNS.",
+        "incorrect": "Other tools have different purposes.",
+        "examTip": "Use tracert to trace the route to a destination.",
+        "relatedTopics": [
+          "Network troubleshooting tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3: Given a scenario, troubleshoot networking issues using appropriate tools",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-016",
+      "exam": "core1",
+      "type": "drag-drop",
+      "topicId": "networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each TCP port to its service.",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "FTP",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "SSH",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "HTTP",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "HTTPS",
+          "acceptsItemIds": [
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "21"
+        },
+        {
+          "id": "item2",
+          "text": "22"
+        },
+        {
+          "id": "item3",
+          "text": "80"
+        },
+        {
+          "id": "item4",
+          "text": "443"
+        }
+      ],
+      "explanation": {
+        "correct": "FTP=21, SSH=22, HTTP=80, HTTPS=443.",
+        "incorrect": "Mismatching ports and services is common.",
+        "examTip": "Memorize these common ports: 21, 22, 23, 25, 80, 443.",
+        "relatedTopics": [
+          "TCP/IP ports",
+          "common services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1: Compare and contrast common networking protocols and ports",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-019",
+      "exam": "core1",
+      "type": "multiple-choice",
+      "topicId": "networking",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "You are setting up a small office network with 5 computers. You need to assign IP addresses automatically.",
+      "questionText": "Which of the following should you configure? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "DHCP server",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "DNS server",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Router with DHCP enabled",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Static IP on each computer",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DHCP server or router with DHCP can assign IPs automatically.",
+        "incorrect": "DNS is for name resolution; static IP requires manual config.",
+        "examTip": "Most SOHO routers have built-in DHCP.",
+        "relatedTopics": [
+          "DHCP",
+          "IP address management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.5: Given a scenario, configure a SOHO router and wireless network",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-024",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which cable type is most commonly used for Ethernet networking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Coaxial",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fiber optic",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Twisted pair",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "USB",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Twisted pair (Cat5e/6) is the standard for Ethernet.",
+        "incorrect": "Coaxial is used for cable TV; fiber is high-speed; USB is peripheral.",
+        "examTip": "Cat5e and Cat6 are common twisted pair cables.",
+        "relatedTopics": [
+          "Ethernet cables",
+          "network media"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.6: Compare and contrast network cables and connectors",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-030",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct IP address class for each range.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "10.0.0.0 – 10.255.255.255",
+          "options": [
+            "Class A",
+            "Class B",
+            "Class C",
+            "Class D"
+          ],
+          "correctAnswer": "Class A"
+        },
+        {
+          "id": "d2",
+          "prompt": "172.16.0.0 – 172.31.255.255",
+          "options": [
+            "Class A",
+            "Class B",
+            "Class C",
+            "Class D"
+          ],
+          "correctAnswer": "Class B"
+        },
+        {
+          "id": "d3",
+          "prompt": "192.168.0.0 – 192.168.255.255",
+          "options": [
+            "Class A",
+            "Class B",
+            "Class C",
+            "Class D"
+          ],
+          "correctAnswer": "Class C"
+        }
+      ],
+      "explanation": {
+        "correct": "10.x.x.x = Class A; 172.16-31.x.x = Class B; 192.168.x.x = Class C.",
+        "incorrect": "These are private IP ranges.",
+        "examTip": "Private IPs are not routable on the internet.",
+        "relatedTopics": [
+          "IP address classes",
+          "private IP addressing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2: Explain common networking concepts, including IP addressing",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-036",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which device is used to connect multiple network segments and filter traffic based on MAC addresses?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Router",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Switch",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Hub",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Bridge",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A switch filters traffic based on MAC addresses.",
+        "incorrect": "Router uses IP addresses; hub broadcasts; bridge connects segments.",
+        "examTip": "Switches are more efficient than hubs.",
+        "relatedTopics": [
+          "Network devices",
+          "switching"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.7: Compare and contrast network devices",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-043",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which protocol is used to automatically assign IP addresses?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DHCP",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "DNS",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "HTTP",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "FTP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DHCP (Dynamic Host Configuration Protocol) assigns IPs automatically.",
+        "incorrect": "DNS resolves names; HTTP/FTP are transfer protocols.",
+        "examTip": "DHCP uses UDP ports 67 and 68.",
+        "relatedTopics": [
+          "DHCP",
+          "IP addressing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2: Explain common networking concepts, including IP addressing",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-048",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which network protocol is used to resolve domain names to IP addresses?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DNS",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ARP",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "NAT",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ICMP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DNS resolves hostnames to IP addresses.",
+        "incorrect": "ARP resolves IP to MAC; NAT translates IPs; ICMP is for ping.",
+        "examTip": "DNS uses port 53.",
+        "relatedTopics": [
+          "DNS",
+          "network protocols"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1: Compare and contrast common networking protocols and ports",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-053",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct wireless standard for each speed.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Up to 9.6 Gbps (Wi-Fi 6)",
+          "options": [
+            "802.11ac",
+            "802.11n",
+            "802.11ax",
+            "802.11a"
+          ],
+          "correctAnswer": "802.11ax"
+        },
+        {
+          "id": "d2",
+          "prompt": "Up to 1.3 Gbps (Wi-Fi 5)",
+          "options": [
+            "802.11ac",
+            "802.11n",
+            "802.11ax",
+            "802.11a"
+          ],
+          "correctAnswer": "802.11ac"
+        },
+        {
+          "id": "d3",
+          "prompt": "Up to 600 Mbps (Wi-Fi 4)",
+          "options": [
+            "802.11ac",
+            "802.11n",
+            "802.11ax",
+            "802.11a"
+          ],
+          "correctAnswer": "802.11n"
+        }
+      ],
+      "explanation": {
+        "correct": "Wi-Fi 6 (802.11ax) > Wi-Fi 5 (802.11ac) > Wi-Fi 4 (802.11n).",
+        "incorrect": "802.11a is older and slower.",
+        "examTip": "Wi-Fi 6 is the latest standard.",
+        "relatedTopics": [
+          "Wireless standards",
+          "Wi-Fi speeds"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4: Compare and contrast wireless networking protocols",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-058",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Determine if each statement about network devices is true or false.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A router connects different networks.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A switch connects devices within the same network.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A hub sends data only to the intended recipient.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "A modem modulates and demodulates signals.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Router=inter-networks; Switch=intra-network; Modem=modulate/demodulate.",
+        "incorrect": "Hub broadcasts to all ports.",
+        "examTip": "Switches are more intelligent than hubs.",
+        "relatedTopics": [
+          "Network devices",
+          "routing and switching"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.7: Compare and contrast network devices",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-063",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which IP address is a private IP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8.8.8.8",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "192.168.1.1",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "172.32.1.1",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "1.1.1.1",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "192.168.x.x is private.",
+        "incorrect": "8.8.8.8 (Google DNS), 1.1.1.1 (Cloudflare), and 172.32.x.x are public.",
+        "examTip": "Private IPs: 10.x.x.x, 172.16-31.x.x, 192.168.x.x.",
+        "relatedTopics": [
+          "Private IP addressing",
+          "IP classes"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2: Explain common networking concepts, including IP addressing",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-068",
+      "exam": "core1",
+      "type": "multiple-choice",
+      "topicId": "networking",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "You are troubleshooting a network where users can't access the internet but can ping each other.",
+      "questionText": "What are the most likely causes? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Default gateway misconfigured",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "DNS server down",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Switch failure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Faulty network card",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Default gateway and DNS issues can prevent internet access.",
+        "incorrect": "Switch failure would affect internal pings; NIC failure affects connectivity.",
+        "examTip": "Check default gateway and DNS first.",
+        "relatedTopics": [
+          "Network troubleshooting",
+          "default gateway",
+          "DNS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.5: Given a scenario, troubleshoot network connectivity issues",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-073",
+      "exam": "core1",
+      "type": "drag-drop",
+      "topicId": "networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each network device to its OSI layer.",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Layer 1 – Physical",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Layer 2 – Data Link",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Layer 3 – Network",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Hub"
+        },
+        {
+          "id": "item2",
+          "text": "Switch"
+        },
+        {
+          "id": "item3",
+          "text": "Router"
+        }
+      ],
+      "explanation": {
+        "correct": "Hub=Physical; Switch=Data Link; Router=Network.",
+        "incorrect": "Mismatching layers and devices.",
+        "examTip": "Switches use MAC addresses; routers use IP addresses.",
+        "relatedTopics": [
+          "OSI model",
+          "networking devices"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1: Compare and contrast common networking protocols and ports",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

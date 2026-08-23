@@ -1,0 +1,1393 @@
+{
+  "certificationId": "comptia-a-plus",
+  "topicId": "hardware",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "aplus-001",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following RAM types is commonly used in laptops?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SO-DIMM DDR4",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "DIMM DDR4",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "RIMM DDR3",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SIMM DDR2",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SO-DIMM (Small Outline DIMM) is the smaller form factor used in laptops.",
+        "incorrect": "DIMM is used in desktops; RIMM and SIMM are obsolete.",
+        "examTip": "Remember that laptops use SO-DIMM; desktops use DIMM.",
+        "relatedTopics": [
+          "RAM types",
+          "form factors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast RAM types and features",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-004",
+      "exam": "core1",
+      "type": "multiple-choice",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A user reports that their computer won't boot and makes beeping sounds. You suspect a hardware issue.",
+      "questionText": "Which of the following could cause this issue? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Loose RAM module",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Faulty power supply",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Corrupted operating system",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Outdated BIOS",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Loose RAM and faulty PSU are common hardware causes of beep codes.",
+        "incorrect": "Corrupted OS and outdated BIOS are less likely to cause beep codes.",
+        "examTip": "Beep codes often indicate hardware problems like RAM or video.",
+        "relatedTopics": [
+          "POST beep codes",
+          "hardware troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2: Given a scenario, troubleshoot hardware and network issues",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-006",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct RAID level for each description.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Striping with no redundancy",
+          "options": [
+            "RAID 0",
+            "RAID 1",
+            "RAID 5",
+            "RAID 10"
+          ],
+          "correctAnswer": "RAID 0"
+        },
+        {
+          "id": "d2",
+          "prompt": "Mirroring",
+          "options": [
+            "RAID 0",
+            "RAID 1",
+            "RAID 5",
+            "RAID 10"
+          ],
+          "correctAnswer": "RAID 1"
+        },
+        {
+          "id": "d3",
+          "prompt": "Striping with parity",
+          "options": [
+            "RAID 0",
+            "RAID 1",
+            "RAID 5",
+            "RAID 10"
+          ],
+          "correctAnswer": "RAID 5"
+        }
+      ],
+      "explanation": {
+        "correct": "RAID 0 = striping, RAID 1 = mirroring, RAID 5 = striping with parity.",
+        "incorrect": "Other options don't match these definitions.",
+        "examTip": "RAID 5 requires at least 3 drives; RAID 10 is mirrored striped sets.",
+        "relatedTopics": [
+          "RAID levels",
+          "storage redundancy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast storage devices and RAID levels",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-007",
+      "exam": "core1",
+      "type": "ordering",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the steps to install a new M.2 NVMe SSD in a desktop PC.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Power off the PC and unplug it",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Open the case and locate the M.2 slot",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Insert the M.2 drive at an angle and secure with screw",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Close the case and power on",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "1: Power off, 2: Open case, 3: Install drive, 4: Close and power on.",
+        "incorrect": "Ordering errors could damage components.",
+        "examTip": "Always ground yourself before handling internal components.",
+        "relatedTopics": [
+          "M.2 installation",
+          "storage installation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1: Given a scenario, install and configure storage devices",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-011",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Determine if each statement about motherboard form factors is true or false.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "ATX is larger than ITX.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "mATX supports more expansion slots than ATX.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "ITX boards are commonly used in small form factor builds.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "ATX and mATX have the same mounting holes.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "ATX > mATX > ITX; mATX has fewer slots; ITX is small; mounting holes differ.",
+        "incorrect": "ATX supports more slots than mATX.",
+        "examTip": "Form factors: ATX (full), mATX (micro), ITX (mini).",
+        "relatedTopics": [
+          "Motherboard form factors",
+          "PC building"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2: Compare and contrast motherboard form factors",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-014",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which connector is used to provide power to a SATA hard drive?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Molex",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SATA power",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "PCIe power",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ATX 12V",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SATA drives use a SATA power connector (15-pin).",
+        "incorrect": "Molex is older; PCIe power is for GPUs; ATX 12V is for CPU.",
+        "examTip": "SATA data and power cables are different.",
+        "relatedTopics": [
+          "SATA connectors",
+          "power supply connectors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2: Compare and contrast common connectors and cables",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-017",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which type of printer uses heat to transfer dye onto paper?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Laser",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Inkjet",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Thermal",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Impact",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Thermal printers use heat to produce images on heat-sensitive paper.",
+        "incorrect": "Laser uses toner and heat fusion; inkjet sprays ink; impact strikes ribbon.",
+        "examTip": "Thermal printers are common in POS systems.",
+        "relatedTopics": [
+          "Printer types",
+          "thermal printing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.5: Compare and contrast printer types and consumables",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-021",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the maximum data transfer rate of SATA III?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.5 Gbps",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "3 Gbps",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "6 Gbps",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "12 Gbps",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SATA III supports up to 6 Gbps.",
+        "incorrect": "SATA I is 1.5 Gbps, SATA II is 3 Gbps.",
+        "examTip": "SATA III is often backwards compatible.",
+        "relatedTopics": [
+          "SATA standards",
+          "storage interfaces"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1: Compare and contrast storage devices and interfaces",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-026",
+      "exam": "core1",
+      "type": "drag-drop",
+      "topicId": "hardware",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each connector to its primary use.",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "HDMI",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "DisplayPort",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "VGA",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "DVI",
+          "acceptsItemIds": [
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Audio + video for monitors/TVs"
+        },
+        {
+          "id": "item2",
+          "text": "High-resolution video with daisy-chaining"
+        },
+        {
+          "id": "item3",
+          "text": "Analog video (older monitors)"
+        },
+        {
+          "id": "item4",
+          "text": "Digital video (older standard)"
+        }
+      ],
+      "explanation": {
+        "correct": "HDMI=audio+video; DisplayPort=high-res; VGA=analog; DVI=digital.",
+        "incorrect": "VGA is analog, not digital.",
+        "examTip": "DisplayPort supports daisy-chaining.",
+        "relatedTopics": [
+          "Display connectors",
+          "video standards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast display connectors and cables",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-028",
+      "exam": "core1",
+      "type": "ordering",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the steps to install a new CPU in a motherboard.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Unlock the CPU socket lever",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Align the CPU with the socket using the gold triangle",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Place the CPU into the socket without force",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Lock the socket lever and apply thermal paste",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "1: Unlock, 2: Align, 3: Place, 4: Lock and apply paste.",
+        "incorrect": "Forcing the CPU can bend pins.",
+        "examTip": "Match the gold triangle on the CPU to the socket.",
+        "relatedTopics": [
+          "CPU installation",
+          "motherboard setup"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.4: Given a scenario, install and configure CPU and cooling",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-031",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which storage device uses flash memory and has no moving parts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HDD",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SSD",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "DVD",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Magnetic tape",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SSDs use flash memory and are faster due to no moving parts.",
+        "incorrect": "HDDs have spinning platters; DVD and tape are also mechanical.",
+        "examTip": "SSDs are quieter and more shock-resistant.",
+        "relatedTopics": [
+          "SSD vs HDD",
+          "storage technologies"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast storage devices and RAID levels",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-033",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Determine if each statement about power supply connectors is true or false.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The 24-pin ATX connector powers the motherboard.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The 4/8-pin 12V connector powers the GPU.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "PCIe power connectors are used for graphics cards.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "SATA power connectors are used for hard drives and SSDs.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "24-pin = motherboard; 4/8-pin = CPU; PCIe = GPU; SATA = drives.",
+        "incorrect": "4/8-pin 12V is for the CPU, not GPU.",
+        "examTip": "Modern GPUs require 6-pin or 8-pin PCIe power.",
+        "relatedTopics": [
+          "PSU connectors",
+          "power supply"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2: Compare and contrast common connectors and cables",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-035",
+      "exam": "core1",
+      "type": "drag-drop",
+      "topicId": "hardware",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each RAID level to its description.",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "RAID 0",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "RAID 1",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "RAID 5",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "RAID 10",
+          "acceptsItemIds": [
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Striping, no redundancy"
+        },
+        {
+          "id": "item2",
+          "text": "Mirroring, 1:1 copy"
+        },
+        {
+          "id": "item3",
+          "text": "Striping with distributed parity"
+        },
+        {
+          "id": "item4",
+          "text": "Mirrored striped set"
+        }
+      ],
+      "explanation": {
+        "correct": "RAID 0 = striping; RAID 1 = mirroring; RAID 5 = striping with parity; RAID 10 = mirrored striped.",
+        "incorrect": "Mismatching RAID levels indicates confusion.",
+        "examTip": "RAID 5 requires at least 3 drives; RAID 10 requires at least 4.",
+        "relatedTopics": [
+          "RAID levels",
+          "storage redundancy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast storage devices and RAID levels",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-038",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct display port for each description.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Supports audio and video, uses a small trapezoid connector",
+          "options": [
+            "HDMI",
+            "DisplayPort",
+            "DVI",
+            "VGA"
+          ],
+          "correctAnswer": "HDMI"
+        },
+        {
+          "id": "d2",
+          "prompt": "Digital-only, found on older monitors and GPUs",
+          "options": [
+            "HDMI",
+            "DisplayPort",
+            "DVI",
+            "VGA"
+          ],
+          "correctAnswer": "DVI"
+        },
+        {
+          "id": "d3",
+          "prompt": "Analog-only, older standard",
+          "options": [
+            "HDMI",
+            "DisplayPort",
+            "DVI",
+            "VGA"
+          ],
+          "correctAnswer": "VGA"
+        }
+      ],
+      "explanation": {
+        "correct": "HDMI = audio+video; DVI = digital; VGA = analog.",
+        "incorrect": "DisplayPort also supports audio and video.",
+        "examTip": "VGA is being phased out for digital standards.",
+        "relatedTopics": [
+          "Display connectors",
+          "video standards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast display connectors and cables",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-041",
+      "exam": "core1",
+      "type": "ordering",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to install a SATA hard drive in a desktop PC.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Power off PC and open case",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Mount the drive in a drive bay",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Connect SATA data cable to motherboard and drive",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Connect SATA power cable",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "1: Power off, 2: Mount, 3: Data cable, 4: Power cable.",
+        "incorrect": "SATA data and power connectors are different.",
+        "examTip": "SATA drives are hot-swappable but always power down first.",
+        "relatedTopics": [
+          "SATA installation",
+          "storage installation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1: Given a scenario, install and configure storage devices",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-045",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Determine if each statement about CPU sockets is true or false.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Intel uses LGA sockets.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "AMD uses PGA sockets.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "LGA sockets have pins on the CPU.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "PGA sockets have pins on the motherboard.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Intel=LGA (pins on motherboard); AMD=PGA (pins on CPU).",
+        "incorrect": "LGA pins on motherboard; PGA pins on CPU.",
+        "examTip": "Always align CPU properly to avoid damaging pins.",
+        "relatedTopics": [
+          "CPU sockets",
+          "AMD vs Intel"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast CPU architecture and sockets",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-046",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct storage technology for each characteristic.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Uses NAND flash and has no moving parts",
+          "options": [
+            "SSD",
+            "HDD",
+            "NVMe",
+            "SATA"
+          ],
+          "correctAnswer": "SSD"
+        },
+        {
+          "id": "d2",
+          "prompt": "Uses spinning platters and read/write heads",
+          "options": [
+            "SSD",
+            "HDD",
+            "NVMe",
+            "SATA"
+          ],
+          "correctAnswer": "HDD"
+        },
+        {
+          "id": "d3",
+          "prompt": "High-speed interface using PCIe",
+          "options": [
+            "SSD",
+            "HDD",
+            "NVMe",
+            "SATA"
+          ],
+          "correctAnswer": "NVMe"
+        }
+      ],
+      "explanation": {
+        "correct": "SSD=flash no moving parts; HDD=spinning; NVMe=PCIe interface.",
+        "incorrect": "SATA is an interface, not storage type.",
+        "examTip": "NVMe is faster than SATA SSDs.",
+        "relatedTopics": [
+          "SSD vs HDD",
+          "NVMe",
+          "SATA"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast storage devices and RAID levels",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-050",
+      "exam": "core1",
+      "type": "drag-drop",
+      "topicId": "hardware",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each motherboard form factor to its characteristic.",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "ATX",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "mATX",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "ITX",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Full size, up to 7 expansion slots"
+        },
+        {
+          "id": "item2",
+          "text": "Smaller version of ATX, up to 4 expansion slots"
+        },
+        {
+          "id": "item3",
+          "text": "Mini size, used in compact builds"
+        }
+      ],
+      "explanation": {
+        "correct": "ATX=full; mATX=medium; ITX=mini.",
+        "incorrect": "Mismatching form factors.",
+        "examTip": "mATX fits in most ATX cases.",
+        "relatedTopics": [
+          "Motherboard form factors",
+          "PC building"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2: Compare and contrast motherboard form factors",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-051",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which printer type uses a print head that strikes an inked ribbon?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Laser",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Inkjet",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Thermal",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Impact",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Impact printers strike a ribbon to print, like dot matrix.",
+        "incorrect": "Laser uses toner; inkjet sprays; thermal uses heat.",
+        "examTip": "Impact printers are used for multi-part forms.",
+        "relatedTopics": [
+          "Printer types",
+          "impact printing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.5: Compare and contrast printer types and consumables",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-055",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What type of RAM is designed for servers and supports error checking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DDR4",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ECC RAM",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SO-DIMM",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DDR5",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ECC (Error-Correcting Code) RAM is used in servers.",
+        "incorrect": "DDR4/DDR5 are types; SO-DIMM is laptop RAM.",
+        "examTip": "ECC RAM is more expensive but more reliable.",
+        "relatedTopics": [
+          "RAM types",
+          "ECC memory"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast RAM types and features",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-056",
+      "exam": "core1",
+      "type": "multiple-choice",
+      "topicId": "hardware",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "You are building a high-performance gaming PC and want to maximize storage speed and capacity.",
+      "questionText": "Which of the following storage configurations would you recommend? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "NVMe M.2 SSD for OS and games",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "SATA HDD for mass storage",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SATA SSD for boot drive",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "M.2 SATA drive for OS",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "NVMe M.2 for speed; HDD for large storage at lower cost.",
+        "incorrect": "SATA SSD is slower than NVMe; M.2 SATA is not as fast as NVMe.",
+        "examTip": "NVMe uses PCIe lanes for faster data transfer.",
+        "relatedTopics": [
+          "NVMe",
+          "SATA",
+          "storage performance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1: Given a scenario, install and configure storage devices",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-061",
+      "exam": "core1",
+      "type": "dropdown-select",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct display resolution for each standard.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "1920x1080",
+          "options": [
+            "1080p",
+            "4K",
+            "1440p",
+            "720p"
+          ],
+          "correctAnswer": "1080p"
+        },
+        {
+          "id": "d2",
+          "prompt": "3840x2160",
+          "options": [
+            "1080p",
+            "4K",
+            "1440p",
+            "720p"
+          ],
+          "correctAnswer": "4K"
+        },
+        {
+          "id": "d3",
+          "prompt": "2560x1440",
+          "options": [
+            "1080p",
+            "4K",
+            "1440p",
+            "720p"
+          ],
+          "correctAnswer": "1440p"
+        }
+      ],
+      "explanation": {
+        "correct": "1080p=1920x1080; 4K=3840x2160; 1440p=2560x1440.",
+        "incorrect": "720p is 1280x720.",
+        "examTip": "4K is also called Ultra HD.",
+        "relatedTopics": [
+          "Display resolutions",
+          "video standards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3: Compare and contrast display connectors and cables",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-065",
+      "exam": "core1",
+      "type": "drag-drop",
+      "topicId": "hardware",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each RAM type to its characteristic.",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "DDR4",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "DDR5",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "ECC",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Lower voltage than DDR3, common in desktops"
+        },
+        {
+          "id": "item2",
+          "text": "Newer standard with higher speed and density"
+        },
+        {
+          "id": "item3",
+          "text": "Error-correcting memory for servers"
+        }
+      ],
+      "explanation": {
+        "correct": "DDR4=lower voltage; DDR5=newer; ECC=error correcting.",
+        "incorrect": "Mismatching RAM types.",
+        "examTip": "DDR5 is faster but more expensive.",
+        "relatedTopics": [
+          "RAM types",
+          "memory standards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1: Compare and contrast RAM types and features",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-066",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which connector is used for external hard drives and supports hot-swapping?",
+      "options": [
+        {
+          "id": "A",
+          "text": "eSATA",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "SATA",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "IDE",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "M.2",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "eSATA is external SATA and supports hot-swapping.",
+        "incorrect": "SATA is internal; IDE is obsolete; M.2 is internal.",
+        "examTip": "eSATA is faster than USB 2.0.",
+        "relatedTopics": [
+          "eSATA",
+          "storage connectors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2: Compare and contrast common connectors and cables",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-071",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which port is used to connect a keyboard or mouse?",
+      "options": [
+        {
+          "id": "A",
+          "text": "USB-A",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "HDMI",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "DisplayPort",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Ethernet",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "USB-A is commonly used for keyboards and mice.",
+        "incorrect": "HDMI and DisplayPort are for video; Ethernet is networking.",
+        "examTip": "Older keyboards may use PS/2.",
+        "relatedTopics": [
+          "USB connectors",
+          "peripheral interfaces"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2: Compare and contrast common connectors and cables",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-075",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "hardware",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does a POST beep code indicate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The system is fully functional",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A hardware issue during startup",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A software update is needed",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The CMOS battery is low",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "POST beep codes indicate hardware problems.",
+        "incorrect": "A single short beep often means success.",
+        "examTip": "Different beep patterns indicate different issues.",
+        "relatedTopics": [
+          "POST",
+          "hardware troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2: Given a scenario, troubleshoot hardware and network issues",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1433 @@
+{
+  "certificationId": "az-104",
+  "topicId": "identity",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "az104-001",
+      "topicId": "identity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You need to create a group in Microsoft Entra ID whose membership is automatically updated based on user attributes such as department. Which membership type should you configure?",
+      "explanation": {
+        "correct": "Dynamic User groups evaluate membership rules against user attributes and automatically add or remove members as those attributes change.",
+        "incorrect": "Assigned requires manual membership management. Dynamic Device evaluates device attributes, not user attributes. Microsoft 365 describes a group type, not a membership type.",
+        "examTip": "Dynamic membership requires Microsoft Entra ID P1 or P2 licensing.",
+        "relatedTopics": [
+          "entra-groups",
+          "dynamic-membership"
+        ]
+      },
+      "metadata": {
+        "examObjective": "entra-groups",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-membership"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Assigned",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Dynamic User",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Dynamic Device",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft 365",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-002",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "An administrator needs to allow a partner organization's users to access a specific SharePoint site without creating accounts in the company's tenant. What should be configured?",
+      "explanation": {
+        "correct": "Microsoft Entra B2B collaboration lets external users sign in with their own credentials as guest accounts in your tenant, ideal for partner access to internal resources.",
+        "incorrect": "Domain Services provides managed domain services, not external collaboration. B2C is for customer-facing applications with their own identity system. Conditional access enforces policy but doesn't grant guest access by itself.",
+        "examTip": "Remember: B2B = Business collaboration (partners as guests); B2C = Business to Consumer (customer identity for your apps).",
+        "relatedTopics": [
+          "entra-b2b",
+          "external-identities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "entra-b2b",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/external-id/what-is-b2b"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Entra Domain Services",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Entra B2B guest access",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Entra B2C",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A conditional access policy",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-003",
+      "topicId": "identity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which feature allows users to reset their own forgotten passwords without contacting the help desk?",
+      "explanation": {
+        "correct": "SSPR allows registered users to reset their own passwords using verification methods such as email, phone, or security questions.",
+        "incorrect": "Password Protection blocks weak/banned passwords but doesn't enable resets. Entra Connect synchronizes identities. Conditional Access controls access conditions, not password resets.",
+        "examTip": "SSPR requires users to register authentication methods first; combine with Combined Registration for a streamlined experience.",
+        "relatedTopics": [
+          "sspr"
+        ]
+      },
+      "metadata": {
+        "examObjective": "sspr",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/authentication/tutorial-enable-sspr"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Password Protection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Self-Service Password Reset (SSPR)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Entra Connect",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Conditional Access",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-004",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You want to organize several subscriptions belonging to different departments so you can apply a single Azure Policy across all of them. What should you create?",
+      "explanation": {
+        "correct": "Management groups sit above subscriptions in the hierarchy and let you apply policies, RBAC, and compliance requirements across multiple subscriptions at once.",
+        "incorrect": "Resource groups only contain resources within a single subscription. A subscription alias is used for subscription creation automation. An initiative bundles policies but must still be assigned to a scope like a management group.",
+        "examTip": "Management group hierarchy supports up to six levels of depth plus the root.",
+        "relatedTopics": [
+          "management-groups",
+          "azure-policy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "management-groups",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/governance/management-groups/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "A resource group",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A management group",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A subscription alias",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An initiative definition",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-005",
+      "topicId": "identity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A custom RBAC role must allow users to start and restart virtual machines but never delete them, and must not grant any permissions beyond compute actions. Which element of the role definition ensures the delete action is explicitly blocked even if inherited from another assignment at a broader scope?",
+      "explanation": {
+        "correct": "NotActions subtracts specific control-plane actions from the Actions list within the same role definition, effectively excluding them from that role's granted permissions.",
+        "incorrect": "AssignableScopes limits where the role can be assigned, not what it permits. DataActions/NotDataActions apply to data-plane operations (e.g., blob data), not VM management operations.",
+        "examTip": "NotActions only removes permissions from Actions in the SAME role — it does not override Allow permissions granted by a different, separately-assigned role at a broader scope.",
+        "relatedTopics": [
+          "rbac",
+          "custom-roles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "rbac",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "AssignableScopes",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "NotActions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "DataActions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "NotDataActions",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-006",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which type of resource lock prevents a resource from being deleted but still allows administrators to modify its configuration?",
+      "explanation": {
+        "correct": "A CanNotDelete (ReadOnly-style delete-block) lock, formally called 'CanNotDelete', prevents deletion while still permitting reads and updates to the resource.",
+        "incorrect": "ReadOnly locks block both modification and deletion. Deny is not an Azure lock type (it relates to Azure Firewall/NSG rule actions). Immutable is not an Azure resource lock type.",
+        "examTip": "Lock levels: CanNotDelete (delete blocked, edits allowed) and ReadOnly (edits and deletes both blocked).",
+        "relatedTopics": [
+          "resource-locks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "resource-locks",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Contoso Ltd's finance team accidentally deleted a critical production database last month, and leadership now requires safeguards against a repeat incident.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "CanNotDelete",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ReadOnly",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Deny",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Immutable",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-007",
+      "topicId": "identity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of applying tags to Azure resources?",
+      "explanation": {
+        "correct": "Tags are name/value pairs that let you categorize resources for cost tracking, automation, and organizational purposes across the Azure environment.",
+        "incorrect": "Tags have no effect on encryption, RBAC permissions, or resource locks — those are separate, unrelated mechanisms.",
+        "examTip": "Tags can be applied via Azure Policy to enforce consistent tagging across a subscription.",
+        "relatedTopics": [
+          "tags"
+        ]
+      },
+      "metadata": {
+        "examObjective": "tags",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "To encrypt resource data at rest",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To organize resources for billing and management purposes",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To grant RBAC permissions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To enable resource locks",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-008",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft Entra Connect synchronization option is used to co-manage on-premises Active Directory hashes so that Microsoft Entra ID can validate passwords without a real-time call to on-premises infrastructure?",
+      "explanation": {
+        "correct": "Password Hash Synchronization (PHS) synchronizes a hash of the password hash to Microsoft Entra ID, allowing authentication to occur entirely in the cloud without contacting on-premises servers.",
+        "incorrect": "Pass-through Authentication validates passwords against on-premises AD in real time via an agent. Federation with AD FS redirects authentication to on-premises infrastructure. Seamless SSO complements these methods but is not itself a password validation method.",
+        "examTip": "PHS is the simplest and most resilient method — it keeps working even if on-premises AD is temporarily unavailable.",
+        "relatedTopics": [
+          "entra-connect",
+          "hybrid-identity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "entra-connect",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/whatis-phs"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Fabrikam Inc. is planning a hybrid identity rollout and wants authentication to keep working even during a brief on-premises outage.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pass-through Authentication",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Password Hash Synchronization",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Federation with AD FS",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Seamless Single Sign-On",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-009",
+      "topicId": "identity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "You assign the built-in 'Reader' role to a user at the subscription scope, and separately assign the 'Contributor' role to the same user at a specific resource group scope within that subscription. What is the user's effective permission on resources in that resource group?",
+      "explanation": {
+        "correct": "Azure RBAC is additive: a user's effective permissions are the union of all role assignments across all applicable scopes. Contributor at the resource group scope grants full contributor rights there in addition to Reader elsewhere.",
+        "incorrect": "There is no scope precedence rule that discards a more granular grant, no such thing as a conflict error for additive Allow assignments, and RBAC does not pick the 'most restrictive' role — only explicit Deny assignments override Allow.",
+        "examTip": "RBAC is additive except for explicit Deny assignments, which always take precedence over Allow.",
+        "relatedTopics": [
+          "rbac"
+        ]
+      },
+      "metadata": {
+        "examObjective": "rbac",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/role-based-access-control/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reader only, because subscription-scope assignments take precedence",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Contributor, because Azure RBAC is additive and the more specific/greater permission applies",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The user has no access due to a conflict",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Reader, because the most restrictive role always wins",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-010",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure Policy effect automatically adds a specified tag to a resource during creation if the tag is missing, without blocking the deployment?",
+      "explanation": {
+        "correct": "The Append effect adds the defined fields (such as a tag) to the resource during creation or update without blocking the request.",
+        "incorrect": "Deny blocks the request entirely. Audit only logs a compliance warning without modifying the resource. Disabled turns off evaluation of the policy rule.",
+        "examTip": "Use Append together with 'modify' policies for bringing existing non-compliant resources into compliance via remediation tasks.",
+        "relatedTopics": [
+          "azure-policy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-policy",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effects"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Northwind Traders wants every newly created resource automatically tagged with a cost center, without blocking deployments that omit the tag.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deny",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Audit",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Append",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Disabled",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-011",
+      "topicId": "identity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "An administrator needs to assign Microsoft 365 E3 licenses to 500 users automatically whenever they are added to a specific department group. What licensing approach should be used?",
+      "explanation": {
+        "correct": "Group-based licensing automatically assigns (and removes) licenses to all members of a group, keeping license assignment consistent as group membership changes over time.",
+        "incorrect": "Direct per-user assignment and one-time bulk scripts do not automatically adjust as membership changes. Manual assignment via the admin center is not scalable for 500 users.",
+        "examTip": "Combine group-based licensing with a dynamic group for department membership to fully automate license lifecycle management.",
+        "relatedTopics": [
+          "entra-licensing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "entra-licensing",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/users/licensing-groups-assign"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Contoso Ltd's IT team is onboarding 500 new employees each quarter and wants license assignment to require no manual per-user work.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Direct per-user license assignment",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Group-based licensing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Bulk PowerShell script run once",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Manual assignment via the Microsoft 365 admin center",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-012",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid built-in Microsoft Entra ID roles that can manage users and groups but do NOT have full Global Administrator privileges?",
+      "explanation": {
+        "correct": "User Administrator can manage all aspects of users and groups. Groups Administrator can manage groups and group settings. Both are scoped, limited-privilege roles.",
+        "incorrect": "Global Administrator has full tenant-wide privileges, which is broader than the scoped roles asked for. Billing Administrator manages billing, not users/groups.",
+        "examTip": "Follow least privilege: assign User Administrator or Groups Administrator instead of Global Administrator whenever the task is user/group management only.",
+        "relatedTopics": [
+          "entra-roles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "entra-roles",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "User Administrator",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Global Administrator",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Groups Administrator",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Billing Administrator",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-013",
+      "topicId": "identity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO conditions must be true for a dynamic group rule based on department to correctly and automatically include a new user in the group?",
+      "explanation": {
+        "correct": "Dynamic membership requires both the group to be configured with Dynamic User membership type and the target attribute (department) to be populated correctly on the user object for the rule to evaluate true.",
+        "incorrect": "Ownership is unrelated to membership evaluation. The group does not need to be mail-enabled; dynamic membership works for both security groups and Microsoft 365 groups.",
+        "examTip": "Dynamic membership rules re-evaluate automatically whenever a qualifying attribute changes — no manual sync trigger needed.",
+        "relatedTopics": [
+          "dynamic-membership"
+        ]
+      },
+      "metadata": {
+        "examObjective": "dynamic-membership",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-membership"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "The user's 'department' attribute must be set to match the rule",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The group's membership type must be set to 'Dynamic User'",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The user must be manually added as an owner",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The group must be a mail-enabled security group",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-014",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO actions can an Azure Policy 'DeployIfNotExists' effect perform when a non-compliant resource is found?",
+      "explanation": {
+        "correct": "DeployIfNotExists policies deploy a related resource (like enabling diagnostic settings) using a managed identity, and can be triggered via a remediation task for existing non-compliant resources.",
+        "incorrect": "DeployIfNotExists never deletes resources — that is not a supported effect behavior. It also does not modify RBAC role assignments.",
+        "examTip": "DeployIfNotExists requires a managed identity with sufficient RBAC permissions on the deployment scope to succeed.",
+        "relatedTopics": [
+          "azure-policy",
+          "remediation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-policy",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effects"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automatically deploy a related resource such as a diagnostic setting",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Permanently delete the non-compliant resource",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Trigger a remediation task using a managed identity",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Automatically revoke the user's RBAC role",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-015",
+      "topicId": "identity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid Azure Storage replication-independent Microsoft Entra ID external identity scenarios supported by B2B collaboration?",
+      "explanation": {
+        "correct": "B2B collaboration supports guest invitation via email one-time passcode redemption and via federation with the guest's existing Microsoft, Google, or other supported identity provider.",
+        "incorrect": "B2B guests are not created as on-premises AD accounts, and their home tenant password hashes are never synchronized to the resource tenant — authentication stays with the home identity provider.",
+        "examTip": "Guest users authenticate against their home identity provider; the resource tenant never stores or syncs their password.",
+        "relatedTopics": [
+          "entra-b2b"
+        ]
+      },
+      "metadata": {
+        "examObjective": "entra-b2b",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/external-id/user-properties"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Inviting a guest user via email one-time passcode",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Inviting a guest user via their existing Microsoft or Google account",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Creating a new on-premises AD account for the guest",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Synchronizing the guest's password hash from their home tenant",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-016",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO scopes can an Azure custom role's AssignableScopes property reference?",
+      "explanation": {
+        "correct": "AssignableScopes accepts management group, subscription, or resource group resource IDs, defining where the custom role definition can subsequently be assigned.",
+        "incorrect": "Individual resource-level IDs like a NIC are not valid entries for AssignableScopes, and a bare tenant name string (not a resource ID) is not a valid scope format.",
+        "examTip": "A role definition can be assigned across multiple subscriptions only if each subscription ID is listed in AssignableScopes.",
+        "relatedTopics": [
+          "custom-roles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "custom-roles",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "A specific resource group",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A subscription",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A single virtual machine's NIC",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An Azure AD tenant name (string) without a resource ID",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-017",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Users can belong to any mix of dynamic and assigned groups. Locks are inherited down the hierarchy from management group to subscription to resource group to resource. Audit only reports non-compliance; it does not block deployment.",
+        "incorrect": "The only false statement is about Audit blocking deployments — that behavior describes the Deny effect instead.",
+        "examTip": "Locks always inherit downward; the most restrictive lock in the hierarchy applies to a resource.",
+        "relatedTopics": [
+          "resource-locks",
+          "azure-policy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "resource-locks",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A user can be a member of both a dynamic group and an assigned group simultaneously.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Resource locks applied at a resource group scope are automatically inherited by resources within that resource group.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "An Azure Policy assigned with the 'Audit' effect will prevent non-compliant resources from being created.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "az104-018",
+      "topicId": "identity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "A management group hierarchy exists within a single Microsoft Entra tenant only. RBAC supports four assignment scope levels. Deny assignments always override Allow assignments.",
+        "incorrect": "The only false statement claims a management group can span multiple tenants, which is not supported — each management group tree belongs to one tenant.",
+        "examTip": "Remember: one management group hierarchy per tenant; a subscription can only belong to that tenant's tree.",
+        "relatedTopics": [
+          "management-groups",
+          "rbac"
+        ]
+      },
+      "metadata": {
+        "examObjective": "management-groups",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/governance/management-groups/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A management group can have subscriptions from multiple Microsoft Entra tenants as direct children.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Azure RBAC role assignments can be scoped to a management group, subscription, resource group, or individual resource.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Deny assignments in Azure RBAC always take precedence over Allow role assignments.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "az104-019",
+      "topicId": "identity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "SSPR requires prior registration of methods (e.g., phone, email). Entra Connect synchronizes users, groups, and other objects. Guest (B2B) users typically do not consume the same per-seat license as internal member accounts for most Entra features.",
+        "incorrect": "The false statement incorrectly claims guests consume identical license seats as members; guest access is generally licensed differently (e.g., via MAU-based pricing for External ID).",
+        "examTip": "Encourage Combined Security Info Registration so users set up SSPR and MFA methods in a single flow.",
+        "relatedTopics": [
+          "sspr",
+          "entra-connect"
+        ]
+      },
+      "metadata": {
+        "examObjective": "sspr",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-sspr-policy"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Self-service password reset requires the user to register at least one authentication method before it can be used.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Microsoft Entra Connect can synchronize on-premises AD groups to Microsoft Entra ID.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Guest users invited through B2B collaboration count against the same license pool as internal member users.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "az104-020",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Custom roles can be authored through multiple tools. Built-in roles are read-only definitions and cannot be edited directly — you must clone them into a custom role. Tag inheritance is not automatic; it requires an Azure Policy such as 'Inherit a tag from the resource group'.",
+        "incorrect": "Two statements are false: built-in roles cannot be edited in place, and tags don't automatically inherit without an explicit policy assignment.",
+        "examTip": "To 'modify' a built-in role, clone it as a starting point for a new custom role definition instead.",
+        "relatedTopics": [
+          "custom-roles",
+          "tags"
+        ]
+      },
+      "metadata": {
+        "examObjective": "custom-roles",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A custom RBAC role can be created using Azure PowerShell, Azure CLI, or the Azure portal.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Built-in Azure roles can be modified directly to add new permissions.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A resource can inherit tags automatically from its parent resource group without any policy configuration.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "az104-021",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Entra Connect Health monitors sync engine, domain controllers, and AD FS health with alerting. PHS validates hashes entirely in the cloud after initial sync, so it doesn't need a live connection per sign-in. Initiatives group multiple policies for easier assignment and tracking.",
+        "incorrect": "The false statement wrongly claims PHS needs a live on-premises connection per sign-in; that describes Pass-through Authentication instead.",
+        "examTip": "Distinguish PHS (works offline from on-prem) vs PTA (requires an online agent and on-prem connectivity for every logon).",
+        "relatedTopics": [
+          "entra-connect",
+          "azure-policy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "entra-connect",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/whatis-fed"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Microsoft Entra Connect Health provides alerts and monitoring for on-premises sync and AD FS infrastructure health.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Password Hash Synchronization requires a constant network connection to on-premises AD for every sign-in.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "An Azure Policy initiative is a collection of individual policy definitions grouped together for a single assignment.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "az104-022",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "Dynamic user groups automate membership based on attribute rules; CanNotDelete locks block deletion while still permitting edits.",
+        "incorrect": "Assigned groups require manual membership management. ReadOnly locks would also block configuration changes, which was disallowed by the requirement.",
+        "examTip": "Match the requirement wording carefully: 'still allow changes' always points to CanNotDelete, not ReadOnly.",
+        "relatedTopics": [
+          "dynamic-membership",
+          "resource-locks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "dynamic-membership",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-membership"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To automatically add users to a group based on their job title without manual intervention, you should use",
+          "options": [
+            "An assigned group",
+            "A dynamic user group",
+            "A distribution list",
+            "A B2B guest invitation"
+          ],
+          "correctAnswer": "A dynamic user group"
+        },
+        {
+          "id": "d2",
+          "prompt": "To prevent a critical production resource group from being accidentally deleted while still allowing configuration changes, you should apply a",
+          "options": [
+            "ReadOnly lock",
+            "CanNotDelete lock",
+            "Deny assignment",
+            "Azure Policy Deny effect"
+          ],
+          "correctAnswer": "CanNotDelete lock"
+        }
+      ]
+    },
+    {
+      "id": "az104-023",
+      "topicId": "identity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "User Administrator has scoped rights sufficient for password resets and account management. Assigning at a management group scope applies the initiative to every subscription beneath it.",
+        "incorrect": "Billing Administrator and Reports Reader lack password reset permissions. Resource group or resource-level scope would not cover multiple subscriptions at once.",
+        "examTip": "Assign governance controls (policy, RBAC) at the highest common scope to avoid repetitive per-subscription work.",
+        "relatedTopics": [
+          "entra-roles",
+          "management-groups"
+        ]
+      },
+      "metadata": {
+        "examObjective": "entra-roles",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To grant a support engineer permission to reset user passwords without granting Global Administrator rights, assign the",
+          "options": [
+            "Global Administrator role",
+            "User Administrator role",
+            "Billing Administrator role",
+            "Reports Reader role"
+          ],
+          "correctAnswer": "User Administrator role"
+        },
+        {
+          "id": "d2",
+          "prompt": "To ensure a policy definition's compliance state can be evaluated across multiple subscriptions under one department, assign the initiative at the",
+          "options": [
+            "Resource group scope",
+            "Individual resource scope",
+            "Management group scope",
+            "Local Group Policy scope"
+          ],
+          "correctAnswer": "Management group scope"
+        }
+      ]
+    },
+    {
+      "id": "az104-024",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "B2B guest access lets external users authenticate with their own organizational identity. PHS synchronizes password hash changes on an accelerated ~2 minute cycle by default.",
+        "incorrect": "Domain Services and B2C solve different problems (managed domain, customer identity). Seamless SSO alone doesn't sync passwords; federation delegates authentication rather than syncing hashes.",
+        "examTip": "PHS's default sync interval for password changes is about 2 minutes, much faster than the standard 30-minute full sync cycle.",
+        "relatedTopics": [
+          "entra-b2b",
+          "entra-connect"
+        ]
+      },
+      "metadata": {
+        "examObjective": "entra-b2b",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/whatis-phs"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To let an external vendor sign in to a specific Azure DevOps project using their own corporate credentials, you should use",
+          "options": [
+            "Microsoft Entra Domain Services",
+            "B2B collaboration guest access",
+            "Microsoft Entra B2C",
+            "A local Azure AD account"
+          ],
+          "correctAnswer": "B2B collaboration guest access"
+        },
+        {
+          "id": "d2",
+          "prompt": "To synchronize password changes made in on-premises AD to Microsoft Entra ID within about 2 minutes, you should enable",
+          "options": [
+            "Password Hash Synchronization",
+            "Seamless SSO only",
+            "Federation with a third-party IdP",
+            "Directory synchronization scheduler at 30-minute intervals"
+          ],
+          "correctAnswer": "Password Hash Synchronization"
+        }
+      ]
+    },
+    {
+      "id": "az104-025",
+      "topicId": "identity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "The Compliance view shows aggregated evaluation results for assigned policies and initiatives. Tags are the mechanism for attaching custom key/value metadata to resources.",
+        "incorrect": "Activity Log tracks operations, not compliance state. Resource locks and RBAC serve access-control purposes unrelated to metadata tagging.",
+        "examTip": "You can bulk-apply tags across many resources at once using Azure Policy or the Azure portal's tag blade at a management group/subscription scope.",
+        "relatedTopics": [
+          "azure-policy",
+          "tags"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-policy",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/compliance-states"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To view whether resources comply with an assigned Azure Policy, you should check the",
+          "options": [
+            "Activity Log",
+            "Compliance view in Azure Policy",
+            "Resource health blade",
+            "Cost Management blade"
+          ],
+          "correctAnswer": "Compliance view in Azure Policy"
+        },
+        {
+          "id": "d2",
+          "prompt": "To add a custom key/value pair such as 'CostCenter:1234' to multiple resources at once, you should use",
+          "options": [
+            "Resource locks",
+            "Tags",
+            "RBAC role assignment",
+            "Diagnostic settings"
+          ],
+          "correctAnswer": "Tags"
+        }
+      ]
+    },
+    {
+      "id": "az104-026",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to configure a new custom RBAC role and assign it to a user at a resource group scope.",
+      "explanation": {
+        "correct": "Custom roles are typically built by cloning an existing definition, editing its permissions and scopes, formally creating the role definition, and only then assigning it to a principal.",
+        "incorrect": "Assigning the role before it exists, or defining scopes before drafting the JSON, would fail because the role definition must exist before assignment and the JSON structure must be understood before overwriting AssignableScopes.",
+        "examTip": "Use 'az role definition create --role-definition role.json' to formally register a custom role from your edited JSON file.",
+        "relatedTopics": [
+          "custom-roles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "custom-roles",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles-powershell"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Export a similar built-in role definition as a JSON starting point",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Edit the JSON to define Actions, NotActions, and AssignableScopes",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create the custom role definition using Azure CLI or PowerShell",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Assign the new custom role to the user at the resource group scope",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "az104-027",
+      "topicId": "identity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to onboard a hybrid identity environment using Microsoft Entra Connect with Password Hash Synchronization.",
+      "explanation": {
+        "correct": "A successful hybrid identity rollout starts with cleaning up on-premises directory data, then installing and configuring the sync tool with the chosen authentication method, and finally validating ongoing health.",
+        "incorrect": "Installing Connect before cleaning up AD often causes sync errors from duplicate attributes; verifying health before installation is impossible since there's nothing yet to monitor.",
+        "examTip": "Always run IdFix or similar directory cleanup tooling before your first Entra Connect sync to avoid attribute conflicts.",
+        "relatedTopics": [
+          "entra-connect"
+        ]
+      },
+      "metadata": {
+        "examObjective": "entra-connect",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-express"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Prepare on-premises Active Directory (clean up duplicate UPNs/attributes)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Install Microsoft Entra Connect on a domain-joined server",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Select Password Hash Synchronization during the sign-in method configuration",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Verify synchronization status using Microsoft Entra Connect Health",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "az104-028",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to remediate existing non-compliant resources after assigning a 'DeployIfNotExists' Azure Policy.",
+      "explanation": {
+        "correct": "After assignment, the managed identity created by the policy must be granted rights before it can deploy resources; a remediation task is then manually triggered for existing (not new) resources, and its progress is monitored.",
+        "incorrect": "Triggering remediation before granting the managed identity permissions will cause the remediation task to fail with authorization errors.",
+        "examTip": "New resources are auto-evaluated at creation, but existing resources require an explicit remediation task to become compliant.",
+        "relatedTopics": [
+          "azure-policy",
+          "remediation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-policy",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/governance/policy/how-to/remediate-resources"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Assign the DeployIfNotExists policy definition to a scope",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Grant the policy's managed identity the required RBAC role",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Trigger a remediation task from the policy's compliance page",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Monitor the remediation task until existing resources become compliant",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "az104-029",
+      "topicId": "identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each Microsoft Entra ID role into the correct category based on its scope of authority.",
+      "explanation": {
+        "correct": "Global Administrator and Security Administrator have broad tenant-wide control (over all services or all security tooling respectively), while User Administrator and Password Administrator are scoped to specific management tasks.",
+        "incorrect": "None of these roles are storage- or network-related; the distinction tested is breadth of administrative authority.",
+        "examTip": "When in doubt about a role's scope, check the Microsoft Entra built-in roles reference table for its exact permitted actions.",
+        "relatedTopics": [
+          "entra-roles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "entra-roles",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Global Administrator"
+        },
+        {
+          "id": "item2",
+          "text": "Security Administrator"
+        },
+        {
+          "id": "item3",
+          "text": "User Administrator"
+        },
+        {
+          "id": "item4",
+          "text": "Password Administrator"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Tenant-wide administrative role",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Scoped/limited administrative role",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "az104-030",
+      "topicId": "identity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Sort each governance feature into the category that best describes what it controls.",
+      "explanation": {
+        "correct": "Locks protect resources from accidental deletion or modification, while Policy definitions and initiatives enforce and audit configuration standards.",
+        "incorrect": "Locks and policies are frequently confused, but locks are binary protection mechanisms while policies evaluate configuration rules.",
+        "examTip": "Locks stop actions outright; policies can audit, deny, or actively remediate configuration drift.",
+        "relatedTopics": [
+          "resource-locks",
+          "azure-policy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "resource-locks",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "ReadOnly lock"
+        },
+        {
+          "id": "item2",
+          "text": "CanNotDelete lock"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Policy definition"
+        },
+        {
+          "id": "item4",
+          "text": "Azure Policy initiative"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Controls resource lifecycle/protection",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Controls resource configuration compliance",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    }
+  ]
+}

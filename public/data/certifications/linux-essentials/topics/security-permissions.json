@@ -1,0 +1,2121 @@
+{
+  "certificationId": "linux-essentials",
+  "topicId": "security-permissions",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "lx010-102",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "In the ls -l output '-rwxr-xr--', what permission does the file's group have?",
+      "explanation": {
+        "correct": "The middle triplet 'r-x' shows the group has read and execute permission, but not write.",
+        "incorrect": "The first triplet (rwx) is the owner's permissions, and the final triplet (r--) is 'others', which here has read-only access.",
+        "examTip": "Positions in ls -l: [type][owner rwx][group rwx][other rwx] — always read left to right in that order.",
+        "relatedTopics": [
+          "ls-l-output",
+          "permissions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Basic Security and Identifying User Types",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Read and write only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Read and execute only",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Read, write, and execute",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Execute only",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-103",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What octal value represents read, write, and execute permissions combined?",
+      "explanation": {
+        "correct": "Read (4) + write (2) + execute (1) = 7, which represents full rwx permission.",
+        "incorrect": "4 alone is read-only, 5 is read+execute, and 6 is read+write without execute.",
+        "examTip": "Memorize: r=4, w=2, x=1. Add them for each of owner/group/other to build the three-digit octal number.",
+        "relatedTopics": [
+          "chmod",
+          "octal-permissions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Managing User and Group Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "4",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "5",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "6",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "7",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-104",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which chmod command grants execute permission to the owner of a file, leaving all other permissions unchanged?",
+      "explanation": {
+        "correct": "chmod u+x adds execute permission specifically for the user/owner (u), without touching group or other permissions.",
+        "incorrect": "o+x targets 'others' rather than the owner, a+x targets all three categories, and chmod 111 sets an absolute octal value (execute-only for everyone), which overwrites all existing permissions rather than adding to them.",
+        "examTip": "Symbolic chmod is additive/subtractive (+/-) and only touches the specified category; octal chmod always sets the ENTIRE permission set from scratch.",
+        "relatedTopics": [
+          "chmod",
+          "symbolic-permissions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Managing User and Group Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "chmod u+x file.sh",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "chmod o+x file.sh",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "chmod a+x file.sh",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "chmod 111 file.sh",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-105",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which octal permission corresponds to the symbolic notation 'rw-r--r--'?",
+      "explanation": {
+        "correct": "rw- (6) for owner, r-- (4) for group, and r-- (4) for other combine to 644, a very common default permission for regular files.",
+        "incorrect": "600 would be rw------- (owner only), 664 would give the group write access too (rw-rw-r--), and 744 would give the owner execute permission as well (rwxr--r--).",
+        "examTip": "644 is the classic 'default file' permission: owner can read/write, everyone else can only read.",
+        "relatedTopics": [
+          "chmod",
+          "ls-l-output"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Basic Security and Identifying User Types",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "600",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "644",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "664",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "744",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-106",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A file has the SUID bit set and permissions rwsr-xr-x. What effect does the SUID bit have when the file is executed?",
+      "explanation": {
+        "correct": "SUID (Set User ID) causes an executable to run with the permissions of the file's owner, not the invoking user — classically used by programs like passwd that need elevated access briefly.",
+        "incorrect": "SUID does not restrict execution to root, has nothing to do with encryption, and does not affect write/modify permissions for the group (that would be the ordinary group-write bit, not SUID).",
+        "examTip": "SUID shows as 's' in the owner's execute position (rws); if the owner lacked execute permission it would show as capital 'S' instead.",
+        "relatedTopics": [
+          "suid-sgid-sticky",
+          "special-permissions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Managing Ownership and Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "It runs the program with the privileges of the user who owns the file, rather than the user running it",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "It prevents any user other than root from executing the file",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "It automatically encrypts the file's contents at rest",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It allows any user in the file's group to modify the file",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-107",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the primary purpose of the sticky bit when set on a shared, world-writable directory like /tmp?",
+      "explanation": {
+        "correct": "The sticky bit on a directory restricts deletion/renaming so that only the file's owner (or root) can remove it, even if other users have write access to the directory itself — exactly how /tmp stays usable by everyone without users deleting each other's files.",
+        "incorrect": "The sticky bit does not block file creation, does not control group inheritance (that is SGID's role), and has no relation to compression.",
+        "examTip": "Sticky bit shows as 't' (or 'T' if others lack execute) in the 'other' execute position of ls -l, e.g. drwxrwxrwt for /tmp.",
+        "relatedTopics": [
+          "suid-sgid-sticky",
+          "special-permissions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Managing Ownership and Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "It prevents any files from being created inside the directory",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It ensures only the owner of a file (or root) can delete or rename that file, even though others can write to the directory",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It forces all new files to inherit the directory's group ownership",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It compresses files automatically as they are written",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-108",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "If a user's umask is set to 022, what will the resulting default permissions be for a newly created file (starting from a base of 666)?",
+      "explanation": {
+        "correct": "666 (base for files) minus the umask 022 removes write permission for group and other, resulting in 644 (rw-r--r--).",
+        "incorrect": "600 would result from a umask of 066, and 755 is the typical result for directories (base 777) with a 022 umask, not files.",
+        "examTip": "umask SUBTRACTS permissions from the base. Files start at 666, directories start at 777 — umask 022 is extremely common as a default.",
+        "relatedTopics": [
+          "umask"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.4 Managing User and Group Permissions with umask",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "666",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "644",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "600",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "755",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-109",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which command changes both the owner and group of a file in a single invocation?",
+      "explanation": {
+        "correct": "chown accepts the syntax 'user:group' to change both the owning user and the owning group of a file in one command.",
+        "incorrect": "chmod only changes permission bits (not ownership), chgrp only changes the group, and usermod modifies user account properties, not file ownership.",
+        "examTip": "chown user:group file — the colon syntax updates owner AND group together; chgrp alone only touches the group.",
+        "relatedTopics": [
+          "chown-chgrp"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Managing Ownership and Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "chown user:group file",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "chmod user:group file",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "chgrp user:group file",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "usermod user:group file",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-110",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A security auditor at Stark Industries is reviewing where user password data is stored on a Linux server as part of a compliance check.",
+      "questionText": "Which file traditionally stores the hashed passwords for local user accounts, separate from basic account information?",
+      "explanation": {
+        "correct": "/etc/shadow stores hashed passwords and password aging information, and is readable only by root for security.",
+        "incorrect": "/etc/passwd stores basic account info (username, UID, home directory, shell) but no longer stores actual password hashes on modern systems, /etc/group defines group memberships, and /etc/security is not a standard single file in this context.",
+        "examTip": "/etc/passwd is world-readable (usernames aren't secret); /etc/shadow is root-only readable (password hashes must stay protected).",
+        "relatedTopics": [
+          "passwd-shadow-group"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.5 Managing User Accounts",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "/etc/passwd",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "/etc/shadow",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "/etc/group",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "/etc/security",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-111",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command creates a new user account on most Linux distributions?",
+      "explanation": {
+        "correct": "useradd creates a new user account with the specified options, such as home directory and shell.",
+        "incorrect": "usermod modifies an existing account, userdel removes one, and passwd sets or changes a password for an existing account.",
+        "examTip": "add/mod/del pattern applies to both users and groups: useradd/usermod/userdel and groupadd/groupmod/groupdel.",
+        "relatedTopics": [
+          "user-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.5 Managing User Accounts",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "useradd",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "usermod",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "userdel",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "passwd",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-112",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which command displays a user's numeric user ID (UID), group ID (GID), and all group memberships?",
+      "explanation": {
+        "correct": "id displays the UID, primary GID, and all supplementary group memberships for a user in one combined output.",
+        "incorrect": "whoami only prints the current username, groups alone lists group names without numeric IDs, and who shows currently logged-in users on the system.",
+        "examTip": "id gives you everything at once: UID, GID, and groups — whoami and groups each only show a subset.",
+        "relatedTopics": [
+          "user-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.5 Managing User Accounts",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "whoami",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "id",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "groups",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "who",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-113",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which command should be used to safely edit the /etc/sudoers file, providing syntax checking before saving?",
+      "explanation": {
+        "correct": "visudo locks the sudoers file, opens it in an editor, and validates the syntax before saving, preventing a malformed file from locking out sudo access entirely.",
+        "incorrect": "Editing /etc/sudoers directly with vi or nano skips this safety check, risking a broken file that could lock out all sudo users, and sudoedit /etc/passwd edits the wrong file entirely for this purpose.",
+        "examTip": "Always use visudo for sudoers — a syntax error saved directly with a plain editor can lock every admin out of sudo.",
+        "relatedTopics": [
+          "sudo-su"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.6 Using sudo to Delegate Privilege",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "vi /etc/sudoers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "visudo",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "nano /etc/sudoers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "sudoedit /etc/passwd",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-114",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command switches to another user account and loads that user's full login environment, including their home directory and shell profile?",
+      "explanation": {
+        "correct": "su - username (or su -l username) starts a login shell as the target user, loading their environment variables and changing to their home directory.",
+        "incorrect": "su username (without the dash) switches user but keeps the invoking user's existing environment, sudo username is not valid syntax for switching users in this way, and chsh changes a user's default login shell rather than switching sessions.",
+        "examTip": "su alone keeps your old environment; su - simulates a fresh login as that user, with their PATH, HOME, and profile.",
+        "relatedTopics": [
+          "sudo-su"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.6 Using sudo to Delegate Privilege",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "su username",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "su - username",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "sudo username",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "chsh username",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-115",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In an SSH key pair used for authentication, which key should be placed in the ~/.ssh/authorized_keys file on the remote server?",
+      "explanation": {
+        "correct": "The public key is safe to share and is placed in ~/.ssh/authorized_keys on the server to permit login using the matching private key.",
+        "incorrect": "The private key must never be shared or placed on a remote server, combining both keys is not how SSH key authentication works, and known_hosts stores fingerprints of servers you've connected to, not authentication keys.",
+        "examTip": "Public key -> goes on the SERVER (authorized_keys). Private key -> stays on your LOCAL machine, never shared.",
+        "relatedTopics": [
+          "ssh-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.7 Understanding SSH",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "The private key",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The public key",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Both keys combined",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The known_hosts fingerprint",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-116",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which sshd_config directive, when set to 'no', disables the ability to log in via SSH using a password (allowing key-based authentication only)?",
+      "explanation": {
+        "correct": "Setting PasswordAuthentication no in /etc/ssh/sshd_config disables password-based logins, forcing users to authenticate with SSH keys instead — a strong security hardening step.",
+        "incorrect": "PermitRootLogin controls whether the root account specifically can log in via SSH, Port is not a yes/no directive (it specifies a port number), and setting PubkeyAuthentication to no would disable key-based login instead, the opposite of the intended hardening.",
+        "examTip": "Hardening SSH commonly means: PasswordAuthentication no + PermitRootLogin no, forcing key-based, non-root logins.",
+        "relatedTopics": [
+          "ssh-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.7 Understanding SSH",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "PermitRootLogin no",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "PasswordAuthentication no",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Port no",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "PubkeyAuthentication no",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-117",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A sysadmin at Gringotts Bank is hardening a newly deployed server and needs remote administrators to still be able to reach it over SSH.",
+      "questionText": "Which ufw command allows incoming traffic on port 22 (SSH)?",
+      "explanation": {
+        "correct": "ufw allow 22 opens port 22 to incoming connections, commonly used to permit SSH access.",
+        "incorrect": "ufw deny 22 blocks the port instead, ufw status displays current rules (it does not take a port argument to allow anything), and ufw enable simply turns the firewall on/off globally without specifying a port.",
+        "examTip": "ufw = 'Uncomplicated Firewall.' Basic syntax: ufw allow/deny <port or service>, ufw enable/disable, ufw status.",
+        "relatedTopics": [
+          "firewall-basics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.8 Basic Firewall Concepts",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "ufw deny 22",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ufw allow 22",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ufw status 22",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ufw enable 22",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-118",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which gpg option is used to generate a new public/private key pair?",
+      "explanation": {
+        "correct": "gpg --gen-key launches an interactive process to create a new GPG public/private key pair.",
+        "incorrect": "--encrypt and --decrypt operate on data using existing keys rather than creating new ones, and --list-keys only displays keys already present in the keyring.",
+        "examTip": "gpg workflow: --gen-key creates keys, --encrypt/--decrypt use them, --list-keys inspects what you already have.",
+        "relatedTopics": [
+          "gpg-encryption"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.9 Introduction to Encryption",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "gpg --encrypt",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "gpg --gen-key",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "gpg --decrypt",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "gpg --list-keys",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-119",
+      "type": "single-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which best describes symmetric encryption, as opposed to asymmetric encryption?",
+      "explanation": {
+        "correct": "Symmetric encryption uses one shared secret key for both encryption and decryption, requiring that key to be securely distributed to all parties beforehand.",
+        "incorrect": "A public/private key pair describes asymmetric encryption instead, symmetric encryption works on any binary data (not just text), and it does not inherently require a certificate authority.",
+        "examTip": "Symmetric = one shared key (fast, but key distribution is hard). Asymmetric = public/private key pair (slower, solves the distribution problem).",
+        "relatedTopics": [
+          "gpg-encryption",
+          "encryption-concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.9 Introduction to Encryption",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "It uses a single shared secret key for both encrypting and decrypting data",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "It uses a mathematically related public and private key pair",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "It only works for encrypting text, never binary files",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It requires a certificate authority to function",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-120",
+      "type": "multiple-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO commands can be used to change the group ownership of a file?",
+      "explanation": {
+        "correct": "chgrp changes only the group owner of a file, and chown can change the group as well when used with the 'user:group' or ':group' syntax.",
+        "incorrect": "chmod only changes permission bits, not ownership, and usermod modifies user account settings rather than file ownership.",
+        "examTip": "chown :group file (no username before the colon) changes only the group, functioning the same as chgrp group file.",
+        "relatedTopics": [
+          "chown-chgrp"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Managing Ownership and Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "chgrp",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "chown",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "chmod",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "usermod",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-121",
+      "type": "multiple-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid octal representations of the SUID, SGID, or sticky bit prefix in a 4-digit chmod value?",
+      "explanation": {
+        "correct": "A leading 4 sets SUID and a leading 2 sets SGID as the special permission digit in a 4-digit chmod value.",
+        "incorrect": "1755 sets the sticky bit (which is valid on its own, but is not one of the two values being asked about here relative to SUID/SGID), and 0655 sets no special bit at all (0 means none).",
+        "examTip": "Special bit digit: 4=SUID, 2=SGID, 1=sticky. They can even combine, e.g. 6755 sets both SUID and SGID.",
+        "relatedTopics": [
+          "suid-sgid-sticky"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Managing Ownership and Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "4755",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "2755",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "1755",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "0655",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-122",
+      "type": "multiple-choice",
+      "topicId": "security-permissions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO files are central to Linux local user account management, storing account and password information respectively?",
+      "explanation": {
+        "correct": "/etc/passwd stores basic account details (username, UID, GID, home, shell), and /etc/shadow stores the hashed passwords and aging policy for those accounts.",
+        "incorrect": "/etc/hosts maps hostnames to IP addresses and is unrelated to user accounts, and /etc/fstab configures filesystem mounts.",
+        "examTip": "passwd = account metadata (readable by all). shadow = password hashes (root-only) — a pair you'll be tested on together.",
+        "relatedTopics": [
+          "passwd-shadow-group"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.5 Managing User Accounts",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "/etc/passwd",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "/etc/shadow",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "/etc/hosts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "/etc/fstab",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-123",
+      "type": "multiple-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO commands can be used to add an existing user to an additional supplementary group?",
+      "explanation": {
+        "correct": "usermod -aG appends a user to a supplementary group without removing them from existing groups, and gpasswd -a also adds a user to a group.",
+        "incorrect": "groupadd only creates new groups (it does not add existing users to them), and userdel removes user accounts entirely rather than managing group membership.",
+        "examTip": "Always use usermod -aG (append), never plain usermod -G, which would REPLACE all existing supplementary group memberships.",
+        "relatedTopics": [
+          "group-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.5 Managing User Accounts",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "usermod -aG groupname username",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "gpasswd -a username groupname",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "groupadd username groupname",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "userdel -G groupname username",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-124",
+      "type": "multiple-choice",
+      "topicId": "security-permissions",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO of the following sshd_config settings are commonly changed together to harden SSH access on a production server?",
+      "explanation": {
+        "correct": "Disabling root login and disabling password authentication (forcing key-based login) are two of the most common, effective SSH hardening measures used together.",
+        "incorrect": "Leaving Port at the unchanged default of 22 does not itself harden anything (changing the port is only weak obscurity, not real security), and Protocol 1 is an old, insecure SSH protocol version that should be avoided entirely, not enabled.",
+        "examTip": "Root login + password auth are the two biggest attack surfaces for SSH brute-forcing — disable both as a baseline.",
+        "relatedTopics": [
+          "ssh-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.7 Understanding SSH",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "PermitRootLogin no",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "PasswordAuthentication no",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Port 22",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Protocol 1",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-125",
+      "type": "multiple-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO commands display current firewall rules or status on a Linux system?",
+      "explanation": {
+        "correct": "ufw status reports the current firewall state and active rules, and iptables -L lists the currently loaded iptables rules.",
+        "incorrect": "ufw allow adds a new rule rather than displaying existing ones, and iptables -A appends a new rule to a chain instead of listing current rules.",
+        "examTip": "-L in iptables = List (view rules). -A = Append (add a new rule). Similar letters, opposite actions.",
+        "relatedTopics": [
+          "firewall-basics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.8 Basic Firewall Concepts",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "ufw status",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "iptables -L",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ufw allow",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "iptables -A",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-126",
+      "type": "yes-no-statements",
+      "topicId": "security-permissions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about the Linux permission model as Yes or No.",
+      "explanation": {
+        "correct": "Linux permissions are split into owner/group/other; write permission on a directory itself governs the ability to add/remove entries in it; reading a file's contents with cat only requires read permission, not execute.",
+        "incorrect": "Execute permission on a file is needed to run it as a program/script, not to view its contents — that requires read permission instead.",
+        "examTip": "Directory permissions work differently than file permissions: write on a directory means 'can add/remove entries', not 'can edit the directory's own content'.",
+        "relatedTopics": [
+          "permissions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Basic Security and Identifying User Types",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Every file has three separate permission sets: for the owner, the owning group, and everyone else (other).",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Write permission on a directory allows a user to create and delete files within that directory, regardless of individual file permissions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Execute permission on a regular text file is required in order to simply read its contents with cat.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-127",
+      "type": "yes-no-statements",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about chmod as Yes or No.",
+      "explanation": {
+        "correct": "700 = rwx------ (owner full, everyone else none); g-w removes only the group's write bit and leaves owner/other untouched; octal notation always sets the complete, absolute permission value, replacing (not adding to) whatever existed before.",
+        "incorrect": "Unlike symbolic +/- notation, octal chmod is absolute — it overwrites the entire permission set every time, regardless of prior permissions.",
+        "examTip": "Symbolic (+/-) = relative change. Octal (750, etc.) = absolute, complete replacement of all permission bits.",
+        "relatedTopics": [
+          "chmod"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Managing User and Group Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "chmod 700 file.sh gives the owner full permissions while denying all access to group and other.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Symbolic chmod syntax such as 'g-w' removes write permission from the group, leaving other permissions unchanged.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Octal chmod notation like chmod 750 adds permissions on top of whatever the file already had, rather than replacing them.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-128",
+      "type": "yes-no-statements",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about special permissions (SUID, SGID, sticky bit) as Yes or No.",
+      "explanation": {
+        "correct": "SGID on a directory makes new files inherit the directory's group ownership, useful for shared team directories; most modern Linux kernels intentionally ignore the SUID bit on shell scripts for security reasons, unlike compiled binaries where it works normally; the sticky bit's classic real-world use is exactly on shared, world-writable directories like /tmp.",
+        "incorrect": "SUID on shell scripts is ignored by the kernel on most modern systems as a security measure against a well-known class of exploits — it only reliably works on compiled binaries.",
+        "examTip": "SGID on a directory = 'inherit my group.' SUID on a script = usually ignored by the kernel for security reasons.",
+        "relatedTopics": [
+          "suid-sgid-sticky"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Managing Ownership and Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "SGID on a directory causes new files created within it to inherit the directory's group, rather than the creating user's primary group.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "SUID has any effect when set on a shell script executed directly on most modern Linux systems, just as it does on compiled binaries.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "The sticky bit is commonly applied to world-writable shared directories such as /tmp.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-129",
+      "type": "yes-no-statements",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about umask as Yes or No.",
+      "explanation": {
+        "correct": "umask subtracts (masks out) bits from the default base permissions; a umask of 000 removes nothing, so new files get the full base permission (666 for files, 777 for directories), the opposite of no access; system-wide umask defaults are commonly set in /etc/profile or /etc/bashrc-style files.",
+        "incorrect": "A umask of 000 is the LEAST restrictive setting — it removes no bits at all, granting maximum default permissions, not zero permissions.",
+        "examTip": "Higher umask number = more restrictive result. umask 000 = most permissive; umask 077 = very restrictive (owner-only).",
+        "relatedTopics": [
+          "umask"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.4 Managing User and Group Permissions with umask",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "umask defines which permission bits are removed from the default when new files or directories are created.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A umask value of 000 results in newly created files having no permissions granted to anyone.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "The default umask value can be configured system-wide in files such as /etc/profile.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-130",
+      "type": "yes-no-statements",
+      "topicId": "security-permissions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about user and group management as Yes or No.",
+      "explanation": {
+        "correct": "passwd changes a password for the specified account; groupadd only creates new groups, it does not add users to them (usermod -aG or gpasswd -a do that); each account has exactly one primary group recorded in /etc/passwd, plus any number of supplementary groups.",
+        "incorrect": "groupadd is exclusively for creating new groups — adding an existing user to a group requires usermod -aG or gpasswd -a instead.",
+        "examTip": "groupadd creates groups; usermod -aG or gpasswd -a add existing users to groups — don't confuse the two.",
+        "relatedTopics": [
+          "user-management",
+          "group-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.5 Managing User Accounts",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The passwd command can be used to change an existing user's password.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "groupadd is used to add an individual user to an existing group.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Every Linux user account has exactly one primary group, though it may also belong to multiple supplementary groups.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-131",
+      "type": "yes-no-statements",
+      "topicId": "security-permissions",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Evaluate each statement about sudo and privilege escalation as Yes or No.",
+      "explanation": {
+        "correct": "The sudoers syntax 'user host=(runas) commands' with all ALL values grants broad access as described; many distributions pre-configure sudo access for members of the wheel (Red Hat-family) or sudo (Debian-family) group; sudo -i starts a full login shell as root with root's environment, unlike a plain sudo command which runs a single command while largely preserving the caller's environment.",
+        "incorrect": "sudo -i behaves like logging in fresh as root (new environment), while plain 'sudo command' just elevates privileges for that one command while mostly keeping your existing shell environment.",
+        "examTip": "sudoers syntax: user host=(runas_user) commands. 'ALL=(ALL) ALL' is the broadest possible grant.",
+        "relatedTopics": [
+          "sudo-su"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.6 Using sudo to Delegate Privilege",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A typical /etc/sudoers entry such as 'frederick ALL=(ALL) ALL' grants frederick permission to run any command as any user on any host.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Members of the 'wheel' or 'sudo' group are commonly granted sudo privileges via a corresponding line in /etc/sudoers.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "sudo -i and plain sudo behave identically, both preserving the invoking user's existing shell environment.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-132",
+      "type": "yes-no-statements",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about SSH security as Yes or No.",
+      "explanation": {
+        "correct": "ssh-keygen creates a new key pair; ssh-copy-id actually copies your PUBLIC key to the remote server's authorized_keys file, never the private key; known_hosts records host fingerprints seen on prior connections so SSH can warn you if a host's key unexpectedly changes.",
+        "incorrect": "ssh-copy-id copies the public key only — the private key should never leave your local machine, including via this tool.",
+        "examTip": "A sudden 'WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED' message means the server's key doesn't match known_hosts — investigate before proceeding.",
+        "relatedTopics": [
+          "ssh-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.7 Understanding SSH",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "ssh-keygen is used to generate a new SSH public/private key pair.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "ssh-copy-id copies your private key to a remote server so key-based login can be used.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "The ~/.ssh/known_hosts file stores fingerprints of remote hosts you have previously connected to, helping detect potential man-in-the-middle attacks.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-133",
+      "type": "yes-no-statements",
+      "topicId": "security-permissions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about firewalls and encryption basics as Yes or No.",
+      "explanation": {
+        "correct": "ufw ('Uncomplicated Firewall') is indeed a simpler front-end over the underlying iptables/netfilter framework; to send someone an asymmetrically encrypted message, you encrypt it with their public key so only their matching private key can decrypt it; symmetric and asymmetric encryption are fundamentally different approaches (shared secret key vs. key pairs), not just a difference in key length.",
+        "incorrect": "Symmetric and asymmetric encryption are conceptually distinct approaches to encryption, not variations of the same algorithm at different key lengths.",
+        "examTip": "To encrypt FOR someone: use THEIR public key. Only their private key can then decrypt it.",
+        "relatedTopics": [
+          "firewall-basics",
+          "gpg-encryption"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.8 Basic Firewall Concepts",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "ufw is a simplified front-end for managing iptables-based firewall rules on Ubuntu and Debian-based systems.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "gpg --encrypt using asymmetric encryption requires the recipient's public key to encrypt a message meant for them.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Symmetric and asymmetric encryption both refer to the same underlying algorithm, differing only in key length.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-134",
+      "type": "dropdown-select",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement about chmod by choosing the correct value from its dropdown.",
+      "explanation": {
+        "correct": "744 = rwxr--r-- (owner full, group and other read-only), and chmod o-w removes only the write bit from the 'other' category.",
+        "incorrect": "644 gives the owner no execute bit, a-w removes write from all three categories (not just other), and o=r would set other to read-only absolutely — coincidentally similar here, but it works by absolute assignment (=) rather than the requested subtraction (-).",
+        "examTip": "u/g/o/a target owner/group/other/all; +/-/= add, remove, or absolutely set a permission bit.",
+        "relatedTopics": [
+          "chmod",
+          "symbolic-permissions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Managing User and Group Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To give the owner full permissions, and read-only permission to group and other, the octal chmod value is",
+          "options": [
+            "644",
+            "744",
+            "755",
+            "700"
+          ],
+          "correctAnswer": "744"
+        },
+        {
+          "id": "d2",
+          "prompt": "The symbolic chmod command to remove write permission from 'other' while leaving owner and group unchanged is",
+          "options": [
+            "chmod o-w file",
+            "chmod a-w file",
+            "chmod g-w file",
+            "chmod o=r file"
+          ],
+          "correctAnswer": "chmod o-w file"
+        }
+      ]
+    },
+    {
+      "id": "lx010-135",
+      "type": "dropdown-select",
+      "topicId": "security-permissions",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each statement about special permissions by choosing the correct octal value from its dropdown.",
+      "explanation": {
+        "correct": "A leading 4 in a 4-digit chmod sets SUID, so 4755 applies SUID plus rwxr-xr-x; a leading 1 sets the sticky bit, so 1777 applies the sticky bit plus rwxrwxrwx, which is exactly how /tmp is typically configured.",
+        "incorrect": "2755 would set SGID instead of SUID, and 0777/4777 either apply no special bit or the wrong one (SUID instead of sticky) for a shared directory's typical use case.",
+        "examTip": "1777 is the exact permission set on /tmp on virtually every Linux distribution — memorize it as the canonical sticky-bit example.",
+        "relatedTopics": [
+          "suid-sgid-sticky"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Managing Ownership and Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The chmod value that sets the SUID bit along with rwxr-xr-x base permissions is",
+          "options": [
+            "4755",
+            "2755",
+            "1755",
+            "0755"
+          ],
+          "correctAnswer": "4755"
+        },
+        {
+          "id": "d2",
+          "prompt": "The chmod value that sets the sticky bit along with rwxrwxrwt base permissions on a shared directory is",
+          "options": [
+            "4777",
+            "2777",
+            "1777",
+            "0777"
+          ],
+          "correctAnswer": "1777"
+        }
+      ]
+    },
+    {
+      "id": "lx010-136",
+      "type": "dropdown-select",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement about umask by choosing the correct resulting permission from its dropdown.",
+      "explanation": {
+        "correct": "777 minus umask 002 removes write from 'other' only, giving 775; 666 minus umask 077 removes write and read from both group and other, giving 600.",
+        "incorrect": "755 would result from a umask of 022 (not 002), and 640/644 do not correctly apply a 077 umask, which strips ALL group and other permissions, not just some.",
+        "examTip": "umask subtracts bit-by-bit from the base (777 dirs / 666 files) — walk through r/w/x for each of owner/group/other separately.",
+        "relatedTopics": [
+          "umask"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.4 Managing User and Group Permissions with umask",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "With a umask of 002, a newly created directory (base 777) will have permissions of",
+          "options": [
+            "777",
+            "775",
+            "755",
+            "700"
+          ],
+          "correctAnswer": "775"
+        },
+        {
+          "id": "d2",
+          "prompt": "With a umask of 077, a newly created file (base 666) will have permissions of",
+          "options": [
+            "666",
+            "644",
+            "640",
+            "600"
+          ],
+          "correctAnswer": "600"
+        }
+      ]
+    },
+    {
+      "id": "lx010-137",
+      "type": "dropdown-select",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement about user and group administration by choosing the correct command from its dropdown.",
+      "explanation": {
+        "correct": "groupadd creates a new group, and userdel -r removes both the user account and their home directory in one step.",
+        "incorrect": "usermod modifies existing accounts rather than creating groups, plain userdel without -r leaves the home directory behind, and usermod -L / passwd -l merely lock an account's password rather than deleting it.",
+        "examTip": "userdel alone leaves the home directory as an orphan; userdel -r cleans up the home directory too — easy to forget the flag.",
+        "relatedTopics": [
+          "user-management",
+          "group-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.5 Managing User Accounts",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To create a new group named 'developers', you would run",
+          "options": [
+            "groupadd developers",
+            "usermod developers",
+            "gpasswd developers",
+            "newgrp developers"
+          ],
+          "correctAnswer": "groupadd developers"
+        },
+        {
+          "id": "d2",
+          "prompt": "To permanently remove a user account and their home directory, you would run",
+          "options": [
+            "userdel username",
+            "userdel -r username",
+            "usermod -L username",
+            "passwd -l username"
+          ],
+          "correctAnswer": "userdel -r username"
+        }
+      ]
+    },
+    {
+      "id": "lx010-138",
+      "type": "dropdown-select",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement about sudo and su by choosing the correct command from its dropdown.",
+      "explanation": {
+        "correct": "visudo safely edits and validates the sudoers file, and su - root switches to root with a full login environment.",
+        "incorrect": "Editing sudoers directly with vi/nano skips validation and risks a broken file, and plain su root switches user but keeps your prior shell environment rather than loading root's.",
+        "examTip": "The dash in 'su - user' is easy to overlook on the exam but changes the resulting environment significantly.",
+        "relatedTopics": [
+          "sudo-su"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.6 Using sudo to Delegate Privilege",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The safe way to edit the sudoers file, with built-in syntax validation, is to run",
+          "options": [
+            "vi /etc/sudoers",
+            "visudo",
+            "sudo nano /etc/sudoers",
+            "chmod /etc/sudoers"
+          ],
+          "correctAnswer": "visudo"
+        },
+        {
+          "id": "d2",
+          "prompt": "To switch to the root user and load root's full login environment (home directory, PATH, etc.), you would run",
+          "options": [
+            "su root",
+            "su - root",
+            "sudo su",
+            "sudo -l"
+          ],
+          "correctAnswer": "su - root"
+        }
+      ]
+    },
+    {
+      "id": "lx010-139",
+      "type": "dropdown-select",
+      "topicId": "security-permissions",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each statement about SSH configuration by choosing the correct directive or value from its dropdown.",
+      "explanation": {
+        "correct": "The Port directive in /etc/ssh/sshd_config sets which TCP port sshd listens on, and the default value for that port is 22.",
+        "incorrect": "ListenAddress binds to a specific network interface/IP (not the port number itself), Protocol specifies the SSH protocol version, and 21/23/443 are the default ports for FTP, Telnet, and HTTPS respectively, not SSH.",
+        "examTip": "SSH=22, Telnet=23, FTP=21, HTTPS=443 — commonly confused default ports worth memorizing together.",
+        "relatedTopics": [
+          "ssh-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.7 Understanding SSH",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The sshd_config directive that changes the port SSH listens on from the default is",
+          "options": [
+            "Port",
+            "ListenAddress",
+            "Protocol",
+            "AllowUsers"
+          ],
+          "correctAnswer": "Port"
+        },
+        {
+          "id": "d2",
+          "prompt": "The default TCP port that the SSH daemon listens on, unless changed, is",
+          "options": [
+            "21",
+            "22",
+            "23",
+            "443"
+          ],
+          "correctAnswer": "22"
+        }
+      ]
+    },
+    {
+      "id": "lx010-140",
+      "type": "dropdown-select",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement about firewalls by choosing the correct command from its dropdown.",
+      "explanation": {
+        "correct": "ufw enable turns the firewall on and ensures it stays enabled across reboots, and iptables -L lists all currently configured rules.",
+        "incorrect": "ufw start/activate are not valid ufw subcommands, and iptables -A/-D/-F append, delete, or flush rules respectively rather than listing them.",
+        "examTip": "iptables flags: -L list, -A append, -D delete, -F flush (clears all rules — use with caution!).",
+        "relatedTopics": [
+          "firewall-basics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.8 Basic Firewall Concepts",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To enable the Uncomplicated Firewall so it becomes active and persists across reboots, you would run",
+          "options": [
+            "ufw enable",
+            "ufw start",
+            "ufw allow",
+            "ufw activate"
+          ],
+          "correctAnswer": "ufw enable"
+        },
+        {
+          "id": "d2",
+          "prompt": "To view all currently loaded iptables rules across chains, you would run",
+          "options": [
+            "iptables -A",
+            "iptables -D",
+            "iptables -L",
+            "iptables -F"
+          ],
+          "correctAnswer": "iptables -L"
+        }
+      ]
+    },
+    {
+      "id": "lx010-141",
+      "type": "ordering",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A new hire at Acme Corp needs SSH key-based access configured to the company's build01 server, and password login should then be disabled for security.",
+      "questionText": "A new hire at Acme Corp needs SSH key-based access set up to a server named build01, replacing password login. Arrange the correct sequence of steps.",
+      "explanation": {
+        "correct": "You must generate a key pair, distribute the public key to the server, verify key-based login succeeds, and only then disable password authentication — disabling it too early could lock you out if the key setup failed.",
+        "incorrect": "Disabling PasswordAuthentication before confirming key-based login works risks permanently locking the user out if anything in the key setup was misconfigured.",
+        "examTip": "Always verify key-based login works BEFORE disabling password authentication — this order prevents accidental lockouts.",
+        "relatedTopics": [
+          "ssh-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.7 Understanding SSH",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Generate a new key pair locally with ssh-keygen",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Copy the public key to the server with ssh-copy-id user@build01",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Test logging in with ssh user@build01 to confirm key-based access works",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Edit /etc/ssh/sshd_config on the server to set PasswordAuthentication no, then restart sshd",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "lx010-142",
+      "type": "ordering",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An IT administrator at Wayne Enterprises is onboarding a new developer and needs to provision their Linux account correctly.",
+      "questionText": "Arrange the steps to create a new user, set their password, and add them to the 'developers' group.",
+      "explanation": {
+        "correct": "The group must exist before you can add a user to it during creation, then the user account is created with a home directory (-m) and supplementary group membership (-G), a password is set, and id confirms the final configuration.",
+        "incorrect": "Attempting to reference a nonexistent group during useradd -G would fail, and skipping the password step would leave the account unable to authenticate via password login.",
+        "examTip": "-m creates the home directory, -G sets supplementary groups during useradd — both flags are easy to forget and commonly tested together.",
+        "relatedTopics": [
+          "user-management",
+          "group-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.5 Managing User Accounts",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create the group first with groupadd developers (if it does not already exist)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create the user account with useradd -m -G developers newuser",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Set an initial password for the account with passwd newuser",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Verify the account and group membership with id newuser",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "lx010-143",
+      "type": "ordering",
+      "topicId": "security-permissions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A security review at Initech identifies that the /srv/project directory, shared by the developers team, has inconsistent group ownership on newly created files.",
+      "questionText": "A security review at Initech flags a shared project directory with incorrect permissions. Arrange the steps to correctly secure it using group collaboration and SGID.",
+      "explanation": {
+        "correct": "You first assign the correct group, then enable SGID so future files automatically inherit that group, set restrictive base permissions limiting access to owner and group only, and finally verify the change took effect.",
+        "incorrect": "Setting permissions before assigning the correct group would still leave files created afterward owned by the wrong group unless SGID is also applied.",
+        "examTip": "SGID on a shared directory is what makes group collaboration work smoothly — without it, each user's files default to their own primary group instead.",
+        "relatedTopics": [
+          "suid-sgid-sticky",
+          "chown-chgrp"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Managing Ownership and Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Change the directory's group ownership with chgrp developers /srv/project",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Set the SGID bit so new files inherit the group with chmod g+s /srv/project",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Set base permissions to rwxrwx--- with chmod 770 /srv/project",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Verify the result by running ls -ld /srv/project",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "lx010-144",
+      "type": "drag-drop",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each command into the category describing what it primarily manages.",
+      "explanation": {
+        "correct": "chmod and chown manage file-level permissions and ownership, while useradd and passwd manage user account creation and authentication credentials.",
+        "incorrect": "chown can look similar to user-management commands since it references usernames, but it only changes which user OWNS a file — it does not create or modify accounts themselves.",
+        "examTip": "File-level tools (chmod, chown, chgrp) act on files. Account-level tools (useradd, passwd, usermod) act on user records.",
+        "relatedTopics": [
+          "chmod",
+          "chown-chgrp",
+          "user-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Managing User and Group Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "File Permissions / Ownership",
+          "acceptsItemIds": [
+            "item287",
+            "item288"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "User Accounts",
+          "acceptsItemIds": [
+            "item289",
+            "item290"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item287",
+          "text": "chmod"
+        },
+        {
+          "id": "item288",
+          "text": "chown"
+        },
+        {
+          "id": "item289",
+          "text": "useradd"
+        },
+        {
+          "id": "item290",
+          "text": "passwd"
+        }
+      ]
+    },
+    {
+      "id": "lx010-145",
+      "type": "drag-drop",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each item into the category describing which SSH key it belongs with.",
+      "explanation": {
+        "correct": "The private key (and its default file id_rsa) must remain secret and stay only on the local machine, while the public key (and id_rsa.pub) is safe to distribute and gets copied to servers' authorized_keys files.",
+        "incorrect": "A common mistake is copying the private key to a server for 'authorized_keys' — only the public key should ever be shared this way.",
+        "examTip": "Rule of thumb: if the filename ends in .pub, it's safe to share. If it doesn't, keep it private.",
+        "relatedTopics": [
+          "ssh-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.7 Understanding SSH",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Stays On The Local Machine",
+          "acceptsItemIds": [
+            "item289",
+            "item290"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Distributed / Shared",
+          "acceptsItemIds": [
+            "item291",
+            "item292"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item289",
+          "text": "Private key"
+        },
+        {
+          "id": "item290",
+          "text": "~/.ssh/id_rsa (default private key file)"
+        },
+        {
+          "id": "item291",
+          "text": "Public key"
+        },
+        {
+          "id": "item292",
+          "text": "~/.ssh/id_rsa.pub (default public key file)"
+        }
+      ]
+    },
+    {
+      "id": "lx010-151",
+      "type": "multiple-choice",
+      "topicId": "security-permissions",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An administrator at Cyberdyne Systems is setting up a shared folder that only the 'ops' team should be able to read or write to.",
+      "questionText": "Which TWO actions would help an administrator at Cyberdyne Systems restrict a newly created shared folder so that only members of the 'ops' group can access it?",
+      "explanation": {
+        "correct": "Both combinations correctly restrict the directory to the ops group: assigning group ownership with chgrp or chown :group, then setting permissions (770 or 750) that deny access to 'other' entirely.",
+        "incorrect": "chmod 777 grants full access to everyone, including users outside the ops group, which is the opposite of the goal, and chmod +x alone only adds execute permission without addressing group ownership or restricting other users.",
+        "examTip": "Restricting access to a group always takes two steps: assign the correct group ownership, THEN set permissions that lock out 'other'.",
+        "relatedTopics": [
+          "chown-chgrp",
+          "chmod"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Managing Ownership and Permissions",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "chgrp ops /srv/shared && chmod 770 /srv/shared",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "chmod 777 /srv/shared",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "chown :ops /srv/shared && chmod 750 /srv/shared",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "chmod +x /srv/shared",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

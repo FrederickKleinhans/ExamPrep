@@ -11,7 +11,7 @@ import {
 } from '../types';
 import { DataLoader } from '../services/DataLoader';
 import { ProgressService } from '../services/ProgressService';
-import { AdaptiveEngine } from '../services/AdaptiveEngine';
+import { AdaptiveEngine, qualityScore } from '../services/AdaptiveEngine';
 import { ExamService } from '../services/ExamService';
 import { TrackingService } from '../services/TrackingService';
 
@@ -27,7 +27,7 @@ interface Store {
   studySessionHistory: string[];
   studySessionResults: StudySessionResult[];
   currentStudyQuestion: Question | null;
-  studyFilter: 'all' | 'cloud' | 'architecture' | 'governance' | 'management';
+  studyFilter: string;
   studyGroup: number;
   studySessionLimit: number;
   isStudyExhausted: boolean;
@@ -41,11 +41,15 @@ interface Store {
 
   // Actions
   initialize: () => Promise<void>;
-  setStudyFilter: (filter: 'all' | 'cloud' | 'architecture' | 'governance' | 'management') => void;
+  setStudyFilter: (filter: string) => Promise<void>;
   setStudySessionLimit: (limit: number) => void;
   rotateStudyGroup: () => void;
   selectCertification: (certId: string) => Promise<void>;
+  selectTrack: (trackId: string) => Promise<void>;
   refreshProgress: () => void;
+  dismissError: () => void;
+  retryLastLoad: () => Promise<void>;
+  hasActiveSession: () => boolean;
 
   // Study actions
   getNextStudyQuestion: () => void;
@@ -74,7 +78,7 @@ export const useStore = create<Store>((set, get) => ({
   studySessionHistory: [],
   studySessionResults: [],
   currentStudyQuestion: null,
-  studyFilter: 'all',
+  studyFilter: '',
   studyGroup: 0,
   studySessionLimit: 30,
   isStudyExhausted: false,
@@ -85,19 +89,43 @@ export const useStore = create<Store>((set, get) => ({
 
   examSession: null,
 
+  hasActiveSession: () => {
+    const s = get();
+    // An exam is "in progress" if a session exists and isn't completed/cleared
+    if (s.examSession && !s.examSession.isCompleted) return true;
+    // A study session is "in progress" if the user has started answering
+    if (s.currentStudyQuestion) return true;
+    if (s.studySessionHistory.length > 0) return true;
+    return false;
+  },
+
+  dismissError: () => set({ error: null }),
+
+  retryLastLoad: async () => {
+    // Clear the error and re-initialize from the current cert
+    set({ error: null });
+    await get().initialize();
+  },
+
   initialize: async () => {
     set({ isLoading: true, error: null });
     try {
       const manifest = await DataLoader.loadManifest();
       const progress = ProgressService.getProgress();
-      const certId = progress.selectedCertification || manifest.certifications[0]?.id;
-      const questionBank = certId ? await DataLoader.loadQuestionBank(certId) : null;
-      // Rotate study group on load so each reload cycles groups
+      const certId = progress.selectedCertification || null;
+      const certification = certId ? await DataLoader.loadCertification(certId) : null;
+      const initialTopicId = certification?.topics[0]?.id ?? '';
+      const initialChunk = certId && initialTopicId
+        ? await DataLoader.loadTopicChunk(certId, initialTopicId)
+        : null;
+      const questionBank = certification && initialChunk
+        ? { certificationId: certification.id, version: certification.version, questions: initialChunk.questions }
+        : null;
       let studyGroup = 0;
       if (certId) {
         studyGroup = ProgressService.incrementStudyGroupIndex(certId);
       }
-      set({ manifest, questionBank, progress, isLoading: false, studyGroup, isStudyExhausted: false });
+      set({ manifest, questionBank, progress, studyFilter: initialTopicId, isLoading: false, studyGroup, isStudyExhausted: false });
     } catch (e) {
       set({ error: (e as Error).message, isLoading: false });
     }
@@ -106,17 +134,26 @@ export const useStore = create<Store>((set, get) => ({
   selectCertification: async (certId: string) => {
     set({ isLoading: true, error: null });
     try {
-      const questionBank = await DataLoader.loadQuestionBank(certId);
+      const certification = await DataLoader.loadCertification(certId);
+      const initialTopicId = certification.topics[0]?.id ?? '';
+      const initialChunk = initialTopicId ? await DataLoader.loadTopicChunk(certId, initialTopicId) : null;
+      const questionBank = initialChunk
+        ? { certificationId: certification.id, version: certification.version, questions: initialChunk.questions }
+        : null;
       ProgressService.updateSelectedCertification(certId);
       const progress = ProgressService.getProgress();
       set({
         questionBank,
         progress,
         isLoading: false,
+        // Clear any stale exam session tied to the previous cert —
+        // switching certs mid-exam must not leave an orphaned session
+        // that points at a question bank we just replaced.
+        examSession: null,
         studySessionHistory: [],
         studySessionResults: [],
         currentStudyQuestion: null,
-        studyFilter: 'all',
+        studyFilter: initialTopicId,
         isStudyExhausted: false,
         showExplanation: false,
         selectedAnswer: null,
@@ -127,11 +164,38 @@ export const useStore = create<Store>((set, get) => ({
     }
   },
 
+  selectTrack: async (trackId: string) => {
+    // Save the track choice. Do NOT auto-activate a cert — the user must
+    // explicitly click Study or Exam from the cert detail page.
+    ProgressService.updateSelectedTrack(trackId, undefined);
+    set({ progress: ProgressService.getProgress() });
+  },
+
   refreshProgress: () => {
     set({ progress: ProgressService.getProgress() });
   },
 
-  setStudyFilter: (filter: 'all' | 'cloud' | 'architecture' | 'governance' | 'management') => {
+  setStudyFilter: async (filter: string) => {
+    const { questionBank } = get();
+    if (!questionBank) return;
+    set({ isLoading: true, error: null });
+    try {
+      const chunk = await DataLoader.loadTopicChunk(questionBank.certificationId, filter);
+      const loadedQuestions = questionBank.questions.some((question) => question.topicId === filter)
+        ? questionBank.questions
+        : [...questionBank.questions, ...chunk.questions];
+      set({ questionBank: { ...questionBank, questions: loadedQuestions } });
+    } catch (error) {
+      // Graceful fallback: keep the existing question bank so the user
+      // can still study, but surface the error in the banner. This is
+      // better than wiping the bank on a transient chunk fetch failure.
+      set({ error: (error as Error).message });
+      set({
+        studyFilter: filter,
+        isLoading: false,
+      });
+      return;
+    }
     set({
       studyFilter: filter,
       studySessionHistory: [],
@@ -141,6 +205,7 @@ export const useStore = create<Store>((set, get) => ({
       selectedAnswer: null,
       isAnswerCorrect: null,
       isStudyExhausted: false,
+      isLoading: false,
     });
   },
 
@@ -166,38 +231,39 @@ export const useStore = create<Store>((set, get) => ({
   },
 
   getNextStudyQuestion: () => {
-    const { questionBank, progress, studySessionHistory, studyFilter, studySessionLimit } = get();
+    const { questionBank, progress, studySessionHistory, studyFilter, studySessionLimit, manifest } = get();
     if (!questionBank) return;
+    const certificationProgress = ProgressService.getCertificationProgress(
+      progress,
+      questionBank.certificationId,
+    );
 
-    // If we've reached the session limit, mark session complete (no current question)
     if (studySessionLimit && studySessionHistory.length >= studySessionLimit) {
       set({ currentStudyQuestion: null, isStudyExhausted: true });
       return;
     }
-    const filtered = questionBank.questions.filter((q) => {
-      if (studyFilter === 'all') return true;
-      if (studyFilter === 'cloud') return q.topicId === 'describe-cloud-concepts';
-      if (studyFilter === 'architecture') return q.topicId === 'describe-azure-architecture';
-      if (studyFilter === 'governance') return q.topicId === 'describe-azure-management';
-      if (studyFilter === 'management') return q.topicId === 'describe-azure-management' || q.topicId === 'describe-azure-identity';
-      return true;
-    });
-
+    const filtered = questionBank.questions.filter((question) => question.topicId === studyFilter);
     const questionsForSession = filtered.length > 0 ? filtered : questionBank.questions;
+
+    // Resolve topic weights from manifest for accurate SM-2 tier scoring
+    const certTopics = manifest?.certifications.find(
+      (c) => c.id === questionBank.certificationId,
+    )?.topics ?? [];
 
     const weakTopics = AdaptiveEngine.computeWeakTopics(
       questionsForSession,
-      progress.questionStats
+      certificationProgress.questionStats,
     );
     const nextQuestion = AdaptiveEngine.selectNextQuestion(
       questionsForSession,
-      progress.questionStats,
+      certificationProgress.questionStats,
+      certificationProgress.sm2 ?? {},
       weakTopics,
-      studySessionHistory
+      studySessionHistory,
+      certTopics,
     );
 
     if (!nextQuestion) {
-      // No available question (filtered/group exhausted)
       set({ currentStudyQuestion: null, isStudyExhausted: true });
       return;
     }
@@ -213,16 +279,33 @@ export const useStore = create<Store>((set, get) => ({
   },
 
   submitStudyAnswer: (answer: string | string[], confidence: Confidence = 'medium') => {
-    const { currentStudyQuestion, studySessionHistory, studySessionResults, questionStartTime } = get();
+    const { currentStudyQuestion, questionBank, studySessionHistory, studySessionResults, questionStartTime } = get();
     if (!currentStudyQuestion) return;
+    if (!questionBank) return;
 
     const points = ExamService.calculateQuestionPoints(currentStudyQuestion, answer);
     const isCorrect = points.earned === points.total;
-
     const timeMs = Date.now() - questionStartTime;
-    ProgressService.recordAnswerPoints(currentStudyQuestion.id, points.earned, points.total, timeMs, confidence);
 
-    if (points.earned !== points.total) {
+    // Record stat
+    ProgressService.recordAnswerPoints(
+      questionBank.certificationId,
+      currentStudyQuestion.id,
+      points.earned,
+      points.total,
+      timeMs,
+      confidence,
+    );
+
+    // Update SM-2 schedule
+    const quality = qualityScore(isCorrect, confidence);
+    ProgressService.updateSm2(
+      questionBank.certificationId,
+      currentStudyQuestion.id,
+      quality,
+    );
+
+    if (!isCorrect) {
       TrackingService.questionMissed(currentStudyQuestion.id, currentStudyQuestion.topicId);
     }
 
@@ -243,7 +326,6 @@ export const useStore = create<Store>((set, get) => ({
       const next = ProgressService.incrementStudyGroupIndex(certId);
       set({ studyGroup: next, isStudyExhausted: false });
     }
-
     set({
       studySessionHistory: [],
       studySessionResults: [],
@@ -269,7 +351,6 @@ export const useStore = create<Store>((set, get) => ({
       cert.timeLimitMinutes,
       cert.questionCount
     );
-
     set({ examSession: session });
   },
 
@@ -303,7 +384,6 @@ export const useStore = create<Store>((set, get) => ({
     const result = ExamService.calculateResult(examSession, cert.passingScore);
     ProgressService.saveExamResult(result);
 
-    // Track exam submit
     try {
       TrackingService.examSubmit(result);
     } catch {
@@ -323,7 +403,9 @@ export const useStore = create<Store>((set, get) => ({
   },
 
   toggleBookmark: (questionId: string) => {
-    ProgressService.toggleBookmark(questionId);
+    const { questionBank } = get();
+    if (!questionBank) return;
+    ProgressService.toggleBookmark(questionBank.certificationId, questionId);
     set({ progress: ProgressService.getProgress() });
   },
 }));

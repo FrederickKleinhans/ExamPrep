@@ -1,0 +1,53 @@
+{
+  "certificationId": "test-cert",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "tc-001",
+      "type": "single-choice",
+      "topicId": "topic-a",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is 2 + 2?",
+      "options": [
+        { "id": "A", "text": "3", "isCorrect": false },
+        { "id": "B", "text": "4", "isCorrect": true },
+        { "id": "C", "text": "5", "isCorrect": false }
+      ],
+      "explanation": {
+        "correct": "2 + 2 = 4.",
+        "incorrect": "Not quite.",
+        "examTip": "Basic arithmetic.",
+        "relatedTopics": []
+      },
+      "metadata": {
+        "examObjective": "basic-math",
+        "references": ["https://example.com/math"],
+        "lastUpdated": "2024-01-01"
+      }
+    },
+    {
+      "id": "tc-002",
+      "type": "single-choice",
+      "topicId": "topic-b",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the capital of France?",
+      "options": [
+        { "id": "A", "text": "London", "isCorrect": false },
+        { "id": "B", "text": "Paris", "isCorrect": true }
+      ],
+      "explanation": {
+        "correct": "Paris is the capital of France.",
+        "incorrect": "Incorrect.",
+        "examTip": "Remember European capitals.",
+        "relatedTopics": []
+      },
+      "metadata": {
+        "examObjective": "geography",
+        "references": ["https://example.com/france"],
+        "lastUpdated": "2024-01-01"
+      }
+    }
+  ]
+}

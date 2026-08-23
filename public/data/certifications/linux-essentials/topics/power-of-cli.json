@@ -1,0 +1,1863 @@
+{
+  "certificationId": "linux-essentials",
+  "topicId": "power-of-cli",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "lx010-037",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which environment variable holds the list of directories the shell searches for executable commands?",
+      "explanation": {
+        "correct": "$PATH contains a colon-separated list of directories the shell searches, in order, when you type a command name.",
+        "incorrect": "$HOME holds the current user's home directory, $SHELL holds the path to the user's default shell, and $USER holds the current username.",
+        "examTip": "Command not found? Check $PATH first — the shell can only find executables listed in it.",
+        "relatedTopics": [
+          "environment-variables"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Using the Command Line to Get Help",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "$HOME",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "$PATH",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "$SHELL",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "$USER",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-038",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command permanently exports a variable so that it is inherited by child processes for the current session?",
+      "explanation": {
+        "correct": "export marks a shell variable as an environment variable, making it available to child processes spawned from that shell.",
+        "incorrect": "set only lists or sets shell (not necessarily environment) variables, env displays or runs a command with a modified environment (it doesn't persist a variable in the current shell), and unset removes a variable entirely.",
+        "examTip": "A shell variable becomes an 'environment' variable only after export — until then, child processes can't see it.",
+        "relatedTopics": [
+          "environment-variables"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Using the Command Line to Get Help",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "set VAR=value",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "export VAR=value",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "env VAR=value",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "unset VAR=value",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-039",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which shell configuration file is read for non-login interactive bash shells, such as when opening a new terminal window?",
+      "explanation": {
+        "correct": ".bashrc is sourced for interactive non-login shells, such as a new terminal window in a graphical desktop.",
+        "incorrect": ".bash_profile and /etc/profile are read for login shells, and .bash_login is an older, less commonly used login-shell file.",
+        "examTip": "Login shell -> .bash_profile/.profile. Interactive non-login shell (new terminal tab) -> .bashrc.",
+        "relatedTopics": [
+          "shell-config-files"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Basic Bash Shell",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": ".bash_profile",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": ".bashrc",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "/etc/profile",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": ".bash_login",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-040",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does the redirection operator '2>&1' accomplish when appended to a command?",
+      "explanation": {
+        "correct": "2>&1 redirects file descriptor 2 (stderr) to wherever file descriptor 1 (stdout) is currently pointing, merging error and normal output into a single stream.",
+        "incorrect": "It is not related to a literal filename '1', it does not touch standard input, and by itself it does not perform any appending to a file.",
+        "examTip": "Order matters: 'cmd > file 2>&1' merges both streams into file; 'cmd 2>&1 > file' does not merge them the same way.",
+        "relatedTopics": [
+          "redirection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.4 Turning Commands into a Script",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Redirects standard output to a file named 1",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Redirects standard error to the same destination as standard output",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Redirects standard input from file descriptor 2",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Appends standard output to file descriptor 1",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-041",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which symbol appends command output to the end of an existing file, rather than overwriting it?",
+      "explanation": {
+        "correct": ">> appends output to a file, preserving existing content, while a single > truncates and overwrites the file.",
+        "incorrect": "| pipes output into another command, and < redirects a file's content into a command's standard input.",
+        "examTip": "One > = overwrite (danger!). Two >> = append (safe, adds to the end).",
+        "relatedTopics": [
+          "redirection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Searching and Extracting Data",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": ">",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": ">>",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "|",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "<",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-042",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which grep option performs a case-insensitive search?",
+      "explanation": {
+        "correct": "grep -i ignores case when matching the search pattern against lines of input.",
+        "incorrect": "-v inverts the match (shows non-matching lines), -c prints only a count of matching lines, and -n prefixes matching lines with their line number.",
+        "examTip": "grep flags to remember: -i ignore case, -v invert, -n line numbers, -c count, -r recursive.",
+        "relatedTopics": [
+          "grep-command"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Searching and Extracting Data",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "-v",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "-c",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "-i",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "-n",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-043",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "In awk, which built-in variable represents the last (Nth) field of the current line?",
+      "explanation": {
+        "correct": "$NF refers to the value of the last field on the current line, since NF holds the total number of fields.",
+        "incorrect": "$0 represents the entire current line, $1 is the first field, and $FS is the field separator variable, not a field reference.",
+        "examTip": "$0 = whole line, $1..$N = individual fields, $NF = last field (NF = 'Number of Fields').",
+        "relatedTopics": [
+          "awk-command"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Searching and Extracting Data",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "$0",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "$1",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "$NF",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "$FS",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-044",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which command creates a compressed tar archive named backup.tar.gz from the contents of the /data directory?",
+      "explanation": {
+        "correct": "tar -cvzf creates (c) a new archive, shows progress (v), compresses with gzip (z), and writes to the named file (f).",
+        "incorrect": "-x extracts an existing archive rather than creating one, -t lists archive contents without extracting, and plain gzip cannot bundle a directory tree into a single tar archive on its own.",
+        "examTip": "Mnemonic for tar flags: 'create' c, 'extract' x, 'view/list' t, always paired with 'z' for gzip and 'f' for filename.",
+        "relatedTopics": [
+          "tar-command",
+          "archiving"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.5 Compression and Archiving",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "tar -xvf backup.tar.gz /data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "tar -cvzf backup.tar.gz /data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "tar -tvf backup.tar.gz /data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "gzip -c /data > backup.tar.gz",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-045",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which command shows a continuously updating, interactive view of running processes and system resource usage?",
+      "explanation": {
+        "correct": "top provides a live, auto-refreshing view of processes along with CPU and memory usage.",
+        "incorrect": "ps aux gives a static one-time snapshot, jobs lists background/suspended jobs of the current shell, and nohup runs a command immune to hangups (it isn't a monitoring tool).",
+        "examTip": "ps = snapshot (one look). top = live dashboard (continuously refreshing) — htop is a friendlier alternative to top.",
+        "relatedTopics": [
+          "process-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.6 Managing Process Priorities",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "ps aux",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "top",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "jobs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "nohup",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-046",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which key combination sends a running foreground process to the background as a suspended job?",
+      "explanation": {
+        "correct": "Ctrl+Z suspends the current foreground job, after which 'bg' can resume it running in the background.",
+        "incorrect": "Ctrl+C sends SIGINT to terminate a process, Ctrl+D signals end-of-input (EOF), and Ctrl+A moves the cursor to the start of the line in many shells.",
+        "examTip": "Ctrl+Z = pause and background. Ctrl+C = kill. Very different results — mixing them up can lose unsaved work.",
+        "relatedTopics": [
+          "job-control"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.6 Managing Process Priorities",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Ctrl+C",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Ctrl+Z",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Ctrl+D",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Ctrl+A",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-047",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which crontab schedule expression runs a job at 2:30 AM every day?",
+      "explanation": {
+        "correct": "Cron fields are 'minute hour day-of-month month day-of-week', so '30 2 * * *' means minute 30, hour 2, every day, every month, every weekday.",
+        "incorrect": "'2 30 * * *' swaps minute and hour (would mean 30:02, invalid), '*/30 2 * * *' runs every 30 minutes during hour 2, and '30 2 * * 1' restricts the job to Mondays only.",
+        "examTip": "Cron field order: minute-hour-day(month)-month-day(week). Say it as 'm h dom mon dow'.",
+        "relatedTopics": [
+          "cron"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.7 Scheduling Tasks",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "30 2 * * *",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "2 30 * * *",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "*/30 2 * * *",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "30 2 * * 1",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-048",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A junior sysadmin at Initech has just provisioned a fresh Ubuntu server and needs to install the Nginx web server.",
+      "questionText": "Which command installs a package on a Debian or Ubuntu system using the high-level package manager?",
+      "explanation": {
+        "correct": "apt is the high-level package manager for Debian/Ubuntu systems and handles dependency resolution automatically.",
+        "incorrect": "yum/dnf are used on Red Hat-family systems, rpm is a low-level installer without automatic dependency resolution, and pacman is Arch Linux's package manager.",
+        "examTip": "High-level with dependency resolution: apt (Debian), dnf/yum (Red Hat), pacman (Arch). Low-level, no dependency solving: dpkg, rpm.",
+        "relatedTopics": [
+          "package-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.8 Debian and Red Hat Package Management",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "yum install nginx",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "apt install nginx",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "rpm -i nginx",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "pacman -S nginx",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-049",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which sed command replaces the first occurrence of 'error' with 'warning' on each line of a file?",
+      "explanation": {
+        "correct": "sed 's/error/warning/' substitutes only the first match of 'error' on each line with 'warning'.",
+        "incorrect": "Adding the g flag would replace every occurrence per line (global), not just the first, and the other two options use invalid sed syntax.",
+        "examTip": "sed 's/old/new/' = first match per line. sed 's/old/new/g' = every match per line (g = global).",
+        "relatedTopics": [
+          "sed-command"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Searching and Extracting Data",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "sed 's/error/warning/' file.txt",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "sed 's/error/warning/g' file.txt",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "sed 'error/warning/' file.txt",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "sed -i 'error->warning' file.txt",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-050",
+      "type": "single-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An engineer at Globex Corp needs to kick off a two-hour data migration script over SSH and then safely disconnect without killing the job.",
+      "questionText": "A command was run with 'nohup long_task.sh &'. What is the primary effect of nohup in this context?",
+      "explanation": {
+        "correct": "nohup ('no hang up') makes a process ignore the SIGHUP signal, so it keeps running even after the terminal that launched it is closed.",
+        "incorrect": "nohup does not grant elevated privileges (sudo does), does not schedule future execution (at/cron do), and does not change CPU scheduling priority (nice/renice do).",
+        "examTip": "nohup + & is the classic combo for launching a long job that survives logging out of the terminal.",
+        "relatedTopics": [
+          "process-management",
+          "job-control"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.6 Managing Process Priorities",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "It runs the script with elevated (root) privileges",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It prevents the process from being terminated when the terminal session closes",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It schedules the script to run at a later time",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It limits the CPU priority of the process",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-051",
+      "type": "multiple-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid ways to run a command using command substitution?",
+      "explanation": {
+        "correct": "Both $(command) (modern, preferred) and `command` (backticks, legacy) perform command substitution, inserting the command's output into the surrounding text.",
+        "incorrect": "Curly braces {} are used for brace expansion (generating strings), not command substitution, and %command% is not valid bash syntax.",
+        "examTip": "$() is preferred over backticks because it nests cleanly, e.g. $(echo $(date)) — nested backticks require awkward escaping.",
+        "relatedTopics": [
+          "command-substitution",
+          "quoting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Basic Bash Shell",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "$(command)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "`command`",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "{command}",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "%command%",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-052",
+      "type": "multiple-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO redirection operators send a command's output to a file (as opposed to reading input from a file)?",
+      "explanation": {
+        "correct": "> overwrites a file with output, and >> appends output to the end of a file — both write data out.",
+        "incorrect": "< reads input into a command from a file, and while 2> does write output, it specifically writes stderr; the question is about the general output-writing operators covered here, of which > and >> are the two purely output-writing ones being tested.",
+        "examTip": "Arrows point the direction data flows: > and >> point data OUT to a file; < pulls data IN from a file.",
+        "relatedTopics": [
+          "redirection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.4 Turning Commands into a Script",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": ">",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": ">>",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "<",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "2>",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-053",
+      "type": "multiple-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid quoting mechanisms in bash for controlling variable expansion?",
+      "explanation": {
+        "correct": "Single quotes suppress all expansion so variables are treated literally, while double quotes still allow variable and command substitution to occur inside them.",
+        "incorrect": "Curly braces are used for brace expansion or variable disambiguation (${VAR}), and parentheses launch a subshell — neither is primarily a quoting mechanism.",
+        "examTip": "'$VAR' inside single quotes prints literally as $VAR. \"$VAR\" inside double quotes expands to the variable's value.",
+        "relatedTopics": [
+          "quoting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Basic Bash Shell",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Single quotes ('...')",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Double quotes (\"...\")",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Curly braces ({...})",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Parentheses ((...))",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-054",
+      "type": "multiple-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO commands can be used to terminate a running process by name rather than by PID?",
+      "explanation": {
+        "correct": "killall and pkill both accept a process name and signal all matching processes, without requiring you to look up a PID first.",
+        "incorrect": "kill requires a specific numeric PID (not a name), and nice adjusts a process's scheduling priority rather than terminating it.",
+        "examTip": "kill needs a PID. killall and pkill work by process NAME — handy when you don't know (or don't want to look up) the PID.",
+        "relatedTopics": [
+          "process-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.6 Managing Process Priorities",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "kill",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "killall",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "pkill",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "nice",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-055",
+      "type": "multiple-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO glob patterns would match the filename 'report2.txt'?",
+      "explanation": {
+        "correct": "report?.txt matches any single character in place of ?, and report[0-9].txt matches any single digit — both match 'report2.txt'.",
+        "incorrect": "report[a-z].txt only matches a lowercase letter in that position (not a digit), and report.txt has no wildcard so it only matches that exact literal filename.",
+        "examTip": "? = exactly one character. [set] = one character from the set. * = zero or more characters.",
+        "relatedTopics": [
+          "globbing",
+          "wildcards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Basic Bash Shell",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "report?.txt",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "report[0-9].txt",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "report[a-z].txt",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "report.txt",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-056",
+      "type": "multiple-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO commands can be used to extract or upgrade individual Debian .deb packages at a low level, without automatic dependency resolution?",
+      "explanation": {
+        "correct": "dpkg -i installs a local .deb package file directly, and dpkg -r removes an installed package — both operate at the low level without resolving dependencies automatically.",
+        "incorrect": "apt install can also install a local file and does resolve dependencies (making it higher-level), and apt update merely refreshes package indexes rather than installing or removing software.",
+        "examTip": "dpkg = low-level, single package, no dependency solving. apt = high-level, handles dependencies automatically.",
+        "relatedTopics": [
+          "package-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.8 Debian and Red Hat Package Management",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "dpkg -i package.deb",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "apt install package.deb",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "dpkg -r package.deb",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "apt update",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-057",
+      "type": "yes-no-statements",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about bash variables and environment as Yes or No.",
+      "explanation": {
+        "correct": "export makes a variable part of the environment inherited by children; unset completely removes the variable (and its value) rather than merely hiding it; $USER and $HOME are standard predefined environment variables.",
+        "incorrect": "unset does not just hide a variable — it deletes it entirely, and referencing it afterward returns nothing.",
+        "examTip": "unset well and truly deletes; there's no 'undo' short of re-setting the variable's value again.",
+        "relatedTopics": [
+          "environment-variables"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Using the Command Line to Get Help",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Running 'export' on a variable makes it visible to child processes spawned from that shell.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The command 'unset VAR' only hides a variable from display but keeps its value in memory.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "$USER and $HOME are both commonly predefined environment variables in a typical bash session.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-058",
+      "type": "yes-no-statements",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about pipes and redirection as Yes or No.",
+      "explanation": {
+        "correct": "Pipes connect stdout of one process to stdin of the next; /dev/null is a special device that discards anything written to it; tee is specifically designed to do both — write to a file AND pass the data through to standard output at the same time.",
+        "incorrect": "tee's whole purpose is splitting output to both the screen and a file simultaneously, unlike a plain redirect which only goes to the file.",
+        "examTip": "tee = 'T-splitter' for output: one stream in, two streams out (screen + file).",
+        "relatedTopics": [
+          "redirection",
+          "pipes"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.4 Turning Commands into a Script",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A pipe (|) sends the standard output of one command directly into the standard input of the next.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Redirecting a command's error output to /dev/null discards those error messages entirely.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "The 'tee' command can only send output to a file and cannot also display it on the screen simultaneously.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-059",
+      "type": "yes-no-statements",
+      "topicId": "power-of-cli",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Evaluate each statement about grep, sed, and awk as Yes or No.",
+      "explanation": {
+        "correct": "grep -r recurses into subdirectories when searching; without -i, sed by default only prints the modified result to standard output and leaves the original file untouched — -i is required to edit the file in place; awk's field variables like $1 and $NF let you print or process specific columns.",
+        "incorrect": "Without -i, sed is non-destructive: the source file is unchanged unless you redirect output or explicitly request in-place editing.",
+        "examTip": "sed -i = 'in-place' edit (modifies the file). Without -i, sed only writes its result to stdout.",
+        "relatedTopics": [
+          "grep-command",
+          "sed-command",
+          "awk-command"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Searching and Extracting Data",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "grep -r searches recursively through all files in a directory tree for a matching pattern.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "sed's 's///' command permanently modifies the original file unless the -i flag is used.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "awk can print specific fields from each line, such as the first field with $1.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-060",
+      "type": "yes-no-statements",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about tar and compression as Yes or No.",
+      "explanation": {
+        "correct": "tar -xvzf extracts (x), shows progress (v), decompresses gzip (z), from the named file (f); gzip only compresses a single file/stream and cannot itself bundle multiple files — that bundling job belongs to tar; .tar.gz and .tgz are simply two common naming conventions for the same type of archive.",
+        "incorrect": "gzip alone has no concept of multiple files or directory structure — that's specifically what tar provides before gzip compresses the result.",
+        "examTip": "tar bundles (multiple files -> one file), gzip compresses (shrinks size). tar -z combines both in one command.",
+        "relatedTopics": [
+          "tar-command",
+          "archiving"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.5 Compression and Archiving",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "tar -xvzf archive.tar.gz extracts a gzip-compressed tar archive.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "gzip compression, unlike tar, can bundle multiple files and directories into a single archive.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "The .tar.gz and .tgz file extensions both commonly refer to a gzip-compressed tar archive.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-061",
+      "type": "yes-no-statements",
+      "topicId": "power-of-cli",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about job control as Yes or No.",
+      "explanation": {
+        "correct": "& backgrounds a command so you get your prompt back right away; fg resumes a background/suspended job in the foreground; jobs only lists jobs associated with the current shell session, not the whole system (use ps or top for that).",
+        "incorrect": "jobs is scoped to the current shell session only — it will not show processes started in other terminals.",
+        "examTip": "jobs = current shell's background jobs only. ps aux/top = every process on the whole system.",
+        "relatedTopics": [
+          "job-control"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.6 Managing Process Priorities",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Appending & to a command launches it in the background and immediately returns control of the shell to you.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The 'fg' command brings a background job back into the foreground.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "The 'jobs' command displays a list of all processes running on the entire system, not just the current shell.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-062",
+      "type": "dropdown-select",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by choosing the correct command from its dropdown.",
+      "explanation": {
+        "correct": "grep -ri combines recursive search with case-insensitivity, and cut -d: -f3 splits on the colon delimiter and prints the third field.",
+        "incorrect": "grep -r alone is case-sensitive, awk's example prints field 1 (not 3), and sort/tr do not extract a specific field the way cut does.",
+        "examTip": "cut -d<delim> -f<n> is the quickest way to grab one column from delimited text without writing a full awk script.",
+        "relatedTopics": [
+          "grep-command",
+          "text-processing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Searching and Extracting Data",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To search recursively for the case-insensitive string 'timeout' inside all files under /var/log, you would use",
+          "options": [
+            "grep -r timeout /var/log",
+            "grep -ri timeout /var/log",
+            "find -name timeout /var/log",
+            "sed -ri timeout /var/log"
+          ],
+          "correctAnswer": "grep -ri timeout /var/log"
+        },
+        {
+          "id": "d2",
+          "prompt": "To print only the third field of each line in a colon-delimited file, you would use",
+          "options": [
+            "cut -d: -f3",
+            "awk -F: '{print $1}'",
+            "sort -t: -k3",
+            "tr ':' '\\n'"
+          ],
+          "correctAnswer": "cut -d: -f3"
+        }
+      ]
+    },
+    {
+      "id": "lx010-063",
+      "type": "dropdown-select",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement about process management by choosing the correct command from its dropdown.",
+      "explanation": {
+        "correct": "top provides a continuously refreshing dashboard of process activity, and fg resumes a job in the foreground.",
+        "incorrect": "ps aux only gives a single static snapshot, bg resumes a job in the background (not the foreground), and kill/nohup do not resume jobs.",
+        "examTip": "bg = resume in background, fg = resume in foreground — both operate on jobs already suspended with Ctrl+Z.",
+        "relatedTopics": [
+          "process-management",
+          "job-control"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.6 Managing Process Priorities",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To view a live, auto-refreshing list of all processes with their CPU and memory usage, you would use",
+          "options": [
+            "ps aux",
+            "top",
+            "jobs",
+            "nice"
+          ],
+          "correctAnswer": "top"
+        },
+        {
+          "id": "d2",
+          "prompt": "To resume a suspended background job and bring it into the foreground, you would use",
+          "options": [
+            "bg",
+            "fg",
+            "kill -9",
+            "nohup"
+          ],
+          "correctAnswer": "fg"
+        }
+      ]
+    },
+    {
+      "id": "lx010-064",
+      "type": "dropdown-select",
+      "topicId": "power-of-cli",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each statement about cron scheduling by choosing the correct expression from its dropdown.",
+      "explanation": {
+        "correct": "0 0 * * * means minute 0, hour 0 (midnight), every day/month/weekday; crontab -e opens the crontab file in an editor for modification.",
+        "incorrect": "24 is not a valid hour value (hours run 0-23), crontab -l only lists the crontab without editing, and crontab -r deletes it entirely.",
+        "examTip": "crontab flags: -e edit, -l list, -r remove (careful — no confirmation prompt on most systems!).",
+        "relatedTopics": [
+          "cron"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.7 Scheduling Tasks",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A crontab entry that runs a script every day at midnight is written as",
+          "options": [
+            "0 0 * * *",
+            "0 24 * * *",
+            "* 0 0 * *",
+            "@daily 0"
+          ],
+          "correctAnswer": "0 0 * * *"
+        },
+        {
+          "id": "d2",
+          "prompt": "The command used to edit the current user's crontab is",
+          "options": [
+            "crontab -l",
+            "crontab -e",
+            "crontab -r",
+            "cron -edit"
+          ],
+          "correctAnswer": "crontab -e"
+        }
+      ]
+    },
+    {
+      "id": "lx010-065",
+      "type": "dropdown-select",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement about package management by choosing the correct command from its dropdown.",
+      "explanation": {
+        "correct": "apt update refreshes the local index of available packages/versions (a prerequisite before apt upgrade actually installs newer versions), and dnf install is the modern way to install a package on Fedora/RHEL.",
+        "incorrect": "apt upgrade installs newer versions but does not itself refresh the index, rpm -q only queries whether a package is installed, and apt belongs to Debian-family systems, not Red Hat.",
+        "examTip": "Always 'update' before you 'upgrade' — update refreshes the catalog, upgrade installs from it.",
+        "relatedTopics": [
+          "package-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.8 Debian and Red Hat Package Management",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "On a Debian-based system, the command to update the local package index before upgrading is",
+          "options": [
+            "apt update",
+            "apt upgrade",
+            "apt search",
+            "dpkg -l"
+          ],
+          "correctAnswer": "apt update"
+        },
+        {
+          "id": "d2",
+          "prompt": "On a Red Hat-based system running a modern release, the command to install a package named httpd is",
+          "options": [
+            "yum search httpd",
+            "dnf install httpd",
+            "rpm -q httpd",
+            "apt install httpd"
+          ],
+          "correctAnswer": "dnf install httpd"
+        }
+      ]
+    },
+    {
+      "id": "lx010-066",
+      "type": "dropdown-select",
+      "topicId": "power-of-cli",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement about globbing by choosing the correct pattern from its dropdown.",
+      "explanation": {
+        "correct": "* matches any number of characters (including none), making *.log match all .log files; [1-9] matches exactly one character from that range, correctly excluding the two-digit 'file10.txt'.",
+        "incorrect": "file?.txt would also incorrectly match a hypothetical 'fileA.txt' (any single character) and would not exclude 'file10.txt' issues the same way [1-9] precisely does, and {1,9} only expands to literally '1' or '9', not a range.",
+        "examTip": "[1-9] = one character from that numeric range. {1,9} = brace expansion, produces literal '1' and '9' only.",
+        "relatedTopics": [
+          "globbing",
+          "wildcards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Basic Bash Shell",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To match every file with a .log extension in the current directory, you would use",
+          "options": [
+            "*.log",
+            "?.log",
+            "[log]",
+            "{log}"
+          ],
+          "correctAnswer": "*.log"
+        },
+        {
+          "id": "d2",
+          "prompt": "To match filenames 'file1.txt' through 'file9.txt' but not 'file10.txt', you would use",
+          "options": [
+            "file*.txt",
+            "file[1-9].txt",
+            "file?.txt",
+            "file{1,9}.txt"
+          ],
+          "correctAnswer": "file[1-9].txt"
+        }
+      ]
+    },
+    {
+      "id": "lx010-067",
+      "type": "ordering",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A system administrator at Umbrella Corp is running low on disk space and needs to archive old, large log files before deleting them.",
+      "questionText": "A system administrator at Umbrella Corp needs to find all '.log' files larger than 50MB under /var/log and archive them. Arrange the workflow in the correct order.",
+      "explanation": {
+        "correct": "You must first identify the target files with find, capture that list, bundle and compress them with tar -czf, and finally confirm the archive was built correctly with tar -tvf.",
+        "incorrect": "Attempting to archive before identifying which files match, or skipping verification, risks silently missing files or producing a broken archive.",
+        "examTip": "find to discover -> tar -c to create -> tar -t to verify. Verification is an easy step to forget on the exam.",
+        "relatedTopics": [
+          "find-command",
+          "tar-command"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.5 Compression and Archiving",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Run find /var/log -name '*.log' -size +50M to identify the matching files",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Redirect the list of matching filenames into a text file using >",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create a compressed tar archive of those files with tar -czf",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Verify the archive contents with tar -tvf",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "lx010-068",
+      "type": "ordering",
+      "topicId": "power-of-cli",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Arrange the steps to schedule a script to run automatically every weekday at 6:00 AM using cron.",
+      "explanation": {
+        "correct": "crontab -e opens the editor, the cron line schedules the job for 6:00 AM Monday through Friday (1-5), saving commits the change, and crontab -l lists the crontab to confirm it was saved correctly.",
+        "incorrect": "Skipping crontab -e (there is no other direct way to add a per-user cron job) or forgetting to verify with crontab -l risks an unsaved or malformed entry going unnoticed.",
+        "examTip": "Day-of-week numbering in cron: 0 and 7 both mean Sunday, 1-5 is Monday through Friday.",
+        "relatedTopics": [
+          "cron"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.7 Scheduling Tasks",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Run crontab -e to open the current user's crontab for editing",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Add the line: 0 6 * * 1-5 /home/user/backup.sh",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Save and exit the editor",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Confirm the entry with crontab -l",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "lx010-069",
+      "type": "ordering",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A support engineer at Wayne Enterprises notices a background job named 'stuck_worker' consuming excessive CPU and needs to stop it safely.",
+      "questionText": "Arrange the steps to safely stop a misbehaving background process identified only by name, 'stuck_worker'.",
+      "explanation": {
+        "correct": "Best practice is to first identify the PID, attempt a graceful kill (SIGTERM) which allows cleanup, verify whether it worked, and only escalate to kill -9 (SIGKILL) if the process refuses to stop.",
+        "incorrect": "Jumping straight to kill -9 skips the graceful shutdown a process may need to release resources or save state cleanly.",
+        "examTip": "kill sends SIGTERM by default (polite, can be caught/ignored). kill -9 sends SIGKILL (forceful, cannot be caught).",
+        "relatedTopics": [
+          "process-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.6 Managing Process Priorities",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Run ps aux | grep stuck_worker to find the process and its PID",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Send a graceful termination signal with kill <PID>",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Check again with ps aux | grep stuck_worker to see if it stopped",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "If it is still running, force-terminate it with kill -9 <PID>",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "lx010-070",
+      "type": "drag-drop",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each command into the category describing what it primarily does.",
+      "explanation": {
+        "correct": "grep and sed both filter or transform text streams, while kill and nice both act on running processes (terminating one, adjusting the scheduling priority of the other).",
+        "incorrect": "sed can look similar to a process command because of its terse syntax, but it operates purely on text streams, not on running processes.",
+        "examTip": "Text tools: grep, sed, awk, cut, tr. Process tools: ps, kill, nice, renice, top.",
+        "relatedTopics": [
+          "text-processing",
+          "process-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Searching and Extracting Data",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Text Processing / Filtering",
+          "acceptsItemIds": [
+            "item139",
+            "item140"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Process / Job Management",
+          "acceptsItemIds": [
+            "item141",
+            "item142"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item139",
+          "text": "grep"
+        },
+        {
+          "id": "item140",
+          "text": "sed"
+        },
+        {
+          "id": "item141",
+          "text": "kill"
+        },
+        {
+          "id": "item142",
+          "text": "nice"
+        }
+      ]
+    },
+    {
+      "id": "lx010-071",
+      "type": "drag-drop",
+      "topicId": "power-of-cli",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Sort each redirection symbol into the category describing its direction of data flow.",
+      "explanation": {
+        "correct": "> and >> both write shell output out to a file (overwrite vs. append), while < and << (here-document) both bring data in as input to a command.",
+        "incorrect": "It is easy to assume >> behaves differently in direction from >, but both point the same way — out to a file — they only differ in overwrite vs. append behavior.",
+        "examTip": "The arrow always shows the direction: > and >> point right (out to file); < points left (in from file/source).",
+        "relatedTopics": [
+          "redirection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.4 Turning Commands into a Script",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Sends Data Out To A File",
+          "acceptsItemIds": [
+            "item141",
+            "item142"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Reads Data In From A File",
+          "acceptsItemIds": [
+            "item143",
+            "item144"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item141",
+          "text": ">"
+        },
+        {
+          "id": "item142",
+          "text": ">>"
+        },
+        {
+          "id": "item143",
+          "text": "<"
+        },
+        {
+          "id": "item144",
+          "text": "<<"
+        }
+      ]
+    },
+    {
+      "id": "lx010-072",
+      "type": "drag-drop",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each package management command into the correct package manager family.",
+      "explanation": {
+        "correct": "apt and dpkg belong to the Debian/Ubuntu ecosystem (managing .deb packages), while dnf and rpm belong to the Fedora/RHEL ecosystem (managing .rpm packages).",
+        "incorrect": "Mixing up which low-level tool (dpkg vs rpm) pairs with which high-level tool (apt vs dnf) is a very common exam mistake.",
+        "examTip": "Debian pair: apt (high-level) + dpkg (low-level). Red Hat pair: dnf/yum (high-level) + rpm (low-level).",
+        "relatedTopics": [
+          "package-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.8 Debian and Red Hat Package Management",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Debian / Ubuntu Family",
+          "acceptsItemIds": [
+            "item143",
+            "item144"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Red Hat / Fedora Family",
+          "acceptsItemIds": [
+            "item145",
+            "item146"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item143",
+          "text": "apt"
+        },
+        {
+          "id": "item144",
+          "text": "dpkg"
+        },
+        {
+          "id": "item145",
+          "text": "dnf"
+        },
+        {
+          "id": "item146",
+          "text": "rpm"
+        }
+      ]
+    },
+    {
+      "id": "lx010-147",
+      "type": "multiple-choice",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A support engineer at Hooli receives an alert that a shared application server's CPU usage has spiked and needs to identify the cause.",
+      "questionText": "Which TWO commands would help identify what is consuming excessive CPU on a shared server right now?",
+      "explanation": {
+        "correct": "top gives a live, sorted view of resource usage, and 'ps aux --sort=-%cpu' produces a one-time snapshot sorted by CPU usage, both of which reveal the heaviest processes.",
+        "incorrect": "history only lists previously run shell commands and reveals nothing about current resource usage, and alias only manages command shortcuts.",
+        "examTip": "top refreshes live; 'ps aux --sort=-%cpu' is the quick one-shot equivalent when you just need a fast snapshot.",
+        "relatedTopics": [
+          "process-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.6 Managing Process Priorities",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "top",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ps aux --sort=-%cpu",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "history",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "alias",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-148",
+      "type": "yes-no-statements",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A developer at Soylent Corp is scanning application logs for recurring 'connection refused' errors and wants a summary count saved to a file.",
+      "questionText": "Evaluate each statement about this task as Yes or No.",
+      "explanation": {
+        "correct": "grep -i makes the search case-insensitive; sort | uniq -c is the standard combo for counting occurrences of each unique line; a single '>' always overwrites/truncates the destination file rather than appending — '>>' is required for appending.",
+        "incorrect": "A single '>' overwrites the destination file every time it runs, which would erase any previous output rather than adding to it.",
+        "examTip": "sort | uniq -c is the classic 'count occurrences' pipeline — uniq alone only removes adjacent duplicates without counting them.",
+        "relatedTopics": [
+          "grep-command",
+          "redirection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Searching and Extracting Data",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Running 'grep -ri \"connection refused\" /var/log/app/*.log' will find the phrase regardless of capitalization.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Piping that grep output into 'sort | uniq -c' would show how many times each distinct matching line occurred.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Using '>' instead of '>>' when saving the results to a summary file would append to any existing content in that file.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-149",
+      "type": "ordering",
+      "topicId": "power-of-cli",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A build engineer at Massive Dynamic needs to move a large project directory to another server efficiently and reliably.",
+      "questionText": "A build engineer at Massive Dynamic needs to compress and safely transfer a large project directory to another server. Arrange the correct sequence.",
+      "explanation": {
+        "correct": "The correct workflow is to create the compressed archive, verify it was built correctly before transferring it, copy it to the destination, and finally extract it there.",
+        "incorrect": "Transferring or extracting before verifying the archive risks discovering a corrupted or incomplete archive only after it has already been copied across the network.",
+        "examTip": "Always verify an archive with tar -tvf before transferring it — catching a bad archive locally is far cheaper than after a slow network copy.",
+        "relatedTopics": [
+          "tar-command",
+          "archiving"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.5 Compression and Archiving",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a compressed archive of the project with tar -czf project.tar.gz project/",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Verify the archive's contents with tar -tvf project.tar.gz",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Copy the archive to the remote server using scp",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Extract the archive on the remote server with tar -xzf project.tar.gz",
+          "correctPosition": 4
+        }
+      ]
+    }
+  ]
+}

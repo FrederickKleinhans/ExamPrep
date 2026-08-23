@@ -1,0 +1,1957 @@
+{
+  "certificationId": "itil-4-foundation",
+  "topicId": "practices",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "itil4-114",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary purpose of incident management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To identify and eliminate the root cause of service disruptions",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To minimize the negative impact of incidents by restoring normal service operation as quickly as possible",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To manage all changes to IT infrastructure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To negotiate service level agreements with customers",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Incident management focuses on restoring normal service operation quickly to minimize business impact. Root cause elimination is problem management.",
+        "incorrect": "A describes problem management; C describes change enablement; D describes service level management.",
+        "examTip": "Incident = restore service NOW; Problem = prevent recurrence LATER.",
+        "relatedTopics": [
+          "incident-management",
+          "problem-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-115",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary purpose of problem management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To restore service after an incident occurs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To reduce the likelihood and impact of incidents by identifying root causes and managing workarounds and known errors",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To approve all changes to production systems",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To handle service requests from users",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Problem management reduces incident likelihood and impact by managing root causes, workarounds, and known errors.",
+        "incorrect": "A is incident management; C is change enablement; D is service request management.",
+        "examTip": "Problem = why it happened + how to prevent it; Incident = fix it now.",
+        "relatedTopics": [
+          "problem-management",
+          "incident-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-116",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary purpose of change enablement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To maximize the number of successful service and product changes by ensuring risks are properly assessed",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To prevent all changes to IT systems",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To restore service after incidents",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage supplier contracts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Change enablement maximizes successful changes by assessing risks, authorizing changes, and managing the change schedule. It does not prevent all changes.",
+        "incorrect": "B is false because changes are enabled, not prevented; C is incident management; D is supplier management.",
+        "examTip": "Change enablement = enable changes safely, assess risk, manage schedule.",
+        "relatedTopics": [
+          "change-enablement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-117",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between a service request and an incident?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A service request is always urgent; an incident is never urgent",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A service request is a normal part of service delivery and not a failure; an incident is an unplanned interruption",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A service request requires CAB approval; an incident does not",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "There is no difference; they are managed by the same team in the same way",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Service requests are normal, planned requests (e.g., password reset, software install). Incidents are unplanned interruptions or reductions in quality.",
+        "incorrect": "A is false because urgency varies for both; C is false because service requests typically do not need CAB approval; D is false because they are distinct.",
+        "examTip": "Service request = normal request; Incident = something broke.",
+        "relatedTopics": [
+          "service-request-management",
+          "incident-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-118",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary purpose of the service desk practice?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To develop new software applications",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To capture demand for incident resolution and service requests, and to be the entry point and single point of contact for the service provider with users",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To manage the organization's financial budget",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To negotiate contracts with external suppliers",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The service desk is the entry point and single point of contact between the service provider and users for incidents and service requests.",
+        "incorrect": "A is development; C is financial management; D is supplier management.",
+        "examTip": "Service desk = SPOC + entry point for users.",
+        "relatedTopics": [
+          "service-desk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-119",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of service level management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To ensure that the service provider has enough staff on duty",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To set clear business-based targets for service levels and ensure that service delivery is properly assessed, monitored, and managed against these targets",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To manage all IT assets and configurations",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To handle all security breaches and vulnerabilities",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Service level management sets business-based targets and manages service delivery against them through SLAs, monitoring, and review.",
+        "incorrect": "A is workforce management; C is IT asset/service configuration management; D is information security management.",
+        "examTip": "SLM = set targets (SLAs) + monitor + manage service levels.",
+        "relatedTopics": [
+          "service-level-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-120",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is IT asset management primarily concerned with?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing financial investments and stock portfolios",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Planning and managing the full lifecycle of IT assets to help the organization maximize value, control costs, and support decision-making",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Managing user passwords and access rights",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Managing supplier contracts and SLAs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IT asset management plans and manages the full lifecycle of IT assets to maximize value, control costs, and support decisions.",
+        "incorrect": "A is financial investment management; C is access management; D is supplier/relationship management.",
+        "examTip": "IT asset management = track and manage IT assets throughout their lifecycle.",
+        "relatedTopics": [
+          "it-asset-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-121",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "DataSecure Bank experiences a critical outage of its online banking platform. The incident management team restores service within 30 minutes. A week later, the same issue occurs again. The problem management team investigates and discovers a memory leak in the application code. They document a workaround and escalate the fix to the development team.",
+      "questionText": "Which practice is responsible for documenting the workaround and managing the known error record?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Incident management",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Problem management",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Change enablement",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Service request management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Problem management manages workarounds and known errors. Incident management restores service. Change enablement manages the fix implementation. Service request management handles routine requests.",
+        "incorrect": "The scenario describes root cause investigation, workaround documentation, and known error management — all problem management activities.",
+        "examTip": "Problem management = known errors + workarounds + root cause; Incident = restore service.",
+        "relatedTopics": [
+          "problem-management",
+          "incident-management",
+          "known-error"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-122",
+      "type": "multiple-choice",
+      "topicId": "practices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO are purposes of monitoring and event management? (Choose TWO)",
+      "options": [
+        {
+          "id": "A",
+          "text": "To systematically observe services and service components, and record and report selected changes of state identified as events",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To prevent all incidents from occurring",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To detect abnormal operation conditions and provide a basis for operational decisions",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "To manage all financial transactions related to IT services",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Monitoring and event management observes services, records events, and detects abnormalities for operational decisions. It cannot prevent all incidents, and it does not manage finances.",
+        "incorrect": "B is impossible; D is financial management.",
+        "examTip": "Monitoring = observe + detect + decide; not prevent all incidents or manage money.",
+        "relatedTopics": [
+          "monitoring-and-event-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-123",
+      "type": "multiple-choice",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO practices are most involved when a user reports that they cannot access their email? (Choose TWO)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Incident management",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Service request management",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Service desk",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Release management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The service desk captures the report (single point of contact) and incident management handles the unplanned interruption. Service request management handles routine requests, not outages. Release management deploys new versions.",
+        "incorrect": "Email outage = incident, reported through service desk.",
+        "examTip": "Cannot access email = incident -> service desk logs it -> incident management fixes it.",
+        "relatedTopics": [
+          "incident-management",
+          "service-desk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-124",
+      "type": "multiple-choice",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO are key activities of change enablement? (Choose TWO)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Assessing the risks, impacts, and benefits of proposed changes",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Restoring service after an unplanned interruption",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Authorizing changes based on risk assessment and business justification",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Investigating the root cause of recurring incidents",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Change enablement assesses risks and authorizes changes. Restoring service is incident management; root cause investigation is problem management.",
+        "incorrect": "B = incident management; D = problem management.",
+        "examTip": "Change enablement = assess risk + authorize + manage schedule.",
+        "relatedTopics": [
+          "change-enablement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-125",
+      "type": "multiple-choice",
+      "topicId": "practices",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO statements about service configuration management are correct? (Choose TWO)",
+      "options": [
+        {
+          "id": "A",
+          "text": "It ensures accurate information about service configurations and their relationships is available when needed",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "It is only concerned with hardware assets and their locations",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "It supports all other service management practices by providing configuration information",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "It replaces the need for IT asset management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Service configuration management ensures accurate configuration information and relationships are available, supporting all practices. It covers all CIs, not just hardware, and does not replace asset management.",
+        "incorrect": "B is false because it covers all CIs (hardware, software, docs, etc.); D is false because they are complementary.",
+        "examTip": "SCM = accurate CI info + relationships; supports all practices; not just hardware.",
+        "relatedTopics": [
+          "service-configuration-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-126",
+      "type": "multiple-choice",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO are typical responsibilities of the service desk? (Choose TWO)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Acting as the single point of contact between users and the service provider",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Developing application code for new features",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Logging and categorizing incidents and service requests",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Setting organizational strategy and policies",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The service desk is the SPOC and logs/categorizes incidents and requests. It does not develop code or set strategy.",
+        "incorrect": "B is development; D is governance/management.",
+        "examTip": "Service desk = SPOC + log/categorize + initial support.",
+        "relatedTopics": [
+          "service-desk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-127",
+      "type": "yes-no-statements",
+      "topicId": "practices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Consider the following statements about incident management. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The primary goal of incident management is to restore normal service operation as quickly as possible.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Incident management is responsible for identifying the root cause of all incidents.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Incidents can be reported by users, technical staff, or automated monitoring tools.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Incident management restores service quickly. Root cause identification is problem management. Incidents can be reported by various sources.",
+        "incorrect": "S2 is false because root cause is problem management's responsibility.",
+        "examTip": "Incident = restore fast; Problem = find root cause.",
+        "relatedTopics": [
+          "incident-management",
+          "problem-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-128",
+      "type": "yes-no-statements",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Consider the following statements about change enablement. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "All changes should be assessed for risk and impact before authorization.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Standard changes are low-risk, pre-authorized changes that follow a standard procedure.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Emergency changes do not require any authorization and can be implemented immediately.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "All changes need assessment. Standard changes are pre-authorized. Emergency changes still require authorization, though the process may be expedited.",
+        "incorrect": "S3 is false because emergency changes still need authorization, just faster.",
+        "examTip": "All changes need authorization; Standard = pre-authorized; Emergency = fast-tracked, not skipped.",
+        "relatedTopics": [
+          "change-enablement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-129",
+      "type": "yes-no-statements",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Consider the following statements about service request management. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Service requests are a normal part of service delivery and not a failure.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Service requests and incidents should always be handled by completely separate teams with no interaction.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Service requests can often be fulfilled using standard procedures and workflows.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Service requests are normal, planned requests. They can be handled by the same team (e.g., service desk) and often use standard workflows.",
+        "incorrect": "S2 is false because the same team (e.g., service desk) often handles both.",
+        "examTip": "Service request = normal, planned, often standardized; can share team with incidents.",
+        "relatedTopics": [
+          "service-request-management",
+          "service-desk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-130",
+      "type": "yes-no-statements",
+      "topicId": "practices",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Consider the following statements about release management and deployment management. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Release management is responsible for making new and changed services and features available for use.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Deployment management is responsible for moving new or changed components to live environments.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Release management and deployment management are the same practice with different names.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Release management makes services/features available. Deployment management moves components to live environments. They are distinct but related practices.",
+        "incorrect": "S3 is false because they are separate practices with different focuses.",
+        "examTip": "Release = make available; Deployment = move to live; Related but distinct.",
+        "relatedTopics": [
+          "release-management",
+          "deployment-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-131",
+      "type": "yes-no-statements",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Consider the following statements about information security management. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Information security management ensures the confidentiality, integrity, and availability of information.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Information security is solely the responsibility of the IT security team.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Information security management is relevant to all service management practices and activities.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Information security ensures CIA (confidentiality, integrity, availability). It is everyone's responsibility, not just the security team, and applies to all practices.",
+        "incorrect": "S2 is false because security is everyone's responsibility.",
+        "examTip": "CIA = Confidentiality, Integrity, Availability; Security = everyone's job.",
+        "relatedTopics": [
+          "information-security-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-132",
+      "type": "yes-no-statements",
+      "topicId": "practices",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Consider the following statements about supplier management and relationship management. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Supplier management ensures that the organization's suppliers and their performance are managed appropriately.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Relationship management establishes links between the organization and its stakeholders at strategic and tactical levels.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Supplier management only applies to external organizations; internal providers are not considered suppliers.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Supplier management manages all suppliers. Relationship management manages stakeholder links. Internal providers can also be suppliers in some contexts.",
+        "incorrect": "S3 is false because internal providers can be managed as suppliers in some organizational models.",
+        "examTip": "Supplier = external + potentially internal; Relationship = all stakeholders at all levels.",
+        "relatedTopics": [
+          "supplier-management",
+          "relationship-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-133",
+      "type": "yes-no-statements",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Consider the following statements about service level management. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Service level agreements (SLAs) should be based on business outcomes, not just technical metrics.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "SLAs are only needed for external customers, not internal users.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Service level management includes monitoring and reporting on service performance against targets.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "SLAs should be business-outcome-based. They can be used for internal and external consumers. SLM includes monitoring and reporting.",
+        "incorrect": "S2 is false because SLAs can be used internally too (OLAs/UCs are also part of this).",
+        "examTip": "SLAs = business-based + internal/external + monitored.",
+        "relatedTopics": [
+          "service-level-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-134",
+      "type": "yes-no-statements",
+      "topicId": "practices",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Consider the following statements about IT asset management. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "IT asset management covers the full lifecycle of IT assets from acquisition to disposal.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "IT asset management and service configuration management manage the same items and can replace each other.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "IT asset management helps control costs and supports investment decision-making.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "IT asset management covers the full lifecycle and supports decisions. It is distinct from service configuration management — assets and CIs overlap but are managed for different purposes.",
+        "incorrect": "S2 is false because they are complementary, not replacements.",
+        "examTip": "Asset management = lifecycle + costs + decisions; distinct from configuration management.",
+        "relatedTopics": [
+          "it-asset-management",
+          "service-configuration-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-135",
+      "type": "yes-no-statements",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Consider the following statements about monitoring and event management. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "An event is any change of state that has significance for the management of a service or configuration item.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "All events automatically become incidents that require immediate action.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Informational events may be logged for future reference without immediate action.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Events are state changes. Not all events are incidents — some are informational or warnings. Informational events can be logged without action.",
+        "incorrect": "S2 is false because events can be informational, warning, or exception — only some become incidents.",
+        "examTip": "Event = state change; Informational = log only; Warning/Exception = may need action.",
+        "relatedTopics": [
+          "monitoring-and-event-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-136",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary purpose of release management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To move hardware components between data centers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To make new and changed services and features available for use",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To restore service after a major incident",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage user access permissions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Release management makes new and changed services and features available for use. It plans, schedules, and controls releases.",
+        "incorrect": "A is logistics; C is incident management; D is access management.",
+        "examTip": "Release = make new/changed services available to users.",
+        "relatedTopics": [
+          "release-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-137",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "LogiTrans Shipping has a complex supply chain application. The development team wants to deploy a new feature every two weeks, but the operations team insists on monthly releases due to stability concerns. The change advisory board (CAB) meetings take too long to approve frequent changes.",
+      "questionText": "Which ITIL 4 approach would best address this situation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Eliminate all CAB meetings and allow developers to deploy directly to production",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Classify frequent low-risk changes as standard changes with pre-authorization, reducing CAB overhead",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Hire more CAB members to meet more frequently",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Switch to quarterly releases to reduce change volume",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ITIL 4 recommends classifying low-risk, well-understood changes as standard changes (pre-authorized) to reduce bureaucratic overhead while maintaining control. This aligns with 'Keep it simple and practical' and 'Optimize and automate'.",
+        "incorrect": "A removes necessary governance; C adds bureaucracy; D slows value delivery unnecessarily.",
+        "examTip": "Standard changes = pre-authorized, low-risk, routine = less CAB overhead.",
+        "relatedTopics": [
+          "change-enablement",
+          "standard-change",
+          "guiding-principles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-138",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the relationship between deployment management and release management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are the same practice with no distinction",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Deployment management moves components to live environments; release management makes services available to users",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Deployment management only handles hardware; release management only handles software",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Release management is a subset of deployment management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Deployment management focuses on moving components to live environments. Release management focuses on making services and features available to users. They are distinct but complementary.",
+        "incorrect": "A and D incorrectly merge them; C incorrectly limits them by technology type.",
+        "examTip": "Deployment = move to live; Release = make available to users.",
+        "relatedTopics": [
+          "deployment-management",
+          "release-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-139",
+      "type": "dropdown-select",
+      "topicId": "practices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the following statements about key practices.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The practice that minimizes the negative impact of incidents by restoring service quickly is",
+          "options": [
+            "Problem management",
+            "Incident management",
+            "Change enablement",
+            "Service request management"
+          ],
+          "correctAnswer": "Incident management"
+        },
+        {
+          "id": "d2",
+          "prompt": "The practice that reduces the likelihood of incidents by identifying root causes is",
+          "options": [
+            "Problem management",
+            "Incident management",
+            "Change enablement",
+            "Service request management"
+          ],
+          "correctAnswer": "Problem management"
+        }
+      ],
+      "explanation": {
+        "correct": "Incident management restores service quickly. Problem management identifies root causes to prevent recurrence.",
+        "incorrect": "Change enablement manages changes; service request management handles routine requests.",
+        "examTip": "Incident = fix now; Problem = prevent later.",
+        "relatedTopics": [
+          "incident-management",
+          "problem-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-140",
+      "type": "dropdown-select",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the following statements about service desk and service level management.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The entry point and single point of contact for users is the",
+          "options": [
+            "Service desk",
+            "Service level management",
+            "Incident management",
+            "Problem management"
+          ],
+          "correctAnswer": "Service desk"
+        },
+        {
+          "id": "d2",
+          "prompt": "The practice that sets business-based targets for service performance is",
+          "options": [
+            "Service desk",
+            "Service level management",
+            "Incident management",
+            "Problem management"
+          ],
+          "correctAnswer": "Service level management"
+        }
+      ],
+      "explanation": {
+        "correct": "The service desk is the SPOC and entry point. Service level management sets and manages performance targets.",
+        "incorrect": "Incident and problem management handle disruptions and root causes, not contact points or targets.",
+        "examTip": "Service desk = contact point; SLM = targets and monitoring.",
+        "relatedTopics": [
+          "service-desk",
+          "service-level-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-141",
+      "type": "dropdown-select",
+      "topicId": "practices",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the following statements about change types.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A low-risk, pre-authorized change that follows a standard procedure is a",
+          "options": [
+            "Normal change",
+            "Standard change",
+            "Emergency change",
+            "Major change"
+          ],
+          "correctAnswer": "Standard change"
+        },
+        {
+          "id": "d2",
+          "prompt": "A change that must be implemented as soon as possible to resolve a major incident or security vulnerability is an",
+          "options": [
+            "Normal change",
+            "Standard change",
+            "Emergency change",
+            "Minor change"
+          ],
+          "correctAnswer": "Emergency change"
+        }
+      ],
+      "explanation": {
+        "correct": "Standard changes are low-risk and pre-authorized. Emergency changes need immediate implementation but still require authorization (expedited process).",
+        "incorrect": "Normal changes follow the standard authorization process; major/minor are not ITIL 4 change categories.",
+        "examTip": "Standard = pre-authorized, low-risk; Emergency = fast-tracked, still authorized.",
+        "relatedTopics": [
+          "change-enablement",
+          "standard-change",
+          "emergency-change"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-142",
+      "type": "dropdown-select",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the following statements about information security and supplier management.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The practice that ensures confidentiality, integrity, and availability of information is",
+          "options": [
+            "Information security management",
+            "IT asset management",
+            "Service configuration management",
+            "Monitoring and event management"
+          ],
+          "correctAnswer": "Information security management"
+        },
+        {
+          "id": "d2",
+          "prompt": "The practice that ensures supplier performance is managed appropriately is",
+          "options": [
+            "Relationship management",
+            "Supplier management",
+            "Service level management",
+            "Incident management"
+          ],
+          "correctAnswer": "Supplier management"
+        }
+      ],
+      "explanation": {
+        "correct": "Information security management ensures CIA. Supplier management manages supplier performance. Relationship management is broader (all stakeholders).",
+        "incorrect": "IT asset management tracks assets; service configuration management tracks CIs; monitoring observes events.",
+        "examTip": "InfoSec = CIA; Supplier management = external supplier performance.",
+        "relatedTopics": [
+          "information-security-management",
+          "supplier-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-143",
+      "type": "ordering",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the following steps in the typical incident management lifecycle in the correct sequence.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify and log the incident",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Categorize and prioritize the incident",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Investigate and diagnose the incident",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Resolve and close the incident",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "The typical incident lifecycle: identify/log -> categorize/prioritize -> investigate/diagnose -> resolve/close.",
+        "incorrect": "You must log before categorizing, and diagnose before resolving.",
+        "examTip": "Incident flow: Log -> Categorize -> Diagnose -> Resolve -> Close.",
+        "relatedTopics": [
+          "incident-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-144",
+      "type": "ordering",
+      "topicId": "practices",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Arrange the following steps in the problem management process in the correct sequence.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Detect and log the problem",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Investigate and diagnose the root cause",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Identify and document a workaround as a known error",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Raise a change request to eliminate the root cause",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Problem management flow: detect problem -> investigate root cause -> identify workaround/known error -> raise change to fix permanently.",
+        "incorrect": "You cannot raise a change to fix the root cause until you have identified it.",
+        "examTip": "Problem flow: Detect -> Diagnose -> Workaround/Known Error -> Change Request.",
+        "relatedTopics": [
+          "problem-management",
+          "known-error"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-145",
+      "type": "ordering",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the following change types in order of typical authorization rigor, from least to most.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Standard change (pre-authorized, low risk)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Normal change (follows standard authorization process)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Emergency change (expedited authorization for urgent fixes)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Major change (requires extensive assessment and highest level authorization)",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Standard changes are pre-authorized (least rigor). Normal changes follow standard process. Emergency changes are fast-tracked but still authorized. Major changes need the most extensive assessment.",
+        "incorrect": "Standard < Normal < Emergency (expedited but still authorized) < Major (most rigorous).",
+        "examTip": "Authorization rigor: Standard (none) < Normal (standard) < Emergency (fast) < Major (extensive).",
+        "relatedTopics": [
+          "change-enablement",
+          "standard-change",
+          "emergency-change"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-146",
+      "type": "drag-drop",
+      "topicId": "practices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Sort the following items into the correct categories: 'Incident Management Activity' or 'Problem Management Activity'.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Incident Management Activity",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Problem Management Activity",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Restoring normal service operation quickly"
+        },
+        {
+          "id": "item2",
+          "text": "Managing incident communication with users"
+        },
+        {
+          "id": "item3",
+          "text": "Investigating root cause of recurring incidents"
+        },
+        {
+          "id": "item4",
+          "text": "Documenting known errors and workarounds"
+        }
+      ],
+      "explanation": {
+        "correct": "Restoring service and user communication are incident management. Root cause investigation and known error documentation are problem management.",
+        "incorrect": "Incident = fix and communicate; Problem = investigate and prevent.",
+        "examTip": "Incident = restore + communicate; Problem = root cause + known error.",
+        "relatedTopics": [
+          "incident-management",
+          "problem-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-147",
+      "type": "drag-drop",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort the following items into the correct categories: 'Standard Change' or 'Normal Change'.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Standard Change",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Normal Change",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Pre-authorized, low-risk server patch installation"
+        },
+        {
+          "id": "item2",
+          "text": "Routine password reset for a user group"
+        },
+        {
+          "id": "item3",
+          "text": "Upgrade of the core database system requiring risk assessment"
+        },
+        {
+          "id": "item4",
+          "text": "Implementation of a new network firewall requiring CAB approval"
+        }
+      ],
+      "explanation": {
+        "correct": "Standard changes are pre-authorized, low-risk, and routine. Normal changes require assessment and authorization through the standard process.",
+        "incorrect": "Pre-authorized = standard; Needs assessment/CAB = normal.",
+        "examTip": "Standard = pre-authorized, routine, low-risk; Normal = needs assessment and authorization.",
+        "relatedTopics": [
+          "change-enablement",
+          "standard-change",
+          "normal-change"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-148",
+      "type": "drag-drop",
+      "topicId": "practices",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Sort the following items into the correct categories: 'Service Desk Responsibility' or 'Not a Service Desk Responsibility'.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Service Desk Responsibility",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Not a Service Desk Responsibility",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Acting as the single point of contact for users"
+        },
+        {
+          "id": "item2",
+          "text": "Initial categorization and prioritization of incidents"
+        },
+        {
+          "id": "item3",
+          "text": "Writing application code for new features"
+        },
+        {
+          "id": "item4",
+          "text": "Setting organizational IT strategy and policies"
+        }
+      ],
+      "explanation": {
+        "correct": "The service desk is the SPOC and handles initial incident categorization/prioritization. Coding and strategy setting are not service desk responsibilities.",
+        "incorrect": "Service desk = front-line support, SPOC, logging, initial categorization.",
+        "examTip": "Service desk = SPOC + log + categorize; NOT = coding + strategy.",
+        "relatedTopics": [
+          "service-desk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-149",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "HealthFirst Clinic's IT department receives hundreds of service requests daily for password resets, software installations, and access permissions. These requests consume significant resources from the technical support team, delaying incident resolution for critical systems.",
+      "questionText": "Which ITIL 4 practice recommendation would best help HealthFirst manage this situation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Merge all service requests with incident management and handle them as high-priority incidents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Establish service request management with standard procedures and workflows, potentially including self-service and automation for common requests",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Eliminate service requests and require users to figure out solutions themselves",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Hire more technical staff to handle the increased volume manually",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Service request management uses standard procedures and workflows for routine requests. Automation and self-service can reduce manual effort, freeing staff for incidents and complex work. This aligns with 'Optimize and automate' and 'Keep it simple and practical'.",
+        "incorrect": "A incorrectly elevates routine requests to incidents; C reduces service quality; D is not scalable or efficient.",
+        "examTip": "Service requests = standardize + automate + self-service = efficiency.",
+        "relatedTopics": [
+          "service-request-management",
+          "service-desk",
+          "guiding-principles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-150",
+      "type": "multiple-choice",
+      "topicId": "practices",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO practices are most closely related to managing the service provider's relationship with external organizations? (Choose TWO)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Supplier management",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Service desk",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Relationship management",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Incident management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Supplier management manages external supplier relationships and performance. Relationship management establishes and nurtures links between the organization and its stakeholders at strategic and tactical levels. Both address external organizational relationships.",
+        "incorrect": "Service desk is the user contact point; incident management restores service.",
+        "examTip": "External relationships = Supplier management + Relationship management.",
+        "relatedTopics": [
+          "supplier-management",
+          "relationship-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-158",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "FastTrack Logistics experiences a complete outage of its shipment tracking system. The service desk receives hundreds of calls from customers. The incident manager assembles the technical team, identifies a failed database cluster as the cause, and restores service within 2 hours using a backup cluster. After service is restored, a separate team investigates why the cluster failed and discovers a firmware bug.",
+      "questionText": "Which practice is responsible for managing the firmware bug discovery and preventing recurrence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Incident management",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Problem management",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Change enablement",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Service request management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Problem management investigates root causes and manages known errors to prevent recurrence. Incident management restored service. Change enablement would manage the firmware fix. Service request management handles routine requests.",
+        "incorrect": "The post-restoration investigation of root cause is problem management.",
+        "examTip": "Incident = restore service; Problem = prevent it happening again.",
+        "relatedTopics": [
+          "problem-management",
+          "incident-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-159",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "CloudFirst Enterprises has a mature ITIL 4 implementation. A developer requests an emergency change to patch a critical security vulnerability in the customer portal. The change advisory board (CAB) is not scheduled to meet for three days. The security officer argues the patch cannot wait, while the operations manager insists on waiting for the CAB.",
+      "questionText": "What is the most appropriate ITIL 4-aligned response?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wait for the next CAB meeting because all changes require full CAB review",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Implement the change immediately without any authorization because it is a security fix",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Use the emergency change procedure with expedited authorization from the appropriate authority",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Classify it as a standard change because security patches are always low-risk",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Emergency changes require expedited authorization, not full CAB review, but they still need authorization. They are not standard changes and should not be implemented without any authorization.",
+        "incorrect": "A delays a critical fix; B bypasses governance; D incorrectly classifies an urgent security patch as standard.",
+        "examTip": "Emergency change = expedited authorization, not skipped or delayed.",
+        "relatedTopics": [
+          "change-enablement",
+          "emergency-change"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-160",
+      "type": "multiple-choice",
+      "topicId": "practices",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "TechSupport Inc. wants to improve its service desk operations. Currently, users complain about long hold times and having to repeat their issue to multiple technicians. Management wants to implement a system where users can track their request status online and receive automated updates.",
+      "questionText": "Which TWO practices would be most directly improved by these changes? (Choose TWO)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Service desk",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Service level management",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Service request management",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Problem management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The service desk is the SPOC and would benefit from reduced hold times and better tracking. Service request management would benefit from automated workflows and user self-service. Service level management and problem management are not the primary practices affected.",
+        "incorrect": "Online tracking and automated updates directly improve service desk and service request management.",
+        "examTip": "Service desk + service request management = user contact + request fulfillment.",
+        "relatedTopics": [
+          "service-desk",
+          "service-request-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-161",
+      "type": "single-choice",
+      "topicId": "practices",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "ManufacturePro has 15 different suppliers for its IT infrastructure. Each supplier uses different reporting formats and escalation procedures. When a critical incident occurs, the service desk struggles to identify which supplier is responsible for which component, causing significant delays in resolution.",
+      "questionText": "Which practice would best address this systemic issue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Incident management alone, by creating more detailed incident procedures",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Service configuration management, by maintaining accurate records of which suppliers support which configuration items and their relationships",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Service request management, by standardizing user request formats",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Release management, by coordinating supplier software releases",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Service configuration management maintains accurate information about CIs, their relationships, and which suppliers support them. This would help the service desk quickly identify the right supplier during incidents.",
+        "incorrect": "Incident procedures alone don't solve the data problem; service requests and releases are not the core issue.",
+        "examTip": "SCM = know what you have, who supports it, and how it relates to other items.",
+        "relatedTopics": [
+          "service-configuration-management",
+          "supplier-management",
+          "incident-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Know the purpose of key practices",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

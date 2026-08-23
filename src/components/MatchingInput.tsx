@@ -67,7 +67,7 @@ export function MatchingInput({ categories, items, assignments, showResult, onAs
             if (catId) onAssign(itemId, catId);
           }
         }
-      } catch (err) {
+      } catch {
         // ignore
       }
       setDraggedItem(null);

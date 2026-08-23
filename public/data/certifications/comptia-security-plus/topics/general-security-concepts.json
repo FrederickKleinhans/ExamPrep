@@ -1,0 +1,861 @@
+{
+  "certificationId": "comptia-security-plus",
+  "topicId": "general-security-concepts",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "secplus-001",
+      "topicId": "general-security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which three properties make up the CIA triad in information security?",
+      "explanation": {
+        "correct": "The CIA triad — Confidentiality, Integrity, and Availability — represents the three foundational goals that security controls are designed to protect.",
+        "incorrect": "The other options substitute plausible-sounding but incorrect terms; only Confidentiality, Integrity, and Availability form the recognized triad.",
+        "examTip": "Remember CIA = Confidentiality, Integrity, Availability — the foundation nearly every other security concept maps back to.",
+        "relatedTopics": [
+          "cia-triad"
+        ]
+      },
+      "metadata": {
+        "examObjective": "cia-triad",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Confidentiality, Integrity, Availability",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Confidentiality, Isolation, Authentication",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Control, Integrity, Access",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Confidentiality, Investigation, Authorization",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-002",
+      "topicId": "general-security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "A company requires that no single employee can both initiate and approve a wire transfer. Which security concept does this illustrate?",
+      "explanation": {
+        "correct": "Separation of duties splits critical tasks between multiple people so that no single individual has enough control to commit fraud or make an error undetected.",
+        "incorrect": "Least privilege limits what one person can access, not how tasks are split between people. Job rotation moves people through roles over time. MAC is an access control model based on classification labels, unrelated to task splitting.",
+        "examTip": "Separation of duties directly reduces the risk of fraud/error by requiring collusion between two or more people to bypass the control.",
+        "relatedTopics": [
+          "separation-of-duties"
+        ]
+      },
+      "metadata": {
+        "examObjective": "separation-of-duties",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Least privilege",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Separation of duties",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Job rotation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Mandatory access control",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-003",
+      "topicId": "general-security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which access control model grants permissions based on a combination of user attributes, resource attributes, and environmental conditions (such as time of day)?",
+      "explanation": {
+        "correct": "ABAC evaluates a flexible combination of attributes — user, resource, and environment — to make fine-grained, dynamic access decisions.",
+        "incorrect": "DAC lets resource owners grant access at their discretion. MAC enforces access based on fixed classification labels set by a central authority. RBAC assigns permissions based on job role alone, not multiple dynamic attribute combinations.",
+        "examTip": "ABAC is the most flexible/dynamic model — think 'attributes' as the key differentiator from role-only RBAC.",
+        "relatedTopics": [
+          "abac",
+          "access-control-models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "abac",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Wayne Enterprises wants access decisions to factor in the user's department, the resource's sensitivity, and whether the request occurs during business hours.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Discretionary Access Control (DAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Mandatory Access Control (MAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Role-Based Access Control (RBAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Attribute-Based Access Control (ABAC)",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": "secplus-004",
+      "topicId": "general-security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which cryptographic key exchange method allows two parties to establish a shared secret over an insecure channel without ever transmitting the secret itself?",
+      "explanation": {
+        "correct": "Diffie-Hellman key exchange lets two parties independently compute the same shared secret using public values and their own private values, without ever sending the secret itself over the channel.",
+        "incorrect": "RSA encryption can encrypt data (including a key) but is a different mathematical mechanism than DH's non-transmitted shared-secret derivation. AES is a symmetric cipher, not a key exchange mechanism. SHA-256 is a hash function, not used for key exchange.",
+        "examTip": "ECDH (Elliptic Curve Diffie-Hellman) is the modern, more efficient variant increasingly used in TLS 1.3 key exchange.",
+        "relatedTopics": [
+          "key-exchange",
+          "diffie-hellman"
+        ]
+      },
+      "metadata": {
+        "examObjective": "key-exchange",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "RSA encryption",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Diffie-Hellman (DH) key exchange",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "AES-256",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SHA-256 hashing",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-005",
+      "topicId": "general-security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which authentication protocol uses tickets issued by a trusted Key Distribution Center (KDC) to allow users to authenticate to multiple services without re-entering credentials?",
+      "explanation": {
+        "correct": "Kerberos uses a KDC to issue time-limited tickets (a Ticket Granting Ticket and subsequent service tickets), enabling single sign-on-like authentication across a Windows domain without repeated credential entry.",
+        "incorrect": "RADIUS and TACACS+ are AAA protocols typically used for network device/VPN authentication, not ticket-based domain SSO. LDAP is a directory access protocol, not itself a ticket-issuing authentication protocol.",
+        "examTip": "Kerberos's default port is 88, and its ticket-based design is the target of Kerberoasting and pass-the-ticket attacks.",
+        "relatedTopics": [
+          "kerberos"
+        ]
+      },
+      "metadata": {
+        "examObjective": "kerberos",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Initech's Windows domain environment needs single sign-on across dozens of internal applications without repeated password prompts.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "RADIUS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "TACACS+",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Kerberos",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "LDAP",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-006",
+      "topicId": "general-security-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A digital signature primarily provides which combination of security properties?",
+      "explanation": {
+        "correct": "A digital signature, created by hashing data and encrypting the hash with the signer's private key, proves both that the data hasn't been altered (integrity) and that the signer cannot credibly deny having signed it (non-repudiation).",
+        "incorrect": "Digital signatures don't inherently provide confidentiality (the data itself isn't hidden) or availability (unrelated to uptime). While signatures do support authentication of the signer, they also provide integrity — so 'authentication only, without integrity' is incomplete/incorrect.",
+        "examTip": "Signing uses the sender's PRIVATE key; encrypting for confidentiality uses the recipient's PUBLIC key — don't mix these up.",
+        "relatedTopics": [
+          "digital-signatures",
+          "non-repudiation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "digital-signatures",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Confidentiality and availability",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Integrity and non-repudiation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Authentication only, without integrity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Availability and non-repudiation",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-007",
+      "topicId": "general-security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which type of security control is a security awareness training program considered?",
+      "explanation": {
+        "correct": "Security awareness training is generally classified as an operational control — implemented and executed by people in day-to-day operations to reduce risk, distinct from managerial policy-setting or technical enforcement mechanisms.",
+        "incorrect": "Physical controls involve tangible barriers (locks, fences). Technical controls are enforced by systems/technology (firewalls, encryption). Managerial controls are administrative/policy-level decisions (risk assessments, policies) — training delivery itself is operational in nature.",
+        "examTip": "Control categories: Managerial (policy/oversight), Operational (people/process day-to-day), Technical (systems/software), Physical (tangible barriers).",
+        "relatedTopics": [
+          "security-control-categories"
+        ]
+      },
+      "metadata": {
+        "examObjective": "security-control-categories",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Umbrella Corp's auditors flagged that most employees couldn't identify a phishing email during a recent test.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Physical",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Technical",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Managerial",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Operational",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": "secplus-008",
+      "topicId": "general-security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO of the following are examples of preventive security controls?",
+      "explanation": {
+        "correct": "Firewalls and MFA both actively stop unauthorized access before it happens, making them preventive controls by definition.",
+        "incorrect": "A security camera recording after a break-in is detective (records what already happened), and a post-incident forensic report is part of the corrective/lessons-learned process, not prevention.",
+        "examTip": "Preventive controls stop an incident BEFORE it occurs; detective controls identify it DURING or AFTER; corrective controls fix things AFTER.",
+        "relatedTopics": [
+          "security-control-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "security-control-types",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Firewall blocking unauthorized inbound traffic",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Security camera recording a break-in after it occurs",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Multi-factor authentication requirement before login",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Post-incident forensic investigation report",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-009",
+      "topicId": "general-security-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO statements about symmetric versus asymmetric encryption are correct?",
+      "explanation": {
+        "correct": "Symmetric encryption uses one shared key for both operations, while asymmetric encryption relies on a mathematically linked public/private key pair.",
+        "incorrect": "Asymmetric encryption is actually slower than symmetric encryption for bulk data due to more complex math, the opposite of what's claimed. Digital signatures use asymmetric (private key) cryptography, not symmetric.",
+        "examTip": "Hybrid cryptosystems (like TLS) use asymmetric crypto to exchange a symmetric session key, then switch to fast symmetric encryption for the bulk data.",
+        "relatedTopics": [
+          "symmetric-asymmetric"
+        ]
+      },
+      "metadata": {
+        "examObjective": "symmetric-asymmetric",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Symmetric encryption uses the same key for both encryption and decryption",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Asymmetric encryption is generally faster than symmetric encryption for bulk data",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Asymmetric encryption uses a mathematically related public/private key pair",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Symmetric encryption is typically used for digital signatures",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-010",
+      "topicId": "general-security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid modern federated identity/authentication standards used to allow a user to log into a third-party application using their existing identity provider account?",
+      "explanation": {
+        "correct": "SAML and OpenID Connect are both standards for federated authentication, allowing identity assertions to be passed between an identity provider and a relying application.",
+        "incorrect": "3DES is a symmetric encryption algorithm, unrelated to federation. WPA3 is a wireless network security protocol, not an identity federation standard.",
+        "examTip": "OAuth handles authorization (delegated access), while OpenID Connect (built on OAuth) adds an authentication/identity layer — don't confuse the two.",
+        "relatedTopics": [
+          "federation",
+          "saml",
+          "oidc"
+        ]
+      },
+      "metadata": {
+        "examObjective": "federation",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAML",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "OpenID Connect",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "3DES",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "WPA3",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-011",
+      "topicId": "general-security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Authentication confirms identity; authorization governs permitted actions. Zero trust explicitly rejects implicit trust based on network location — 'never trust, always verify' applies everywhere, including inside the perimeter. Non-repudiation prevents a party from denying an action they performed.",
+        "incorrect": "The false statement misrepresents zero trust, which specifically eliminates the assumption of implicit internal trust.",
+        "examTip": "Zero trust's core mantra: 'never trust, always verify' — regardless of whether the request originates inside or outside the network.",
+        "relatedTopics": [
+          "zero-trust",
+          "non-repudiation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "zero-trust",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Authentication verifies who a user is, while authorization determines what that user is allowed to do.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Zero trust architecture assumes that anything inside the corporate network perimeter can be implicitly trusted.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Non-repudiation ensures a party cannot deny having performed an action, such as sending a signed message.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "secplus-012",
+      "topicId": "general-security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Hashing is intentionally one-way. MD5 has known collision vulnerabilities and is not considered secure for sensitive data. MFA requires factors from at least two distinct categories.",
+        "incorrect": "The false statement incorrectly claims MD5 remains secure — it has been broken for collision resistance for years and should not be used for security-sensitive hashing.",
+        "examTip": "MFA factor categories: something you know (password), something you have (token), something you are (biometric) — using two passwords is NOT MFA.",
+        "relatedTopics": [
+          "hashing",
+          "mfa"
+        ]
+      },
+      "metadata": {
+        "examObjective": "hashing",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A hash function is designed to be a one-way function, making it computationally infeasible to derive the original input from the hash output.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "MD5 is currently considered cryptographically secure for protecting sensitive data against collision attacks.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Multi-factor authentication requires at least two different authentication factor categories, such as something you know and something you have.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "secplus-013",
+      "topicId": "general-security-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Directive controls (like an AUP) guide behavior through policy rather than technical enforcement. OCSP checks revocation status for a single certificate in real time, avoiding the overhead of a full CRL download. DAC actually lets the resource owner decide access at their discretion — the fixed centralized labeling described belongs to MAC, not DAC.",
+        "incorrect": "The false statement describes MAC's centralized classification model but incorrectly attributes it to DAC, which is owner-discretion-based instead.",
+        "examTip": "DAC = owner decides; MAC = central authority + labels; RBAC = role decides; ABAC = attributes decide.",
+        "relatedTopics": [
+          "security-control-types",
+          "ocsp",
+          "dac"
+        ]
+      },
+      "metadata": {
+        "examObjective": "security-control-types",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A directive control relies on policy or procedure to guide behavior rather than a technical enforcement mechanism.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "OCSP (Online Certificate Status Protocol) provides real-time certificate revocation status, generally faster than downloading a full CRL.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "DAC (Discretionary Access Control) requires a central authority to assign fixed classification labels to all resources.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-014",
+      "topicId": "general-security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "Deterrent controls discourage attackers without physically stopping them. Compensating controls provide alternative protection when the primary required control can't be implemented directly.",
+        "incorrect": "Preventive controls actively stop attacks (stronger than merely discouraging). Directive, detective, and physical controls serve different functions unrelated to these specific scenarios.",
+        "examTip": "Compensating controls are common in PCI DSS compliance when a specific required control isn't technically feasible.",
+        "relatedTopics": [
+          "security-control-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "security-control-types",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A __ control is designed to discourage an attacker from attempting an attack, such as a warning sign or visible security camera.",
+          "options": [
+            "Preventive",
+            "Deterrent",
+            "Compensating",
+            "Corrective"
+          ],
+          "correctAnswer": "Deterrent"
+        },
+        {
+          "id": "d2",
+          "prompt": "When a company can't implement a required control directly, it may implement a __ control that provides similar protection through an alternative means.",
+          "options": [
+            "Compensating",
+            "Directive",
+            "Detective",
+            "Physical"
+          ],
+          "correctAnswer": "Compensating"
+        }
+      ]
+    },
+    {
+      "id": "secplus-015",
+      "topicId": "general-security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "AES (Advanced Encryption Standard) is the current symmetric encryption standard with a 128-bit block size. Least privilege is the principle of granting only the minimum necessary access.",
+        "incorrect": "DES and RC4 are outdated/weak algorithms no longer recommended. Zero trust and defense in depth are broader architectural philosophies, not the specific 'minimum access' principle being described.",
+        "examTip": "AES supports 128, 192, or 256-bit key lengths, though its block size is fixed at 128 bits regardless of key length.",
+        "relatedTopics": [
+          "aes",
+          "least-privilege"
+        ]
+      },
+      "metadata": {
+        "examObjective": "aes",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A symmetric encryption algorithm that uses a 128-bit block size and is the current U.S. government standard is __",
+          "options": [
+            "DES",
+            "3DES",
+            "AES",
+            "RC4"
+          ],
+          "correctAnswer": "AES"
+        },
+        {
+          "id": "d2",
+          "prompt": "The practice of granting users only the minimum access necessary to perform their job is called __",
+          "options": [
+            "Zero trust",
+            "Least privilege",
+            "Defense in depth",
+            "Separation of duties"
+          ],
+          "correctAnswer": "Least privilege"
+        }
+      ]
+    },
+    {
+      "id": "secplus-016",
+      "topicId": "general-security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order for a typical PKI certificate issuance process.",
+      "explanation": {
+        "correct": "The standard PKI issuance flow starts with the applicant creating a key pair and CSR, identity validation by the RA, signing/issuance by the CA, and finally deployment of the issued certificate.",
+        "incorrect": "A CA cannot sign a certificate before a CSR exists, and identity validation logically must occur before the CA trusts and signs the request.",
+        "examTip": "The CSR contains the applicant's public key and identifying information but never the private key, which stays with the applicant.",
+        "relatedTopics": [
+          "pki",
+          "certificates"
+        ]
+      },
+      "metadata": {
+        "examObjective": "pki",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "The applicant generates a key pair and a Certificate Signing Request (CSR)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "The Registration Authority (RA) validates the applicant's identity",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "The Certificate Authority (CA) signs and issues the digital certificate",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "The certificate is installed and used for authentication or encryption",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "secplus-017",
+      "topicId": "general-security-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order for how TLS establishes a secure session using a Diffie-Hellman-based handshake (simplified).",
+      "explanation": {
+        "correct": "The TLS handshake begins with capability negotiation (ClientHello/ServerHello and certificate exchange), proceeds through key exchange to derive a shared secret, and concludes with encrypted symmetric communication.",
+        "incorrect": "You cannot derive a shared session key before the initial hello/certificate exchange establishes trust and negotiates parameters, and encrypted communication can't begin before the key is derived.",
+        "examTip": "TLS uses asymmetric crypto only briefly during the handshake — the bulk data transfer always uses fast symmetric encryption with the derived session key.",
+        "relatedTopics": [
+          "tls",
+          "key-exchange"
+        ]
+      },
+      "metadata": {
+        "examObjective": "tls",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Client sends a ClientHello with supported cipher suites",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Server responds with ServerHello and its certificate",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Client and server perform a key exchange to derive a shared symmetric session key",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Both parties switch to encrypted communication using the derived symmetric key",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "secplus-018",
+      "topicId": "general-security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each cryptographic algorithm into the correct category.",
+      "explanation": {
+        "correct": "AES and 3DES both use a single shared key for encryption and decryption, while RSA and ECC use mathematically related public/private key pairs.",
+        "incorrect": "This distinction is fundamental: shared-key algorithms are symmetric, while public/private key pair algorithms are asymmetric.",
+        "examTip": "ECC provides equivalent security to RSA with much shorter key lengths, making it popular for mobile and IoT devices.",
+        "relatedTopics": [
+          "symmetric-asymmetric"
+        ]
+      },
+      "metadata": {
+        "examObjective": "symmetric-asymmetric",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "AES"
+        },
+        {
+          "id": "item2",
+          "text": "3DES"
+        },
+        {
+          "id": "item3",
+          "text": "RSA"
+        },
+        {
+          "id": "item4",
+          "text": "ECC"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Symmetric encryption algorithm",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Asymmetric encryption algorithm",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    }
+  ]
+}

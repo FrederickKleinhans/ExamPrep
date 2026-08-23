@@ -9,39 +9,41 @@ interface Props {
 
 export function ExplanationPanel({ explanation, isCorrect, onNext }: Props) {
   return (
-    <div className="mt-6 animate-slide-up" aria-live="polite">
+    <div style={{ marginTop: 20 }} aria-live="polite">
       {/* Result banner */}
-      <div
-        className={`flex items-center gap-3 px-4 py-3 rounded-lg mb-4 ${
-          isCorrect
-            ? 'bg-[var(--success)]/10 border border-[var(--success)]/30'
-            : 'bg-[var(--error)]/10 border border-[var(--error)]/30'
-        }`}
-      >
-        {isCorrect ? (
-          <CheckCircle className="w-5 h-5 text-[var(--success)] shrink-0" aria-hidden="true" />
-        ) : (
-          <XCircle className="w-5 h-5 text-[var(--error)] shrink-0" aria-hidden="true" />
-        )}
-        <span className={`font-semibold text-base ${isCorrect ? 'text-[var(--success)]' : 'text-[var(--error)]'}`}>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 12,
+        padding: '14px 18px',
+        borderRadius: 14,
+        marginBottom: 14,
+        background: isCorrect ? 'rgba(45,212,191,0.08)' : 'rgba(255,107,107,0.08)',
+        border: `1px solid ${isCorrect ? 'rgba(45,212,191,0.3)' : 'rgba(255,107,107,0.3)'}`,
+        boxShadow: isCorrect ? '0 0 24px rgba(45,212,191,0.12)' : '0 0 24px rgba(255,107,107,0.12)',
+      }}>
+        {isCorrect
+          ? <CheckCircle style={{ width: 20, height: 20, color: '#2dd4bf', flexShrink: 0 }} aria-hidden="true" />
+          : <XCircle style={{ width: 20, height: 20, color: '#ff6b6b', flexShrink: 0 }} aria-hidden="true" />
+        }
+        <span style={{ fontWeight: 700, fontSize: 15, color: isCorrect ? '#2dd4bf' : '#ff6b6b' }}>
           {isCorrect ? 'Correct!' : 'Incorrect'}
         </span>
       </div>
 
-      {/* Explanation content */}
-      <div className="space-y-3 text-base">
-        <div className="p-3 rounded-lg bg-[var(--bg-tertiary)]">
-          <p className="text-[var(--text-primary)]">
-            {isCorrect ? explanation.correct : explanation.incorrect}
-          </p>
-        </div>
+      {/* Explanation */}
+      <div style={{ background: 'rgba(148,163,184,0.05)', border: '1px solid rgba(148,163,184,0.1)', borderRadius: 12, padding: '14px 16px', marginBottom: 10 }}>
+        <p style={{ margin: 0, fontSize: 14, color: '#a9b9d0', lineHeight: 1.7 }}>
+          {isCorrect ? explanation.correct : explanation.incorrect}
+        </p>
+      </div>
 
-        <div className="flex items-start gap-2 p-3 rounded-lg bg-[var(--accent)]/5 border border-[var(--accent)]/20 transition-all duration-200 hover:border-[var(--warning)]/60">
-          <Lightbulb className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" aria-hidden="true" />
-          <div>
-            <span className="font-medium text-[var(--accent)] text-xs uppercase tracking-wide">Exam Tip</span>
-            <p className="text-[var(--text-primary)] mt-1">{explanation.examTip}</p>
-          </div>
+      {/* Exam tip */}
+      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, background: 'rgba(79,124,255,0.06)', border: '1px solid rgba(79,124,255,0.2)', borderRadius: 12, padding: '14px 16px', marginBottom: 16, boxShadow: '0 0 20px rgba(79,124,255,0.08)' }}>
+        <Lightbulb style={{ width: 16, height: 16, color: '#58a6ff', flexShrink: 0, marginTop: 2 }} aria-hidden="true" />
+        <div>
+          <p style={{ margin: '0 0 4px', fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#58a6ff' }}>Exam tip</p>
+          <p style={{ margin: 0, fontSize: 13, color: '#a9b9d0', lineHeight: 1.6 }}>{explanation.examTip}</p>
         </div>
       </div>
 
@@ -49,13 +51,10 @@ export function ExplanationPanel({ explanation, isCorrect, onNext }: Props) {
       {onNext && (
         <button
           onClick={onNext}
-          className="mt-4 w-full py-3 px-6 rounded-xl font-semibold text-base transition-all duration-200
-            bg-[var(--accent)] text-white hover:bg-[var(--accent-dark)] hover:shadow-[0_0_24px_-4px_var(--glow)] btn-glow
-            hover:outline-[var(--warning)] hover:outline-2 hover:outline-offset-2 focus-visible:outline-[var(--warning)] focus-visible:outline-2 focus-visible:outline-offset-2
-            min-h-[44px] flex items-center justify-center gap-2"
+          style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, background: 'linear-gradient(135deg, #4f7cff, #3568e8)', border: 'none', borderRadius: 14, padding: '13px', color: '#fff', fontWeight: 700, fontSize: 14, cursor: 'pointer', boxShadow: '0 12px 28px rgba(79,124,255,0.3)' }}
         >
-          Next Question
-          <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          Next question
+          <ArrowRight style={{ width: 16, height: 16 }} aria-hidden="true" />
         </button>
       )}
     </div>

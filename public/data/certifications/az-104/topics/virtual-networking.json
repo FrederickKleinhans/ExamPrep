@@ -1,0 +1,1772 @@
+{
+  "certificationId": "az-104",
+  "topicId": "virtual-networking",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "az104-091",
+      "topicId": "virtual-networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the smallest usable subnet size in an Azure virtual network, accounting for Azure's reserved addresses?",
+      "explanation": {
+        "correct": "The smallest subnet Azure supports is /29 (8 addresses total), of which 5 are usable since Azure reserves 5 IP addresses per subnet (network, gateway, DNS x2, broadcast).",
+        "incorrect": "/32 is a single host address, not a usable subnet. /30 and /28 exist as valid CIDR sizes but /29 is the actual documented minimum supported subnet size in Azure VNets.",
+        "examTip": "Azure reserves the first 4 and the last address in every subnet, regardless of subnet size.",
+        "relatedTopics": [
+          "vnet-basics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vnet-basics",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "/32",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "/29",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "/30",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "/28",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-092",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which NSG rule evaluation principle determines which rule applies when two rules in the same NSG could match the same traffic?",
+      "explanation": {
+        "correct": "NSG rules are evaluated in order of priority number, from lowest (evaluated first, e.g., 100) to highest; the first matching rule (lowest number) is applied and evaluation stops.",
+        "incorrect": "A higher priority number means LOWER precedence in Azure's numbering convention, so that answer is inverted. Inbound and outbound rule sets are evaluated independently per direction, not one overriding the other. Rule creation order has no bearing on evaluation — only the priority number matters.",
+        "examTip": "Remember: lowest number = highest priority = evaluated first, similar to firewall rule ordering conventions.",
+        "relatedTopics": [
+          "nsg"
+        ]
+      },
+      "metadata": {
+        "examObjective": "nsg",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Northwind Traders' security team is troubleshooting why a newly added deny rule doesn't seem to be blocking traffic as expected.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "The rule with the highest priority number wins",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The rule with the lowest priority number wins",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Inbound rules always override outbound rules",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The most recently created rule wins",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-093",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure DNS zone type is used to resolve names for resources that should only be reachable within a virtual network and never exposed to the public internet?",
+      "explanation": {
+        "correct": "A Private DNS zone provides name resolution scoped to linked virtual networks, keeping records inaccessible from the public internet.",
+        "incorrect": "Public DNS zones are globally resolvable and inherently exposed. Traffic Manager performs traffic routing, not general-purpose name resolution. Reverse lookup zones handle PTR records specifically, not general internal hostname resolution.",
+        "examTip": "Link a Private DNS zone to multiple VNets to enable shared internal name resolution across a hub-and-spoke topology.",
+        "relatedTopics": [
+          "azure-dns"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-dns",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/dns/private-dns-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Public DNS zone",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Private DNS zone",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Traffic Manager profile",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Reverse lookup zone only",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-094",
+      "topicId": "virtual-networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Scenario: Northwind Traders has a hub VNet with a VPN Gateway and two spoke VNets peered to the hub. They need spoke-to-spoke traffic to route through the hub's VPN Gateway for on-premises connectivity. What peering setting must be enabled?",
+      "explanation": {
+        "correct": "To let spokes use the hub's gateway for connectivity (including transiting through the hub), the hub peering must have 'Allow gateway transit' enabled and each spoke peering must have 'Use remote gateways' enabled, referencing the hub's gateway.",
+        "incorrect": "'Allow forwarded traffic' alone permits traffic forwarded by NVAs but doesn't establish gateway transit. Enabling 'Use remote gateway' on spokes without the corresponding 'Allow gateway transit' on the hub will fail, since both sides of that specific setting pair must be configured together. Service endpoints address storage/PaaS access, unrelated to gateway transit.",
+        "examTip": "Gateway transit requires both sides configured correctly: hub = 'Allow gateway transit', spoke = 'Use remote gateways'.",
+        "relatedTopics": [
+          "vnet-peering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vnet-peering",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Allow forwarded traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Allow gateway transit (on the hub side) and use remote gateway (on the spoke side)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Use remote gateway on both spokes only, without gateway transit",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Enable service endpoints on the hub VNet",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-095",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which VPN Gateway connection type would you use to allow individual remote laptops to securely connect to an Azure VNet over the internet, without site-to-site infrastructure?",
+      "explanation": {
+        "correct": "Point-to-Site (P2S) VPN connects individual client devices directly to the Azure VNet over an encrypted tunnel, ideal for remote/traveling users without dedicated on-premises VPN hardware.",
+        "incorrect": "S2S connects two networks (e.g., on-premises to Azure) via a gateway device, not individual clients. VNet-to-VNet connects two Azure VNets. ExpressRoute is a private, dedicated circuit, not a per-client VPN solution.",
+        "examTip": "P2S supports OpenVPN, IKEv2, and Microsoft's SSTP protocols, along with Microsoft Entra ID authentication for modern client sign-in.",
+        "relatedTopics": [
+          "vpn-gateway"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vpn-gateway",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/vpn-gateway/point-to-site-about"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Woodgrove Bank has a growing remote workforce that needs secure access to Azure resources without deploying VPN hardware at each employee's home.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Site-to-Site (S2S)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Point-to-Site (P2S)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "VNet-to-VNet",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ExpressRoute",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-096",
+      "topicId": "virtual-networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which statement best describes the relationship between ExpressRoute and a VPN Gateway when both are configured for coexistence on the same VNet?",
+      "explanation": {
+        "correct": "In an ExpressRoute/VPN coexistence design, the VPN Gateway commonly provides a secure failover path in case the ExpressRoute circuit experiences an outage, improving overall connectivity resiliency.",
+        "incorrect": "ExpressRoute traffic is private by default but not automatically encrypted by a coexisting VPN Gateway — encryption over ExpressRoute typically requires a separate solution like MACsec or an IPsec overlay. Both connections can be active concurrently, and while both need their own gateway subnet presence, the ranges don't need to be identical, just non-overlapping and appropriately sized.",
+        "examTip": "ExpressRoute/VPN coexistence requires separate gateway subnets sized appropriately (a /27 or larger is recommended) to host both gateway types.",
+        "relatedTopics": [
+          "expressroute",
+          "vpn-gateway"
+        ]
+      },
+      "metadata": {
+        "examObjective": "expressroute",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/expressroute/expressroute-howto-coexist-resource-manager"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "ExpressRoute traffic is automatically encrypted by the coexisting VPN Gateway",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The VPN Gateway can serve as an encrypted backup path if the ExpressRoute circuit becomes unavailable",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Only one of the two connections can be active at any given time",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Coexistence requires both to share the same gateway subnet IP range exactly",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-097",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure Load Balancer SKU is required to support Availability Zones and zone-redundant frontend IP configurations?",
+      "explanation": {
+        "correct": "The Standard Load Balancer SKU supports Availability Zones, including zone-redundant and zonal frontend IP configurations; the Basic SKU does not support zones.",
+        "incorrect": "Basic SKU lacks zone support and several other features (like HA ports, and is being retired). 'Gateway' and 'Regional' are not valid Azure Load Balancer SKU names.",
+        "examTip": "The Basic Load Balancer SKU is being retired; Microsoft recommends migrating to Standard for new and existing deployments.",
+        "relatedTopics": [
+          "load-balancer"
+        ]
+      },
+      "metadata": {
+        "examObjective": "load-balancer",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-standard-availability-zones"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Basic",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Standard",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Gateway",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Regional",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-098",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Application Gateway feature allows routing requests to different backend pools based on the URL path, such as /images/* going to one pool and /api/* going to another?",
+      "explanation": {
+        "correct": "URL path-based routing lets Application Gateway direct traffic to different backend pools based on the path portion of the request URL, enabling content-based routing within a single listener.",
+        "incorrect": "Multi-site hosting routes based on hostname, not URL path. SSL termination decrypts TLS traffic at the gateway rather than routing based on content. WAF provides security filtering, not routing logic.",
+        "examTip": "Combine multi-site hosting with path-based rules for advanced routing scenarios spanning multiple domains and paths.",
+        "relatedTopics": [
+          "application-gateway"
+        ]
+      },
+      "metadata": {
+        "examObjective": "application-gateway",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/application-gateway/url-route-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Multi-site hosting",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "URL path-based routing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SSL termination",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Web Application Firewall (WAF)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-099",
+      "topicId": "virtual-networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Scenario: Adventure Works needs global users routed to the closest healthy regional deployment of their application, based on network latency measurements. Which Traffic Manager routing method should they use?",
+      "explanation": {
+        "correct": "The Performance routing method directs users to the endpoint with the lowest network latency based on Microsoft's Internet latency table, matching the 'closest by network latency' requirement.",
+        "incorrect": "Priority routes to a primary endpoint with failover order, not by latency. Weighted distributes traffic by assigned proportions, not proximity. Geographic routes strictly by the user's geographic location for compliance/data-residency purposes, not measured latency.",
+        "examTip": "Performance routing uses the Internet Latency Table maintained by Microsoft, not simple geographic distance.",
+        "relatedTopics": [
+          "traffic-manager"
+        ]
+      },
+      "metadata": {
+        "examObjective": "traffic-manager",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Adventure Works has application deployments in three Azure regions and wants the best possible user experience worldwide.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Priority",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Weighted",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Performance",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Geographic",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-100",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure Firewall rule collection type would you use to allow outbound traffic to a specific fully qualified domain name (FQDN) such as *.windowsupdate.com?",
+      "explanation": {
+        "correct": "Application rule collections in Azure Firewall filter outbound traffic based on FQDNs (and optionally URLs for HTTP/HTTPS), making them the correct choice for FQDN-based allow rules.",
+        "incorrect": "Network rule collections filter based on IP/port/protocol, not FQDNs. NAT/DNAT rule collections translate and redirect inbound traffic to internal resources, unrelated to outbound FQDN filtering.",
+        "examTip": "Application rules only inspect HTTP/HTTPS/MSSQL traffic for FQDN filtering; use network rules for other protocols.",
+        "relatedTopics": [
+          "azure-firewall"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-firewall",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/firewall/rule-processing"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Contoso Ltd needs its VMs to reach Windows Update endpoints while blocking all other unapproved outbound internet destinations.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "NAT rule collection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Network rule collection",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Application rule collection",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "DNAT rule collection",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-101",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service allows secure RDP/SSH access to VMs directly through the Azure portal without exposing a public IP address on the VM itself?",
+      "explanation": {
+        "correct": "Azure Bastion provides browser-based, portal-integrated RDP/SSH access to VMs over TLS without requiring a public IP on the target VM.",
+        "incorrect": "Azure Firewall filters traffic but doesn't provide remote session access. Network Watcher is a diagnostics/monitoring toolset. ExpressRoute provides private connectivity to on-premises networks, not remote session brokering.",
+        "examTip": "Azure Bastion is deployed into a dedicated subnet named exactly 'AzureBastionSubnet' with a minimum /26 prefix.",
+        "relatedTopics": [
+          "azure-bastion"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-bastion",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/bastion/bastion-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Bastion",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Firewall",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Network Watcher",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ExpressRoute",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-102",
+      "topicId": "virtual-networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Network Watcher capability would you use to determine why traffic from a VM to a specific destination IP is unexpectedly being blocked?",
+      "explanation": {
+        "correct": "IP flow verify checks whether a packet is allowed or denied to/from a VM based on the current 5-tuple (source/destination IP, port, protocol) and identifies the specific rule responsible.",
+        "incorrect": "Connection Monitor tracks connectivity over time for trend analysis, not an immediate single-packet rule check. Raw NSG flow log exports require manual analysis rather than giving an immediate allow/deny verdict. Topology view visualizes resource relationships, not rule evaluation results.",
+        "examTip": "IP flow verify returns the specific NSG rule (by name and priority) responsible for allowing or denying the tested traffic.",
+        "relatedTopics": [
+          "network-watcher"
+        ]
+      },
+      "metadata": {
+        "examObjective": "network-watcher",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-ip-flow-verify-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Connection Monitor",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "IP flow verify",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "NSG flow logs export only",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Topology view",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-103",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which DNS record type is used to map a hostname to another hostname (an alias) rather than directly to an IP address?",
+      "explanation": {
+        "correct": "A CNAME record maps one hostname (alias) to another canonical hostname, which is then resolved further, rather than pointing directly to an IP address.",
+        "incorrect": "An A record maps a hostname directly to an IPv4 address. MX records specify mail exchange servers. PTR records support reverse DNS lookups (IP to hostname).",
+        "examTip": "You cannot create a CNAME record at the zone apex (root domain); use an ALIAS record type in Azure DNS for that scenario instead.",
+        "relatedTopics": [
+          "azure-dns"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-dns",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/dns/dns-zones-records"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "A",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "CNAME",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "MX",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "PTR",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-104",
+      "topicId": "virtual-networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A company uses an Azure Load Balancer with the 'Floating IP' (Direct Server Return) option enabled on a load balancing rule. What is the primary implication of enabling this setting on the backend VMs?",
+      "explanation": {
+        "correct": "Floating IP changes how the backend VM's network stack presents the destination IP, generally requiring configuration (like a loopback adapter) so the VM can accept traffic addressed to the frontend IP — commonly used for SQL Always On Availability Group listeners.",
+        "incorrect": "Health probes remain fully functional and required with Floating IP enabled. The load balancer remains Layer 4 (transport layer); Floating IP doesn't change that. Multiple VMs can still be part of the backend pool with Floating IP enabled.",
+        "examTip": "Floating IP is commonly required for SQL Server Always On Availability Group Listener configurations behind an Azure Load Balancer.",
+        "relatedTopics": [
+          "load-balancer"
+        ]
+      },
+      "metadata": {
+        "examObjective": "load-balancer",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-floating-ip"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "The backend VM must respond directly to the client using the load balancer's frontend IP as if it were its own, typically requiring a loopback interface configuration",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "It automatically disables health probes for that rule",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "It converts the load balancer from Layer 4 to Layer 7",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It requires the backend pool to use only a single VM",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-105",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid NSG rule components used to determine whether traffic is allowed or denied?",
+      "explanation": {
+        "correct": "NSG rules evaluate priority (for ordering) along with source/destination address, port ranges, and protocol to decide allow/deny outcomes.",
+        "incorrect": "VM operating system type and storage account access tier are not attributes an NSG rule can filter on — NSGs operate purely on network-layer 3/4 attributes.",
+        "examTip": "NSG rules support Application Security Groups as a source/destination in place of explicit IP ranges for easier management.",
+        "relatedTopics": [
+          "nsg"
+        ]
+      },
+      "metadata": {
+        "examObjective": "nsg",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Priority",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Source and destination port ranges",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "VM operating system type",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Storage account access tier",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-106",
+      "topicId": "virtual-networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO statements about VNet peering are correct?",
+      "explanation": {
+        "correct": "Global VNet peering allows connecting VNets across different regions, and peering is non-transitive by default — spoke-to-spoke traffic through a hub requires a route/NVA or gateway transit configuration, not automatic transitivity.",
+        "incorrect": "Peered VNets must have non-overlapping address spaces, not identical ones (identical/overlapping ranges would actually break peering). NSGs are independent per VNet/subnet and are not automatically shared between peered VNets.",
+        "examTip": "For spoke-to-spoke communication through a hub, use either an NVA with UDRs or a hub firewall — peering alone won't route it.",
+        "relatedTopics": [
+          "vnet-peering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vnet-peering",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Peered VNets can exist in different Azure regions (global peering)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Peered VNets must have identical address spaces",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Peering does not, by default, transitively route traffic between two spokes peered to the same hub",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Peered VNets automatically share the same NSGs",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-107",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid uses of Azure Application Gateway's Web Application Firewall (WAF)?",
+      "explanation": {
+        "correct": "WAF on Application Gateway inspects HTTP(S) traffic against rule sets (like OWASP CRS) to block common web application attacks such as SQL injection and XSS.",
+        "incorrect": "DNS-based global routing describes Traffic Manager, not WAF. Layer 4 TCP/UDP load balancing is the domain of Azure Load Balancer, while Application Gateway (and its WAF) operates at Layer 7 (HTTP/HTTPS).",
+        "examTip": "WAF can run in Detection mode (log only) or Prevention mode (actively block) — start in Detection mode to tune rules before enforcing.",
+        "relatedTopics": [
+          "application-gateway",
+          "waf"
+        ]
+      },
+      "metadata": {
+        "examObjective": "application-gateway",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/ag-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Protecting against SQL injection and cross-site scripting attacks",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Blocking traffic based on OWASP Core Rule Set matches",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Performing DNS-based global traffic routing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Load balancing at Layer 4 (TCP/UDP)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-108",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following Traffic Manager routing methods are appropriate for active-active load distribution across multiple healthy endpoints simultaneously?",
+      "explanation": {
+        "correct": "Weighted distributes traffic proportionally across multiple active endpoints, and Multivalue returns multiple healthy endpoint IPs directly to the client (useful for IPv4/IPv6 scenarios) — both support active-active patterns across several endpoints at once.",
+        "incorrect": "Priority routing is inherently active-passive (primary plus ordered failover), not simultaneous distribution. 'Nested' is a composition method that combines other profiles rather than being a standalone distribution method by itself.",
+        "examTip": "Multivalue requires endpoints to be specified as IPv4/IPv6 addresses, unlike other methods that can reference Azure resource endpoints directly.",
+        "relatedTopics": [
+          "traffic-manager"
+        ]
+      },
+      "metadata": {
+        "examObjective": "traffic-manager",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Weighted",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Priority",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Multivalue",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Nested (used alone without an underlying method)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-109",
+      "topicId": "virtual-networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO capabilities does Azure Firewall provide that a standard NSG does not?",
+      "explanation": {
+        "correct": "Azure Firewall supports FQDN-based application rules and threat intelligence filtering against known malicious sources — capabilities beyond a standard NSG's scope.",
+        "incorrect": "Layer 3/4 IP and port filtering with priority-ordered rules describes core NSG functionality, which both NSGs and Azure Firewall can do at a basic level, so these don't represent a unique Firewall-only differentiator being tested here.",
+        "examTip": "Azure Firewall is a stateful, centralized network security service, often deployed in a hub VNet to protect all spokes, complementing (not replacing) NSGs.",
+        "relatedTopics": [
+          "azure-firewall",
+          "nsg"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-firewall",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/firewall/features"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "FQDN-based application filtering",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Threat intelligence-based filtering (known malicious IP/domain blocking)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Layer 3/4 IP and port filtering",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Priority-ordered allow/deny rules per subnet",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-110",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO Network Watcher features help diagnose connectivity issues between two Azure VMs?",
+      "explanation": {
+        "correct": "Connection troubleshoot tests connectivity between a source and destination and reports latency/hop-by-hop results, while NSG flow logs record allowed/denied traffic for later analysis — both help diagnose VM-to-VM connectivity problems.",
+        "incorrect": "DNS zone transfer and SAS generation are unrelated to network connectivity diagnostics between VMs — they belong to DNS and storage security respectively.",
+        "examTip": "Use 'Connection troubleshoot' for a quick pass/fail plus latency report, and NSG flow logs for deeper forensic analysis of traffic patterns over time.",
+        "relatedTopics": [
+          "network-watcher"
+        ]
+      },
+      "metadata": {
+        "examObjective": "network-watcher",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-monitoring-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Connection troubleshoot",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "NSG flow logs",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "DNS zone transfer",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Storage account SAS generation",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-111",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Inbound and outbound NSG rule sets are evaluated independently. Azure allows only one NSG per subnet (and one per NIC), though a subnet's effective rules combine both if a NIC-level NSG is also applied. Service endpoints keep traffic on the Azure backbone network but still use the service's public IP endpoint, not a private IP — that describes Private Endpoints instead.",
+        "incorrect": "The false statement describes Private Endpoints (private IP within your VNet), not Service Endpoints (which optimize routing over the backbone but still target the service's public endpoint).",
+        "examTip": "Use Private Endpoints when you need the PaaS resource to have an actual private IP address inside your VNet; use Service Endpoints for backbone-optimized routing to a public endpoint.",
+        "relatedTopics": [
+          "nsg",
+          "service-endpoints"
+        ]
+      },
+      "metadata": {
+        "examObjective": "nsg",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "NSG rules are evaluated separately for inbound and outbound traffic directions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A subnet can have only one NSG associated with it at a time.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Service endpoints route traffic to a PaaS service over a private IP address that stays entirely off the Azure backbone network.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "az104-112",
+      "topicId": "virtual-networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Bastion brokers RDP/SSH via TLS through the Azure portal, avoiding direct internet exposure of VM management ports. Standard Load Balancer requires Standard SKU public IPs — SKUs must match. A single subscription can contain both public and private Azure DNS zones as needed.",
+        "incorrect": "The false statement incorrectly pairs a Basic SKU public IP with a Standard Load Balancer — SKU mismatch is not supported; both resources must use matching SKUs.",
+        "examTip": "Standard and Basic SKU resources (Load Balancer, Public IP) cannot be mixed — always match SKUs across the resource chain.",
+        "relatedTopics": [
+          "azure-bastion",
+          "load-balancer",
+          "azure-dns"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-bastion",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/bastion/bastion-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Bastion eliminates the need to expose a VM's RDP/SSH port directly to the public internet.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A Basic SKU public IP address can be used with a Standard SKU Load Balancer.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure DNS can host both public and private DNS zones within the same subscription.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "az104-113",
+      "topicId": "virtual-networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "BGP support enables dynamic route exchange over VPN Gateway connections. ExpressRoute Private Peering is used for private network connectivity to Azure IaaS/PaaS resources within a VNet; Microsoft Peering is the correct peering type for Microsoft 365 services. Gateway SKU (e.g., VpnGw1, VpnGw2) determines both tunnel count limits and throughput benchmarks.",
+        "incorrect": "The false statement incorrectly attributes Microsoft 365 access to Private Peering — that access requires Microsoft Peering instead.",
+        "examTip": "Remember ExpressRoute peering types: Private Peering (VNet resources), Microsoft Peering (Microsoft 365, Dynamics, public Azure PaaS endpoints).",
+        "relatedTopics": [
+          "vpn-gateway",
+          "expressroute"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vpn-gateway",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/expressroute/expressroute-circuit-peerings"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "BGP (Border Gateway Protocol) can be used with a VPN Gateway to dynamically exchange routes with an on-premises network.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "ExpressRoute Private Peering is used to access Microsoft 365 services such as Exchange Online.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A single VPN Gateway SKU determines both the maximum number of S2S/VNet-to-VNet tunnels and the aggregate throughput benchmark.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "az104-114",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Azure Firewall supports combined DNAT (inbound), network, and application rule collections within one policy. Traffic Manager works at the DNS level, directing clients to an endpoint's IP directly rather than proxying traffic itself. Application Gateway supports SSL termination at the gateway, optionally forwarding decrypted traffic to backends over HTTP.",
+        "incorrect": "The false statement mischaracterizes Traffic Manager as an IP-layer proxy; it is actually a DNS-based traffic router that never sees the actual application traffic.",
+        "examTip": "Traffic Manager only directs DNS resolution; for actual traffic proxying/routing at Layer 7, use Application Gateway or Front Door instead.",
+        "relatedTopics": [
+          "azure-firewall",
+          "traffic-manager",
+          "application-gateway"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-firewall",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Firewall supports both DNAT rules for inbound traffic and network/application rules for outbound traffic in the same firewall policy.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Traffic Manager operates at the network (IP) layer and directly proxies application traffic through its own infrastructure.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Application Gateway can perform SSL/TLS termination, decrypting traffic before forwarding it to backend pool members over HTTP.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "az104-115",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Network Watcher must be enabled per-region for NSG flow logs to be captured there. NSGs attach to subnets or individual NICs, not directly to the VNet resource as a whole. UDRs let administrators override Azure's default system routes to control traffic flow, such as forcing traffic through an NVA.",
+        "incorrect": "The false statement incorrectly claims NSGs can attach directly to a VNet — that association level is not supported.",
+        "examTip": "Use 0.0.0.0/0 as a UDR address prefix to force all outbound traffic through a network virtual appliance (forced tunneling).",
+        "relatedTopics": [
+          "nsg",
+          "network-watcher"
+        ]
+      },
+      "metadata": {
+        "examObjective": "nsg",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-monitoring-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "NSG flow logs require Network Watcher to be enabled in the region of the NSG.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "You can associate an NSG directly with a virtual network (not a subnet or NIC).",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A route table's default system routes can be overridden using user-defined routes (UDRs).",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "az104-116",
+      "topicId": "virtual-networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Public IPs support both Static and Dynamic allocation methods. ExpressRoute provides a private connection that does not traverse the public internet, which is one of its key value propositions. Health probes actively monitor backend instance health, and only healthy instances receive forwarded traffic.",
+        "incorrect": "The false statement incorrectly claims ExpressRoute uses the public internet — its entire premise is private, dedicated connectivity bypassing the public internet.",
+        "examTip": "Static allocation is required for most production scenarios where the IP address must not change (e.g., DNS records, firewall allow-lists).",
+        "relatedTopics": [
+          "expressroute",
+          "load-balancer"
+        ]
+      },
+      "metadata": {
+        "examObjective": "expressroute",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/expressroute/expressroute-introduction"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A public IP address in Azure can be either Static or Dynamic in its allocation method.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "ExpressRoute traffic travels over the public internet by design.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Load Balancer health probes determine which backend instances receive traffic.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "az104-117",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "NSGs filter inbound/outbound traffic at the subnet or NIC level using allow/deny rules by port and protocol. Performance routing directs users to the lowest-latency healthy endpoint.",
+        "incorrect": "Route tables control traffic paths, not port-based filtering. DNS zones resolve names, not filter traffic. Priority and Weighted routing don't factor in measured network latency the way Performance routing does.",
+        "examTip": "NSG rules default-deny all inbound traffic from the internet unless explicitly allowed by a rule with a lower priority number.",
+        "relatedTopics": [
+          "nsg",
+          "traffic-manager"
+        ]
+      },
+      "metadata": {
+        "examObjective": "nsg",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To allow only HTTPS traffic to a group of web server VMs while denying all other inbound traffic, configure an inbound rule in a",
+          "options": [
+            "Route table",
+            "Network security group",
+            "DNS zone",
+            "Traffic Manager profile"
+          ],
+          "correctAnswer": "Network security group"
+        },
+        {
+          "id": "d2",
+          "prompt": "To let users worldwide connect to the region with the lowest network latency, configure Traffic Manager with the",
+          "options": [
+            "Priority routing method",
+            "Weighted routing method",
+            "Performance routing method",
+            "Geographic routing method"
+          ],
+          "correctAnswer": "Performance routing method"
+        }
+      ]
+    },
+    {
+      "id": "az104-118",
+      "topicId": "virtual-networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "ExpressRoute offers the highest bandwidth, most reliable private connectivity option, bypassing the public internet. A UDR pointing default (0.0.0.0/0) traffic to the firewall's private IP forces centralized traffic inspection in a hub-spoke topology.",
+        "incorrect": "S2S and P2S VPNs both traverse the public internet (albeit encrypted), offering lower guaranteed bandwidth/latency than ExpressRoute. Service endpoints optimize PaaS access but don't force general internet traffic through an NVA.",
+        "examTip": "This hub-spoke pattern is often called 'forced tunneling' and requires the firewall NVA to have IP forwarding enabled.",
+        "relatedTopics": [
+          "expressroute",
+          "vnet-peering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "expressroute",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/expressroute/expressroute-introduction"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To securely connect an on-premises datacenter to Azure with the highest bandwidth and lowest latency, avoiding the public internet entirely, provision",
+          "options": [
+            "A Site-to-Site VPN",
+            "An ExpressRoute circuit",
+            "A Point-to-Site VPN",
+            "VNet peering"
+          ],
+          "correctAnswer": "An ExpressRoute circuit"
+        },
+        {
+          "id": "d2",
+          "prompt": "To route all outbound internet traffic from a spoke VNet through a centralized firewall appliance in a hub VNet, configure a",
+          "options": [
+            "Service endpoint on the spoke subnet",
+            "User-defined route (UDR) pointing to the firewall's private IP",
+            "Public IP on each spoke VM",
+            "NSG flow log"
+          ],
+          "correctAnswer": "User-defined route (UDR) pointing to the firewall's private IP"
+        }
+      ]
+    },
+    {
+      "id": "az104-119",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "Application Gateway with WAF handles Layer 7 publishing, SSL termination, and attack protection in one service. IP flow verify gives an immediate, specific allow/deny result naming the responsible rule, without requiring configuration changes.",
+        "incorrect": "A plain Load Balancer operates at Layer 4 without WAF/SSL termination features. Flow log analysis provides historical data but not an immediate rule-name verdict the way IP flow verify does.",
+        "examTip": "IP flow verify is a non-invasive diagnostic — it doesn't modify any configuration, only reports what WOULD happen to the tested traffic.",
+        "relatedTopics": [
+          "application-gateway",
+          "network-watcher"
+        ]
+      },
+      "metadata": {
+        "examObjective": "application-gateway",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-ip-flow-verify-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To publish an internal web application through a single public endpoint with SSL termination and OWASP-based attack protection, deploy an",
+          "options": [
+            "Azure Load Balancer (Standard)",
+            "Application Gateway with WAF enabled",
+            "Azure Bastion host",
+            "ExpressRoute gateway"
+          ],
+          "correctAnswer": "Application Gateway with WAF enabled"
+        },
+        {
+          "id": "d2",
+          "prompt": "To determine the exact NSG rule blocking traffic to a specific VM without changing any configuration, use",
+          "options": [
+            "NSG flow logs analysis only",
+            "IP flow verify in Network Watcher",
+            "Traffic Manager endpoint monitoring",
+            "Azure Firewall diagnostic logs"
+          ],
+          "correctAnswer": "IP flow verify in Network Watcher"
+        }
+      ]
+    },
+    {
+      "id": "az104-120",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "A Private DNS zone linked to multiple VNets provides shared internal name resolution. BGP dynamically propagates route changes over the VPN tunnel without manual intervention.",
+        "incorrect": "Public DNS zones expose records to the internet, which is undesired here. Static routing/fixed UDRs require manual updates whenever on-premises subnets change, defeating the 'dynamic' requirement.",
+        "examTip": "BGP requires both the on-premises VPN device and the Azure VPN Gateway (a route-based, BGP-capable SKU) to support and be configured for BGP peering.",
+        "relatedTopics": [
+          "azure-dns",
+          "vpn-gateway"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-dns",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-bgp-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To resolve internal hostnames for resources across two peered VNets without exposing records publicly, configure a",
+          "options": [
+            "Public DNS zone",
+            "Private DNS zone linked to both VNets",
+            "Traffic Manager DNS profile",
+            "PTR record set"
+          ],
+          "correctAnswer": "Private DNS zone linked to both VNets"
+        },
+        {
+          "id": "d2",
+          "prompt": "To ensure remote branch office users can dynamically learn new on-premises subnet routes over their VPN connection without manual route updates, enable",
+          "options": [
+            "Static routing only",
+            "BGP on the VPN Gateway connection",
+            "A route table with fixed UDRs",
+            "Forced tunneling"
+          ],
+          "correctAnswer": "BGP on the VPN Gateway connection"
+        }
+      ]
+    },
+    {
+      "id": "az104-121",
+      "topicId": "virtual-networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "A VNet is the fundamental building block for private networking in Azure, within which subnets and resources are defined. NSGs are the mechanism for allowing or denying specific IP-based traffic at the subnet or NIC level.",
+        "incorrect": "Resource groups are organizational containers, not network constructs. DNS zones, Traffic Manager profiles, and public IPs don't filter traffic by source IP the way NSGs do.",
+        "examTip": "You can create an NSG rule with a /32 CIDR to target a single specific IP address for blocking.",
+        "relatedTopics": [
+          "vnet-basics",
+          "nsg"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vnet-basics",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To create a private, isolated network space in Azure where you deploy VMs and define subnets, you create a",
+          "options": [
+            "Resource group",
+            "Virtual network (VNet)",
+            "Storage account",
+            "Load balancer"
+          ],
+          "correctAnswer": "Virtual network (VNet)"
+        },
+        {
+          "id": "d2",
+          "prompt": "To block a specific malicious IP address from reaching any VM in a subnet, add a deny rule to the",
+          "options": [
+            "DNS zone",
+            "Network security group",
+            "Traffic Manager profile",
+            "Public IP address"
+          ],
+          "correctAnswer": "Network security group"
+        }
+      ]
+    },
+    {
+      "id": "az104-122",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to configure a Point-to-Site VPN connection for remote users using Microsoft Entra ID authentication.",
+      "explanation": {
+        "correct": "A route-based VPN Gateway must exist first, then P2S configuration (address pool, Entra ID authentication settings) is applied, followed by client software installation on end-user devices, and finally connection with authentication.",
+        "incorrect": "You cannot configure Entra ID P2S settings before the gateway exists, nor can a user authenticate before the client software is installed and configured with the correct profile.",
+        "examTip": "Only route-based VPN Gateways support Point-to-Site connections — policy-based gateways do not.",
+        "relatedTopics": [
+          "vpn-gateway"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vpn-gateway",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/vpn-gateway/point-to-site-entra-vpn-client-windows"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a VPN Gateway with a route-based VPN type",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Configure the Point-to-Site address pool and Microsoft Entra ID tenant/audience/issuer settings",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Download and install the Azure VPN Client on the remote device",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Connect using the client and authenticate with Microsoft Entra ID credentials",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "az104-123",
+      "topicId": "virtual-networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to troubleshoot a VM that cannot reach the internet, using Azure Network Watcher.",
+      "explanation": {
+        "correct": "A logical troubleshooting flow starts with a quick rule check (IP flow verify), then examines routing for anomalies, reviews historical flow log patterns for confirmation, and finally validates end-to-end connectivity with a live test.",
+        "incorrect": "Jumping straight to a live connectivity test without first checking rules and routes wastes time if the root cause is a simple misconfigured NSG rule or route.",
+        "examTip": "Effective routes shows the combined result of system routes, UDRs, and BGP routes actually applied to a NIC — useful for spotting an unwanted forced-tunneling route.",
+        "relatedTopics": [
+          "network-watcher"
+        ]
+      },
+      "metadata": {
+        "examObjective": "network-watcher",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/network-watcher/diagnose-vm-network-traffic-filtering-problem"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Run IP flow verify to check outbound traffic against the NSG rules",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Review effective routes for the VM's NIC to detect an unexpected route (e.g., forced tunneling)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Check NSG flow logs for a pattern of denied outbound connections over time",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Use Connection troubleshoot to test connectivity to a known-good external endpoint",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "az104-124",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to establish hub-and-spoke connectivity where spokes can reach on-premises resources via the hub's VPN Gateway.",
+      "explanation": {
+        "correct": "The hub's gateway and S2S connection must exist first, followed by establishing peering to each spoke, then explicitly enabling gateway transit on the hub peering and remote gateway usage on the spoke peering to complete the transit path.",
+        "incorrect": "You cannot enable gateway transit settings on a peering that doesn't exist yet, and the underlying gateway/connection must be operational before spokes can use it for transit.",
+        "examTip": "A spoke VNet cannot have its own gateway if it is configured to use the hub's gateway via 'Use remote gateways'.",
+        "relatedTopics": [
+          "vnet-peering",
+          "vpn-gateway"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vnet-peering",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-peering-gateway-transit"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Deploy a VPN Gateway in the hub VNet and establish the Site-to-Site connection",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Peer each spoke VNet to the hub VNet",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Enable 'Allow gateway transit' on the hub side of each peering",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Enable 'Use remote gateways' on each spoke side of the peering",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "az104-125",
+      "topicId": "virtual-networking",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each Azure networking service into the correct OSI layer category it primarily operates at.",
+      "explanation": {
+        "correct": "Load Balancer and NSGs operate on IP/port/protocol information at Layer 4, while Application Gateway and Front Door inspect and route based on HTTP-layer content at Layer 7.",
+        "incorrect": "This distinction matters for choosing the right service: Layer 4 services can't do path-based routing or WAF, which require Layer 7 awareness.",
+        "examTip": "If a requirement mentions 'URL path', 'hostname routing', or 'WAF', think Layer 7 (Application Gateway/Front Door); if it mentions 'port' or 'protocol' only, think Layer 4.",
+        "relatedTopics": [
+          "load-balancer",
+          "application-gateway"
+        ]
+      },
+      "metadata": {
+        "examObjective": "load-balancer",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/application-gateway/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure Load Balancer"
+        },
+        {
+          "id": "item2",
+          "text": "Network security group"
+        },
+        {
+          "id": "item3",
+          "text": "Application Gateway"
+        },
+        {
+          "id": "item4",
+          "text": "Azure Front Door"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Layer 4 (Transport) service",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Layer 7 (Application) service",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "az104-126",
+      "topicId": "virtual-networking",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Sort each connectivity option into the correct category based on whether it traverses the public internet.",
+      "explanation": {
+        "correct": "S2S and P2S VPNs establish encrypted tunnels over the public internet, while ExpressRoute and VNet peering provide private connectivity paths that never traverse the public internet.",
+        "incorrect": "This distinction is central to choosing connectivity for compliance-sensitive workloads that require guaranteed private paths.",
+        "examTip": "ExpressRoute and VNet peering both use Microsoft's private backbone network rather than the public internet.",
+        "relatedTopics": [
+          "vpn-gateway",
+          "expressroute",
+          "vnet-peering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vpn-gateway",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/expressroute/expressroute-introduction"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Site-to-Site VPN"
+        },
+        {
+          "id": "item2",
+          "text": "Point-to-Site VPN"
+        },
+        {
+          "id": "item3",
+          "text": "ExpressRoute Private Peering"
+        },
+        {
+          "id": "item4",
+          "text": "VNet peering"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Traverses the public internet (encrypted)",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Private, dedicated connection (does not use the public internet)",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "az104-127",
+      "topicId": "virtual-networking",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Sort each DNS record type into the category describing what it maps a name to.",
+      "explanation": {
+        "correct": "A and AAAA records map hostnames to IPv4 and IPv6 addresses respectively. CNAME maps to another hostname (alias), and MX specifies the mail server hostname responsible for a domain.",
+        "incorrect": "This tests basic recognition of the most common DNS record types and what each fundamentally resolves to.",
+        "examTip": "AAAA (not 'quad-A') specifically handles IPv6 addresses, paralleling the IPv4 'A' record.",
+        "relatedTopics": [
+          "azure-dns"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-dns",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/dns/dns-zones-records"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "A record"
+        },
+        {
+          "id": "item2",
+          "text": "AAAA record"
+        },
+        {
+          "id": "item3",
+          "text": "CNAME record"
+        },
+        {
+          "id": "item4",
+          "text": "MX record"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Maps a name directly to an IP address",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Maps a name to another name or maps mail routing",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "certificationId": "comptia-a-plus",
+  "topicId": "mobile-devices",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "aplus-023",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "mobile-devices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Determine if each statement about mobile device connectors is true or false.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "USB-C supports video output.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Lightning is an open standard.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "micro-USB supports USB OTG.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Thunderbolt 3 uses USB-C connector.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "USB-C supports video; Lightning is proprietary; micro-USB supports OTG; Thunderbolt 3 uses USB-C.",
+        "incorrect": "Lightning is Apple proprietary.",
+        "examTip": "USB-C is becoming the universal connector.",
+        "relatedTopics": [
+          "Mobile device connectors",
+          "USB standards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4: Compare and contrast mobile device connectors and cables",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-040",
+      "exam": "core1",
+      "type": "single-choice",
+      "topicId": "mobile-devices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which mobile operating system is open-source?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Android",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "iOS",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Windows Phone",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "BlackBerry OS",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Android is open-source; iOS, Windows Phone, and BlackBerry are closed.",
+        "incorrect": "iOS is proprietary.",
+        "examTip": "Android is based on the Linux kernel.",
+        "relatedTopics": [
+          "Mobile OS",
+          "Android vs iOS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.6: Compare and contrast mobile operating systems",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-060",
+      "exam": "core1",
+      "type": "ordering",
+      "topicId": "mobile-devices",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to set up an Android device for the first time.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Power on the device",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Select language and region",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Connect to Wi-Fi",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Sign in with Google account",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "1: Power on, 2: Language, 3: Wi-Fi, 4: Sign in.",
+        "incorrect": "Wi-Fi is needed to sign in.",
+        "examTip": "Data backup and restore options appear after sign-in.",
+        "relatedTopics": [
+          "Android setup",
+          "mobile device configuration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.6: Compare and contrast mobile operating systems",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aplus-070",
+      "exam": "core1",
+      "type": "yes-no-statements",
+      "topicId": "mobile-devices",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Determine if each statement about iOS is true or false.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "iOS is developed by Google.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "iOS uses the App Store for apps.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "iOS supports third-party app stores.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "iOS is based on UNIX.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "iOS is Apple; uses App Store; no third-party stores; based on UNIX.",
+        "incorrect": "iOS is not by Google.",
+        "examTip": "iOS is closed and tightly controlled.",
+        "relatedTopics": [
+          "iOS",
+          "mobile operating systems"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.6: Compare and contrast mobile operating systems",
+        "references": [
+          "https://www.comptia.org/certifications/a"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

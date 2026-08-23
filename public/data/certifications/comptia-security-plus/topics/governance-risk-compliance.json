@@ -1,0 +1,1615 @@
+{
+  "certificationId": "comptia-security-plus",
+  "topicId": "governance-risk-compliance",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "secplus-119",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which risk treatment strategy involves purchasing cybersecurity insurance to shift the financial impact of a potential incident to a third party?",
+      "explanation": {
+        "correct": "Risk transfer shifts the financial or operational impact of a risk to a third party, such as through insurance or outsourcing — cybersecurity insurance is a textbook example.",
+        "incorrect": "Risk avoidance eliminates the activity causing the risk entirely. Risk mitigation reduces the likelihood or impact through controls, rather than shifting it elsewhere. Risk acceptance means knowingly tolerating the risk without further action.",
+        "examTip": "The four risk treatment options: Avoid, Transfer, Mitigate, Accept — insurance is the classic 'transfer' example for the exam.",
+        "relatedTopics": [
+          "risk-treatment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "risk-treatment",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Umbrella Corp's board wants to reduce the financial exposure from a potential ransomware incident without further increasing the security budget.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Risk avoidance",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Risk mitigation",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Risk transfer",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Risk acceptance",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-120",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which type of risk analysis assigns numeric values (such as dollar amounts and probabilities) to calculate a risk's expected financial impact, such as Single Loss Expectancy (SLE) and Annualized Loss Expectancy (ALE)?",
+      "explanation": {
+        "correct": "Quantitative risk analysis uses numeric/financial metrics (SLE, ARO, ALE) to calculate an objective, dollar-based estimate of risk impact.",
+        "incorrect": "Qualitative analysis instead uses relative, descriptive ratings (e.g., High/Medium/Low) rather than precise numbers. Residual and inherent risk describe risk BEFORE and AFTER controls are applied, not a specific analysis methodology type.",
+        "examTip": "ALE = SLE × ARO (Annualized Rate of Occurrence) — a key quantitative risk formula worth memorizing for the exam.",
+        "relatedTopics": [
+          "quantitative-risk-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "quantitative-risk-analysis",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Qualitative risk analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Quantitative risk analysis",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Residual risk analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Inherent risk analysis",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-121",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which term describes the level of risk that remains after security controls have been applied?",
+      "explanation": {
+        "correct": "Residual risk is what remains after mitigating controls have been implemented — it's the risk the organization still carries despite its safeguards.",
+        "incorrect": "Inherent risk is the risk level BEFORE any controls are applied. Risk appetite describes the general amount of risk an organization is willing to pursue. Risk tolerance describes the acceptable variation around that appetite level for a specific risk.",
+        "examTip": "Controls reduce inherent risk down to residual risk — but residual risk is never zero; some risk always remains.",
+        "relatedTopics": [
+          "residual-risk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "residual-risk",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Inherent risk",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Residual risk",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Risk appetite",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Risk tolerance",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-122",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Scenario: Wayne Enterprises is expanding operations into the European Union and must ensure it properly handles the personal data of EU residents, including honoring data subject access and erasure requests. Which regulation primarily governs this requirement?",
+      "explanation": {
+        "correct": "GDPR (General Data Protection Regulation) governs the processing of EU residents' personal data and grants data subjects specific rights, including access and erasure ('right to be forgotten').",
+        "incorrect": "HIPAA governs U.S. healthcare data specifically, not general EU personal data. PCI DSS governs payment card data security, not personal data rights broadly. FISMA governs U.S. federal information systems, unrelated to EU data protection.",
+        "examTip": "GDPR distinguishes between a Data Controller (decides why/how data is processed) and a Data Processor (processes data on the controller's behalf) — both have distinct compliance obligations.",
+        "relatedTopics": [
+          "gdpr"
+        ]
+      },
+      "metadata": {
+        "examObjective": "gdpr",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Wayne Enterprises' legal team has flagged that their new EU customer portal must comply with regional data protection requirements before launch.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "HIPAA",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "PCI DSS",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "GDPR",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "FISMA",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-123",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which framework provides a voluntary set of standards, guidelines, and best practices organized around five core functions — Identify, Protect, Detect, Respond, Recover — for managing cybersecurity risk?",
+      "explanation": {
+        "correct": "The NIST CSF organizes cybersecurity risk management around five core functions (Identify, Protect, Detect, Respond, Recover), providing a flexible, widely adopted framework.",
+        "incorrect": "ISO 27001 is an international standard for an Information Security Management System (ISMS) with a certification process, structured differently than NIST CSF's five functions. PCI DSS is specific to payment card data security. SOC 2 is an audit report type focused on service organization controls, not a five-function risk framework.",
+        "examTip": "Remember NIST CSF's five functions: Identify, Protect, Detect, Respond, Recover — often abbreviated IPDRR.",
+        "relatedTopics": [
+          "nist-csf"
+        ]
+      },
+      "metadata": {
+        "examObjective": "nist-csf",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Globex Corp's new CISO wants a widely recognized, flexible structure for organizing the company's entire cybersecurity risk management program.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "ISO 27001",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "NIST Cybersecurity Framework (CSF)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "PCI DSS",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SOC 2",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-124",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which compliance standard specifically applies to organizations that store, process, or transmit credit card data, mandating requirements such as network segmentation and encryption of cardholder data?",
+      "explanation": {
+        "correct": "PCI DSS (Payment Card Industry Data Security Standard) specifically governs organizations handling payment card data, with requirements covering network security, encryption, and access control for cardholder data.",
+        "incorrect": "HIPAA governs healthcare data (PHI), not payment cards. GDPR governs personal data broadly for EU residents, not specifically payment cards. CCPA is a California state privacy law focused on consumer personal information, not specifically payment card security.",
+        "examTip": "PCI DSS requires segmenting the cardholder data environment (CDE) from the rest of the network to reduce compliance scope and risk.",
+        "relatedTopics": [
+          "pci-dss"
+        ]
+      },
+      "metadata": {
+        "examObjective": "pci-dss",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "HIPAA",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "PCI DSS",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "GDPR",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "CCPA",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-125",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which document defines acceptable and prohibited uses of an organization's IT systems and resources by employees?",
+      "explanation": {
+        "correct": "An AUP explicitly defines what employees may and may not do with company IT resources, setting behavioral expectations and consequences for violations.",
+        "incorrect": "A BIA assesses the impact of disruptions to business processes, unrelated to acceptable use rules. A data retention policy governs how long data is kept, a different scope. A change management policy governs how changes to systems are proposed, approved, and implemented.",
+        "examTip": "New employees typically sign the AUP during onboarding, acknowledging they understand and agree to the organization's technology usage rules.",
+        "relatedTopics": [
+          "aup"
+        ]
+      },
+      "metadata": {
+        "examObjective": "aup",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Business Impact Analysis (BIA)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Acceptable Use Policy (AUP)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Data retention policy",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Change management policy",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-126",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which business continuity planning document identifies critical business processes and estimates the impact of their disruption over time, informing RTO and RPO targets?",
+      "explanation": {
+        "correct": "A BIA identifies critical processes, dependencies, and quantifies the impact of disruption over time — its findings directly inform RTO/RPO targets used in BCP/DRP planning.",
+        "incorrect": "The BCP is the broader plan for maintaining business operations during disruption, informed by (but distinct from) the BIA's analysis. The DRP focuses specifically on IT/technical recovery procedures. An incident response plan addresses security incident handling, a related but separate discipline.",
+        "examTip": "Think of the BIA as the analysis/data-gathering phase that FEEDS INTO the BCP and DRP — it answers 'what happens if this process stops?'",
+        "relatedTopics": [
+          "bia"
+        ]
+      },
+      "metadata": {
+        "examObjective": "bia",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Business Continuity Plan (BCP)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Business Impact Analysis (BIA)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Disaster Recovery Plan (DRP)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Incident response plan",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-127",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which third-party risk management concept refers to a formal agreement establishing a general understanding of cooperation between two organizations, without necessarily being legally binding in the way a full contract is?",
+      "explanation": {
+        "correct": "An MOU documents a general mutual understanding and intent to cooperate between parties, often less formally binding than a full contract like an SLA or MSA.",
+        "incorrect": "An SLA defines specific measurable performance commitments. An MSA establishes the overarching legal terms governing a business relationship across multiple future contracts/statements of work. An NDA specifically protects confidential information, a narrower and distinctly binding legal purpose.",
+        "examTip": "MOUs are often used between government agencies or business units where formal binding contracts aren't necessary but documented intent is still valuable.",
+        "relatedTopics": [
+          "mou"
+        ]
+      },
+      "metadata": {
+        "examObjective": "mou",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "SLA",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "MOU (Memorandum of Understanding)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "MSA (Master Service Agreement)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "NDA",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-128",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In privacy terminology, which role determines the purposes and means by which personal data is processed?",
+      "explanation": {
+        "correct": "The data controller decides WHY and HOW personal data is processed, bearing primary responsibility for compliance under frameworks like GDPR.",
+        "incorrect": "The data processor acts on the controller's instructions to process data, without independently deciding the purpose. Data custodian is a more general operational/technical stewardship role. The data subject is the individual whose personal data is being processed.",
+        "examTip": "Under GDPR, the Controller bears primary legal responsibility, though Processors also have direct compliance obligations under Article 28.",
+        "relatedTopics": [
+          "data-controller-processor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "data-controller-processor",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data processor",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Data controller",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Data custodian",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data subject",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-129",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which type of security awareness activity involves sending employees realistic but fake phishing emails to measure and improve their ability to recognize social engineering attempts?",
+      "explanation": {
+        "correct": "Phishing simulations send controlled, realistic fake phishing emails to employees to measure susceptibility and reinforce training through a safe, observable exercise.",
+        "incorrect": "A tabletop exercise is a discussion-based DR/IR plan walkthrough, unrelated to testing individual employee phishing susceptibility. A penetration test targets technical systems, not specifically employee awareness via simulated phishing. A PIA assesses privacy risk in a project or system, a different governance activity.",
+        "examTip": "Track click-through and reporting rates over time from phishing simulations to measure the effectiveness of security awareness training.",
+        "relatedTopics": [
+          "phishing-simulation",
+          "security-awareness-training"
+        ]
+      },
+      "metadata": {
+        "examObjective": "phishing-simulation",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tabletop exercise",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Phishing simulation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Penetration test",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Privacy impact assessment",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-130",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which risk management term describes the amount of risk an organization is generally willing to pursue or retain in order to achieve its objectives?",
+      "explanation": {
+        "correct": "Risk appetite describes the broad, strategic amount of risk an organization is willing to accept in pursuit of its goals, set typically at the executive/board level.",
+        "incorrect": "Risk tolerance describes the acceptable range of variation around a SPECIFIC risk or metric, a narrower and more granular concept than overall appetite. Residual and inherent risk describe risk levels after and before controls, not the organization's general willingness to accept risk.",
+        "examTip": "Risk appetite is strategic and broad (set by leadership); risk tolerance is tactical and specific (applied to individual risks/metrics).",
+        "relatedTopics": [
+          "risk-appetite"
+        ]
+      },
+      "metadata": {
+        "examObjective": "risk-appetite",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Risk tolerance",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Risk appetite",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Residual risk",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Inherent risk",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-131",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which SOC (System and Organization Controls) report type is most relevant to a customer evaluating a cloud service provider's security, availability, and confidentiality controls over an extended period of time?",
+      "explanation": {
+        "correct": "A SOC 2 Type II report evaluates the operating effectiveness of a service organization's security, availability, and confidentiality controls over an extended review period (typically 6-12 months), making it the most relevant and detailed for evaluating cloud provider security posture.",
+        "incorrect": "SOC 1 focuses specifically on financial reporting controls, not general security/availability. SOC 3 is a public-facing summary report with far less detail than SOC 2, generally insufficient for deep due diligence. A PCI DSS Report on Compliance is specific to payment card handling, not a general security/availability assessment.",
+        "examTip": "SOC 2 Type I assesses control DESIGN at a single point in time; SOC 2 Type II assesses control OPERATING EFFECTIVENESS over a period — Type II is the stronger assurance.",
+        "relatedTopics": [
+          "soc-2"
+        ]
+      },
+      "metadata": {
+        "examObjective": "soc-2",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "SOC 1",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SOC 2 Type II",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SOC 3 only",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "PCI DSS Report on Compliance",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-132",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which document formally records identified organizational risks, their likelihood, impact, and assigned treatment/owner, serving as a central risk management tracking tool?",
+      "explanation": {
+        "correct": "A risk register centrally documents each identified risk along with its likelihood, impact, treatment plan, and assigned owner, serving as the organization's primary risk tracking artifact.",
+        "incorrect": "A risk appetite statement describes the organization's general risk tolerance level, not individual tracked risks. A BCP addresses maintaining operations during disruption, a different document. A data retention policy governs data lifecycle, unrelated to general risk tracking.",
+        "examTip": "Risk registers should be living documents, reviewed and updated regularly as new risks emerge and existing ones change in likelihood/impact.",
+        "relatedTopics": [
+          "risk-register"
+        ]
+      },
+      "metadata": {
+        "examObjective": "risk-register",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Initech's leadership asked the security team for a single, centralized view of every known risk facing the organization along with its owner and status.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Risk register",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Risk appetite statement",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Business continuity plan",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data retention policy",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-133",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid risk treatment strategies recognized in risk management?",
+      "explanation": {
+        "correct": "Mitigation (reducing likelihood/impact via controls) and transfer (shifting impact to a third party, like insurance) are both standard, recognized risk treatment strategies.",
+        "incorrect": "True 'elimination without any residual exposure' isn't a standard treatment category as phrased (avoidance still can leave some indirect exposure), and 'risk maximization' is not a recognized risk management strategy at all — organizations seek to manage, not maximize, risk.",
+        "examTip": "The standard four risk treatments are: Avoid, Transfer, Mitigate, Accept — memorize this set for the exam.",
+        "relatedTopics": [
+          "risk-treatment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "risk-treatment",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Risk mitigation",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Risk transfer",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Risk elimination without any possible residual exposure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Risk maximization",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-134",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO of the following are compliance frameworks/standards that specifically apply to healthcare-related data in the United States or to specialized security control catalogs used by U.S. federal agencies?",
+      "explanation": {
+        "correct": "HIPAA governs protected health information (PHI) in the U.S., and NIST SP 800-53 provides a detailed security control catalog widely used by U.S. federal agencies (and often adopted more broadly).",
+        "incorrect": "PCI DSS governs payment card data specifically, not healthcare or general federal control catalogs. GDPR is an EU regulation governing personal data broadly, not specific to U.S. healthcare or federal systems.",
+        "examTip": "NIST SP 800-53 provides the detailed control CATALOG; FISMA is the LAW mandating federal agencies implement such controls — the two work together.",
+        "relatedTopics": [
+          "hipaa",
+          "nist-800-53"
+        ]
+      },
+      "metadata": {
+        "examObjective": "hipaa",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "HIPAA",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "NIST SP 800-53",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "PCI DSS",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "GDPR",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-135",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO of the following are examples of privacy-related individual rights commonly granted under modern data protection regulations like GDPR?",
+      "explanation": {
+        "correct": "The right to access and the right to erasure are both well-established data subject rights under regulations like GDPR, empowering individuals over their own personal data.",
+        "incorrect": "Demanding a competitor's proprietary source code and unlimited free support are not recognized privacy/data-subject rights under any standard privacy framework — they're unrelated to personal data protection entirely.",
+        "examTip": "Other common GDPR data subject rights include rectification (correcting inaccurate data) and data portability (receiving data in a portable format).",
+        "relatedTopics": [
+          "data-subject-rights"
+        ]
+      },
+      "metadata": {
+        "examObjective": "data-subject-rights",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "The right to access one's own personal data held by an organization",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The right to request erasure ('right to be forgotten') of personal data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The right to demand a competitor's proprietary source code",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The right to unlimited free technical support from any vendor",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-136",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid components typically included in a formal vendor/third-party risk assessment process?",
+      "explanation": {
+        "correct": "Reviewing security certifications and including right-to-audit clauses are both standard, recognized due diligence steps in vendor risk assessment.",
+        "incorrect": "Trusting a vendor based purely on website appearance, or skipping due diligence for the cheapest option, both represent poor risk management practices that bypass proper vendor vetting.",
+        "examTip": "Right-to-audit clauses allow the organization to verify a vendor's actual security posture, rather than relying solely on self-reported claims or certifications.",
+        "relatedTopics": [
+          "third-party-risk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "third-party-risk",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reviewing the vendor's security certifications (e.g., SOC 2, ISO 27001)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Including a right-to-audit clause in the contract",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Automatically trusting any vendor with a professional-looking website",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Skipping due diligence for vendors offering the lowest price",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-137",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO of the following are recognized categories of organizational risk beyond pure cybersecurity/technical risk?",
+      "explanation": {
+        "correct": "Reputational risk (damage to public trust/brand) and compliance risk (failing to meet regulatory obligations) are both recognized broad risk categories that organizations must manage alongside technical/operational risk.",
+        "incorrect": "'Encryption risk' and 'Firewall risk' are not standard recognized risk category names in governance/risk frameworks — these describe specific technical controls, not broad organizational risk categories.",
+        "examTip": "Common broad risk categories: Strategic, Operational, Financial, Compliance, Reputational — cybersecurity risk often intersects with several of these simultaneously.",
+        "relatedTopics": [
+          "risk-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "risk-types",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reputational risk",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Compliance risk",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Encryption risk",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Firewall risk",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-138",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are appropriate uses of a formal change management process?",
+      "explanation": {
+        "correct": "Requiring documented approval and assessing security impact before implementation are core, correctly-applied change management practices that reduce risk from unreviewed changes.",
+        "incorrect": "Allowing unreviewed changes at any time and skipping documentation for 'minor' changes both undermine the purpose of change management, which is precisely to catch unintended consequences before they occur — regardless of perceived change size.",
+        "examTip": "Even 'minor' undocumented changes are a common root cause of outages and security incidents — consistent process discipline matters regardless of perceived change size.",
+        "relatedTopics": [
+          "change-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "change-management",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Requiring documented approval before deploying a firewall rule change to production",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Assessing potential security impact of a proposed system change before implementation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Allowing any engineer to make production changes at any time without review",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Skipping documentation for 'minor' changes to save time",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-139",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Risk avoidance eliminates the risk-causing activity entirely (e.g., not offering a risky service). Qualitative analysis uses relative/descriptive ratings, not precise dollar figures — that's quantitative analysis instead. PCI DSS is actually an industry-created contractual standard enforced by payment brands/processors, not a government-enacted law.",
+        "incorrect": "Two statements are false: ALE-style dollar figures belong to quantitative (not qualitative) analysis, and PCI DSS is a contractual industry standard, not federal law.",
+        "examTip": "PCI DSS compliance is enforced through merchant contracts with payment processors/card brands, not through government legislation.",
+        "relatedTopics": [
+          "risk-treatment",
+          "quantitative-risk-analysis",
+          "pci-dss"
+        ]
+      },
+      "metadata": {
+        "examObjective": "risk-treatment",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Risk avoidance means eliminating the activity or exposure that creates the risk entirely.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A qualitative risk analysis typically uses precise dollar figures like Annualized Loss Expectancy (ALE) to express risk.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "PCI DSS is a legally mandated U.S. federal law rather than an industry-created contractual standard.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-140",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "BYOD policies specifically govern personal device use for work purposes. Password policies commonly define length/complexity/expiration rules. Role-based training, by definition, tailors content to the SPECIFIC risks and responsibilities of different job functions — it does NOT deliver identical content to everyone.",
+        "incorrect": "The false statement contradicts the defining feature of role-based training, which is precisely that content varies by role/responsibility.",
+        "examTip": "Role-based training example: developers get secure coding training, while finance staff get BEC/wire-fraud-focused training.",
+        "relatedTopics": [
+          "byod",
+          "password-policy",
+          "security-awareness-training"
+        ]
+      },
+      "metadata": {
+        "examObjective": "byod",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A BYOD (Bring Your Own Device) policy governs the use of personal devices for accessing corporate resources.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A password policy typically defines requirements such as minimum length, complexity, and expiration.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Role-based security awareness training delivers identical content to every employee regardless of their job function.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-141",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Inherent risk represents the raw, pre-control risk level. A PIA should be conducted PROACTIVELY, ideally during the design/planning phase before deployment, to identify and address privacy risks early ('privacy by design') — not only after the fact. HIPAA's Security Rule specifically governs ePHI safeguards.",
+        "incorrect": "The false statement incorrectly claims a PIA is conducted only after deployment, when best practice (and 'privacy by design' principles) calls for conducting it proactively, before or during system design.",
+        "examTip": "Privacy by design means embedding privacy protections into a system's architecture from the start, not bolting them on after deployment.",
+        "relatedTopics": [
+          "inherent-risk",
+          "pia",
+          "hipaa"
+        ]
+      },
+      "metadata": {
+        "examObjective": "inherent-risk",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Inherent risk is the level of risk that exists before any controls or mitigations have been applied.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A privacy impact assessment (PIA) is typically conducted only after a new system or process has already been fully deployed.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "HIPAA's Security Rule specifically addresses safeguards for electronic protected health information (ePHI).",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "secplus-142",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "ISO 27001 certification is centered on establishing and maintaining an ISMS. CCPA specifically grants rights to CALIFORNIA residents, not all U.S. states broadly — its applicability is state-specific, not nationwide. Tabletop exercises test DR/IR plan readiness through discussion, while phishing simulations test individual employee susceptibility to social engineering — two distinctly different capabilities.",
+        "incorrect": "Two statements are false: CCPA's protections are specific to California residents (not all U.S. states), and tabletop exercises/phishing simulations test different things entirely.",
+        "examTip": "Other U.S. states have since passed their own similar privacy laws (e.g., Virginia's VCDPA), but CCPA itself remains specifically California-focused.",
+        "relatedTopics": [
+          "iso-27001",
+          "ccpa"
+        ]
+      },
+      "metadata": {
+        "examObjective": "iso-27001",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "ISO 27001 certification requires an organization to implement and maintain an Information Security Management System (ISMS).",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "CCPA (California Consumer Privacy Act) grants privacy rights exclusively to residents of any U.S. state, not just California.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A tabletop exercise and a phishing simulation test the exact same organizational capability.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-143",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "An MSA sets up overarching legal terms for a business relationship, under which individual project agreements can be executed more efficiently. A data retention policy defines data lifecycle/disposal timelines. Job rotation cross-trains staff and helps surface fraud or errors that a single long-tenured employee might otherwise conceal.",
+        "incorrect": "All three statements are accurate; the tested knowledge is recognizing the correct purpose of each distinct governance concept.",
+        "examTip": "Job rotation and mandatory vacation policies work together — fraud is often discovered specifically while the perpetrator is away and someone else covers their duties.",
+        "relatedTopics": [
+          "msa",
+          "data-retention",
+          "job-rotation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "msa",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "An MSA (Master Service Agreement) typically establishes overarching legal terms that govern future individual statements of work between two parties.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A data retention policy specifies how long different categories of data must be kept before secure disposal.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Job rotation is a security control designed specifically to prevent any one employee from becoming irreplaceable and to help surface fraud.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "secplus-144",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "CIS Controls offer prioritized, actionable technical safeguards, complementary to broader frameworks like NIST CSF. A risk register must be a living document, continuously updated as risks evolve — not a one-time static artifact. Risk appetite is a strategic decision appropriately set by leadership/the board, not by individual technical staff.",
+        "incorrect": "The false statement wrongly claims a risk register is a one-time exercise; ongoing maintenance is essential for it to remain useful.",
+        "examTip": "CIS Controls are often praised for being highly actionable and prioritized (starting with foundational 'basic' controls), unlike broader, more abstract frameworks.",
+        "relatedTopics": [
+          "cis-controls",
+          "risk-register",
+          "risk-appetite"
+        ]
+      },
+      "metadata": {
+        "examObjective": "cis-controls",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The CIS Controls (Center for Internet Security) provide a prioritized set of actionable cybersecurity best practices, distinct from but complementary to frameworks like NIST CSF.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A risk register only needs to be created once and never requires further updates after initial completion.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "An organization's risk appetite should be defined and approved at the executive/board level, not by individual technical staff.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "secplus-145",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "A risk register centrally tracks each identified risk's key details. Cybersecurity insurance is the classic example of transferring financial risk impact to a third party.",
+        "incorrect": "A risk appetite statement and BIA serve different governance purposes, not detailed per-risk tracking. A firewall, SOC 2 report, and penetration test are technical/assurance tools, not financial risk-transfer mechanisms.",
+        "examTip": "Insurance transfers FINANCIAL impact but doesn't eliminate the underlying technical/operational risk — mitigating controls are still needed alongside it.",
+        "relatedTopics": [
+          "risk-register",
+          "risk-treatment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "risk-register",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To formally document and track the likelihood, impact, and assigned owner of each identified organizational risk, maintain a __",
+          "options": [
+            "Risk appetite statement",
+            "Risk register",
+            "Business impact analysis",
+            "Data retention policy"
+          ],
+          "correctAnswer": "Risk register"
+        },
+        {
+          "id": "d2",
+          "prompt": "To reduce the financial impact of a major security incident by shifting potential losses to a third party, an organization can purchase __",
+          "options": [
+            "A firewall subscription",
+            "Cybersecurity insurance",
+            "A SOC 2 report",
+            "A penetration test"
+          ],
+          "correctAnswer": "Cybersecurity insurance"
+        }
+      ]
+    },
+    {
+      "id": "secplus-146",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "PCI DSS is the correct standard for payment card data handling requirements. SOC 2 Type II specifically evaluates operating effectiveness over an extended period, ideal for SaaS vendor due diligence.",
+        "incorrect": "HIPAA, GDPR, and FISMA govern different data types/jurisdictions unrelated to payment card processing. SOC 1 focuses on financial reporting controls, and a PCI DSS ROC is specific to card data, not general SaaS security/availability assurance.",
+        "examTip": "Request the SOC 2 Type II report (not just Type I) when you need assurance controls actually operated effectively over time, not just that they were well-designed at a single point.",
+        "relatedTopics": [
+          "pci-dss",
+          "soc-2"
+        ]
+      },
+      "metadata": {
+        "examObjective": "pci-dss",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To assess a payment processing vendor's compliance with cardholder data security requirements, reference the __ standard.",
+          "options": [
+            "HIPAA",
+            "PCI DSS",
+            "GDPR",
+            "FISMA"
+          ],
+          "correctAnswer": "PCI DSS"
+        },
+        {
+          "id": "d2",
+          "prompt": "To evaluate a SaaS vendor's security, availability, and confidentiality controls over a 6-12 month period before signing a contract, request a __ report.",
+          "options": [
+            "SOC 1",
+            "SOC 2 Type II",
+            "PCI DSS ROC",
+            "NIST SP 800-53 self-assessment"
+          ],
+          "correctAnswer": "SOC 2 Type II"
+        }
+      ]
+    },
+    {
+      "id": "secplus-147",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "The right to erasure ('right to be forgotten') is the specific GDPR right being fulfilled when deleting a data subject's personal data on request. A BIA is the correct analysis for identifying critical processes and their acceptable downtime/data loss thresholds.",
+        "incorrect": "The right to access, portability, and rectification address different data subject requests (viewing, transferring, and correcting data respectively), not deletion. Tabletop exercises, penetration tests, and vendor risk assessments serve different governance purposes than identifying process criticality.",
+        "examTip": "BIA findings (criticality + acceptable downtime) directly translate into the RTO/RPO targets used later in BCP/DRP planning.",
+        "relatedTopics": [
+          "data-subject-rights",
+          "bia"
+        ]
+      },
+      "metadata": {
+        "examObjective": "data-subject-rights",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To honor an EU customer's request to have their personal data permanently deleted from your systems, you are fulfilling their __ under GDPR.",
+          "options": [
+            "Right to access",
+            "Right to erasure",
+            "Right to portability",
+            "Right to rectification"
+          ],
+          "correctAnswer": "Right to erasure"
+        },
+        {
+          "id": "d2",
+          "prompt": "To determine which business processes are most critical and what the acceptable downtime/data loss would be for each, conduct a __",
+          "options": [
+            "Tabletop exercise",
+            "Business Impact Analysis (BIA)",
+            "Penetration test",
+            "Vendor risk assessment"
+          ],
+          "correctAnswer": "Business Impact Analysis (BIA)"
+        }
+      ]
+    },
+    {
+      "id": "secplus-148",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "An AUP governs acceptable technology use by employees. An NDA specifically protects confidential information from unauthorized disclosure between parties.",
+        "incorrect": "NDA, SLA, and MOU each serve different, distinct purposes (confidentiality, performance commitments, and general understanding respectively) rather than governing acceptable technology use. AUP, SLA, and BIA don't specifically address confidentiality protection.",
+        "examTip": "Employees typically sign both an AUP (usage rules) and often an NDA (confidentiality) as part of onboarding, serving two distinct but related governance purposes.",
+        "relatedTopics": [
+          "aup",
+          "nda"
+        ]
+      },
+      "metadata": {
+        "examObjective": "aup",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A policy defining what employees may and may not do with company computers and networks is called an __",
+          "options": [
+            "NDA",
+            "Acceptable Use Policy (AUP)",
+            "SLA",
+            "MOU"
+          ],
+          "correctAnswer": "Acceptable Use Policy (AUP)"
+        },
+        {
+          "id": "d2",
+          "prompt": "An agreement specifically protecting confidential information shared between two organizations from unauthorized disclosure is called an __",
+          "options": [
+            "AUP",
+            "SLA",
+            "NDA",
+            "BIA"
+          ],
+          "correctAnswer": "NDA"
+        }
+      ]
+    },
+    {
+      "id": "secplus-149",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order for conducting a formal quantitative risk assessment.",
+      "explanation": {
+        "correct": "Quantitative risk assessment starts with valuing the asset, calculating SLE (asset value times exposure factor), estimating how often the threat is expected to occur annually (ARO), and finally multiplying SLE by ARO to derive ALE.",
+        "incorrect": "You cannot calculate SLE without first knowing asset value, and ALE cannot be calculated without both SLE and ARO already determined as inputs.",
+        "examTip": "Formula to memorize: SLE = Asset Value × Exposure Factor; ALE = SLE × ARO.",
+        "relatedTopics": [
+          "quantitative-risk-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "quantitative-risk-analysis",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify the asset and determine its value",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Calculate the Single Loss Expectancy (SLE) based on asset value and exposure factor",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Determine the Annualized Rate of Occurrence (ARO) for the threat",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Calculate the Annualized Loss Expectancy (ALE) as SLE multiplied by ARO",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "secplus-150",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order for onboarding a new third-party vendor under a formal third-party risk management program.",
+      "explanation": {
+        "correct": "Vendor risk management begins with an initial assessment of the vendor's security posture, followed by negotiating protective contractual terms, granting least-privilege access, and then continuously reassessing risk throughout the ongoing relationship.",
+        "incorrect": "Granting access before assessment and contractual protections are in place would expose the organization to unmanaged risk, and periodic reassessment logically continues throughout (not before) the active relationship.",
+        "examTip": "Vendor risk management doesn't end at contract signing — periodic reassessment throughout the relationship is essential as the vendor's own risk posture can change over time.",
+        "relatedTopics": [
+          "third-party-risk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "third-party-risk",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Conduct an initial vendor security/risk assessment (e.g., review certifications, questionnaires)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Negotiate contractual protections such as an SLA, NDA, and right-to-audit clause",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Grant the vendor the minimum necessary access to systems/data required for their service",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Periodically reassess the vendor's risk posture throughout the relationship",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "secplus-151",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Sort each governance concept into the correct category.",
+      "explanation": {
+        "correct": "Risk appetite and residual risk are core risk management concepts describing an organization's risk posture, while GDPR and PCI DSS are specific external compliance frameworks/regulations organizations must adhere to.",
+        "incorrect": "This distinction separates internal risk management THINKING from external, mandated compliance REQUIREMENTS an organization must satisfy.",
+        "examTip": "Compliance frameworks often shape and constrain an organization's risk appetite — regulatory requirements set a mandatory floor for acceptable risk in certain areas.",
+        "relatedTopics": [
+          "risk-appetite",
+          "gdpr",
+          "pci-dss"
+        ]
+      },
+      "metadata": {
+        "examObjective": "risk-appetite",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Risk appetite"
+        },
+        {
+          "id": "item2",
+          "text": "Residual risk"
+        },
+        {
+          "id": "item3",
+          "text": "GDPR"
+        },
+        {
+          "id": "item4",
+          "text": "PCI DSS"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Risk management concept",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Compliance framework/regulation",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "secplus-152",
+      "topicId": "governance-risk-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each business continuity document into the correct category based on its primary focus.",
+      "explanation": {
+        "correct": "The BIA and risk register are analytical inputs that inform planning, while the BCP and DRP are the actionable plans built using those inputs to guide the organization through an actual disruption.",
+        "incorrect": "This tests recognizing which documents are used to GATHER information (analysis) versus which documents are used to ACT during a disruption (plans).",
+        "examTip": "BIA findings and identified risks should directly shape the specific recovery strategies and priorities documented in the BCP and DRP.",
+        "relatedTopics": [
+          "bia",
+          "risk-register"
+        ]
+      },
+      "metadata": {
+        "examObjective": "bia",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Business Impact Analysis (BIA)"
+        },
+        {
+          "id": "item2",
+          "text": "Risk register"
+        },
+        {
+          "id": "item3",
+          "text": "Business Continuity Plan (BCP)"
+        },
+        {
+          "id": "item4",
+          "text": "Disaster Recovery Plan (DRP)"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Analysis / planning input document",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Actionable recovery plan document",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    }
+  ]
+}

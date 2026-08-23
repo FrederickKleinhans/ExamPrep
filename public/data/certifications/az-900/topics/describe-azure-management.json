@@ -1,0 +1,2302 @@
+{
+  "certificationId": "az-900",
+  "topicId": "describe-azure-management",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "az900-010",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which tool provides a web-based, unified console for managing Azure resources using a graphical user interface?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure CLI",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure PowerShell",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Portal",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Cloud Shell",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Azure Portal is a web-based GUI console where you can manage all Azure resources. It provides dashboards, wizards, and a visual interface for resource management.",
+        "incorrect": "Azure CLI and PowerShell are command-line tools. Cloud Shell provides CLI/PowerShell access from a browser but is still command-line based.",
+        "examTip": "Azure Portal is best for visual exploration and one-off tasks. CLI/PowerShell are better for automation and scripting.",
+        "relatedTopics": [
+          "azure-management-tools",
+          "azure-portal"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-011",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service provides personalized recommendations to improve the reliability, security, performance, operational excellence, and cost of your Azure resources?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Monitor",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Advisor",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Service Health",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft Defender for Cloud",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Advisor analyzes your deployed resources and provides personalized best-practice recommendations across five categories: reliability, security, performance, operational excellence, and cost.",
+        "incorrect": "Azure Monitor collects and analyzes telemetry. Service Health tracks Azure service issues. Defender for Cloud focuses specifically on security posture.",
+        "examTip": "Advisor = proactive recommendations. Monitor = telemetry and alerts. Service Health = Azure platform status.",
+        "relatedTopics": [
+          "azure-advisor",
+          "azure-monitoring-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe monitoring tools in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-012",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Azure governance feature allows you to define reusable sets of governance tools and resource configurations that can be applied to new subscriptions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Policy",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Blueprints",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Resource locks",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Management groups",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Blueprints enables you to define a repeatable set of governance tools and standard Azure resources that your organization requires. Each blueprint can include policy assignments, role assignments, ARM templates, and resource groups.",
+        "incorrect": "Azure Policy enforces individual rules. Resource locks prevent deletion/modification. Management groups organize subscriptions hierarchically.",
+        "examTip": "Blueprints = package of policies + roles + templates for repeatable environment setup. Think of it as a 'stamp' for compliant environments.",
+        "relatedTopics": [
+          "azure-governance",
+          "azure-blueprints",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-013",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure feature allows you to estimate the costs of running specific Azure services before you deploy them?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Cost Management",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Pricing Calculator",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Advisor",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Total Cost of Ownership (TCO) Calculator",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Azure Pricing Calculator allows you to estimate costs by configuring specific Azure services and seeing projected monthly costs before deployment.",
+        "incorrect": "Cost Management analyzes existing spending. Advisor provides recommendations. TCO Calculator compares on-premises vs Azure costs for migration planning.",
+        "examTip": "Pricing Calculator = estimate future costs. TCO Calculator = compare on-prem vs cloud costs. Cost Management = analyze current spending.",
+        "relatedTopics": [
+          "azure-cost-management",
+          "pricing-calculator"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-019",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO methods can be used to deploy Azure resources using Infrastructure as Code (IaC)? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "ARM templates (JSON)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Portal wizard",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Bicep templates",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Advisor recommendations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ARM templates (JSON) and Bicep templates are both declarative Infrastructure as Code approaches for deploying Azure resources in a repeatable, consistent manner.",
+        "incorrect": "Azure Portal is a GUI tool, not IaC. Azure Advisor provides recommendations but does not deploy resources.",
+        "examTip": "Bicep is a domain-specific language that compiles to ARM JSON. It is simpler to write and read than raw ARM templates.",
+        "relatedTopics": [
+          "infrastructure-as-code",
+          "arm-templates",
+          "bicep"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-024",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Policy can automatically remediate non-compliant resources.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Policy can be used to restrict which Azure regions resources can be deployed to.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Azure Policy replaces Role-Based Access Control (RBAC).",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Policy can remediate non-compliant resources via remediation tasks and can restrict allowed regions through built-in policies. Policy and RBAC serve different purposes.",
+        "incorrect": "Azure Policy enforces organizational standards on resources. RBAC controls who can perform actions. They complement each other, not replace each other.",
+        "examTip": "Policy = what resources can do (configuration). RBAC = what users can do (permissions). Use both together for comprehensive governance.",
+        "relatedTopics": [
+          "azure-policy",
+          "governance",
+          "rbac"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-027",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A Delete lock on a resource group prevents resources within it from being deleted.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A ReadOnly lock on a resource prevents it from being modified or deleted.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Resource locks are inherited by child resources from parent resource groups.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Delete locks prevent deletion. ReadOnly locks prevent both modification and deletion. Locks applied at the resource group level are inherited by all resources within that group.",
+        "incorrect": "All three statements are true. Locks are a governance feature that work hierarchically and prevent accidental changes.",
+        "examTip": "Lock inheritance: management group > subscription > resource group > resource. Higher-level locks take precedence.",
+        "relatedTopics": [
+          "resource-locks",
+          "governance",
+          "resource-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-030",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To view and analyze your current Azure spending and identify cost trends, you should use",
+          "options": [
+            "Azure Pricing Calculator",
+            "Azure Cost Management",
+            "Azure Advisor",
+            "TCO Calculator"
+          ],
+          "correctAnswer": "Azure Cost Management"
+        },
+        {
+          "id": "d2",
+          "prompt": "To compare the estimated cost of running workloads on-premises versus in Azure, you should use",
+          "options": [
+            "Azure Pricing Calculator",
+            "Azure Cost Management",
+            "Azure Advisor",
+            "TCO Calculator"
+          ],
+          "correctAnswer": "TCO Calculator"
+        }
+      ],
+      "explanation": {
+        "correct": "Cost Management tracks and analyzes current spending with budgets and alerts. The TCO Calculator estimates savings by comparing on-premises costs to Azure equivalents.",
+        "incorrect": "Pricing Calculator estimates future Azure costs for specific services. Advisor provides optimization recommendations including cost savings.",
+        "examTip": "Cost Management = track current spend. Pricing Calculator = estimate future costs. TCO Calculator = compare migration savings.",
+        "relatedTopics": [
+          "cost-management",
+          "tco-calculator",
+          "pricing-calculator"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-034",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To deploy Azure resources in a repeatable, declarative manner using JSON files, you should use",
+          "options": [
+            "Azure CLI",
+            "ARM templates",
+            "Azure Portal",
+            "Azure PowerShell"
+          ],
+          "correctAnswer": "ARM templates"
+        },
+        {
+          "id": "d2",
+          "prompt": "To set a spending threshold and receive alerts when Azure costs approach it, you should use",
+          "options": [
+            "Azure Advisor",
+            "Azure Monitor alerts",
+            "Cost Management budgets",
+            "Azure Service Health"
+          ],
+          "correctAnswer": "Cost Management budgets"
+        }
+      ],
+      "explanation": {
+        "correct": "ARM templates are declarative JSON files that define Azure infrastructure. Cost Management budgets let you set spending thresholds and receive alerts when exceeded.",
+        "incorrect": "CLI and PowerShell are imperative (step-by-step) tools. Portal is manual. Advisor gives recommendations. Monitor alerts are for metrics. Service Health tracks platform status.",
+        "examTip": "Declarative = define desired state (ARM/Bicep). Imperative = specify step-by-step commands (CLI/PowerShell). Both achieve the same result differently.",
+        "relatedTopics": [
+          "arm-templates",
+          "cost-management",
+          "budgets"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-035",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To collect and analyze telemetry data from Azure resources and applications, you should use",
+          "options": [
+            "Azure Advisor",
+            "Azure Monitor",
+            "Azure Service Health",
+            "Microsoft Defender for Cloud"
+          ],
+          "correctAnswer": "Azure Monitor"
+        },
+        {
+          "id": "d2",
+          "prompt": "To ensure all Azure resources in a subscription have a specific tag applied, you should use",
+          "options": [
+            "Azure Blueprints",
+            "Resource locks",
+            "Azure Policy",
+            "Management groups"
+          ],
+          "correctAnswer": "Azure Policy"
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Monitor collects, analyzes, and acts on telemetry from cloud and on-premises environments. Azure Policy can enforce tagging requirements and auto-remediate non-compliant resources.",
+        "incorrect": "Advisor provides recommendations. Service Health shows platform issues. Blueprints package governance tools. Locks prevent changes. Management groups organize subscriptions.",
+        "examTip": "Monitor = observe (metrics, logs, alerts). Policy = enforce (rules, compliance, remediation). Use them together for full operational governance.",
+        "relatedTopics": [
+          "azure-monitor",
+          "azure-policy",
+          "tagging",
+          "governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe monitoring tools in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-037",
+      "type": "ordering",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You need to implement Azure Policy to enforce governance in your organization. Arrange the following steps in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Define the policy rule (what to evaluate and what action to take)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a policy definition",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Assign the policy to a scope (management group, subscription, or resource group)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Review compliance results and remediate non-compliant resources",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "First define the rule logic, then create the policy definition, assign it to a scope, and finally review compliance and remediate.",
+        "incorrect": "A policy must be defined before it can be assigned. Assignment requires specifying a scope. Compliance review happens after assignment.",
+        "examTip": "Policy workflow: Define > Create > Assign > Evaluate > Remediate. Policies are evaluated approximately every hour after assignment.",
+        "relatedTopics": [
+          "azure-policy",
+          "governance",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-040",
+      "type": "ordering",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You need to set up Azure Monitor to alert your team when a virtual machine's CPU usage exceeds 90%. Arrange the following steps in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Ensure diagnostics settings are enabled on the virtual machine",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create an action group with notification recipients",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create an alert rule with the CPU percentage metric condition",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Associate the action group with the alert rule",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "First enable diagnostics to collect metrics, create an action group defining who to notify, create the alert rule with the threshold condition, then link the action group to the alert.",
+        "incorrect": "Diagnostics must be enabled before metrics can trigger alerts. The action group must exist before it can be associated with an alert rule.",
+        "examTip": "Azure Monitor flow: Collect data (diagnostics) > Define recipients (action groups) > Set conditions (alert rules) > Connect them together.",
+        "relatedTopics": [
+          "azure-monitor",
+          "alerts",
+          "action-groups",
+          "diagnostics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe monitoring tools in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-044",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service provides a centralized location to store and manage cryptographic keys, secrets, and certificates used by cloud applications?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Defender for Cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Key Vault",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Information Protection",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft Sentinel",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Key Vault is a cloud service for securely storing and accessing secrets, keys, and certificates. It provides hardware security module (HSM) backed key management.",
+        "incorrect": "Defender for Cloud is for security posture management. Azure Information Protection classifies and protects documents. Sentinel is a SIEM/SOAR solution.",
+        "examTip": "Key Vault supports three object types: keys (encryption), secrets (passwords/connection strings), and certificates (SSL/TLS). Always use Key Vault instead of hardcoding secrets.",
+        "relatedTopics": [
+          "azure-key-vault",
+          "secrets-management",
+          "encryption"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-045",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure cost optimization feature allows you to commit to one or three-year terms for compute resources in exchange for significantly reduced pricing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Spot Virtual Machines",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Reserved Instances",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Hybrid Benefit",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Pay-as-you-go pricing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Reserved Instances (Reservations) let you commit to one or three-year plans for VMs, SQL Database, Cosmos DB, and other services, saving up to 72% compared to pay-as-you-go.",
+        "incorrect": "Spot VMs offer discounts for interruptible workloads. Azure Hybrid Benefit uses existing on-premises licenses. Pay-as-you-go has no commitment discount.",
+        "examTip": "Reservations = predictable workloads. Spot VMs = interruptible/fault-tolerant workloads. Hybrid Benefit = existing Windows Server/SQL licenses.",
+        "relatedTopics": [
+          "azure-reservations",
+          "cost-optimization",
+          "pricing-models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-046",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A company runs two Azure services in sequence. Service A has a 99.9% SLA and Service B has a 99.95% SLA. What is the composite SLA for the combined solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "99.95%",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "99.85%",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "99.9%",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "99.99%",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Composite SLA for services in sequence is calculated by multiplying individual SLAs: 99.9% x 99.95% = 99.85%. The combined SLA is always lower than the lowest individual SLA.",
+        "incorrect": "You cannot simply take the minimum or maximum SLA. Sequential dependencies multiply SLA percentages together, reducing overall availability.",
+        "examTip": "Composite SLA formula: SLA_A x SLA_B. More sequential dependencies = lower composite SLA. Use redundancy to improve composite SLA.",
+        "relatedTopics": [
+          "sla-calculations",
+          "composite-sla",
+          "high-availability"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-049",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Azure service is a cloud-native Security Information and Event Management (SIEM) and Security Orchestration, Automation, and Response (SOAR) solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Defender for Cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Key Vault",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Sentinel",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure DDoS Protection",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Sentinel is a scalable, cloud-native SIEM+SOAR solution that provides intelligent security analytics and threat intelligence across the enterprise.",
+        "incorrect": "Defender for Cloud is Cloud Security Posture Management (CSPM). Key Vault manages secrets. DDoS Protection mitigates volumetric attacks.",
+        "examTip": "Sentinel = collect, detect, investigate, respond (SIEM/SOAR). Defender for Cloud = assess, secure, defend (CSPM/CWPP). They work together.",
+        "relatedTopics": [
+          "microsoft-sentinel",
+          "siem",
+          "security-operations"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/sentinel/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-051",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service enables you to manage servers, Kubernetes clusters, and databases running across on-premises, multi-cloud, and edge environments from a single control plane?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Resource Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Arc",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Migrate",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Site Recovery",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Arc extends Azure management and governance capabilities to resources running outside of Azure, including on-premises, multi-cloud, and edge environments.",
+        "incorrect": "Resource Manager manages Azure-native resources. Azure Migrate helps plan and execute migrations. Site Recovery provides disaster recovery.",
+        "examTip": "Azure Arc projects non-Azure resources into Azure Resource Manager, enabling Azure Policy, RBAC, and other governance tools on any infrastructure.",
+        "relatedTopics": [
+          "azure-arc",
+          "hybrid-cloud",
+          "multi-cloud-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-arc/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-054",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service helps organizations assess their on-premises environment and plan a migration to Azure, including sizing recommendations and cost estimates?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Site Recovery",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Migrate",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Arc",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "TCO Calculator",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Migrate provides a centralized hub to discover, assess, and migrate on-premises servers, databases, and applications to Azure with sizing and cost recommendations.",
+        "incorrect": "Site Recovery focuses on disaster recovery. Arc extends Azure management to non-Azure resources. TCO Calculator only estimates cost comparisons.",
+        "examTip": "Azure Migrate = discover + assess + migrate (end-to-end). Site Recovery = DR + lift-and-shift migration. TCO Calculator = cost comparison only.",
+        "relatedTopics": [
+          "azure-migrate",
+          "cloud-migration",
+          "assessment-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/migrate/migrate-services-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-057",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure DDoS protection tier provides always-on traffic monitoring, adaptive tuning, and attack analytics for resources deployed in a virtual network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DDoS Infrastructure Protection (default)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "DDoS Network Protection",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Firewall Premium",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Web Application Firewall",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DDoS Network Protection provides enhanced mitigation including always-on monitoring, adaptive tuning based on traffic patterns, attack analytics, and cost protection.",
+        "incorrect": "Infrastructure Protection is the free default tier with basic protection. Azure Firewall is a network firewall. WAF protects against web application attacks (layer 7).",
+        "examTip": "DDoS Infrastructure (free) = basic protection for all Azure services. DDoS Network Protection (paid) = enhanced features, SLA, and cost guarantee.",
+        "relatedTopics": [
+          "ddos-protection",
+          "network-security",
+          "azure-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/ddos-protection/ddos-protection-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-059",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Azure domain-specific language provides a concise syntax for defining Azure resources and compiles down to ARM template JSON?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Terraform HCL",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Bicep",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure CLI scripts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "PowerShell DSC",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Bicep is a domain-specific language for deploying Azure resources declaratively. It provides a cleaner syntax than JSON ARM templates and compiles to ARM template JSON.",
+        "incorrect": "Terraform uses HCL but is third-party and multi-cloud. Azure CLI is imperative. PowerShell DSC is for configuration management, not resource deployment.",
+        "examTip": "Bicep = Azure-native IaC with simpler syntax than ARM JSON. It supports modules, loops, and conditions. First-class Azure tooling support.",
+        "relatedTopics": [
+          "bicep",
+          "infrastructure-as-code",
+          "arm-templates"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-060",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft service provides a unified data governance solution to help organizations discover, classify, and manage their data across on-premises, multi-cloud, and SaaS environments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Policy",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Purview",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Advisor",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Monitor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Purview provides unified data governance including a data catalog, data lineage, classification, and compliance management across your entire data estate.",
+        "incorrect": "Azure Policy enforces resource rules. Advisor gives recommendations. Monitor collects telemetry. None provide data governance or classification.",
+        "examTip": "Purview = data governance (discover, classify, govern). It includes the former Azure Purview (data catalog) and Microsoft 365 compliance solutions.",
+        "relatedTopics": [
+          "microsoft-purview",
+          "data-governance",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/purview/purview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-063",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure Monitor feature provides detailed performance monitoring, dependency mapping, and diagnostics for web applications?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Log Analytics",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Application Insights",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Workbooks",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Service Health",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Application Insights is a feature of Azure Monitor that provides application performance management (APM) including request rates, response times, failure rates, and dependency tracking.",
+        "incorrect": "Log Analytics is the query engine for log data. Workbooks create interactive reports. Service Health tracks Azure platform issues.",
+        "examTip": "Application Insights = APM for apps (code-level telemetry). Log Analytics = query engine (KQL). Azure Monitor = umbrella platform for all monitoring.",
+        "relatedTopics": [
+          "application-insights",
+          "apm",
+          "azure-monitor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe monitoring tools in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-067",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO factors can directly affect the cost of Azure virtual machines? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Azure region where the VM is deployed",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The number of resource groups in the subscription",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The operating system and software licenses",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "The number of tags applied to the VM",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "VM costs vary by region (different hardware/energy costs) and by OS (Windows costs more than Linux due to licensing). VM size, disk type, and networking also affect cost.",
+        "incorrect": "Resource groups and tags are free organizational tools. They do not directly impact the cost of a resource.",
+        "examTip": "VM cost factors: region, VM size/family, OS license, disk type/size, network egress, uptime hours. Tags and resource groups are free metadata.",
+        "relatedTopics": [
+          "vm-pricing",
+          "cost-factors",
+          "azure-regions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-070",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO compliance standards are covered by Azure compliance certifications? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "ISO 27001",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Blueprints",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "SOC 1/2/3",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Policy",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure holds certifications for ISO 27001 (information security) and SOC 1/2/3 (service organization controls for security, availability, and confidentiality).",
+        "incorrect": "Azure Blueprints and Policy are governance tools, not compliance standards. They help you implement compliance but are not standards themselves.",
+        "examTip": "Common Azure compliance: ISO 27001, SOC 1/2/3, GDPR, HIPAA, FedRAMP, PCI DSS. Use Microsoft Service Trust Portal to access audit reports.",
+        "relatedTopics": [
+          "compliance-certifications",
+          "iso-27001",
+          "soc-reports"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/compliance/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-073",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO capabilities does Microsoft Defender for Cloud provide? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cloud Security Posture Management (CSPM)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "DNS zone hosting",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Cloud Workload Protection (CWP)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Virtual machine scaling",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Cloud provides CSPM (security score, recommendations, compliance) and CWP (threat protection for VMs, containers, databases, storage, and more).",
+        "incorrect": "DNS hosting is Azure DNS. VM scaling is VM Scale Sets or autoscale. Neither is a security function.",
+        "examTip": "Defender for Cloud = CSPM (assess posture) + CWP (protect workloads). Free tier has CSPM basics. Enhanced security enables CWP for specific resource types.",
+        "relatedTopics": [
+          "defender-for-cloud",
+          "cspm",
+          "cloud-workload-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-076",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO tools can you use to interact with Azure resources via command-line? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure CLI",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Portal",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure PowerShell",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Advisor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure CLI (cross-platform, bash-style) and Azure PowerShell (PowerShell cmdlets) are both command-line tools for managing Azure resources programmatically.",
+        "incorrect": "Azure Portal is a GUI. Azure Advisor provides recommendations but is not a command-line tool.",
+        "examTip": "Both CLI and PowerShell can be used in Azure Cloud Shell (browser-based). CLI uses az commands. PowerShell uses verb-noun cmdlets (Get-AzVM).",
+        "relatedTopics": [
+          "azure-cli",
+          "azure-powershell",
+          "cloud-shell"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-080",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO actions can Azure Compliance Manager help organizations perform? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Track regulatory compliance progress with a compliance score",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Deploy virtual machines automatically",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Provide recommended improvement actions for compliance requirements",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Create virtual networks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Compliance Manager tracks your compliance posture with a score and provides actionable improvement recommendations for standards like GDPR, ISO 27001, and NIST.",
+        "incorrect": "Deploying VMs and creating VNets are infrastructure tasks unrelated to compliance tracking. Use ARM/Bicep or Portal for those.",
+        "examTip": "Compliance Manager is in the Microsoft Purview compliance portal. It helps assess, track, and improve compliance across Microsoft 365 and Azure.",
+        "relatedTopics": [
+          "compliance-manager",
+          "regulatory-compliance",
+          "gdpr"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/purview/compliance-manager"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-082",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Microsoft Defender for Cloud provides a secure score that measures your security posture.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Microsoft Defender for Cloud can only protect Azure resources, not on-premises or multi-cloud.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Microsoft Defender for Cloud can provide just-in-time VM access to reduce attack surface.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Cloud provides a secure score, supports hybrid/multi-cloud via Azure Arc, and offers JIT VM access to limit exposure of management ports.",
+        "incorrect": "Defender for Cloud supports on-premises (via Arc), AWS, and GCP workloads. It is not limited to Azure-only resources.",
+        "examTip": "Defender for Cloud: secure score + recommendations + JIT access + adaptive controls. Works across Azure, on-premises, AWS, and GCP.",
+        "relatedTopics": [
+          "defender-for-cloud",
+          "secure-score",
+          "jit-access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-084",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Log Analytics uses Kusto Query Language (KQL) to query collected data.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Log Analytics can only collect data from Azure resources.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Log Analytics workspaces store log and performance data for analysis.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Log Analytics uses KQL for queries, collects data from Azure, on-premises, and other clouds (via agents), and stores everything in a Log Analytics workspace.",
+        "incorrect": "Log Analytics agents can be installed on non-Azure machines to collect data from on-premises and other cloud environments.",
+        "examTip": "Log Analytics = workspace for logs + KQL for queries. It collects from Azure Monitor, agents, diagnostics. Central repository for all monitoring data.",
+        "relatedTopics": [
+          "log-analytics",
+          "kql",
+          "azure-monitor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe monitoring tools in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-088",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Arc can manage Kubernetes clusters running on other cloud providers.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Arc requires migrating resources to Azure before management.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Policy can be applied to Arc-enabled servers running on-premises.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Arc projects non-Azure resources into ARM without migration. It supports Kubernetes on any cloud and enables Azure Policy on Arc-enabled on-premises servers.",
+        "incorrect": "Arc manages resources in place without migration. That is its core value: extend Azure governance to where resources already run.",
+        "examTip": "Arc = extend Azure management everywhere (on-prem, AWS, GCP, edge). No migration needed. Apply Policy, RBAC, Monitor, and Defender.",
+        "relatedTopics": [
+          "azure-arc",
+          "multi-cloud",
+          "hybrid-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-arc/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-093",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Microsoft Sentinel can ingest data from Microsoft 365, Azure, and third-party security products.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Microsoft Sentinel replaces the need for Microsoft Defender for Cloud.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Microsoft Sentinel uses built-in AI to detect previously unidentified threats.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Sentinel collects data from many sources via connectors, uses AI/ML for threat detection, and complements (not replaces) Defender for Cloud which focuses on workload protection.",
+        "incorrect": "Sentinel and Defender for Cloud serve different roles. Sentinel = SIEM/SOAR (detect and respond). Defender = CSPM/CWP (posture and protection). Use both together.",
+        "examTip": "Sentinel = SIEM (collect, detect) + SOAR (automate response). Defender for Cloud = CSPM (posture) + CWP (protection). Complementary services.",
+        "relatedTopics": [
+          "microsoft-sentinel",
+          "siem-soar",
+          "threat-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/sentinel/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-095",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Monitor Workbooks combine text, queries, metrics, and parameters into interactive reports.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Monitor can only create alerts based on metric thresholds, not log queries.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Monitor action groups can send notifications via email, SMS, and webhook.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Workbooks create interactive dashboard reports. Monitor supports both metric alerts and log query alerts. Action groups notify via email, SMS, voice, webhook, ITSM, and more.",
+        "incorrect": "Azure Monitor supports multiple alert types: metric alerts, log alerts, activity log alerts, and smart detection alerts.",
+        "examTip": "Monitor alert types: metric (threshold), log (KQL query), activity log (control plane events). Action groups define what happens when an alert fires.",
+        "relatedTopics": [
+          "azure-monitor",
+          "workbooks",
+          "alert-types",
+          "action-groups"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe monitoring tools in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-097",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To achieve the highest durability for Azure storage with read access to a secondary region, you should use",
+          "options": [
+            "LRS",
+            "ZRS",
+            "GRS",
+            "RA-GZRS"
+          ],
+          "correctAnswer": "RA-GZRS"
+        },
+        {
+          "id": "d2",
+          "prompt": "The least expensive storage redundancy option that protects against a single disk failure is",
+          "options": [
+            "LRS",
+            "ZRS",
+            "GRS",
+            "RA-GZRS"
+          ],
+          "correctAnswer": "LRS"
+        }
+      ],
+      "explanation": {
+        "correct": "RA-GZRS provides zone-redundancy in the primary region, geo-replication to a secondary region, and read access to the secondary. LRS is the cheapest option with 3 copies in one datacenter.",
+        "incorrect": "GRS provides geo-redundancy but no read access to secondary. ZRS is zone-redundant but single-region only.",
+        "examTip": "Cost order (low to high): LRS < ZRS < GRS < GZRS < RA-GRS < RA-GZRS. More redundancy = higher cost = better durability.",
+        "relatedTopics": [
+          "storage-redundancy",
+          "ra-gzrs",
+          "data-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure storage services",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-100",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To extend Azure management and governance to on-premises and multi-cloud servers without migrating them, you should use",
+          "options": [
+            "Azure Migrate",
+            "Azure Arc",
+            "Azure Site Recovery",
+            "Azure Advisor"
+          ],
+          "correctAnswer": "Azure Arc"
+        },
+        {
+          "id": "d2",
+          "prompt": "To replicate on-premises VMs to Azure for disaster recovery with automatic failover, you should use",
+          "options": [
+            "Azure Migrate",
+            "Azure Arc",
+            "Azure Site Recovery",
+            "Azure Advisor"
+          ],
+          "correctAnswer": "Azure Site Recovery"
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Arc extends Azure governance without migration. Site Recovery replicates VMs to Azure for disaster recovery with automated failover/failback.",
+        "incorrect": "Azure Migrate is for planning and executing migration. Advisor provides recommendations. Neither handles DR replication or non-Azure governance.",
+        "examTip": "Arc = manage in place (no migration). Site Recovery = replicate for DR. Migrate = move to Azure permanently. Different goals, complementary tools.",
+        "relatedTopics": [
+          "azure-arc",
+          "site-recovery",
+          "hybrid-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-arc/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-103",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To save up to 90% on compute costs for workloads that can tolerate interruptions, you should use",
+          "options": [
+            "Reserved Instances",
+            "Spot Virtual Machines",
+            "Azure Savings Plans",
+            "Azure Hybrid Benefit"
+          ],
+          "correctAnswer": "Spot Virtual Machines"
+        },
+        {
+          "id": "d2",
+          "prompt": "To save up to 72% on compute costs for predictable, always-on production workloads, you should use",
+          "options": [
+            "Reserved Instances",
+            "Spot Virtual Machines",
+            "Azure Savings Plans",
+            "Azure Hybrid Benefit"
+          ],
+          "correctAnswer": "Reserved Instances"
+        }
+      ],
+      "explanation": {
+        "correct": "Spot VMs offer up to 90% savings but can be evicted. Reserved Instances save up to 72% with 1-3 year commitments for predictable workloads that cannot be interrupted.",
+        "incorrect": "Savings Plans offer flexible commitment across VM types. Hybrid Benefit uses existing licenses. Neither matches the specific savings levels described.",
+        "examTip": "Cost savings hierarchy: Spot (90%, interruptible) > Reservations (72%, committed) > Savings Plans (65%, flexible) > Hybrid Benefit (existing licenses).",
+        "relatedTopics": [
+          "spot-vms",
+          "reserved-instances",
+          "cost-optimization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-106",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To manage Azure resources at scale using a declarative language that is native to Azure and simpler than JSON, you should use",
+          "options": [
+            "ARM templates (JSON)",
+            "Bicep",
+            "Terraform",
+            "Azure CLI"
+          ],
+          "correctAnswer": "Bicep"
+        },
+        {
+          "id": "d2",
+          "prompt": "To group multiple resource deployments into an atomic unit that can be managed and deleted together, you should use",
+          "options": [
+            "Resource groups",
+            "Deployment stacks",
+            "Management groups",
+            "Azure Blueprints"
+          ],
+          "correctAnswer": "Deployment stacks"
+        }
+      ],
+      "explanation": {
+        "correct": "Bicep is Azure-native declarative IaC with simpler syntax than JSON ARM templates. Deployment stacks group deployments for atomic lifecycle management including cleanup of removed resources.",
+        "incorrect": "ARM templates work but are verbose JSON. Terraform is multi-cloud but not Azure-native. Resource groups organize resources but are not deployment units. Blueprints are being deprecated.",
+        "examTip": "Bicep = modern Azure IaC. Deployment stacks = managed deployment lifecycle (create, update, delete as a unit, with deny settings and cleanup).",
+        "relatedTopics": [
+          "bicep",
+          "deployment-stacks",
+          "infrastructure-as-code"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deployment-stacks"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-108",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To monitor the health and performance of web applications including request rates and exceptions, you should use",
+          "options": [
+            "Azure Service Health",
+            "Application Insights",
+            "Azure Advisor",
+            "Log Analytics"
+          ],
+          "correctAnswer": "Application Insights"
+        },
+        {
+          "id": "d2",
+          "prompt": "To create interactive visual reports combining metrics, logs, and text for stakeholders, you should use",
+          "options": [
+            "Azure Dashboards",
+            "Azure Workbooks",
+            "Azure Advisor",
+            "Cost Management"
+          ],
+          "correctAnswer": "Azure Workbooks"
+        }
+      ],
+      "explanation": {
+        "correct": "Application Insights provides APM for web apps (requests, exceptions, dependencies). Workbooks combine metrics, logs, and text into interactive, shareable reports.",
+        "incorrect": "Service Health tracks Azure platform issues. Advisor provides recommendations. Log Analytics is the query engine. Dashboards are simpler than Workbooks.",
+        "examTip": "Application Insights = app-level monitoring (APM). Workbooks = rich interactive reports. Dashboards = simple metric pinning. Log Analytics = query engine.",
+        "relatedTopics": [
+          "application-insights",
+          "workbooks",
+          "azure-monitor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe monitoring tools in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-110",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To assess compliance with GDPR requirements across your Microsoft cloud environment, you should use",
+          "options": [
+            "Azure Policy",
+            "Microsoft Purview Compliance Manager",
+            "Azure Advisor",
+            "Microsoft Sentinel"
+          ],
+          "correctAnswer": "Microsoft Purview Compliance Manager"
+        },
+        {
+          "id": "d2",
+          "prompt": "To discover and classify sensitive data across Azure SQL databases and storage accounts, you should use",
+          "options": [
+            "Azure Policy",
+            "Microsoft Purview Data Map",
+            "Azure Advisor",
+            "Azure Key Vault"
+          ],
+          "correctAnswer": "Microsoft Purview Data Map"
+        }
+      ],
+      "explanation": {
+        "correct": "Purview Compliance Manager tracks regulatory compliance (GDPR, ISO, SOC). Purview Data Map discovers, classifies, and maps sensitive data across your data estate.",
+        "incorrect": "Azure Policy enforces resource configuration rules. Advisor gives recommendations. Sentinel detects threats. Key Vault stores secrets.",
+        "examTip": "Purview suite: Compliance Manager = regulatory tracking. Data Map = data discovery/classification. Data Catalog = data governance. All under Microsoft Purview.",
+        "relatedTopics": [
+          "purview-compliance",
+          "data-classification",
+          "gdpr"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/purview/purview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-112",
+      "type": "ordering",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "You need to migrate an on-premises application to Azure using Azure Migrate. Arrange the following steps in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Discover on-premises servers and dependencies using the Azure Migrate appliance",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Assess the servers for Azure readiness and right-sizing recommendations",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Replicate the servers to Azure using the migration tool",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Perform test migration and validate the application in Azure",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Migration workflow: discover (find all resources), assess (determine readiness/sizing), replicate (copy data), test migrate (validate before cutover).",
+        "incorrect": "Assessment must happen after discovery. Replication happens after assessment confirms readiness. Always test before final cutover.",
+        "examTip": "Azure Migrate phases: Discover > Assess > Replicate > Test > Migrate > Optimize. Never skip the test migration step.",
+        "relatedTopics": [
+          "azure-migrate",
+          "migration-phases",
+          "cloud-migration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/migrate/migrate-services-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-115",
+      "type": "ordering",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You need to set up Microsoft Sentinel to detect and respond to security threats. Arrange the following steps in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a Log Analytics workspace for Sentinel",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Enable Microsoft Sentinel on the workspace",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Connect data sources using built-in connectors",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Create analytics rules to detect threats and generate incidents",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Sentinel requires a Log Analytics workspace first, then enablement, then data connectors to ingest logs, then analytics rules to detect threats from the collected data.",
+        "incorrect": "Sentinel must be enabled before connectors can be configured. Data must flow in before analytics rules can detect anything.",
+        "examTip": "Sentinel setup: Workspace > Enable Sentinel > Connect data > Create rules > Investigate incidents > Automate responses (playbooks).",
+        "relatedTopics": [
+          "microsoft-sentinel",
+          "log-analytics",
+          "threat-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-117",
+      "type": "ordering",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "You need to deploy a Bicep template to create Azure resources. Arrange the following steps in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Author the Bicep template defining the desired resources",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Validate the template using az deployment group validate",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Preview changes using what-if deployment",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Execute the deployment using az deployment group create",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Author the template, validate syntax and configuration, preview what changes will occur (what-if), then execute the actual deployment.",
+        "incorrect": "Validation catches errors before deployment. What-if shows planned changes without making them. Always validate and preview before deploying.",
+        "examTip": "Bicep deployment flow: Author > Validate (syntax) > What-if (preview changes) > Deploy (create resources). What-if prevents surprises.",
+        "relatedTopics": [
+          "bicep-deployment",
+          "what-if",
+          "infrastructure-as-code"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-126",
+      "type": "drag-drop",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each item to the correct category.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Security Posture & Protection",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Threat Detection & Response",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Microsoft Defender for Cloud secure score"
+        },
+        {
+          "id": "item2",
+          "text": "Azure DDoS Protection"
+        },
+        {
+          "id": "item3",
+          "text": "Microsoft Sentinel analytics rules"
+        },
+        {
+          "id": "item4",
+          "text": "Microsoft Sentinel automated playbooks"
+        }
+      ],
+      "explanation": {
+        "correct": "Secure score and DDoS Protection improve and maintain security posture. Sentinel analytics rules and playbooks detect threats and automate incident response.",
+        "incorrect": "Posture management is proactive (prevent attacks). Threat detection is reactive (find and respond to attacks). Both are needed for defense in depth.",
+        "examTip": "Defender for Cloud = posture (prevent). Sentinel = detection/response (detect + respond). DDoS = protection (mitigate). Layer them together.",
+        "relatedTopics": [
+          "security-posture",
+          "threat-detection",
+          "sentinel",
+          "defender"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-129",
+      "type": "drag-drop",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each item to the correct category.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Governance Tools",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Monitoring Tools",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure Policy"
+        },
+        {
+          "id": "item2",
+          "text": "Resource locks"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Monitor alerts"
+        },
+        {
+          "id": "item4",
+          "text": "Application Insights"
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Policy and resource locks are governance tools (enforce rules, prevent changes). Azure Monitor alerts and Application Insights are monitoring tools (observe, detect, notify).",
+        "incorrect": "Governance = enforce standards and prevent drift. Monitoring = observe behavior and alert on issues. Both are needed for well-managed environments.",
+        "examTip": "Governance: Policy (enforce rules), Locks (prevent changes), Blueprints (package governance). Monitoring: Monitor (telemetry), Insights (APM), Alerts (notifications).",
+        "relatedTopics": [
+          "governance",
+          "monitoring",
+          "azure-policy",
+          "azure-monitor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-132",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "Fabrikam Inc runs a web application on two Azure services in sequence: Azure App Service (SLA 99.95%) and Azure SQL Database (SLA 99.99%). They need to understand their overall availability guarantee.",
+      "questionText": "What is the composite SLA for Fabrikam's application?",
+      "options": [
+        {
+          "id": "A",
+          "text": "99.99%",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "99.95%",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "99.94%",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "99.90%",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Composite SLA = 99.95% x 99.99% = 99.94%. When services are in sequence (both must work), multiply their SLAs. The result is always lower than the lowest individual SLA.",
+        "incorrect": "You cannot simply pick the lower SLA or add them. Multiplying gives the probability that all services are available simultaneously.",
+        "examTip": "Composite SLA formula: Service1 x Service2. 99.95% x 99.99% = 0.9995 x 0.9999 = 0.9994 = 99.94%. More services = lower composite SLA.",
+        "relatedTopics": [
+          "composite-sla",
+          "sla-calculations",
+          "availability-design"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-134",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "Tailwind Traders has 500 Windows Server VMs on-premises with active Software Assurance. They are planning to migrate these VMs to Azure and want to minimize licensing costs.",
+      "questionText": "Which Azure feature should Tailwind Traders use to reduce their Azure VM costs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Spot Virtual Machines",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Hybrid Benefit",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Savings Plans",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Reserved Instances",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Hybrid Benefit allows Tailwind Traders to use their existing Windows Server licenses (with Software Assurance) on Azure VMs, eliminating the Windows license cost from the VM price.",
+        "incorrect": "Spot VMs cannot guarantee availability for production. Savings Plans and Reservations reduce compute costs but do not leverage existing licenses.",
+        "examTip": "Combine Hybrid Benefit with Reservations for maximum savings: Hybrid Benefit removes license cost + Reservations reduce compute cost = up to 85% savings.",
+        "relatedTopics": [
+          "azure-hybrid-benefit",
+          "license-mobility",
+          "cost-optimization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/virtual-machines/windows/hybrid-use-benefit-licensing"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-137",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "Northwind Traders has servers running on-premises, in AWS, and in Azure. Their IT team wants to apply Azure Policy, use Azure Monitor, and manage all servers from the Azure portal regardless of location.",
+      "questionText": "Which Azure service enables Northwind to achieve this unified management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Migrate",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Arc",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Resource Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Site Recovery",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Arc extends Azure management (Policy, Monitor, RBAC, Defender) to servers running anywhere: on-premises, AWS, GCP, or edge locations. No migration required.",
+        "incorrect": "Azure Migrate moves workloads to Azure. Resource Manager manages Azure-native resources. Site Recovery provides DR. None extend Azure governance to non-Azure locations like Arc does.",
+        "examTip": "Azure Arc use cases: manage on-prem/multi-cloud servers, run Azure data services anywhere, govern Kubernetes clusters everywhere. Single control plane for all infrastructure.",
+        "relatedTopics": [
+          "azure-arc",
+          "hybrid-management",
+          "multi-cloud"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe features and tools for managing and deploying Azure resources",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/azure-arc/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-150",
+      "type": "single-choice",
+      "topicId": "describe-azure-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A company deploys across two Azure regions in active-active configuration using Azure Front Door (SLA 99.99%). Each regional deployment has a composite SLA of 99.95%. What is the approximate overall application SLA?",
+      "options": [
+        {
+          "id": "A",
+          "text": "99.95%",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "99.99%",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "99.9999%",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "99.99% (limited by Front Door)",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "With active-active, regional availability = 1 - (1-0.9995)^2 = 99.9999%. But Front Door at 99.99% is in the critical path. Composite = 99.99% x 99.9999% ≈ 99.99%, limited by Front Door.",
+        "incorrect": "Active-active improves regional availability dramatically, but the overall SLA cannot exceed the SLA of the shared component (Front Door) in the critical path.",
+        "examTip": "Active-active formula: 1 - (1-SLA)^n for parallel paths. But shared components (load balancer, DNS) cap the total. Overall SLA = shared component SLA x parallel availability.",
+        "relatedTopics": [
+          "composite-sla",
+          "active-active",
+          "high-availability-design"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cost management in Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/architecture/framework/resiliency/business-metrics"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

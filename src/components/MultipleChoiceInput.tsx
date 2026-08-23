@@ -1,3 +1,4 @@
+import { Check, CheckCircle, XCircle } from 'lucide-react';
 import { Option } from '../types';
 
 interface Props {
@@ -10,24 +11,32 @@ interface Props {
 
 export function MultipleChoiceInput({ options, selectedAnswers, showResult, onToggle, disabled }: Props) {
   return (
-    <div className="flex flex-col gap-3" role="group" aria-label="Select all that apply">
-      <p className="text-sm text-[var(--text-secondary)] italic mb-1">Select all that apply</p>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }} role="group" aria-label="Select all that apply">
+      <p style={{ margin: '0 0 4px', fontSize: 12, color: '#8ea2c2', fontStyle: 'italic' }}>Select all that apply</p>
       {options.map((option) => {
         const isSelected = selectedAnswers.includes(option.id);
-        let borderClass = 'border-[var(--border)]';
-        let bgClass = 'bg-[var(--bg-secondary)]';
+        let borderColor = 'rgba(148,163,184,0.15)';
+        let bg = 'rgba(148,163,184,0.04)';
+        let labelColor = '#a9b9d0';
+        let checkboxBg = 'rgba(148,163,184,0.1)';
+        let checkboxBorder = 'rgba(148,163,184,0.25)';
 
         if (showResult) {
           if (option.isCorrect) {
-            borderClass = 'border-[var(--success)]';
-            bgClass = 'bg-[var(--success)]/10';
+            borderColor = 'rgba(45,212,191,0.4)';
+            bg = 'rgba(45,212,191,0.07)';
+            labelColor = '#f0f4f8';
           } else if (isSelected && !option.isCorrect) {
-            borderClass = 'border-[var(--error)]';
-            bgClass = 'bg-[var(--error)]/10';
+            borderColor = 'rgba(255,107,107,0.4)';
+            bg = 'rgba(255,107,107,0.07)';
+            labelColor = '#f0f4f8';
           }
         } else if (isSelected) {
-          borderClass = 'border-[var(--warning)]';
-          bgClass = 'bg-[var(--warning)]/10';
+          borderColor = 'rgba(79,124,255,0.5)';
+          bg = 'rgba(79,124,255,0.08)';
+          labelColor = '#f0f4f8';
+          checkboxBg = '#4f7cff';
+          checkboxBorder = '#4f7cff';
         }
 
         return (
@@ -37,22 +46,23 @@ export function MultipleChoiceInput({ options, selectedAnswers, showResult, onTo
             disabled={disabled}
             role="checkbox"
             aria-checked={isSelected}
-            aria-label={`Option ${option.id}: ${option.text}`}
-            className={`w-full text-left px-4 py-3 rounded-lg border-2 transition-all duration-200 
-              ${borderClass} ${bgClass}
-              ${disabled ? 'cursor-default' : 'cursor-pointer hover:border-[var(--warning)]/50'}
-              min-h-[44px] flex items-center gap-3`}
+            aria-label={`Option ${option.id}: ${option.text}${showResult ? (option.isCorrect ? ' — correct' : isSelected ? ' — incorrect' : '') : ''}`}
+            style={{ width: '100%', textAlign: 'left', padding: '13px 16px', borderRadius: 12, border: `1px solid ${borderColor}`, background: bg, cursor: disabled ? 'default' : 'pointer', display: 'flex', alignItems: 'center', gap: 12, transition: 'all 0.15s', minHeight: 48 }}
           >
-            <span className={`w-7 h-7 rounded-md border-2 flex items-center justify-center shrink-0 text-sm font-semibold
-              ${isSelected ? 'border-[var(--warning)] bg-[var(--warning)]/20 text-[var(--warning)]' : 'border-[var(--text-secondary)] text-[var(--text-secondary)]'}`}>
-              {isSelected ? '✓' : option.id}
+            {/* Checkbox — decorative, state communicated via aria-checked on button */}
+            <span
+              aria-hidden="true"
+              style={{ width: 20, height: 20, borderRadius: 6, border: `2px solid ${checkboxBorder}`, background: checkboxBg, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'all 0.15s' }}
+            >
+              {isSelected && !showResult && <Check style={{ width: 12, height: 12, color: '#fff' }} aria-hidden="true" />}
             </span>
-            <span className="text-[var(--text-primary)] text-sm">{option.text}</span>
+            <span style={{ fontSize: 14, color: labelColor, flex: 1, lineHeight: 1.5 }}>{option.text}</span>
+            {/* Result icons — aria-hidden because result is encoded in button aria-label */}
             {showResult && option.isCorrect && (
-              <span className="ml-auto text-[var(--success)] text-xs font-medium">✓</span>
+              <CheckCircle style={{ width: 16, height: 16, color: '#2dd4bf', flexShrink: 0 }} aria-hidden="true" />
             )}
             {showResult && isSelected && !option.isCorrect && (
-              <span className="ml-auto text-[var(--error)] text-xs font-medium">✗</span>
+              <XCircle style={{ width: 16, height: 16, color: '#ff6b6b', flexShrink: 0 }} aria-hidden="true" />
             )}
           </button>
         );

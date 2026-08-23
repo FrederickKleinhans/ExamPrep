@@ -1,0 +1,1299 @@
+{
+  "certificationId": "comptia-security-plus",
+  "topicId": "security-architecture",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "secplus-052",
+      "topicId": "security-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "In the cloud shared responsibility model, which party is generally always responsible for physical security of the datacenter, regardless of service model (IaaS, PaaS, or SaaS)?",
+      "explanation": {
+        "correct": "The cloud service provider retains responsibility for physical datacenter security across all service models — this never shifts to the customer regardless of IaaS, PaaS, or SaaS.",
+        "incorrect": "The customer's responsibility varies by service model (more in IaaS, less in SaaS) but never extends to physical datacenter security. Auditors assess compliance but don't bear operational responsibility, and 'whoever configures the workload' isn't a defined party in the shared responsibility model.",
+        "examTip": "As you move from IaaS to PaaS to SaaS, the provider takes on more responsibility and the customer's share shrinks — but physical security is always the provider's.",
+        "relatedTopics": [
+          "shared-responsibility-model"
+        ]
+      },
+      "metadata": {
+        "examObjective": "shared-responsibility-model",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Wayne Enterprises is migrating workloads to a public cloud provider and needs clarity on which security responsibilities shift to the provider.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "The customer",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The cloud service provider",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A third-party auditor",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Whoever configures the workload",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-053",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which cloud security tool specifically monitors and enforces security policies for traffic flowing between an organization's users and cloud services, often providing visibility into shadow IT?",
+      "explanation": {
+        "correct": "A Cloud Access Security Broker (CASB) sits between users and cloud services to enforce security policies, provide visibility into cloud usage (including unsanctioned/shadow IT), and control data flow.",
+        "incorrect": "CSPM (Cloud Security Posture Management) focuses on identifying misconfigurations within cloud environments, not user-to-cloud traffic enforcement. SIEM aggregates and analyzes security logs. SASE is a broader network+security architecture framework that may incorporate CASB functionality but is not itself the specific user-to-cloud enforcement tool being described.",
+        "examTip": "CASB deployment modes include API-based (out-of-band) and proxy-based (inline) — know that both exist for different visibility/control trade-offs.",
+        "relatedTopics": [
+          "casb"
+        ]
+      },
+      "metadata": {
+        "examObjective": "casb",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Initech's security team discovered employees uploading sensitive files to personal cloud storage accounts that IT never approved or knew about.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "CSPM",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "CASB",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SIEM",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SASE",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-054",
+      "topicId": "security-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which type of hypervisor runs directly on the physical hardware without requiring an underlying host operating system?",
+      "explanation": {
+        "correct": "A Type 1 hypervisor runs directly on the hardware ('bare-metal'), providing better performance and a smaller attack surface than a Type 2 hypervisor, which runs atop a conventional host OS.",
+        "incorrect": "Type 2 hypervisors require a host OS underneath them, unlike Type 1. Container runtimes share the host OS kernel rather than virtualizing hardware directly, a fundamentally different technology. Serverless runtimes abstract away infrastructure entirely, unrelated to hypervisor architecture.",
+        "examTip": "Type 1 = 'bare-metal' (e.g., VMware ESXi, Hyper-V); Type 2 = 'hosted' (e.g., VMware Workstation, VirtualBox running atop Windows/macOS).",
+        "relatedTopics": [
+          "hypervisors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "hypervisors",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Type 1 (bare-metal) hypervisor",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Type 2 (hosted) hypervisor",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Container runtime",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Serverless function runtime",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-055",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Scenario: Initech's security architects want to redesign their network so that no device — internal or external — is automatically trusted, and every access request is authenticated, authorized, and continuously validated regardless of location. Which architecture model are they implementing?",
+      "explanation": {
+        "correct": "Zero trust architecture requires continuous verification of every access request regardless of network location, eliminating implicit trust based on being 'inside' the perimeter.",
+        "incorrect": "Defense in depth is a layering strategy that can complement zero trust but doesn't specifically describe the 'never trust, always verify' philosophy on its own. The castle-and-moat model is the OPPOSITE approach (implicit internal trust). Air-gapping is physical isolation, a different and much more extreme concept than zero trust's continuous verification model.",
+        "examTip": "Zero trust core components: Policy Engine (decides), Policy Administrator (communicates decision), Policy Enforcement Point (enforces) — know this control-plane/data-plane split.",
+        "relatedTopics": [
+          "zero-trust"
+        ]
+      },
+      "metadata": {
+        "examObjective": "zero-trust",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Initech recently suffered a breach where an attacker who compromised one internal workstation was able to move laterally across the entire flat network unopposed.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Defense in depth only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Zero trust architecture",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Traditional perimeter-based (castle-and-moat) model",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Air-gapped network segmentation",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-056",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which network design places publicly accessible servers (such as a web server) in a segmented zone isolated from the internal trusted network, allowing controlled external access while protecting internal resources?",
+      "explanation": {
+        "correct": "A DMZ (also called a screened subnet) isolates publicly-facing servers between the external network and the internal trusted network, limiting the blast radius if the public-facing server is compromised.",
+        "incorrect": "An intranet is a purely internal private network without public exposure. An extranet extends limited access to trusted external partners, a different concept than a buffer zone for public servers. An air gap is complete physical isolation with no network connection at all, far more restrictive than a DMZ.",
+        "examTip": "Traffic from the DMZ to the internal network should be tightly restricted by firewall rules — a compromised DMZ host shouldn't have free access inward.",
+        "relatedTopics": [
+          "dmz",
+          "network-segmentation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "dmz",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Globex Corp wants to host a public web server while ensuring that if it's compromised, attackers cannot directly reach internal databases.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Intranet",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Extranet",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "DMZ (screened subnet)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Air gap",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-057",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which IPSec mode encrypts only the payload of an IP packet while leaving the original IP header intact, typically used for end-to-end communication between two hosts?",
+      "explanation": {
+        "correct": "Transport mode encrypts only the payload, leaving the original IP header exposed, and is typically used for direct host-to-host communication rather than gateway-to-gateway tunneling.",
+        "incorrect": "Tunnel mode encrypts the entire original packet (including the header) and encapsulates it within a new IP packet, typically used for site-to-site VPNs. AH (Authentication Header) provides integrity/authentication but not encryption by itself. ESP is a protocol providing confidentiality and can operate in either transport or tunnel mode — it isn't itself a 'mode' distinct from those two.",
+        "examTip": "Tunnel mode = whole packet wrapped (site-to-site VPN); Transport mode = payload only (host-to-host) — a frequently tested distinction.",
+        "relatedTopics": [
+          "ipsec"
+        ]
+      },
+      "metadata": {
+        "examObjective": "ipsec",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tunnel mode",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Transport mode",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "AH mode",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ESP mode only, regardless of tunnel/transport",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-058",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which secure protocol should replace legacy SNMP versions to provide authentication and encryption for network device management traffic?",
+      "explanation": {
+        "correct": "SNMPv3 adds authentication and encryption capabilities that earlier SNMP versions lack, making it the secure choice for network management traffic.",
+        "incorrect": "SNMPv1 and SNMPv2c transmit community strings in cleartext with no real authentication/encryption, both considered insecure legacy versions. Telnet is an entirely separate, insecure remote management protocol (should be replaced by SSH), not an SNMP version at all.",
+        "examTip": "Always prefer SNMPv3 with authPriv (authentication + privacy/encryption) security level for production network management.",
+        "relatedTopics": [
+          "secure-protocols",
+          "snmp"
+        ]
+      },
+      "metadata": {
+        "examObjective": "secure-protocols",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Umbrella Corp's network audit found that core switches were still being managed using a decades-old monitoring protocol lacking encryption.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "SNMPv1",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SNMPv2c",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "SNMPv3",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Telnet",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-059",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which architecture combines SD-WAN capabilities with integrated security functions (like a cloud-delivered firewall, CASB, and zero trust access) into a single cloud-native service edge?",
+      "explanation": {
+        "correct": "SASE converges networking (SD-WAN) and security functions (firewall, CASB, zero trust) into a unified, cloud-delivered service, simplifying distributed/remote-work security architectures.",
+        "incorrect": "NAC (Network Access Control) enforces device compliance policies before granting network access but doesn't combine SD-WAN with a full security stack. 802.1X is a port-based authentication standard, a narrower mechanism. VLAN trunking is a Layer 2 segmentation technique unrelated to this converged architecture concept.",
+        "examTip": "SASE is often described as 'SD-WAN + a full cloud-delivered security stack' delivered as a single service.",
+        "relatedTopics": [
+          "sase"
+        ]
+      },
+      "metadata": {
+        "examObjective": "sase",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "NAC",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SASE (Secure Access Service Edge)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "802.1X",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "VLAN trunking",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-060",
+      "topicId": "security-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "In a Kubernetes environment, which practice reduces the attack surface by ensuring containers run with the minimum necessary privileges and do not run as the root user by default?",
+      "explanation": {
+        "correct": "Configuring Kubernetes security contexts to enforce non-root execution and minimum required capabilities directly applies least privilege to reduce container/pod attack surface.",
+        "incorrect": "Privileged mode actually increases risk by granting broad host-level access. Disabling network policies removes segmentation controls, increasing exposure. Using the 'latest' tag introduces version unpredictability and is a supply-chain/consistency risk, not a security hardening practice.",
+        "examTip": "Avoid the 'latest' image tag in production — pin specific, scanned image versions/digests for reproducibility and security validation.",
+        "relatedTopics": [
+          "container-security",
+          "kubernetes"
+        ]
+      },
+      "metadata": {
+        "examObjective": "container-security",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Enabling privileged mode on all pods",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Applying least privilege via security contexts and non-root container execution",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Disabling network policies entirely",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Using the 'latest' image tag for all deployments",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-061",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which security concern is unique to serverless (Function-as-a-Service) architectures compared to traditional VM-based hosting, due to the ephemeral, event-driven execution model?",
+      "explanation": {
+        "correct": "Serverless functions spin up and tear down rapidly and don't expose a persistent OS to manage, making traditional host-based logging and long-running monitoring approaches less effective — requiring function-level and platform-native monitoring instead.",
+        "incorrect": "Physical hardware theft, VM escape, and OS kernel patching are all concerns tied to traditional VM/hypervisor-based infrastructure that the customer generally doesn't manage in serverless models, since the provider owns the underlying compute entirely.",
+        "examTip": "In serverless, focus security effort on function code, permissions/IAM roles, and event source validation — the underlying compute layer is provider-managed.",
+        "relatedTopics": [
+          "serverless-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "serverless-security",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Physical hardware theft",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Difficulty maintaining traditional host-based logging/monitoring across ephemeral, short-lived function instances",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Hypervisor-level VM escape",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Unpatched guest operating system kernels",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-062",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid secure protocol replacements for their insecure legacy counterparts?",
+      "explanation": {
+        "correct": "SFTP (SSH File Transfer Protocol) securely replaces cleartext FTP, and SSH securely replaces cleartext Telnet for remote administration — both are standard, correctly-directed secure replacements.",
+        "incorrect": "The other two options have the replacement direction backwards: HTTPS should replace HTTP (not the reverse), and SNMPv3 should replace SNMPv1 (not the reverse).",
+        "examTip": "Whenever an exam question lists a 'replacement' pair, double-check the DIRECTION — the secure protocol should always be the one replacing the insecure legacy one.",
+        "relatedTopics": [
+          "secure-protocols"
+        ]
+      },
+      "metadata": {
+        "examObjective": "secure-protocols",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "SFTP replacing FTP",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "SSH replacing Telnet",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "HTTP replacing HTTPS",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SNMPv1 replacing SNMPv3",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-063",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are core components of a Zero Trust Architecture's policy-based access model, as defined by NIST SP 800-207?",
+      "explanation": {
+        "correct": "NIST's zero trust model defines a Policy Engine (which makes the access decision) and a Policy Enforcement Point (which enforces that decision at the point of access), forming the core of the control/data plane split.",
+        "incorrect": "A perimeter firewall alone represents the older castle-and-moat approach zero trust moves away from. VLAN tagging is a Layer 2 segmentation mechanism, not a core zero trust policy component as defined by the framework.",
+        "examTip": "The Policy Administrator sits between the Policy Engine and Policy Enforcement Point, relaying the access decision for enforcement — a third component often tested alongside PE and PEP.",
+        "relatedTopics": [
+          "zero-trust"
+        ]
+      },
+      "metadata": {
+        "examObjective": "zero-trust",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Policy Engine (PE)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Policy Enforcement Point (PEP)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Perimeter firewall only",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "VLAN tagging",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-064",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid Infrastructure as Code (IaC) security best practices?",
+      "explanation": {
+        "correct": "Pre-deployment scanning and version-controlled peer review both help catch security misconfigurations and unauthorized changes before infrastructure is provisioned.",
+        "incorrect": "Hardcoding plaintext credentials and granting unrestricted permanent admin access both directly violate least privilege and secrets management best practices, introducing significant risk.",
+        "examTip": "Use a secrets manager (like Azure Key Vault or HashiCorp Vault) referenced dynamically in IaC templates — never hardcode credentials in source-controlled files.",
+        "relatedTopics": [
+          "iac-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "iac-security",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scanning IaC templates for misconfigurations before deployment",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Storing IaC templates in version control with peer review",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Hardcoding plaintext credentials directly in the IaC template",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Granting the IaC deployment pipeline permanent, unrestricted administrator access to production",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-065",
+      "topicId": "security-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO of the following are considered secure protocols for encrypting directory services and DNS lookups respectively?",
+      "explanation": {
+        "correct": "LDAPS encrypts LDAP directory traffic over TLS, and DNSSEC provides cryptographic authentication of DNS responses (though DNSSEC focuses on integrity/authentication rather than confidentiality specifically, it is the correct secure-DNS answer among these choices).",
+        "incorrect": "Telnet is an inherently insecure remote administration protocol with no encryption. RC4 is a deprecated, weak stream cipher, not a directory or DNS protocol at all.",
+        "examTip": "Note that DNSSEC provides data integrity and origin authentication for DNS, not confidentiality — DNS over HTTPS/TLS (DoH/DoT) is the encryption-focused counterpart.",
+        "relatedTopics": [
+          "ldaps",
+          "dnssec"
+        ]
+      },
+      "metadata": {
+        "examObjective": "ldaps",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "LDAPS",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "DNSSEC",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Telnet",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "RC4",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-066",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Data classification and access management responsibility for the customer's own data stays with the customer across IaaS, PaaS, and SaaS. Type 1 hypervisors (bare-metal) generally offer BETTER performance and a smaller attack surface than Type 2 (hosted) hypervisors — the statement has this backwards. Jump servers provide a controlled, monitored chokepoint for administrative access into sensitive segments.",
+        "incorrect": "The false statement reverses the Type 1/Type 2 performance and attack-surface comparison.",
+        "examTip": "Jump servers should be tightly monitored, patched, and require MFA, since they're a high-value target given their broad administrative access.",
+        "relatedTopics": [
+          "shared-responsibility-model",
+          "hypervisors",
+          "jump-server"
+        ]
+      },
+      "metadata": {
+        "examObjective": "shared-responsibility-model",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "In the shared responsibility model, the customer always retains full responsibility for data classification and access management, regardless of service model.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A Type 2 hypervisor generally offers better performance and a smaller attack surface than a Type 1 hypervisor.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A jump server (jump box) is a hardened host used to provide controlled administrative access to a segmented, more sensitive network zone.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "secplus-067",
+      "topicId": "security-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Air gaps are complete physical/logical isolation. HTTPS layers TLS encryption over standard HTTP. An extranet, by definition, extends limited access to trusted external parties like partners or vendors — it is NOT restricted only to internal employees, which describes an intranet instead.",
+        "incorrect": "The false statement confuses extranet with intranet — extranet specifically includes controlled EXTERNAL access.",
+        "examTip": "Intranet = internal only; Extranet = internal + selected trusted external parties; Internet = public — a clean three-tier distinction.",
+        "relatedTopics": [
+          "air-gap",
+          "https-tls",
+          "extranet"
+        ]
+      },
+      "metadata": {
+        "examObjective": "air-gap",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "An air-gapped network has no physical or logical connection to any other network, including the internet.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "HTTPS uses TLS to encrypt HTTP traffic between a client and server.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "An extranet is only accessible to employees within the organization's internal network.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-068",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Microsegmentation applies granular, workload-level security policies rather than broad network-wide segmentation. NAC solutions commonly validate device posture/compliance before granting access. Secure boot specifically verifies firmware and bootloader/OS integrity DURING the boot process, before the OS is fully loaded — not application-layer integrity afterward.",
+        "incorrect": "The false statement misplaces secure boot's role — it operates at the firmware/bootloader stage, not after the OS and applications are already running.",
+        "examTip": "Secure boot uses a chain of trust rooted in firmware to ensure each boot stage is cryptographically verified before execution proceeds.",
+        "relatedTopics": [
+          "microsegmentation",
+          "nac",
+          "secure-boot"
+        ]
+      },
+      "metadata": {
+        "examObjective": "microsegmentation",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Microsegmentation in a zero trust architecture creates fine-grained security zones down to the individual workload level, rather than relying on broad network segments.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "NAC (Network Access Control) can enforce device compliance checks, such as verifying up-to-date antivirus, before granting network access.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Secure boot verifies the integrity of application-layer software after the operating system has already fully loaded.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-069",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "VM escape is exactly the scenario of an attacker breaking out of VM isolation to reach the hypervisor/host. ICS/SCADA systems typically run legacy, highly availability-sensitive equipment and are patched far LESS aggressively than standard IT due to uptime and compatibility concerns, not the same cadence. RTOS is defined by deterministic, time-bound processing guarantees.",
+        "incorrect": "The false statement wrongly claims ICS/SCADA patch cadence matches standard IT — in practice these environments are patched much more cautiously and infrequently.",
+        "examTip": "ICS/SCADA security typically relies more heavily on network segmentation and compensating controls than frequent patching, due to uptime-critical operational constraints.",
+        "relatedTopics": [
+          "vm-escape",
+          "ics-scada",
+          "rtos"
+        ]
+      },
+      "metadata": {
+        "examObjective": "vm-escape",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "VM escape refers to an attacker breaking out of a virtual machine to gain access to the underlying hypervisor or host system.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Industrial Control Systems (ICS) and SCADA environments are typically updated/patched on the same aggressive cadence as standard IT servers.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A Real-Time Operating System (RTOS) is designed to process inputs and produce outputs within strict, predictable time constraints.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "secplus-070",
+      "topicId": "security-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "CSPM (Cloud Security Posture Management) continuously scans for cloud misconfigurations against best practices/compliance benchmarks. 'Screened subnet' and 'DMZ' are simply two names for the same network architecture concept, not functionally different designs. In PaaS, the provider typically manages and patches the underlying OS/runtime, while the customer focuses on application code and data — OS patching is NOT the customer's responsibility in PaaS.",
+        "incorrect": "Two statements are false: screened subnet and DMZ are the same thing (just different terminology), and PaaS customers do NOT patch the underlying OS — that's provider-managed.",
+        "examTip": "Remember the responsibility gradient: IaaS (customer patches OS) → PaaS (provider patches OS/runtime) → SaaS (provider manages nearly everything).",
+        "relatedTopics": [
+          "cspm",
+          "dmz",
+          "shared-responsibility-model"
+        ]
+      },
+      "metadata": {
+        "examObjective": "cspm",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "CSPM tools continuously monitor cloud environments for misconfigurations against security best practices and compliance frameworks.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A screened subnet (DMZ) and a demilitarized zone refer to two functionally different network architectures.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "PaaS customers are generally responsible for patching the underlying operating system in the shared responsibility model.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "secplus-071",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "An air gap provides the strongest possible isolation by removing all network connectivity entirely. NAC evaluates and enforces device compliance posture before granting network access.",
+        "incorrect": "An extranet still involves controlled network connectivity, unlike a full air gap. SASE, SNMPv3, and IPSec address different security architecture concerns unrelated to pre-access compliance checking.",
+        "examTip": "Air-gapped systems still require careful control of removable media (like USB drives) as a residual risk vector, since physical transfer remains possible.",
+        "relatedTopics": [
+          "air-gap",
+          "nac"
+        ]
+      },
+      "metadata": {
+        "examObjective": "air-gap",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To isolate a legacy industrial control system from any network connectivity entirely, as the strongest possible segmentation, implement an __",
+          "options": [
+            "Extranet",
+            "Air gap",
+            "VLAN",
+            "Screened subnet"
+          ],
+          "correctAnswer": "Air gap"
+        },
+        {
+          "id": "d2",
+          "prompt": "To require devices to prove compliance with security policy (e.g., updated antivirus) before granting network access, implement __",
+          "options": [
+            "NAC",
+            "SASE",
+            "SNMPv3",
+            "IPSec"
+          ],
+          "correctAnswer": "NAC"
+        }
+      ]
+    },
+    {
+      "id": "secplus-072",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "IPSec tunnel mode encapsulates and encrypts the entire original packet for gateway-to-gateway VPN scenarios. A CASB provides visibility and policy enforcement over both sanctioned and unsanctioned cloud application usage.",
+        "incorrect": "Transport mode only encrypts the payload, not the full header, making it unsuitable for a gateway-to-gateway VPN scenario needing full packet protection. CSPM focuses on cloud configuration posture rather than user-to-cloud traffic policy, and SIEM/SOAR handle log aggregation and orchestration rather than direct cloud access brokering.",
+        "examTip": "CASB can operate in API mode (retrospective visibility) or proxy mode (real-time inline enforcement) — know both deployment options.",
+        "relatedTopics": [
+          "ipsec",
+          "casb"
+        ]
+      },
+      "metadata": {
+        "examObjective": "ipsec",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To encrypt the entire original IP packet (including header) for a site-to-site VPN between two gateways, use IPSec in __ mode.",
+          "options": [
+            "Transport mode",
+            "Tunnel mode",
+            "AH mode",
+            "ESP-only mode"
+          ],
+          "correctAnswer": "Tunnel mode"
+        },
+        {
+          "id": "d2",
+          "prompt": "To provide centralized visibility and policy enforcement over sanctioned and unsanctioned (shadow IT) cloud application usage, deploy a __",
+          "options": [
+            "CSPM",
+            "CASB",
+            "SIEM",
+            "SOAR"
+          ],
+          "correctAnswer": "CASB"
+        }
+      ]
+    },
+    {
+      "id": "secplus-073",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "Containers virtualize at the OS level, sharing the host kernel for lightweight, fast isolation, unlike hypervisor-based full hardware virtualization. Secure boot verifies each stage of the boot chain before the OS is permitted to load.",
+        "incorrect": "Both hypervisor types virtualize hardware fully rather than sharing a kernel, which containers do instead. Disk encryption, application whitelisting, and antivirus operate after the OS has already loaded, not during the pre-boot integrity check.",
+        "examTip": "Containers offer faster startup and higher density than VMs, but share more of the host's attack surface via the shared kernel.",
+        "relatedTopics": [
+          "containers",
+          "secure-boot"
+        ]
+      },
+      "metadata": {
+        "examObjective": "containers",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To run isolated, lightweight application instances that share the host OS kernel rather than virtualizing full hardware, use __",
+          "options": [
+            "A Type 1 hypervisor",
+            "A Type 2 hypervisor",
+            "Containers",
+            "Bare-metal servers"
+          ],
+          "correctAnswer": "Containers"
+        },
+        {
+          "id": "d2",
+          "prompt": "To ensure a firmware/bootloader integrity check occurs before the operating system is allowed to load, enable __",
+          "options": [
+            "Secure boot",
+            "Disk encryption",
+            "Application whitelisting",
+            "Antivirus real-time scanning"
+          ],
+          "correctAnswer": "Secure boot"
+        }
+      ]
+    },
+    {
+      "id": "secplus-074",
+      "topicId": "security-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "A dedicated private circuit avoids the public internet entirely for the most reliable, private connectivity. MFA specifically requires combining multiple distinct factor categories, such as a password (something you know) and a hardware token (something you have).",
+        "incorrect": "VPN options still traverse the public internet, even if encrypted. SSO, federation, and RBAC address different aspects of identity/access management, not the specific 'two distinct factors' requirement described.",
+        "examTip": "A password plus a PIN is NOT MFA — both are 'something you know'; true MFA requires factors from different categories.",
+        "relatedTopics": [
+          "private-connectivity",
+          "mfa"
+        ]
+      },
+      "metadata": {
+        "examObjective": "private-connectivity",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To connect a corporate branch office to Azure over a dedicated, private circuit that never traverses the public internet, use __",
+          "options": [
+            "Site-to-Site VPN over the internet",
+            "ExpressRoute-equivalent private circuit",
+            "Point-to-Site VPN",
+            "Public Wi-Fi tethering"
+          ],
+          "correctAnswer": "ExpressRoute-equivalent private circuit"
+        },
+        {
+          "id": "d2",
+          "prompt": "To require both a password and a hardware token before granting access to a sensitive system, implement __",
+          "options": [
+            "Single sign-on only",
+            "Multi-factor authentication",
+            "Federation",
+            "Role-based access control"
+          ],
+          "correctAnswer": "Multi-factor authentication"
+        }
+      ]
+    },
+    {
+      "id": "secplus-075",
+      "topicId": "security-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to establish a site-to-site IPSec VPN tunnel between two gateways (IKE Phase 1 and Phase 2 flow).",
+      "explanation": {
+        "correct": "IKE Phase 1 first creates a secure management channel, Phase 2 then negotiates the actual data-protection parameters, the IPSec tunnel is established using those parameters, and finally encrypted traffic flows through it.",
+        "incorrect": "Phase 2 negotiation cannot occur without the secure Phase 1 channel already established, and traffic cannot pass through the tunnel before it's actually built using the negotiated parameters.",
+        "examTip": "IKE Phase 1 can operate in Main Mode (more secure, more exchanges) or Aggressive Mode (faster, less secure) — know this trade-off.",
+        "relatedTopics": [
+          "ipsec",
+          "vpn"
+        ]
+      },
+      "metadata": {
+        "examObjective": "ipsec",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Negotiate and establish IKE Phase 1 (a secure, authenticated management channel between the gateways)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Negotiate IKE Phase 2 (agree on the IPSec security association parameters for actual data protection)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Establish the IPSec tunnel using the negotiated encryption and authentication parameters",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Begin passing encrypted traffic between the two networks through the tunnel",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "secplus-076",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to deploy a new containerized application securely using a typical DevSecOps CI/CD pipeline.",
+      "explanation": {
+        "correct": "A secure container pipeline scans the image first, stores only approved images in a private registry, deploys with hardened least-privilege settings, and continuously monitors runtime behavior after deployment.",
+        "incorrect": "Deploying before scanning risks running a vulnerable image in production, and runtime monitoring logically follows deployment rather than preceding it.",
+        "examTip": "Shift-left security means scanning as early as possible in the pipeline (at build time), rather than waiting until after deployment to discover vulnerabilities.",
+        "relatedTopics": [
+          "container-security",
+          "devsecops"
+        ]
+      },
+      "metadata": {
+        "examObjective": "container-security",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Scan the container image for known vulnerabilities before it is pushed to a registry",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Store the scanned, approved image in a private container registry",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Deploy the container to the orchestration platform (e.g., Kubernetes) using least-privilege security contexts",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Continuously monitor the running container for anomalous runtime behavior",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "secplus-077",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each Azure/cloud service model responsibility into the correct category for an IaaS deployment.",
+      "explanation": {
+        "correct": "In IaaS, the customer manages everything from the guest OS upward (patching, app config), while the provider retains responsibility for the physical infrastructure and hypervisor layer beneath the VM.",
+        "incorrect": "This split shifts significantly in PaaS/SaaS, where the provider takes on progressively more of the stack — but for IaaS specifically, guest OS and above stays with the customer.",
+        "examTip": "IaaS gives the customer the most control (and responsibility) of any cloud service model, short of fully on-premises infrastructure.",
+        "relatedTopics": [
+          "shared-responsibility-model"
+        ]
+      },
+      "metadata": {
+        "examObjective": "shared-responsibility-model",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Guest OS patching"
+        },
+        {
+          "id": "item2",
+          "text": "Application-level security configuration"
+        },
+        {
+          "id": "item3",
+          "text": "Physical datacenter security"
+        },
+        {
+          "id": "item4",
+          "text": "Hypervisor management"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Customer's responsibility in IaaS",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Provider's responsibility in IaaS",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "secplus-078",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each network security concept into the correct category.",
+      "explanation": {
+        "correct": "VLANs and DMZs divide and isolate network zones, while IPSec and TLS provide encrypted, authenticated communication channels — two distinct but complementary security architecture concerns.",
+        "incorrect": "Segmentation limits blast radius by isolating zones; encryption protects data confidentiality/integrity in transit between those zones — both are needed together for defense in depth.",
+        "examTip": "IPSec operates at the network layer (Layer 3) while TLS operates higher up at the transport/session layer — a useful distinction for protocol selection.",
+        "relatedTopics": [
+          "network-segmentation",
+          "secure-protocols"
+        ]
+      },
+      "metadata": {
+        "examObjective": "network-segmentation",
+        "references": [
+          "https://www.comptia.org/certifications/security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "VLAN"
+        },
+        {
+          "id": "item2",
+          "text": "DMZ (screened subnet)"
+        },
+        {
+          "id": "item3",
+          "text": "IPSec"
+        },
+        {
+          "id": "item4",
+          "text": "TLS"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Network segmentation technique",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Secure connectivity/encryption technique",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    }
+  ]
+}

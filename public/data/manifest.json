@@ -1,12 +1,357 @@
 {
   "certifications": [
     {
+      "id": "itil-4-foundation",
+      "name": "ITIL 4 Foundation",
+      "provider": "AXELOS / PeopleCert",
+      "examCode": "ITIL 4 Foundation",
+      "version": "2024-01",
+      "questionCount": 161,
+      "passingScore": 65,
+      "timeLimitMinutes": 60,
+      "topics": [
+        {
+          "id": "service-management",
+          "name": "Key concepts of service management",
+          "weight": 25
+        },
+        {
+          "id": "four-dimensions",
+          "name": "The four dimensions of service management",
+          "weight": 20
+        },
+        {
+          "id": "service-value-system",
+          "name": "The ITIL service value system",
+          "weight": 30
+        },
+        {
+          "id": "practices",
+          "name": "ITIL management practices",
+          "weight": 25
+        }
+      ],
+      "resources": [
+        {
+          "title": "AXELOS ITIL 4 Foundation Certification",
+          "url": "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        }
+      ],
+      "vendor": "AXELOS / PeopleCert",
+      "vendorColor": "#6B2D5C",
+      "level": "beginner",
+      "accessTier": "free",
+      "description": "Introduces the ITIL 4 framework and how it can be used to improve service management.",
+      "examDetails": {
+        "durationMinutes": 60,
+        "questionCount": 40,
+        "passingScore": 65,
+        "priceUSD": 500
+      }
+    },
+    {
+      "id": "comptia-a-plus",
+      "name": "CompTIA A+",
+      "provider": "CompTIA",
+      "examCode": "220-1101 / 220-1102",
+      "version": "2024-01",
+      "questionCount": 75,
+      "passingScore": 70,
+      "timeLimitMinutes": 90,
+      "topics": [
+        {
+          "id": "mobile-devices",
+          "name": "Mobile Devices",
+          "weight": 15
+        },
+        {
+          "id": "networking",
+          "name": "Networking",
+          "weight": 20
+        },
+        {
+          "id": "hardware",
+          "name": "Hardware",
+          "weight": 25
+        },
+        {
+          "id": "virtualization-cloud",
+          "name": "Virtualization and Cloud Computing",
+          "weight": 11
+        },
+        {
+          "id": "operating-systems",
+          "name": "Operating Systems",
+          "weight": 29
+        }
+      ],
+      "resources": [
+        {
+          "title": "CompTIA A+ Exam Objectives",
+          "url": "https://www.comptia.org/certifications/a"
+        },
+        {
+          "title": "CompTIA A+ Study Guide",
+          "url": "https://www.comptia.org/training/books/a-core-1-220-1101-study-guide"
+        }
+      ],
+      "vendor": "CompTIA",
+      "vendorColor": "#C8202F",
+      "level": "beginner",
+      "accessTier": "free",
+      "description": "The industry standard for establishing a career in IT. Covers mobile devices, networking, hardware, virtualization, cloud computing, and operating systems.",
+      "examDetails": {
+        "durationMinutes": 90,
+        "questionCount": 90,
+        "passingScore": 70,
+        "priceUSD": 253
+      }
+    },
+    {
+      "id": "comptia-security-plus",
+      "name": "CompTIA Security+",
+      "provider": "CompTIA",
+      "examCode": "SY0-701",
+      "version": "2024-01",
+      "questionCount": 152,
+      "passingScore": 75,
+      "timeLimitMinutes": 90,
+      "topics": [
+        {
+          "id": "general-security-concepts",
+          "name": "General security concepts",
+          "weight": 12
+        },
+        {
+          "id": "threats-vulnerabilities",
+          "name": "Threats, vulnerabilities, and mitigations",
+          "weight": 22
+        },
+        {
+          "id": "security-architecture",
+          "name": "Security architecture",
+          "weight": 18
+        },
+        {
+          "id": "security-operations",
+          "name": "Security operations",
+          "weight": 28
+        },
+        {
+          "id": "governance-risk-compliance",
+          "name": "Security program management and oversight",
+          "weight": 20
+        }
+      ],
+      "resources": [
+        {
+          "title": "CompTIA Security+ Exam Objectives (SY0-701)",
+          "url": "https://www.comptia.org/certifications/security"
+        },
+        {
+          "title": "CompTIA Security+ Study Guide",
+          "url": "https://www.comptia.org/training/books/security-sy0-701-study-guide"
+        }
+      ],
+      "vendor": "CompTIA",
+      "vendorColor": "#C8202F",
+      "level": "beginner",
+      "accessTier": "free",
+      "description": "Validates the baseline skills necessary to perform core security functions and pursue an IT security career.",
+      "examDetails": {
+        "durationMinutes": 90,
+        "questionCount": 90,
+        "passingScore": 75,
+        "priceUSD": 404
+      }
+    },
+    {
+      "id": "istqb-foundation",
+      "name": "ISTQB Certified Tester Foundation Level",
+      "provider": "ISTQB",
+      "examCode": "CTFL",
+      "version": "2024-01",
+      "questionCount": 27,
+      "passingScore": 65,
+      "timeLimitMinutes": 60,
+      "topics": [
+        {
+          "id": "fundamentals",
+          "name": "Fundamentals of Testing",
+          "weight": 18
+        },
+        {
+          "id": "testing-lifecycle",
+          "name": "Testing Throughout the Software Development Lifecycle",
+          "weight": 22
+        },
+        {
+          "id": "static-testing",
+          "name": "Static Testing",
+          "weight": 10
+        },
+        {
+          "id": "test-techniques",
+          "name": "Test Techniques",
+          "weight": 25
+        },
+        {
+          "id": "test-management",
+          "name": "Test Management",
+          "weight": 15
+        },
+        {
+          "id": "tool-support",
+          "name": "Tool Support for Testing",
+          "weight": 10
+        }
+      ],
+      "resources": [
+        {
+          "title": "ISTQB CTFL Syllabus",
+          "url": "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        },
+        {
+          "title": "ISTQB Glossary",
+          "url": "https://glossary.istqb.org"
+        }
+      ],
+      "vendor": "ISTQB",
+      "vendorColor": "#003366",
+      "level": "beginner",
+      "accessTier": "free",
+      "description": "The world's most widely recognized software testing certification. Covers fundamentals of software testing, test design, and test management.",
+      "examDetails": {
+        "durationMinutes": 60,
+        "questionCount": 40,
+        "passingScore": 65,
+        "priceUSD": 250
+      }
+    },
+    {
+      "id": "linux-essentials",
+      "name": "Linux Essentials",
+      "provider": "LPI",
+      "examCode": "010-160",
+      "version": "2024-01",
+      "questionCount": 151,
+      "passingScore": 70,
+      "timeLimitMinutes": 60,
+      "topics": [
+        {
+          "id": "linux-community",
+          "name": "The Linux Community and a Career in Open Source",
+          "weight": 15
+        },
+        {
+          "id": "finding-your-way",
+          "name": "Finding Your Way on a Linux System",
+          "weight": 20
+        },
+        {
+          "id": "power-of-cli",
+          "name": "The Power of the Command Line",
+          "weight": 25
+        },
+        {
+          "id": "linux-os",
+          "name": "The Linux Operating System",
+          "weight": 20
+        },
+        {
+          "id": "security-permissions",
+          "name": "Security and File Permissions",
+          "weight": 20
+        }
+      ],
+      "icon": "/icons/lpi.svg",
+      "resources": [
+        {
+          "title": "LPI Linux Essentials Overview",
+          "url": "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        },
+        {
+          "title": "LPI Linux Essentials Exam Objectives",
+          "url": "https://www.lpi.org/our-certifications/exam-010-objectives"
+        }
+      ],
+      "vendor": "LPI",
+      "vendorColor": "#FDC300",
+      "level": "beginner",
+      "accessTier": "free",
+      "description": "Validates the foundational skills and knowledge of the Linux operating system, open source concepts, and basic command-line proficiency.",
+      "examDetails": {
+        "durationMinutes": 60,
+        "questionCount": 40,
+        "passingScore": 70,
+        "priceUSD": 120
+      }
+    },
+    {
+      "id": "az-104",
+      "name": "Azure Administrator",
+      "provider": "Microsoft",
+      "examCode": "AZ-104",
+      "version": "2024-01",
+      "questionCount": 151,
+      "passingScore": 70,
+      "timeLimitMinutes": 120,
+      "topics": [
+        {
+          "id": "identity",
+          "name": "Manage Azure identities and governance",
+          "weight": 20
+        },
+        {
+          "id": "storage",
+          "name": "Implement and manage storage",
+          "weight": 15
+        },
+        {
+          "id": "compute",
+          "name": "Deploy and manage Azure compute resources",
+          "weight": 25
+        },
+        {
+          "id": "virtual-networking",
+          "name": "Configure and manage virtual networking",
+          "weight": 25
+        },
+        {
+          "id": "monitoring",
+          "name": "Monitor and maintain Azure resources",
+          "weight": 15
+        }
+      ],
+      "resources": [
+        {
+          "title": "Microsoft Learn — AZ-104 Learning Path",
+          "url": "https://learn.microsoft.com/en-us/certifications/exams/az-104"
+        },
+        {
+          "title": "AZ-104 Study Guide (Official)",
+          "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104"
+        }
+      ],
+      "vendor": "Microsoft",
+      "vendorColor": "#0078D4",
+      "level": "intermediate",
+      "accessTier": "premium",
+      "description": "Manage Azure identities, governance, storage, compute, and virtual networks in a cloud environment.",
+      "examDetails": {
+        "durationMinutes": 120,
+        "questionCount": 40,
+        "passingScore": 70,
+        "priceUSD": 165
+      }
+    },
+    {
       "id": "az-900",
       "name": "Microsoft Azure Fundamentals",
       "provider": "Microsoft",
       "examCode": "AZ-900",
       "version": "2024-01",
-      "questionCount": 35,
+      "questionCount": 150,
       "passingScore": 70,
       "timeLimitMinutes": 60,
       "topics": [
@@ -33,12 +378,26 @@
       ],
       "icon": "/icons/azure.svg",
       "resources": [
-        { "title": "Microsoft Learn — AZ-900 Learning Path", "url": "https://learn.microsoft.com/en-us/training/paths/az-900-describe-cloud-concepts/" },
-        { "title": "AZ-900 Study Guide (Official)", "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900" },
-        { "title": "Azure Fundamentals — Free Practice Assessment", "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification" },
-        { "title": "John Savill's AZ-900 Cram (YouTube)", "url": "https://www.youtube.com/watch?v=pY0LnKiDwRA" },
-        { "title": "Azure Documentation", "url": "https://learn.microsoft.com/en-us/azure/" }
-      ]
+        {
+          "title": "Microsoft Learn — AZ-900 Learning Path",
+          "url": "https://learn.microsoft.com/en-us/training/paths/az-900-describe-cloud-concepts/"
+        },
+        {
+          "title": "AZ-900 Study Guide (Official)",
+          "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900"
+        }
+      ],
+      "vendor": "Microsoft",
+      "vendorColor": "#0078D4",
+      "level": "beginner",
+      "accessTier": "free",
+      "description": "Foundational knowledge of cloud services and how those services are provided with Microsoft Azure.",
+      "examDetails": {
+        "durationMinutes": 60,
+        "questionCount": 40,
+        "passingScore": 70,
+        "priceUSD": 99
+      }
     }
   ]
 }

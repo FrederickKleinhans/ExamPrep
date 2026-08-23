@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import { Layout } from './components/Layout';
 import { DashboardPage } from './pages/DashboardPage';
+import { TracksPage } from './pages/TracksPage';
+import { CertificationPage } from './pages/CertificationPage';
 import { StudyPage } from './pages/StudyPage';
 import { ExamPage } from './pages/ExamPage';
 import { AnalyticsPage } from './pages/AnalyticsPage';
@@ -19,6 +21,8 @@ function App() {
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<DashboardPage />} />
+            <Route path="/tracks" element={<TracksPage />} />
+            <Route path="/certifications/:certId" element={<CertificationPage />} />
             <Route path="/study" element={<StudyPage />} />
             <Route path="/exam" element={<ExamPage />} />
             <Route path="/analytics" element={<AnalyticsPage />} />

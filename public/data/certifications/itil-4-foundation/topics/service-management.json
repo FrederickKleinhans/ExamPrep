@@ -1,0 +1,1956 @@
+{
+  "certificationId": "itil-4-foundation",
+  "topicId": "service-management",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "itil4-001",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the definition of a 'service' in ITIL 4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A means of delivering value to customers by facilitating outcomes they want to achieve without the ownership of specific costs and risks.",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A technical solution provided by the IT department to end users.",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A contractual agreement between a service provider and a supplier.",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A process for managing incidents and service requests.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ITIL 4 defines a service as a means of enabling value co-creation by facilitating outcomes that customers want to achieve, without the customer having to manage specific costs and risks.",
+        "incorrect": "B is too narrow; C describes a contract, not a service; D describes a process.",
+        "examTip": "Remember: Service = Value co-creation through facilitated outcomes.",
+        "relatedTopics": [
+          "service-definition",
+          "value-co-creation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-002",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which two elements combine to form 'value' in ITIL 4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cost and risk",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Utility and warranty",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Outcome and output",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Service and product",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Value in ITIL 4 is created through utility (fit for purpose) and warranty (fit for use). Together they ensure a service is both useful and reliable.",
+        "incorrect": "A describes constraints, not value components; C confuses outcomes/outputs with value components; D are delivery mechanisms, not value elements.",
+        "examTip": "Mnemonic: 'UW' = Utility + Warranty = Value.",
+        "relatedTopics": [
+          "utility",
+          "warranty",
+          "value"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-003",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does 'utility' refer to in the context of service value?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The service's availability and capacity guarantees",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The service being fit for purpose and supporting desired outcomes",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The financial cost of delivering the service",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The security and compliance of the service",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Utility means 'fit for purpose' — the service provides the functionality needed to achieve desired outcomes. It answers 'what does the service do?'",
+        "incorrect": "A describes warranty aspects; C is about cost, not utility; D is also a warranty concern.",
+        "examTip": "Utility = What it does (functionality); Warranty = How it performs (guarantees).",
+        "relatedTopics": [
+          "utility",
+          "fit-for-purpose"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-004",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does 'warranty' refer to in ITIL 4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The legal contract between provider and consumer",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The service being fit for use with positive effect on availability, capacity, security, and continuity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The financial warranty provided for service failures",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The process of continually improving the service",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Warranty means 'fit for use' — it assures that the service will meet agreed requirements for availability, capacity, security, and continuity.",
+        "incorrect": "A confuses warranty with a contract; C is a financial concept, not ITIL warranty; D describes continual improvement.",
+        "examTip": "Warranty = How well it works (availability, capacity, security, continuity).",
+        "relatedTopics": [
+          "warranty",
+          "fit-for-use"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-005",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In ITIL 4, what is an 'outcome'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A tangible or intangible deliverable of an activity",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A result for a stakeholder enabled by one or more outputs",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The final step in the service value chain",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A measure of service performance against SLA targets",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An outcome is a result for a stakeholder enabled by one or more outputs. Outcomes are what the consumer actually wants to achieve.",
+        "incorrect": "A defines an output, not an outcome; C confuses outcome with SVC activities; D describes a performance metric.",
+        "examTip": "Output = what is delivered; Outcome = what is achieved with it.",
+        "relatedTopics": [
+          "outcome",
+          "output",
+          "value"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-006",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following best describes 'costs' in the context of service management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the financial expenses incurred by the service provider",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The amount of money spent on a specific activity or resource, including removal of value such as negative outcomes",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The price charged to the customer for the service",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The budget allocated for IT projects only",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ITIL 4 defines costs broadly — including not only financial expenses but also the removal of value (negative outcomes, risks realized) and other sacrifices.",
+        "incorrect": "A is too narrow; C confuses cost with price; D is too limited in scope.",
+        "examTip": "Costs = money spent + value removed + other sacrifices.",
+        "relatedTopics": [
+          "costs",
+          "value"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-007",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary difference between a 'customer' and a 'user' in ITIL 4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A customer pays for the service; a user defines the requirements",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A customer defines the requirements and is responsible for outcomes; a user uses the service on a day-to-day basis",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A customer is external; a user is internal",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "There is no difference; the terms are interchangeable",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A customer defines requirements and is accountable for outcomes; a user is the person who directly uses the service. They can be the same person but play different roles.",
+        "incorrect": "A is partially correct but incomplete; C is incorrect as both can be internal or external; D is false.",
+        "examTip": "Customer = decides what is needed; User = actually uses it.",
+        "relatedTopics": [
+          "customer",
+          "user",
+          "stakeholders"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-008",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Who is the 'sponsor' in a service relationship?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The person who authorizes budget for the service",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The person who uses the service daily",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The person who designs the service architecture",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The person who resolves service incidents",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The sponsor is the person who authorizes budget for the service. They are a key stakeholder in the service relationship.",
+        "incorrect": "B describes a user; C describes a service designer/architect; D describes a service desk agent or resolver.",
+        "examTip": "Sponsor = pays/approves budget; Customer = decides what; User = works with it.",
+        "relatedTopics": [
+          "sponsor",
+          "stakeholders"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-009",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a 'service offering' in ITIL 4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A formal description of a single IT process",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A description of one or more services designed to address the needs of a target consumer group, which may include goods, access to resources, and service actions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The financial price list for all IT services",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A contractual SLA between provider and consumer",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A service offering describes one or more services designed to address the needs of a target consumer group. It can include goods, access to resources, and service actions.",
+        "incorrect": "A is too narrow; C confuses offering with pricing; D confuses offering with SLA.",
+        "examTip": "Offering = what is available to a specific group; Service = the actual delivery mechanism.",
+        "relatedTopics": [
+          "service-offering",
+          "service-relationship"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-010",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "FinTech Solutions Ltd. is launching a new mobile banking app. The project team has defined the app's features, response time targets, and security protocols. However, during beta testing, users report that while the app has all required features, it crashes frequently during peak hours.",
+      "questionText": "Based on ITIL 4 value concepts, what is the primary issue with this service?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The service has poor utility because it lacks required features",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The service has poor warranty because it fails to meet availability and capacity requirements",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The service has poor value because the price is too high",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The service has poor utility because the user interface is confusing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The app has the required features (good utility/fit for purpose) but crashes during peak hours (poor warranty/fit for use). Warranty covers availability, capacity, security, and continuity.",
+        "incorrect": "A is incorrect because features are present; C is not mentioned in the scenario; D is not mentioned.",
+        "examTip": "Crashes during peak hours = capacity/availability issue = WARRANTY problem.",
+        "relatedTopics": [
+          "utility",
+          "warranty",
+          "value"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-011",
+      "type": "multiple-choice",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO are components of 'warranty' in ITIL 4? (Choose TWO)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Availability",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Functionality",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Capacity",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Performance of desired functions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Warranty consists of availability, capacity, security, and continuity. Functionality and 'performance of desired functions' are aspects of utility (fit for purpose).",
+        "incorrect": "B and D describe utility, not warranty.",
+        "examTip": "Warranty = ACCS: Availability, Capacity, Continuity, Security.",
+        "relatedTopics": [
+          "warranty",
+          "utility"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-012",
+      "type": "multiple-choice",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO statements about 'service relationships' are correct? (Choose TWO)",
+      "options": [
+        {
+          "id": "A",
+          "text": "A service relationship includes service provision, service consumption, and service relationship management",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Service relationships only exist between external service providers and customers",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Service relationships are established to co-create value",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Service relationships are always documented in a formal contract",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Service relationships involve provision, consumption, and relationship management, and their purpose is value co-creation. They can exist internally and do not always require formal contracts.",
+        "incorrect": "B is incorrect because relationships can be internal; D is incorrect because not all require formal contracts.",
+        "examTip": "Service relationships = co-creation of value, can be internal or external.",
+        "relatedTopics": [
+          "service-relationship",
+          "value-co-creation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-013",
+      "type": "multiple-choice",
+      "topicId": "service-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO are examples of 'risks' in ITIL 4? (Choose TWO)",
+      "options": [
+        {
+          "id": "A",
+          "text": "A possible event that could cause harm or loss, or make it more difficult to achieve objectives",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A certain event that will definitely cause financial loss",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The uncertainty of outcome, whether positive opportunity or negative threat",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "The total budget allocated for a service",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ITIL 4 defines risk as a possible event that could cause harm or uncertainty of outcome (both positive opportunities and negative threats). It is not limited to financial loss or budget.",
+        "incorrect": "B is incorrect because risk involves uncertainty, not certainty; D describes a budget, not risk.",
+        "examTip": "Risk = uncertainty of outcome (can be positive opportunity or negative threat).",
+        "relatedTopics": [
+          "risk",
+          "value"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-014",
+      "type": "multiple-choice",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO roles can a person play in a service relationship? (Choose TWO)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Service provider",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Service regulator",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Service consumer",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Service auditor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In ITIL 4, the key roles in a service relationship are service provider and service consumer (which includes customer, user, and sponsor). Regulator and auditor are not core service relationship roles.",
+        "incorrect": "B and D are not standard ITIL 4 service relationship roles.",
+        "examTip": "Service relationship roles: Provider, Consumer (Customer, User, Sponsor).",
+        "relatedTopics": [
+          "service-relationship",
+          "stakeholders"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-015",
+      "type": "yes-no-statements",
+      "topicId": "service-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Consider the following statements about ITIL 4 service management concepts. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A service consumer always pays money to the service provider.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Value is always determined by the service consumer, not the provider.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "An output is a tangible or intangible deliverable of an activity.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Value is determined by the consumer. An output is indeed a deliverable. However, a service consumer does not always pay money — value can be exchanged in many forms.",
+        "incorrect": "S1 is false because payment is not always monetary; value exchange can take many forms.",
+        "examTip": "Value is subjective — determined by the consumer, not the provider.",
+        "relatedTopics": [
+          "value",
+          "output",
+          "service-consumer"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-016",
+      "type": "yes-no-statements",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Consider the following statements about service relationships. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Service relationship management involves activities performed jointly by the provider and consumer.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A service provider can only be an external organization.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Service consumption includes the management of the consumer's resources needed to use the service.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Service relationship management is joint. Service providers can be internal or external. Service consumption includes managing consumer resources needed to use the service.",
+        "incorrect": "S2 is false because providers can be internal IT departments, shared service units, etc.",
+        "examTip": "Providers can be internal, external, or part of the same organization.",
+        "relatedTopics": [
+          "service-relationship",
+          "service-provider",
+          "service-consumer"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-017",
+      "type": "yes-no-statements",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Consider the following statements about costs and risks. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Costs in ITIL 4 include only direct financial expenditures.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "A risk can represent a positive opportunity as well as a negative threat.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "The removal of value, such as when a negative outcome occurs, is considered a cost.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Costs include more than just financial expenditures — they include removal of value and other sacrifices. Risk includes both positive opportunities and negative threats. Removal of value is indeed a cost.",
+        "incorrect": "S1 is false because costs are broader than just financial.",
+        "examTip": "Costs = financial + value removed + sacrifices; Risk = opportunity + threat.",
+        "relatedTopics": [
+          "costs",
+          "risk",
+          "value"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-018",
+      "type": "yes-no-statements",
+      "topicId": "service-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Consider the following statements about utility and warranty. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A service with high utility but poor warranty may still create negative value for the consumer.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Warranty is primarily concerned with whether the service supports the consumer's desired outcomes.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Utility can be increased by adding new features that the consumer does not need.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "High utility with poor warranty can create negative value (e.g., features exist but service is always down). Warranty is about fit for use, not fit for purpose. Adding unneeded features does not increase utility.",
+        "incorrect": "S2 confuses warranty with utility; S3 is false because utility must align with needed outcomes.",
+        "examTip": "Utility = fit for purpose (right features); Warranty = fit for use (works well).",
+        "relatedTopics": [
+          "utility",
+          "warranty",
+          "value"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-019",
+      "type": "yes-no-statements",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Consider the following statements about stakeholders. Answer Yes or No for each.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A single person can act as both a customer and a user for the same service.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The sponsor is always a separate individual from the customer.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A service consumer group consists of customers, users, and sponsors.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "One person can play multiple roles. The sponsor can be the same person as the customer. A service consumer group includes customers, users, and sponsors.",
+        "incorrect": "S2 is false because roles can overlap; one person can be both sponsor and customer.",
+        "examTip": "Roles are not mutually exclusive — one person can be customer, user, and sponsor.",
+        "relatedTopics": [
+          "stakeholders",
+          "customer",
+          "user",
+          "sponsor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-020",
+      "type": "dropdown-select",
+      "topicId": "service-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the following statements about ITIL 4 service management concepts.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The assurance that a service will meet agreed requirements is called",
+          "options": [
+            "Utility",
+            "Warranty",
+            "Value",
+            "Outcome"
+          ],
+          "correctAnswer": "Warranty"
+        },
+        {
+          "id": "d2",
+          "prompt": "A result for a stakeholder enabled by one or more outputs is called an",
+          "options": [
+            "Output",
+            "Outcome",
+            "Service",
+            "Offering"
+          ],
+          "correctAnswer": "Outcome"
+        }
+      ],
+      "explanation": {
+        "correct": "Warranty is the assurance that a service will meet agreed requirements. An outcome is a result for a stakeholder enabled by outputs.",
+        "incorrect": "Utility is fit for purpose; an output is a deliverable; an offering is what is presented to consumers.",
+        "examTip": "Warranty = promise/assurance; Outcome = result achieved.",
+        "relatedTopics": [
+          "warranty",
+          "outcome",
+          "value"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-021",
+      "type": "dropdown-select",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the following statements about service relationships.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The role that defines requirements and is responsible for outcomes is the",
+          "options": [
+            "User",
+            "Customer",
+            "Sponsor",
+            "Provider"
+          ],
+          "correctAnswer": "Customer"
+        },
+        {
+          "id": "d2",
+          "prompt": "The role that authorizes budget for a service is the",
+          "options": [
+            "User",
+            "Customer",
+            "Sponsor",
+            "Supplier"
+          ],
+          "correctAnswer": "Sponsor"
+        }
+      ],
+      "explanation": {
+        "correct": "The customer defines requirements and is responsible for outcomes. The sponsor authorizes budget. The user directly uses the service.",
+        "incorrect": "A user uses the service; a provider delivers it; a supplier provides resources to the provider.",
+        "examTip": "Customer = decides; Sponsor = pays; User = operates.",
+        "relatedTopics": [
+          "customer",
+          "sponsor",
+          "user"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-022",
+      "type": "dropdown-select",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the following statements about value and costs.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "In ITIL 4, value is determined by the",
+          "options": [
+            "Service provider",
+            "Service consumer",
+            "Sponsor",
+            "Supplier"
+          ],
+          "correctAnswer": "Service consumer"
+        },
+        {
+          "id": "d2",
+          "prompt": "The removal of value, such as when a negative outcome occurs, is considered a",
+          "options": [
+            "Benefit",
+            "Cost",
+            "Risk",
+            "Output"
+          ],
+          "correctAnswer": "Cost"
+        }
+      ],
+      "explanation": {
+        "correct": "Value is always determined by the service consumer's perception. The removal of value (negative outcomes) is considered a cost in ITIL 4.",
+        "incorrect": "The provider creates value propositions but the consumer determines actual value. Benefits are positive, not negative.",
+        "examTip": "Consumer decides value; negative outcomes = costs.",
+        "relatedTopics": [
+          "value",
+          "costs",
+          "service-consumer"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-023",
+      "type": "dropdown-select",
+      "topicId": "service-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the following statements about service offerings.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A service offering may include goods, access to resources, and",
+          "options": [
+            "SLAs only",
+            "Service actions",
+            "Financial contracts",
+            "Governance policies"
+          ],
+          "correctAnswer": "Service actions"
+        },
+        {
+          "id": "d2",
+          "prompt": "Service offerings are designed to address the needs of a",
+          "options": [
+            "Service provider",
+            "Target consumer group",
+            "Regulatory body",
+            "Internal audit team"
+          ],
+          "correctAnswer": "Target consumer group"
+        }
+      ],
+      "explanation": {
+        "correct": "Service offerings include goods, access to resources, and service actions. They are designed for a target consumer group.",
+        "incorrect": "SLAs are agreements, not offerings; regulatory bodies and audit teams are not target consumer groups for service offerings.",
+        "examTip": "Offering = goods + access + actions, aimed at a specific consumer group.",
+        "relatedTopics": [
+          "service-offering",
+          "service-relationship"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-024",
+      "type": "ordering",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the following elements of value co-creation in the logical order they occur in a service relationship.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Service provider offers services to address consumer needs",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Service consumer defines requirements and consumes services",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Both parties engage in service relationship management",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Value is co-created through the service relationship",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "The logical flow is: provider offers services -> consumer defines needs and consumes -> both manage the relationship -> value is co-created.",
+        "incorrect": "Any other order disrupts the logical service relationship flow.",
+        "examTip": "Offer -> Consume -> Manage -> Co-create value.",
+        "relatedTopics": [
+          "service-relationship",
+          "value-co-creation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-025",
+      "type": "ordering",
+      "topicId": "service-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Arrange the following steps in the correct logical sequence for determining service value.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify consumer's desired outcomes",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Assess utility (fit for purpose)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Assess warranty (fit for use)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Evaluate costs and risks from consumer perspective",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "First identify outcomes, then assess if the service can achieve them (utility), then assess how well it performs (warranty), finally evaluate costs and risks.",
+        "incorrect": "You cannot assess utility without knowing outcomes first; costs and risks are evaluated after understanding what the service provides.",
+        "examTip": "Outcomes -> Utility -> Warranty -> Costs/Risks.",
+        "relatedTopics": [
+          "value",
+          "utility",
+          "warranty",
+          "costs",
+          "risk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-026",
+      "type": "ordering",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the following roles in order of their typical involvement in service acquisition, from initial budget approval to daily use.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Sponsor authorizes budget",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Customer defines requirements and outcomes",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Provider designs and delivers the service",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "User consumes the service on a daily basis",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "The typical flow is: sponsor approves budget -> customer defines what is needed -> provider builds/delivers -> user operates with the service daily.",
+        "incorrect": "The sponsor must authorize before requirements are finalized; the provider delivers before the user can consume.",
+        "examTip": "Sponsor -> Customer -> Provider -> User.",
+        "relatedTopics": [
+          "sponsor",
+          "customer",
+          "user",
+          "service-provider"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-027",
+      "type": "drag-drop",
+      "topicId": "service-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Sort the following items into the correct categories: 'Elements of Value' or 'Elements of Cost'.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Elements of Value",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Elements of Cost",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Utility"
+        },
+        {
+          "id": "item2",
+          "text": "Warranty"
+        },
+        {
+          "id": "item3",
+          "text": "Negative outcomes"
+        },
+        {
+          "id": "item4",
+          "text": "Financial expenditure"
+        }
+      ],
+      "explanation": {
+        "correct": "Utility and warranty are the two components of value. Negative outcomes and financial expenditure are types of costs.",
+        "incorrect": "Negative outcomes and financial expenditure are costs, not value elements.",
+        "examTip": "Value = Utility + Warranty; Costs = money + negative outcomes + sacrifices.",
+        "relatedTopics": [
+          "value",
+          "costs",
+          "utility",
+          "warranty"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-028",
+      "type": "drag-drop",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort the following items into the correct categories: 'Fit for Purpose' or 'Fit for Use'.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Fit for Purpose (Utility)",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Fit for Use (Warranty)",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Service supports desired outcomes"
+        },
+        {
+          "id": "item2",
+          "text": "Service performs required functions"
+        },
+        {
+          "id": "item3",
+          "text": "Service is available when needed"
+        },
+        {
+          "id": "item4",
+          "text": "Service has sufficient capacity"
+        }
+      ],
+      "explanation": {
+        "correct": "Fit for purpose (utility) is about functionality and supporting outcomes. Fit for use (warranty) is about availability, capacity, security, and continuity.",
+        "incorrect": "Availability and capacity are warranty concerns, not utility.",
+        "examTip": "Purpose = what it does; Use = how reliably it works.",
+        "relatedTopics": [
+          "utility",
+          "warranty"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-029",
+      "type": "drag-drop",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort the following items into the correct categories: 'Service Provider Activities' or 'Service Consumer Activities'.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Service Provider Activities",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Service Consumer Activities",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Managing provider resources"
+        },
+        {
+          "id": "item2",
+          "text": "Delivering the service offering"
+        },
+        {
+          "id": "item3",
+          "text": "Defining service requirements"
+        },
+        {
+          "id": "item4",
+          "text": "Managing consumer resources needed to use the service"
+        }
+      ],
+      "explanation": {
+        "correct": "The provider manages their own resources and delivers the offering. The consumer defines requirements and manages their own resources needed to consume the service.",
+        "incorrect": "Defining requirements and managing consumer resources are consumer activities, not provider activities.",
+        "examTip": "Provider = delivers + manages own resources; Consumer = defines needs + manages own resources.",
+        "relatedTopics": [
+          "service-provider",
+          "service-consumer",
+          "service-relationship"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-030",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which statement best describes 'service relationship management'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Activities performed by the service provider to market services to new customers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Joint activities performed by a service provider and service consumer to ensure continual value co-creation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The process of managing contracts with external suppliers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The financial management of service delivery costs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Service relationship management involves joint activities by both provider and consumer to ensure continual value co-creation.",
+        "incorrect": "A describes marketing/sales; C describes supplier management; D describes financial management.",
+        "examTip": "Relationship management = joint effort for continual value co-creation.",
+        "relatedTopics": [
+          "service-relationship",
+          "value-co-creation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-031",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the relationship between 'outputs' and 'outcomes'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Outputs and outcomes are the same thing in ITIL 4",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Outputs are tangible or intangible deliverables; outcomes are results for stakeholders enabled by outputs",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Outcomes are produced first, then outputs are created from them",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Outputs are only financial, while outcomes are only operational",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Outputs are deliverables of activities; outcomes are the results stakeholders achieve using those outputs.",
+        "incorrect": "A is false — they are distinct; C reverses the relationship; D incorrectly limits their scope.",
+        "examTip": "Outputs = what you get; Outcomes = what you achieve with it.",
+        "relatedTopics": [
+          "output",
+          "outcome"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-032",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "MediCare Hospital's IT department provides an electronic health records (EHR) system to clinical staff. The system has all required features for patient data management, but nurses report that during morning rounds, the system becomes so slow that it delays patient care. The IT team confirms the system has adequate features but insufficient server capacity during peak usage.",
+      "questionText": "According to ITIL 4, which aspect of value is primarily affected in this scenario?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Utility, because the system lacks necessary features",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Warranty, because the system fails to meet capacity and performance requirements",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Cost, because the hospital spent too much on the EHR system",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Outcome, because nurses do not know how to use the system",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The system has required features (good utility) but fails during peak hours due to insufficient capacity (poor warranty). Warranty covers capacity, availability, and performance.",
+        "incorrect": "A is wrong because features are present; C is not mentioned; D is not supported by the scenario.",
+        "examTip": "Slow during peak hours = capacity issue = WARRANTY problem.",
+        "relatedTopics": [
+          "warranty",
+          "capacity",
+          "value"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-033",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following is NOT a typical component of a service offering?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Goods",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Access to resources",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Service actions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Financial audit reports",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Service offerings include goods, access to resources, and service actions. Financial audit reports are not a component of a service offering.",
+        "incorrect": "Goods, access to resources, and service actions are the three components of a service offering.",
+        "examTip": "Offering = Goods + Access + Service Actions.",
+        "relatedTopics": [
+          "service-offering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-034",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Who is responsible for managing the resources used to consume a service?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The service provider only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The service consumer only",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Both the provider and consumer jointly",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The sponsor only",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The service consumer manages their own resources needed to use the service. The provider manages their own resources for service delivery.",
+        "incorrect": "While relationship management is joint, each party manages their own resources.",
+        "examTip": "Consumer manages consumer resources; Provider manages provider resources.",
+        "relatedTopics": [
+          "service-consumer",
+          "service-relationship"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-035",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "In ITIL 4, can a risk have a positive effect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No, risks are always negative threats that must be eliminated",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Yes, risk includes uncertainty of outcome, which may be positive opportunity or negative threat",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Only in financial management, not in service management",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Yes, but only when the risk is transferred to a third party",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ITIL 4 explicitly defines risk as uncertainty of outcome, which can be positive (opportunity) or negative (threat). This is aligned with ISO 31000.",
+        "incorrect": "A is the old, limited view of risk; C and D are incorrect restrictions.",
+        "examTip": "Risk = uncertainty = opportunity OR threat.",
+        "relatedTopics": [
+          "risk",
+          "value"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-036",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 'service provision' include?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the technical delivery of IT services",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Managing the consumer's resources, setting requirements, and consuming services",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Managing provider resources, configuring resources for service delivery, and ensuring access for consumers",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Only the financial billing for services consumed",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Service provision includes managing provider resources, configuring resources for service delivery, and ensuring consumer access to services.",
+        "incorrect": "B describes service consumption; A and D are too narrow.",
+        "examTip": "Provision = manage provider resources + configure + ensure access.",
+        "relatedTopics": [
+          "service-provider",
+          "service-relationship"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-037",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which term describes 'the functionality offered by a product or service to meet a particular need'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Warranty",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Utility",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Outcome",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Output",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Utility is defined as the functionality offered by a product or service to meet a particular need — 'fit for purpose'.",
+        "incorrect": "Warranty is about performance guarantees; outcome is the result; output is the deliverable.",
+        "examTip": "Utility = functionality = fit for purpose.",
+        "relatedTopics": [
+          "utility"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-038",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "Global Retail Corp. is implementing a new inventory management system. The CFO insists on measuring success by the reduction in IT operational costs. The Store Operations Director argues that success should be measured by reduced stock-outs and improved shelf availability. The CIO believes success should be measured by system uptime and transaction speed.",
+      "questionText": "According to ITIL 4, whose perspective on value is most aligned with the framework?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The CFO, because cost reduction is the primary measure of value",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The Store Operations Director, because value is about outcomes and what the consumer wants to achieve",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The CIO, because technical performance is the ultimate measure of service quality",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "All three are equally correct because value is determined by the provider",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ITIL 4 emphasizes that value is determined by the consumer based on outcomes they want to achieve. The Store Operations Director focuses on business outcomes (reduced stock-outs), which aligns with ITIL's consumer-centric view of value.",
+        "incorrect": "A focuses on provider costs, not consumer value; C focuses on technical metrics (warranty), not outcomes; D is incorrect because value is determined by the consumer, not the provider.",
+        "examTip": "Value = consumer's perspective on outcomes; not provider's cost or technical metrics.",
+        "relatedTopics": [
+          "value",
+          "outcome",
+          "service-consumer"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-151",
+      "type": "single-choice",
+      "topicId": "service-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "EduTech Academy provides an online learning platform to students. The platform offers comprehensive course content (high utility) but frequently experiences downtime during exam periods when traffic spikes. Students complain that they cannot access exams when needed, despite the rich content available.",
+      "questionText": "According to ITIL 4, which concept best explains why students perceive the service as low value?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The service has high utility but poor warranty, resulting in negative value during critical periods",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The service has low utility because the course content is inadequate",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The service has high costs that exceed the students' willingness to pay",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The service relationship is not governed by a formal contract",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The platform has rich content (high utility) but fails during peak times (poor warranty — availability/capacity). Poor warranty can create negative value even when utility is high.",
+        "incorrect": "B is incorrect because content is comprehensive; C and D are not supported by the scenario.",
+        "examTip": "High utility + poor warranty = negative value perception.",
+        "relatedTopics": [
+          "utility",
+          "warranty",
+          "value"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "itil4-152",
+      "type": "multiple-choice",
+      "topicId": "service-management",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "GreenEnergy Corp. is implementing a new smart grid monitoring service. The project manager wants to ensure the service creates positive value for all stakeholders. She identifies the utility company as the customer, field technicians as users, and the board of directors as sponsors.",
+      "questionText": "Which TWO stakeholder roles are correctly identified in this scenario? (Choose TWO)",
+      "options": [
+        {
+          "id": "A",
+          "text": "The utility company is the customer because it defines requirements and is responsible for outcomes",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The field technicians are the sponsors because they use the service daily",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The board of directors is the sponsor because it authorizes budget for the service",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "The project manager is the user because she manages the implementation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The utility company defines requirements (customer). The board authorizes budget (sponsor). Field technicians are users, not sponsors. The project manager is not identified as a user in this scenario.",
+        "incorrect": "B incorrectly identifies technicians as sponsors; D incorrectly identifies the project manager as a user.",
+        "examTip": "Customer = decides; Sponsor = pays; User = operates.",
+        "relatedTopics": [
+          "customer",
+          "user",
+          "sponsor",
+          "stakeholders"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Understand the nature of value and value co-creation",
+        "references": [
+          "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

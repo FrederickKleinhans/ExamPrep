@@ -1,0 +1,1426 @@
+{
+  "certificationId": "linux-essentials",
+  "topicId": "linux-os",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "lx010-073",
+      "type": "single-choice",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which firmware interface is the modern replacement for legacy BIOS, offering faster boot and support for larger disks?",
+      "explanation": {
+        "correct": "UEFI (Unified Extensible Firmware Interface) is the modern firmware standard that replaced legacy BIOS, supporting faster boot and GPT disks larger than 2TB.",
+        "incorrect": "GRUB is a bootloader (software that loads the kernel, run by BIOS/UEFI), initramfs is a temporary root filesystem used during boot, and systemd is an init system, not firmware.",
+        "examTip": "Firmware first (BIOS/UEFI) -> bootloader (GRUB) -> kernel + initramfs -> init system (systemd).",
+        "relatedTopics": [
+          "boot-process"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Choosing an Operating System",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "GRUB",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "UEFI",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "initramfs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "systemd",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-074",
+      "type": "single-choice",
+      "topicId": "linux-os",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command is used to view, start, stop, enable, or disable services under systemd?",
+      "explanation": {
+        "correct": "systemctl is the primary command-line tool for managing systemd units, including services.",
+        "incorrect": "service is a legacy SysVinit-compatible wrapper, chkconfig manages SysVinit runlevel links, and initctl is associated with the Upstart init system.",
+        "examTip": "systemctl start|stop|restart|enable|disable|status <service> — the core systemd service management syntax.",
+        "relatedTopics": [
+          "systemd"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Understanding Computer Hardware",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "service",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "systemctl",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "chkconfig",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "initctl",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-075",
+      "type": "single-choice",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An operations engineer at Wonka Industries needs to review recent boot and service logs after a server unexpectedly restarted overnight.",
+      "questionText": "Which command displays and allows filtering of the systemd journal logs?",
+      "explanation": {
+        "correct": "journalctl reads and filters the systemd journal, which centralizes logs from services, the kernel, and boot messages.",
+        "incorrect": "dmesg shows only kernel ring buffer messages, syslog is a logging protocol/daemon name rather than a viewing command, and logger is used to add entries to the log rather than view them.",
+        "examTip": "journalctl -u <service> filters logs for one specific systemd unit — extremely useful for troubleshooting a failing service.",
+        "relatedTopics": [
+          "systemd",
+          "logging"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Choosing an Operating System",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "dmesg",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "journalctl",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "syslog",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "logger",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-076",
+      "type": "single-choice",
+      "topicId": "linux-os",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command lists information about a system's block devices, such as disks and partitions?",
+      "explanation": {
+        "correct": "lsblk lists block devices in a tree view, showing disks, partitions, and their mount points.",
+        "incorrect": "lscpu reports CPU architecture details, lsusb lists connected USB devices, and lspci lists PCI devices such as network and graphics cards.",
+        "examTip": "The 'ls' family: lsblk=block devices, lscpu=CPU info, lspci=PCI devices, lsusb=USB devices.",
+        "relatedTopics": [
+          "hardware-commands"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Understanding Computer Hardware",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "lscpu",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "lsusb",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "lsblk",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "lspci",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-077",
+      "type": "single-choice",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which command shows disk space usage for mounted filesystems in a human-readable format?",
+      "explanation": {
+        "correct": "df -h reports free and used space on mounted filesystems, with sizes shown in human-readable units (K, M, G).",
+        "incorrect": "du -h reports the disk usage of files/directories (not overall filesystem space), free -h reports memory usage, and mount -h simply prints mount's help text.",
+        "examTip": "df = Disk Filesystem (space per mounted volume). du = Disk Usage (space consumed by files/folders).",
+        "relatedTopics": [
+          "disk-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Where Data Is Stored",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "du -h",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "df -h",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "free -h",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "mount -h",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-078",
+      "type": "single-choice",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which file defines filesystems that should be automatically mounted at boot time?",
+      "explanation": {
+        "correct": "/etc/fstab (filesystem table) lists filesystems, their mount points, types, and options to be mounted automatically at boot.",
+        "incorrect": "/etc/mtab and /proc/mounts reflect currently mounted filesystems (a runtime record), not the configuration of what should be mounted, and /etc/mounts is not a standard file.",
+        "examTip": "fstab = Filesystem TABle, the boot-time mount configuration. mtab/proc/mounts just reflect current state.",
+        "relatedTopics": [
+          "disk-management",
+          "fstab"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Where Data Is Stored",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "/etc/mtab",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "/etc/fstab",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "/etc/mounts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "/proc/mounts",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-079",
+      "type": "single-choice",
+      "topicId": "linux-os",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command sends ICMP echo requests to test network reachability of a host?",
+      "explanation": {
+        "correct": "ping sends ICMP echo request packets to a host and reports whether/how quickly it responds.",
+        "incorrect": "traceroute maps the path packets take across multiple hops, dig queries DNS records, and ss displays socket statistics rather than testing reachability.",
+        "examTip": "ping = 'is it alive?' traceroute = 'what path does it take to get there?'",
+        "relatedTopics": [
+          "networking-basics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.4 Basic Networking Configuration",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "traceroute",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ping",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "dig",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ss",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-080",
+      "type": "single-choice",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which command displays and can modify the current system date, time, and timezone under systemd?",
+      "explanation": {
+        "correct": "timedatectl is the systemd tool for viewing and setting the system clock, timezone, and NTP synchronization status.",
+        "incorrect": "date only displays or sets the current date/time string (not timezone/NTP settings), hwclock reads/writes the hardware clock specifically, and tzselect is an interactive tool for choosing a timezone (older, non-systemd approach).",
+        "examTip": "timedatectl is the modern, systemd-native, all-in-one tool for date, time, timezone, and NTP settings.",
+        "relatedTopics": [
+          "time-locale"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.5 Basic Localization",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "date",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "hwclock",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "timedatectl",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "tzselect",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-081",
+      "type": "single-choice",
+      "topicId": "linux-os",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which command queries a DNS server to resolve a domain name to its IP address, providing detailed record information?",
+      "explanation": {
+        "correct": "dig (Domain Information Groper) sends DNS queries and returns detailed information about DNS records, such as A, MX, or NS records.",
+        "incorrect": "hostname reports or sets the local machine's hostname (not DNS lookups), ip addr shows the local machine's own network interfaces, and ss reports active socket/connection statistics.",
+        "examTip": "dig and nslookup both query DNS; dig gives more detailed, script-friendly output and is generally preferred today.",
+        "relatedTopics": [
+          "networking-basics",
+          "dns"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.4 Basic Networking Configuration",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "hostname",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "dig",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ip addr",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ss",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-082",
+      "type": "single-choice",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which /proc file provides real-time information about installed CPU details, such as model name and core count?",
+      "explanation": {
+        "correct": "/proc/cpuinfo is a virtual file exposing detailed information about each processor core recognized by the kernel.",
+        "incorrect": "/proc/meminfo reports memory statistics instead, /proc/version reports the running kernel version string, and /proc/mounts lists currently mounted filesystems.",
+        "examTip": "/proc is a virtual filesystem — files there don't exist on disk, they're generated live by the kernel on each read.",
+        "relatedTopics": [
+          "hardware-commands",
+          "proc-filesystem"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Understanding Computer Hardware",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "/proc/meminfo",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "/proc/cpuinfo",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "/proc/version",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "/proc/mounts",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-083",
+      "type": "single-choice",
+      "topicId": "linux-os",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "During the Linux boot process, what is the primary purpose of the initramfs (initial RAM filesystem)?",
+      "explanation": {
+        "correct": "initramfs is a small, temporary filesystem loaded into RAM that contains the drivers and tools needed to locate and mount the real root filesystem before the boot process hands off control to it.",
+        "incorrect": "It is not used for permanent user storage, it does not replace a bootloader like GRUB (which loads the kernel and initramfs in the first place), and it is unrelated to swap space.",
+        "examTip": "initramfs exists so the kernel can load storage/filesystem drivers (e.g. for RAID or encrypted disks) before it can even see the real root filesystem.",
+        "relatedTopics": [
+          "boot-process"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Choosing an Operating System",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "It permanently stores all user files during normal operation",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It provides a temporary root filesystem with drivers needed to mount the real root filesystem",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It replaces the need for a bootloader entirely",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It stores swap space used when physical RAM is exhausted",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-084",
+      "type": "multiple-choice",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid systemctl subcommands for managing a service?",
+      "explanation": {
+        "correct": "systemctl enable configures a service to start automatically at boot, and systemctl status reports whether a service is currently running along with recent log output.",
+        "incorrect": "install and compile are not systemctl subcommands for managing services; systemd deals with pre-defined unit files rather than compiling or installing software.",
+        "examTip": "Common systemctl verbs: start, stop, restart, reload, enable, disable, status, is-active, is-enabled.",
+        "relatedTopics": [
+          "systemd"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Choosing an Operating System",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "enable",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "status",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "install",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "compile",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-085",
+      "type": "multiple-choice",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO filesystem types are commonly supported natively on modern Linux distributions?",
+      "explanation": {
+        "correct": "ext4 and xfs are both native Linux filesystems with full, built-in read/write support on essentially all modern distributions.",
+        "incorrect": "NTFS write support historically required extra drivers/utilities (not enabled 'by default' on many systems in the way described), and APFS is Apple's proprietary filesystem, not natively supported by the Linux kernel.",
+        "examTip": "Native Linux filesystems: ext4, xfs, btrfs. Foreign filesystems (Windows/macOS) need extra drivers: ntfs-3g, apfs-fuse.",
+        "relatedTopics": [
+          "disk-management",
+          "filesystem-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Where Data Is Stored",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "ext4",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "xfs",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "NTFS-native-write-by-default",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "APFS",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-086",
+      "type": "multiple-choice",
+      "topicId": "linux-os",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO commands can be used to display information about the system's network interfaces and their assigned IP addresses?",
+      "explanation": {
+        "correct": "ip addr (the modern tool) and ifconfig (the older, sometimes deprecated tool) both display network interface configuration, including assigned IP addresses.",
+        "incorrect": "ping tests reachability of a remote host rather than showing local interface configuration, and dig performs DNS lookups.",
+        "examTip": "ip is the modern replacement for the older, sometimes-unavailable-by-default ifconfig — know both for the exam.",
+        "relatedTopics": [
+          "networking-basics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.4 Basic Networking Configuration",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "ip addr",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ifconfig",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ping",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "dig",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-087",
+      "type": "multiple-choice",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO commands can be used to check whether a remote host or port is reachable over the network?",
+      "explanation": {
+        "correct": "ping tests basic reachability with ICMP echo requests, and traceroute reveals reachability along with each hop the packets pass through.",
+        "incorrect": "ss reports information about local sockets/connections already established (not testing new reachability), and hwclock manages the hardware clock, unrelated to networking.",
+        "examTip": "For reachability testing: ping (simple) and traceroute (hop-by-hop path) are the two classic tools.",
+        "relatedTopics": [
+          "networking-basics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.4 Basic Networking Configuration",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "ping",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ss",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "traceroute",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "hwclock",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-088",
+      "type": "multiple-choice",
+      "topicId": "linux-os",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid systemd unit states reported by 'systemctl is-enabled'?",
+      "explanation": {
+        "correct": "systemctl is-enabled reports whether a unit is configured to start at boot, with typical results including 'enabled' and 'disabled' (among a few others like 'static' or 'masked').",
+        "incorrect": "'compiled' and 'archived' are not systemd unit states; systemd deals with unit configuration files, not compilation or archiving.",
+        "examTip": "is-enabled answers 'will this start at boot?' while is-active answers 'is this running right now?' — two different questions.",
+        "relatedTopics": [
+          "systemd"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Choosing an Operating System",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "enabled",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "disabled",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "compiled",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "archived",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-089",
+      "type": "yes-no-statements",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about the Linux boot process as Yes or No.",
+      "explanation": {
+        "correct": "GRUB (GRand Unified Bootloader) loads the kernel; systemd is indeed the default init system on most mainstream distributions today (Ubuntu, Fedora, RHEL, Debian, etc.); runlevels actually originated with SysVinit — systemd uses the analogous concept of 'targets' instead.",
+        "incorrect": "Runlevels predate systemd; systemd's rough equivalent concept is called a 'target' (e.g. multi-user.target corresponds to runlevel 3).",
+        "examTip": "SysVinit = runlevels (0-6). systemd = targets (e.g., graphical.target, multi-user.target).",
+        "relatedTopics": [
+          "boot-process",
+          "systemd"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Choosing an Operating System",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "GRUB is a bootloader responsible for loading the Linux kernel into memory.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "systemd has fully replaced SysVinit as the default init system on most major modern distributions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Runlevels are a concept unique to systemd and did not exist under the older SysVinit system.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-090",
+      "type": "yes-no-statements",
+      "topicId": "linux-os",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Evaluate each statement about hardware inspection commands as Yes or No.",
+      "explanation": {
+        "correct": "lspci reports PCI-connected hardware; dmesg is a key troubleshooting tool for kernel and driver messages, especially around boot and hardware detection; lsusb specifically lists USB devices, not filesystems (that's df/mount's job).",
+        "incorrect": "lsusb lists USB devices, not mounted filesystems — that distinction is a common source of exam confusion with similarly-named commands.",
+        "examTip": "The ls-prefixed hardware commands (lspci, lsusb, lsblk, lscpu) each inspect one specific hardware category.",
+        "relatedTopics": [
+          "hardware-commands"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Understanding Computer Hardware",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "lspci lists devices connected to the PCI bus, such as network and graphics cards.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "dmesg displays messages from the kernel ring buffer, useful for diagnosing hardware and driver issues.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "lsusb is used to list mounted filesystems rather than connected USB devices.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "lx010-091",
+      "type": "yes-no-statements",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Evaluate each statement about disks and filesystems as Yes or No.",
+      "explanation": {
+        "correct": "mount attaches a filesystem at a mount point directory; fsck actually checks and repairs an existing filesystem for errors (mkfs is the tool used to format/create a new filesystem); the system reads /etc/fstab during boot to determine what to automatically mount.",
+        "incorrect": "mkfs creates a filesystem; fsck checks and repairs one that already exists — an easy pair to mix up.",
+        "examTip": "mkfs = 'make filesystem' (formatting). fsck = 'filesystem check' (repair, run after unclean shutdowns).",
+        "relatedTopics": [
+          "disk-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Where Data Is Stored",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The mount command attaches a filesystem to a directory (mount point) so its contents become accessible.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "fsck is used to format a new filesystem onto a partition before it can be used.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "/etc/fstab entries are automatically processed by the system at boot time to mount listed filesystems.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-092",
+      "type": "yes-no-statements",
+      "topicId": "linux-os",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Evaluate each statement about networking configuration as Yes or No.",
+      "explanation": {
+        "correct": "/etc/hosts provides local, static hostname-to-IP mappings checked before DNS in most default configurations; NetworkManager manages both wired and wireless (Wi-Fi) connections, among other network types; /etc/resolv.conf traditionally lists nameserver entries used for DNS resolution.",
+        "incorrect": "NetworkManager is a general-purpose network configuration service covering Ethernet, Wi-Fi, VPNs, and more — not limited to wired connections.",
+        "examTip": "/etc/hosts is checked before DNS by default on most systems — great for quick local overrides during testing.",
+        "relatedTopics": [
+          "networking-basics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.4 Basic Networking Configuration",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The /etc/hosts file allows manual mapping of hostnames to IP addresses without querying DNS.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "NetworkManager is a service exclusively used for managing wired Ethernet connections and cannot manage Wi-Fi.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "The /etc/resolv.conf file traditionally specifies which DNS servers a system should query.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "lx010-093",
+      "type": "dropdown-select",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement about systemd by choosing the correct command from its dropdown.",
+      "explanation": {
+        "correct": "systemctl enable configures a service to launch at boot (it does not start it immediately, unlike systemctl start), and journalctl -u filters the systemd journal to a specific unit.",
+        "incorrect": "systemctl start only starts the service for the current session without persisting across reboots, and dmesg only shows kernel messages, not per-service application logs.",
+        "examTip": "enable = start at boot (persistent). start = start right now (one-time, until reboot). Use both together for immediate + persistent effect.",
+        "relatedTopics": [
+          "systemd"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Choosing an Operating System",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To configure a service to start automatically every time the system boots, you would run",
+          "options": [
+            "systemctl start httpd",
+            "systemctl enable httpd",
+            "systemctl status httpd",
+            "systemctl mask httpd"
+          ],
+          "correctAnswer": "systemctl enable httpd"
+        },
+        {
+          "id": "d2",
+          "prompt": "To view the most recent journal log entries for a specific service named nginx, you would run",
+          "options": [
+            "journalctl -u nginx",
+            "dmesg | grep nginx",
+            "cat /var/log/nginx",
+            "systemctl status --all"
+          ],
+          "correctAnswer": "journalctl -u nginx"
+        }
+      ]
+    },
+    {
+      "id": "lx010-094",
+      "type": "dropdown-select",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement about disk and filesystem management by choosing the correct command from its dropdown.",
+      "explanation": {
+        "correct": "df -h reports overall filesystem space usage in readable units, and fsck checks a filesystem for errors and attempts repairs.",
+        "incorrect": "du -h reports space consumed by specific files/directories rather than whole filesystems, and mkfs creates a new filesystem rather than repairing an existing one.",
+        "examTip": "df reports space AVAILABLE on a mounted filesystem; du reports space USED by particular files or folders.",
+        "relatedTopics": [
+          "disk-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Where Data Is Stored",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To display disk space usage of mounted filesystems in human-readable form, you would run",
+          "options": [
+            "df -h",
+            "du -h",
+            "free -h",
+            "lsblk -h"
+          ],
+          "correctAnswer": "df -h"
+        },
+        {
+          "id": "d2",
+          "prompt": "To check and repair a filesystem for errors, you would run",
+          "options": [
+            "mkfs",
+            "fsck",
+            "mount",
+            "fdisk"
+          ],
+          "correctAnswer": "fsck"
+        }
+      ]
+    },
+    {
+      "id": "lx010-095",
+      "type": "dropdown-select",
+      "topicId": "linux-os",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each statement about networking by choosing the correct command from its dropdown.",
+      "explanation": {
+        "correct": "ip addr is the modern command for viewing interface addresses, and traceroute reveals the hop-by-hop path packets take to a destination.",
+        "incorrect": "netstat is an older, sometimes-deprecated tool for this purpose, and ping only reports reachability/latency, not the specific path taken.",
+        "examTip": "ip replaces the old net-tools suite (ifconfig, route, netstat) with one unified command: ip addr, ip route, ip link.",
+        "relatedTopics": [
+          "networking-basics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.4 Basic Networking Configuration",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To display the current IP addresses assigned to network interfaces using modern tooling, you would run",
+          "options": [
+            "ip addr",
+            "netstat -a",
+            "ss -l",
+            "hostname -I"
+          ],
+          "correctAnswer": "ip addr"
+        },
+        {
+          "id": "d2",
+          "prompt": "To trace the network path (hop by hop) that packets take to reach a remote host, you would run",
+          "options": [
+            "ping",
+            "traceroute",
+            "dig",
+            "ss"
+          ],
+          "correctAnswer": "traceroute"
+        }
+      ]
+    },
+    {
+      "id": "lx010-096",
+      "type": "dropdown-select",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement about time and locale by choosing the correct command from its dropdown.",
+      "explanation": {
+        "correct": "timedatectl manages timezone and NTP settings under systemd, and locale displays the current language, character encoding, and regional formatting settings.",
+        "incorrect": "hwclock only manages the hardware clock (not timezone/NTP as a whole), and uname reports kernel/system information rather than locale settings.",
+        "examTip": "locale command with no arguments prints all LC_* and LANG environment variables currently in effect.",
+        "relatedTopics": [
+          "time-locale"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.5 Basic Localization",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To view or change the system timezone and enable NTP synchronization under systemd, you would use",
+          "options": [
+            "date",
+            "timedatectl",
+            "hwclock",
+            "locale"
+          ],
+          "correctAnswer": "timedatectl"
+        },
+        {
+          "id": "d2",
+          "prompt": "To display the currently configured language and character encoding settings, you would use",
+          "options": [
+            "locale",
+            "tzselect",
+            "date",
+            "uname"
+          ],
+          "correctAnswer": "locale"
+        }
+      ]
+    },
+    {
+      "id": "lx010-097",
+      "type": "ordering",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the high-level stages of a typical Linux boot process in the correct order.",
+      "explanation": {
+        "correct": "This reflects the standard boot sequence: firmware hands off to the bootloader, which loads the kernel, which then hands off to the init system to bring up userspace services.",
+        "incorrect": "Any other ordering, such as starting services before the kernel has mounted the root filesystem, is not physically possible in this sequence.",
+        "examTip": "Firmware -> Bootloader -> Kernel -> Init system — the four-stage boot chain every Linux system follows.",
+        "relatedTopics": [
+          "boot-process"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Choosing an Operating System",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Firmware (BIOS/UEFI) performs power-on self-test and initializes hardware",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Bootloader (GRUB) loads the Linux kernel and initramfs into memory",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "The kernel initializes hardware drivers and mounts the real root filesystem",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "The init system (systemd) starts services and brings the system to its target run state",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "lx010-098",
+      "type": "ordering",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A sysadmin at Stark Industries has attached a new secondary disk to a server and needs it to be available and persistent across reboots.",
+      "questionText": "A sysadmin at Stark Industries needs to add a new disk, create a filesystem on it, and mount it persistently. Arrange the correct workflow.",
+      "explanation": {
+        "correct": "You must first identify the correct device, format it with a filesystem, register it for persistent mounting in /etc/fstab, and then apply that configuration immediately with mount -a rather than waiting for a reboot.",
+        "incorrect": "Editing /etc/fstab before creating a filesystem, or mounting before formatting, would result in errors since there is no valid filesystem yet to mount.",
+        "examTip": "mount -a reads /etc/fstab and mounts everything listed there that isn't already mounted — a quick way to test fstab changes without rebooting.",
+        "relatedTopics": [
+          "disk-management",
+          "fstab"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Where Data Is Stored",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify the new disk device with lsblk",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a filesystem on the device using mkfs.ext4",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Add an entry for the device and mount point to /etc/fstab",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Mount all fstab entries immediately with mount -a",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "lx010-099",
+      "type": "ordering",
+      "topicId": "linux-os",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An operations engineer at Wonka Industries discovers that the 'webapp' systemd service is not running after a recent deployment.",
+      "questionText": "Arrange the steps to diagnose why a systemd service named 'webapp' failed to start.",
+      "explanation": {
+        "correct": "A logical troubleshooting flow starts with a quick status check, moves to the detailed journal for more context, identifies the root cause from the logs, and finally applies a fix and restarts the service to confirm resolution.",
+        "incorrect": "Restarting the service before investigating the logs would likely reproduce the same failure without revealing why it happened.",
+        "examTip": "systemctl status gives a quick summary; journalctl -u gives the deep, scrollable history — use both together when debugging.",
+        "relatedTopics": [
+          "systemd"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Choosing an Operating System",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Run systemctl status webapp to see the current state and recent log lines",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Run journalctl -u webapp for the full, detailed log history of the service",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Identify the specific error message in the logs",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Correct the underlying issue and run systemctl restart webapp",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "lx010-100",
+      "type": "drag-drop",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each command into the category describing what it primarily reports on.",
+      "explanation": {
+        "correct": "lscpu and lspci report on installed hardware (CPU and PCI devices respectively), while df and du report on disk space usage at the filesystem and file/directory level respectively.",
+        "incorrect": "It's easy to lump all 'ls'-prefixed commands together, but lsblk (block devices) sits closer to the disk-usage group conceptually even though it's not one of the two listed disk commands here.",
+        "examTip": "Hardware discovery commands start with ls (lscpu, lspci, lsusb, lsblk); disk space commands are df and du.",
+        "relatedTopics": [
+          "hardware-commands",
+          "disk-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Understanding Computer Hardware",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Hardware Information",
+          "acceptsItemIds": [
+            "item199",
+            "item200"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Disk / Filesystem Usage",
+          "acceptsItemIds": [
+            "item201",
+            "item202"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item199",
+          "text": "lscpu"
+        },
+        {
+          "id": "item200",
+          "text": "lspci"
+        },
+        {
+          "id": "item201",
+          "text": "df"
+        },
+        {
+          "id": "item202",
+          "text": "du"
+        }
+      ]
+    },
+    {
+      "id": "lx010-101",
+      "type": "drag-drop",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each item into the correct init system category.",
+      "explanation": {
+        "correct": "Runlevels and /etc/init.d scripts are core concepts of the older SysVinit system, while targets and unit files are the equivalent concepts used by the modern systemd init system.",
+        "incorrect": "Confusing 'runlevels' with 'targets' is common since they serve a similar conceptual purpose but belong to different init systems entirely.",
+        "examTip": "SysVinit: runlevels + init.d scripts. systemd: targets + unit files. Different generations, similar goals.",
+        "relatedTopics": [
+          "boot-process",
+          "systemd"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Choosing an Operating System",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "SysVinit Concept",
+          "acceptsItemIds": [
+            "item201",
+            "item202"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "systemd Concept",
+          "acceptsItemIds": [
+            "item203",
+            "item204"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item201",
+          "text": "Runlevels"
+        },
+        {
+          "id": "item202",
+          "text": "/etc/init.d scripts"
+        },
+        {
+          "id": "item203",
+          "text": "Targets"
+        },
+        {
+          "id": "item204",
+          "text": "Unit files"
+        }
+      ]
+    },
+    {
+      "id": "lx010-150",
+      "type": "yes-no-statements",
+      "topicId": "linux-os",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An administrator at Aperture Science has attached a new disk to a server and needs it permanently available for application data.",
+      "questionText": "Evaluate each statement about this task as Yes or No.",
+      "explanation": {
+        "correct": "lsblk lists block devices including newly attached disks and their partitions; mkfs.ext4 /dev/sdb1 formats only the partition /dev/sdb1 specifically, not the entire raw disk /dev/sdb; an /etc/fstab entry is what makes a mount persistent across reboots, since manual 'mount' commands do not survive a restart on their own.",
+        "incorrect": "/dev/sdb refers to the whole disk, while /dev/sdb1 refers specifically to its first partition — formatting one does not affect the other.",
+        "examTip": "Whole-disk devices (/dev/sdb) vs. partitions (/dev/sdb1) are different targets — always double-check which one a command is pointed at before formatting.",
+        "relatedTopics": [
+          "disk-management",
+          "fstab"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Where Data Is Stored",
+        "references": [
+          "https://www.lpi.org/our-certifications/linux-essentials-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Running 'lsblk' would help identify the device name of a newly attached disk, such as /dev/sdb.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Running 'mkfs.ext4 /dev/sdb1' would format the whole disk /dev/sdb rather than just the first partition.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Adding an entry to /etc/fstab is necessary for the new filesystem to mount automatically on every future boot.",
+          "isCorrectYes": true
+        }
+      ]
+    }
+  ]
+}

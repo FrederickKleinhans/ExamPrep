@@ -1,0 +1,938 @@
+{
+  "certificationId": "az-900",
+  "topicId": "describe-azure-identity",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "az900-014",
+      "type": "single-choice",
+      "topicId": "describe-azure-identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which security model assumes that every request is potentially malicious and requires verification regardless of where the request originates?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Defense in depth",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Zero Trust",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Shared responsibility",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Least privilege",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Zero Trust assumes breach and verifies each request as though it originates from an uncontrolled network. Its principles are: verify explicitly, use least privilege access, and assume breach.",
+        "incorrect": "Defense in depth uses multiple layers of security. Shared responsibility divides security duties between provider and customer. Least privilege is a principle within Zero Trust.",
+        "examTip": "Zero Trust three principles: verify explicitly, least privilege access, assume breach. It replaces the old 'trust the internal network' model.",
+        "relatedTopics": [
+          "zero-trust",
+          "identity-security",
+          "conditional-access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-015",
+      "type": "single-choice",
+      "topicId": "describe-azure-identity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Microsoft Entra ID feature allows you to require users to pass additional security checks, such as location-based restrictions or device compliance, before granting access to applications?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Multi-factor authentication (MFA)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Conditional Access",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Role-based access control (RBAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Privileged Identity Management (PIM)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Conditional Access policies use signals (user, location, device, application, risk) to make access decisions, such as allowing, blocking, or requiring MFA.",
+        "incorrect": "MFA is one factor that Conditional Access might require. RBAC controls what users can do with resources. PIM manages time-limited privileged access.",
+        "examTip": "Conditional Access = if-then policies. IF a user meets certain conditions, THEN require specific access controls.",
+        "relatedTopics": [
+          "conditional-access",
+          "microsoft-entra-id",
+          "identity-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-025",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-identity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Microsoft Entra ID (formerly Azure AD) is the same as on-premises Active Directory Domain Services.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Microsoft Entra ID supports single sign-on (SSO) to thousands of SaaS applications.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Microsoft Entra ID can be used to manage access for both cloud and on-premises applications.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Entra ID is a cloud-based identity service that supports SSO for thousands of apps and can manage both cloud and on-premises access via hybrid configurations.",
+        "incorrect": "Entra ID is NOT the same as on-premises AD DS. It uses different protocols (OAuth, SAML, OpenID Connect vs Kerberos, LDAP) and has different architecture.",
+        "examTip": "Entra ID = cloud identity (HTTP-based protocols). AD DS = on-premises identity (Kerberos/LDAP). They can sync via Entra Connect.",
+        "relatedTopics": [
+          "microsoft-entra-id",
+          "single-sign-on",
+          "hybrid-identity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-033",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To require users to provide a second form of verification when signing in, you should enable",
+          "options": [
+            "Conditional Access",
+            "Multi-factor authentication (MFA)",
+            "Single sign-on (SSO)",
+            "Role-based access control (RBAC)"
+          ],
+          "correctAnswer": "Multi-factor authentication (MFA)"
+        },
+        {
+          "id": "d2",
+          "prompt": "To grant a user the ability to manage virtual machines but not other resources in a subscription, you should use",
+          "options": [
+            "Conditional Access",
+            "Multi-factor authentication (MFA)",
+            "Azure Policy",
+            "Role-based access control (RBAC)"
+          ],
+          "correctAnswer": "Role-based access control (RBAC)"
+        }
+      ],
+      "explanation": {
+        "correct": "MFA requires a second verification factor (something you know, have, or are). RBAC assigns granular permissions to control who can do what with specific resources.",
+        "incorrect": "Conditional Access applies policies based on signals. SSO reduces sign-ins across apps. Azure Policy enforces resource configurations.",
+        "examTip": "MFA = verify identity. RBAC = authorize actions. Conditional Access = dynamic policies combining both. Use them together for defense in depth.",
+        "relatedTopics": [
+          "mfa",
+          "rbac",
+          "identity-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-047",
+      "type": "single-choice",
+      "topicId": "describe-azure-identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which identity feature allows an Azure resource, such as a virtual machine or Azure Function, to authenticate to other Azure services without storing credentials in code?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Service principal",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Managed identity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Conditional Access",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AD B2C",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Managed identities provide an automatically managed identity in Microsoft Entra ID for Azure resources. They eliminate the need to manage credentials in code.",
+        "incorrect": "Service principals require manual credential management. Conditional Access applies access policies. Azure AD B2C is for customer-facing identity.",
+        "examTip": "Two types: system-assigned (tied to resource lifecycle) and user-assigned (independent lifecycle, shareable). Both eliminate credential management.",
+        "relatedTopics": [
+          "managed-identities",
+          "service-principals",
+          "credential-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-055",
+      "type": "single-choice",
+      "topicId": "describe-azure-identity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Microsoft Entra feature enables external users from partner organizations to access your applications using their own corporate credentials?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Entra B2C",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Entra B2B",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Entra Connect",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Managed Identities",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Entra B2B (Business-to-Business) allows you to invite external users (guests) from partner organizations who authenticate with their own identity provider.",
+        "incorrect": "B2C is for consumer-facing apps (social logins, local accounts). Entra Connect syncs on-premises AD to cloud. Managed Identities are for Azure resources.",
+        "examTip": "B2B = partners/vendors using their own credentials. B2C = consumers using social or local accounts. Different use cases, different features.",
+        "relatedTopics": [
+          "entra-b2b",
+          "guest-access",
+          "external-collaboration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/external-id/what-is-b2b"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-062",
+      "type": "single-choice",
+      "topicId": "describe-azure-identity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which authentication method eliminates the use of passwords entirely by relying on FIDO2 security keys, Windows Hello, or the Microsoft Authenticator app?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Multi-factor authentication",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Passwordless authentication",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Certificate-based authentication",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Single sign-on",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Passwordless authentication replaces passwords with stronger, more convenient methods like FIDO2 keys, Windows Hello for Business, or Microsoft Authenticator phone sign-in.",
+        "incorrect": "MFA adds factors but may still use passwords. Certificate-based auth uses certificates (a form of passwordless but more specific). SSO reduces sign-ins but does not eliminate passwords.",
+        "examTip": "Passwordless methods in Entra ID: Windows Hello for Business, FIDO2 security keys, Microsoft Authenticator app. More secure than passwords + MFA.",
+        "relatedTopics": [
+          "passwordless-auth",
+          "fido2",
+          "windows-hello"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-passwordless"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-069",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-identity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO are valid passwordless authentication methods supported by Microsoft Entra ID? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "FIDO2 security keys",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "SMS one-time password",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Windows Hello for Business",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Email verification code",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "FIDO2 security keys and Windows Hello for Business are passwordless methods that use biometrics or hardware keys instead of passwords. Microsoft Authenticator app is also passwordless.",
+        "incorrect": "SMS OTP and email codes are second factors in MFA but still typically require a password as the first factor. They are not passwordless methods.",
+        "examTip": "Passwordless = no password at all. FIDO2, Windows Hello, Authenticator app. SMS/email are MFA factors, not passwordless.",
+        "relatedTopics": [
+          "passwordless-auth",
+          "fido2",
+          "windows-hello",
+          "mfa"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-passwordless"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-077",
+      "type": "multiple-choice",
+      "topicId": "describe-azure-identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO features does Microsoft Entra Connect provide for hybrid identity? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Password hash synchronization from on-premises AD to Entra ID",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Hosting virtual machines on-premises",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Seamless single sign-on for on-premises users accessing cloud apps",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Managing Azure storage accounts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Entra Connect synchronizes identities between on-premises AD and Entra ID, including password hash sync, and enables seamless SSO so users access cloud apps without re-entering credentials.",
+        "incorrect": "Hosting VMs is an Azure compute function. Managing storage accounts is a resource management task. Neither relates to identity synchronization.",
+        "examTip": "Entra Connect authentication options: password hash sync, pass-through auth, federation (AD FS). All enable hybrid identity with SSO.",
+        "relatedTopics": [
+          "entra-connect",
+          "hybrid-identity",
+          "password-hash-sync"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/hybrid/whatis-hybrid-identity"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-085",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A managed identity eliminates the need to store credentials in application code.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A system-assigned managed identity can be shared across multiple Azure resources.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A user-assigned managed identity has an independent lifecycle from the resource it is assigned to.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Managed identities remove credential management from code. System-assigned identities are tied to one resource. User-assigned identities are independent and shareable.",
+        "incorrect": "System-assigned managed identities are created with and deleted with their resource. They cannot be shared across multiple resources.",
+        "examTip": "System-assigned = 1:1 with resource (created/deleted together). User-assigned = standalone (share across resources, manage independently).",
+        "relatedTopics": [
+          "managed-identities",
+          "system-assigned",
+          "user-assigned"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-092",
+      "type": "yes-no-statements",
+      "topicId": "describe-azure-identity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Microsoft Entra B2C allows consumers to sign in using social accounts like Google or Facebook.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Microsoft Entra B2C is designed for employee identity management within an organization.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Microsoft Entra B2C supports custom-branded sign-in experiences.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "B2C is for consumer-facing apps, supporting social logins (Google, Facebook, Apple), local accounts, and custom-branded sign-in/sign-up pages.",
+        "incorrect": "B2C is for external consumers, not internal employees. Employee identity is managed by Microsoft Entra ID directly.",
+        "examTip": "B2C = consumers (social/local accounts, custom branding). B2B = business partners (their own credentials). Entra ID = employees (corporate accounts).",
+        "relatedTopics": [
+          "entra-b2c",
+          "consumer-identity",
+          "social-login"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/active-directory-b2c/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-098",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-identity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To allow a web application to authenticate to Azure Key Vault without storing secrets in configuration files, you should use",
+          "options": [
+            "Service principal with client secret",
+            "Managed identity",
+            "Azure AD B2C",
+            "Shared access signature"
+          ],
+          "correctAnswer": "Managed identity"
+        },
+        {
+          "id": "d2",
+          "prompt": "To allow external partner organizations to access your apps using their own corporate credentials, you should use",
+          "options": [
+            "Microsoft Entra B2B",
+            "Microsoft Entra B2C",
+            "Conditional Access",
+            "Managed identity"
+          ],
+          "correctAnswer": "Microsoft Entra B2B"
+        }
+      ],
+      "explanation": {
+        "correct": "Managed identities authenticate to Azure services without credentials in code. B2B enables external partner access with their own corporate identities.",
+        "incorrect": "Service principals with secrets require credential management. B2C is for consumers. Conditional Access applies policies. SAS tokens are for storage, not identity.",
+        "examTip": "Managed identity = zero-credential access for Azure resources. B2B = partner collaboration. B2C = consumer apps. Use the right tool for the identity scenario.",
+        "relatedTopics": [
+          "managed-identities",
+          "entra-b2b",
+          "key-vault-access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-104",
+      "type": "dropdown-select",
+      "topicId": "describe-azure-identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the following statements by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To synchronize user accounts from on-premises Active Directory to Microsoft Entra ID, you should use",
+          "options": [
+            "Microsoft Entra B2B",
+            "Microsoft Entra Connect",
+            "Conditional Access",
+            "Azure RBAC"
+          ],
+          "correctAnswer": "Microsoft Entra Connect"
+        },
+        {
+          "id": "d2",
+          "prompt": "To enforce policies that require MFA when users sign in from untrusted locations, you should use",
+          "options": [
+            "Microsoft Entra B2B",
+            "Microsoft Entra Connect",
+            "Conditional Access",
+            "Azure RBAC"
+          ],
+          "correctAnswer": "Conditional Access"
+        }
+      ],
+      "explanation": {
+        "correct": "Entra Connect synchronizes identities from on-premises AD to Entra ID. Conditional Access creates if-then policies (if untrusted location, then require MFA).",
+        "incorrect": "B2B is for partner access. RBAC controls resource permissions. Neither syncs identities or enforces sign-in policies.",
+        "examTip": "Entra Connect = sync identities (hybrid). Conditional Access = enforce sign-in policies (conditions + controls). B2B/B2C = external identities.",
+        "relatedTopics": [
+          "entra-connect",
+          "conditional-access",
+          "hybrid-identity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/hybrid/whatis-hybrid-identity"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-113",
+      "type": "ordering",
+      "topicId": "describe-azure-identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You need to implement Conditional Access to require MFA for users accessing a sensitive application from outside the corporate network. Arrange the steps in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Define named locations representing your corporate network IP ranges",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a Conditional Access policy targeting the specific application",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Set the condition to exclude trusted (corporate) locations",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Configure the grant control to require multi-factor authentication",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "First define trusted locations, then create the CA policy targeting the app, set location conditions to trigger outside corporate network, then require MFA as the grant control.",
+        "incorrect": "Named locations must be defined before they can be referenced in conditions. The policy targets an app, then applies conditions and controls.",
+        "examTip": "Conditional Access structure: Assignments (who + what app + conditions) > Access controls (grant/block + session). Always use report-only mode first.",
+        "relatedTopics": [
+          "conditional-access",
+          "named-locations",
+          "mfa-policies"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-119",
+      "type": "ordering",
+      "topicId": "describe-azure-identity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "You need to configure Microsoft Entra Connect to synchronize on-premises AD with Microsoft Entra ID. Arrange the following steps in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Verify your custom domain name in Microsoft Entra ID",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Install Microsoft Entra Connect on an on-premises server",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Configure the synchronization scope (OUs and attributes to sync)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Enable password hash synchronization or pass-through authentication",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "First verify domain ownership in Entra ID, install Entra Connect on-premises, configure what to sync (scope), then choose and enable the authentication method.",
+        "incorrect": "Domain verification ensures UPN matching. Install must happen before configuration. Scope defines what syncs. Auth method enables sign-in.",
+        "examTip": "Entra Connect prerequisites: verified domain, dedicated server, appropriate permissions. Auth options: password hash sync (recommended), pass-through auth, federation.",
+        "relatedTopics": [
+          "entra-connect",
+          "password-hash-sync",
+          "hybrid-identity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-roadmap"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-124",
+      "type": "drag-drop",
+      "topicId": "describe-azure-identity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each item to the correct category.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Authentication (Who are you?)",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Authorization (What can you do?)",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Multi-factor authentication"
+        },
+        {
+          "id": "item2",
+          "text": "Passwordless sign-in with FIDO2"
+        },
+        {
+          "id": "item3",
+          "text": "Role-based access control (RBAC)"
+        },
+        {
+          "id": "item4",
+          "text": "Azure resource locks"
+        }
+      ],
+      "explanation": {
+        "correct": "MFA and FIDO2 verify identity (authentication). RBAC and resource locks control what actions are permitted (authorization).",
+        "incorrect": "Authentication proves identity. Authorization grants permissions. Both are needed for secure access but serve different purposes.",
+        "examTip": "Authentication = prove identity (MFA, passwords, biometrics). Authorization = grant access (RBAC roles, permissions, locks). AuthN before AuthZ.",
+        "relatedTopics": [
+          "authentication",
+          "authorization",
+          "rbac",
+          "mfa"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-135",
+      "type": "single-choice",
+      "topicId": "describe-azure-identity",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "Adatum Corporation has a web API hosted on Azure App Service that needs to access Azure Key Vault to retrieve connection strings. The security team requires that no credentials are stored in code or configuration.",
+      "questionText": "Which identity solution should Adatum implement for the App Service?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Store the Key Vault access key in App Service configuration",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Enable a system-assigned managed identity on the App Service",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Create a service principal with a client secret",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Use a shared access signature (SAS) token",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A system-assigned managed identity provides an automatically managed identity for the App Service to authenticate to Key Vault. No credentials are stored anywhere in code or configuration.",
+        "incorrect": "Storing access keys violates the no-credentials requirement. Service principals with secrets still require credential management. SAS tokens are for storage, not Key Vault.",
+        "examTip": "Managed identity + Key Vault = zero-credential access pattern. Enable managed identity on the resource, grant it Key Vault access policy or RBAC role. No secrets to manage.",
+        "relatedTopics": [
+          "managed-identity",
+          "key-vault",
+          "zero-credential"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/app-service/overview-managed-identity"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-140",
+      "type": "single-choice",
+      "topicId": "describe-azure-identity",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "Relecloud is building a consumer-facing mobile app where users can sign up with their email address or sign in with their Google or Apple accounts. The app needs custom-branded login pages.",
+      "questionText": "Which Microsoft identity service should Relecloud use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Entra ID",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Entra B2B",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Entra B2C",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Microsoft Entra Connect",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Entra B2C is designed for consumer-facing apps. It supports social identity providers (Google, Apple, Facebook), local accounts (email/password), and fully customizable sign-in experiences.",
+        "incorrect": "Entra ID is for organizational (employee) identities. B2B is for partner organizations. Entra Connect syncs on-premises AD. None are designed for consumer app sign-ups.",
+        "examTip": "B2C = consumers (millions of users, social logins, custom branding). B2B = partners (use their corporate ID). Entra ID = employees (corporate directory).",
+        "relatedTopics": [
+          "entra-b2c",
+          "consumer-identity",
+          "social-login",
+          "custom-branding"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/active-directory-b2c/overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az900-146",
+      "type": "single-choice",
+      "topicId": "describe-azure-identity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which identity type in Microsoft Entra ID represents an application or service that needs to access Azure resources programmatically?",
+      "options": [
+        {
+          "id": "A",
+          "text": "User principal",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Service principal",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Group principal",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Device principal",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A service principal is an identity created for applications, services, and automation tools to access Azure resources. It is the local representation of an application object in a tenant.",
+        "incorrect": "User principals represent people. Groups organize users. Devices represent enrolled hardware. Service principals represent applications and services.",
+        "examTip": "Service principal = app identity for programmatic access. Managed identity = special type of service principal managed automatically by Azure. Prefer managed identities when possible.",
+        "relatedTopics": [
+          "service-principals",
+          "app-registrations",
+          "programmatic-access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity, access, and security",
+        "references": [
+          "https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

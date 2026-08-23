@@ -1,0 +1,1110 @@
+{
+  "certificationId": "az-104",
+  "topicId": "storage",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "az104-031",
+      "topicId": "storage",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which storage redundancy option replicates data synchronously across three availability zones within a single region?",
+      "explanation": {
+        "correct": "Zone-Redundant Storage (ZRS) synchronously replicates data across three physically separate availability zones within the same region, protecting against a single zone failure.",
+        "incorrect": "LRS replicates only within a single datacenter. GRS and RA-GRS replicate asynchronously to a secondary, geographically distant region rather than across zones in the primary region.",
+        "examTip": "ZRS gives zone-level resiliency; GZRS combines ZRS locally with GRS-style cross-region replication for maximum durability.",
+        "relatedTopics": [
+          "storage-redundancy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "storage-redundancy",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Adventure Works wants its storage account to survive the loss of a single datacenter within its primary region without any data loss.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "LRS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ZRS",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "GRS",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "RA-GRS",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-032",
+      "topicId": "storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A company wants read access to their storage account's replicated data in the secondary region even during normal operation, not just during a failover. Which redundancy option should they choose?",
+      "explanation": {
+        "correct": "RA-GRS (Read-Access Geo-Redundant Storage) allows read access to data in the secondary region at any time, in addition to the standard geo-redundant replication to that region.",
+        "incorrect": "LRS and ZRS don't replicate to a secondary region at all. Plain GRS replicates geographically but does not expose the secondary endpoint for reads during normal operations.",
+        "examTip": "RA-GRS secondary endpoints use a '-secondary' suffix in the storage account URL, e.g. mystorage-secondary.blob.core.windows.net.",
+        "relatedTopics": [
+          "storage-redundancy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "storage-redundancy",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Fabrikam Inc. needs continued read access to its data even if the primary Azure region experiences a full outage.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "LRS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ZRS",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "GRS",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "RA-GRS",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": "az104-033",
+      "topicId": "storage",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which blob access tier is optimized for data that is rarely accessed and stored for at least 180 days, offering the lowest storage cost but the highest access cost?",
+      "explanation": {
+        "correct": "The Archive tier offers the lowest storage cost of all tiers, but data must be rehydrated (which can take hours) before it can be read, making it suitable for long-term rarely-accessed data.",
+        "incorrect": "Hot is for frequently accessed data with the highest storage cost. Cool is for infrequent access with a 30-day minimum. Cold sits between Cool and Archive with a 90-day minimum but still allows immediate reads.",
+        "examTip": "Archive-tier blobs must be rehydrated to Hot or Cool before they can be read — plan retrieval times of up to 15 hours for standard priority rehydration.",
+        "relatedTopics": [
+          "blob-access-tiers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "blob-access-tiers",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hot",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Cool",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Cold",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Archive",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": "az104-034",
+      "topicId": "storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You need to generate a time-limited URL that grants a third-party application read-only access to a single blob without exposing your storage account key. What should you generate?",
+      "explanation": {
+        "correct": "A SAS token is a signed URI granting delegated, time-limited access to specific storage resources without sharing the account key itself.",
+        "incorrect": "A stored access policy defines reusable constraints for SAS tokens but is not itself the access URL. Rotating account keys changes credentials but doesn't scope access. Private endpoints control network connectivity, not per-resource delegated access.",
+        "examTip": "Use a user delegation SAS (secured with Microsoft Entra credentials) instead of an account-key SAS whenever possible, for better security and revocability.",
+        "relatedTopics": [
+          "sas"
+        ]
+      },
+      "metadata": {
+        "examObjective": "sas",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Contoso Ltd is integrating with a third-party analytics vendor that needs temporary, revocable read access to a single report blob.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "A shared access signature (SAS)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A stored access policy",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "An account key rotation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A private endpoint",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-035",
+      "topicId": "storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure Files protocol must you use to mount a file share directly from an on-premises Linux machine over the internet without a VPN, using port 445?",
+      "explanation": {
+        "correct": "SMB (specifically SMB 3.x with encryption) is supported for direct internet mounting on port 445, provided that port isn't blocked by an ISP. NFS shares require a VNet/private network context and don't support this scenario.",
+        "incorrect": "NFS shares can only be accessed within a virtual network or over private connectivity, not directly over the public internet. iSCSI and FTPS are not Azure Files access protocols.",
+        "examTip": "Many ISPs block outbound port 445; if SMB access fails, verify with 'Test-NetConnection -ComputerName <account>.file.core.windows.net -Port 445'.",
+        "relatedTopics": [
+          "azure-files"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-files",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/files/storage-files-networking-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "NFS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SMB",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "iSCSI",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "FTPS",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-036",
+      "topicId": "storage",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A blob container has soft delete enabled with a 14-day retention period, and blob versioning is also enabled. A user overwrites a blob's content. What happens to the original blob content?",
+      "explanation": {
+        "correct": "With blob versioning enabled, an overwrite creates a new current version while preserving the previous content as a version, which is retained until explicitly deleted (independent of the soft-delete retention window, which applies to deletions).",
+        "incorrect": "The content is not lost, does not automatically tier to Archive, and the 14-day soft-delete window applies specifically to delete operations, not to overwrite/versioning retention.",
+        "examTip": "Combine blob versioning with lifecycle management rules to automatically clean up or tier old versions and control storage cost growth.",
+        "relatedTopics": [
+          "blob-versioning",
+          "soft-delete"
+        ]
+      },
+      "metadata": {
+        "examObjective": "blob-versioning",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/blobs/versioning-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Woodgrove Bank's compliance team requires that overwritten blob content remain recoverable for auditing purposes.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is permanently lost immediately",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It becomes a previous version, recoverable indefinitely until explicitly deleted or the version is removed",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It moves automatically to the Archive tier",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It is retained only for 14 days regardless of versioning settings",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-037",
+      "topicId": "storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which tool is best suited for high-throughput, scriptable bulk copy operations of large datasets into and out of Azure Blob Storage?",
+      "explanation": {
+        "correct": "AzCopy is a command-line utility specifically optimized for high-performance, parallelized upload/download/copy operations at scale, and can be scripted for automation.",
+        "incorrect": "Storage Explorer is a GUI tool better suited for interactive, smaller-scale browsing/management. Data Factory is an orchestration/ETL service, more heavyweight than needed for simple bulk copy. Portal upload is not suited for large-scale or scripted transfers.",
+        "examTip": "Use 'azcopy copy <source> <destination> --recursive' for scripted bulk transfers, and consider '--sync' for one-way synchronization.",
+        "relatedTopics": [
+          "azcopy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azcopy",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Storage Explorer",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AzCopy",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Data Factory only",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Portal upload",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-038",
+      "topicId": "storage",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "You need to restrict access to a storage account so that only traffic originating from a specific subnet within your VNet is allowed, while all public internet access is denied. What should you configure?",
+      "explanation": {
+        "correct": "Configuring the storage account's firewall to deny public access by default and adding a virtual network rule (typically backed by a service endpoint on the subnet) restricts access to only the specified subnet's traffic.",
+        "incorrect": "NSGs filter traffic at the subnet/NIC level but don't control storage-account-level access rules. Route tables control routing paths, not authorization. Application security groups group VM NICs for NSG rules, unrelated to storage access.",
+        "examTip": "For the strongest isolation (no traffic ever traversing the public internet), use a Private Endpoint instead of a service endpoint.",
+        "relatedTopics": [
+          "storage-security",
+          "service-endpoints"
+        ]
+      },
+      "metadata": {
+        "examObjective": "storage-security",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "scenarioText": "Northwind Traders is hardening its storage account after a security review flagged unrestricted public network access.",
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "A network security group only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Storage account firewall and virtual network rules with a service endpoint",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A route table",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An application security group",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-039",
+      "topicId": "storage",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command-line tool would you use to run 'az storage account create' to provision a new storage account?",
+      "explanation": {
+        "correct": "'az storage account create' is an Azure CLI command used to provision new storage accounts with specified SKU, kind, and redundancy settings.",
+        "incorrect": "PowerShell uses a different cmdlet syntax (New-AzStorageAccount). Storage Explorer and AzCopy are GUI/data-transfer tools, not account provisioning commands.",
+        "examTip": "The PowerShell equivalent is 'New-AzStorageAccount -ResourceGroupName ... -Name ... -SkuName Standard_LRS -Location ...'.",
+        "relatedTopics": [
+          "azcopy-and-cli"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azcopy-and-cli",
+        "references": [
+          "https://learn.microsoft.com/en-us/cli/azure/storage/account"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "single-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure PowerShell only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure CLI",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Storage Explorer",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AzCopy",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-040",
+      "topicId": "storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid Azure Blob Storage lifecycle management actions that can be triggered based on blob age?",
+      "explanation": {
+        "correct": "Lifecycle management rules can automatically tier blobs (e.g., to Cool, Cold, or Archive) or delete them based on age-based conditions such as 'days since last modified'.",
+        "incorrect": "Lifecycle management cannot enable geo-replication (that's an account-level redundancy setting) or convert blobs into managed disks (an unrelated resource type).",
+        "examTip": "Lifecycle rules can be scoped with blob prefixes and index tag filters for granular targeting.",
+        "relatedTopics": [
+          "lifecycle-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "lifecycle-management",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tier to Cool",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Delete the blob",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Enable geo-replication",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Convert to a managed disk",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-041",
+      "topicId": "storage",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO SAS types allow you to grant access spanning multiple services (e.g., both Blob and File) or multiple resource types with a single signed token?",
+      "explanation": {
+        "correct": "An Account SAS can grant permissions across multiple storage services (Blob, File, Queue, Table) in one token. A User delegation SAS is secured with Microsoft Entra credentials and can be scoped broadly at the account holder's discretion, offering flexible, more secure delegation, though it applies to Blob storage specifically it is not scoped to a single container by design like a Service SAS often is.",
+        "incorrect": "A Service SAS is scoped to a single storage service such as Blob only. A stored access policy tied to one container inherently restricts scope to that container's resources.",
+        "examTip": "Prefer user delegation SAS over account SAS wherever supported — it avoids storing/distributing the account key and is easier to revoke.",
+        "relatedTopics": [
+          "sas"
+        ]
+      },
+      "metadata": {
+        "examObjective": "sas",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Service SAS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Account SAS",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "User delegation SAS",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Stored access policy SAS restricted to one container",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-042",
+      "topicId": "storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO of the following are valid Azure Files tiers/configurations used to reduce on-premises storage footprint while keeping frequently used files local?",
+      "explanation": {
+        "correct": "Azure File Sync with cloud tiering caches frequently accessed files locally on a Windows Server endpoint while tiering less-used files to the cloud share, reducing local footprint. SMB Multichannel improves throughput/resiliency for standard shares but doesn't itself change tiering — the point is that Sync combined with a configured share (standard or premium) is what's tested; SMB Multichannel is a valid supporting configuration for that share's performance.",
+        "incorrect": "A premium file share alone doesn't manage on-premises caching. Azure Files does support tiering via File Sync, so the 'no option' choice is incorrect.",
+        "examTip": "Cloud tiering thresholds in Azure File Sync are configurable per volume as a percentage of free disk space to retain locally.",
+        "relatedTopics": [
+          "azure-file-sync"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-file-sync",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-cloud-tiering-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure File Sync with cloud tiering enabled",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Standard file share with SMB Multichannel",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Premium file share provisioned IOPS",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "None — Azure Files has no tiering option for on-premises caching",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-043",
+      "topicId": "storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO authentication methods are supported for accessing Azure Blob Storage data-plane operations securely without embedding a storage account key in application code?",
+      "explanation": {
+        "correct": "Microsoft Entra ID authentication using data-plane RBAC roles (like Storage Blob Data Contributor) and user delegation SAS tokens both avoid embedding the raw account key in code.",
+        "incorrect": "Connection strings with an embedded account key expose long-lived secrets directly in code/config. Anonymous public access is a container-level exposure setting, not an authentication method for controlled access.",
+        "examTip": "Assign roles like 'Storage Blob Data Reader' or 'Storage Blob Data Contributor' for Entra ID-based data-plane access instead of relying on account keys.",
+        "relatedTopics": [
+          "storage-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "storage-security",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/blobs/authorize-data-operations-portal"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Entra ID (RBAC data-plane roles)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "User delegation SAS",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Storage account connection string with embedded key",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Anonymous public read access",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "az104-044",
+      "topicId": "storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Soft delete alone only guards against deletions; overwrite protection requires blob versioning. LRS keeps three copies within a single datacenter, so a full datacenter loss can cause data loss. Access tier changes are online, metadata-level operations with no downtime.",
+        "incorrect": "The one false statement wrongly claims LRS survives a full datacenter loss — that level of resiliency requires ZRS or higher.",
+        "examTip": "Remember the resiliency ladder: LRS (datacenter) < ZRS (zone) < GRS (region) < RA-GZRS (zone + region, with read access).",
+        "relatedTopics": [
+          "soft-delete",
+          "storage-redundancy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "soft-delete",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Enabling soft delete for blobs protects against accidental deletion but does not protect against accidental overwrite unless versioning is also enabled.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A storage account configured with LRS can survive the loss of an entire datacenter without data loss.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Changing a storage account's access tier from Hot to Cool can be done without any downtime.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "az104-045",
+      "topicId": "storage",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "A given Azure file share is provisioned as either SMB or NFS, not both at once. AzCopy is a command-line tool fully scriptable for CI/CD pipelines. SAS tokens include a signed expiry time that Azure enforces.",
+        "incorrect": "The false statement claims AzCopy needs a GUI, which is incorrect — it's a CLI tool by design.",
+        "examTip": "NFS Azure file shares require Premium tier and are only accessible via private network connectivity, never over the public internet.",
+        "relatedTopics": [
+          "azure-files",
+          "sas"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-files",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/files/storage-files-planning"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Files supports both SMB and NFS protocols, but not on the same file share simultaneously.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "AzCopy requires a graphical user interface and cannot be run from a script or pipeline.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A shared access signature can be configured with an expiration time after which it no longer grants access.",
+          "isCorrectYes": true
+        }
+      ]
+    },
+    {
+      "id": "az104-046",
+      "topicId": "storage",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Review each statement and determine whether it is correct.",
+      "explanation": {
+        "correct": "Stored access policies let you centrally change or revoke constraints for associated SAS tokens. RA-GZRS is only available for Standard general-purpose v2 accounts (Blob/GPv2), not Premium file shares, which support LRS/ZRS only. A locked time-based immutability policy's retention period can only be extended, never shortened.",
+        "incorrect": "All three statements are accurate as written; the tested knowledge is edge cases around stored access policies, redundancy availability by account type, and immutability policy locking rules.",
+        "examTip": "Once a WORM (immutability) policy is locked, you can only extend the retention period, never reduce it or delete the data before expiry.",
+        "relatedTopics": [
+          "sas",
+          "storage-redundancy",
+          "immutable-storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "sas",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-policy-configure-version-scope"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "yes-no-statements",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A stored access policy allows you to modify or revoke permissions for SAS tokens already issued that reference that policy, without regenerating the account key.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "RA-GZRS is available for Premium (file share) storage accounts.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Immutable blob storage with a time-based retention policy can be shortened once locked.",
+          "isCorrectYes": false
+        }
+      ]
+    },
+    {
+      "id": "az104-047",
+      "topicId": "storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "RA-GRS provides readable secondary-region replicas, giving continued read access during a primary region outage. Archive tier is the cheapest storage class, appropriate for rarely accessed data with retrieval latency tolerance.",
+        "incorrect": "ZRS is zone-resilient but not readable from a separate region during outage without geo-redundancy. Cool/Cold tiers still offer immediate access, unlike Archive, and cost more to store.",
+        "examTip": "RA-GRS's secondary read endpoint remains available for reads even if the primary region is completely down.",
+        "relatedTopics": [
+          "storage-redundancy",
+          "blob-access-tiers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "storage-redundancy",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To ensure a storage account remains readable from a secondary region even during a regional outage of the primary, configure",
+          "options": [
+            "LRS",
+            "ZRS",
+            "RA-GRS",
+            "Hot access tier"
+          ],
+          "correctAnswer": "RA-GRS"
+        },
+        {
+          "id": "d2",
+          "prompt": "To minimize storage cost for data accessed less than once a year and tolerate multi-hour retrieval latency, use the",
+          "options": [
+            "Hot tier",
+            "Cool tier",
+            "Cold tier",
+            "Archive tier"
+          ],
+          "correctAnswer": "Archive tier"
+        }
+      ]
+    },
+    {
+      "id": "az104-048",
+      "topicId": "storage",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "A Service SAS scoped to one container is the most tightly scoped, revocable delegation mechanism for that use case. NFS support in Azure Files requires Premium file shares accessed via private network connectivity.",
+        "incorrect": "An Account SAS is broader than necessary and account keys are not scoped/revocable per-token. Standard file shares and blob/table storage don't support the NFS protocol.",
+        "examTip": "NFS Azure file shares always require Premium (FileStorage) accounts and are inaccessible over the public internet.",
+        "relatedTopics": [
+          "sas",
+          "azure-files"
+        ]
+      },
+      "metadata": {
+        "examObjective": "sas",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/files/storage-files-how-to-create-nfs-shares"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To grant a mobile app time-limited, revocable write access to a single blob container without distributing the account key, generate a",
+          "options": [
+            "Account SAS",
+            "Service SAS scoped to the container",
+            "Storage account key",
+            "Private endpoint"
+          ],
+          "correctAnswer": "Service SAS scoped to the container"
+        },
+        {
+          "id": "d2",
+          "prompt": "To ensure Linux clients on-premises can mount an Azure file share over a private network connection using the NFS protocol, provision a",
+          "options": [
+            "Standard file share",
+            "Premium file share configured for NFS",
+            "Blob container with hierarchical namespace",
+            "Table storage endpoint"
+          ],
+          "correctAnswer": "Premium file share configured for NFS"
+        }
+      ]
+    },
+    {
+      "id": "az104-049",
+      "topicId": "storage",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement by selecting the correct option.",
+      "explanation": {
+        "correct": "Soft delete provides a recoverable retention window for accidentally deleted blobs. AzCopy is purpose-built for high-throughput bulk transfers, far outperforming GUI or portal-based uploads at scale.",
+        "incorrect": "Immutable storage prevents changes/deletes entirely (WORM), which is stricter than simple recovery. GUI tools and FTP don't scale well for very large batch transfers.",
+        "examTip": "AzCopy supports parallel, resumable transfers ideal for large-scale migrations.",
+        "relatedTopics": [
+          "soft-delete",
+          "azcopy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "soft-delete",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "dropdown-select",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To back up important blobs against accidental deletion for the next 30 days, enable",
+          "options": [
+            "Immutable storage",
+            "Soft delete",
+            "Static website hosting",
+            "Blob change feed"
+          ],
+          "correctAnswer": "Soft delete"
+        },
+        {
+          "id": "d2",
+          "prompt": "To bulk-upload 10,000 files from an on-premises folder to a blob container as quickly as possible, use",
+          "options": [
+            "Azure Storage Explorer drag-and-drop",
+            "AzCopy",
+            "The Azure portal file browser",
+            "FTP client"
+          ],
+          "correctAnswer": "AzCopy"
+        }
+      ]
+    },
+    {
+      "id": "az104-050",
+      "topicId": "storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to securely migrate an on-premises file server to Azure using Azure File Sync.",
+      "explanation": {
+        "correct": "Azure File Sync requires a cloud file share to exist first, then the on-premises server is registered against a Storage Sync Service, followed by defining a sync group linking cloud and server endpoints, and finally tiering can be enabled once sync is established.",
+        "incorrect": "You cannot register a sync group endpoint before the file share and Storage Sync Service resources exist, and tiering only makes sense after the sync relationship is functioning.",
+        "examTip": "Cloud tiering is optional and configured per server endpoint, not per sync group globally.",
+        "relatedTopics": [
+          "azure-file-sync"
+        ]
+      },
+      "metadata": {
+        "examObjective": "azure-file-sync",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-guide"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create an Azure file share to serve as the cloud endpoint",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Deploy the Storage Sync Service and register the on-premises server",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create a sync group and add the cloud and server endpoints",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Enable cloud tiering to optimize local disk usage",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "az104-051",
+      "topicId": "storage",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following steps in the correct order to lock down a storage account to only allow access from a specific VNet subnet while migrating existing applications.",
+      "explanation": {
+        "correct": "The service endpoint must first be enabled on the subnet, then referenced as an allowed virtual network rule on the storage account, before switching the default rule to Deny (to avoid locking yourself out prematurely), followed by validation testing.",
+        "incorrect": "Setting the default rule to Deny before the VNet rule is properly configured, or before the service endpoint exists, risks a total access outage before the intended access path is validated.",
+        "examTip": "Always validate the new allowed network path BEFORE flipping default network access to Deny, to avoid a self-inflicted outage.",
+        "relatedTopics": [
+          "service-endpoints",
+          "storage-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "service-endpoints",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "ordering",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Enable a service endpoint for Microsoft.Storage on the target subnet",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Add a virtual network rule referencing that subnet in the storage account firewall",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Change the default network access rule from 'Allow' to 'Deny'",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Test connectivity from a VM in the subnet before decommissioning old access methods",
+          "correctPosition": 4
+        }
+      ]
+    },
+    {
+      "id": "az104-052",
+      "topicId": "storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each storage feature into the correct security or resiliency category.",
+      "explanation": {
+        "correct": "Soft delete and versioning protect against accidental data loss, while SAS and Entra RBAC control who can access data and what they can do.",
+        "incorrect": "None of these four features control geographic replication, which is a separate redundancy setting (LRS/ZRS/GRS).",
+        "examTip": "Data protection features answer 'can I get it back?'; access control features answer 'who's allowed in?'.",
+        "relatedTopics": [
+          "soft-delete",
+          "sas"
+        ]
+      },
+      "metadata": {
+        "examObjective": "soft-delete",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Soft delete"
+        },
+        {
+          "id": "item2",
+          "text": "Blob versioning"
+        },
+        {
+          "id": "item3",
+          "text": "Shared access signature"
+        },
+        {
+          "id": "item4",
+          "text": "Microsoft Entra RBAC data-plane role"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Data protection / recovery feature",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Access control / authentication feature",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "az104-053",
+      "topicId": "storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Sort each blob access tier into the correct access-frequency category.",
+      "explanation": {
+        "correct": "Hot and Cool are designed for data accessed frequently or at least occasionally, while Cold and Archive target data that is rarely touched and kept mainly for long-term retention.",
+        "incorrect": "This tests the overall access-frequency spectrum across all four blob access tiers, from Hot down to Archive.",
+        "examTip": "Archive is the only tier requiring rehydration before a blob can be read; Hot, Cool, and Cold all support immediate reads.",
+        "relatedTopics": [
+          "blob-access-tiers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "blob-access-tiers",
+        "references": [
+          "https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      },
+      "type": "drag-drop",
+      "options": [],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Hot"
+        },
+        {
+          "id": "item2",
+          "text": "Cool"
+        },
+        {
+          "id": "item3",
+          "text": "Cold"
+        },
+        {
+          "id": "item4",
+          "text": "Archive"
+        }
+      ],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Optimized for frequent or fairly regular access",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Optimized for rarely accessed, long-term retention",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ]
+    }
+  ]
+}
