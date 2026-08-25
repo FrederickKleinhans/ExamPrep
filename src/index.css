@@ -468,3 +468,53 @@ body {
   background: rgba(148, 163, 184, 0.05);
   border-color: rgba(148, 163, 184, 0.12);
 }
+
+/* ── Page header — stacks title above controls on mobile ── */
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.page-header-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .page-header-controls {
+    /* Full width row of controls, wraps if needed */
+    width: 100%;
+  }
+
+  .page-header-controls select,
+  .page-header-controls button {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+/* ── Active cert hero — stack on mobile ── */
+@media (max-width: 767px) {
+  .cert-hero {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .cert-hero .page-header-controls {
+    width: 100%;
+  }
+
+  .cert-hero .page-header-controls button {
+    flex: 1;
+  }
+}

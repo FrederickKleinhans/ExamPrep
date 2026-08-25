@@ -106,7 +106,7 @@ export function Dashboard({
 
         {/* ── Active cert hero ── */}
         <div
-          className="card-surface"
+          className="card-surface cert-hero"
           style={{
             borderColor: `${vendorColor}33`,
             background: `linear-gradient(135deg, ${vendorColor}10 0%, var(--bg-secondary) 100%)`,
@@ -175,7 +175,7 @@ export function Dashboard({
           </div>
 
           {(activeCert || activeCertId) && (
-            <div style={{ display: 'flex', gap: 10, flexShrink: 0, flexWrap: 'wrap' }}>
+            <div className="page-header-controls" style={{ flexShrink: 0 }}>
               <button
                 type="button"
                 onClick={() => navigate('/study')}

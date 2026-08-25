@@ -163,11 +163,11 @@ export function ExamPage() {
       <div className="page-root">
         {/* Timer bar */}
         <div className="sticky-bar" style={{ position: 'sticky', top: 0, zIndex: 10, paddingBottom: 14, marginBottom: 4 }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+          <div className="page-header" style={{ marginBottom: 8 }}>
             <span className="text-muted" style={{ fontSize: 13 }}>
               Question <strong className="text-heading">{examSession.currentIndex + 1}</strong> of {stats.total}
             </span>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <div className="page-header-controls" style={{ justifyContent: 'flex-end' }}>
               <span
                 style={{ display: 'flex', alignItems: 'center', gap: 6, fontFamily: 'monospace', fontSize: 18, fontWeight: 800, color: isLowTime ? 'var(--error)' : 'var(--text-primary)' }}
                 aria-live="polite"
@@ -200,7 +200,7 @@ export function ExamPage() {
               hideBookmark
               examMode
             />
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 14 }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 14, flexWrap: 'wrap', gap: 8 }}>
               <button
                 onClick={() => navigateExam(examSession.currentIndex - 1)}
                 disabled={examSession.currentIndex === 0}

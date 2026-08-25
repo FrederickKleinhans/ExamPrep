@@ -82,7 +82,7 @@ export function StudyPage() {
 
       {/* ── Page header ── */}
       <div style={{ marginBottom: 24 }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
+        <div className="page-header">
           <div>
             <p className="text-muted" style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.14em', marginBottom: 6 }}>
               {certification?.name ?? 'Study mode'}
@@ -93,7 +93,7 @@ export function StudyPage() {
             </p>
           </div>
 
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+          <div className="page-header-controls">
             <select
               value={studyFilter}
               onChange={(e) => void setStudyFilter(e.target.value)}
