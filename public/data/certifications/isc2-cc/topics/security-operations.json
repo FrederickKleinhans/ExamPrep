@@ -1,0 +1,328 @@
+{
+  "certificationId": "isc2-cc",
+  "topicId": "security-operations",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "isc2cc-124",
+      "type": "single-choice",
+      "topicId": "security-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary purpose of patch management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To regularly identify, test, and apply updates that fix known vulnerabilities and bugs in software",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To create new user accounts for employees",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To physically secure server room doors",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To classify data based on sensitivity",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Patch management is the process of identifying, testing, and deploying software updates (patches) that address known vulnerabilities, bugs, and stability issues.",
+        "incorrect": "Account creation, physical door security, and data classification are unrelated operational processes.",
+        "examTip": "Timely patch management is one of the most effective controls against exploitation of known vulnerabilities.",
+        "relatedTopics": [
+          "Patch management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D5.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-125",
+      "type": "ordering",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the following patch management steps in a logical order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify available patches and assess their relevance/severity",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Test the patch in a non-production environment",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Schedule and deploy the patch to production systems",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Verify successful patch installation and monitor for issues",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Testing before production deployment helps avoid introducing new problems through an untested patch.",
+        "incorrect": "Review the CC patch management process.",
+        "examTip": "Sequence: Assess → Test → Deploy → Verify.",
+        "relatedTopics": [
+          "Patch management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D5.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-126",
+      "type": "single-choice",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Why is it important to test a security patch in a non-production environment before deploying it broadly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To avoid unexpected compatibility issues or system instability affecting production systems",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Because patches are illegal to apply without testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To make the patch download faster",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Testing is not actually necessary before deployment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Testing patches in a controlled, non-production environment helps identify compatibility issues or instability before they can impact live business operations.",
+        "incorrect": "Legal requirements and download speed are unrelated to the purpose of patch testing; testing is indeed a recommended best practice, not unnecessary.",
+        "examTip": "Skipping patch testing has historically caused significant outages when patches introduced unforeseen issues.",
+        "relatedTopics": [
+          "Patch management",
+          "Change management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D5.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-127",
+      "type": "single-choice",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary purpose of a formal 'change management' process in IT operations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To ensure changes to systems are reviewed, approved, tested, and documented before implementation, reducing the risk of unintended impact",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To prevent any changes from ever being made to production systems",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To automatically approve all requested changes without review",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To track employee vacation requests",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Change management provides a structured process for reviewing, approving, testing, and documenting changes to reduce the risk of unintended negative impacts on systems.",
+        "incorrect": "Change management doesn't forbid change altogether nor does it mean automatic, unreviewed approval; it is unrelated to vacation tracking.",
+        "examTip": "A Change Advisory Board (CAB) is a common governance body used to review and approve significant changes.",
+        "relatedTopics": [
+          "Change management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D5.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-128",
+      "type": "single-choice",
+      "topicId": "security-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of 'configuration management' in IT security operations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Establishing and maintaining systems in a known, secure, and consistent state, and tracking any changes to that state",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Managing employee payroll configurations",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Designing a company marketing materials",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Managing physical office furniture layout",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Configuration management establishes baseline, secure configurations for systems and tracks any changes over time to maintain consistency and detect unauthorized deviations.",
+        "incorrect": "Payroll, marketing, and furniture layout are unrelated business functions, not configuration management.",
+        "examTip": "A Configuration Management Database (CMDB) is often used to track and manage baseline configurations across an organization assets.",
+        "relatedTopics": [
+          "Configuration management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D5.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-129",
+      "type": "single-choice",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a 'security baseline' in the context of configuration management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A documented, approved minimum set of security configuration settings that a system must meet",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A physical location where backup tapes are stored",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "An annual security awareness training requirement",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A list of all employees with administrator access",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A security baseline defines the minimum required, approved security configuration settings that systems of a certain type must meet before deployment and throughout their lifecycle.",
+        "incorrect": "Backup tape storage, training requirements, and admin lists are separate concepts from a configuration baseline.",
+        "examTip": "Baselines are often based on industry standards like CIS Benchmarks or vendor security guides.",
+        "relatedTopics": [
+          "Security baseline",
+          "Configuration management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D5.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-130",
+      "type": "yes-no-statements",
+      "topicId": "security-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Decide whether each statement about vulnerability management is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A vulnerability scan can generate false positives, requiring analyst validation.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Once a vulnerability scan is run once, an organization never needs to scan again.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Vulnerability scan results should be prioritized based on factors like severity and exploitability, not addressed randomly.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Vulnerability management is a continuous, cyclical process — scanning must be repeated regularly as new vulnerabilities and system changes emerge.",
+        "incorrect": "Review the CC vulnerability management guidance.",
+        "examTip": "Vulnerability scanning is ongoing, not one-time.",
+        "relatedTopics": [
+          "Vulnerability scanning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D5.4",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

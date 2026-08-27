@@ -1,0 +1,1197 @@
+{
+  "certificationId": "dp-900",
+  "topicId": "analytics-workloads",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "dp900-079",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service is a cloud-based ETL and data integration service used to orchestrate and automate data movement and transformation pipelines?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Data Factory",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Databricks",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Power BI",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Data Factory is a managed service for building and orchestrating ETL/ELT data pipelines.",
+        "incorrect": "Databricks is an analytics/Spark platform, Power BI is a visualization tool, and Table Storage is a NoSQL data store.",
+        "examTip": "Data Factory pipelines are made up of activities that move and transform data.",
+        "relatedTopics": [
+          "Azure Data Factory"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-080",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service provides a unified analytics platform that combines big data processing and data warehousing capabilities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Synapse Analytics",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Data Factory",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Event Hubs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Synapse Analytics unifies data warehousing and big data analytics into a single service.",
+        "incorrect": "Data Factory focuses on orchestration, Event Hubs on event ingestion, and Table Storage on NoSQL key-value data.",
+        "examTip": "Synapse combines SQL pools, Spark pools, and pipelines in one workspace.",
+        "relatedTopics": [
+          "Azure Synapse Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-081",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "A data science team wants a collaborative, notebook-based environment built on Apache Spark to run large-scale data engineering and machine learning workloads.",
+      "questionText": "Which Azure service best fits this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Databricks",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Data Factory",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Power BI",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Databricks is an Apache Spark-based analytics platform offering collaborative notebooks for data engineering and machine learning.",
+        "incorrect": "Data Factory orchestrates pipelines but is not primarily a notebook-based Spark environment; Power BI is for visualization; Table Storage is a data store.",
+        "examTip": "Databricks is built by the creators of Apache Spark and integrates tightly with Azure.",
+        "relatedTopics": [
+          "Azure Databricks",
+          "Apache Spark"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-082",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "A company wants to deploy a managed Hadoop and Spark cluster environment in Azure to run open-source big data frameworks like Hive and HBase.",
+      "questionText": "Which Azure service should they use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure HDInsight",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Synapse Analytics",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Power BI",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure HDInsight is a managed service for running popular open-source big data frameworks such as Hadoop, Spark, Hive, and HBase.",
+        "incorrect": "Synapse focuses on unified analytics and data warehousing, Power BI on visualization, and SQL Database on relational OLTP workloads.",
+        "examTip": "HDInsight is Azure's managed offering for open-source big data cluster technologies.",
+        "relatedTopics": [
+          "Azure HDInsight"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-083",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "In Power BI, which artifact typically combines multiple visualizations from one or more reports into a single, often single-page, high-level view for monitoring key metrics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A dashboard",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A dataflow",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A workspace",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A Power BI dashboard is a single-page canvas that pins visuals from one or more reports for at-a-glance monitoring.",
+        "incorrect": "A dataset is the underlying data model, a dataflow is a reusable data prep process, and a workspace is a collaboration container for Power BI content.",
+        "examTip": "Reports contain multiple pages of visuals; dashboards pin tiles from reports onto one page.",
+        "relatedTopics": [
+          "Power BI",
+          "dashboards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-084",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In Power BI, what is a 'dataset'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A collection of data that Power BI uses to create visualizations and reports",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A single-page collection of pinned visual tiles",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A container used only to share dashboards with external users",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A scheduled data pipeline that moves data between storage accounts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A dataset is the collection of data (from one or more sources) that Power BI uses as the basis for reports and visualizations.",
+        "incorrect": "A single-page collection of pinned tiles describes a dashboard, and datasets are not pipelines for moving data between storage accounts.",
+        "examTip": "Reports and dashboards are both built on top of one or more datasets.",
+        "relatedTopics": [
+          "Power BI",
+          "datasets"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-085",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service is designed to ingest and process millions of streaming events per second from sources such as IoT devices and application telemetry?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Event Hubs",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Data Factory",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Power BI Desktop",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Event Hubs is a big data streaming platform and event ingestion service capable of receiving and processing millions of events per second.",
+        "incorrect": "Data Factory orchestrates batch/ETL pipelines, SQL Database is a relational store, and Power BI Desktop is a report authoring tool.",
+        "examTip": "Event Hubs is often paired with Azure Stream Analytics for real-time processing.",
+        "relatedTopics": [
+          "Azure Event Hubs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-086",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company ingests telemetry from thousands of IoT sensors through Azure Event Hubs and needs to run continuous SQL-like queries over the streaming data to detect anomalies in real time before storing results.",
+      "questionText": "Which Azure service should they use to process the streaming data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Stream Analytics",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Data Factory",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Power BI",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure SQL Managed Instance",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Stream Analytics allows continuous SQL-like queries over streaming data sources such as Event Hubs, ideal for real-time anomaly detection.",
+        "incorrect": "Data Factory is oriented toward batch orchestration, Power BI toward visualization, and SQL Managed Instance toward relational storage rather than stream processing.",
+        "examTip": "Stream Analytics uses a SQL-like query language specifically designed for streaming data.",
+        "relatedTopics": [
+          "Azure Stream Analytics",
+          "Azure Event Hubs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-087",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A BI team needs multiple analysts to collaborate on shared Power BI reports and dashboards, with controlled access for different departments.",
+      "questionText": "Which Power BI concept enables this kind of collaboration and access control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Workspaces",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Datasets",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Dataflows",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Gateways",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Power BI workspaces are collaborative containers where teams can create, share, and manage access to dashboards, reports, and datasets.",
+        "incorrect": "Datasets and dataflows are data-related artifacts, and gateways connect on-premises data sources, none of which manage team collaboration directly.",
+        "examTip": "Workspaces control who can view or edit shared Power BI content.",
+        "relatedTopics": [
+          "Power BI workspaces"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-088",
+      "type": "multiple-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two of the following are components you can typically work with inside an Azure Synapse Analytics workspace? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "SQL pools for data warehousing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Apache Spark pools for big data processing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Power BI Desktop installation files",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SQL Server Agent jobs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Synapse Analytics workspaces include both SQL pools and Spark pools for different processing needs.",
+        "incorrect": "Power BI Desktop is a separate application, and SQL Server Agent is a SQL Server/Managed Instance feature, not part of Synapse.",
+        "examTip": "Synapse Studio provides a unified experience across SQL and Spark pools plus pipelines.",
+        "relatedTopics": [
+          "Azure Synapse Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-089",
+      "type": "multiple-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two of the following are valid Power BI artifacts? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reports",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Dashboards",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Containers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Partitions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Reports and dashboards are core Power BI artifacts used to present and monitor data.",
+        "incorrect": "Containers relate to Blob Storage, and partitions relate to Cosmos DB or table partitioning, not Power BI.",
+        "examTip": "Core Power BI building blocks: datasets, reports, dashboards, workspaces, and dataflows.",
+        "relatedTopics": [
+          "Power BI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-090",
+      "type": "multiple-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which two of the following are Azure services commonly used for building batch data pipelines? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Data Factory",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Synapse Pipelines",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Stream Analytics",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Power BI Desktop",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Data Factory and Synapse Pipelines (which share the same pipeline engine) are used to orchestrate batch ETL/ELT data movement.",
+        "incorrect": "Stream Analytics is designed for real-time streaming, not batch orchestration, and Power BI Desktop is a report authoring tool.",
+        "examTip": "Synapse Pipelines is built on the same technology as Azure Data Factory.",
+        "relatedTopics": [
+          "Azure Data Factory",
+          "Azure Synapse Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-091",
+      "type": "multiple-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which two of the following statements about real-time analytics on Azure are correct? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Event Hubs can ingest high-throughput streaming data from many producers simultaneously",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Stream Analytics jobs use a SQL-like query language to analyze streaming data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Real-time analytics pipelines always require data to be batched daily before analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Power BI cannot display data from streaming sources",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Event Hubs handles high-throughput ingestion, and Stream Analytics uses SQL-like queries over streaming data; daily batching contradicts real-time processing, and Power BI does support streaming datasets.",
+        "incorrect": "Real-time analytics is specifically meant to avoid daily batching delays, and Power BI supports real-time/streaming tiles and dashboards.",
+        "examTip": "Power BI can consume streaming datasets pushed from Stream Analytics for near real-time dashboards.",
+        "relatedTopics": [
+          "real-time analytics",
+          "Azure Stream Analytics",
+          "Power BI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-092",
+      "type": "yes-no-statements",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each statement about Azure Data Factory, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Data Factory can orchestrate data movement between many different source and destination systems.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Data Factory is primarily used to create Power BI dashboards.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Data Factory pipelines are made up of one or more activities.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Data Factory orchestrates data movement/transformation across many systems via pipelines made of activities; it does not create Power BI dashboards.",
+        "incorrect": "Dashboard creation is a Power BI function, not a Data Factory function.",
+        "examTip": "Data Factory = orchestration and movement; Power BI = visualization.",
+        "relatedTopics": [
+          "Azure Data Factory"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-093",
+      "type": "yes-no-statements",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company wants a single analytics workspace where its team can run both traditional data warehouse queries and large-scale Spark jobs, then share results through Power BI.",
+      "questionText": "For each statement about Azure Synapse Analytics, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Synapse Analytics can run both SQL-based data warehousing queries and Apache Spark-based big data jobs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Synapse Analytics cannot integrate with Power BI.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Synapse Studio provides a single web-based interface for managing pipelines, SQL pools, and Spark pools.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Synapse unifies SQL and Spark analytics and integrates with Power BI directly from Synapse Studio.",
+        "incorrect": "Synapse Analytics does integrate with Power BI, including Power BI reports embedded within Synapse Studio.",
+        "examTip": "Synapse Studio is the unified workspace experience for Synapse Analytics.",
+        "relatedTopics": [
+          "Azure Synapse Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-094",
+      "type": "yes-no-statements",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about Power BI, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A Power BI report can contain multiple pages of visualizations built from a dataset.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A Power BI dashboard can only display visuals pinned from a single report.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Power BI workspaces allow teams to collaborate on and share content.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Reports can have multiple pages, and workspaces support team collaboration; dashboards can actually pin tiles from multiple reports and datasets, not just one.",
+        "incorrect": "Dashboards are not limited to a single report — they can aggregate tiles from several reports.",
+        "examTip": "Dashboards provide a consolidated view that can span multiple underlying reports.",
+        "relatedTopics": [
+          "Power BI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-095",
+      "type": "yes-no-statements",
+      "topicId": "analytics-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement about streaming analytics on Azure, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Event Hubs is designed for high-throughput ingestion of streaming events.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Stream Analytics can output results directly to destinations such as Power BI or Blob Storage.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Stream Analytics queries must be written in a general-purpose programming language like Python.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Event Hubs is built for high-throughput ingestion, and Stream Analytics can route output to sinks like Power BI or Blob Storage. Stream Analytics queries use a SQL-like language, not general-purpose code.",
+        "incorrect": "Stream Analytics uses its own SQL-like query language rather than requiring Python or similar languages.",
+        "examTip": "Stream Analytics jobs define inputs, a SQL-like query, and one or more outputs.",
+        "relatedTopics": [
+          "Azure Stream Analytics",
+          "Azure Event Hubs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-096",
+      "type": "yes-no-statements",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about Azure Databricks and HDInsight, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Databricks provides collaborative, notebook-based access to Apache Spark.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure HDInsight can only run Apache Spark and no other open-source frameworks.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Both Azure Databricks and Azure HDInsight can be used to process large-scale big data workloads.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Databricks offers notebook-based Spark access, and both Databricks and HDInsight support large-scale big data processing. HDInsight supports multiple frameworks beyond Spark, such as Hadoop, Hive, and HBase.",
+        "incorrect": "HDInsight is not limited to Spark; it supports several open-source big data frameworks.",
+        "examTip": "HDInsight supports Hadoop, Spark, Hive, HBase, Kafka, and more.",
+        "relatedTopics": [
+          "Azure Databricks",
+          "Azure HDInsight"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-097",
+      "type": "dropdown-select",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the sentences about Azure analytics services using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "____ is used to orchestrate and schedule data movement and transformation pipelines.",
+          "options": [
+            "Azure Data Factory",
+            "Power BI",
+            "Azure Event Hubs"
+          ],
+          "correctAnswer": "Azure Data Factory"
+        },
+        {
+          "id": "d2",
+          "prompt": "____ is used to create interactive reports and dashboards for business users.",
+          "options": [
+            "Power BI",
+            "Azure Data Factory",
+            "Azure HDInsight"
+          ],
+          "correctAnswer": "Power BI"
+        }
+      ],
+      "explanation": {
+        "correct": "Data Factory orchestrates pipelines, while Power BI is used to build reports and dashboards for business consumption.",
+        "incorrect": "Event Hubs is for event ingestion, and HDInsight is for open-source big data clusters, not reporting.",
+        "examTip": "Match each Azure analytics tool to its primary purpose: ingest, process, orchestrate, or visualize.",
+        "relatedTopics": [
+          "Azure Data Factory",
+          "Power BI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-098",
+      "type": "dropdown-select",
+      "topicId": "analytics-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the sentences about real-time analytics using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "____ ingests large volumes of streaming events from many producers such as IoT devices.",
+          "options": [
+            "Azure Event Hubs",
+            "Azure Data Factory",
+            "Power BI Desktop"
+          ],
+          "correctAnswer": "Azure Event Hubs"
+        },
+        {
+          "id": "d2",
+          "prompt": "____ runs continuous SQL-like queries over streaming data to produce real-time insights.",
+          "options": [
+            "Azure Stream Analytics",
+            "Azure Database for MySQL",
+            "Azure Table Storage"
+          ],
+          "correctAnswer": "Azure Stream Analytics"
+        }
+      ],
+      "explanation": {
+        "correct": "Event Hubs ingests streaming events at scale, and Stream Analytics processes that stream using SQL-like queries.",
+        "incorrect": "Data Factory and Power BI Desktop do not ingest streaming events, and MySQL/Table Storage are not stream processing engines.",
+        "examTip": "Event Hubs (ingest) + Stream Analytics (process) is the classic real-time analytics pairing on Azure.",
+        "relatedTopics": [
+          "Azure Event Hubs",
+          "Azure Stream Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-099",
+      "type": "dropdown-select",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the sentence about Power BI using the dropdown provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A Power BI ____ is a single-page view that pins visual tiles for at-a-glance monitoring of key metrics.",
+          "options": [
+            "dashboard",
+            "dataset",
+            "dataflow"
+          ],
+          "correctAnswer": "dashboard"
+        }
+      ],
+      "explanation": {
+        "correct": "A dashboard is the single-page, pinned-tile view used for quick monitoring in Power BI.",
+        "incorrect": "A dataset is the underlying data, and a dataflow is a reusable data preparation process, neither of which is the pinned-tile view itself.",
+        "examTip": "Dashboards are built from tiles pinned out of one or more reports.",
+        "relatedTopics": [
+          "Power BI dashboards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-100",
+      "type": "ordering",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following stages of a typical batch analytics pipeline on Azure in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Ingest raw data into a data lake using Azure Data Factory",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Transform and process the data using Azure Synapse Analytics or Azure Databricks",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Load curated data into a data warehouse or serving layer",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Visualize the data using Power BI reports and dashboards",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "A typical pipeline ingests raw data, processes/transforms it, loads curated results, then visualizes them for end users.",
+        "incorrect": "Visualization depends on curated data being available, so it must come after ingestion and transformation.",
+        "examTip": "Think of the flow: ingest -> process -> store -> visualize.",
+        "relatedTopics": [
+          "analytics pipeline",
+          "Azure Data Factory",
+          "Power BI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-101",
+      "type": "ordering",
+      "topicId": "analytics-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following stages of a real-time analytics pipeline in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "IoT devices send telemetry events",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Azure Event Hubs ingests the streaming events",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Azure Stream Analytics processes the events with a continuous query",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Results are pushed to a Power BI streaming dashboard",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "The real-time flow starts at the event source, moves through ingestion, then processing, and finally visualization.",
+        "incorrect": "Processing cannot occur before ingestion, and visualization depends on processed output.",
+        "examTip": "This ingest-process-visualize pattern is central to real-time analytics on Azure.",
+        "relatedTopics": [
+          "real-time analytics",
+          "Azure Event Hubs",
+          "Azure Stream Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-102",
+      "type": "drag-drop",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each Azure analytics service to the role it plays in an end-to-end analytics solution.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Orchestration / ETL",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Big data processing",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Visualization",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "Streaming ingestion",
+          "acceptsItemIds": [
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure Data Factory"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Databricks"
+        },
+        {
+          "id": "item3",
+          "text": "Power BI"
+        },
+        {
+          "id": "item4",
+          "text": "Azure Event Hubs"
+        }
+      ],
+      "explanation": {
+        "correct": "Data Factory orchestrates ETL, Databricks processes big data, Power BI visualizes results, and Event Hubs ingests streaming events.",
+        "incorrect": "Review each service's primary role in the analytics pipeline if an item was placed incorrectly.",
+        "examTip": "Recognizing each service's role helps answer scenario-based questions about designing analytics solutions.",
+        "relatedTopics": [
+          "Azure analytics services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-103",
+      "type": "drag-drop",
+      "topicId": "analytics-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each scenario to the Azure service that best matches it.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Azure Synapse Analytics",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Azure HDInsight",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Azure Stream Analytics",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "A team wants a single workspace combining SQL-based data warehousing and Spark-based big data processing"
+        },
+        {
+          "id": "item2",
+          "text": "A team needs to run an existing Apache Hive workload with minimal changes on managed open-source clusters"
+        },
+        {
+          "id": "item3",
+          "text": "A team needs to run a continuous SQL-like query over an incoming event stream and output alerts in real time"
+        }
+      ],
+      "explanation": {
+        "correct": "Synapse unifies SQL and Spark analytics, HDInsight runs open-source frameworks like Hive with minimal changes, and Stream Analytics runs continuous queries over streaming data.",
+        "incorrect": "Review the primary purpose of each analytics service if a match seems incorrect.",
+        "examTip": "Scenario questions often hinge on a single distinguishing requirement — look for the key phrase that points to one service over another.",
+        "relatedTopics": [
+          "Azure Synapse Analytics",
+          "Azure HDInsight",
+          "Azure Stream Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

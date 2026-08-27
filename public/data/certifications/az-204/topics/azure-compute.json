@@ -1,0 +1,1071 @@
+{
+  "certificationId": "az-204",
+  "topicId": "azure-compute",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "az204-001",
+      "type": "single-choice",
+      "topicId": "azure-compute",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You deploy a web app to Azure App Service using the Free tier. Which action requires scaling up to a higher tier?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Add a custom domain",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Enable diagnostic logs",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Configure daily backups",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Set application settings",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Daily backups are supported only in Basic tier and higher.",
+        "incorrect": "Custom domains, diagnostic logs, and application settings are available in Free tier.",
+        "examTip": "Remember backup and custom domain SSL are not available in Free/Shared tiers.",
+        "relatedTopics": [
+          "App Service scaling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Configure App Service plans",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-002",
+      "type": "multiple-choice",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are designing an Azure Function app that processes orders from a queue. Which triggers can you use? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Service Bus Queue trigger",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Blob Storage trigger",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Event Grid trigger",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Queue Storage trigger",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "HTTP trigger",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Service Bus Queue and Azure Queue Storage triggers are queue-based.",
+        "incorrect": "Blob Storage and Event Grid are not queue triggers; HTTP is for web requests.",
+        "examTip": "Distinguish between Azure Queue Storage and Service Bus queues.",
+        "relatedTopics": [
+          "Azure Functions triggers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure Functions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-007",
+      "type": "single-choice",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "You are developing a web application that must support staging and production environments. You need to minimize downtime during deployments.",
+      "questionText": "Which App Service feature should you use to swap environments with zero downtime?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deployment slots",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Auto-scaling",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Backup",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Custom domains",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Deployment slots allow swapping staging and production without downtime.",
+        "incorrect": "Auto-scaling handles load, backup is for recovery, custom domains are for branding.",
+        "examTip": "Use deployment slots for safe staging and rollback.",
+        "relatedTopics": [
+          "App Service deployment slots"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-011",
+      "type": "ordering",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to deploy a custom container to Azure App Service:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Push Docker image to Azure Container Registry",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a web app with container settings",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Configure the container registry credentials",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Set the container image and tag",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Push image, create web app, set credentials, then specify image.",
+        "incorrect": "Must push image before referencing it.",
+        "examTip": "Use managed identity for registry authentication.",
+        "relatedTopics": [
+          "Container deployment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-016",
+      "type": "dropdown-select",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You need a serverless compute service that can execute code based on an HTTP request. Choose the correct service:",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Service",
+          "options": [
+            "Azure App Service",
+            "Azure Functions",
+            "Azure Container Instances",
+            "Azure Virtual Machines"
+          ],
+          "correctAnswer": "Azure Functions"
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Functions is serverless and can be triggered by HTTP.",
+        "incorrect": "App Service is PaaS (not serverless), ACI is container-based, VMs are IaaS.",
+        "examTip": "Functions scale automatically under demand.",
+        "relatedTopics": [
+          "Serverless compute"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-020",
+      "type": "multiple-choice",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "You are designing a durable function that orchestrates multiple activities. Which statements about durable functions are true? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Orchestrator functions must be deterministic.",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Activity functions can call orchestrator functions.",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The function can be stopped and resumed.",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Durable Functions only run in Consumption plan.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Orchestrators are deterministic; they can be stopped/resumed via replay.",
+        "incorrect": "Activity functions cannot call orchestrators; they can run in any plan.",
+        "examTip": "Avoid I/O inside orchestrators Ã¢â‚¬â€ use activity functions.",
+        "relatedTopics": [
+          "Durable Functions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-024",
+      "type": "drag-drop",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each Azure hosting option with its description:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "PaaS web hosting with deployment slots",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Serverless container orchestration",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Single container quick deployment",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure App Service"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Container Apps"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Container Instances (ACI)"
+        }
+      ],
+      "explanation": {
+        "correct": "App Service is PaaS with slots; Container Apps is serverless orchestration; ACI is single-container.",
+        "incorrect": "Container Apps vs ACI: Container Apps adds scaling and Dapr.",
+        "examTip": "Use ACI for simple, short-lived containers.",
+        "relatedTopics": [
+          "Compute options"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-028",
+      "type": "dropdown-select",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "You have a function with a Service Bus trigger. To increase throughput, you should set the `maxConcurrentCalls` property to _____.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Value",
+          "options": [
+            "1",
+            "10",
+            "100",
+            "200"
+          ],
+          "correctAnswer": "200"
+        }
+      ],
+      "explanation": {
+        "correct": "Higher `maxConcurrentCalls` increases parallelism (max 200 for Service Bus).",
+        "incorrect": "Too low reduces throughput; too high may cause throttling.",
+        "examTip": "Monitor queue backlog to tune concurrency.",
+        "relatedTopics": [
+          "Functions scaling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-033",
+      "type": "yes-no-statements",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are deploying a container to Azure Container Instances. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "You can mount Azure Files shares.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "ACI automatically scales with load.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "You can assign a public IP address.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "ACI supports file shares and public IP, but does not scale automatically.",
+        "incorrect": "ACI is for isolated containers, no automatic scaling.",
+        "examTip": "Use Container Apps or Kubernetes for scaling.",
+        "relatedTopics": [
+          "ACI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-038",
+      "type": "multiple-choice",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "You are using an App Service with a multi-container app using Docker Compose. Which deployment methods are supported? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Docker Compose YAML file",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Kubernetes manifests",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Container Registry with multi-container",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Deployment slots",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "App Service supports Docker Compose and ACR multi-container.",
+        "incorrect": "Kubernetes is for AKS; slots are for single-container or web apps.",
+        "examTip": "Web App for Containers supports custom containers.",
+        "relatedTopics": [
+          "Container deployment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-042",
+      "type": "drag-drop",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each Azure Functions hosting plan with its characteristic:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Cold start possible",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Always-on required",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Scale on demand",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Consumption plan"
+        },
+        {
+          "id": "item2",
+          "text": "Premium plan"
+        },
+        {
+          "id": "item3",
+          "text": "Dedicated plan"
+        }
+      ],
+      "explanation": {
+        "correct": "Consumption has cold starts; Premium has always-on; Dedicated scales manually.",
+        "incorrect": "Premium also scales but without cold starts.",
+        "examTip": "Choose Premium for consistent performance.",
+        "relatedTopics": [
+          "Functions hosting plans"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-048",
+      "type": "drag-drop",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each function trigger with its binding direction:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Input binding",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Output binding",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Trigger binding",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Blob storage read"
+        },
+        {
+          "id": "item2",
+          "text": "Queue storage write"
+        },
+        {
+          "id": "item3",
+          "text": "HTTP request"
+        }
+      ],
+      "explanation": {
+        "correct": "Blob read is input; queue write is output; HTTP is trigger.",
+        "incorrect": "Triggers start the function.",
+        "examTip": "Bindings reduce boilerplate code.",
+        "relatedTopics": [
+          "Azure Functions bindings"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-055",
+      "type": "single-choice",
+      "topicId": "azure-compute",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which App Service setting allows you to adjust the number of instances running your app?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scale out",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Scale up",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Deployment slots",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Custom domain",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Scale out increases instance count.",
+        "incorrect": "Scale up increases VM size; slots and domains are for deployment and branding.",
+        "examTip": "Set autoscaling rules for scale out.",
+        "relatedTopics": [
+          "App Service scaling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-059",
+      "type": "ordering",
+      "topicId": "azure-compute",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Order the steps to create a new Azure Functions project in Visual Studio:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a new Azure Functions project",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Select trigger type",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Code the function",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Publish to Azure",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Project, trigger, code, publish.",
+        "incorrect": "Must select trigger before coding.",
+        "examTip": "Use Azure Functions Core Tools for local development.",
+        "relatedTopics": [
+          "Functions development"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-064",
+      "type": "dropdown-select",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "To deploy a revision to an Azure Container App, you create a new _____.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Resource",
+          "options": [
+            "replica",
+            "revision",
+            "container",
+            "image"
+          ],
+          "correctAnswer": "revision"
+        }
+      ],
+      "explanation": {
+        "correct": "Revisions in Container Apps manage immutable container versions.",
+        "incorrect": "Replicas are instances; containers are runtime units.",
+        "examTip": "Revisions can be activated/deactivated.",
+        "relatedTopics": [
+          "Container Apps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-069",
+      "type": "yes-no-statements",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are using Azure App Service. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "You can use multiple deployment slots in the Free tier.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Slots allow swapping with zero downtime.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Custom domains require a paid tier.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Slots are available in Standard tier and above; they enable zero-downtime swaps.",
+        "incorrect": "Custom domains are available in Free tier.",
+        "examTip": "Use slots for staging and rollback.",
+        "relatedTopics": [
+          "App Service slots"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-073",
+      "type": "single-choice",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which binding type is used to read from Azure Cosmos DB in Azure Functions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cosmos DB input binding",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Cosmos DB output binding",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Cosmos DB trigger",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Cosmos DB change feed",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Input binding reads data from Cosmos DB.",
+        "incorrect": "Output writes; trigger is for change feed.",
+        "examTip": "Input binding can use SQL queries.",
+        "relatedTopics": [
+          "Functions bindings"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-076",
+      "type": "dropdown-select",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "To scale based on a custom metric, you should set up _____ in App Service.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Scaling method",
+          "options": [
+            "Autoscaling",
+            "Manual scaling",
+            "Scale up",
+            "App Service plan"
+          ],
+          "correctAnswer": "Autoscaling"
+        }
+      ],
+      "explanation": {
+        "correct": "Autoscaling supports custom metrics.",
+        "incorrect": "Manual scaling is fixed; scale up changes plan size.",
+        "examTip": "Autoscaling rules can be schedule-based.",
+        "relatedTopics": [
+          "App Service scaling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-080",
+      "type": "multiple-choice",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which features are supported in Azure Functions Consumption plan? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automatic scaling",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "VNet integration",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Cold start",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Always-on",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Automatic scaling and cold starts are typical in Consumption.",
+        "incorrect": "VNet and always-on are Premium/Dedicated features.",
+        "examTip": "Premium plan avoids cold starts.",
+        "relatedTopics": [
+          "Functions plans"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-084",
+      "type": "drag-drop",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Classify each App Service feature:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Deployment",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Security",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Networking",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Deployment slots"
+        },
+        {
+          "id": "item2",
+          "text": "Managed identity"
+        },
+        {
+          "id": "item3",
+          "text": "VNet integration"
+        }
+      ],
+      "explanation": {
+        "correct": "Slots for deployment; managed identity for security; VNet for networking.",
+        "incorrect": "Some features overlap.",
+        "examTip": "VNet integration allows access to on-premises.",
+        "relatedTopics": [
+          "App Service features"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-088",
+      "type": "dropdown-select",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "To deploy a function using a container image, you should use the _____ hosting plan.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Plan",
+          "options": [
+            "Consumption",
+            "Premium",
+            "Dedicated",
+            "Container Apps"
+          ],
+          "correctAnswer": "Premium"
+        }
+      ],
+      "explanation": {
+        "correct": "Premium plan supports custom containers.",
+        "incorrect": "Consumption does not; Dedicated supports containers but is not serverless.",
+        "examTip": "Premium plan also avoids cold starts.",
+        "relatedTopics": [
+          "Functions containers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-093",
+      "type": "yes-no-statements",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are designing a solution with Azure Container Apps. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Container Apps can scale to zero.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Container Apps require a Dapr sidecar.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Container Apps support multiple revisions.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Scaling to zero and revisions are supported; Dapr is optional.",
+        "incorrect": "Dapr is not required.",
+        "examTip": "Container Apps is Kubernetes without management.",
+        "relatedTopics": [
+          "Container Apps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-098",
+      "type": "multiple-choice",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which App Service settings can you adjust during a deployment slot swap? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Application settings",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Connection strings",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Scaling rules",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Custom domains",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "App settings and connection strings can be swapped or kept.",
+        "incorrect": "Scaling rules and domains are slot-level.",
+        "examTip": "Mark settings as 'slot setting' to stay with slot.",
+        "relatedTopics": [
+          "App Service slots"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

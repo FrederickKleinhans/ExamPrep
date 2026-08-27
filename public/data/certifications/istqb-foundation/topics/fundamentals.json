@@ -996,7 +996,7 @@
       "explanation": {
         "correct": "Regular test updates counter the pesticide paradox. Early reviews embody early testing. A perfect wrong product illustrates the absence-of-errors fallacy.",
         "incorrect": "Match the scenario to the principle: test updates = pesticide paradox; early start = early testing; wrong product = absence-of-errors fallacy.",
-        "examTip": "Each principle has a distinct meaning—learn them by scenario, not just by name.",
+        "examTip": "Each principle has a distinct meaningÃ¢â‚¬â€learn them by scenario, not just by name.",
         "relatedTopics": [
           "Testing Principles"
         ]
@@ -1045,7 +1045,7 @@
         }
       ],
       "explanation": {
-        "correct": "The standard order is: Planning → Monitoring/Control → Analysis → Design → Implementation → Execution → Completion.",
+        "correct": "The standard order is: Planning Ã¢â€ â€™ Monitoring/Control Ã¢â€ â€™ Analysis Ã¢â€ â€™ Design Ã¢â€ â€™ Implementation Ã¢â€ â€™ Execution Ã¢â€ â€™ Completion.",
         "incorrect": "While activities may overlap, the logical sequence starts with planning and ends with completion.",
         "examTip": "Remember: P-M-A-D-I-E-C (Plan, Monitor, Analyze, Design, Implement, Execute, Complete).",
         "relatedTopics": [
@@ -1157,7 +1157,7 @@
         }
       ],
       "explanation": {
-        "correct": "The typical flow is: observe failure → investigate → log defect → developer fixes → confirmation test.",
+        "correct": "The typical flow is: observe failure Ã¢â€ â€™ investigate Ã¢â€ â€™ log defect Ã¢â€ â€™ developer fixes Ã¢â€ â€™ confirmation test.",
         "incorrect": "Debugging happens after the defect is logged and assigned. Confirmation testing verifies the fix.",
         "examTip": "Distinguish between testing (finding failures) and debugging (fixing root causes).",
         "relatedTopics": [
@@ -1348,7 +1348,7 @@
       "explanation": {
         "correct": "Project managers need quality info and confidence for decisions. Developers need defect findings to fix code. Users need verification that needs are met.",
         "incorrect": "Each stakeholder has different primary interests in testing outcomes.",
-        "examTip": "Different objectives serve different stakeholders—understand the primary consumer of each test output.",
+        "examTip": "Different objectives serve different stakeholdersÃ¢â‚¬â€understand the primary consumer of each test output.",
         "relatedTopics": [
           "Test Objectives",
           "Stakeholders"
@@ -1356,6 +1356,156 @@
       },
       "metadata": {
         "examObjective": "1.1.1 - Identify typical objectives of testing",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-107",
+      "type": "yes-no-statements",
+      "topicId": "fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Decide whether each statement about the seven testing principles is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Exhaustive testing (testing all possible inputs and preconditions) is feasible for most real-world systems.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Testing activities should be tailored to the context of the project, such as domain and risk level.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Early testing in the SDLC generally reduces the cost of fixing defects compared to finding them later.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Exhaustive testing is only feasible for trivial systems with a very small input domain; for real systems it is impractical.",
+        "relatedTopics": [
+          "Seven testing principles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-1.4.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-108",
+      "type": "yes-no-statements",
+      "topicId": "fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Decide whether each statement about test conditions and test bases is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A user story can serve as a valid test basis in an Agile project.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Test conditions can only be derived from formally written requirements documents.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Multiple test cases can be derived from a single test condition.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Test bases can include informal artifacts like user stories, not just formal specifications.",
+        "relatedTopics": [
+          "Test basis",
+          "Test condition"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-1.2.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-109",
+      "type": "dropdown-select",
+      "topicId": "fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentence about test objects and quality.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A __________ is a work product, such as a document, a component, or a system, that is the object of testing.",
+          "options": [
+            "test object",
+            "test basis",
+            "test oracle",
+            "test log"
+          ],
+          "correctAnswer": "test object"
+        },
+        {
+          "id": "d2",
+          "prompt": "A source used to determine the expected result of a test, such as a specification, is called a test __________.",
+          "options": [
+            "oracle",
+            "object",
+            "condition",
+            "suite"
+          ],
+          "correctAnswer": "oracle"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "The test oracle provides the expected result; the test object is the thing being tested.",
+        "relatedTopics": [
+          "Test object",
+          "Test oracle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-1.2.4",
         "references": [
           "https://www.istqb.org/certifications/certified-tester-foundation-level"
         ],

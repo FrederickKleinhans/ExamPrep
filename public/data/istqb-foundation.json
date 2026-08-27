@@ -995,7 +995,7 @@
       "explanation": {
         "correct": "Regular test updates counter the pesticide paradox. Early reviews embody early testing. A perfect wrong product illustrates the absence-of-errors fallacy.",
         "incorrect": "Match the scenario to the principle: test updates = pesticide paradox; early start = early testing; wrong product = absence-of-errors fallacy.",
-        "examTip": "Each principle has a distinct meaning—learn them by scenario, not just by name.",
+        "examTip": "Each principle has a distinct meaningÃ¢â‚¬â€learn them by scenario, not just by name.",
         "relatedTopics": [
           "Testing Principles"
         ]
@@ -1044,7 +1044,7 @@
         }
       ],
       "explanation": {
-        "correct": "The standard order is: Planning → Monitoring/Control → Analysis → Design → Implementation → Execution → Completion.",
+        "correct": "The standard order is: Planning Ã¢â€ â€™ Monitoring/Control Ã¢â€ â€™ Analysis Ã¢â€ â€™ Design Ã¢â€ â€™ Implementation Ã¢â€ â€™ Execution Ã¢â€ â€™ Completion.",
         "incorrect": "While activities may overlap, the logical sequence starts with planning and ends with completion.",
         "examTip": "Remember: P-M-A-D-I-E-C (Plan, Monitor, Analyze, Design, Implement, Execute, Complete).",
         "relatedTopics": [
@@ -1156,7 +1156,7 @@
         }
       ],
       "explanation": {
-        "correct": "The typical flow is: observe failure → investigate → log defect → developer fixes → confirmation test.",
+        "correct": "The typical flow is: observe failure Ã¢â€ â€™ investigate Ã¢â€ â€™ log defect Ã¢â€ â€™ developer fixes Ã¢â€ â€™ confirmation test.",
         "incorrect": "Debugging happens after the defect is logged and assigned. Confirmation testing verifies the fix.",
         "examTip": "Distinguish between testing (finding failures) and debugging (fixing root causes).",
         "relatedTopics": [
@@ -1347,7 +1347,7 @@
       "explanation": {
         "correct": "Project managers need quality info and confidence for decisions. Developers need defect findings to fix code. Users need verification that needs are met.",
         "incorrect": "Each stakeholder has different primary interests in testing outcomes.",
-        "examTip": "Different objectives serve different stakeholders—understand the primary consumer of each test output.",
+        "examTip": "Different objectives serve different stakeholdersÃ¢â‚¬â€understand the primary consumer of each test output.",
         "relatedTopics": [
           "Test Objectives",
           "Stakeholders"
@@ -1355,6 +1355,5373 @@
       },
       "metadata": {
         "examObjective": "1.1.1 - Identify typical objectives of testing",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-028",
+      "type": "multiple-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are characteristics commonly associated with Agile software development, relevant to testing? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing is integrated throughout each short iteration",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Frequent delivery of working software",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A single big-bang test phase at the very end of the project",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Continuous feedback and collaboration between testers and developers",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Requirements are fully frozen before any coding begins",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Agile emphasizes integrated, continuous testing within iterations, frequent delivery, and ongoing collaboration and feedback.",
+        "incorrect": "A single end-of-project test phase and fully frozen upfront requirements are characteristic of sequential models, not Agile.",
+        "examTip": "Agile testing quadrants and the whole-team approach are useful supporting concepts to recall here.",
+        "relatedTopics": [
+          "Agile testing",
+          "SDLC models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.1.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-029",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which test level focuses on testing individual functions or classes in isolation, often performed by developers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Component testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "System testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Acceptance testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Integration testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Component testing (unit testing) focuses on individual software components in isolation, commonly done by developers.",
+        "incorrect": "System and acceptance testing occur at higher levels; integration testing focuses on interfaces between components.",
+        "examTip": "Test levels form a hierarchy: component â†’ integration â†’ system â†’ acceptance.",
+        "relatedTopics": [
+          "Component testing",
+          "Test levels"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-030",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What is the primary focus of integration testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing the interfaces and interactions between integrated components or systems",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Testing individual statements of source code",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Testing whether the system meets user acceptance criteria",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Verifying compliance with legal regulations only",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Integration testing focuses on interactions and interfaces between components or systems that have been combined.",
+        "incorrect": "Statement-level testing belongs to component testing; acceptance criteria belong to acceptance testing.",
+        "examTip": "Distinguish component integration testing (between components) from system integration testing (between systems).",
+        "relatedTopics": [
+          "Integration testing",
+          "Test levels"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-031",
+      "type": "dropdown-select",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Match each test level description to the correct term.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Testing conducted by real or representative users, often in their own environment, to determine business readiness is called __________ testing.",
+          "options": [
+            "acceptance",
+            "component",
+            "integration",
+            "regression"
+          ],
+          "correctAnswer": "acceptance"
+        },
+        {
+          "id": "d2",
+          "prompt": "Testing the behavior of a whole, integrated system against specified requirements is called __________ testing.",
+          "options": [
+            "system",
+            "unit",
+            "smoke",
+            "static"
+          ],
+          "correctAnswer": "system"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Acceptance testing includes UAT, operational acceptance testing, and contractual/regulatory acceptance testing.",
+        "relatedTopics": [
+          "Test levels",
+          "Acceptance testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-032",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "A company is preparing to deploy new software into its live production environment and wants to test backup/restore procedures, disaster recovery, and installation. Which type of acceptance testing is being performed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "User acceptance testing (UAT)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Alpha testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Operational acceptance testing (OAT)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Contractual acceptance testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Operational acceptance testing focuses on operational aspects such as backup/restore, disaster recovery, installation, and maintainability, typically performed by operations/administrators.",
+        "incorrect": "UAT focuses on business needs, alpha testing is performed at the developer's site by potential users, and contractual acceptance testing checks contractual criteria.",
+        "examTip": "OAT is sometimes called production acceptance testing.",
+        "relatedTopics": [
+          "Operational acceptance testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-033",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which test type is primarily concerned with WHAT the system does, evaluating functions such as calculations or business rules?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Functional testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Non-functional testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Structural (white-box) testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Change-related testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Functional testing evaluates the functions that a system performs, i.e., what the system does.",
+        "incorrect": "Non-functional testing evaluates quality characteristics like performance; structural testing evaluates internal structure; change-related testing verifies changes.",
+        "examTip": "Functional = 'what', Non-functional = 'how well', Structural = 'internal structure'.",
+        "relatedTopics": [
+          "Functional testing",
+          "Test types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.3.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-034",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which test type evaluates characteristics such as performance efficiency, usability, and security, describing HOW WELL the system behaves?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Functional testing",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Non-functional testing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Change-related testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Structural testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Non-functional testing evaluates quality characteristics (how well the system performs), such as performance, usability, and security.",
+        "incorrect": "Functional testing addresses what the system does; the others address structure or changes.",
+        "examTip": "Non-functional testing can occur at any test level, just like functional testing.",
+        "relatedTopics": [
+          "Non-functional testing",
+          "Test types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.3.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-035",
+      "type": "multiple-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are examples of change-related testing? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Confirmation testing (re-testing)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Regression testing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Boundary value analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Usability testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Confirmation testing verifies that a fixed defect is resolved, and regression testing checks that changes haven't broken existing functionality â€” both are change-related testing types.",
+        "incorrect": "Boundary value analysis is a test technique, and usability testing is a non-functional test type, not change-related testing.",
+        "examTip": "Confirmation testing re-runs the exact failed test; regression testing re-runs a broader set of tests.",
+        "relatedTopics": [
+          "Change-related testing",
+          "Regression testing",
+          "Confirmation testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.3.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-036",
+      "type": "yes-no-statements",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "For each statement about test types, decide whether it is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Structural (white-box) testing is based on the internal structure of the system, such as code or architecture.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Regression testing is performed only once, immediately after the very first release of software.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Confirmation testing verifies that a previously failed test now passes after the defect is fixed.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Non-functional testing can only be performed at the system test level.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Regression testing recurs throughout the product's life whenever changes are made, at any test level.",
+        "relatedTopics": [
+          "Test types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.3.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-037",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What is the main purpose of maintenance testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To test a brand-new system before its first release",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To test changes made to an operational system due to modifications, migration, or retirement",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To test the source code style for compliance with coding standards",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To design test cases from requirements for the first time",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Maintenance testing focuses on testing changes to a live/operational system, such as enhancements, patches, migrations, or planned retirements (e.g., data archiving).",
+        "incorrect": "The other options describe first-time development testing or static analysis activities, not maintenance testing.",
+        "examTip": "Impact analysis is a key activity that determines what to test during maintenance testing.",
+        "relatedTopics": [
+          "Maintenance testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.4.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-038",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following is a trigger for maintenance testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Initial requirements gathering for a new product",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Migration of data from one platform to another",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Writing the first draft of a test plan",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Selecting a test management tool",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Data migration is a classic trigger for maintenance testing, since it can introduce defects in an already operational system.",
+        "incorrect": "The other options relate to initial project setup, not modifications to an operational system.",
+        "examTip": "Other triggers include planned upgrades, patches, and system retirement/decommissioning.",
+        "relatedTopics": [
+          "Maintenance testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.4.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-039",
+      "type": "ordering",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Arrange the following test levels in the typical order they occur, from lowest (earliest, most isolated) to highest (broadest scope).",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Component testing",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Integration testing",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "System testing",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Acceptance testing",
+          "correctPosition": 4
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This is the standard sequence defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus section describing this sequence.",
+        "examTip": "This is the classic V-model / test level hierarchy â€” memorize it as component < integration < system < acceptance.",
+        "relatedTopics": [
+          "Test levels",
+          "V-model"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-040",
+      "type": "ordering",
+      "topicId": "testing-lifecycle",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "A team is applying impact analysis before performing maintenance testing on a live system after a data migration. Arrange the following activities in a logical sequence.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify the changes made to the operational system",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Analyze which existing functionality could be impacted by the changes",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Select and prioritize regression tests based on the impact analysis",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Execute the selected regression and new tests",
+          "correctPosition": 4
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This is the standard sequence defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus section describing this sequence.",
+        "examTip": "Impact analysis must happen before test selection so the regression scope reflects the actual risk of the change.",
+        "relatedTopics": [
+          "Maintenance testing",
+          "Impact analysis",
+          "Regression testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.4.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-041",
+      "type": "drag-drop",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Drag each testing activity to the test level where it is most typically performed.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Component testing",
+          "acceptsItemIds": [
+            "i1",
+            "i2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Integration testing",
+          "acceptsItemIds": [
+            "i3"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "System testing",
+          "acceptsItemIds": [
+            "i4"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "Acceptance testing",
+          "acceptsItemIds": [
+            "i5"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "i1",
+          "text": "Testing a single function's return value using unit test stubs"
+        },
+        {
+          "id": "i2",
+          "text": "Verifying statement coverage of a class"
+        },
+        {
+          "id": "i3",
+          "text": "Verifying data passed correctly between two integrated components"
+        },
+        {
+          "id": "i4",
+          "text": "End-to-end testing of the fully integrated system against requirements"
+        },
+        {
+          "id": "i5",
+          "text": "Business users validating the system meets their operational needs"
+        }
+      ],
+      "explanation": {
+        "correct": "Each item belongs to its category as defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus classification for these items.",
+        "examTip": "Map each activity to the scope of testing it addresses: isolated code, interfaces, whole system, or business validation.",
+        "relatedTopics": [
+          "Test levels"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.6",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-042",
+      "type": "drag-drop",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Classify each testing activity as either 'Functional Testing' or 'Non-Functional Testing'.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Functional Testing",
+          "acceptsItemIds": [
+            "i1",
+            "i3"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Non-Functional Testing",
+          "acceptsItemIds": [
+            "i2",
+            "i4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "i1",
+          "text": "Verifying a discount is correctly applied at checkout"
+        },
+        {
+          "id": "i2",
+          "text": "Measuring page load time under high user load"
+        },
+        {
+          "id": "i3",
+          "text": "Confirming a login form rejects an invalid password"
+        },
+        {
+          "id": "i4",
+          "text": "Evaluating whether a screen reader can navigate the interface"
+        }
+      ],
+      "explanation": {
+        "correct": "Each item belongs to its category as defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus classification for these items.",
+        "examTip": "Ask 'what does it do' (functional) vs 'how well does it do it' (non-functional) for each activity.",
+        "relatedTopics": [
+          "Functional testing",
+          "Non-functional testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.3.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-043",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which statement best describes 'exit criteria' in the context of a test level?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The criteria used to decide when to stop testing at that level",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The criteria for entering the requirements phase",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A list of tools to be used during testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The list of team members allowed to execute tests",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Exit criteria define the conditions for stopping test execution and declaring a test level (or the overall test effort) complete.",
+        "incorrect": "The other options describe unrelated concepts.",
+        "examTip": "Exit criteria are often tied to coverage targets, defect density, or unresolved defect thresholds.",
+        "relatedTopics": [
+          "Exit criteria"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.7",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-044",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "In DevOps, what does 'continuous testing' most closely support?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing only once at the end of a yearly release cycle",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Frequent, automated testing integrated into a continuous integration/continuous delivery pipeline",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Manual-only testing performed by a separate QA department",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Testing performed exclusively after production deployment",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Continuous testing integrates automated tests into CI/CD pipelines to provide fast, frequent feedback on quality.",
+        "incorrect": "The other options contradict the frequent, automated nature of continuous testing in DevOps.",
+        "examTip": "Continuous testing supports shift-left and rapid feedback loops characteristic of DevOps culture.",
+        "relatedTopics": [
+          "DevOps",
+          "Continuous testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.1.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-045",
+      "type": "multiple-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are typical benefits of adopting a DevOps approach with continuous testing? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Faster feedback on defects",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Reduced need for any testing at all",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Improved collaboration between development and operations",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Automatic elimination of all non-functional risks",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Faster feedback and improved Dev/Ops collaboration are genuine, recognized benefits of DevOps with continuous testing.",
+        "incorrect": "DevOps does not eliminate the need for testing, nor does it automatically remove non-functional risks â€” those must still be actively tested.",
+        "examTip": "Be cautious of absolute claims ('eliminate', 'no need') in DevOps benefit statements â€” they are usually distractors.",
+        "relatedTopics": [
+          "DevOps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.1.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-046",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "A retail company wants real end users to try their new mobile app at the company's own office, supervised by developers, before public release. Which acceptance test type does this describe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Beta testing",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Alpha testing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Contractual acceptance testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Operational acceptance testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Alpha testing is performed at the developing organization's site by potential or existing users, typically not part of the development team.",
+        "incorrect": "Beta testing occurs at the customer's/user's own site or environment, without developer involvement.",
+        "examTip": "Remember: Alpha = at developer's site; Beta = at customer's/user's site.",
+        "relatedTopics": [
+          "Alpha testing",
+          "Beta testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.8",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-047",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following best defines 'regulatory acceptance testing'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing to verify the software complies with relevant laws, regulations, or standards",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Testing performed exclusively by end users at their own site",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Testing that only checks the visual design of the interface",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Testing performed only on legacy systems",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Regulatory acceptance testing checks conformance to applicable regulations, standards, or legal requirements, such as government or safety regulations.",
+        "incorrect": "The other options describe unrelated acceptance testing concepts or scopes.",
+        "examTip": "Common in regulated industries like finance, healthcare, and aviation.",
+        "relatedTopics": [
+          "Regulatory acceptance testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.9",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-048",
+      "type": "single-choice",
+      "topicId": "static-testing",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What distinguishes static testing from dynamic testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Static testing does not involve executing the software under test",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Static testing can only be performed by automated tools",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Static testing is only used for non-functional requirements",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Static testing always occurs after dynamic testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Static testing evaluates work products (documents, code) without executing the software, unlike dynamic testing.",
+        "incorrect": "Static testing can be manual (reviews) or tool-based (static analysis), is not limited to non-functional aspects, and typically occurs earlier than dynamic testing.",
+        "examTip": "Static testing = 'testing without execution'.",
+        "relatedTopics": [
+          "Static testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.1.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-049",
+      "type": "multiple-choice",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following work products can benefit from static testing? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Requirements specifications",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Source code",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Test plans",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Only compiled executable binaries",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Static testing can be applied to almost any work product, including requirements, code, and test plans.",
+        "incorrect": "Compiled binaries cannot be reviewed via static techniques in the same way â€” they are typically evaluated via dynamic testing.",
+        "examTip": "A wide range of work products benefit from static testing, which is a key reason it supports shift-left.",
+        "relatedTopics": [
+          "Static testing",
+          "Work products"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.1.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-050",
+      "type": "single-choice",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What is the most informal type of review, often without a defined process, used to gain feedback quickly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Inspection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Technical review",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Informal review",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Walkthrough",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "An informal review has no formal, defined process and is typically the least structured way to gain quick feedback.",
+        "incorrect": "Inspections and technical reviews are more formal and structured; a walkthrough sits between informal and formal reviews.",
+        "examTip": "Order of formality (least to most): informal review < walkthrough < technical review < inspection.",
+        "relatedTopics": [
+          "Review types",
+          "Informal review"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-051",
+      "type": "single-choice",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which review type is led by the author, typically presenting the work product to colleagues in a meeting to gather feedback and build consensus?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Inspection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Walkthrough",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Technical review",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Informal review",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "A walkthrough is typically led by the author, who guides participants through the document to gather feedback and build a common understanding.",
+        "incorrect": "Inspections are led by a trained moderator and follow a strict process; technical reviews are led by a technical peer or moderator, not necessarily the author.",
+        "examTip": "Walkthrough = author-led, more informal than inspection.",
+        "relatedTopics": [
+          "Walkthrough"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-052",
+      "type": "single-choice",
+      "topicId": "static-testing",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which review type is the MOST formal, based on rules and checklists, uses defined roles (including a trained moderator), and includes metrics collection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Informal review",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Walkthrough",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Technical review",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Inspection",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Inspection is the most formal review type, following a defined process, using checklists, and led by a trained moderator, with metrics collected for process improvement.",
+        "incorrect": "The other review types are progressively less formal and do not require a trained moderator.",
+        "examTip": "Inspections are the only review type in the syllabus that requires a trained moderator by definition.",
+        "relatedTopics": [
+          "Inspection",
+          "Review formality"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-053",
+      "type": "yes-no-statements",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Decide whether each statement about review roles is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The moderator (facilitator) ensures the review meeting runs effectively and mediates conflicts.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The author is responsible for fixing defects found in their own work product after the review.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A scribe (recorder) is responsible for approving the final release decision of the software.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Reviewers/checkers are individuals who identify potential defects in the work product being reviewed.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Know the standard review roles: manager, moderator, author, reviewers, scribe.",
+        "relatedTopics": [
+          "Review roles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-054",
+      "type": "dropdown-select",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentences describing the review process activities.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The activity where the moderator/organizer prepares the review meeting and distributes materials is called __________.",
+          "options": [
+            "planning",
+            "issue communication",
+            "closure",
+            "fix"
+          ],
+          "correctAnswer": "planning"
+        },
+        {
+          "id": "d2",
+          "prompt": "The activity where individual reviewers examine the work product on their own before the meeting is called individual __________.",
+          "options": [
+            "review",
+            "closure",
+            "kickoff",
+            "retrospective"
+          ],
+          "correctAnswer": "review"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Standard review process: planning, kick-off, individual review, issue communication/analysis, fixing, closure.",
+        "relatedTopics": [
+          "Review process"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-055",
+      "type": "ordering",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Arrange the following activities of a formal review process in the correct order.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Planning",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Kick-off",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Individual review",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Issue communication and analysis",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Fixing and reporting",
+          "correctPosition": 5
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This is the standard sequence defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus section describing this sequence.",
+        "examTip": "This is the standard formal review process defined in the ISTQB CTFL syllabus â€” memorize this sequence.",
+        "relatedTopics": [
+          "Review process"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.6",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-056",
+      "type": "single-choice",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What is the primary purpose of static analysis tools?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To execute test cases against a running application",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To detect defects in code or models without executing them, such as unused variables or code complexity issues",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To manage the defect lifecycle in a bug-tracking system",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To generate load for performance testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Static analysis tools examine code or models without execution to find issues such as unreachable code, unused variables, and violations of coding standards.",
+        "incorrect": "Executing tests, managing defects, and generating load are functions of other tool categories, not static analysis.",
+        "examTip": "Static analysis can find defects like security vulnerabilities and maintainability issues that dynamic testing might miss.",
+        "relatedTopics": [
+          "Static analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.3.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-057",
+      "type": "multiple-choice",
+      "topicId": "static-testing",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following defects are typically easier to find through static analysis than through dynamic testing? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unreachable (dead) code",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Undeclared or unused variables",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Incorrect calculation results visible only under specific runtime data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Violations of coding standards",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Security vulnerabilities like potential buffer overflows in code patterns",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Static analysis excels at finding structural issues like dead code, unused variables, standards violations, and certain security vulnerability patterns without running the code.",
+        "incorrect": "Defects that only manifest with specific runtime data are typically found through dynamic testing, not static analysis.",
+        "examTip": "Static analysis finds defects earlier and cannot detect issues that depend on runtime data or timing.",
+        "relatedTopics": [
+          "Static analysis",
+          "Benefits of static testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.3.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-058",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which category of test technique derives test cases from a specification without reference to the internal code structure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "White-box (structure-based) technique",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Black-box (specification-based) technique",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Experience-based technique",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Static technique",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Black-box (specification-based) techniques derive test cases from a test basis such as requirements or specifications, without knowledge of internal code structure.",
+        "incorrect": "White-box techniques use internal structure; experience-based techniques rely on tester knowledge/intuition; static techniques don't execute code at all.",
+        "examTip": "Black-box = 'what', White-box = 'how (internally)'.",
+        "relatedTopics": [
+          "Black-box techniques"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.1.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-059",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "A password field must accept between 8 and 20 characters. Which technique specifically focuses on testing values at and near this range's edges (e.g., 7, 8, 20, 21 characters)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equivalence partitioning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Boundary value analysis",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Decision table testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "State transition testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Boundary value analysis (BVA) focuses on testing values at the edges of equivalence partitions, such as just inside and just outside a valid range.",
+        "incorrect": "Equivalence partitioning groups values into classes rather than focusing specifically on edges; the other techniques address different kinds of logic.",
+        "examTip": "BVA is often applied together with equivalence partitioning, using boundary values as representative test values.",
+        "relatedTopics": [
+          "Boundary value analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-060",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An online registration form requires the applicant's age to be between 18 and 65 (inclusive) to register.",
+      "questionText": "A system accepts an integer age input, valid from 18 to 65 inclusive. Using two-value boundary value analysis, which pair of values tests the LOWER boundary?",
+      "options": [
+        {
+          "id": "A",
+          "text": "17 and 18",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "18 and 19",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "65 and 66",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "0 and 100",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Two-value BVA tests the boundary value itself and the value immediately below it for the minimum boundary: 17 (invalid, just below) and 18 (valid, the boundary).",
+        "incorrect": "18 and 19 test just above the minimum, not the boundary transition itself; 65/66 test the upper boundary; 0/100 are unrelated extreme values.",
+        "examTip": "For two-value BVA at a boundary, always use the boundary value and its nearest neighbor on the invalid side.",
+        "relatedTopics": [
+          "Boundary value analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-061",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An online registration form requires the applicant's age to be between 18 and 65 (inclusive) to register.",
+      "questionText": "Using equivalence partitioning for the age field (valid: 18â€“65 inclusive), which set of partitions is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Invalid (<18), Valid (18â€“65), Invalid (>65)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Valid (0â€“100) only",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Invalid (<0), Valid (0â€“17), Invalid (18+)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Valid (18â€“65) and Invalid (66â€“100) only",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Equivalence partitioning for a bounded valid range creates three partitions: below the range (invalid), within the range (valid), and above the range (invalid).",
+        "incorrect": "The other options mischaracterize the valid range or omit a partition.",
+        "examTip": "Every input generally has at least one valid and one or more invalid partitions.",
+        "relatedTopics": [
+          "Equivalence partitioning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-062",
+      "type": "multiple-choice",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An online registration form requires the applicant's age to be between 18 and 65 (inclusive) to register.",
+      "questionText": "For the age field (valid: 18â€“65 inclusive) using equivalence partitioning combined with boundary value analysis, which of the following test values should be included in a minimal but thorough test set? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "17",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "18",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "65",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "66",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "40",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "A thorough set covers both boundaries (17/18 and 65/66) plus a representative value from the valid partition (e.g., 40) â€” all five values are appropriate.",
+        "incorrect": "None of these values are unnecessary; each represents either a boundary or a mid-partition representative value.",
+        "examTip": "Combining EP and BVA yields a compact yet effective test set: boundaries plus one interior value per partition.",
+        "relatedTopics": [
+          "Equivalence partitioning",
+          "Boundary value analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-063",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which black-box technique uses combinations of conditions (causes) and their resulting actions (effects), typically represented in a table with columns as test cases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Decision table testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "State transition testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Use case testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Equivalence partitioning",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Decision table testing captures combinations of conditions and their resulting actions in a table, with each column representing a rule/test case.",
+        "incorrect": "State transition testing models states and transitions; use case testing derives tests from usage scenarios; equivalence partitioning groups input values.",
+        "examTip": "Decision tables are ideal for testing complex business rules with multiple combined conditions.",
+        "relatedTopics": [
+          "Decision table testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-064",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A loan approval system approves a loan only if the applicant's credit score is above 700 AND their annual income is above $50,000.",
+      "questionText": "A loan approval system approves a loan only if: (1) credit score is above 700 AND (2) annual income is above $50,000. Using decision table testing, how many rules (columns) are needed to cover all combinations of these two binary conditions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "3",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "4",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "8",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "With two binary conditions, there are 2^2 = 4 possible combinations (rules) to cover in a full decision table.",
+        "incorrect": "2, 3, and 8 do not correctly reflect 2 raised to the power of the number of binary conditions.",
+        "examTip": "For n binary conditions, a full decision table has 2^n rules/combinations.",
+        "relatedTopics": [
+          "Decision table testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.6",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-065",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which technique models a system as a set of states, transitions between those states, the events that trigger transitions, and the resulting actions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "State transition testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Decision table testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Use case testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Classification tree method",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "State transition testing derives test cases from a model of states, transitions, triggering events, and actions, commonly represented as a state diagram or table.",
+        "incorrect": "Decision table testing focuses on condition/action combinations; use case testing derives tests from usage scenarios; classification tree method is a different combinatorial technique.",
+        "examTip": "State transition testing is well suited to systems like ATMs, order status workflows, or login lockout mechanisms.",
+        "relatedTopics": [
+          "State transition testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.7",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-066",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An ATM locks a customer's card after 3 consecutive incorrect PIN entry attempts within a single session.",
+      "questionText": "An ATM card is locked after 3 consecutive incorrect PIN entries. A tester designs a test that enters an incorrect PIN a 4th time on an already-locked card. Which state transition testing concept does this specifically test?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A valid state transition",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An invalid (non-existent) transition from a state",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "0-switch coverage of valid transitions only",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Boundary value analysis of the PIN field",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Entering an invalid PIN on an already-locked card tests behavior for an event that should NOT trigger a valid transition â€” i.e., testing an invalid/undefined transition, which state transition testing explicitly covers.",
+        "incorrect": "This is not a normal valid transition test, is unrelated to 0-switch coverage of valid paths, and is not primarily a BVA scenario.",
+        "examTip": "Testing invalid transitions (things that should not be allowed to happen) is a key strength of state transition testing.",
+        "relatedTopics": [
+          "State transition testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.8",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-067",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which black-box technique derives test cases from documented interactions between an actor (user or external system) and the system under test, including main and alternative flows?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use case testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "State transition testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Equivalence partitioning",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Statement testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Use case testing derives test cases from use cases, which describe interactions between actors and the system, including main success scenarios and alternative/exception flows.",
+        "incorrect": "The other techniques do not focus specifically on actor-system interaction scenarios.",
+        "examTip": "Use case testing is valuable for validating end-to-end business processes and integration between components.",
+        "relatedTopics": [
+          "Use case testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.9",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-068",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following is a white-box (structure-based) test technique?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equivalence partitioning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Statement testing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Decision table testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Exploratory testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Statement testing is a white-box technique that measures the percentage of executable statements exercised by a test suite.",
+        "incorrect": "Equivalence partitioning and decision table testing are black-box techniques; exploratory testing is experience-based.",
+        "examTip": "The two main white-box techniques in CTFL are statement testing/coverage and branch/decision testing/coverage.",
+        "relatedTopics": [
+          "Statement testing",
+          "White-box techniques"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.3.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-069",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Given the following pseudocode: IF (a > 0) THEN print('positive') ELSE print('non-positive') END IF â€” what is the MINIMUM number of test cases needed to achieve 100% branch (decision) coverage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "2",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "3",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "4",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Branch coverage requires each decision outcome (true and false of the IF condition) to be exercised at least once, requiring a minimum of 2 test cases.",
+        "incorrect": "1 test case would only cover one branch; 3 or 4 are unnecessary for a single binary decision.",
+        "examTip": "Branch coverage subsumes statement coverage for simple binary decisions.",
+        "relatedTopics": [
+          "Branch testing",
+          "Decision coverage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.3.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-070",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A code module contains: IF (a > 0) THEN print statement A; IF (b > 0) THEN print statement B. There is no ELSE clause on either IF statement.",
+      "questionText": "A code module has the following structure: IF (a > 0) THEN [statement A]; IF (b > 0) THEN [statement B]. A test suite executes with (a=5, b=5) only. What statement and branch coverage does this single test achieve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "100% statement coverage, 100% branch coverage",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "100% statement coverage, 50% branch coverage",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "50% statement coverage, 100% branch coverage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "50% statement coverage, 50% branch coverage",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "With a=5, b=5, both statement A and B execute (100% statement coverage), but only the TRUE branch of each IF is taken, leaving the FALSE branches uncovered (50% branch coverage).",
+        "incorrect": "Full branch coverage would require additional tests exercising the FALSE outcome of each condition.",
+        "examTip": "100% statement coverage does not guarantee 100% branch coverage â€” branch coverage is a stronger criterion.",
+        "relatedTopics": [
+          "Statement testing",
+          "Branch testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.3.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-071",
+      "type": "yes-no-statements",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "For each statement about white-box testing, decide whether it is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Branch coverage is generally considered a stronger coverage criterion than statement coverage.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "100% statement coverage guarantees that all decision outcomes have been tested.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "White-box techniques require knowledge of the internal structure of the component under test.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Structure-based techniques can only be applied at the component (unit) test level.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Structure-based techniques can be applied at any test level, though they are most common at component and integration testing.",
+        "relatedTopics": [
+          "White-box techniques"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.3.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-072",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which experience-based technique involves simultaneous test design, execution, logging, and learning, without predefined test cases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exploratory testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Checklist-based testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Error guessing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Decision table testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Exploratory testing is characterized by simultaneous learning, test design, and test execution, typically without formally predefined test cases.",
+        "incorrect": "Checklist-based testing uses a predefined checklist; error guessing anticipates likely defects; decision table testing is a formal black-box technique.",
+        "examTip": "Exploratory testing is often session-based, with time-boxed 'charters' guiding the exploration.",
+        "relatedTopics": [
+          "Exploratory testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.4.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-073",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "A tester who has seen many past defects related to null values and off-by-one mistakes anticipates similar defects in a new module and designs tests to specifically target them. Which experience-based technique is being applied?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Error guessing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Checklist-based testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Boundary value analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Exploratory testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Error guessing uses a tester's experience to anticipate the kinds of defects and failures likely to occur, and designs tests to expose them.",
+        "incorrect": "Checklist-based testing follows a predefined list; BVA is a formal black-box technique; exploratory testing is more open-ended session-based testing.",
+        "examTip": "Error guessing can be supported by a taxonomy of common defect types built from experience.",
+        "relatedTopics": [
+          "Error guessing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.4.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-074",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which experience-based technique relies on a set of high-level test conditions organized as a list, used to guide test analysis and design based on prior experience or standards?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Checklist-based testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Statement testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Decision table testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Use case testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Checklist-based testing uses a checklist of items, conditions, or rules, often based on experience, standards, or common failure patterns, to guide testing.",
+        "incorrect": "The other techniques are formal black-box or white-box techniques with different structures.",
+        "examTip": "Checklists are often maintained and refined over time based on lessons learned from past projects.",
+        "relatedTopics": [
+          "Checklist-based testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.4.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-075",
+      "type": "multiple-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are experience-based test techniques? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Error guessing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Exploratory testing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Checklist-based testing",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Boundary value analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "State transition testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Error guessing, exploratory testing, and checklist-based testing are the three experience-based techniques covered in CTFL.",
+        "incorrect": "Boundary value analysis and state transition testing are black-box (specification-based) techniques.",
+        "examTip": "Experience-based techniques rely heavily on tester skill, intuition, and knowledge rather than formal models.",
+        "relatedTopics": [
+          "Experience-based techniques"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.4.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-076",
+      "type": "dropdown-select",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentences about choosing test techniques.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Techniques that derive tests from a specification such as requirements, without looking at code, are called __________-box techniques.",
+          "options": [
+            "black",
+            "white",
+            "grey",
+            "clear"
+          ],
+          "correctAnswer": "black"
+        },
+        {
+          "id": "d2",
+          "prompt": "Techniques that derive tests from the internal structure of the code are called __________-box techniques.",
+          "options": [
+            "white",
+            "black",
+            "grey",
+            "clear"
+          ],
+          "correctAnswer": "white"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Some texts also refer to a combination as 'grey-box' testing, though this term is used less formally in CTFL.",
+        "relatedTopics": [
+          "Test technique categories"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.1.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-077",
+      "type": "drag-drop",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Drag each test technique to its correct category.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Black-box (specification-based)",
+          "acceptsItemIds": [
+            "i1",
+            "i2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "White-box (structure-based)",
+          "acceptsItemIds": [
+            "i3"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Experience-based",
+          "acceptsItemIds": [
+            "i4",
+            "i5"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "i1",
+          "text": "Decision table testing"
+        },
+        {
+          "id": "i2",
+          "text": "State transition testing"
+        },
+        {
+          "id": "i3",
+          "text": "Branch (decision) testing"
+        },
+        {
+          "id": "i4",
+          "text": "Exploratory testing"
+        },
+        {
+          "id": "i5",
+          "text": "Error guessing"
+        }
+      ],
+      "explanation": {
+        "correct": "Each item belongs to its category as defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus classification for these items.",
+        "examTip": "Sort each technique by whether it uses the specification, the code structure, or tester experience as its basis.",
+        "relatedTopics": [
+          "Test technique categories"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.1.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-078",
+      "type": "drag-drop",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Drag each scenario to the black-box technique it best illustrates.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Equivalence Partitioning",
+          "acceptsItemIds": [
+            "i1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Boundary Value Analysis",
+          "acceptsItemIds": [
+            "i2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Decision Table Testing",
+          "acceptsItemIds": [
+            "i3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "State Transition Testing",
+          "acceptsItemIds": [
+            "i4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "i1",
+          "text": "Grouping all invalid email formats into one class and testing a single representative value"
+        },
+        {
+          "id": "i2",
+          "text": "Testing a maximum file upload size of exactly 10MB, 10MB+1 byte, and 10MB-1 byte"
+        },
+        {
+          "id": "i3",
+          "text": "Testing all combinations of 'has coupon' and 'is member' to determine the discount applied"
+        },
+        {
+          "id": "i4",
+          "text": "Testing that a 'Draft' order can move to 'Submitted' but not directly to 'Delivered'"
+        }
+      ],
+      "explanation": {
+        "correct": "Each item belongs to its category as defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus classification for these items.",
+        "examTip": "Match the scenario keywords ('range edge', 'combinations of conditions', 'states/transitions', 'groups of values') to the technique.",
+        "relatedTopics": [
+          "Black-box techniques"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.10",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-079",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An e-commerce discount engine applies a discount based on two independent conditions: whether the order total exceeds $100, and whether the customer holds a loyalty card. Each of the four combinations results in a different discount percentage.",
+      "questionText": "An e-commerce discount engine applies a discount based on two independent conditions: 'Order total > $100' and 'Customer has loyalty card'. The business rule table defines a distinct discount for each of the four possible combinations. Which technique is MOST appropriate to systematically design test cases here?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Decision table testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "State transition testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Boundary value analysis alone",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Exploratory testing alone",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Decision table testing is specifically designed to systematically cover combinations of independent conditions and their resulting actions, exactly matching this scenario.",
+        "incorrect": "State transition testing suits sequential state changes, not combinatorial business rules; BVA and exploratory testing alone would not systematically ensure all combinations are covered.",
+        "examTip": "Whenever you see 'combinations of conditions leading to different actions,' think decision table testing.",
+        "relatedTopics": [
+          "Decision table testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.11",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-080",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which factor should MOST influence a test manager's choice between black-box, white-box, and experience-based techniques for a given testing task?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The personal preference of a single senior tester, regardless of context",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The test objectives, type of system, available test basis, risk level, and tester skill/knowledge",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Only the programming language used to build the system",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The technique that requires the least documentation, regardless of effectiveness",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Technique selection should be based on context: test objectives, the nature of the system, available test basis, level of risk, regulatory needs, and tester skills/knowledge.",
+        "incorrect": "Personal preference alone, programming language alone, or minimizing documentation are not the primary, holistic drivers described in the syllabus.",
+        "examTip": "The syllabus emphasizes a risk-based, context-driven approach to technique selection.",
+        "relatedTopics": [
+          "Test technique selection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.5.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-081",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "For a safety-critical embedded system requiring formal coverage evidence, which combination of techniques is MOST appropriate to include, in addition to black-box techniques?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only experience-based techniques, since they are fastest",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "White-box techniques such as statement and branch coverage, to provide structural coverage evidence",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "No additional techniques are needed beyond ad hoc testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Only checklist-based testing, since checklists are simplest",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Safety-critical systems often require demonstrable structural coverage (e.g., statement/branch coverage), making white-box techniques essential alongside black-box techniques.",
+        "incorrect": "Relying solely on experience-based or checklist-based testing would not provide the objective, measurable coverage evidence often mandated for safety-critical systems.",
+        "examTip": "High-risk and regulated domains typically mandate specific coverage criteria â€” this is a common scenario-based exam theme.",
+        "relatedTopics": [
+          "Test technique selection",
+          "White-box techniques"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.5.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-082",
+      "type": "single-choice",
+      "topicId": "test-management",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What is the primary purpose of a test plan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To record individual defects found during execution",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To document the scope, approach, resources, and schedule of testing activities",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To list all automated test scripts only",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To replace the need for a test strategy",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "A test plan documents the scope, objectives, approach, resources, and schedule of the intended testing activities.",
+        "incorrect": "Defect logging is done in defect reports; a test plan is broader than just a script list, and complements rather than replaces a test strategy.",
+        "examTip": "Test plans can exist at different levels: master test plan, level-specific test plans (e.g., system test plan).",
+        "relatedTopics": [
+          "Test planning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.1.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-083",
+      "type": "single-choice",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What does 'risk-based testing' primarily use to prioritize test activities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Alphabetical order of requirement IDs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The likelihood and impact of potential problems (risk level)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The order in which developers complete their code",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Random selection of test cases",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Risk-based testing prioritizes test effort based on the level of risk, considering both the likelihood of a problem occurring and the impact if it does.",
+        "incorrect": "Alphabetical order, developer completion order, and random selection do not reflect a risk-based approach.",
+        "examTip": "Risk level is typically calculated as a function of likelihood x impact.",
+        "relatedTopics": [
+          "Risk-based testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.2.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-084",
+      "type": "single-choice",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "A 'product risk' in risk-based testing refers to which of the following?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A risk directly related to the quality characteristics of the test object itself, such as a possible failure",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A risk related to test team staffing shortages",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A risk related to late delivery of test environments",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A risk related to poor communication between project stakeholders",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Product risks relate to the possibility that the test object (the software/system) might fail to satisfy legitimate needs, directly affecting its quality.",
+        "incorrect": "Staffing shortages, environment delays, and communication issues are examples of project risks, not product risks.",
+        "examTip": "Product risks affect the product's quality; project risks affect the project's ability to achieve its objectives (e.g., schedule, resources).",
+        "relatedTopics": [
+          "Product risk",
+          "Project risk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.2.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-085",
+      "type": "multiple-choice",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are examples of project risks (as opposed to product risks)? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Skills and staff shortages",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Organizational issues, such as poor communication between teams",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Late delivery of test items to the test team",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "A calculation error causing incorrect financial totals in the application",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Skills/staff shortages, organizational/communication issues, and late delivery are classic project risks, affecting the project's ability to meet its objectives.",
+        "incorrect": "A calculation error causing incorrect financial totals is a potential product defect/failure â€” a product risk, not a project risk.",
+        "examTip": "Ask: does the risk affect the PROJECT's success (schedule/budget/resources) or the PRODUCT's quality? That distinguishes project vs. product risk.",
+        "relatedTopics": [
+          "Project risk",
+          "Product risk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.2.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-086",
+      "type": "dropdown-select",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentences about risk-based testing responses.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Increasing the level of testing for high-risk areas is an example of a risk __________ activity.",
+          "options": [
+            "mitigation",
+            "acceptance",
+            "transfer",
+            "ignorance"
+          ],
+          "correctAnswer": "mitigation"
+        },
+        {
+          "id": "d2",
+          "prompt": "Deciding to take no action on a low-impact, low-likelihood risk is an example of risk __________.",
+          "options": [
+            "acceptance",
+            "mitigation",
+            "transfer",
+            "escalation"
+          ],
+          "correctAnswer": "acceptance"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Common risk response strategies include mitigation (reduce), acceptance (do nothing), transfer, and contingency planning.",
+        "relatedTopics": [
+          "Risk-based testing",
+          "Risk mitigation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.2.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-087",
+      "type": "single-choice",
+      "topicId": "test-management",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A project team is prioritizing testing for two features: a payment processing module (high likelihood of defects, high business impact) and a cosmetic 'change theme color' setting (low likelihood of defects, low business impact).",
+      "questionText": "A payment processing feature is assessed as HIGH likelihood of failure and HIGH business impact if it fails, while a 'change theme color' feature is LOW likelihood and LOW impact. According to risk-based testing, how should test effort be allocated?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equal test effort for both features, since fairness matters most",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "More rigorous and earlier testing for the payment feature; minimal testing for the theme color feature",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "All testing effort on the theme color feature, since it's simpler to test",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "No testing needed for either feature since both are already coded",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Risk-based testing allocates more testing effort, depth, and priority to high-risk areas (high likelihood and high impact) such as payment processing, and less to low-risk areas.",
+        "incorrect": "Equal effort ignores differing risk levels; prioritizing the low-risk theme color feature over payment processing inverts proper risk-based prioritization; skipping testing entirely contradicts the purpose of risk-based testing.",
+        "examTip": "Always map likelihood x impact to a risk level, then allocate test effort proportionally.",
+        "relatedTopics": [
+          "Risk-based testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.2.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-088",
+      "type": "single-choice",
+      "topicId": "test-management",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What is the purpose of 'entry criteria' for a test level?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To define the conditions that must be met before testing can begin at that level",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To define when testers can take a break",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To define the budget allocated to testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To define which programming language is used",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Entry criteria define the preconditions for starting testing, such as availability of a stable test environment or test basis.",
+        "incorrect": "The other options are unrelated to entry criteria's actual purpose in test management.",
+        "examTip": "Entry criteria and exit criteria are always defined together as part of test planning.",
+        "relatedTopics": [
+          "Entry criteria"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.1.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-089",
+      "type": "yes-no-statements",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "For each statement about test estimation, decide whether it is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Test estimation can be based on expert opinion, such as consulting experienced team members.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Test estimation can be based on historical/metrics-based data from similar past projects.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Once a test estimate is created at the start of a project, it should never be revisited or adjusted.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Test estimation is only relevant for Agile projects, not sequential development projects.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Estimation approaches include expert-based (e.g., Wideband Delphi, three-point estimation) and metrics-based approaches, applicable across development models.",
+        "relatedTopics": [
+          "Test estimation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.1.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-090",
+      "type": "single-choice",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which metric measures the number of defects found relative to the size of the software (e.g., defects per 1000 lines of code)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Defect density",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Test coverage",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Requirements traceability",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Test execution rate",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Defect density is calculated as the number of defects divided by a measure of size, such as lines of code or function points.",
+        "incorrect": "Test coverage measures the extent of testing against a coverage item; traceability links tests to requirements; execution rate measures how many tests ran over time.",
+        "examTip": "Defect density is a common quality/monitoring metric used in test reports.",
+        "relatedTopics": [
+          "Defect density",
+          "Test monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.3.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-091",
+      "type": "multiple-choice",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are common test monitoring metrics used during test execution? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Percentage of planned test cases executed",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Number of defects found and fixed over time",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Coverage of requirements or code achieved",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "The color scheme of the test management tool's dashboard",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Execution progress, defect trends, and coverage are all standard test monitoring metrics used to track progress and inform decisions.",
+        "incorrect": "The color scheme of a dashboard is a cosmetic tool feature, not a testing metric.",
+        "examTip": "Test monitoring metrics feed into test reports and support decisions like readiness for release.",
+        "relatedTopics": [
+          "Test monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.3.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-092",
+      "type": "single-choice",
+      "topicId": "test-management",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "In the defect lifecycle, what is the typical status of a newly logged defect that has not yet been reviewed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "New",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Closed",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Fixed",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Deferred",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "A newly logged, unreviewed defect is typically assigned the status 'New' (or 'Open', depending on the tool/process).",
+        "incorrect": "Closed, Fixed, and Deferred are later states that occur after the defect has been triaged and acted upon.",
+        "examTip": "The exact status names vary by organization/tool, but the sequence from creation to resolution is consistent.",
+        "relatedTopics": [
+          "Defect lifecycle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.4.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-093",
+      "type": "ordering",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Arrange the following typical defect lifecycle states in a logical progression from defect discovery to closure (assuming the defect is confirmed and fixed).",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "New",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Assigned",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "In Progress / Being Fixed",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Fixed / Resolved",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Retest / Verified",
+          "correctPosition": 5
+        },
+        {
+          "id": "o6",
+          "text": "Closed",
+          "correctPosition": 6
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This is the standard sequence defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus section describing this sequence.",
+        "examTip": "The exact terminology can vary between organizations, but the general flow from discovery through triage, fixing, verification, and closure is consistent.",
+        "relatedTopics": [
+          "Defect lifecycle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.4.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-094",
+      "type": "multiple-choice",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are typical fields included in a well-written defect report? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Steps to reproduce the failure",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Actual result versus expected result",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Severity and priority",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "The tester's personal home address",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "Environment/configuration information",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Good defect reports include reproduction steps, actual vs. expected results, severity/priority, and environment details to help diagnose and fix the issue.",
+        "incorrect": "A tester's personal home address is irrelevant to defect diagnosis and should never appear in a defect report.",
+        "examTip": "A well-written defect report should be objective, complete, and provide enough detail for anyone to reproduce and understand the issue.",
+        "relatedTopics": [
+          "Defect reports"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.4.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-095",
+      "type": "single-choice",
+      "topicId": "test-management",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "Testers discover a defect where a rarely-used administrative report causes the application to crash and lose unsaved data, but only about 1 in 10,000 users ever access this report.",
+      "questionText": "A defect is found where the application crashes for a rarely-used administrative report, affecting only 1 of 10,000 users, but causing total data loss when it occurs. How should severity and priority likely be assessed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Low severity, low priority, since few users are affected",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "High severity (data loss impact), but priority may be assessed independently based on business context and usage frequency",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Severity and priority must always be identical, so both should be set the same automatically",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "No severity or priority is needed since it is a rare occurrence",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Severity reflects the impact of the defect on the system (here, high â€” data loss), while priority reflects urgency to fix, which can be assessed independently based on business factors like how often the report is used.",
+        "incorrect": "Severity and priority are related but distinct concepts and are not always identical, and rarity does not eliminate the need to assess and report the defect.",
+        "examTip": "Severity = impact on the system; Priority = urgency of fixing, from a business perspective. They can differ.",
+        "relatedTopics": [
+          "Defect severity vs priority"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.4.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-096",
+      "type": "single-choice",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following best explains why severity and priority might differ for the same defect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Severity measures technical impact on the system, while priority measures the business urgency of fixing it, which depends on other factors",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "They can never differ; this is a trick question",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Priority is always set higher than severity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Severity is decided by users, and priority is decided by testers only",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Severity reflects how badly the defect affects the system's functionality or data, whereas priority reflects how urgently, from a business standpoint, the defect should be fixed â€” these can diverge.",
+        "incorrect": "They frequently do differ in practice; there's no fixed rule that priority is always higher, and both roles/stakeholders can be involved in setting either attribute depending on the organization.",
+        "examTip": "Exam scenarios often present a high-severity/low-priority or low-severity/high-priority defect to test this distinction.",
+        "relatedTopics": [
+          "Defect severity vs priority"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.4.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-097",
+      "type": "single-choice",
+      "topicId": "tool-support",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which category of test tool is used to manage test cases, test execution status, and traceability to requirements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Test management tool",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Static analysis tool",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Performance testing tool",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Test data preparation tool",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Test management tools support managing test cases, tracking execution status, and maintaining traceability, often integrating with defect tracking.",
+        "incorrect": "Static analysis tools examine code without execution; performance tools simulate load; test data tools generate/prepare test data.",
+        "examTip": "Test management tools often integrate with other tools such as defect trackers and automation frameworks.",
+        "relatedTopics": [
+          "Test management tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.1.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-098",
+      "type": "single-choice",
+      "topicId": "tool-support",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which tool category is specifically designed to simulate large numbers of virtual users to evaluate system behavior under load?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Performance testing tool",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Static analysis tool",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Test management tool",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Coverage measurement tool",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Performance testing tools generate simulated load (often many virtual users/transactions) to evaluate response times, throughput, and resource usage under stress.",
+        "incorrect": "The other categories address different aspects: code analysis, test management/traceability, and code coverage measurement respectively.",
+        "examTip": "Performance tools are essential for non-functional testing of scalability and responsiveness.",
+        "relatedTopics": [
+          "Performance testing tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.1.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-099",
+      "type": "multiple-choice",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are genuine benefits of using test automation tools? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reduction of repetitive manual effort for regression testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Faster feedback on build/code quality",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Increased objectivity of certain measurements, e.g., coverage",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Elimination of the need for any human testers",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "Guaranteed 100% defect detection",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Genuine benefits of test automation include reducing repetitive manual work, providing faster feedback, and increasing objectivity of measurements like coverage.",
+        "incorrect": "Automation does not eliminate the need for skilled testers, nor does it guarantee finding all defects â€” these are common misconceptions/risks.",
+        "examTip": "Be wary of absolute claims about automation ('eliminate', 'guarantee 100%') â€” these are classic distractors on the exam.",
+        "relatedTopics": [
+          "Benefits of test automation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.2.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-100",
+      "type": "multiple-choice",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are genuine risks of using test automation tools? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unrealistic expectations about what the tool can achieve",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "High cost and effort to maintain automated test scripts as the software evolves",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Automatically improving all aspects of test quality with zero effort",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Over-reliance on the tool, reducing the use of human judgment/creativity in testing",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Unrealistic expectations, maintenance costs, and over-reliance on tools (reducing human judgment) are all recognized risks of test automation.",
+        "incorrect": "Automation does not automatically improve test quality with zero effort â€” maintenance and thoughtful design are still required.",
+        "examTip": "The syllabus explicitly lists risks alongside benefits â€” expect exam questions that test both sides.",
+        "relatedTopics": [
+          "Risks of test automation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.2.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-101",
+      "type": "single-choice",
+      "topicId": "tool-support",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A team automated their regression suite using UI-based scripts. Whenever developers make small changes to screen layouts, many automated tests fail even though no functional defects exist, requiring testers to spend significant time updating scripts.",
+      "questionText": "A team introduces test automation but does not adapt its test scripts when the application's UI changes frequently, leading to constant automated test failures unrelated to actual defects. What is this risk BEST described as?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unrealistic expectations about tool capabilities",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "High maintenance effort/fragility of automated tests due to lack of adaptation to change",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Insufficient hardware to run the tests",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Lack of a test management tool",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This describes the risk of fragile automated tests requiring high maintenance effort when the application under test changes, a well-known automation risk.",
+        "incorrect": "This scenario is not about unrealistic expectations, hardware limits, or missing test management tooling â€” it specifically concerns script maintenance and fragility.",
+        "examTip": "Techniques such as the page object model can help reduce this maintenance burden, though this is beyond CTFL scope.",
+        "relatedTopics": [
+          "Risks of test automation",
+          "Test automation maintenance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.2.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-102",
+      "type": "single-choice",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What is a recommended practice before selecting and purchasing a test tool for an organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Skip evaluation and immediately buy the most popular tool on the market",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Evaluate the organization's needs, run a proof-of-concept/pilot, and assess compatibility with existing processes and tools",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Select a tool with no consideration of team skill level",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Choose the cheapest tool available regardless of fit",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Best practice involves evaluating organizational needs, piloting the tool to confirm suitability, and checking compatibility with existing tools/processes before wider rollout.",
+        "incorrect": "Buying blindly based on popularity or cost alone, or ignoring team skills, increases the risk of a poor tool fit and wasted investment.",
+        "examTip": "A pilot project helps validate tool fit and ROI before committing to organization-wide adoption.",
+        "relatedTopics": [
+          "Tool selection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.3.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-103",
+      "type": "yes-no-statements",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Decide whether each statement about test tool selection and use is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A pilot project can help evaluate whether a test tool is a good fit before full-scale adoption.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Training and coaching for tool users is generally unnecessary once a tool is purchased.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Introducing a new tool into an organization can involve process changes and adjustments to ways of working.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Successful tool introduction typically requires planning, training, and process adaptation â€” not just installation.",
+        "relatedTopics": [
+          "Tool selection",
+          "Tool introduction"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.3.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-104",
+      "type": "ordering",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Arrange the following activities for introducing a new test tool into an organization in a logical order.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Define organizational requirements for the tool",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Evaluate candidate tools against the requirements",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Run a proof-of-concept or pilot project with a shortlisted tool",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Roll out the tool across the organization with training",
+          "correctPosition": 4
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This is the standard sequence defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus section describing this sequence.",
+        "examTip": "This mirrors general tool-selection best practice: define needs, evaluate options, pilot, then roll out at scale.",
+        "relatedTopics": [
+          "Tool selection",
+          "Tool introduction"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.3.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-105",
+      "type": "ordering",
+      "topicId": "tool-support",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A test manager has been asked to select and roll out a new performance testing tool for the organization's flagship e-commerce platform ahead of a major sale event.",
+      "questionText": "A test manager is planning to introduce a new automated performance testing tool. Arrange the following steps in the most sensible order.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify performance testing needs and success criteria for the tool",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Shortlist and compare candidate performance testing tools",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Conduct a proof-of-concept using representative test scenarios",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Provide training to the team and integrate the tool into the CI/CD pipeline",
+          "correctPosition": 4
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This is the standard sequence defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus section describing this sequence.",
+        "examTip": "Needs identification always precedes tool comparison; a proof-of-concept validates fit before full integration and training.",
+        "relatedTopics": [
+          "Tool selection",
+          "Performance testing tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.3.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-106",
+      "type": "drag-drop",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Drag each tool to its correct test tool category.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Test Management Tool",
+          "acceptsItemIds": [
+            "i1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Static Analysis Tool",
+          "acceptsItemIds": [
+            "i2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Test Automation / Execution Tool",
+          "acceptsItemIds": [
+            "i3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "Performance Testing Tool",
+          "acceptsItemIds": [
+            "i4"
+          ]
+        },
+        {
+          "id": "cat5",
+          "name": "Defect Tracking Tool",
+          "acceptsItemIds": [
+            "i5"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "i1",
+          "text": "A tool that tracks test case status and traceability to requirements"
+        },
+        {
+          "id": "i2",
+          "text": "A tool that scans source code for coding standard violations without executing it"
+        },
+        {
+          "id": "i3",
+          "text": "A tool that automatically runs a suite of regression test scripts against a UI"
+        },
+        {
+          "id": "i4",
+          "text": "A tool that simulates thousands of concurrent users to measure server response time"
+        },
+        {
+          "id": "i5",
+          "text": "A tool used to log, track, and manage the resolution of defects through their lifecycle"
+        }
+      ],
+      "explanation": {
+        "correct": "Each item belongs to its category as defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus classification for these items.",
+        "examTip": "Map each tool's described function to the standard ISTQB CTFL tool category list.",
+        "relatedTopics": [
+          "Tool categories"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.1.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-107",
+      "type": "yes-no-statements",
+      "topicId": "fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Decide whether each statement about the seven testing principles is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Exhaustive testing (testing all possible inputs and preconditions) is feasible for most real-world systems.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Testing activities should be tailored to the context of the project, such as domain and risk level.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Early testing in the SDLC generally reduces the cost of fixing defects compared to finding them later.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Exhaustive testing is only feasible for trivial systems with a very small input domain; for real systems it is impractical.",
+        "relatedTopics": [
+          "Seven testing principles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-1.4.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-108",
+      "type": "yes-no-statements",
+      "topicId": "fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Decide whether each statement about test conditions and test bases is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A user story can serve as a valid test basis in an Agile project.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Test conditions can only be derived from formally written requirements documents.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Multiple test cases can be derived from a single test condition.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Test bases can include informal artifacts like user stories, not just formal specifications.",
+        "relatedTopics": [
+          "Test basis",
+          "Test condition"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-1.2.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-109",
+      "type": "dropdown-select",
+      "topicId": "fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentence about test objects and quality.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A __________ is a work product, such as a document, a component, or a system, that is the object of testing.",
+          "options": [
+            "test object",
+            "test basis",
+            "test oracle",
+            "test log"
+          ],
+          "correctAnswer": "test object"
+        },
+        {
+          "id": "d2",
+          "prompt": "A source used to determine the expected result of a test, such as a specification, is called a test __________.",
+          "options": [
+            "oracle",
+            "object",
+            "condition",
+            "suite"
+          ],
+          "correctAnswer": "oracle"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "The test oracle provides the expected result; the test object is the thing being tested.",
+        "relatedTopics": [
+          "Test object",
+          "Test oracle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-1.2.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-110",
+      "type": "dropdown-select",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentences describing test types.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Testing that checks whether a system can be easily learned and operated by users is a form of __________ testing, a non-functional quality characteristic.",
+          "options": [
+            "usability",
+            "performance",
+            "security",
+            "reliability"
+          ],
+          "correctAnswer": "usability"
+        },
+        {
+          "id": "d2",
+          "prompt": "Testing that checks response times and resource usage under expected load is a form of __________ testing.",
+          "options": [
+            "performance",
+            "usability",
+            "portability",
+            "maintainability"
+          ],
+          "correctAnswer": "performance"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Both usability and performance testing are non-functional test types tied to specific ISO 25010 quality characteristics.",
+        "relatedTopics": [
+          "Non-functional testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.3.6",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-111",
+      "type": "yes-no-statements",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "For each statement about test levels, decide whether it is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Component testing is always performed exclusively by an independent test team, never by developers.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "System testing evaluates the end-to-end behavior of the fully integrated system against specified requirements.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Acceptance testing is only ever performed after system testing is fully complete and signed off.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Test levels can overlap and their exact activities can vary across organizations and lifecycle models.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "In practice, developers frequently perform component testing themselves, and acceptance activities can start earlier in Agile contexts.",
+        "relatedTopics": [
+          "Test levels"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.10",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-112",
+      "type": "yes-no-statements",
+      "topicId": "testing-lifecycle",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A development team has configured their CI/CD pipeline so that every code commit automatically triggers a build plus a suite of automated component and integration tests, with results visible within minutes.",
+      "questionText": "A team practices continuous integration where every code commit triggers an automated build and a suite of component and integration tests. Decide whether each statement about this scenario is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "This practice is an example of shift-left testing.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Automated component and integration tests running on every commit exemplify continuous testing.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "This approach removes the need for any system or acceptance level testing.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Continuous integration with automated low-level tests complements, but does not replace, higher test levels like system and acceptance testing.",
+        "relatedTopics": [
+          "Shift-left testing",
+          "Continuous testing",
+          "DevOps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.1.6",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-113",
+      "type": "dropdown-select",
+      "topicId": "static-testing",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentences about static testing benefits.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Because static testing does not require executing code, it can be used to find defects __________ in the development lifecycle than dynamic testing.",
+          "options": [
+            "earlier",
+            "later",
+            "never",
+            "randomly"
+          ],
+          "correctAnswer": "earlier"
+        },
+        {
+          "id": "d2",
+          "prompt": "Static testing can improve __________, since consistent terminology and understanding are established through review discussions.",
+          "options": [
+            "communication",
+            "compilation speed",
+            "hardware performance",
+            "network latency"
+          ],
+          "correctAnswer": "communication"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Early defect detection and improved team communication are two key benefits of static testing highlighted in the syllabus.",
+        "relatedTopics": [
+          "Static testing benefits"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.1.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-114",
+      "type": "yes-no-statements",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "For each statement about the benefits of static testing, decide whether it is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Static testing can detect defects that are hard to find through dynamic testing, such as unreachable code.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Static testing eliminates the need for any dynamic testing later in the project.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Reviews can help detect defects in requirements before any code is written.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Static and dynamic testing are complementary, not substitutes for one another.",
+        "relatedTopics": [
+          "Static testing benefits"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.1.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-115",
+      "type": "multiple-choice",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are typical success factors for an effective review process? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Clear objectives are defined for each review",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Reviewers are given adequate time to prepare individually before the meeting",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The review focuses on criticizing the author personally rather than the work product",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Defects found are logged and tracked to closure",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Clear objectives, adequate preparation time, and tracking defects to closure are recognized review success factors.",
+        "incorrect": "Criticizing the author personally undermines psychological safety and is explicitly discouraged â€” reviews should focus on the work product.",
+        "examTip": "Success factors for reviews mirror general psychology-of-testing principles: focus on the product, not the person.",
+        "relatedTopics": [
+          "Review success factors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.7",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-116",
+      "type": "dropdown-select",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentences describing coverage in white-box testing.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The percentage of executable statements that have been exercised by a test suite is called __________ coverage.",
+          "options": [
+            "statement",
+            "branch",
+            "path",
+            "condition"
+          ],
+          "correctAnswer": "statement"
+        },
+        {
+          "id": "d2",
+          "prompt": "The percentage of decision outcomes (true/false branches) that have been exercised by a test suite is called __________ coverage.",
+          "options": [
+            "branch",
+            "statement",
+            "requirements",
+            "risk"
+          ],
+          "correctAnswer": "branch"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Statement coverage and branch/decision coverage are the two structure-based coverage metrics in the CTFL syllabus.",
+        "relatedTopics": [
+          "White-box coverage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.3.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-117",
+      "type": "yes-no-statements",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "For each statement about equivalence partitioning, decide whether it is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Every partition should contain at least one representative value that is tested.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Equivalence partitions can apply to outputs and internal values, not only inputs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A valid partition and an invalid partition can never be adjacent to each other.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Valid and invalid partitions are frequently adjacent â€” the boundary between them is exactly what boundary value analysis targets.",
+        "relatedTopics": [
+          "Equivalence partitioning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.12",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-118",
+      "type": "yes-no-statements",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An online store offers free shipping for orders totaling $50 or more, and an additional 10% discount for orders totaling $200 or more. These two conditions apply independently of each other.",
+      "questionText": "An online store gives free shipping for orders of $50 or more, and a 10% discount for orders of $200 or more (both apply independently). Decide whether each statement about testing this rule is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Testing an order of exactly $50 tests a boundary value for the free shipping rule.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Testing an order of $200 alone is sufficient to verify both the free shipping and discount rules work correctly together.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A decision table could be used to systematically test the combination of the two independent discount conditions.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "A single test at $200 does confirm both individual thresholds are met, but does not by itself verify all combinations (e.g., an order below $50, an order between $50-$199, etc.) â€” a decision table would ensure combinations are systematically covered.",
+        "relatedTopics": [
+          "Boundary value analysis",
+          "Decision table testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.13",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-119",
+      "type": "multiple-choice",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following factors typically influence the estimated effort required for testing? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complexity of the product to be tested",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Skills and experience level of the test team",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The quality of the test basis (e.g., requirements)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "The color of the project logo",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Product complexity, team skill/experience, and test basis quality are all recognized factors influencing test effort estimation.",
+        "incorrect": "A project logo's color has no bearing on test estimation and is an irrelevant distractor.",
+        "examTip": "Estimation factors span product characteristics, process factors, and people factors.",
+        "relatedTopics": [
+          "Test estimation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.1.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-120",
+      "type": "dropdown-select",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentences about test progress monitoring and reporting.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A document produced during testing that summarizes progress against the test plan, such as tests executed and defects found so far, is called a test __________ report.",
+          "options": [
+            "progress",
+            "closure",
+            "risk",
+            "estimation"
+          ],
+          "correctAnswer": "progress"
+        },
+        {
+          "id": "d2",
+          "prompt": "A document produced at the end of a test level or project, summarizing the testing performed and lessons learned, is called a test __________ report.",
+          "options": [
+            "closure",
+            "progress",
+            "condition",
+            "basis"
+          ],
+          "correctAnswer": "closure"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Test progress reports are periodic/interim; the test closure report is produced once testing activities are complete.",
+        "relatedTopics": [
+          "Test progress report",
+          "Test closure report"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.3.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-121",
+      "type": "single-choice",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "With the planned release date approaching, a test progress report shows that only 60% of planned high-risk test cases have been executed, and several high-severity defects remain open and unresolved.",
+      "questionText": "A project is nearing its planned release date, but the test progress report shows only 60% of planned high-risk test cases executed, with several high-severity defects still open. What is the MOST appropriate use of this information?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ignore the report and release on schedule regardless of test status",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Use the report to inform a data-driven decision about whether to delay release, reduce scope, or allocate more testing resources",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Immediately fire the test team for being behind schedule",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Discard all remaining test cases to save time",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Test progress reports exist to provide objective information for stakeholders to make informed decisions, such as adjusting scope, schedule, or resources based on risk and status.",
+        "incorrect": "Ignoring the data, taking punitive action, or discarding remaining tests all contradict the purpose of risk-based, informed decision-making that test reporting supports.",
+        "examTip": "This is a classic example of testing 'providing information for decision-making' â€” one of the core testing objectives.",
+        "relatedTopics": [
+          "Test progress report",
+          "Test monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.3.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-122",
+      "type": "ordering",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Arrange the following test management activities in the general order they occur within a single test level.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Test planning",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Test monitoring and control begins alongside execution",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Test analysis and design",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Test implementation",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Test execution",
+          "correctPosition": 5
+        },
+        {
+          "id": "o6",
+          "text": "Test completion",
+          "correctPosition": 6
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This is the standard sequence defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus section describing this sequence.",
+        "examTip": "While monitoring and control run continuously alongside other activities, this represents their typical starting sequence relative to the core test process.",
+        "relatedTopics": [
+          "Test process",
+          "Test management activities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.1.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-123",
+      "type": "drag-drop",
+      "topicId": "test-management",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Drag each defect report field to what it primarily documents.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Describes what went wrong",
+          "acceptsItemIds": [
+            "i1",
+            "i2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Describes how urgently/severely to treat it",
+          "acceptsItemIds": [
+            "i3",
+            "i4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "i1",
+          "text": "Steps to reproduce the failure"
+        },
+        {
+          "id": "i2",
+          "text": "Actual result observed versus expected result"
+        },
+        {
+          "id": "i3",
+          "text": "Severity level (e.g., critical, major, minor)"
+        },
+        {
+          "id": "i4",
+          "text": "Priority level (e.g., high, medium, low)"
+        }
+      ],
+      "explanation": {
+        "correct": "Each item belongs to its category as defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus classification for these items.",
+        "examTip": "Separate the 'what happened' facts from the 'how urgent/severe' assessment fields of a defect report.",
+        "relatedTopics": [
+          "Defect reports",
+          "Defect severity vs priority"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-5.4.6",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-124",
+      "type": "single-choice",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following is a valid reason a small startup might choose NOT to invest in a dedicated test management tool early on?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Test management tools are illegal for small companies to use",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The overhead of tool selection, licensing, and training may outweigh the benefit for a very small team and simple project",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Test management tools can only be used by certified testers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Spreadsheets can never be used to track any testing information",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "For very small teams or simple projects, the cost and effort of introducing a dedicated tool may exceed its benefit, at least initially â€” a valid context-based decision.",
+        "incorrect": "The other options contain false or absolute claims not supported by the syllabus.",
+        "examTip": "Tool adoption decisions should always weigh cost/effort against benefit for the specific context.",
+        "relatedTopics": [
+          "Tool selection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.3.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-125",
+      "type": "yes-no-statements",
+      "topicId": "tool-support",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Decide whether each statement about test tool categories is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A defect tracking tool is used to log, manage, and monitor the status of defects.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A test data preparation tool helps generate or select data used as input for tests.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A coverage tool measures how much of the code has been exercised by a set of tests.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "All test tools require no configuration and work identically across every organization.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Recognize the standard tool categories: test management, defect tracking, test data preparation, coverage, static analysis, and performance tools among others.",
+        "relatedTopics": [
+          "Tool categories"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.1.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-126",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A hotel booking system allows guests to cancel a reservation for free up to 48 hours before check-in, charges 50% of the booking cost if cancelled within 48 hours of check-in, and gives no refund if cancelled after the check-in time has passed.",
+      "questionText": "A hotel booking system allows guests to cancel a reservation for free up to 48 hours before check-in, with a 50% charge if cancelled within 48 hours, and no refund if cancelled after check-in time. Which technique is BEST suited to deriving test cases for this time-based cancellation policy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "State transition testing, modeling reservation states such as Active, Cancelled-Free, Cancelled-Charged, and No-Refund",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Statement testing on the booking confirmation email template",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Checklist-based testing of the website's color scheme",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Use case testing focused only on the payment gateway integration",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This policy is naturally modeled as states (Active, Cancelled-Free, Cancelled-Charged, No-Refund) with transitions triggered by the cancellation event at different points in time â€” a strong fit for state transition testing.",
+        "incorrect": "Statement testing addresses code structure, checklist-based testing of colors is unrelated to this business rule, and narrowly scoping to only the payment gateway would miss the cancellation timing logic itself.",
+        "examTip": "When a policy depends on 'where you are' in a process combined with time-based triggers, consider state transition testing.",
+        "relatedTopics": [
+          "State transition testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.14",
         "references": [
           "https://www.istqb.org/certifications/certified-tester-foundation-level"
         ],

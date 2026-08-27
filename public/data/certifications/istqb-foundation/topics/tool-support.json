@@ -2,5 +2,670 @@
   "certificationId": "istqb-foundation",
   "topicId": "tool-support",
   "version": "2024-01",
-  "questions": []
+  "questions": [
+    {
+      "id": "istqb-097",
+      "type": "single-choice",
+      "topicId": "tool-support",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which category of test tool is used to manage test cases, test execution status, and traceability to requirements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Test management tool",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Static analysis tool",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Performance testing tool",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Test data preparation tool",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Test management tools support managing test cases, tracking execution status, and maintaining traceability, often integrating with defect tracking.",
+        "incorrect": "Static analysis tools examine code without execution; performance tools simulate load; test data tools generate/prepare test data.",
+        "examTip": "Test management tools often integrate with other tools such as defect trackers and automation frameworks.",
+        "relatedTopics": [
+          "Test management tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.1.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-098",
+      "type": "single-choice",
+      "topicId": "tool-support",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which tool category is specifically designed to simulate large numbers of virtual users to evaluate system behavior under load?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Performance testing tool",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Static analysis tool",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Test management tool",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Coverage measurement tool",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Performance testing tools generate simulated load (often many virtual users/transactions) to evaluate response times, throughput, and resource usage under stress.",
+        "incorrect": "The other categories address different aspects: code analysis, test management/traceability, and code coverage measurement respectively.",
+        "examTip": "Performance tools are essential for non-functional testing of scalability and responsiveness.",
+        "relatedTopics": [
+          "Performance testing tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.1.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-099",
+      "type": "multiple-choice",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are genuine benefits of using test automation tools? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reduction of repetitive manual effort for regression testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Faster feedback on build/code quality",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Increased objectivity of certain measurements, e.g., coverage",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Elimination of the need for any human testers",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "Guaranteed 100% defect detection",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Genuine benefits of test automation include reducing repetitive manual work, providing faster feedback, and increasing objectivity of measurements like coverage.",
+        "incorrect": "Automation does not eliminate the need for skilled testers, nor does it guarantee finding all defects â€” these are common misconceptions/risks.",
+        "examTip": "Be wary of absolute claims about automation ('eliminate', 'guarantee 100%') â€” these are classic distractors on the exam.",
+        "relatedTopics": [
+          "Benefits of test automation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.2.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-100",
+      "type": "multiple-choice",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are genuine risks of using test automation tools? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unrealistic expectations about what the tool can achieve",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "High cost and effort to maintain automated test scripts as the software evolves",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Automatically improving all aspects of test quality with zero effort",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Over-reliance on the tool, reducing the use of human judgment/creativity in testing",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Unrealistic expectations, maintenance costs, and over-reliance on tools (reducing human judgment) are all recognized risks of test automation.",
+        "incorrect": "Automation does not automatically improve test quality with zero effort â€” maintenance and thoughtful design are still required.",
+        "examTip": "The syllabus explicitly lists risks alongside benefits â€” expect exam questions that test both sides.",
+        "relatedTopics": [
+          "Risks of test automation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.2.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-101",
+      "type": "single-choice",
+      "topicId": "tool-support",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A team automated their regression suite using UI-based scripts. Whenever developers make small changes to screen layouts, many automated tests fail even though no functional defects exist, requiring testers to spend significant time updating scripts.",
+      "questionText": "A team introduces test automation but does not adapt its test scripts when the application's UI changes frequently, leading to constant automated test failures unrelated to actual defects. What is this risk BEST described as?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unrealistic expectations about tool capabilities",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "High maintenance effort/fragility of automated tests due to lack of adaptation to change",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Insufficient hardware to run the tests",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Lack of a test management tool",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This describes the risk of fragile automated tests requiring high maintenance effort when the application under test changes, a well-known automation risk.",
+        "incorrect": "This scenario is not about unrealistic expectations, hardware limits, or missing test management tooling â€” it specifically concerns script maintenance and fragility.",
+        "examTip": "Techniques such as the page object model can help reduce this maintenance burden, though this is beyond CTFL scope.",
+        "relatedTopics": [
+          "Risks of test automation",
+          "Test automation maintenance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.2.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-102",
+      "type": "single-choice",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What is a recommended practice before selecting and purchasing a test tool for an organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Skip evaluation and immediately buy the most popular tool on the market",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Evaluate the organization's needs, run a proof-of-concept/pilot, and assess compatibility with existing processes and tools",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Select a tool with no consideration of team skill level",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Choose the cheapest tool available regardless of fit",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Best practice involves evaluating organizational needs, piloting the tool to confirm suitability, and checking compatibility with existing tools/processes before wider rollout.",
+        "incorrect": "Buying blindly based on popularity or cost alone, or ignoring team skills, increases the risk of a poor tool fit and wasted investment.",
+        "examTip": "A pilot project helps validate tool fit and ROI before committing to organization-wide adoption.",
+        "relatedTopics": [
+          "Tool selection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.3.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-103",
+      "type": "yes-no-statements",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Decide whether each statement about test tool selection and use is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A pilot project can help evaluate whether a test tool is a good fit before full-scale adoption.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Training and coaching for tool users is generally unnecessary once a tool is purchased.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Introducing a new tool into an organization can involve process changes and adjustments to ways of working.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Successful tool introduction typically requires planning, training, and process adaptation â€” not just installation.",
+        "relatedTopics": [
+          "Tool selection",
+          "Tool introduction"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.3.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-104",
+      "type": "ordering",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Arrange the following activities for introducing a new test tool into an organization in a logical order.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Define organizational requirements for the tool",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Evaluate candidate tools against the requirements",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Run a proof-of-concept or pilot project with a shortlisted tool",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Roll out the tool across the organization with training",
+          "correctPosition": 4
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This is the standard sequence defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus section describing this sequence.",
+        "examTip": "This mirrors general tool-selection best practice: define needs, evaluate options, pilot, then roll out at scale.",
+        "relatedTopics": [
+          "Tool selection",
+          "Tool introduction"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.3.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-105",
+      "type": "ordering",
+      "topicId": "tool-support",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A test manager has been asked to select and roll out a new performance testing tool for the organization's flagship e-commerce platform ahead of a major sale event.",
+      "questionText": "A test manager is planning to introduce a new automated performance testing tool. Arrange the following steps in the most sensible order.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify performance testing needs and success criteria for the tool",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Shortlist and compare candidate performance testing tools",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Conduct a proof-of-concept using representative test scenarios",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Provide training to the team and integrate the tool into the CI/CD pipeline",
+          "correctPosition": 4
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This is the standard sequence defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus section describing this sequence.",
+        "examTip": "Needs identification always precedes tool comparison; a proof-of-concept validates fit before full integration and training.",
+        "relatedTopics": [
+          "Tool selection",
+          "Performance testing tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.3.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-106",
+      "type": "drag-drop",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Drag each tool to its correct test tool category.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Test Management Tool",
+          "acceptsItemIds": [
+            "i1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Static Analysis Tool",
+          "acceptsItemIds": [
+            "i2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Test Automation / Execution Tool",
+          "acceptsItemIds": [
+            "i3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "Performance Testing Tool",
+          "acceptsItemIds": [
+            "i4"
+          ]
+        },
+        {
+          "id": "cat5",
+          "name": "Defect Tracking Tool",
+          "acceptsItemIds": [
+            "i5"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "i1",
+          "text": "A tool that tracks test case status and traceability to requirements"
+        },
+        {
+          "id": "i2",
+          "text": "A tool that scans source code for coding standard violations without executing it"
+        },
+        {
+          "id": "i3",
+          "text": "A tool that automatically runs a suite of regression test scripts against a UI"
+        },
+        {
+          "id": "i4",
+          "text": "A tool that simulates thousands of concurrent users to measure server response time"
+        },
+        {
+          "id": "i5",
+          "text": "A tool used to log, track, and manage the resolution of defects through their lifecycle"
+        }
+      ],
+      "explanation": {
+        "correct": "Each item belongs to its category as defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus classification for these items.",
+        "examTip": "Map each tool's described function to the standard ISTQB CTFL tool category list.",
+        "relatedTopics": [
+          "Tool categories"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.1.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-124",
+      "type": "single-choice",
+      "topicId": "tool-support",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following is a valid reason a small startup might choose NOT to invest in a dedicated test management tool early on?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Test management tools are illegal for small companies to use",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The overhead of tool selection, licensing, and training may outweigh the benefit for a very small team and simple project",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Test management tools can only be used by certified testers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Spreadsheets can never be used to track any testing information",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "For very small teams or simple projects, the cost and effort of introducing a dedicated tool may exceed its benefit, at least initially â€” a valid context-based decision.",
+        "incorrect": "The other options contain false or absolute claims not supported by the syllabus.",
+        "examTip": "Tool adoption decisions should always weigh cost/effort against benefit for the specific context.",
+        "relatedTopics": [
+          "Tool selection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.3.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-125",
+      "type": "yes-no-statements",
+      "topicId": "tool-support",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Decide whether each statement about test tool categories is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A defect tracking tool is used to log, manage, and monitor the status of defects.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A test data preparation tool helps generate or select data used as input for tests.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A coverage tool measures how much of the code has been exercised by a set of tests.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "All test tools require no configuration and work identically across every organization.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Recognize the standard tool categories: test management, defect tracking, test data preparation, coverage, static analysis, and performance tools among others.",
+        "relatedTopics": [
+          "Tool categories"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-6.1.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
 }

@@ -1,0 +1,85 @@
+{
+  "id": "isc2-cc",
+  "name": "(ISC)² Certified in Cybersecurity",
+  "provider": "(ISC)²",
+  "examCode": "CC",
+  "version": "2024-01",
+  "questionCount": 130,
+  "passingScore": 70,
+  "timeLimitMinutes": 120,
+  "topics": [
+    {
+      "id": "security-principles",
+      "name": "Security Principles",
+      "weight": 26
+    },
+    {
+      "id": "business-continuity",
+      "name": "Business Continuity, Disaster Recovery, and Incident Response",
+      "weight": 10
+    },
+    {
+      "id": "access-controls",
+      "name": "Access Controls Concepts",
+      "weight": 22
+    },
+    {
+      "id": "network-security",
+      "name": "Network Security",
+      "weight": 24
+    },
+    {
+      "id": "security-operations",
+      "name": "Security Operations",
+      "weight": 18
+    }
+  ],
+  "resources": [
+    {
+      "title": "(ISC)² Certified in Cybersecurity Overview",
+      "url": "https://www.isc2.org/certifications/cc"
+    },
+    {
+      "title": "(ISC)² Certified in Cybersecurity Exam Outline",
+      "url": "https://www.isc2.org/-/media/isc2/files/exam-outlines/cc-exam-outline.ashx"
+    }
+  ],
+  "vendor": "(ISC)²",
+  "vendorColor": "#005A9C",
+  "level": "beginner",
+  "accessTier": "free",
+  "description": "Entry-level cybersecurity certification covering security principles, network security, and access controls. Ideal for those new to the field.",
+  "examDetails": {
+    "durationMinutes": 120,
+    "questionCount": 100,
+    "passingScore": 70,
+    "priceUSD": 199
+  },
+  "topicChunks": [
+    {
+      "topicId": "security-principles",
+      "path": "/data/certifications/isc2-cc/topics/security-principles.json",
+      "questionCount": 35
+    },
+    {
+      "topicId": "business-continuity",
+      "path": "/data/certifications/isc2-cc/topics/business-continuity.json",
+      "questionCount": 15
+    },
+    {
+      "topicId": "access-controls",
+      "path": "/data/certifications/isc2-cc/topics/access-controls.json",
+      "questionCount": 72
+    },
+    {
+      "topicId": "network-security",
+      "path": "/data/certifications/isc2-cc/topics/network-security.json",
+      "questionCount": 1
+    },
+    {
+      "topicId": "security-operations",
+      "path": "/data/certifications/isc2-cc/topics/security-operations.json",
+      "questionCount": 7
+    }
+  ]
+}

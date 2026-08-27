@@ -166,12 +166,70 @@
       }
     },
     {
+      "id": "isc2-cc",
+      "name": "(ISC)² Certified in Cybersecurity",
+      "provider": "(ISC)²",
+      "examCode": "CC",
+      "version": "2024-01",
+      "questionCount": 130,
+      "passingScore": 70,
+      "timeLimitMinutes": 120,
+      "topics": [
+        {
+          "id": "security-principles",
+          "name": "Security Principles",
+          "weight": 26
+        },
+        {
+          "id": "business-continuity",
+          "name": "Business Continuity, Disaster Recovery, and Incident Response",
+          "weight": 10
+        },
+        {
+          "id": "access-controls",
+          "name": "Access Controls Concepts",
+          "weight": 22
+        },
+        {
+          "id": "network-security",
+          "name": "Network Security",
+          "weight": 24
+        },
+        {
+          "id": "security-operations",
+          "name": "Security Operations",
+          "weight": 18
+        }
+      ],
+      "resources": [
+        {
+          "title": "(ISC)² Certified in Cybersecurity Overview",
+          "url": "https://www.isc2.org/certifications/cc"
+        },
+        {
+          "title": "(ISC)² Certified in Cybersecurity Exam Outline",
+          "url": "https://www.isc2.org/-/media/isc2/files/exam-outlines/cc-exam-outline.ashx"
+        }
+      ],
+      "vendor": "(ISC)²",
+      "vendorColor": "#005A9C",
+      "level": "beginner",
+      "accessTier": "free",
+      "description": "Entry-level cybersecurity certification covering security principles, network security, and access controls. Ideal for those new to the field.",
+      "examDetails": {
+        "durationMinutes": 120,
+        "questionCount": 100,
+        "passingScore": 70,
+        "priceUSD": 199
+      }
+    },
+    {
       "id": "istqb-foundation",
       "name": "ISTQB Certified Tester Foundation Level",
       "provider": "ISTQB",
       "examCode": "CTFL",
       "version": "2024-01",
-      "questionCount": 27,
+      "questionCount": 126,
       "passingScore": 65,
       "timeLimitMinutes": 60,
       "topics": [
@@ -346,6 +404,65 @@
       }
     },
     {
+      "id": "az-204",
+      "name": "Azure Developer Associate",
+      "provider": "Microsoft",
+      "examCode": "AZ-204",
+      "version": "2024-01",
+      "questionCount": 100,
+      "passingScore": 70,
+      "timeLimitMinutes": 150,
+      "topics": [
+        {
+          "id": "azure-compute",
+          "name": "Develop Azure Compute Solutions",
+          "weight": 25
+        },
+        {
+          "id": "azure-storage",
+          "name": "Develop for Azure Storage",
+          "weight": 15
+        },
+        {
+          "id": "azure-security",
+          "name": "Implement Azure Security",
+          "weight": 20
+        },
+        {
+          "id": "monitoring",
+          "name": "Monitor, Troubleshoot, and Optimize Azure Solutions",
+          "weight": 15
+        },
+        {
+          "id": "azure-services",
+          "name": "Connect to and Consume Azure Services and Third-Party Services",
+          "weight": 25
+        }
+      ],
+      "icon": "/icons/azure.svg",
+      "resources": [
+        {
+          "title": "Microsoft Learn — AZ-204 Learning Path",
+          "url": "https://learn.microsoft.com/en-us/training/paths/develop-solutions-azure/"
+        },
+        {
+          "title": "AZ-204 Study Guide (Official)",
+          "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-204"
+        }
+      ],
+      "vendor": "Microsoft",
+      "vendorColor": "#0078D4",
+      "level": "intermediate",
+      "accessTier": "premium",
+      "description": "Develop Azure compute solutions, storage, implement security, monitor, troubleshoot, and optimize Azure solutions.",
+      "examDetails": {
+        "durationMinutes": 120,
+        "questionCount": 40,
+        "passingScore": 70,
+        "priceUSD": 165
+      }
+    },
+    {
       "id": "az-900",
       "name": "Microsoft Azure Fundamentals",
       "provider": "Microsoft",
@@ -392,6 +509,60 @@
       "level": "beginner",
       "accessTier": "free",
       "description": "Foundational knowledge of cloud services and how those services are provided with Microsoft Azure.",
+      "examDetails": {
+        "durationMinutes": 60,
+        "questionCount": 40,
+        "passingScore": 70,
+        "priceUSD": 99
+      }
+    },
+    {
+      "id": "dp-900",
+      "name": "Azure Data Fundamentals",
+      "provider": "Microsoft",
+      "examCode": "DP-900",
+      "version": "2024-01",
+      "questionCount": 103,
+      "passingScore": 70,
+      "timeLimitMinutes": 60,
+      "topics": [
+        {
+          "id": "data-concepts",
+          "name": "Describe Core Data Concepts",
+          "weight": 25
+        },
+        {
+          "id": "relational-data",
+          "name": "Describe How to Work with Relational Data on Azure",
+          "weight": 25
+        },
+        {
+          "id": "non-relational-data",
+          "name": "Describe How to Work with Non-Relational Data on Azure",
+          "weight": 25
+        },
+        {
+          "id": "analytics-workloads",
+          "name": "Describe an Analytics Workload on Azure",
+          "weight": 25
+        }
+      ],
+      "icon": "/icons/azure.svg",
+      "resources": [
+        {
+          "title": "Microsoft Learn — DP-900 Learning Path",
+          "url": "https://learn.microsoft.com/en-us/training/paths/dp-900-data-fundamentals/"
+        },
+        {
+          "title": "DP-900 Study Guide (Official)",
+          "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-900"
+        }
+      ],
+      "vendor": "Microsoft",
+      "vendorColor": "#0078D4",
+      "level": "beginner",
+      "accessTier": "free",
+      "description": "Core data concepts and how they are implemented using Microsoft Azure data services.",
       "examDetails": {
         "durationMinutes": 60,
         "questionCount": 40,

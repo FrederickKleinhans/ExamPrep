@@ -2,5 +2,1265 @@
   "certificationId": "istqb-foundation",
   "topicId": "testing-lifecycle",
   "version": "2024-01",
-  "questions": []
+  "questions": [
+    {
+      "id": "istqb-028",
+      "type": "multiple-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are characteristics commonly associated with Agile software development, relevant to testing? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing is integrated throughout each short iteration",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Frequent delivery of working software",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A single big-bang test phase at the very end of the project",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Continuous feedback and collaboration between testers and developers",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Requirements are fully frozen before any coding begins",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Agile emphasizes integrated, continuous testing within iterations, frequent delivery, and ongoing collaboration and feedback.",
+        "incorrect": "A single end-of-project test phase and fully frozen upfront requirements are characteristic of sequential models, not Agile.",
+        "examTip": "Agile testing quadrants and the whole-team approach are useful supporting concepts to recall here.",
+        "relatedTopics": [
+          "Agile testing",
+          "SDLC models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.1.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-029",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which test level focuses on testing individual functions or classes in isolation, often performed by developers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Component testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "System testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Acceptance testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Integration testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Component testing (unit testing) focuses on individual software components in isolation, commonly done by developers.",
+        "incorrect": "System and acceptance testing occur at higher levels; integration testing focuses on interfaces between components.",
+        "examTip": "Test levels form a hierarchy: component â†’ integration â†’ system â†’ acceptance.",
+        "relatedTopics": [
+          "Component testing",
+          "Test levels"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-030",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What is the primary focus of integration testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing the interfaces and interactions between integrated components or systems",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Testing individual statements of source code",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Testing whether the system meets user acceptance criteria",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Verifying compliance with legal regulations only",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Integration testing focuses on interactions and interfaces between components or systems that have been combined.",
+        "incorrect": "Statement-level testing belongs to component testing; acceptance criteria belong to acceptance testing.",
+        "examTip": "Distinguish component integration testing (between components) from system integration testing (between systems).",
+        "relatedTopics": [
+          "Integration testing",
+          "Test levels"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-031",
+      "type": "dropdown-select",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Match each test level description to the correct term.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Testing conducted by real or representative users, often in their own environment, to determine business readiness is called __________ testing.",
+          "options": [
+            "acceptance",
+            "component",
+            "integration",
+            "regression"
+          ],
+          "correctAnswer": "acceptance"
+        },
+        {
+          "id": "d2",
+          "prompt": "Testing the behavior of a whole, integrated system against specified requirements is called __________ testing.",
+          "options": [
+            "system",
+            "unit",
+            "smoke",
+            "static"
+          ],
+          "correctAnswer": "system"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Acceptance testing includes UAT, operational acceptance testing, and contractual/regulatory acceptance testing.",
+        "relatedTopics": [
+          "Test levels",
+          "Acceptance testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-032",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "A company is preparing to deploy new software into its live production environment and wants to test backup/restore procedures, disaster recovery, and installation. Which type of acceptance testing is being performed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "User acceptance testing (UAT)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Alpha testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Operational acceptance testing (OAT)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Contractual acceptance testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Operational acceptance testing focuses on operational aspects such as backup/restore, disaster recovery, installation, and maintainability, typically performed by operations/administrators.",
+        "incorrect": "UAT focuses on business needs, alpha testing is performed at the developer's site by potential users, and contractual acceptance testing checks contractual criteria.",
+        "examTip": "OAT is sometimes called production acceptance testing.",
+        "relatedTopics": [
+          "Operational acceptance testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-033",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which test type is primarily concerned with WHAT the system does, evaluating functions such as calculations or business rules?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Functional testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Non-functional testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Structural (white-box) testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Change-related testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Functional testing evaluates the functions that a system performs, i.e., what the system does.",
+        "incorrect": "Non-functional testing evaluates quality characteristics like performance; structural testing evaluates internal structure; change-related testing verifies changes.",
+        "examTip": "Functional = 'what', Non-functional = 'how well', Structural = 'internal structure'.",
+        "relatedTopics": [
+          "Functional testing",
+          "Test types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.3.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-034",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which test type evaluates characteristics such as performance efficiency, usability, and security, describing HOW WELL the system behaves?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Functional testing",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Non-functional testing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Change-related testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Structural testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Non-functional testing evaluates quality characteristics (how well the system performs), such as performance, usability, and security.",
+        "incorrect": "Functional testing addresses what the system does; the others address structure or changes.",
+        "examTip": "Non-functional testing can occur at any test level, just like functional testing.",
+        "relatedTopics": [
+          "Non-functional testing",
+          "Test types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.3.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-035",
+      "type": "multiple-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are examples of change-related testing? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Confirmation testing (re-testing)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Regression testing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Boundary value analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Usability testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Confirmation testing verifies that a fixed defect is resolved, and regression testing checks that changes haven't broken existing functionality â€” both are change-related testing types.",
+        "incorrect": "Boundary value analysis is a test technique, and usability testing is a non-functional test type, not change-related testing.",
+        "examTip": "Confirmation testing re-runs the exact failed test; regression testing re-runs a broader set of tests.",
+        "relatedTopics": [
+          "Change-related testing",
+          "Regression testing",
+          "Confirmation testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.3.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-036",
+      "type": "yes-no-statements",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "For each statement about test types, decide whether it is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Structural (white-box) testing is based on the internal structure of the system, such as code or architecture.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Regression testing is performed only once, immediately after the very first release of software.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Confirmation testing verifies that a previously failed test now passes after the defect is fixed.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Non-functional testing can only be performed at the system test level.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Regression testing recurs throughout the product's life whenever changes are made, at any test level.",
+        "relatedTopics": [
+          "Test types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.3.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-037",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What is the main purpose of maintenance testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To test a brand-new system before its first release",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To test changes made to an operational system due to modifications, migration, or retirement",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To test the source code style for compliance with coding standards",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To design test cases from requirements for the first time",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Maintenance testing focuses on testing changes to a live/operational system, such as enhancements, patches, migrations, or planned retirements (e.g., data archiving).",
+        "incorrect": "The other options describe first-time development testing or static analysis activities, not maintenance testing.",
+        "examTip": "Impact analysis is a key activity that determines what to test during maintenance testing.",
+        "relatedTopics": [
+          "Maintenance testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.4.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-038",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following is a trigger for maintenance testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Initial requirements gathering for a new product",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Migration of data from one platform to another",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Writing the first draft of a test plan",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Selecting a test management tool",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Data migration is a classic trigger for maintenance testing, since it can introduce defects in an already operational system.",
+        "incorrect": "The other options relate to initial project setup, not modifications to an operational system.",
+        "examTip": "Other triggers include planned upgrades, patches, and system retirement/decommissioning.",
+        "relatedTopics": [
+          "Maintenance testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.4.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-039",
+      "type": "ordering",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Arrange the following test levels in the typical order they occur, from lowest (earliest, most isolated) to highest (broadest scope).",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Component testing",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Integration testing",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "System testing",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Acceptance testing",
+          "correctPosition": 4
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This is the standard sequence defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus section describing this sequence.",
+        "examTip": "This is the classic V-model / test level hierarchy â€” memorize it as component < integration < system < acceptance.",
+        "relatedTopics": [
+          "Test levels",
+          "V-model"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-040",
+      "type": "ordering",
+      "topicId": "testing-lifecycle",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "A team is applying impact analysis before performing maintenance testing on a live system after a data migration. Arrange the following activities in a logical sequence.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify the changes made to the operational system",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Analyze which existing functionality could be impacted by the changes",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Select and prioritize regression tests based on the impact analysis",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Execute the selected regression and new tests",
+          "correctPosition": 4
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This is the standard sequence defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus section describing this sequence.",
+        "examTip": "Impact analysis must happen before test selection so the regression scope reflects the actual risk of the change.",
+        "relatedTopics": [
+          "Maintenance testing",
+          "Impact analysis",
+          "Regression testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.4.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-041",
+      "type": "drag-drop",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Drag each testing activity to the test level where it is most typically performed.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Component testing",
+          "acceptsItemIds": [
+            "i1",
+            "i2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Integration testing",
+          "acceptsItemIds": [
+            "i3"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "System testing",
+          "acceptsItemIds": [
+            "i4"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "Acceptance testing",
+          "acceptsItemIds": [
+            "i5"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "i1",
+          "text": "Testing a single function's return value using unit test stubs"
+        },
+        {
+          "id": "i2",
+          "text": "Verifying statement coverage of a class"
+        },
+        {
+          "id": "i3",
+          "text": "Verifying data passed correctly between two integrated components"
+        },
+        {
+          "id": "i4",
+          "text": "End-to-end testing of the fully integrated system against requirements"
+        },
+        {
+          "id": "i5",
+          "text": "Business users validating the system meets their operational needs"
+        }
+      ],
+      "explanation": {
+        "correct": "Each item belongs to its category as defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus classification for these items.",
+        "examTip": "Map each activity to the scope of testing it addresses: isolated code, interfaces, whole system, or business validation.",
+        "relatedTopics": [
+          "Test levels"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.6",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-042",
+      "type": "drag-drop",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Classify each testing activity as either 'Functional Testing' or 'Non-Functional Testing'.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Functional Testing",
+          "acceptsItemIds": [
+            "i1",
+            "i3"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Non-Functional Testing",
+          "acceptsItemIds": [
+            "i2",
+            "i4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "i1",
+          "text": "Verifying a discount is correctly applied at checkout"
+        },
+        {
+          "id": "i2",
+          "text": "Measuring page load time under high user load"
+        },
+        {
+          "id": "i3",
+          "text": "Confirming a login form rejects an invalid password"
+        },
+        {
+          "id": "i4",
+          "text": "Evaluating whether a screen reader can navigate the interface"
+        }
+      ],
+      "explanation": {
+        "correct": "Each item belongs to its category as defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus classification for these items.",
+        "examTip": "Ask 'what does it do' (functional) vs 'how well does it do it' (non-functional) for each activity.",
+        "relatedTopics": [
+          "Functional testing",
+          "Non-functional testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.3.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-043",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which statement best describes 'exit criteria' in the context of a test level?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The criteria used to decide when to stop testing at that level",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The criteria for entering the requirements phase",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A list of tools to be used during testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The list of team members allowed to execute tests",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Exit criteria define the conditions for stopping test execution and declaring a test level (or the overall test effort) complete.",
+        "incorrect": "The other options describe unrelated concepts.",
+        "examTip": "Exit criteria are often tied to coverage targets, defect density, or unresolved defect thresholds.",
+        "relatedTopics": [
+          "Exit criteria"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.7",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-044",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "In DevOps, what does 'continuous testing' most closely support?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing only once at the end of a yearly release cycle",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Frequent, automated testing integrated into a continuous integration/continuous delivery pipeline",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Manual-only testing performed by a separate QA department",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Testing performed exclusively after production deployment",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Continuous testing integrates automated tests into CI/CD pipelines to provide fast, frequent feedback on quality.",
+        "incorrect": "The other options contradict the frequent, automated nature of continuous testing in DevOps.",
+        "examTip": "Continuous testing supports shift-left and rapid feedback loops characteristic of DevOps culture.",
+        "relatedTopics": [
+          "DevOps",
+          "Continuous testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.1.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-045",
+      "type": "multiple-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are typical benefits of adopting a DevOps approach with continuous testing? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Faster feedback on defects",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Reduced need for any testing at all",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Improved collaboration between development and operations",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Automatic elimination of all non-functional risks",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Faster feedback and improved Dev/Ops collaboration are genuine, recognized benefits of DevOps with continuous testing.",
+        "incorrect": "DevOps does not eliminate the need for testing, nor does it automatically remove non-functional risks â€” those must still be actively tested.",
+        "examTip": "Be cautious of absolute claims ('eliminate', 'no need') in DevOps benefit statements â€” they are usually distractors.",
+        "relatedTopics": [
+          "DevOps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.1.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-046",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "A retail company wants real end users to try their new mobile app at the company's own office, supervised by developers, before public release. Which acceptance test type does this describe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Beta testing",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Alpha testing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Contractual acceptance testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Operational acceptance testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Alpha testing is performed at the developing organization's site by potential or existing users, typically not part of the development team.",
+        "incorrect": "Beta testing occurs at the customer's/user's own site or environment, without developer involvement.",
+        "examTip": "Remember: Alpha = at developer's site; Beta = at customer's/user's site.",
+        "relatedTopics": [
+          "Alpha testing",
+          "Beta testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.8",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-047",
+      "type": "single-choice",
+      "topicId": "testing-lifecycle",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following best defines 'regulatory acceptance testing'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing to verify the software complies with relevant laws, regulations, or standards",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Testing performed exclusively by end users at their own site",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Testing that only checks the visual design of the interface",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Testing performed only on legacy systems",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Regulatory acceptance testing checks conformance to applicable regulations, standards, or legal requirements, such as government or safety regulations.",
+        "incorrect": "The other options describe unrelated acceptance testing concepts or scopes.",
+        "examTip": "Common in regulated industries like finance, healthcare, and aviation.",
+        "relatedTopics": [
+          "Regulatory acceptance testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.9",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-110",
+      "type": "dropdown-select",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentences describing test types.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Testing that checks whether a system can be easily learned and operated by users is a form of __________ testing, a non-functional quality characteristic.",
+          "options": [
+            "usability",
+            "performance",
+            "security",
+            "reliability"
+          ],
+          "correctAnswer": "usability"
+        },
+        {
+          "id": "d2",
+          "prompt": "Testing that checks response times and resource usage under expected load is a form of __________ testing.",
+          "options": [
+            "performance",
+            "usability",
+            "portability",
+            "maintainability"
+          ],
+          "correctAnswer": "performance"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Both usability and performance testing are non-functional test types tied to specific ISO 25010 quality characteristics.",
+        "relatedTopics": [
+          "Non-functional testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.3.6",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-111",
+      "type": "yes-no-statements",
+      "topicId": "testing-lifecycle",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "For each statement about test levels, decide whether it is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Component testing is always performed exclusively by an independent test team, never by developers.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "System testing evaluates the end-to-end behavior of the fully integrated system against specified requirements.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Acceptance testing is only ever performed after system testing is fully complete and signed off.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Test levels can overlap and their exact activities can vary across organizations and lifecycle models.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "In practice, developers frequently perform component testing themselves, and acceptance activities can start earlier in Agile contexts.",
+        "relatedTopics": [
+          "Test levels"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.2.10",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-112",
+      "type": "yes-no-statements",
+      "topicId": "testing-lifecycle",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A development team has configured their CI/CD pipeline so that every code commit automatically triggers a build plus a suite of automated component and integration tests, with results visible within minutes.",
+      "questionText": "A team practices continuous integration where every code commit triggers an automated build and a suite of component and integration tests. Decide whether each statement about this scenario is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "This practice is an example of shift-left testing.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Automated component and integration tests running on every commit exemplify continuous testing.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "This approach removes the need for any system or acceptance level testing.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Continuous integration with automated low-level tests complements, but does not replace, higher test levels like system and acceptance testing.",
+        "relatedTopics": [
+          "Shift-left testing",
+          "Continuous testing",
+          "DevOps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-2.1.6",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
 }

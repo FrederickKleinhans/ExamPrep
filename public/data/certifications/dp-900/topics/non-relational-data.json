@@ -1,0 +1,1151 @@
+{
+  "certificationId": "dp-900",
+  "topicId": "non-relational-data",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "dp900-054",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service is a globally distributed, multi-model NoSQL database that supports multiple APIs including Core (SQL), MongoDB, Cassandra, Gremlin, and Table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Cosmos DB",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Database for PostgreSQL",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Synapse Analytics",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Cosmos DB is a globally distributed, multi-model database supporting several NoSQL APIs.",
+        "incorrect": "SQL Database and PostgreSQL are relational services; Synapse Analytics is an analytics platform, not a NoSQL database.",
+        "examTip": "Remember Cosmos DB's five APIs: Core (SQL), MongoDB, Cassandra, Gremlin, and Table.",
+        "relatedTopics": [
+          "Azure Cosmos DB"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-055",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "A development team is migrating an existing application built on MongoDB and wants to keep using MongoDB drivers and query syntax without managing their own MongoDB servers.",
+      "questionText": "Which Azure Cosmos DB API should they use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "API for MongoDB",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Core (SQL) API",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Gremlin API",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Cassandra API",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Azure Cosmos DB API for MongoDB allows existing MongoDB applications and drivers to work with minimal changes.",
+        "incorrect": "The Core (SQL), Gremlin, and Cassandra APIs use different query languages and drivers that would require rewriting the application.",
+        "examTip": "Choose the Cosmos DB API that matches the client drivers/tools already in use.",
+        "relatedTopics": [
+          "Azure Cosmos DB",
+          "API for MongoDB"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-056",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "A team needs to model and query highly connected data, such as a social network of friends-of-friends relationships, using graph traversal queries.",
+      "questionText": "Which Azure Cosmos DB API is best suited for this scenario?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gremlin API",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Table API",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Core (SQL) API",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Cassandra API",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Gremlin API supports graph data models with vertices and edges, ideal for traversing connected relationships.",
+        "incorrect": "Table, Core (SQL), and Cassandra APIs do not natively support graph traversal query semantics.",
+        "examTip": "Graph scenarios (nodes/edges, traversals) point to the Gremlin API.",
+        "relatedTopics": [
+          "Azure Cosmos DB",
+          "Gremlin API",
+          "graph databases"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-057",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure storage service is best suited for storing simple NoSQL key-value data with a partition key and row key, without the global distribution features of Cosmos DB?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Table Storage",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Blob Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Files",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Table Storage stores structured NoSQL key-value data addressed by partition key and row key.",
+        "incorrect": "Blob Storage stores unstructured binary objects, SQL Database is relational, and Azure Files provides SMB file shares.",
+        "examTip": "Table Storage can also be accessed via the Cosmos DB Table API for added capabilities like global distribution.",
+        "relatedTopics": [
+          "Azure Table Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-058",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure Blob Storage access tier is optimized for data that is accessed frequently?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hot tier",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Cool tier",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Archive tier",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Premium file share tier",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Hot tier has the highest storage cost but the lowest access cost, making it ideal for frequently accessed data.",
+        "incorrect": "Cool and Archive tiers are optimized for infrequently accessed or long-term archival data, with higher access costs.",
+        "examTip": "Hot = frequent access, Cool = infrequent (30+ days), Archive = rarely accessed (180+ days), offline.",
+        "relatedTopics": [
+          "Azure Blob Storage",
+          "access tiers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-059",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company needs to retain seven years of compliance records that are almost never accessed but must not be deleted, and cost is the primary concern.",
+      "questionText": "Which Azure Blob Storage access tier should they use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Archive tier",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Hot tier",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Cool tier",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Premium tier",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Archive tier offers the lowest storage cost, appropriate for data rarely accessed and retained for long compliance periods, though retrieval takes longer.",
+        "incorrect": "Hot and Cool tiers cost more to store data long-term, and Premium is optimized for low-latency high-performance workloads, not archival.",
+        "examTip": "Archive tier data must be rehydrated before it can be read, which can take hours.",
+        "relatedTopics": [
+          "Azure Blob Storage",
+          "Archive tier"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-060",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "In Azure Cosmos DB, what is the primary purpose of a partition key?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To distribute data and workload evenly across physical partitions for scalability",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To encrypt data at rest",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To enforce referential integrity between containers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To define the primary key of a relational table",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The partition key determines how Cosmos DB distributes data across physical partitions, enabling horizontal scalability.",
+        "incorrect": "Encryption, referential integrity, and relational primary keys are unrelated to the Cosmos DB partition key's role.",
+        "examTip": "Choosing a good partition key with high cardinality is essential for even distribution and performance.",
+        "relatedTopics": [
+          "Azure Cosmos DB",
+          "partition key"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-061",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An application needs wide-column, highly available storage compatible with existing Apache Cassandra client drivers and CQL queries.",
+      "questionText": "Which Azure Cosmos DB API should be used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cassandra API",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Core (SQL) API",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Table API",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Gremlin API",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Cassandra API in Azure Cosmos DB is wire-protocol compatible with existing Cassandra drivers and CQL.",
+        "incorrect": "The other APIs use different query languages and would not be compatible with existing Cassandra client code without changes.",
+        "examTip": "Match the API to the existing client protocol/drivers being used by the application.",
+        "relatedTopics": [
+          "Azure Cosmos DB",
+          "Cassandra API"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-062",
+      "type": "multiple-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which two of the following are examples of non-relational (NoSQL) Azure data stores? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Cosmos DB",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Table Storage",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Database for PostgreSQL",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Cosmos DB and Table Storage are NoSQL, non-relational data stores.",
+        "incorrect": "Azure SQL Database and Azure Database for PostgreSQL are relational database services.",
+        "examTip": "Group Azure data services into relational vs non-relational buckets for the exam.",
+        "relatedTopics": [
+          "non-relational data",
+          "Azure data services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-063",
+      "type": "multiple-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two of the following are valid Azure Cosmos DB APIs? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gremlin API",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Core (SQL) API",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "T-SQL API",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "REST for PostgreSQL API",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Gremlin and Core (SQL) are two of the five supported Cosmos DB APIs.",
+        "incorrect": "T-SQL API and 'REST for PostgreSQL API' are not real Cosmos DB API names.",
+        "examTip": "The five Cosmos DB APIs are Core (SQL), MongoDB, Cassandra, Gremlin, and Table.",
+        "relatedTopics": [
+          "Azure Cosmos DB APIs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-064",
+      "type": "multiple-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two statements about Azure Blob Storage access tiers are correct? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Hot tier has higher storage costs but lower access costs than the Cool tier",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The Archive tier requires data to be rehydrated before it can be read",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The Cool tier is intended for data accessed multiple times per second",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Blob access tiers cannot be changed once set",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Hot tier trades higher storage cost for lower access cost, and Archive tier data must be rehydrated (moved to an online tier) before reading.",
+        "incorrect": "Cool tier is for infrequently accessed data, not high-frequency access, and access tiers can generally be changed after creation.",
+        "examTip": "Understand the cost/access trade-offs across Hot, Cool, and Archive tiers.",
+        "relatedTopics": [
+          "Azure Blob Storage tiers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-065",
+      "type": "multiple-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An engineer is designing a new Azure Cosmos DB container that must scale to millions of items while keeping requests evenly distributed across partitions.",
+      "questionText": "Which two factors are important when choosing a partition key for an Azure Cosmos DB container? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "High cardinality to spread data evenly across partitions",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A value frequently used in query filters for efficient routing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A value that is the same for every item in the container",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A value that changes randomly on every read operation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A good partition key has high cardinality for even distribution and is commonly used in queries to avoid cross-partition scans.",
+        "incorrect": "A single repeated value creates a 'hot partition' with uneven load, and partition keys should be stable, not constantly changing.",
+        "examTip": "Avoid low-cardinality partition keys that create hot partitions.",
+        "relatedTopics": [
+          "Azure Cosmos DB",
+          "partition key design"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-066",
+      "type": "multiple-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which two of the following describe Azure Blob Storage? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is optimized for storing large amounts of unstructured data such as images and videos",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "It organizes data into containers that hold blobs",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It requires all data to conform to a relational schema",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It only supports the Archive access tier",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Blob Storage stores unstructured data inside containers, which act as logical groupings for blobs.",
+        "incorrect": "Blob Storage does not require a relational schema, and it supports Hot, Cool, and Archive tiers, not just Archive.",
+        "examTip": "Blob Storage hierarchy: storage account -> container -> blob.",
+        "relatedTopics": [
+          "Azure Blob Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-067",
+      "type": "yes-no-statements",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each statement about Azure Cosmos DB, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Cosmos DB can be distributed across multiple Azure regions globally.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Cosmos DB only supports a single API for data access.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Cosmos DB is a non-relational, multi-model database service.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Cosmos DB supports global distribution across regions and offers multiple APIs, making it a multi-model, non-relational service.",
+        "incorrect": "Cosmos DB supports five different APIs, not just one.",
+        "examTip": "Global distribution and multi-model support are defining Cosmos DB features.",
+        "relatedTopics": [
+          "Azure Cosmos DB"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-068",
+      "type": "yes-no-statements",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about Azure Blob Storage, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Blobs are organized within containers inside a storage account.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The Cool access tier is the cheapest per-GB storage option available.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Block blobs are commonly used for storing text and binary files such as documents and images.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Containers organize blobs; block blobs are the standard choice for typical file storage. The Archive tier, not Cool, offers the lowest per-GB storage cost.",
+        "incorrect": "Archive tier has the lowest storage cost, cheaper than Cool.",
+        "examTip": "Cost order from cheapest to most expensive storage: Archive < Cool < Hot.",
+        "relatedTopics": [
+          "Azure Blob Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-069",
+      "type": "yes-no-statements",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about Azure Table Storage, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Table Storage stores data as entities identified by a partition key and a row key.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Table Storage enforces a fixed relational schema across all rows.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Table Storage is a NoSQL key-value store.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Table Storage entities are identified by partition and row keys and it is a schemaless NoSQL key-value store.",
+        "incorrect": "Table Storage does not enforce a fixed relational schema; different entities in the same table can have different properties.",
+        "examTip": "Table Storage is schemaless — rows in the same table can have different columns.",
+        "relatedTopics": [
+          "Azure Table Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-070",
+      "type": "yes-no-statements",
+      "topicId": "non-relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement about choosing a Cosmos DB API, select Yes if the statement correctly matches the scenario, or No if it does not.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The Gremlin API is the best choice for querying deeply connected relationship data using graph traversals.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The Table API is the best choice for complex multi-table relational joins.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "The Core (SQL) API allows querying JSON documents using a SQL-like syntax.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Gremlin suits graph traversal scenarios, and Core (SQL) API uses a SQL-like syntax over JSON documents. NoSQL APIs, including Table API, are not designed for relational joins.",
+        "incorrect": "Multi-table relational joins are a relational database concept, not something the NoSQL Table API is designed for.",
+        "examTip": "Cosmos DB APIs are NoSQL; joins across containers are generally avoided in favor of denormalized documents.",
+        "relatedTopics": [
+          "Azure Cosmos DB APIs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-071",
+      "type": "dropdown-select",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each sentence about Azure Blob Storage tiers using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Data accessed frequently should be stored in the ____ tier.",
+          "options": [
+            "Hot",
+            "Cool",
+            "Archive"
+          ],
+          "correctAnswer": "Hot"
+        },
+        {
+          "id": "d2",
+          "prompt": "Data rarely accessed and kept mainly for long-term retention should be stored in the ____ tier.",
+          "options": [
+            "Hot",
+            "Cool",
+            "Archive"
+          ],
+          "correctAnswer": "Archive"
+        }
+      ],
+      "explanation": {
+        "correct": "Hot tier suits frequent access, Archive tier suits rarely accessed long-term data.",
+        "incorrect": "Cool tier fits infrequent, but not rarely, accessed data with a 30-day minimum storage duration.",
+        "examTip": "Rank the tiers: Hot (frequent), Cool (infrequent), Archive (rare, offline).",
+        "relatedTopics": [
+          "Azure Blob Storage tiers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-072",
+      "type": "dropdown-select",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the sentences about Azure Cosmos DB APIs using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "An application built on existing MongoDB drivers should use the Cosmos DB ____ API.",
+          "options": [
+            "MongoDB",
+            "Gremlin",
+            "Table"
+          ],
+          "correctAnswer": "MongoDB"
+        },
+        {
+          "id": "d2",
+          "prompt": "An application that models data as vertices and edges should use the Cosmos DB ____ API.",
+          "options": [
+            "MongoDB",
+            "Gremlin",
+            "Cassandra"
+          ],
+          "correctAnswer": "Gremlin"
+        }
+      ],
+      "explanation": {
+        "correct": "MongoDB API supports existing MongoDB drivers; Gremlin API is used for graph data with vertices and edges.",
+        "incorrect": "Table and Cassandra APIs serve different data models and client protocols.",
+        "examTip": "Choose the Cosmos DB API based on the existing client protocol or the data model shape.",
+        "relatedTopics": [
+          "Azure Cosmos DB APIs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-073",
+      "type": "dropdown-select",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the sentence about Azure Table Storage using the dropdown provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "In Azure Table Storage, each entity is uniquely identified by the combination of a partition key and a ____ key.",
+          "options": [
+            "row",
+            "foreign",
+            "primary"
+          ],
+          "correctAnswer": "row"
+        }
+      ],
+      "explanation": {
+        "correct": "Entities in Azure Table Storage are uniquely identified by the combination of partition key and row key.",
+        "incorrect": "Table Storage does not use relational foreign or primary key terminology.",
+        "examTip": "Partition key + row key together form the unique identifier for a Table Storage entity.",
+        "relatedTopics": [
+          "Azure Table Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-074",
+      "type": "dropdown-select",
+      "topicId": "non-relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the sentences about Cosmos DB partitioning using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A partition key with ____ cardinality helps distribute data and requests evenly across partitions.",
+          "options": [
+            "high",
+            "low",
+            "zero"
+          ],
+          "correctAnswer": "high"
+        },
+        {
+          "id": "d2",
+          "prompt": "Choosing a partition key with very ____ cardinality can create a 'hot partition' that limits scalability.",
+          "options": [
+            "high",
+            "low",
+            "medium"
+          ],
+          "correctAnswer": "low"
+        }
+      ],
+      "explanation": {
+        "correct": "High cardinality partition keys spread load evenly, while low cardinality keys concentrate load onto a few partitions, creating hot partitions.",
+        "incorrect": "Zero and medium do not correctly describe the extremes discussed in Cosmos DB partition key guidance.",
+        "examTip": "Avoid partition keys like 'status' with only a few possible values.",
+        "relatedTopics": [
+          "Azure Cosmos DB",
+          "partition key"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-075",
+      "type": "dropdown-select",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the sentence about Azure Blob Storage structure using the dropdown provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Within a storage account, blobs are organized into logical groupings called ____.",
+          "options": [
+            "containers",
+            "databases",
+            "tables"
+          ],
+          "correctAnswer": "containers"
+        }
+      ],
+      "explanation": {
+        "correct": "Blobs are grouped into containers within a storage account.",
+        "incorrect": "Databases and tables are relational or Table Storage concepts, not Blob Storage groupings.",
+        "examTip": "Storage account -> container -> blob is the Blob Storage hierarchy.",
+        "relatedTopics": [
+          "Azure Blob Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-076",
+      "type": "ordering",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the Azure Blob Storage access tiers in order from lowest storage cost to highest storage cost.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Archive tier",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Cool tier",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Hot tier",
+          "correctPosition": 3
+        }
+      ],
+      "explanation": {
+        "correct": "Archive has the lowest storage cost, followed by Cool, then Hot, which has the highest storage cost but lowest access cost.",
+        "incorrect": "Reordering would misrepresent the actual cost structure of Azure Blob Storage tiers.",
+        "examTip": "Storage cost and access cost move in opposite directions across the tiers.",
+        "relatedTopics": [
+          "Azure Blob Storage tiers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-077",
+      "type": "ordering",
+      "topicId": "non-relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following steps for retrieving a blob that is currently in the Archive tier in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Change the blob's tier to Hot or Cool to initiate rehydration",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Wait for the rehydration process to complete (this can take hours)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Read the blob's contents once it is back in an online tier",
+          "correctPosition": 3
+        }
+      ],
+      "explanation": {
+        "correct": "Archive tier blobs are offline and must be rehydrated to an online tier before they can be read, which is a process that takes time.",
+        "incorrect": "You cannot read an Archive tier blob directly without first rehydrating it.",
+        "examTip": "Archive tier trades low cost for higher retrieval latency — plan accordingly.",
+        "relatedTopics": [
+          "Azure Blob Storage",
+          "Archive tier",
+          "rehydration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-078",
+      "type": "drag-drop",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each scenario to the Azure Cosmos DB API that best fits it.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Core (SQL) API",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "MongoDB API",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Gremlin API",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "A new application built natively for Cosmos DB using JSON documents and SQL-like queries"
+        },
+        {
+          "id": "item2",
+          "text": "An existing application using MongoDB drivers and BSON documents"
+        },
+        {
+          "id": "item3",
+          "text": "An application traversing a social graph of connections between people"
+        }
+      ],
+      "explanation": {
+        "correct": "Core (SQL) API fits native JSON/SQL-style querying, MongoDB API fits existing MongoDB apps, and Gremlin API fits graph traversal scenarios.",
+        "incorrect": "Review each API's intended use case if an item was placed incorrectly.",
+        "examTip": "Match the API to existing drivers/protocols or the natural shape of the data model.",
+        "relatedTopics": [
+          "Azure Cosmos DB APIs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

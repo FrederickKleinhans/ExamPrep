@@ -2,5 +2,695 @@
   "certificationId": "istqb-foundation",
   "topicId": "static-testing",
   "version": "2024-01",
-  "questions": []
+  "questions": [
+    {
+      "id": "istqb-048",
+      "type": "single-choice",
+      "topicId": "static-testing",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What distinguishes static testing from dynamic testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Static testing does not involve executing the software under test",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Static testing can only be performed by automated tools",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Static testing is only used for non-functional requirements",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Static testing always occurs after dynamic testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Static testing evaluates work products (documents, code) without executing the software, unlike dynamic testing.",
+        "incorrect": "Static testing can be manual (reviews) or tool-based (static analysis), is not limited to non-functional aspects, and typically occurs earlier than dynamic testing.",
+        "examTip": "Static testing = 'testing without execution'.",
+        "relatedTopics": [
+          "Static testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.1.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-049",
+      "type": "multiple-choice",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following work products can benefit from static testing? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Requirements specifications",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Source code",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Test plans",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Only compiled executable binaries",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Static testing can be applied to almost any work product, including requirements, code, and test plans.",
+        "incorrect": "Compiled binaries cannot be reviewed via static techniques in the same way â€” they are typically evaluated via dynamic testing.",
+        "examTip": "A wide range of work products benefit from static testing, which is a key reason it supports shift-left.",
+        "relatedTopics": [
+          "Static testing",
+          "Work products"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.1.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-050",
+      "type": "single-choice",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What is the most informal type of review, often without a defined process, used to gain feedback quickly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Inspection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Technical review",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Informal review",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Walkthrough",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "An informal review has no formal, defined process and is typically the least structured way to gain quick feedback.",
+        "incorrect": "Inspections and technical reviews are more formal and structured; a walkthrough sits between informal and formal reviews.",
+        "examTip": "Order of formality (least to most): informal review < walkthrough < technical review < inspection.",
+        "relatedTopics": [
+          "Review types",
+          "Informal review"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-051",
+      "type": "single-choice",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which review type is led by the author, typically presenting the work product to colleagues in a meeting to gather feedback and build consensus?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Inspection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Walkthrough",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Technical review",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Informal review",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "A walkthrough is typically led by the author, who guides participants through the document to gather feedback and build a common understanding.",
+        "incorrect": "Inspections are led by a trained moderator and follow a strict process; technical reviews are led by a technical peer or moderator, not necessarily the author.",
+        "examTip": "Walkthrough = author-led, more informal than inspection.",
+        "relatedTopics": [
+          "Walkthrough"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-052",
+      "type": "single-choice",
+      "topicId": "static-testing",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which review type is the MOST formal, based on rules and checklists, uses defined roles (including a trained moderator), and includes metrics collection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Informal review",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Walkthrough",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Technical review",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Inspection",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Inspection is the most formal review type, following a defined process, using checklists, and led by a trained moderator, with metrics collected for process improvement.",
+        "incorrect": "The other review types are progressively less formal and do not require a trained moderator.",
+        "examTip": "Inspections are the only review type in the syllabus that requires a trained moderator by definition.",
+        "relatedTopics": [
+          "Inspection",
+          "Review formality"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-053",
+      "type": "yes-no-statements",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Decide whether each statement about review roles is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The moderator (facilitator) ensures the review meeting runs effectively and mediates conflicts.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The author is responsible for fixing defects found in their own work product after the review.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A scribe (recorder) is responsible for approving the final release decision of the software.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Reviewers/checkers are individuals who identify potential defects in the work product being reviewed.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Know the standard review roles: manager, moderator, author, reviewers, scribe.",
+        "relatedTopics": [
+          "Review roles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-054",
+      "type": "dropdown-select",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentences describing the review process activities.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The activity where the moderator/organizer prepares the review meeting and distributes materials is called __________.",
+          "options": [
+            "planning",
+            "issue communication",
+            "closure",
+            "fix"
+          ],
+          "correctAnswer": "planning"
+        },
+        {
+          "id": "d2",
+          "prompt": "The activity where individual reviewers examine the work product on their own before the meeting is called individual __________.",
+          "options": [
+            "review",
+            "closure",
+            "kickoff",
+            "retrospective"
+          ],
+          "correctAnswer": "review"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Standard review process: planning, kick-off, individual review, issue communication/analysis, fixing, closure.",
+        "relatedTopics": [
+          "Review process"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-055",
+      "type": "ordering",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Arrange the following activities of a formal review process in the correct order.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Planning",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Kick-off",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Individual review",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Issue communication and analysis",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Fixing and reporting",
+          "correctPosition": 5
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This is the standard sequence defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus section describing this sequence.",
+        "examTip": "This is the standard formal review process defined in the ISTQB CTFL syllabus â€” memorize this sequence.",
+        "relatedTopics": [
+          "Review process"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.6",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-056",
+      "type": "single-choice",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "What is the primary purpose of static analysis tools?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To execute test cases against a running application",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To detect defects in code or models without executing them, such as unused variables or code complexity issues",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To manage the defect lifecycle in a bug-tracking system",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To generate load for performance testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Static analysis tools examine code or models without execution to find issues such as unreachable code, unused variables, and violations of coding standards.",
+        "incorrect": "Executing tests, managing defects, and generating load are functions of other tool categories, not static analysis.",
+        "examTip": "Static analysis can find defects like security vulnerabilities and maintainability issues that dynamic testing might miss.",
+        "relatedTopics": [
+          "Static analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.3.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-057",
+      "type": "multiple-choice",
+      "topicId": "static-testing",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following defects are typically easier to find through static analysis than through dynamic testing? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unreachable (dead) code",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Undeclared or unused variables",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Incorrect calculation results visible only under specific runtime data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Violations of coding standards",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Security vulnerabilities like potential buffer overflows in code patterns",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Static analysis excels at finding structural issues like dead code, unused variables, standards violations, and certain security vulnerability patterns without running the code.",
+        "incorrect": "Defects that only manifest with specific runtime data are typically found through dynamic testing, not static analysis.",
+        "examTip": "Static analysis finds defects earlier and cannot detect issues that depend on runtime data or timing.",
+        "relatedTopics": [
+          "Static analysis",
+          "Benefits of static testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.3.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-113",
+      "type": "dropdown-select",
+      "topicId": "static-testing",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentences about static testing benefits.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Because static testing does not require executing code, it can be used to find defects __________ in the development lifecycle than dynamic testing.",
+          "options": [
+            "earlier",
+            "later",
+            "never",
+            "randomly"
+          ],
+          "correctAnswer": "earlier"
+        },
+        {
+          "id": "d2",
+          "prompt": "Static testing can improve __________, since consistent terminology and understanding are established through review discussions.",
+          "options": [
+            "communication",
+            "compilation speed",
+            "hardware performance",
+            "network latency"
+          ],
+          "correctAnswer": "communication"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Early defect detection and improved team communication are two key benefits of static testing highlighted in the syllabus.",
+        "relatedTopics": [
+          "Static testing benefits"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.1.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-114",
+      "type": "yes-no-statements",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "For each statement about the benefits of static testing, decide whether it is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Static testing can detect defects that are hard to find through dynamic testing, such as unreachable code.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Static testing eliminates the need for any dynamic testing later in the project.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Reviews can help detect defects in requirements before any code is written.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Static and dynamic testing are complementary, not substitutes for one another.",
+        "relatedTopics": [
+          "Static testing benefits"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.1.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-115",
+      "type": "multiple-choice",
+      "topicId": "static-testing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are typical success factors for an effective review process? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Clear objectives are defined for each review",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Reviewers are given adequate time to prepare individually before the meeting",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The review focuses on criticizing the author personally rather than the work product",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Defects found are logged and tracked to closure",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Clear objectives, adequate preparation time, and tracking defects to closure are recognized review success factors.",
+        "incorrect": "Criticizing the author personally undermines psychological safety and is explicitly discouraged â€” reviews should focus on the work product.",
+        "examTip": "Success factors for reviews mirror general psychology-of-testing principles: focus on the product, not the person.",
+        "relatedTopics": [
+          "Review success factors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-3.2.7",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
 }

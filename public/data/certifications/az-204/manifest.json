@@ -1,0 +1,86 @@
+{
+  "id": "az-204",
+  "name": "Azure Developer Associate",
+  "provider": "Microsoft",
+  "examCode": "AZ-204",
+  "version": "2024-01",
+  "questionCount": 100,
+  "passingScore": 70,
+  "timeLimitMinutes": 150,
+  "topics": [
+    {
+      "id": "azure-compute",
+      "name": "Develop Azure Compute Solutions",
+      "weight": 25
+    },
+    {
+      "id": "azure-storage",
+      "name": "Develop for Azure Storage",
+      "weight": 15
+    },
+    {
+      "id": "azure-security",
+      "name": "Implement Azure Security",
+      "weight": 20
+    },
+    {
+      "id": "monitoring",
+      "name": "Monitor, Troubleshoot, and Optimize Azure Solutions",
+      "weight": 15
+    },
+    {
+      "id": "azure-services",
+      "name": "Connect to and Consume Azure Services and Third-Party Services",
+      "weight": 25
+    }
+  ],
+  "icon": "/icons/azure.svg",
+  "resources": [
+    {
+      "title": "Microsoft Learn — AZ-204 Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/develop-solutions-azure/"
+    },
+    {
+      "title": "AZ-204 Study Guide (Official)",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-204"
+    }
+  ],
+  "vendor": "Microsoft",
+  "vendorColor": "#0078D4",
+  "level": "intermediate",
+  "accessTier": "premium",
+  "description": "Develop Azure compute solutions, storage, implement security, monitor, troubleshoot, and optimize Azure solutions.",
+  "examDetails": {
+    "durationMinutes": 120,
+    "questionCount": 40,
+    "passingScore": 70,
+    "priceUSD": 165
+  },
+  "topicChunks": [
+    {
+      "topicId": "azure-compute",
+      "path": "/data/certifications/az-204/topics/azure-compute.json",
+      "questionCount": 23
+    },
+    {
+      "topicId": "azure-storage",
+      "path": "/data/certifications/az-204/topics/azure-storage.json",
+      "questionCount": 21
+    },
+    {
+      "topicId": "azure-security",
+      "path": "/data/certifications/az-204/topics/azure-security.json",
+      "questionCount": 20
+    },
+    {
+      "topicId": "monitoring",
+      "path": "/data/certifications/az-204/topics/monitoring.json",
+      "questionCount": 14
+    },
+    {
+      "topicId": "azure-services",
+      "path": "/data/certifications/az-204/topics/azure-services.json",
+      "questionCount": 22
+    }
+  ]
+}

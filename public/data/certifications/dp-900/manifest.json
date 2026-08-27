@@ -1,0 +1,76 @@
+{
+  "id": "dp-900",
+  "name": "Azure Data Fundamentals",
+  "provider": "Microsoft",
+  "examCode": "DP-900",
+  "version": "2024-01",
+  "questionCount": 103,
+  "passingScore": 70,
+  "timeLimitMinutes": 60,
+  "topics": [
+    {
+      "id": "data-concepts",
+      "name": "Describe Core Data Concepts",
+      "weight": 25
+    },
+    {
+      "id": "relational-data",
+      "name": "Describe How to Work with Relational Data on Azure",
+      "weight": 25
+    },
+    {
+      "id": "non-relational-data",
+      "name": "Describe How to Work with Non-Relational Data on Azure",
+      "weight": 25
+    },
+    {
+      "id": "analytics-workloads",
+      "name": "Describe an Analytics Workload on Azure",
+      "weight": 25
+    }
+  ],
+  "icon": "/icons/azure.svg",
+  "resources": [
+    {
+      "title": "Microsoft Learn — DP-900 Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/dp-900-data-fundamentals/"
+    },
+    {
+      "title": "DP-900 Study Guide (Official)",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-900"
+    }
+  ],
+  "vendor": "Microsoft",
+  "vendorColor": "#0078D4",
+  "level": "beginner",
+  "accessTier": "free",
+  "description": "Core data concepts and how they are implemented using Microsoft Azure data services.",
+  "examDetails": {
+    "durationMinutes": 60,
+    "questionCount": 40,
+    "passingScore": 70,
+    "priceUSD": 99
+  },
+  "topicChunks": [
+    {
+      "topicId": "data-concepts",
+      "path": "/data/certifications/dp-900/topics/data-concepts.json",
+      "questionCount": 25
+    },
+    {
+      "topicId": "relational-data",
+      "path": "/data/certifications/dp-900/topics/relational-data.json",
+      "questionCount": 28
+    },
+    {
+      "topicId": "non-relational-data",
+      "path": "/data/certifications/dp-900/topics/non-relational-data.json",
+      "questionCount": 25
+    },
+    {
+      "topicId": "analytics-workloads",
+      "path": "/data/certifications/dp-900/topics/analytics-workloads.json",
+      "questionCount": 25
+    }
+  ]
+}

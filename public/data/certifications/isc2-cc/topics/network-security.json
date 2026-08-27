@@ -1,0 +1,69 @@
+{
+  "certificationId": "isc2-cc",
+  "topicId": "network-security",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "isc2cc-010",
+      "type": "ordering",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the OSI model layers in order from Layer 1 (bottom) to Layer 7 (top).",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Physical",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Data Link",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Network",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Transport",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Session",
+          "correctPosition": 5
+        },
+        {
+          "id": "o6",
+          "text": "Presentation",
+          "correctPosition": 6
+        },
+        {
+          "id": "o7",
+          "text": "Application",
+          "correctPosition": 7
+        }
+      ],
+      "explanation": {
+        "correct": "Use the mnemonic 'Please Do Not Throw Sausage Pizza Away' to remember this order from bottom to top.",
+        "incorrect": "Review the OSI model layer order in the CC exam outline.",
+        "examTip": "Remember: Layer 1=Physical, Layer 2=Data Link, Layer 3=Network, Layer 4=Transport, Layer 5=Session, Layer 6=Presentation, Layer 7=Application.",
+        "relatedTopics": [
+          "OSI model"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D4.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

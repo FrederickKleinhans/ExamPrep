@@ -1,0 +1,4622 @@
+{
+  "questions": [
+    {
+      "id": "az204-001",
+      "type": "single-choice",
+      "topicId": "azure-compute",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You deploy a web app to Azure App Service using the Free tier. Which action requires scaling up to a higher tier?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Add a custom domain",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Enable diagnostic logs",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Configure daily backups",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Set application settings",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Daily backups are supported only in Basic tier and higher.",
+        "incorrect": "Custom domains, diagnostic logs, and application settings are available in Free tier.",
+        "examTip": "Remember backup and custom domain SSL are not available in Free/Shared tiers.",
+        "relatedTopics": [
+          "App Service scaling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Configure App Service plans",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-002",
+      "type": "multiple-choice",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are designing an Azure Function app that processes orders from a queue. Which triggers can you use? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Service Bus Queue trigger",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Blob Storage trigger",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Event Grid trigger",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Queue Storage trigger",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "HTTP trigger",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Service Bus Queue and Azure Queue Storage triggers are queue-based.",
+        "incorrect": "Blob Storage and Event Grid are not queue triggers; HTTP is for web requests.",
+        "examTip": "Distinguish between Azure Queue Storage and Service Bus queues.",
+        "relatedTopics": [
+          "Azure Functions triggers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure Functions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-003",
+      "type": "yes-no-statements",
+      "topicId": "azure-storage",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You create an Azure Blob Storage container with private access. Evaluate the following statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "You can generate a shared access signature (SAS) to allow temporary read access.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The storage account key is the only way to access the container.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "You can assign RBAC roles to control access.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "SAS and RBAC provide secure access without sharing account keys.",
+        "incorrect": "Storage account keys are not the only method; SAS and RBAC also work.",
+        "examTip": "Prefer managed identities and RBAC over access keys.",
+        "relatedTopics": [
+          "Azure Storage security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-004",
+      "type": "dropdown-select",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct option to complete the sentence: To authenticate a web app to Azure Key Vault without storing credentials in code, you should use a __________.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Authentication method",
+          "options": [
+            "client secret",
+            "connection string",
+            "managed identity",
+            "certificate thumbprint"
+          ],
+          "correctAnswer": "managed identity"
+        }
+      ],
+      "explanation": {
+        "correct": "Managed identity provides an automatically managed identity for the app to access Key Vault.",
+        "incorrect": "Client secrets, certificates, or connection strings require manual management.",
+        "examTip": "Use managed identities to avoid hardcoding credentials.",
+        "relatedTopics": [
+          "Managed identities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-005",
+      "type": "ordering",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps for setting up Availability Tests in Application Insights:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create an Application Insights resource",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Navigate to the Availability pane",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Add a new URL ping test",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Configure alert rules",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "First create the resource, then add the test, configure alerts.",
+        "incorrect": "Must create resource before tests.",
+        "examTip": "Availability tests help monitor endpoint responsiveness.",
+        "relatedTopics": [
+          "Application Insights"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-006",
+      "type": "drag-drop",
+      "topicId": "azure-services",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match the Azure service to its primary use case:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Event-driven serverless compute",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Hybrid integration for enterprise workflows",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Real-time data ingestion and analytics",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure Functions"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Logic Apps"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Event Hubs"
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Functions is event-driven; Logic Apps is for workflow integration; Event Hubs for telemetry ingestion.",
+        "incorrect": "Mixing them up misses their distinct purposes.",
+        "examTip": "Remember Functions are code-first, Logic Apps are designer-first.",
+        "relatedTopics": [
+          "Azure compute options"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-007",
+      "type": "single-choice",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "You are developing a web application that must support staging and production environments. You need to minimize downtime during deployments.",
+      "questionText": "Which App Service feature should you use to swap environments with zero downtime?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deployment slots",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Auto-scaling",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Backup",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Custom domains",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Deployment slots allow swapping staging and production without downtime.",
+        "incorrect": "Auto-scaling handles load, backup is for recovery, custom domains are for branding.",
+        "examTip": "Use deployment slots for safe staging and rollback.",
+        "relatedTopics": [
+          "App Service deployment slots"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-008",
+      "type": "multiple-choice",
+      "topicId": "azure-storage",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "Your application uploads large video files to Azure Blob Storage. Users can request downloads with a time-limited link.",
+      "questionText": "Which two approaches can generate a time-limited download URL? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Create a shared access signature (SAS) with an expiry time",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Set the blob's metadata property to expire",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Use a stored access policy with an expiry",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Generate a new storage account key",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SAS and stored access policies both allow expiring access.",
+        "incorrect": "Metadata does not enforce access expiry; rotating keys is not time-limited.",
+        "examTip": "Stored access policies give you more control and can be revoked.",
+        "relatedTopics": [
+          "Blob Storage SAS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-009",
+      "type": "yes-no-statements",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are using Azure Key Vault for certificate management. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Access policies can be used to grant permission to a specific user.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "RBAC roles are the only authorization model supported.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Key Vault can auto-renew certificates.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Key Vault supports both access policies and RBAC, and can auto-renew.",
+        "incorrect": "RBAC is not the only model; access policies are also available.",
+        "examTip": "Use RBAC for broader management, access policies for granular permissions.",
+        "relatedTopics": [
+          "Key Vault access models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-010",
+      "type": "dropdown-select",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You need to process millions of IoT messages per second. Choose the correct service:",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Service",
+          "options": [
+            "Azure Service Bus",
+            "Azure Event Grid",
+            "Azure Event Hubs",
+            "Azure Queue Storage"
+          ],
+          "correctAnswer": "Azure Event Hubs"
+        }
+      ],
+      "explanation": {
+        "correct": "Event Hubs is built for high-throughput telemetry ingestion.",
+        "incorrect": "Service Bus and Queue Storage are for lower throughput; Event Grid is for event routing.",
+        "examTip": "Event Hubs uses partitions for scalability.",
+        "relatedTopics": [
+          "Event Hubs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-011",
+      "type": "ordering",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to deploy a custom container to Azure App Service:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Push Docker image to Azure Container Registry",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a web app with container settings",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Configure the container registry credentials",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Set the container image and tag",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Push image, create web app, set credentials, then specify image.",
+        "incorrect": "Must push image before referencing it.",
+        "examTip": "Use managed identity for registry authentication.",
+        "relatedTopics": [
+          "Container deployment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-012",
+      "type": "drag-drop",
+      "topicId": "azure-storage",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each Azure Storage feature to its correct description:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Static website hosting",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Soft delete for blobs",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Lifecycle management",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Serve HTML/CSS files directly from a storage account"
+        },
+        {
+          "id": "item2",
+          "text": "Recover blobs after accidental deletion"
+        },
+        {
+          "id": "item3",
+          "text": "Move blobs to cool or archive tier based on age"
+        }
+      ],
+      "explanation": {
+        "correct": "Static websites serve content; soft delete recovers blobs; lifecycle manages tiers.",
+        "incorrect": "Confusing these features is common.",
+        "examTip": "Lifecycle rules are cost-optimization features.",
+        "relatedTopics": [
+          "Blob Storage features"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-013",
+      "type": "single-choice",
+      "topicId": "azure-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which authentication flow is recommended for a native mobile application calling Azure AD-protected APIs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Authorization code grant with PKCE",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Client credentials grant",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Resource owner password credentials",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Device code flow",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "PKCE is secure for mobile apps because it mitigates code interception.",
+        "incorrect": "Client credentials are for daemons; password flow is deprecated; device flow is for headless devices.",
+        "examTip": "Always use PKCE for native apps.",
+        "relatedTopics": [
+          "MSAL authentication flows"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-014",
+      "type": "multiple-choice",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Application Insights features can help diagnose performance issues in a web app? (Choose three.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Live Metrics",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Availability tests",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Profiler",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Snapshot Debugger",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Smart Detection",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Live Metrics, Profiler, and Snapshot Debugger help with real-time and detailed performance analysis.",
+        "incorrect": "Availability tests check uptime; Smart Detection alerts anomalies.",
+        "examTip": "Use Profiler for CPU and Snapshot for exceptions.",
+        "relatedTopics": [
+          "Application Insights performance tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-015",
+      "type": "yes-no-statements",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are using Azure Service Bus topics with subscriptions. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Each subscription receives a copy of the message.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "You can apply filters to subscriptions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Messages are removed from the topic when one subscription reads them.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Topics broadcast messages to all subscriptions and filters can be applied.",
+        "incorrect": "Messages remain until all subscriptions have read them (unless auto-delete).",
+        "examTip": "Topics are for publish/subscribe patterns with multiple consumers.",
+        "relatedTopics": [
+          "Service Bus topics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-016",
+      "type": "dropdown-select",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You need a serverless compute service that can execute code based on an HTTP request. Choose the correct service:",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Service",
+          "options": [
+            "Azure App Service",
+            "Azure Functions",
+            "Azure Container Instances",
+            "Azure Virtual Machines"
+          ],
+          "correctAnswer": "Azure Functions"
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Functions is serverless and can be triggered by HTTP.",
+        "incorrect": "App Service is PaaS (not serverless), ACI is container-based, VMs are IaaS.",
+        "examTip": "Functions scale automatically under demand.",
+        "relatedTopics": [
+          "Serverless compute"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-017",
+      "type": "ordering",
+      "topicId": "azure-storage",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Order the steps to use Azure Cosmos DB Change Feed to process updates:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a container with a partition key",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Enable the change feed (enabled by default)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create a change feed processor or Azure Function",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Process the changes in batch",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Container, feed enabled, processor, then batch processing.",
+        "incorrect": "Processor must be created before reading changes.",
+        "examTip": "Change feed reads from the container's latest state.",
+        "relatedTopics": [
+          "Cosmos DB change feed"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-018",
+      "type": "drag-drop",
+      "topicId": "azure-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Classify each Azure security capability:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Identity management",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Key/certificate management",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Network security",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure AD B2C"
+        },
+        {
+          "id": "item2",
+          "text": "Key Vault"
+        },
+        {
+          "id": "item3",
+          "text": "Network Security Group (NSG)"
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AD B2C manages identity; Key Vault manages secrets; NSG secures network.",
+        "incorrect": "Mixing these capabilities is a common mistake.",
+        "examTip": "Use NSGs for VNet traffic filtering.",
+        "relatedTopics": [
+          "Security services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-019",
+      "type": "single-choice",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "You are building an e-commerce system that sends order confirmation emails and updates inventory. You want to decouple email and inventory processing.",
+      "questionText": "Which Azure service should you use to publish order events?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Event Hubs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Service Bus",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Event Grid",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Notification Hubs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Event Grid is ideal for event-driven reactive processing with many subscribers.",
+        "incorrect": "Event Hubs is for streaming; Service Bus is for messaging; Notification Hubs for push notifications.",
+        "examTip": "Use Event Grid for event-driven architectures.",
+        "relatedTopics": [
+          "Event Grid"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-020",
+      "type": "multiple-choice",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "You are designing a durable function that orchestrates multiple activities. Which statements about durable functions are true? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Orchestrator functions must be deterministic.",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Activity functions can call orchestrator functions.",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The function can be stopped and resumed.",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Durable Functions only run in Consumption plan.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Orchestrators are deterministic; they can be stopped/resumed via replay.",
+        "incorrect": "Activity functions cannot call orchestrators; they can run in any plan.",
+        "examTip": "Avoid I/O inside orchestrators Ã¢â‚¬â€ use activity functions.",
+        "relatedTopics": [
+          "Durable Functions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-021",
+      "type": "yes-no-statements",
+      "topicId": "azure-storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are using Azure Cosmos DB with multiple consistency levels. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Strong consistency guarantees immediate read-after-write.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Session consistency is the default level.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Eventual consistency ensures no data loss.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Strong guarantees global order; session is default; eventual does not guarantee durability.",
+        "incorrect": "Eventual does not ensure no data loss.",
+        "examTip": "Choose consistency based on your application's needs.",
+        "relatedTopics": [
+          "Cosmos DB consistency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-022",
+      "type": "dropdown-select",
+      "topicId": "monitoring",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You need to query application logs that are stored in Azure Log Analytics. Which language should you use?",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Query language",
+          "options": [
+            "SQL",
+            "KQL",
+            "SPARQL",
+            "XPath"
+          ],
+          "correctAnswer": "KQL"
+        }
+      ],
+      "explanation": {
+        "correct": "KQL is the standard language for Azure Log Analytics.",
+        "incorrect": "SQL works in Azure SQL, not Log Analytics; SPARQL and XPath are for other uses.",
+        "examTip": "Use KQL for powerful diagnostics queries.",
+        "relatedTopics": [
+          "Azure Monitor log queries"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-023",
+      "type": "ordering",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps for creating a new API Management instance and applying a policy:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create API Management service",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Add an API",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create a policy (e.g., rate limiting)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Publish the API product",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Service, then API, then policy, then product publish.",
+        "incorrect": "Policy can only be applied after API is added.",
+        "examTip": "Policies are applied to APIs or operations.",
+        "relatedTopics": [
+          "API Management policies"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-024",
+      "type": "drag-drop",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each Azure hosting option with its description:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "PaaS web hosting with deployment slots",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Serverless container orchestration",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Single container quick deployment",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure App Service"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Container Apps"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Container Instances (ACI)"
+        }
+      ],
+      "explanation": {
+        "correct": "App Service is PaaS with slots; Container Apps is serverless orchestration; ACI is single-container.",
+        "incorrect": "Container Apps vs ACI: Container Apps adds scaling and Dapr.",
+        "examTip": "Use ACI for simple, short-lived containers.",
+        "relatedTopics": [
+          "Compute options"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-025",
+      "type": "single-choice",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which tool should you use to encrypt a virtual machine's disks in Azure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Key Vault only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Disk Encryption with a Key Vault key",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Storage Service Encryption",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Sentinel",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Disk Encryption uses Key Vault for BitLocker or DM-Crypt keys.",
+        "incorrect": "Key Vault alone doesn't encrypt disks; SSE is for storage accounts.",
+        "examTip": "Check encryption-at-rest requirements.",
+        "relatedTopics": [
+          "Disk encryption"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-026",
+      "type": "multiple-choice",
+      "topicId": "azure-storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which operations are supported by the Azure Blob Storage SDK (v12)? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Upload a blob from a stream",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Set blob metadata",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Query a blob using SQL",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Mount a blob as a file system",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The SDK supports upload from streams and metadata.",
+        "incorrect": "Querying is not standard; mounting requires NFS or other services.",
+        "examTip": "Use `UploadAsync` and `SetMetadataAsync`.",
+        "relatedTopics": [
+          "Blob Storage SDK"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-027",
+      "type": "yes-no-statements",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You are designing a solution using Azure Logic Apps. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Logic Apps is a low-code integration platform.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Logic Apps can call custom code via Azure Functions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Logic Apps cannot connect to on-premises data.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Logic Apps is low-code, can call Functions, and uses on-premises data gateway.",
+        "incorrect": "It does connect to on-premises through gateways.",
+        "examTip": "Use Logic Apps for visual workflows.",
+        "relatedTopics": [
+          "Logic Apps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-028",
+      "type": "dropdown-select",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "You have a function with a Service Bus trigger. To increase throughput, you should set the `maxConcurrentCalls` property to _____.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Value",
+          "options": [
+            "1",
+            "10",
+            "100",
+            "200"
+          ],
+          "correctAnswer": "200"
+        }
+      ],
+      "explanation": {
+        "correct": "Higher `maxConcurrentCalls` increases parallelism (max 200 for Service Bus).",
+        "incorrect": "Too low reduces throughput; too high may cause throttling.",
+        "examTip": "Monitor queue backlog to tune concurrency.",
+        "relatedTopics": [
+          "Functions scaling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-029",
+      "type": "ordering",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the flow for a web app to authenticate using MSAL with Azure AD:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Get an authorization code",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Exchange code for a token",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Use the token to call protected APIs",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Refresh the token silently",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Code, token, API call, then refresh.",
+        "incorrect": "Token must be obtained before API calls.",
+        "examTip": "MSAL handles token caching.",
+        "relatedTopics": [
+          "MSAL flows"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-030",
+      "type": "drag-drop",
+      "topicId": "monitoring",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Classify each monitoring tool:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Application performance monitoring (APM)",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Infrastructure monitoring",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Log analytics",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Application Insights"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Monitor for VMs"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Log Analytics workspace"
+        }
+      ],
+      "explanation": {
+        "correct": "Application Insights is APM; VM monitoring is infrastructure; Log Analytics is for logs.",
+        "incorrect": "These services are often confused.",
+        "examTip": "Log Analytics is the data ingestion layer.",
+        "relatedTopics": [
+          "Azure Monitor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-031",
+      "type": "single-choice",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service is used to cache frequently accessed data in-memory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Redis Cache",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Blob Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Redis Cache is an in-memory data store for caching.",
+        "incorrect": "SQL, Blob, and Table are persistent stores, not caching.",
+        "examTip": "Use Redis for session state and caching.",
+        "relatedTopics": [
+          "Redis Cache"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-032",
+      "type": "multiple-choice",
+      "topicId": "azure-storage",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "Your application stores JSON documents in Azure Cosmos DB. You need to query by a non-partition key efficiently.",
+      "questionText": "Which two strategies can improve performance? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Create a secondary index",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Add a synthetic partition key",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Use a composite index",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Increase the RU/s",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Synthetic or composite indexes can optimize queries.",
+        "incorrect": "Secondary indexing is automatic; RU increase doesn't fix query design.",
+        "examTip": "Design partition keys for query patterns.",
+        "relatedTopics": [
+          "Cosmos DB indexing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-033",
+      "type": "yes-no-statements",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are deploying a container to Azure Container Instances. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "You can mount Azure Files shares.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "ACI automatically scales with load.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "You can assign a public IP address.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "ACI supports file shares and public IP, but does not scale automatically.",
+        "incorrect": "ACI is for isolated containers, no automatic scaling.",
+        "examTip": "Use Container Apps or Kubernetes for scaling.",
+        "relatedTopics": [
+          "ACI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-034",
+      "type": "dropdown-select",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You need to securely store database connection strings. Which service is recommended?",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Service",
+          "options": [
+            "Azure App Settings",
+            "Azure Key Vault",
+            "Azure Storage",
+            "Azure Functions"
+          ],
+          "correctAnswer": "Azure Key Vault"
+        }
+      ],
+      "explanation": {
+        "correct": "Key Vault is the secure, centralized store for secrets.",
+        "incorrect": "App Settings are not encrypted by default; storage is not for secrets.",
+        "examTip": "Reference Key Vault secrets in App Settings.",
+        "relatedTopics": [
+          "Key Vault"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-035",
+      "type": "ordering",
+      "topicId": "azure-services",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Order the sequence for an Event Grid subscription with a webhook:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a topic",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a subscription with a webhook endpoint",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Publish an event to the topic",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Endpoint receives the event payload",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Topic, subscription, publish, then delivery.",
+        "incorrect": "Subscription must exist before publishing.",
+        "examTip": "Event Grid retries on failure.",
+        "relatedTopics": [
+          "Event Grid"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-036",
+      "type": "drag-drop",
+      "topicId": "azure-storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each Azure Storage service with its primary data type:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Key-value pairs",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Large unstructured data",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "NoSQL document database",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Table Storage"
+        },
+        {
+          "id": "item2",
+          "text": "Blob Storage"
+        },
+        {
+          "id": "item3",
+          "text": "Cosmos DB"
+        }
+      ],
+      "explanation": {
+        "correct": "Table is key-value; Blob is unstructured; Cosmos DB is document.",
+        "incorrect": "Confusing Table and Cosmos DB is common.",
+        "examTip": "Cosmos DB supports multiple APIs including SQL and MongoDB.",
+        "relatedTopics": [
+          "Storage services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-037",
+      "type": "single-choice",
+      "topicId": "monitoring",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which tool allows you to track custom events in your application for diagnostics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Activity Log",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Application Insights",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Security Center",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Backup",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Application Insights supports custom events via `TrackEvent`.",
+        "incorrect": "Activity Log is for Azure operations; Security Center is for threat protection.",
+        "examTip": "Use custom telemetry to track business logic.",
+        "relatedTopics": [
+          "Application Insights"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-038",
+      "type": "multiple-choice",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "You are using an App Service with a multi-container app using Docker Compose. Which deployment methods are supported? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Docker Compose YAML file",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Kubernetes manifests",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Container Registry with multi-container",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Deployment slots",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "App Service supports Docker Compose and ACR multi-container.",
+        "incorrect": "Kubernetes is for AKS; slots are for single-container or web apps.",
+        "examTip": "Web App for Containers supports custom containers.",
+        "relatedTopics": [
+          "Container deployment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-039",
+      "type": "yes-no-statements",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are configuring managed identities for an Azure resource. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "System-assigned identity is tied to the resource lifecycle.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "User-assigned identities can be shared across resources.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Managed identities cannot be used with Azure Key Vault.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "System-assigned is lifecycle-linked; user-assigned is shareable; Key Vault supports them.",
+        "incorrect": "Managed identities work perfectly with Key Vault.",
+        "examTip": "Prefer user-assigned for multiple resources.",
+        "relatedTopics": [
+          "Managed identities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-040",
+      "type": "dropdown-select",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "To limit API calls from a single client, which API Management policy should you use?",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Policy",
+          "options": [
+            "rate-limit",
+            "ip-filter",
+            "cors",
+            "check-header"
+          ],
+          "correctAnswer": "rate-limit"
+        }
+      ],
+      "explanation": {
+        "correct": "Rate-limit policy limits call rates per client.",
+        "incorrect": "IP filter restricts IPs, CORS handles cross-origin, check-header validates headers.",
+        "examTip": "Use quotas for longer-term limits.",
+        "relatedTopics": [
+          "API Management policies"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-041",
+      "type": "ordering",
+      "topicId": "azure-storage",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Order the steps to create a container and upload a blob using the Python SDK:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create BlobServiceClient",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Get ContainerClient",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Get BlobClient",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Call upload_data()",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Client, container, blob, then upload.",
+        "incorrect": "Must instantiate blob client before upload.",
+        "examTip": "Use `from_connection_string` for easy init.",
+        "relatedTopics": [
+          "Blob Storage SDK"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-042",
+      "type": "drag-drop",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each Azure Functions hosting plan with its characteristic:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Cold start possible",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Always-on required",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Scale on demand",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Consumption plan"
+        },
+        {
+          "id": "item2",
+          "text": "Premium plan"
+        },
+        {
+          "id": "item3",
+          "text": "Dedicated plan"
+        }
+      ],
+      "explanation": {
+        "correct": "Consumption has cold starts; Premium has always-on; Dedicated scales manually.",
+        "incorrect": "Premium also scales but without cold starts.",
+        "examTip": "Choose Premium for consistent performance.",
+        "relatedTopics": [
+          "Functions hosting plans"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-043",
+      "type": "single-choice",
+      "topicId": "azure-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary purpose of Azure AD B2C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Identity management for external users",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Internal corporate identity",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Device management",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure subscription management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "B2C is for customer identity and access management (CIAM).",
+        "incorrect": "Azure AD is for internal users.",
+        "examTip": "B2C supports social logins.",
+        "relatedTopics": [
+          "Azure AD B2C"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-044",
+      "type": "multiple-choice",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are valid Application Insights telemetry types? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Trace",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Metric",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Blob",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Queue",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Trace and Metric are standard telemetry types.",
+        "incorrect": "Blob and Queue are storage, not telemetry.",
+        "examTip": "Use `TrackTrace` for diagnostics.",
+        "relatedTopics": [
+          "Application Insights telemetry"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-045",
+      "type": "yes-no-statements",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are using Azure Service Bus. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Sessions are used to enforce ordered message processing.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A queue can have multiple subscribers.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Dead-letter queue holds messages that cannot be delivered.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Sessions ensure order; DLQ holds undelivered messages.",
+        "incorrect": "Queues have one consumer; topics have multiple subscriptions.",
+        "examTip": "Use sessions for FIFO.",
+        "relatedTopics": [
+          "Service Bus"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-046",
+      "type": "dropdown-select",
+      "topicId": "azure-storage",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "In Cosmos DB, to guarantee that reads return the latest write across all regions, you should set consistency level to _____.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Consistency level",
+          "options": [
+            "Session",
+            "Strong",
+            "Eventual",
+            "Bounded staleness"
+          ],
+          "correctAnswer": "Strong"
+        }
+      ],
+      "explanation": {
+        "correct": "Strong consistency ensures linearizability.",
+        "incorrect": "Session provides monotonic reads; eventual is weaker; bounded allows lag.",
+        "examTip": "Strong has higher latency.",
+        "relatedTopics": [
+          "Cosmos DB consistency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-047",
+      "type": "ordering",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to use the Microsoft Authentication Library (MSAL) to acquire a token:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a PublicClientApplication object",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Build the authentication context",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Call AcquireTokenAsync",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Use the token in the Authorization header",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "App, context, acquire, then use.",
+        "incorrect": "Token must be acquired before use.",
+        "examTip": "MSAL caches tokens automatically.",
+        "relatedTopics": [
+          "MSAL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-048",
+      "type": "drag-drop",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each function trigger with its binding direction:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Input binding",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Output binding",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Trigger binding",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Blob storage read"
+        },
+        {
+          "id": "item2",
+          "text": "Queue storage write"
+        },
+        {
+          "id": "item3",
+          "text": "HTTP request"
+        }
+      ],
+      "explanation": {
+        "correct": "Blob read is input; queue write is output; HTTP is trigger.",
+        "incorrect": "Triggers start the function.",
+        "examTip": "Bindings reduce boilerplate code.",
+        "relatedTopics": [
+          "Azure Functions bindings"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-049",
+      "type": "single-choice",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which service is designed for real-time streaming data ingestion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Event Hubs",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Service Bus",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Queue Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Event Hubs is optimized for high-volume streaming.",
+        "incorrect": "Service Bus and Queue are for messaging; Table is NoSQL.",
+        "examTip": "Event Hubs supports AMQP and Kafka.",
+        "relatedTopics": [
+          "Event Hubs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-050",
+      "type": "multiple-choice",
+      "topicId": "azure-storage",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which features are available in Azure Blob Storage lifecycle management? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Move blobs from hot to cool tier",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Automatically delete blobs after a period",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Encrypt blobs at rest",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Replicate blobs to another region",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Lifecycle management supports tier transitions and deletion.",
+        "incorrect": "Encryption is always on; replication is RA-GRS.",
+        "examTip": "Lifecycle policies reduce costs.",
+        "relatedTopics": [
+          "Blob lifecycle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-051",
+      "type": "yes-no-statements",
+      "topicId": "azure-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You are using Azure Key Vault to store certificates. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Key Vault can import .pfx files.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Key Vault can generate self-signed certificates.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Keys stored in Key Vault are exportable by default.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Import and generation are supported; exportability is configurable.",
+        "incorrect": "Non-exportable keys are more secure.",
+        "examTip": "Use managed HSM for FIPS 140-2 Level 3.",
+        "relatedTopics": [
+          "Key Vault certificates"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-052",
+      "type": "dropdown-select",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "To detect and diagnose failures in your web app, you should create _____ in Application Insights.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Tool",
+          "options": [
+            "Availability tests",
+            "Smart Detection",
+            "Workbooks",
+            "Live Metrics"
+          ],
+          "correctAnswer": "Availability tests"
+        }
+      ],
+      "explanation": {
+        "correct": "Availability tests proactively check endpoint availability.",
+        "incorrect": "Smart Detection is for anomalies; Workbooks for dashboards.",
+        "examTip": "Set up multi-step tests for complex scenarios.",
+        "relatedTopics": [
+          "Application Insights availability"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-053",
+      "type": "ordering",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the flow of an Event Grid event from publisher to subscriber:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Publisher sends event to Event Grid topic",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Event Grid filters by subscription",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Event Grid delivers to endpoint",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Subscriber processes event",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Publisher, filter, deliver, process.",
+        "incorrect": "Filtering happens before delivery.",
+        "examTip": "Event Grid supports advanced filters.",
+        "relatedTopics": [
+          "Event Grid"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-054",
+      "type": "drag-drop",
+      "topicId": "azure-storage",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Classify each Azure Cosmos DB API:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "SQL-like query",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "MongoDB compatibility",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Cassandra-like",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Cosmos DB SQL API"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Cosmos DB for MongoDB"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Cosmos DB for Apache Cassandra"
+        }
+      ],
+      "explanation": {
+        "correct": "SQL API for SQL-like queries; MongoDB API for document; Cassandra for wide-column.",
+        "incorrect": "Confusing API names is common.",
+        "examTip": "Choose API based on existing application.",
+        "relatedTopics": [
+          "Cosmos DB APIs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-055",
+      "type": "single-choice",
+      "topicId": "azure-compute",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which App Service setting allows you to adjust the number of instances running your app?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scale out",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Scale up",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Deployment slots",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Custom domain",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Scale out increases instance count.",
+        "incorrect": "Scale up increases VM size; slots and domains are for deployment and branding.",
+        "examTip": "Set autoscaling rules for scale out.",
+        "relatedTopics": [
+          "App Service scaling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-056",
+      "type": "multiple-choice",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which security features are available in Azure Key Vault? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Key rotation",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Soft delete",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Firewall rules",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DDoS protection",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Key Vault supports key rotation and soft delete.",
+        "incorrect": "Firewall rules and DDoS are network-level, not Key Vault specific.",
+        "examTip": "Enable soft delete to recover secrets.",
+        "relatedTopics": [
+          "Key Vault security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-057",
+      "type": "yes-no-statements",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are using Azure API Management. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Products contain one or more APIs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Subscriptions are required to access products.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Policies are applied only at the API level.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Products group APIs; subscriptions authorize access; policies can be at product or operation.",
+        "incorrect": "Policies are also at product and operation level.",
+        "examTip": "Use named values for secrets in policies.",
+        "relatedTopics": [
+          "API Management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-058",
+      "type": "dropdown-select",
+      "topicId": "azure-storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "To read a blob's content as a string in .NET, you should call _____.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Method",
+          "options": [
+            "DownloadContentAsync",
+            "DownloadTextAsync",
+            "DownloadStreamingAsync",
+            "OpenReadAsync"
+          ],
+          "correctAnswer": "DownloadTextAsync"
+        }
+      ],
+      "explanation": {
+        "correct": "`DownloadTextAsync` returns the content as a string.",
+        "incorrect": "`DownloadContentAsync` returns binary; others are for streams.",
+        "examTip": "Use UTF-8 encoding by default.",
+        "relatedTopics": [
+          "Blob SDK .NET"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-059",
+      "type": "ordering",
+      "topicId": "azure-compute",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Order the steps to create a new Azure Functions project in Visual Studio:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a new Azure Functions project",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Select trigger type",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Code the function",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Publish to Azure",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Project, trigger, code, publish.",
+        "incorrect": "Must select trigger before coding.",
+        "examTip": "Use Azure Functions Core Tools for local development.",
+        "relatedTopics": [
+          "Functions development"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-060",
+      "type": "drag-drop",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each Application Insights component with its purpose:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Track exceptions",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Visualize telemetry",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Monitor performance counters",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Telemetry client"
+        },
+        {
+          "id": "item2",
+          "text": "Workbook"
+        },
+        {
+          "id": "item3",
+          "text": "Live Metrics"
+        }
+      ],
+      "explanation": {
+        "correct": "Telemetry client tracks exceptions; Workbooks visualize; Live Metrics monitors counters.",
+        "incorrect": "These components have specific roles.",
+        "examTip": "Workbooks are customizable dashboards.",
+        "relatedTopics": [
+          "Application Insights"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-061",
+      "type": "single-choice",
+      "topicId": "azure-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which type of managed identity should you use for an application that runs on multiple Azure resources?",
+      "options": [
+        {
+          "id": "A",
+          "text": "System-assigned",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "User-assigned",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Service principal",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "App registration",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "User-assigned can be shared across resources.",
+        "incorrect": "System-assigned is per resource; service principal is for external apps.",
+        "examTip": "Use user-assigned for consistent permissions.",
+        "relatedTopics": [
+          "Managed identities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-062",
+      "type": "multiple-choice",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure services support serverless architectures? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Functions",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Logic Apps",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Virtual Machines",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Functions and Logic Apps are serverless.",
+        "incorrect": "VMs and SQL are not serverless.",
+        "examTip": "Serverless = no infrastructure management.",
+        "relatedTopics": [
+          "Serverless"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-063",
+      "type": "yes-no-statements",
+      "topicId": "azure-storage",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You are using Azure Cosmos DB. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Partition key is required for all containers.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "RU/s can be scaled up or down.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Cosmos DB supports only SQL API.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Partition key is required; RU/s are configurable; multiple APIs are supported.",
+        "incorrect": "Cosmos DB supports multiple APIs including MongoDB and Cassandra.",
+        "examTip": "Choose partition key to avoid hot partitions.",
+        "relatedTopics": [
+          "Cosmos DB"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-064",
+      "type": "dropdown-select",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "To deploy a revision to an Azure Container App, you create a new _____.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Resource",
+          "options": [
+            "replica",
+            "revision",
+            "container",
+            "image"
+          ],
+          "correctAnswer": "revision"
+        }
+      ],
+      "explanation": {
+        "correct": "Revisions in Container Apps manage immutable container versions.",
+        "incorrect": "Replicas are instances; containers are runtime units.",
+        "examTip": "Revisions can be activated/deactivated.",
+        "relatedTopics": [
+          "Container Apps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-065",
+      "type": "ordering",
+      "topicId": "azure-services",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Order the steps to configure a Service Bus topic with subscription filters:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a Service Bus namespace",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a topic",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create subscriptions with filters",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Send messages to the topic",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Namespace, topic, subscriptions, then send.",
+        "incorrect": "Subscriptions must exist before messages are sent.",
+        "examTip": "Filters can be SQL or boolean.",
+        "relatedTopics": [
+          "Service Bus topics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-066",
+      "type": "drag-drop",
+      "topicId": "azure-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each OAuth 2.0 flow with its use case:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Daemon application",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Mobile app with browser",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Server-to-server API",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Client credentials flow"
+        },
+        {
+          "id": "item2",
+          "text": "Authorization code with PKCE"
+        },
+        {
+          "id": "item3",
+          "text": "On-behalf-of flow"
+        }
+      ],
+      "explanation": {
+        "correct": "Client credentials for daemons; PKCE for mobile; OBO for API chaining.",
+        "incorrect": "Mixing flows leads to security issues.",
+        "examTip": "OBO allows delegation.",
+        "relatedTopics": [
+          "OAuth 2.0 flows"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-067",
+      "type": "single-choice",
+      "topicId": "monitoring",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does the Application Insights 'Failures' tab primarily show?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Failed requests and exceptions",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Slow dependencies",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Custom events",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Availability results",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Failures tab aggregates exceptions and failed requests.",
+        "incorrect": "Performance covers dependencies; availability covers tests.",
+        "examTip": "Use failure analytics to find root causes.",
+        "relatedTopics": [
+          "Application Insights failures"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-068",
+      "type": "multiple-choice",
+      "topicId": "azure-storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are valid ways to create a shared access signature (SAS) for Blob Storage? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using stored access policy",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Using the storage account key directly",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Using Azure AD credentials with RBAC",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Using user delegation key",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Stored access policy and user delegation key are supported SAS methods.",
+        "incorrect": "Direct account key use is not a SAS; RBAC is not SAS.",
+        "examTip": "User delegation SAS is Azure AD-backed.",
+        "relatedTopics": [
+          "SAS types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-069",
+      "type": "yes-no-statements",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are using Azure App Service. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "You can use multiple deployment slots in the Free tier.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Slots allow swapping with zero downtime.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Custom domains require a paid tier.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Slots are available in Standard tier and above; they enable zero-downtime swaps.",
+        "incorrect": "Custom domains are available in Free tier.",
+        "examTip": "Use slots for staging and rollback.",
+        "relatedTopics": [
+          "App Service slots"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-070",
+      "type": "dropdown-select",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which service should you use to add caching to your existing web app with minimal code changes?",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Service",
+          "options": [
+            "Azure Redis Cache",
+            "Azure CDN",
+            "Azure Traffic Manager",
+            "Azure Front Door"
+          ],
+          "correctAnswer": "Azure Redis Cache"
+        }
+      ],
+      "explanation": {
+        "correct": "Redis Cache is for in-memory caching with client libraries.",
+        "incorrect": "CDN is for static content; Traffic Manager for routing.",
+        "examTip": "Redis supports various data structures.",
+        "relatedTopics": [
+          "Redis Cache"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-071",
+      "type": "ordering",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to assign a managed identity to an Azure resource:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Navigate to resource in Azure portal",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Select 'Identity' blade",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Turn on system-assigned identity",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Assign role to the identity",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Portal, identity blade, enable, assign role.",
+        "incorrect": "Role assignment occurs after enabling.",
+        "examTip": "Use PowerShell or CLI for automation.",
+        "relatedTopics": [
+          "Managed identities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-072",
+      "type": "drag-drop",
+      "topicId": "azure-storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each storage redundancy option with its description:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Local redundancy",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Zone redundancy",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Geo-redundancy",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Data replicated within a single data center"
+        },
+        {
+          "id": "item2",
+          "text": "Data replicated across availability zones in a region"
+        },
+        {
+          "id": "item3",
+          "text": "Data replicated to a secondary region"
+        }
+      ],
+      "explanation": {
+        "correct": "LRS: single DC; ZRS: zones; GRS: secondary region.",
+        "incorrect": "GZRS combines zones and geo.",
+        "examTip": "Choose based on durability and cost.",
+        "relatedTopics": [
+          "Storage redundancy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-073",
+      "type": "single-choice",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which binding type is used to read from Azure Cosmos DB in Azure Functions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cosmos DB input binding",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Cosmos DB output binding",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Cosmos DB trigger",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Cosmos DB change feed",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Input binding reads data from Cosmos DB.",
+        "incorrect": "Output writes; trigger is for change feed.",
+        "examTip": "Input binding can use SQL queries.",
+        "relatedTopics": [
+          "Functions bindings"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-074",
+      "type": "multiple-choice",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which features are offered by Azure API Management? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rate limiting",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "API versioning",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Data encryption",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data replication",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "API Management supports rate limiting and versioning.",
+        "incorrect": "Encryption and replication are infrastructure-level.",
+        "examTip": "Use versioning for API evolution.",
+        "relatedTopics": [
+          "API Management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-075",
+      "type": "yes-no-statements",
+      "topicId": "monitoring",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You are using Azure Monitor. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Monitor collects metrics from Azure resources.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Monitor can send alerts based on metrics.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Azure Monitor is only for virtual machines.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Monitor works across Azure resources.",
+        "incorrect": "It's not limited to VMs.",
+        "examTip": "Set up metric alerts for proactive monitoring.",
+        "relatedTopics": [
+          "Azure Monitor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-076",
+      "type": "dropdown-select",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "To scale based on a custom metric, you should set up _____ in App Service.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Scaling method",
+          "options": [
+            "Autoscaling",
+            "Manual scaling",
+            "Scale up",
+            "App Service plan"
+          ],
+          "correctAnswer": "Autoscaling"
+        }
+      ],
+      "explanation": {
+        "correct": "Autoscaling supports custom metrics.",
+        "incorrect": "Manual scaling is fixed; scale up changes plan size.",
+        "examTip": "Autoscaling rules can be schedule-based.",
+        "relatedTopics": [
+          "App Service scaling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-077",
+      "type": "ordering",
+      "topicId": "azure-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Order the steps for an on-behalf-of (OBO) flow:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Client gets a token for API A",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "API A calls Azure AD with the token to get token for API B",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "API A receives token for API B",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "API A calls API B using the new token",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Client token to A, A exchanges for B token, then calls B.",
+        "incorrect": "OBO flow requires delegated permissions.",
+        "examTip": "Use OBO for multi-tier APIs.",
+        "relatedTopics": [
+          "OAuth 2.0 OBO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-078",
+      "type": "drag-drop",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each integration service with its primary function:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Workflow automation",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Event routing",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Messaging with dead-letter",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Logic Apps"
+        },
+        {
+          "id": "item2",
+          "text": "Event Grid"
+        },
+        {
+          "id": "item3",
+          "text": "Service Bus"
+        }
+      ],
+      "explanation": {
+        "correct": "Logic Apps automates workflows; Event Grid routes events; Service Bus handles messaging.",
+        "incorrect": "Confusing Event Grid and Service Bus is common.",
+        "examTip": "Event Grid is push-based; Service Bus is pull-based.",
+        "relatedTopics": [
+          "Integration services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-079",
+      "type": "single-choice",
+      "topicId": "azure-storage",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure Storage service is best for storing unstructured data like images and videos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Blob Storage",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Table Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Queue Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "File Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Blob Storage is designed for unstructured data.",
+        "incorrect": "Table is NoSQL; Queue is for messaging; File is SMB.",
+        "examTip": "Blob Storage supports streaming and large objects.",
+        "relatedTopics": [
+          "Blob Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-080",
+      "type": "multiple-choice",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which features are supported in Azure Functions Consumption plan? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automatic scaling",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "VNet integration",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Cold start",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Always-on",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Automatic scaling and cold starts are typical in Consumption.",
+        "incorrect": "VNet and always-on are Premium/Dedicated features.",
+        "examTip": "Premium plan avoids cold starts.",
+        "relatedTopics": [
+          "Functions plans"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-081",
+      "type": "yes-no-statements",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are designing a solution using Azure AD Conditional Access. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Conditional Access policies are applied per application.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "You can use location as a condition.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Multi-factor authentication can be enforced.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Conditions include location and MFA; policies are at the tenant level.",
+        "incorrect": "They are tenant-wide, not per application.",
+        "examTip": "Use named locations for IP ranges.",
+        "relatedTopics": [
+          "Conditional Access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-082",
+      "type": "dropdown-select",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "To monitor the health of an Azure App Service, you should enable _____.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Feature",
+          "options": [
+            "Application Insights",
+            "Log Analytics",
+            "Activity Log",
+            "Diagnostic Settings"
+          ],
+          "correctAnswer": "Application Insights"
+        }
+      ],
+      "explanation": {
+        "correct": "Application Insights provides deep app health monitoring.",
+        "incorrect": "Log Analytics is for log querying; Activity Log is for control plane.",
+        "examTip": "Enable Application Insights from the App Service.",
+        "relatedTopics": [
+          "Application Insights"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-083",
+      "type": "ordering",
+      "topicId": "azure-storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to configure a Cosmos DB container with optimal partition key:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify query patterns",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Select a partition key with high cardinality",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create the container with the chosen key",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Test performance",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Analyze queries, choose high-cardinality key, create, test.",
+        "incorrect": "Partition key is set at creation, cannot be changed.",
+        "examTip": "Avoid cross-partition queries.",
+        "relatedTopics": [
+          "Cosmos DB partitioning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-084",
+      "type": "drag-drop",
+      "topicId": "azure-compute",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Classify each App Service feature:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Deployment",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Security",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Networking",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Deployment slots"
+        },
+        {
+          "id": "item2",
+          "text": "Managed identity"
+        },
+        {
+          "id": "item3",
+          "text": "VNet integration"
+        }
+      ],
+      "explanation": {
+        "correct": "Slots for deployment; managed identity for security; VNet for networking.",
+        "incorrect": "Some features overlap.",
+        "examTip": "VNet integration allows access to on-premises.",
+        "relatedTopics": [
+          "App Service features"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-085",
+      "type": "single-choice",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which service provides a fully managed CDN for Azure content?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Content Delivery Network",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Front Door",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Traffic Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Application Gateway",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure CDN is the dedicated content delivery service.",
+        "incorrect": "Front Door is global load balancer; Traffic Manager is DNS; Gateway is WAF.",
+        "examTip": "Use CDN for static assets.",
+        "relatedTopics": [
+          "Azure CDN"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-086",
+      "type": "multiple-choice",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which tools can be used to manage access to Azure resources? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure RBAC",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Key Vault access policies",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Policy",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Firewall",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RBAC and Azure Policy manage access and compliance.",
+        "incorrect": "Key Vault policies are for secrets; Firewall is network.",
+        "examTip": "RBAC assigns roles; Policy enforces rules.",
+        "relatedTopics": [
+          "Azure RBAC"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-087",
+      "type": "yes-no-statements",
+      "topicId": "azure-storage",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You are using Azure Queue Storage. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Messages are stored in FIFO order.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "You can set a visibility timeout.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Messages are automatically deleted after processing.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Queue Storage does not guarantee FIFO; visibility timeout exists; messages must be explicitly deleted.",
+        "incorrect": "FIFO requires Service Bus sessions.",
+        "examTip": "Use Service Bus for strict ordering.",
+        "relatedTopics": [
+          "Queue Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-088",
+      "type": "dropdown-select",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "To deploy a function using a container image, you should use the _____ hosting plan.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Plan",
+          "options": [
+            "Consumption",
+            "Premium",
+            "Dedicated",
+            "Container Apps"
+          ],
+          "correctAnswer": "Premium"
+        }
+      ],
+      "explanation": {
+        "correct": "Premium plan supports custom containers.",
+        "incorrect": "Consumption does not; Dedicated supports containers but is not serverless.",
+        "examTip": "Premium plan also avoids cold starts.",
+        "relatedTopics": [
+          "Functions containers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-089",
+      "type": "ordering",
+      "topicId": "azure-services",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Order the steps to set up API Management with a back-end API:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create API Management instance",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Add API by importing from OpenAPI",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Configure backend URL",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Add rate-limiting policy",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Instance, import, backend, policy.",
+        "incorrect": "Backend must be set before policies.",
+        "examTip": "Import from Swagger for easy setup.",
+        "relatedTopics": [
+          "API Management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-090",
+      "type": "drag-drop",
+      "topicId": "monitoring",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each KQL operator with its use:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Filter rows",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Aggregate data",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Sort results",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "where"
+        },
+        {
+          "id": "item2",
+          "text": "summarize"
+        },
+        {
+          "id": "item3",
+          "text": "order by"
+        }
+      ],
+      "explanation": {
+        "correct": "where filters; summarize aggregates; order by sorts.",
+        "incorrect": "Misusing operators is common.",
+        "examTip": "Use `project` for select columns.",
+        "relatedTopics": [
+          "KQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-091",
+      "type": "single-choice",
+      "topicId": "azure-storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure Storage feature allows you to automatically delete blobs older than a certain number of days?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lifecycle Management",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Soft Delete",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Access Tiers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Immutable Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Lifecycle Management can delete or tier blobs based on age.",
+        "incorrect": "Soft delete is for recovery; access tiers are manual; immutability prevents changes.",
+        "examTip": "Lifecycle policies are cost-effective.",
+        "relatedTopics": [
+          "Blob lifecycle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-092",
+      "type": "multiple-choice",
+      "topicId": "azure-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Azure Key Vault operations require RBAC permissions? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creating a key",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Deleting a secret",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Reading a secret",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encrypting data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Create and delete are management operations; read and encrypt are data operations.",
+        "incorrect": "Data operations use access policies or RBAC data actions.",
+        "examTip": "Use RBAC for control plane operations.",
+        "relatedTopics": [
+          "Key Vault RBAC"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-093",
+      "type": "yes-no-statements",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are designing a solution with Azure Container Apps. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Container Apps can scale to zero.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Container Apps require a Dapr sidecar.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Container Apps support multiple revisions.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Scaling to zero and revisions are supported; Dapr is optional.",
+        "incorrect": "Dapr is not required.",
+        "examTip": "Container Apps is Kubernetes without management.",
+        "relatedTopics": [
+          "Container Apps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-094",
+      "type": "dropdown-select",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "To build a visual integration workflow with minimal code, use _____.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Service",
+          "options": [
+            "Azure Logic Apps",
+            "Azure Functions",
+            "Azure Data Factory",
+            "Azure Service Bus"
+          ],
+          "correctAnswer": "Azure Logic Apps"
+        }
+      ],
+      "explanation": {
+        "correct": "Logic Apps is low-code and visual.",
+        "incorrect": "Functions are code-first; Data Factory is ETL.",
+        "examTip": "Logic Apps has hundreds of connectors.",
+        "relatedTopics": [
+          "Logic Apps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-095",
+      "type": "ordering",
+      "topicId": "monitoring",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Order the steps to create a metric alert in Azure Monitor:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Select the resource",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Choose a metric",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Set the threshold condition",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Configure an action group",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Resource, metric, threshold, action.",
+        "incorrect": "Action group should be configured last.",
+        "examTip": "Action groups send notifications.",
+        "relatedTopics": [
+          "Azure Monitor alerts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-096",
+      "type": "drag-drop",
+      "topicId": "azure-storage",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Classify each Cosmos DB consistency level based on characteristics:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Highest consistency, highest latency",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Monotonic reads",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Prefix guarantee",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Strong"
+        },
+        {
+          "id": "item2",
+          "text": "Session"
+        },
+        {
+          "id": "item3",
+          "text": "Bounded staleness"
+        }
+      ],
+      "explanation": {
+        "correct": "Strong has highest latency; Session ensures monotonic; Bounded staleness has prefix.",
+        "incorrect": "Eventual lacks guarantees.",
+        "examTip": "Session is default for most apps.",
+        "relatedTopics": [
+          "Cosmos DB consistency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Storage solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-097",
+      "type": "single-choice",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which authentication method is recommended for an Azure function that accesses Key Vault?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Connection string",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Managed identity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Client secret in code",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Access key",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Managed identity is secure and requires no credential storage.",
+        "incorrect": "Connection strings and secrets are less secure.",
+        "examTip": "Enable managed identity in Function app settings.",
+        "relatedTopics": [
+          "Managed identities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-098",
+      "type": "multiple-choice",
+      "topicId": "azure-compute",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which App Service settings can you adjust during a deployment slot swap? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Application settings",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Connection strings",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Scaling rules",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Custom domains",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "App settings and connection strings can be swapped or kept.",
+        "incorrect": "Scaling rules and domains are slot-level.",
+        "examTip": "Mark settings as 'slot setting' to stay with slot.",
+        "relatedTopics": [
+          "App Service slots"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Develop Azure Compute Solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-099",
+      "type": "yes-no-statements",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You are using Azure Event Hubs. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Event Hubs uses partitions for scaling.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Events are retained for up to 7 days by default.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "You can set a consumer group per application.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Partitions allow parallelism; consumer groups separate readers.",
+        "incorrect": "Default retention is 1 day, configurable up to 7.",
+        "examTip": "Each consumer group has its own offset.",
+        "relatedTopics": [
+          "Event Hubs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-100",
+      "type": "dropdown-select",
+      "topicId": "monitoring",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "To track a specific event in Application Insights, you should call the `TrackEvent` method with a _____.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Parameter",
+          "options": [
+            "name",
+            "properties",
+            "metrics",
+            "timestamp"
+          ],
+          "correctAnswer": "name"
+        }
+      ],
+      "explanation": {
+        "correct": "The event name is required to identify the event.",
+        "incorrect": "Properties and metrics are optional.",
+        "examTip": "Use meaningful names for events.",
+        "relatedTopics": [
+          "Application Insights custom events"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ],
+  "certificationId": "az-204",
+  "version": "2024-01"
+}

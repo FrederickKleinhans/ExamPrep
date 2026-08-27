@@ -2,5 +2,1521 @@
   "certificationId": "istqb-foundation",
   "topicId": "test-techniques",
   "version": "2024-01",
-  "questions": []
+  "questions": [
+    {
+      "id": "istqb-058",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which category of test technique derives test cases from a specification without reference to the internal code structure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "White-box (structure-based) technique",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Black-box (specification-based) technique",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Experience-based technique",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Static technique",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Black-box (specification-based) techniques derive test cases from a test basis such as requirements or specifications, without knowledge of internal code structure.",
+        "incorrect": "White-box techniques use internal structure; experience-based techniques rely on tester knowledge/intuition; static techniques don't execute code at all.",
+        "examTip": "Black-box = 'what', White-box = 'how (internally)'.",
+        "relatedTopics": [
+          "Black-box techniques"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.1.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-059",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "A password field must accept between 8 and 20 characters. Which technique specifically focuses on testing values at and near this range's edges (e.g., 7, 8, 20, 21 characters)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equivalence partitioning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Boundary value analysis",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Decision table testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "State transition testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Boundary value analysis (BVA) focuses on testing values at the edges of equivalence partitions, such as just inside and just outside a valid range.",
+        "incorrect": "Equivalence partitioning groups values into classes rather than focusing specifically on edges; the other techniques address different kinds of logic.",
+        "examTip": "BVA is often applied together with equivalence partitioning, using boundary values as representative test values.",
+        "relatedTopics": [
+          "Boundary value analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-060",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An online registration form requires the applicant's age to be between 18 and 65 (inclusive) to register.",
+      "questionText": "A system accepts an integer age input, valid from 18 to 65 inclusive. Using two-value boundary value analysis, which pair of values tests the LOWER boundary?",
+      "options": [
+        {
+          "id": "A",
+          "text": "17 and 18",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "18 and 19",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "65 and 66",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "0 and 100",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Two-value BVA tests the boundary value itself and the value immediately below it for the minimum boundary: 17 (invalid, just below) and 18 (valid, the boundary).",
+        "incorrect": "18 and 19 test just above the minimum, not the boundary transition itself; 65/66 test the upper boundary; 0/100 are unrelated extreme values.",
+        "examTip": "For two-value BVA at a boundary, always use the boundary value and its nearest neighbor on the invalid side.",
+        "relatedTopics": [
+          "Boundary value analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-061",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An online registration form requires the applicant's age to be between 18 and 65 (inclusive) to register.",
+      "questionText": "Using equivalence partitioning for the age field (valid: 18â€“65 inclusive), which set of partitions is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Invalid (<18), Valid (18â€“65), Invalid (>65)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Valid (0â€“100) only",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Invalid (<0), Valid (0â€“17), Invalid (18+)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Valid (18â€“65) and Invalid (66â€“100) only",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Equivalence partitioning for a bounded valid range creates three partitions: below the range (invalid), within the range (valid), and above the range (invalid).",
+        "incorrect": "The other options mischaracterize the valid range or omit a partition.",
+        "examTip": "Every input generally has at least one valid and one or more invalid partitions.",
+        "relatedTopics": [
+          "Equivalence partitioning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-062",
+      "type": "multiple-choice",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An online registration form requires the applicant's age to be between 18 and 65 (inclusive) to register.",
+      "questionText": "For the age field (valid: 18â€“65 inclusive) using equivalence partitioning combined with boundary value analysis, which of the following test values should be included in a minimal but thorough test set? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "17",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "18",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "65",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "66",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "40",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "A thorough set covers both boundaries (17/18 and 65/66) plus a representative value from the valid partition (e.g., 40) â€” all five values are appropriate.",
+        "incorrect": "None of these values are unnecessary; each represents either a boundary or a mid-partition representative value.",
+        "examTip": "Combining EP and BVA yields a compact yet effective test set: boundaries plus one interior value per partition.",
+        "relatedTopics": [
+          "Equivalence partitioning",
+          "Boundary value analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-063",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which black-box technique uses combinations of conditions (causes) and their resulting actions (effects), typically represented in a table with columns as test cases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Decision table testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "State transition testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Use case testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Equivalence partitioning",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Decision table testing captures combinations of conditions and their resulting actions in a table, with each column representing a rule/test case.",
+        "incorrect": "State transition testing models states and transitions; use case testing derives tests from usage scenarios; equivalence partitioning groups input values.",
+        "examTip": "Decision tables are ideal for testing complex business rules with multiple combined conditions.",
+        "relatedTopics": [
+          "Decision table testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-064",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A loan approval system approves a loan only if the applicant's credit score is above 700 AND their annual income is above $50,000.",
+      "questionText": "A loan approval system approves a loan only if: (1) credit score is above 700 AND (2) annual income is above $50,000. Using decision table testing, how many rules (columns) are needed to cover all combinations of these two binary conditions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "3",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "4",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "8",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "With two binary conditions, there are 2^2 = 4 possible combinations (rules) to cover in a full decision table.",
+        "incorrect": "2, 3, and 8 do not correctly reflect 2 raised to the power of the number of binary conditions.",
+        "examTip": "For n binary conditions, a full decision table has 2^n rules/combinations.",
+        "relatedTopics": [
+          "Decision table testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.6",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-065",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which technique models a system as a set of states, transitions between those states, the events that trigger transitions, and the resulting actions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "State transition testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Decision table testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Use case testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Classification tree method",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "State transition testing derives test cases from a model of states, transitions, triggering events, and actions, commonly represented as a state diagram or table.",
+        "incorrect": "Decision table testing focuses on condition/action combinations; use case testing derives tests from usage scenarios; classification tree method is a different combinatorial technique.",
+        "examTip": "State transition testing is well suited to systems like ATMs, order status workflows, or login lockout mechanisms.",
+        "relatedTopics": [
+          "State transition testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.7",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-066",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An ATM locks a customer's card after 3 consecutive incorrect PIN entry attempts within a single session.",
+      "questionText": "An ATM card is locked after 3 consecutive incorrect PIN entries. A tester designs a test that enters an incorrect PIN a 4th time on an already-locked card. Which state transition testing concept does this specifically test?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A valid state transition",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An invalid (non-existent) transition from a state",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "0-switch coverage of valid transitions only",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Boundary value analysis of the PIN field",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Entering an invalid PIN on an already-locked card tests behavior for an event that should NOT trigger a valid transition â€” i.e., testing an invalid/undefined transition, which state transition testing explicitly covers.",
+        "incorrect": "This is not a normal valid transition test, is unrelated to 0-switch coverage of valid paths, and is not primarily a BVA scenario.",
+        "examTip": "Testing invalid transitions (things that should not be allowed to happen) is a key strength of state transition testing.",
+        "relatedTopics": [
+          "State transition testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.8",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-067",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which black-box technique derives test cases from documented interactions between an actor (user or external system) and the system under test, including main and alternative flows?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use case testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "State transition testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Equivalence partitioning",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Statement testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Use case testing derives test cases from use cases, which describe interactions between actors and the system, including main success scenarios and alternative/exception flows.",
+        "incorrect": "The other techniques do not focus specifically on actor-system interaction scenarios.",
+        "examTip": "Use case testing is valuable for validating end-to-end business processes and integration between components.",
+        "relatedTopics": [
+          "Use case testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.9",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-068",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following is a white-box (structure-based) test technique?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equivalence partitioning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Statement testing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Decision table testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Exploratory testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Statement testing is a white-box technique that measures the percentage of executable statements exercised by a test suite.",
+        "incorrect": "Equivalence partitioning and decision table testing are black-box techniques; exploratory testing is experience-based.",
+        "examTip": "The two main white-box techniques in CTFL are statement testing/coverage and branch/decision testing/coverage.",
+        "relatedTopics": [
+          "Statement testing",
+          "White-box techniques"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.3.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-069",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Given the following pseudocode: IF (a > 0) THEN print('positive') ELSE print('non-positive') END IF â€” what is the MINIMUM number of test cases needed to achieve 100% branch (decision) coverage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "2",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "3",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "4",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Branch coverage requires each decision outcome (true and false of the IF condition) to be exercised at least once, requiring a minimum of 2 test cases.",
+        "incorrect": "1 test case would only cover one branch; 3 or 4 are unnecessary for a single binary decision.",
+        "examTip": "Branch coverage subsumes statement coverage for simple binary decisions.",
+        "relatedTopics": [
+          "Branch testing",
+          "Decision coverage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.3.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-070",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A code module contains: IF (a > 0) THEN print statement A; IF (b > 0) THEN print statement B. There is no ELSE clause on either IF statement.",
+      "questionText": "A code module has the following structure: IF (a > 0) THEN [statement A]; IF (b > 0) THEN [statement B]. A test suite executes with (a=5, b=5) only. What statement and branch coverage does this single test achieve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "100% statement coverage, 100% branch coverage",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "100% statement coverage, 50% branch coverage",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "50% statement coverage, 100% branch coverage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "50% statement coverage, 50% branch coverage",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "With a=5, b=5, both statement A and B execute (100% statement coverage), but only the TRUE branch of each IF is taken, leaving the FALSE branches uncovered (50% branch coverage).",
+        "incorrect": "Full branch coverage would require additional tests exercising the FALSE outcome of each condition.",
+        "examTip": "100% statement coverage does not guarantee 100% branch coverage â€” branch coverage is a stronger criterion.",
+        "relatedTopics": [
+          "Statement testing",
+          "Branch testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.3.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-071",
+      "type": "yes-no-statements",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "For each statement about white-box testing, decide whether it is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Branch coverage is generally considered a stronger coverage criterion than statement coverage.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "100% statement coverage guarantees that all decision outcomes have been tested.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "White-box techniques require knowledge of the internal structure of the component under test.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Structure-based techniques can only be applied at the component (unit) test level.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Structure-based techniques can be applied at any test level, though they are most common at component and integration testing.",
+        "relatedTopics": [
+          "White-box techniques"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.3.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-072",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which experience-based technique involves simultaneous test design, execution, logging, and learning, without predefined test cases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exploratory testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Checklist-based testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Error guessing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Decision table testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Exploratory testing is characterized by simultaneous learning, test design, and test execution, typically without formally predefined test cases.",
+        "incorrect": "Checklist-based testing uses a predefined checklist; error guessing anticipates likely defects; decision table testing is a formal black-box technique.",
+        "examTip": "Exploratory testing is often session-based, with time-boxed 'charters' guiding the exploration.",
+        "relatedTopics": [
+          "Exploratory testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.4.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-073",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "A tester who has seen many past defects related to null values and off-by-one mistakes anticipates similar defects in a new module and designs tests to specifically target them. Which experience-based technique is being applied?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Error guessing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Checklist-based testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Boundary value analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Exploratory testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Error guessing uses a tester's experience to anticipate the kinds of defects and failures likely to occur, and designs tests to expose them.",
+        "incorrect": "Checklist-based testing follows a predefined list; BVA is a formal black-box technique; exploratory testing is more open-ended session-based testing.",
+        "examTip": "Error guessing can be supported by a taxonomy of common defect types built from experience.",
+        "relatedTopics": [
+          "Error guessing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.4.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-074",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which experience-based technique relies on a set of high-level test conditions organized as a list, used to guide test analysis and design based on prior experience or standards?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Checklist-based testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Statement testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Decision table testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Use case testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Checklist-based testing uses a checklist of items, conditions, or rules, often based on experience, standards, or common failure patterns, to guide testing.",
+        "incorrect": "The other techniques are formal black-box or white-box techniques with different structures.",
+        "examTip": "Checklists are often maintained and refined over time based on lessons learned from past projects.",
+        "relatedTopics": [
+          "Checklist-based testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.4.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-075",
+      "type": "multiple-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which of the following are experience-based test techniques? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Error guessing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Exploratory testing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Checklist-based testing",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Boundary value analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "State transition testing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Error guessing, exploratory testing, and checklist-based testing are the three experience-based techniques covered in CTFL.",
+        "incorrect": "Boundary value analysis and state transition testing are black-box (specification-based) techniques.",
+        "examTip": "Experience-based techniques rely heavily on tester skill, intuition, and knowledge rather than formal models.",
+        "relatedTopics": [
+          "Experience-based techniques"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.4.4",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-076",
+      "type": "dropdown-select",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentences about choosing test techniques.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Techniques that derive tests from a specification such as requirements, without looking at code, are called __________-box techniques.",
+          "options": [
+            "black",
+            "white",
+            "grey",
+            "clear"
+          ],
+          "correctAnswer": "black"
+        },
+        {
+          "id": "d2",
+          "prompt": "Techniques that derive tests from the internal structure of the code are called __________-box techniques.",
+          "options": [
+            "white",
+            "black",
+            "grey",
+            "clear"
+          ],
+          "correctAnswer": "white"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Some texts also refer to a combination as 'grey-box' testing, though this term is used less formally in CTFL.",
+        "relatedTopics": [
+          "Test technique categories"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.1.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-077",
+      "type": "drag-drop",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Drag each test technique to its correct category.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Black-box (specification-based)",
+          "acceptsItemIds": [
+            "i1",
+            "i2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "White-box (structure-based)",
+          "acceptsItemIds": [
+            "i3"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Experience-based",
+          "acceptsItemIds": [
+            "i4",
+            "i5"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "i1",
+          "text": "Decision table testing"
+        },
+        {
+          "id": "i2",
+          "text": "State transition testing"
+        },
+        {
+          "id": "i3",
+          "text": "Branch (decision) testing"
+        },
+        {
+          "id": "i4",
+          "text": "Exploratory testing"
+        },
+        {
+          "id": "i5",
+          "text": "Error guessing"
+        }
+      ],
+      "explanation": {
+        "correct": "Each item belongs to its category as defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus classification for these items.",
+        "examTip": "Sort each technique by whether it uses the specification, the code structure, or tester experience as its basis.",
+        "relatedTopics": [
+          "Test technique categories"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.1.3",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-078",
+      "type": "drag-drop",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Drag each scenario to the black-box technique it best illustrates.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Equivalence Partitioning",
+          "acceptsItemIds": [
+            "i1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Boundary Value Analysis",
+          "acceptsItemIds": [
+            "i2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Decision Table Testing",
+          "acceptsItemIds": [
+            "i3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "State Transition Testing",
+          "acceptsItemIds": [
+            "i4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "i1",
+          "text": "Grouping all invalid email formats into one class and testing a single representative value"
+        },
+        {
+          "id": "i2",
+          "text": "Testing a maximum file upload size of exactly 10MB, 10MB+1 byte, and 10MB-1 byte"
+        },
+        {
+          "id": "i3",
+          "text": "Testing all combinations of 'has coupon' and 'is member' to determine the discount applied"
+        },
+        {
+          "id": "i4",
+          "text": "Testing that a 'Draft' order can move to 'Submitted' but not directly to 'Delivered'"
+        }
+      ],
+      "explanation": {
+        "correct": "Each item belongs to its category as defined in the ISTQB CTFL syllabus.",
+        "incorrect": "Review the syllabus classification for these items.",
+        "examTip": "Match the scenario keywords ('range edge', 'combinations of conditions', 'states/transitions', 'groups of values') to the technique.",
+        "relatedTopics": [
+          "Black-box techniques"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.10",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-079",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An e-commerce discount engine applies a discount based on two independent conditions: whether the order total exceeds $100, and whether the customer holds a loyalty card. Each of the four combinations results in a different discount percentage.",
+      "questionText": "An e-commerce discount engine applies a discount based on two independent conditions: 'Order total > $100' and 'Customer has loyalty card'. The business rule table defines a distinct discount for each of the four possible combinations. Which technique is MOST appropriate to systematically design test cases here?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Decision table testing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "State transition testing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Boundary value analysis alone",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Exploratory testing alone",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Decision table testing is specifically designed to systematically cover combinations of independent conditions and their resulting actions, exactly matching this scenario.",
+        "incorrect": "State transition testing suits sequential state changes, not combinatorial business rules; BVA and exploratory testing alone would not systematically ensure all combinations are covered.",
+        "examTip": "Whenever you see 'combinations of conditions leading to different actions,' think decision table testing.",
+        "relatedTopics": [
+          "Decision table testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.11",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-080",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Which factor should MOST influence a test manager's choice between black-box, white-box, and experience-based techniques for a given testing task?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The personal preference of a single senior tester, regardless of context",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The test objectives, type of system, available test basis, risk level, and tester skill/knowledge",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Only the programming language used to build the system",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The technique that requires the least documentation, regardless of effectiveness",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Technique selection should be based on context: test objectives, the nature of the system, available test basis, level of risk, regulatory needs, and tester skills/knowledge.",
+        "incorrect": "Personal preference alone, programming language alone, or minimizing documentation are not the primary, holistic drivers described in the syllabus.",
+        "examTip": "The syllabus emphasizes a risk-based, context-driven approach to technique selection.",
+        "relatedTopics": [
+          "Test technique selection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.5.1",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-081",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "For a safety-critical embedded system requiring formal coverage evidence, which combination of techniques is MOST appropriate to include, in addition to black-box techniques?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only experience-based techniques, since they are fastest",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "White-box techniques such as statement and branch coverage, to provide structural coverage evidence",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "No additional techniques are needed beyond ad hoc testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Only checklist-based testing, since checklists are simplest",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Safety-critical systems often require demonstrable structural coverage (e.g., statement/branch coverage), making white-box techniques essential alongside black-box techniques.",
+        "incorrect": "Relying solely on experience-based or checklist-based testing would not provide the objective, measurable coverage evidence often mandated for safety-critical systems.",
+        "examTip": "High-risk and regulated domains typically mandate specific coverage criteria â€” this is a common scenario-based exam theme.",
+        "relatedTopics": [
+          "Test technique selection",
+          "White-box techniques"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.5.2",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-116",
+      "type": "dropdown-select",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "Complete the sentences describing coverage in white-box testing.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The percentage of executable statements that have been exercised by a test suite is called __________ coverage.",
+          "options": [
+            "statement",
+            "branch",
+            "path",
+            "condition"
+          ],
+          "correctAnswer": "statement"
+        },
+        {
+          "id": "d2",
+          "prompt": "The percentage of decision outcomes (true/false branches) that have been exercised by a test suite is called __________ coverage.",
+          "options": [
+            "branch",
+            "statement",
+            "requirements",
+            "risk"
+          ],
+          "correctAnswer": "branch"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each blank is completed using the precise ISTQB CTFL terminology.",
+        "incorrect": "Re-check the definitions in the syllabus glossary for these terms.",
+        "examTip": "Statement coverage and branch/decision coverage are the two structure-based coverage metrics in the CTFL syllabus.",
+        "relatedTopics": [
+          "White-box coverage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.3.5",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-117",
+      "type": "yes-no-statements",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "",
+      "questionText": "For each statement about equivalence partitioning, decide whether it is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Every partition should contain at least one representative value that is tested.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Equivalence partitions can apply to outputs and internal values, not only inputs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A valid partition and an invalid partition can never be adjacent to each other.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "Valid and invalid partitions are frequently adjacent â€” the boundary between them is exactly what boundary value analysis targets.",
+        "relatedTopics": [
+          "Equivalence partitioning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.12",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-118",
+      "type": "yes-no-statements",
+      "topicId": "test-techniques",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An online store offers free shipping for orders totaling $50 or more, and an additional 10% discount for orders totaling $200 or more. These two conditions apply independently of each other.",
+      "questionText": "An online store gives free shipping for orders of $50 or more, and a 10% discount for orders of $200 or more (both apply independently). Decide whether each statement about testing this rule is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Testing an order of exactly $50 tests a boundary value for the free shipping rule.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Testing an order of $200 alone is sufficient to verify both the free shipping and discount rules work correctly together.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A decision table could be used to systematically test the combination of the two independent discount conditions.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against the ISTQB CTFL syllabus definition.",
+        "incorrect": "Review the syllabus definitions for the concepts referenced in the statements above.",
+        "examTip": "A single test at $200 does confirm both individual thresholds are met, but does not by itself verify all combinations (e.g., an order below $50, an order between $50-$199, etc.) â€” a decision table would ensure combinations are systematically covered.",
+        "relatedTopics": [
+          "Boundary value analysis",
+          "Decision table testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.13",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-126",
+      "type": "single-choice",
+      "topicId": "test-techniques",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A hotel booking system allows guests to cancel a reservation for free up to 48 hours before check-in, charges 50% of the booking cost if cancelled within 48 hours of check-in, and gives no refund if cancelled after the check-in time has passed.",
+      "questionText": "A hotel booking system allows guests to cancel a reservation for free up to 48 hours before check-in, with a 50% charge if cancelled within 48 hours, and no refund if cancelled after check-in time. Which technique is BEST suited to deriving test cases for this time-based cancellation policy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "State transition testing, modeling reservation states such as Active, Cancelled-Free, Cancelled-Charged, and No-Refund",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Statement testing on the booking confirmation email template",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Checklist-based testing of the website's color scheme",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Use case testing focused only on the payment gateway integration",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "This policy is naturally modeled as states (Active, Cancelled-Free, Cancelled-Charged, No-Refund) with transitions triggered by the cancellation event at different points in time â€” a strong fit for state transition testing.",
+        "incorrect": "Statement testing addresses code structure, checklist-based testing of colors is unrelated to this business rule, and narrowly scoping to only the payment gateway would miss the cancellation timing logic itself.",
+        "examTip": "When a policy depends on 'where you are' in a process combined with time-based triggers, consider state transition testing.",
+        "relatedTopics": [
+          "State transition testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "FL-4.2.14",
+        "references": [
+          "https://www.istqb.org/certifications/certified-tester-foundation-level"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
 }

@@ -1,0 +1,1191 @@
+{
+  "certificationId": "dp-900",
+  "topicId": "data-concepts",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "dp900-001",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which type of data has a well-defined schema and is typically stored in rows and columns?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Structured data",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Unstructured data",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Semi-structured data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Binary large object data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Structured data conforms to a fixed schema of rows and columns, such as data stored in a relational table.",
+        "incorrect": "Unstructured and semi-structured data do not use a strict tabular schema; binary data has no inherent tabular structure.",
+        "examTip": "Remember the three data categories: structured, semi-structured, unstructured.",
+        "relatedTopics": [
+          "structured data",
+          "data formats"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-002",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which data format is considered semi-structured because it uses tags or key-value pairs rather than a fixed tabular schema?",
+      "options": [
+        {
+          "id": "A",
+          "text": "JSON",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A relational database table",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A CSV file with a header row",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A fixed-width text file",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "JSON documents use key-value pairs and nested elements, giving them a flexible structure that qualifies as semi-structured.",
+        "incorrect": "Relational tables and CSV files with headers are structured; fixed-width files are also structured by column position.",
+        "examTip": "XML and JSON are the classic examples of semi-structured data.",
+        "relatedTopics": [
+          "semi-structured data",
+          "JSON"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-003",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Photos, videos, and audio files are examples of which data category?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unstructured data",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Structured data",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Semi-structured data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Relational data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Media files have no predefined data model or tabular schema, making them unstructured data.",
+        "incorrect": "Structured and relational data require a defined schema; semi-structured data uses tags or markers, which media files do not.",
+        "examTip": "Unstructured data is often stored as blobs in object storage such as Azure Blob Storage.",
+        "relatedTopics": [
+          "unstructured data",
+          "Azure Blob Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-004",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "A retail company records every point-of-sale transaction the instant it happens so that inventory counts update immediately.",
+      "questionText": "Which processing approach is the company using?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stream (real-time) processing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Batch processing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Extract-load-transform at month end",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Offline archival processing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Processing each transaction as it occurs, with low latency, is characteristic of stream (real-time) processing.",
+        "incorrect": "Batch processing groups data and processes it on a schedule, which would not update inventory instantly.",
+        "examTip": "Look for words like 'immediately' or 'as it happens' to identify streaming scenarios.",
+        "relatedTopics": [
+          "stream processing",
+          "batch processing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-005",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "At the end of every night, a company collects the day's sales files and loads them into a reporting database in one scheduled job.",
+      "questionText": "Which processing approach best describes this scenario?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Batch processing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Stream processing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Real-time event processing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Online transaction processing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Collecting data over a period and processing it together on a schedule is the definition of batch processing.",
+        "incorrect": "Stream and real-time processing handle data continuously rather than in a single scheduled job.",
+        "examTip": "Batch jobs are typically scheduled (hourly, nightly) and process data in bulk.",
+        "relatedTopics": [
+          "batch processing",
+          "ETL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-006",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which workload type is optimized for a high volume of short, fast insert/update/delete transactions, such as recording sales orders?",
+      "options": [
+        {
+          "id": "A",
+          "text": "OLTP (Online Transaction Processing)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "OLAP (Online Analytical Processing)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Batch analytics",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data warehousing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "OLTP systems are designed for many small, fast transactions that create, read, update, and delete individual records.",
+        "incorrect": "OLAP and data warehousing are optimized for large-scale analytical queries over historical data, not individual transactions.",
+        "examTip": "OLTP = day-to-day operational data; OLAP = historical analysis and reporting.",
+        "relatedTopics": [
+          "OLTP",
+          "OLAP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-007",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "A business intelligence team runs complex queries over years of historical sales data to identify trends. Which workload type does this represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "OLAP (Online Analytical Processing)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "OLTP (Online Transaction Processing)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Transactional replication",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Change data capture",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "OLAP workloads aggregate and analyze large volumes of historical data to support business intelligence and reporting.",
+        "incorrect": "OLTP handles operational transactions rather than large analytical queries.",
+        "examTip": "Data warehouses are typically built to support OLAP workloads.",
+        "relatedTopics": [
+          "OLAP",
+          "data warehouse"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-008",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "In an ELT (Extract, Load, Transform) pipeline, at which stage does data transformation occur relative to loading?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transformation happens after the data is loaded into the target store",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Transformation happens before extraction begins",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Transformation happens in a separate staging server before extraction",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Transformation and extraction occur simultaneously, and loading never occurs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In ELT, raw data is loaded into the target system first, and transformation is performed afterward using the target's processing power.",
+        "incorrect": "The other options misplace the order of operations or omit the load step, which contradicts the ELT pattern.",
+        "examTip": "Compare ELT to ETL, where transformation happens in a staging area before loading into the target.",
+        "relatedTopics": [
+          "ELT",
+          "ETL",
+          "Azure Synapse Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-009",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which statement best distinguishes a data lake from a data warehouse?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A data lake stores raw data in its native format at any scale, while a data warehouse stores processed, structured data optimized for querying",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A data lake only stores relational tables, while a data warehouse only stores files",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A data lake is always more expensive to operate than a data warehouse",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A data warehouse cannot store historical data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data lakes hold raw, unprocessed data of any type and scale, whereas data warehouses hold curated, structured data modeled for reporting and analysis.",
+        "incorrect": "The other options reverse or misstate the actual characteristics of each store.",
+        "examTip": "Data lakes are schema-on-read; data warehouses are schema-on-write.",
+        "relatedTopics": [
+          "data lake",
+          "data warehouse"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-010",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which job role is primarily responsible for designing, implementing, and maintaining data pipelines that move and transform data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data engineer",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Database administrator",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Data analyst",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Solutions architect",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data engineers build and manage the pipelines and infrastructure used to ingest, transform, and move data.",
+        "incorrect": "A DBA focuses on operating and securing databases; a data analyst interprets data to produce insights; a solutions architect designs overall system architecture.",
+        "examTip": "DP-900 distinguishes data engineer, DBA, and data analyst roles by their primary responsibilities.",
+        "relatedTopics": [
+          "data roles",
+          "data engineering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-011",
+      "type": "multiple-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which two of the following are examples of unstructured data? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "A video recording",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A scanned PDF image with no text layer",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A relational table of customer orders",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A CSV file with a fixed set of columns",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Videos and image-only scanned documents have no predefined schema, making them unstructured data.",
+        "incorrect": "Relational tables and CSV files with fixed columns follow a defined tabular schema, so they are structured.",
+        "examTip": "If the data has no rows/columns or tags describing it, it's unstructured.",
+        "relatedTopics": [
+          "unstructured data"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-012",
+      "type": "multiple-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two characteristics are typical of OLTP systems? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "High volume of short read/write transactions",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Data is normalized to reduce redundancy",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Queries typically scan years of aggregated history",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Optimized primarily for business intelligence dashboards",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "OLTP systems handle many small transactions and use normalized schemas to keep data consistent and reduce duplication.",
+        "incorrect": "Scanning years of aggregated history and BI dashboards describe OLAP workloads, not OLTP.",
+        "examTip": "Normalization and transactional speed are hallmarks of OLTP design.",
+        "relatedTopics": [
+          "OLTP",
+          "normalization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-013",
+      "type": "multiple-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two of the following are common file formats used to store data in a data lake? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Parquet",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Avro",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A proprietary compiled binary application",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A printed report",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Parquet and Avro are widely used columnar/row-based file formats for storing structured and semi-structured data efficiently in data lakes.",
+        "incorrect": "Compiled binaries and printed reports are not data storage formats used in data lakes.",
+        "examTip": "Know Parquet, Avro, ORC, JSON, and CSV as common data lake formats.",
+        "relatedTopics": [
+          "data lake",
+          "file formats"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-014",
+      "type": "multiple-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two statements about ETL pipelines are correct? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data is transformed in a staging area before it is loaded into the target store",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ETL is commonly used when the target system has limited processing power for transformations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ETL always loads raw, untransformed data directly into the target",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ETL cannot be used with relational data warehouses",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ETL transforms data before loading, which is useful when the destination system should only receive clean, modeled data.",
+        "incorrect": "Loading raw untransformed data describes ELT, and ETL is very commonly used with relational data warehouses.",
+        "examTip": "ETL: Extract -> Transform (staging) -> Load. ELT: Extract -> Load -> Transform (in target).",
+        "relatedTopics": [
+          "ETL",
+          "data warehouse"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-015",
+      "type": "yes-no-statements",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each statement about data types, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A relational database table is an example of structured data.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A JSON document with nested key-value pairs is an example of unstructured data.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "An MP4 video file is an example of unstructured data.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Relational tables are structured; JSON is semi-structured, not unstructured; video files are unstructured.",
+        "incorrect": "Double-check the definitions: structured has a fixed schema, semi-structured has tags/markers, unstructured has none.",
+        "examTip": "JSON and XML are semi-structured, not unstructured — a common trick on the exam.",
+        "relatedTopics": [
+          "data types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-016",
+      "type": "yes-no-statements",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about OLTP and OLAP, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "OLTP systems are typically used to process a bank's individual ATM withdrawal transactions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "OLAP systems are optimized for very fast single-row inserts.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "OLAP workloads commonly aggregate data across multiple dimensions, such as time and region.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "ATM withdrawals are individual transactions handled by OLTP; OLAP is optimized for analytical aggregation, not single-row inserts.",
+        "incorrect": "Fast single-row inserts describe OLTP, not OLAP.",
+        "examTip": "Associate OLAP with multi-dimensional analysis (cubes, star schemas).",
+        "relatedTopics": [
+          "OLTP",
+          "OLAP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-017",
+      "type": "yes-no-statements",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about batch and stream processing, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Stream processing typically processes data with lower latency than batch processing.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Batch processing is best suited for scenarios requiring an immediate response to each event.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Stream Analytics can be used to process data from Azure Event Hubs in near real time.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Stream processing minimizes latency by handling events as they arrive; batch processing groups data and is not suited to immediate per-event responses.",
+        "incorrect": "Immediate response to each event requires streaming, not batch.",
+        "examTip": "Azure Stream Analytics + Event Hubs is a classic real-time analytics pairing.",
+        "relatedTopics": [
+          "stream processing",
+          "Azure Stream Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-018",
+      "type": "yes-no-statements",
+      "topicId": "data-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement about data lakes and data warehouses, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A data lake applies schema-on-read, meaning structure is applied when the data is queried.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A data warehouse applies schema-on-write, meaning structure is defined before data is loaded.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Data lakes can only store data that has already been cleaned and modeled.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Data lakes defer schema definition until read time, while warehouses require a defined schema before data is written; data lakes can store raw, uncleaned data of any type.",
+        "incorrect": "Requiring cleaned, modeled data contradicts the core purpose of a data lake, which stores raw data at scale.",
+        "examTip": "Schema-on-read = data lake; schema-on-write = data warehouse.",
+        "relatedTopics": [
+          "data lake",
+          "data warehouse",
+          "schema"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-019",
+      "type": "dropdown-select",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the sentence by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Data that is organized into rows and columns with a fixed schema is called ____ data.",
+          "options": [
+            "structured",
+            "unstructured",
+            "semi-structured"
+          ],
+          "correctAnswer": "structured"
+        },
+        {
+          "id": "d2",
+          "prompt": "Data such as images and audio files with no predefined model is called ____ data.",
+          "options": [
+            "structured",
+            "unstructured",
+            "relational"
+          ],
+          "correctAnswer": "unstructured"
+        }
+      ],
+      "explanation": {
+        "correct": "Structured data follows a fixed tabular schema; unstructured data has no predefined model.",
+        "incorrect": "Review the definitions of each data category before selecting an answer.",
+        "examTip": "Match each data example to structured, semi-structured, or unstructured.",
+        "relatedTopics": [
+          "data types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-020",
+      "type": "dropdown-select",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each sentence about data processing by choosing the correct option.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Processing a large set of collected records on a fixed schedule is known as ____ processing.",
+          "options": [
+            "batch",
+            "streaming",
+            "transactional"
+          ],
+          "correctAnswer": "batch"
+        },
+        {
+          "id": "d2",
+          "prompt": "Processing individual events continuously as they arrive is known as ____ processing.",
+          "options": [
+            "batch",
+            "streaming",
+            "archival"
+          ],
+          "correctAnswer": "streaming"
+        }
+      ],
+      "explanation": {
+        "correct": "Batch processing handles grouped data on a schedule; streaming processes events continuously as they occur.",
+        "incorrect": "Transactional and archival do not describe the timing pattern being asked about here.",
+        "examTip": "Think schedule (batch) vs continuous (stream).",
+        "relatedTopics": [
+          "batch processing",
+          "stream processing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-021",
+      "type": "dropdown-select",
+      "topicId": "data-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the sentences describing ETL and ELT by selecting the correct option in each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "In an ____ pipeline, data is transformed before it is loaded into the target system.",
+          "options": [
+            "ETL",
+            "ELT",
+            "OLTP"
+          ],
+          "correctAnswer": "ETL"
+        },
+        {
+          "id": "d2",
+          "prompt": "In an ____ pipeline, raw data is loaded first and transformation happens inside the target system.",
+          "options": [
+            "ETL",
+            "ELT",
+            "OLAP"
+          ],
+          "correctAnswer": "ELT"
+        }
+      ],
+      "explanation": {
+        "correct": "ETL transforms data prior to loading; ELT loads raw data first and transforms it within the destination system.",
+        "incorrect": "OLTP and OLAP describe workload types, not pipeline ordering.",
+        "examTip": "The letter order in the acronym tells you the sequence of operations.",
+        "relatedTopics": [
+          "ETL",
+          "ELT"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-022",
+      "type": "ordering",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the steps of a typical ETL pipeline in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Extract data from source systems",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Transform data in a staging area",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Load transformed data into the target data store",
+          "correctPosition": 3
+        }
+      ],
+      "explanation": {
+        "correct": "ETL follows Extract, then Transform, then Load, in that order.",
+        "incorrect": "Reordering the steps would not match the standard ETL pattern.",
+        "examTip": "The acronym ETL literally spells out the sequence.",
+        "relatedTopics": [
+          "ETL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-023",
+      "type": "ordering",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Place the steps of a typical ELT pipeline in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Extract data from source systems",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Load raw data into the target data store",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Transform data within the target data store",
+          "correctPosition": 3
+        }
+      ],
+      "explanation": {
+        "correct": "ELT follows Extract, then Load, then Transform, in that order.",
+        "incorrect": "The transformation step comes last in ELT, after loading, unlike in ETL.",
+        "examTip": "ELT is common in cloud data warehouses like Azure Synapse Analytics that have strong compute power.",
+        "relatedTopics": [
+          "ELT"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-024",
+      "type": "drag-drop",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each data example to the category that best describes it.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Structured",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Semi-structured",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Unstructured",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "A relational table of employee records"
+        },
+        {
+          "id": "item2",
+          "text": "A JSON document describing a customer order"
+        },
+        {
+          "id": "item3",
+          "text": "A collection of scanned image files"
+        }
+      ],
+      "explanation": {
+        "correct": "Relational tables are structured, JSON documents are semi-structured, and scanned images are unstructured.",
+        "incorrect": "Review the defining characteristics of each data category if any item was misplaced.",
+        "examTip": "Look for a fixed schema (structured), tags/keys (semi-structured), or no schema at all (unstructured).",
+        "relatedTopics": [
+          "data types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-025",
+      "type": "drag-drop",
+      "topicId": "data-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each workload characteristic to the workload type it best describes.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "OLTP",
+          "acceptsItemIds": [
+            "item1",
+            "item3"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "OLAP",
+          "acceptsItemIds": [
+            "item2",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Handles a high volume of short insert and update transactions"
+        },
+        {
+          "id": "item2",
+          "text": "Aggregates historical data for trend analysis"
+        },
+        {
+          "id": "item3",
+          "text": "Uses a highly normalized schema"
+        },
+        {
+          "id": "item4",
+          "text": "Often uses a star schema with fact and dimension tables"
+        }
+      ],
+      "explanation": {
+        "correct": "OLTP handles frequent, small transactions on normalized schemas; OLAP aggregates historical data, often using star schemas.",
+        "incorrect": "Review OLTP vs OLAP characteristics if an item was placed incorrectly.",
+        "examTip": "Star schemas with fact/dimension tables are a strong signal of OLAP/data warehouse design.",
+        "relatedTopics": [
+          "OLTP",
+          "OLAP",
+          "star schema"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

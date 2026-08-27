@@ -1,0 +1,660 @@
+{
+  "certificationId": "az-204",
+  "topicId": "monitoring",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "az204-005",
+      "type": "ordering",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps for setting up Availability Tests in Application Insights:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create an Application Insights resource",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Navigate to the Availability pane",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Add a new URL ping test",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Configure alert rules",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "First create the resource, then add the test, configure alerts.",
+        "incorrect": "Must create resource before tests.",
+        "examTip": "Availability tests help monitor endpoint responsiveness.",
+        "relatedTopics": [
+          "Application Insights"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-014",
+      "type": "multiple-choice",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Application Insights features can help diagnose performance issues in a web app? (Choose three.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Live Metrics",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Availability tests",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Profiler",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Snapshot Debugger",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Smart Detection",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Live Metrics, Profiler, and Snapshot Debugger help with real-time and detailed performance analysis.",
+        "incorrect": "Availability tests check uptime; Smart Detection alerts anomalies.",
+        "examTip": "Use Profiler for CPU and Snapshot for exceptions.",
+        "relatedTopics": [
+          "Application Insights performance tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-022",
+      "type": "dropdown-select",
+      "topicId": "monitoring",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You need to query application logs that are stored in Azure Log Analytics. Which language should you use?",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Query language",
+          "options": [
+            "SQL",
+            "KQL",
+            "SPARQL",
+            "XPath"
+          ],
+          "correctAnswer": "KQL"
+        }
+      ],
+      "explanation": {
+        "correct": "KQL is the standard language for Azure Log Analytics.",
+        "incorrect": "SQL works in Azure SQL, not Log Analytics; SPARQL and XPath are for other uses.",
+        "examTip": "Use KQL for powerful diagnostics queries.",
+        "relatedTopics": [
+          "Azure Monitor log queries"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-030",
+      "type": "drag-drop",
+      "topicId": "monitoring",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Classify each monitoring tool:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Application performance monitoring (APM)",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Infrastructure monitoring",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Log analytics",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Application Insights"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Monitor for VMs"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Log Analytics workspace"
+        }
+      ],
+      "explanation": {
+        "correct": "Application Insights is APM; VM monitoring is infrastructure; Log Analytics is for logs.",
+        "incorrect": "These services are often confused.",
+        "examTip": "Log Analytics is the data ingestion layer.",
+        "relatedTopics": [
+          "Azure Monitor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-037",
+      "type": "single-choice",
+      "topicId": "monitoring",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which tool allows you to track custom events in your application for diagnostics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Activity Log",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Application Insights",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Security Center",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Backup",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Application Insights supports custom events via `TrackEvent`.",
+        "incorrect": "Activity Log is for Azure operations; Security Center is for threat protection.",
+        "examTip": "Use custom telemetry to track business logic.",
+        "relatedTopics": [
+          "Application Insights"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-044",
+      "type": "multiple-choice",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are valid Application Insights telemetry types? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Trace",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Metric",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Blob",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Queue",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Trace and Metric are standard telemetry types.",
+        "incorrect": "Blob and Queue are storage, not telemetry.",
+        "examTip": "Use `TrackTrace` for diagnostics.",
+        "relatedTopics": [
+          "Application Insights telemetry"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-052",
+      "type": "dropdown-select",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "To detect and diagnose failures in your web app, you should create _____ in Application Insights.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Tool",
+          "options": [
+            "Availability tests",
+            "Smart Detection",
+            "Workbooks",
+            "Live Metrics"
+          ],
+          "correctAnswer": "Availability tests"
+        }
+      ],
+      "explanation": {
+        "correct": "Availability tests proactively check endpoint availability.",
+        "incorrect": "Smart Detection is for anomalies; Workbooks for dashboards.",
+        "examTip": "Set up multi-step tests for complex scenarios.",
+        "relatedTopics": [
+          "Application Insights availability"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-060",
+      "type": "drag-drop",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each Application Insights component with its purpose:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Track exceptions",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Visualize telemetry",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Monitor performance counters",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Telemetry client"
+        },
+        {
+          "id": "item2",
+          "text": "Workbook"
+        },
+        {
+          "id": "item3",
+          "text": "Live Metrics"
+        }
+      ],
+      "explanation": {
+        "correct": "Telemetry client tracks exceptions; Workbooks visualize; Live Metrics monitors counters.",
+        "incorrect": "These components have specific roles.",
+        "examTip": "Workbooks are customizable dashboards.",
+        "relatedTopics": [
+          "Application Insights"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-067",
+      "type": "single-choice",
+      "topicId": "monitoring",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does the Application Insights 'Failures' tab primarily show?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Failed requests and exceptions",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Slow dependencies",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Custom events",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Availability results",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Failures tab aggregates exceptions and failed requests.",
+        "incorrect": "Performance covers dependencies; availability covers tests.",
+        "examTip": "Use failure analytics to find root causes.",
+        "relatedTopics": [
+          "Application Insights failures"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-075",
+      "type": "yes-no-statements",
+      "topicId": "monitoring",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You are using Azure Monitor. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Monitor collects metrics from Azure resources.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Monitor can send alerts based on metrics.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Azure Monitor is only for virtual machines.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Monitor works across Azure resources.",
+        "incorrect": "It's not limited to VMs.",
+        "examTip": "Set up metric alerts for proactive monitoring.",
+        "relatedTopics": [
+          "Azure Monitor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-082",
+      "type": "dropdown-select",
+      "topicId": "monitoring",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "To monitor the health of an Azure App Service, you should enable _____.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Feature",
+          "options": [
+            "Application Insights",
+            "Log Analytics",
+            "Activity Log",
+            "Diagnostic Settings"
+          ],
+          "correctAnswer": "Application Insights"
+        }
+      ],
+      "explanation": {
+        "correct": "Application Insights provides deep app health monitoring.",
+        "incorrect": "Log Analytics is for log querying; Activity Log is for control plane.",
+        "examTip": "Enable Application Insights from the App Service.",
+        "relatedTopics": [
+          "Application Insights"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-090",
+      "type": "drag-drop",
+      "topicId": "monitoring",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each KQL operator with its use:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Filter rows",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Aggregate data",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Sort results",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "where"
+        },
+        {
+          "id": "item2",
+          "text": "summarize"
+        },
+        {
+          "id": "item3",
+          "text": "order by"
+        }
+      ],
+      "explanation": {
+        "correct": "where filters; summarize aggregates; order by sorts.",
+        "incorrect": "Misusing operators is common.",
+        "examTip": "Use `project` for select columns.",
+        "relatedTopics": [
+          "KQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-095",
+      "type": "ordering",
+      "topicId": "monitoring",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Order the steps to create a metric alert in Azure Monitor:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Select the resource",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Choose a metric",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Set the threshold condition",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Configure an action group",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Resource, metric, threshold, action.",
+        "incorrect": "Action group should be configured last.",
+        "examTip": "Action groups send notifications.",
+        "relatedTopics": [
+          "Azure Monitor alerts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-100",
+      "type": "dropdown-select",
+      "topicId": "monitoring",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "To track a specific event in Application Insights, you should call the `TrackEvent` method with a _____.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Parameter",
+          "options": [
+            "name",
+            "properties",
+            "metrics",
+            "timestamp"
+          ],
+          "correctAnswer": "name"
+        }
+      ],
+      "explanation": {
+        "correct": "The event name is required to identify the event.",
+        "incorrect": "Properties and metrics are optional.",
+        "examTip": "Use meaningful names for events.",
+        "relatedTopics": [
+          "Application Insights custom events"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Monitor Azure solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

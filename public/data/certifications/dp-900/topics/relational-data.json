@@ -1,0 +1,1349 @@
+{
+  "certificationId": "dp-900",
+  "topicId": "relational-data",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "dp900-026",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "In a relational database, what is used to uniquely identify each row in a table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A primary key",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A foreign key",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A clustered index only",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A view",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A primary key is a column or set of columns whose values uniquely identify every row in a table.",
+        "incorrect": "A foreign key references another table's primary key; indexes speed up lookups but don't define uniqueness by themselves; views are virtual tables.",
+        "examTip": "Every table should have exactly one primary key.",
+        "relatedTopics": [
+          "primary key",
+          "relational concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-027",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of a foreign key in a relational database?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To create a link between two tables by referencing the primary key of another table",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To uniquely identify every row in the same table",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To compress data for storage efficiency",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To encrypt sensitive columns",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A foreign key establishes a relationship between two tables by referring to the primary key column of another table.",
+        "incorrect": "Uniquely identifying rows is the primary key's role; compression and encryption are unrelated concepts.",
+        "examTip": "Foreign keys enforce referential integrity between related tables.",
+        "relatedTopics": [
+          "foreign key",
+          "relational concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-028",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which SQL statement is used to retrieve rows from one or more tables?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SELECT",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "INSERT",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "UPDATE",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DELETE",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SELECT is a Data Manipulation Language (DML) statement used to query and retrieve rows.",
+        "incorrect": "INSERT adds rows, UPDATE modifies rows, and DELETE removes rows — none of these retrieve data.",
+        "examTip": "SELECT, INSERT, UPDATE, DELETE make up the core DML statements.",
+        "relatedTopics": [
+          "SQL",
+          "DML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-029",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which SQL clause is used to filter rows based on a condition before any grouping occurs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "WHERE",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "GROUP BY",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "ORDER BY",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "HAVING",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "WHERE filters individual rows before any aggregation or grouping takes place.",
+        "incorrect": "GROUP BY aggregates rows, ORDER BY sorts results, and HAVING filters after grouping — none filter rows pre-aggregation like WHERE.",
+        "examTip": "Remember the logical order: FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY.",
+        "relatedTopics": [
+          "SQL",
+          "WHERE clause"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-030",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which SQL clause combines rows from two tables based on a related column between them?",
+      "options": [
+        {
+          "id": "A",
+          "text": "JOIN",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "UNION",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "GROUP BY",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DISTINCT",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "JOIN combines columns from two or more tables based on a related column, typically a foreign key to primary key relationship.",
+        "incorrect": "UNION stacks result sets vertically, GROUP BY aggregates rows, and DISTINCT removes duplicate rows.",
+        "examTip": "INNER JOIN, LEFT JOIN, and RIGHT JOIN are common join types to know.",
+        "relatedTopics": [
+          "SQL",
+          "JOIN"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-031",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which SQL clause is used to filter groups of rows after a GROUP BY aggregation has been applied?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HAVING",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "WHERE",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "ORDER BY",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SELECT DISTINCT",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "HAVING filters aggregated groups after GROUP BY has run, such as filtering for groups with a count greater than a value.",
+        "incorrect": "WHERE filters rows before grouping and cannot reference aggregate functions in most databases.",
+        "examTip": "Use WHERE for row-level filters and HAVING for group-level filters.",
+        "relatedTopics": [
+          "SQL",
+          "HAVING clause"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-032",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the main purpose of normalizing a relational database schema?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To reduce data redundancy and improve data integrity",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To store all data in a single large table for simplicity",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To eliminate the need for primary keys",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To convert structured data into unstructured data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Normalization organizes data into related tables to minimize duplication and maintain consistency.",
+        "incorrect": "Normalization typically results in more tables, not fewer, and does not remove the need for keys.",
+        "examTip": "Common normal forms include 1NF, 2NF, and 3NF, each reducing a specific type of redundancy.",
+        "relatedTopics": [
+          "normalization",
+          "relational design"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-033",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the primary benefit of adding an index to a frequently queried column?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It speeds up data retrieval for queries that filter or sort on that column",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "It automatically normalizes the table",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "It removes the need for a primary key",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It converts the table into a NoSQL structure",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Indexes create an efficient lookup structure that speeds up read queries filtering or sorting on the indexed column.",
+        "incorrect": "Indexes don't perform normalization, replace primary keys, or change the underlying data model type.",
+        "examTip": "Indexes speed up reads but can slow down writes since they must be maintained.",
+        "relatedTopics": [
+          "indexes",
+          "query performance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-034",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service is a fully managed relational database offering that supports near 100% compatibility with SQL Server, including cross-database queries and SQL Agent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure SQL Managed Instance",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure SQL Database (single database)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Cosmos DB",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure SQL Managed Instance offers near-complete SQL Server engine compatibility, including features like SQL Server Agent and cross-database queries.",
+        "incorrect": "Azure SQL Database (single database) has some feature limitations compared to Managed Instance; Cosmos DB and Table Storage are non-relational services.",
+        "examTip": "Managed Instance is aimed at 'lift and shift' migrations of on-premises SQL Server.",
+        "relatedTopics": [
+          "Azure SQL Managed Instance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-035",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "A startup wants a fully managed relational database in Azure with minimal administrative overhead, and it does not need full SQL Server instance-level features like SQL Agent.",
+      "questionText": "Which Azure service is the best fit for this scenario?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure SQL Database (single database)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure SQL Managed Instance",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "SQL Server on an Azure Virtual Machine",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Cosmos DB",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure SQL Database (single database) is a fully managed PaaS offering ideal for new applications that don't require instance-level SQL Server features.",
+        "incorrect": "Managed Instance and SQL Server on a VM provide more instance-level control but at higher management overhead; Cosmos DB is non-relational.",
+        "examTip": "Use SQL Database for new cloud-native apps, Managed Instance for lift-and-shift, and SQL on VM for full OS/instance control.",
+        "relatedTopics": [
+          "Azure SQL Database"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-036",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service provides a fully managed, open-source relational database compatible with the MySQL engine?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Database for MySQL",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure SQL Managed Instance",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Cosmos DB for MongoDB",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Database for MySQL is a managed service based on the community edition of the MySQL engine.",
+        "incorrect": "Managed Instance is SQL Server-based; Cosmos DB's MongoDB API emulates MongoDB, not MySQL; Table Storage is a NoSQL key-value store.",
+        "examTip": "Azure offers managed open-source database services for MySQL, PostgreSQL, and MariaDB.",
+        "relatedTopics": [
+          "Azure Database for MySQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-037",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure Database for PostgreSQL deployment option is designed for large-scale workloads by horizontally scaling across multiple nodes using sharding?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Cosmos DB for PostgreSQL (formerly Hyperscale/Citus)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Database for PostgreSQL - Single Server (retired option)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Table Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Blob Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Hyperscale (Citus) deployment, now offered as Azure Cosmos DB for PostgreSQL, shards data across multiple nodes for horizontal scale-out.",
+        "incorrect": "Single Server does not shard data across nodes; Table Storage and Blob Storage are unrelated non-relational services.",
+        "examTip": "Sharding across nodes is the key differentiator of the Hyperscale (Citus) option.",
+        "relatedTopics": [
+          "Azure Database for PostgreSQL",
+          "sharding"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-038",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company is migrating an on-premises SQL Server instance that relies heavily on SQL Server Agent jobs, cross-database queries, and CLR integration. They want to move to Azure with the least amount of application rework.",
+      "questionText": "Which Azure data service should they choose?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure SQL Managed Instance",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure SQL Database (single database)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Cosmos DB",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Database for MySQL",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Managed Instance supports instance-scoped features like SQL Server Agent, cross-database queries, and CLR, making migration easier with minimal changes.",
+        "incorrect": "Single database lacks some instance-level features; Cosmos DB and MySQL are not SQL Server compatible.",
+        "examTip": "Instance-level features (Agent jobs, cross-database queries, CLR) point to Managed Instance over single database.",
+        "relatedTopics": [
+          "Azure SQL Managed Instance",
+          "migration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-039",
+      "type": "multiple-choice",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two of the following are examples of Data Definition Language (DDL) statements in SQL? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "CREATE TABLE",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ALTER TABLE",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SELECT",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "UPDATE",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "CREATE and ALTER are DDL statements that define or modify database object structures.",
+        "incorrect": "SELECT and UPDATE are DML statements that operate on data, not on schema definitions.",
+        "examTip": "DDL = structure (CREATE, ALTER, DROP); DML = data (SELECT, INSERT, UPDATE, DELETE).",
+        "relatedTopics": [
+          "SQL",
+          "DDL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-040",
+      "type": "multiple-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which two of the following are managed relational database services available in Azure? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure SQL Database",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Database for PostgreSQL",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Blob Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Cosmos DB for Table",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure SQL Database and Azure Database for PostgreSQL are both managed relational database offerings.",
+        "incorrect": "Blob Storage and Cosmos DB's Table API are non-relational storage services.",
+        "examTip": "Relational Azure services: SQL Database, SQL Managed Instance, SQL on VM, PostgreSQL, MySQL.",
+        "relatedTopics": [
+          "Azure relational services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-041",
+      "type": "multiple-choice",
+      "topicId": "relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which two statements about database normalization are correct? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "First normal form (1NF) requires that each column contain atomic, indivisible values",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Normalization can reduce data redundancy by splitting data into related tables",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Normalization always improves read query performance",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A fully normalized database never needs joins",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "1NF requires atomic column values, and normalization reduces redundancy by splitting data across related tables.",
+        "incorrect": "Normalization can sometimes require more joins, potentially reducing read performance, and joins are frequently needed in normalized schemas.",
+        "examTip": "Normalization favors data integrity; denormalization favors read performance.",
+        "relatedTopics": [
+          "normalization",
+          "1NF"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-042",
+      "type": "multiple-choice",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two SQL keywords would you use together to sort the result of a query by a column in descending order?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ORDER BY",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "DESC",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "GROUP BY",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DISTINCT",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ORDER BY specifies the sort column, and DESC specifies descending order.",
+        "incorrect": "GROUP BY aggregates rows and DISTINCT removes duplicates; neither controls sort direction.",
+        "examTip": "Default sort order is ascending (ASC) unless DESC is specified.",
+        "relatedTopics": [
+          "SQL",
+          "ORDER BY"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-043",
+      "type": "yes-no-statements",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each statement about relational database concepts, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A table can have more than one foreign key.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A table can have more than one primary key.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A view is a virtual table based on the result of a SQL query.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Tables can have multiple foreign keys referencing different tables, but only one primary key; a view is indeed a virtual, query-based table.",
+        "incorrect": "A table can only have a single primary key, though that key may be composed of multiple columns.",
+        "examTip": "A composite primary key uses multiple columns but is still one key.",
+        "relatedTopics": [
+          "primary key",
+          "foreign key",
+          "views"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-044",
+      "type": "yes-no-statements",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each SQL statement description, select Yes if it correctly describes the keyword, or No if it does not.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The WHERE clause can filter rows using conditions on column values.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The GROUP BY clause is used to sort the final result set alphabetically.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "An INNER JOIN returns only rows that have matching values in both joined tables.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "WHERE filters rows on conditions; INNER JOIN returns only matching rows between tables. GROUP BY aggregates data, it does not sort results (ORDER BY does that).",
+        "incorrect": "Sorting the final result set is the role of ORDER BY, not GROUP BY.",
+        "examTip": "Don't confuse GROUP BY (aggregation) with ORDER BY (sorting).",
+        "relatedTopics": [
+          "SQL clauses",
+          "JOIN"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-045",
+      "type": "yes-no-statements",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about Azure relational database services, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure SQL Managed Instance supports SQL Server Agent jobs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure SQL Database (single database) is a good fit for a lift-and-shift migration that needs full instance-level SQL Server features.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Database for PostgreSQL is a managed relational database service.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Managed Instance supports SQL Agent; single database lacks some instance-level features, making Managed Instance the better lift-and-shift target; PostgreSQL is indeed a managed relational service.",
+        "incorrect": "Instance-level feature requirements point away from single database toward Managed Instance.",
+        "examTip": "Match migration requirements to the Azure SQL deployment option that supports the needed features.",
+        "relatedTopics": [
+          "Azure SQL Database",
+          "Azure SQL Managed Instance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-046",
+      "type": "yes-no-statements",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A DBA notices that a large reporting table has slow query performance and is considering adding indexes to speed up read queries.",
+      "questionText": "For each statement about indexes, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A clustered index determines the physical order in which rows are stored in a table.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A table can have multiple clustered indexes.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Adding many indexes can slow down insert and update operations because indexes must also be maintained.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "A clustered index defines physical row order and a table can have only one; excessive indexing adds write overhead since each index must be updated.",
+        "incorrect": "Only one clustered index is allowed per table because it dictates physical storage order.",
+        "examTip": "A table can have many non-clustered indexes but only one clustered index.",
+        "relatedTopics": [
+          "indexes",
+          "clustered index"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-047",
+      "type": "dropdown-select",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the SQL statement description by choosing the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To retrieve rows from a table, use the ____ statement.",
+          "options": [
+            "SELECT",
+            "INSERT",
+            "DELETE"
+          ],
+          "correctAnswer": "SELECT"
+        },
+        {
+          "id": "d2",
+          "prompt": "To add a new row to a table, use the ____ statement.",
+          "options": [
+            "SELECT",
+            "INSERT",
+            "UPDATE"
+          ],
+          "correctAnswer": "INSERT"
+        }
+      ],
+      "explanation": {
+        "correct": "SELECT retrieves data, and INSERT adds new rows to a table.",
+        "incorrect": "UPDATE modifies existing rows and DELETE removes rows; neither adds new rows.",
+        "examTip": "Know the four core DML verbs: SELECT, INSERT, UPDATE, DELETE.",
+        "relatedTopics": [
+          "SQL",
+          "DML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-048",
+      "type": "dropdown-select",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the sentences about Azure relational services using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "____ is best suited for lift-and-shift migrations requiring near-full SQL Server instance compatibility.",
+          "options": [
+            "Azure SQL Managed Instance",
+            "Azure SQL Database (single database)",
+            "Azure Cosmos DB"
+          ],
+          "correctAnswer": "Azure SQL Managed Instance"
+        },
+        {
+          "id": "d2",
+          "prompt": "____ is a fully managed, open-source relational database service compatible with the MySQL engine.",
+          "options": [
+            "Azure Database for MySQL",
+            "Azure Table Storage",
+            "Azure Blob Storage"
+          ],
+          "correctAnswer": "Azure Database for MySQL"
+        }
+      ],
+      "explanation": {
+        "correct": "Managed Instance targets lift-and-shift migrations; Azure Database for MySQL is the managed MySQL-compatible offering.",
+        "incorrect": "Cosmos DB, Table Storage, and Blob Storage are non-relational services.",
+        "examTip": "Match each Azure data service to its intended workload and compatibility level.",
+        "relatedTopics": [
+          "Azure SQL Managed Instance",
+          "Azure Database for MySQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-049",
+      "type": "dropdown-select",
+      "topicId": "relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the sentences about SQL clause execution order using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The ____ clause filters individual rows before any grouping occurs.",
+          "options": [
+            "WHERE",
+            "HAVING",
+            "ORDER BY"
+          ],
+          "correctAnswer": "WHERE"
+        },
+        {
+          "id": "d2",
+          "prompt": "The ____ clause filters groups of rows after aggregation with GROUP BY.",
+          "options": [
+            "WHERE",
+            "HAVING",
+            "SELECT"
+          ],
+          "correctAnswer": "HAVING"
+        }
+      ],
+      "explanation": {
+        "correct": "WHERE filters rows before grouping; HAVING filters aggregated groups after GROUP BY.",
+        "incorrect": "ORDER BY sorts results and SELECT chooses columns; neither filters rows or groups.",
+        "examTip": "Logical query order: FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY.",
+        "relatedTopics": [
+          "SQL",
+          "query execution order"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-050",
+      "type": "ordering",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following SQL query clauses in the order they logically execute (not the order they are typed).",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "FROM (identify source tables)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "WHERE (filter individual rows)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "GROUP BY (aggregate rows into groups)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "HAVING (filter aggregated groups)",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "ORDER BY (sort the final result)",
+          "correctPosition": 5
+        }
+      ],
+      "explanation": {
+        "correct": "SQL logically processes FROM, then WHERE, then GROUP BY, then HAVING, then ORDER BY, even though it is typed differently.",
+        "incorrect": "Mixing up WHERE and HAVING order is a common mistake — WHERE always comes before grouping, HAVING after.",
+        "examTip": "SELECT is written first but logically evaluated near the end, just before ORDER BY.",
+        "relatedTopics": [
+          "SQL",
+          "query execution order"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-051",
+      "type": "ordering",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Place the following steps of designing a normalized relational schema in a logical order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify entities and their attributes",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Define primary keys for each entity/table",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Define foreign keys to represent relationships between tables",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Apply normalization rules to remove redundancy",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "A typical design flow identifies entities, assigns primary keys, links tables with foreign keys, then normalizes to remove redundancy.",
+        "incorrect": "Foreign keys depend on primary keys already being defined in the referenced tables, so keys must come before relationships.",
+        "examTip": "Primary keys must exist before foreign keys can reference them.",
+        "relatedTopics": [
+          "relational design",
+          "normalization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-052",
+      "type": "drag-drop",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each Azure relational database service to the scenario it best fits.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Lift-and-shift SQL Server migration needing instance features",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "New cloud-native app needing a simple managed SQL database",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Open-source app requiring MySQL compatibility",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure SQL Managed Instance"
+        },
+        {
+          "id": "item2",
+          "text": "Azure SQL Database (single database)"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Database for MySQL"
+        }
+      ],
+      "explanation": {
+        "correct": "Managed Instance fits lift-and-shift migrations, single database fits new cloud-native apps, and Azure Database for MySQL fits MySQL-compatible workloads.",
+        "incorrect": "Review each service's target use case if a match seems off.",
+        "examTip": "Match services to workload needs: compatibility level, management overhead, and engine type.",
+        "relatedTopics": [
+          "Azure SQL services",
+          "Azure Database for MySQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-053",
+      "type": "drag-drop",
+      "topicId": "relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each SQL keyword to its correct category.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Data Definition Language (DDL)",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Data Manipulation Language (DML)",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "CREATE TABLE"
+        },
+        {
+          "id": "item2",
+          "text": "DROP TABLE"
+        },
+        {
+          "id": "item3",
+          "text": "INSERT"
+        },
+        {
+          "id": "item4",
+          "text": "UPDATE"
+        }
+      ],
+      "explanation": {
+        "correct": "CREATE TABLE and DROP TABLE define or remove schema objects (DDL); INSERT and UPDATE manipulate the data within tables (DML).",
+        "incorrect": "Review the DDL vs DML distinction if any item was placed incorrectly.",
+        "examTip": "DDL changes structure; DML changes data.",
+        "relatedTopics": [
+          "SQL",
+          "DDL",
+          "DML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

@@ -1,0 +1,919 @@
+{
+  "certificationId": "az-204",
+  "topicId": "azure-security",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "az204-004",
+      "type": "dropdown-select",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct option to complete the sentence: To authenticate a web app to Azure Key Vault without storing credentials in code, you should use a __________.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Authentication method",
+          "options": [
+            "client secret",
+            "connection string",
+            "managed identity",
+            "certificate thumbprint"
+          ],
+          "correctAnswer": "managed identity"
+        }
+      ],
+      "explanation": {
+        "correct": "Managed identity provides an automatically managed identity for the app to access Key Vault.",
+        "incorrect": "Client secrets, certificates, or connection strings require manual management.",
+        "examTip": "Use managed identities to avoid hardcoding credentials.",
+        "relatedTopics": [
+          "Managed identities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-009",
+      "type": "yes-no-statements",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are using Azure Key Vault for certificate management. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Access policies can be used to grant permission to a specific user.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "RBAC roles are the only authorization model supported.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Key Vault can auto-renew certificates.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Key Vault supports both access policies and RBAC, and can auto-renew.",
+        "incorrect": "RBAC is not the only model; access policies are also available.",
+        "examTip": "Use RBAC for broader management, access policies for granular permissions.",
+        "relatedTopics": [
+          "Key Vault access models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-013",
+      "type": "single-choice",
+      "topicId": "azure-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which authentication flow is recommended for a native mobile application calling Azure AD-protected APIs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Authorization code grant with PKCE",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Client credentials grant",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Resource owner password credentials",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Device code flow",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "PKCE is secure for mobile apps because it mitigates code interception.",
+        "incorrect": "Client credentials are for daemons; password flow is deprecated; device flow is for headless devices.",
+        "examTip": "Always use PKCE for native apps.",
+        "relatedTopics": [
+          "MSAL authentication flows"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-018",
+      "type": "drag-drop",
+      "topicId": "azure-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Classify each Azure security capability:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Identity management",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Key/certificate management",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Network security",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure AD B2C"
+        },
+        {
+          "id": "item2",
+          "text": "Key Vault"
+        },
+        {
+          "id": "item3",
+          "text": "Network Security Group (NSG)"
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AD B2C manages identity; Key Vault manages secrets; NSG secures network.",
+        "incorrect": "Mixing these capabilities is a common mistake.",
+        "examTip": "Use NSGs for VNet traffic filtering.",
+        "relatedTopics": [
+          "Security services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-025",
+      "type": "single-choice",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which tool should you use to encrypt a virtual machine's disks in Azure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Key Vault only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Disk Encryption with a Key Vault key",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Storage Service Encryption",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Sentinel",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Disk Encryption uses Key Vault for BitLocker or DM-Crypt keys.",
+        "incorrect": "Key Vault alone doesn't encrypt disks; SSE is for storage accounts.",
+        "examTip": "Check encryption-at-rest requirements.",
+        "relatedTopics": [
+          "Disk encryption"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-029",
+      "type": "ordering",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the flow for a web app to authenticate using MSAL with Azure AD:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Get an authorization code",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Exchange code for a token",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Use the token to call protected APIs",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Refresh the token silently",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Code, token, API call, then refresh.",
+        "incorrect": "Token must be obtained before API calls.",
+        "examTip": "MSAL handles token caching.",
+        "relatedTopics": [
+          "MSAL flows"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-034",
+      "type": "dropdown-select",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You need to securely store database connection strings. Which service is recommended?",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Service",
+          "options": [
+            "Azure App Settings",
+            "Azure Key Vault",
+            "Azure Storage",
+            "Azure Functions"
+          ],
+          "correctAnswer": "Azure Key Vault"
+        }
+      ],
+      "explanation": {
+        "correct": "Key Vault is the secure, centralized store for secrets.",
+        "incorrect": "App Settings are not encrypted by default; storage is not for secrets.",
+        "examTip": "Reference Key Vault secrets in App Settings.",
+        "relatedTopics": [
+          "Key Vault"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-039",
+      "type": "yes-no-statements",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are configuring managed identities for an Azure resource. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "System-assigned identity is tied to the resource lifecycle.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "User-assigned identities can be shared across resources.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Managed identities cannot be used with Azure Key Vault.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "System-assigned is lifecycle-linked; user-assigned is shareable; Key Vault supports them.",
+        "incorrect": "Managed identities work perfectly with Key Vault.",
+        "examTip": "Prefer user-assigned for multiple resources.",
+        "relatedTopics": [
+          "Managed identities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-043",
+      "type": "single-choice",
+      "topicId": "azure-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary purpose of Azure AD B2C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Identity management for external users",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Internal corporate identity",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Device management",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure subscription management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "B2C is for customer identity and access management (CIAM).",
+        "incorrect": "Azure AD is for internal users.",
+        "examTip": "B2C supports social logins.",
+        "relatedTopics": [
+          "Azure AD B2C"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-047",
+      "type": "ordering",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to use the Microsoft Authentication Library (MSAL) to acquire a token:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a PublicClientApplication object",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Build the authentication context",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Call AcquireTokenAsync",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Use the token in the Authorization header",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "App, context, acquire, then use.",
+        "incorrect": "Token must be acquired before use.",
+        "examTip": "MSAL caches tokens automatically.",
+        "relatedTopics": [
+          "MSAL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-051",
+      "type": "yes-no-statements",
+      "topicId": "azure-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You are using Azure Key Vault to store certificates. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Key Vault can import .pfx files.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Key Vault can generate self-signed certificates.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Keys stored in Key Vault are exportable by default.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Import and generation are supported; exportability is configurable.",
+        "incorrect": "Non-exportable keys are more secure.",
+        "examTip": "Use managed HSM for FIPS 140-2 Level 3.",
+        "relatedTopics": [
+          "Key Vault certificates"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-056",
+      "type": "multiple-choice",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which security features are available in Azure Key Vault? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Key rotation",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Soft delete",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Firewall rules",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DDoS protection",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Key Vault supports key rotation and soft delete.",
+        "incorrect": "Firewall rules and DDoS are network-level, not Key Vault specific.",
+        "examTip": "Enable soft delete to recover secrets.",
+        "relatedTopics": [
+          "Key Vault security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-061",
+      "type": "single-choice",
+      "topicId": "azure-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which type of managed identity should you use for an application that runs on multiple Azure resources?",
+      "options": [
+        {
+          "id": "A",
+          "text": "System-assigned",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "User-assigned",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Service principal",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "App registration",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "User-assigned can be shared across resources.",
+        "incorrect": "System-assigned is per resource; service principal is for external apps.",
+        "examTip": "Use user-assigned for consistent permissions.",
+        "relatedTopics": [
+          "Managed identities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-066",
+      "type": "drag-drop",
+      "topicId": "azure-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match each OAuth 2.0 flow with its use case:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Daemon application",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Mobile app with browser",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Server-to-server API",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Client credentials flow"
+        },
+        {
+          "id": "item2",
+          "text": "Authorization code with PKCE"
+        },
+        {
+          "id": "item3",
+          "text": "On-behalf-of flow"
+        }
+      ],
+      "explanation": {
+        "correct": "Client credentials for daemons; PKCE for mobile; OBO for API chaining.",
+        "incorrect": "Mixing flows leads to security issues.",
+        "examTip": "OBO allows delegation.",
+        "relatedTopics": [
+          "OAuth 2.0 flows"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-071",
+      "type": "ordering",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps to assign a managed identity to an Azure resource:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Navigate to resource in Azure portal",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Select 'Identity' blade",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Turn on system-assigned identity",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Assign role to the identity",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Portal, identity blade, enable, assign role.",
+        "incorrect": "Role assignment occurs after enabling.",
+        "examTip": "Use PowerShell or CLI for automation.",
+        "relatedTopics": [
+          "Managed identities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-077",
+      "type": "ordering",
+      "topicId": "azure-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Order the steps for an on-behalf-of (OBO) flow:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Client gets a token for API A",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "API A calls Azure AD with the token to get token for API B",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "API A receives token for API B",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "API A calls API B using the new token",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Client token to A, A exchanges for B token, then calls B.",
+        "incorrect": "OBO flow requires delegated permissions.",
+        "examTip": "Use OBO for multi-tier APIs.",
+        "relatedTopics": [
+          "OAuth 2.0 OBO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-081",
+      "type": "yes-no-statements",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are designing a solution using Azure AD Conditional Access. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Conditional Access policies are applied per application.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "You can use location as a condition.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Multi-factor authentication can be enforced.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Conditions include location and MFA; policies are at the tenant level.",
+        "incorrect": "They are tenant-wide, not per application.",
+        "examTip": "Use named locations for IP ranges.",
+        "relatedTopics": [
+          "Conditional Access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-086",
+      "type": "multiple-choice",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which tools can be used to manage access to Azure resources? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure RBAC",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Key Vault access policies",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Policy",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Firewall",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RBAC and Azure Policy manage access and compliance.",
+        "incorrect": "Key Vault policies are for secrets; Firewall is network.",
+        "examTip": "RBAC assigns roles; Policy enforces rules.",
+        "relatedTopics": [
+          "Azure RBAC"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-092",
+      "type": "multiple-choice",
+      "topicId": "azure-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Azure Key Vault operations require RBAC permissions? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creating a key",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Deleting a secret",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Reading a secret",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encrypting data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Create and delete are management operations; read and encrypt are data operations.",
+        "incorrect": "Data operations use access policies or RBAC data actions.",
+        "examTip": "Use RBAC for control plane operations.",
+        "relatedTopics": [
+          "Key Vault RBAC"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-097",
+      "type": "single-choice",
+      "topicId": "azure-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which authentication method is recommended for an Azure function that accesses Key Vault?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Connection string",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Managed identity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Client secret in code",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Access key",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Managed identity is secure and requires no credential storage.",
+        "incorrect": "Connection strings and secrets are less secure.",
+        "examTip": "Enable managed identity in Function app settings.",
+        "relatedTopics": [
+          "Managed identities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Implement Azure security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

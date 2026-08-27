@@ -1,0 +1,4866 @@
+{
+  "certificationId": "dp-900",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "dp900-001",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which type of data has a well-defined schema and is typically stored in rows and columns?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Structured data",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Unstructured data",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Semi-structured data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Binary large object data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Structured data conforms to a fixed schema of rows and columns, such as data stored in a relational table.",
+        "incorrect": "Unstructured and semi-structured data do not use a strict tabular schema; binary data has no inherent tabular structure.",
+        "examTip": "Remember the three data categories: structured, semi-structured, unstructured.",
+        "relatedTopics": [
+          "structured data",
+          "data formats"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-002",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which data format is considered semi-structured because it uses tags or key-value pairs rather than a fixed tabular schema?",
+      "options": [
+        {
+          "id": "A",
+          "text": "JSON",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A relational database table",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A CSV file with a header row",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A fixed-width text file",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "JSON documents use key-value pairs and nested elements, giving them a flexible structure that qualifies as semi-structured.",
+        "incorrect": "Relational tables and CSV files with headers are structured; fixed-width files are also structured by column position.",
+        "examTip": "XML and JSON are the classic examples of semi-structured data.",
+        "relatedTopics": [
+          "semi-structured data",
+          "JSON"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-003",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Photos, videos, and audio files are examples of which data category?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unstructured data",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Structured data",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Semi-structured data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Relational data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Media files have no predefined data model or tabular schema, making them unstructured data.",
+        "incorrect": "Structured and relational data require a defined schema; semi-structured data uses tags or markers, which media files do not.",
+        "examTip": "Unstructured data is often stored as blobs in object storage such as Azure Blob Storage.",
+        "relatedTopics": [
+          "unstructured data",
+          "Azure Blob Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-004",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "A retail company records every point-of-sale transaction the instant it happens so that inventory counts update immediately.",
+      "questionText": "Which processing approach is the company using?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stream (real-time) processing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Batch processing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Extract-load-transform at month end",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Offline archival processing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Processing each transaction as it occurs, with low latency, is characteristic of stream (real-time) processing.",
+        "incorrect": "Batch processing groups data and processes it on a schedule, which would not update inventory instantly.",
+        "examTip": "Look for words like 'immediately' or 'as it happens' to identify streaming scenarios.",
+        "relatedTopics": [
+          "stream processing",
+          "batch processing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-005",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "At the end of every night, a company collects the day's sales files and loads them into a reporting database in one scheduled job.",
+      "questionText": "Which processing approach best describes this scenario?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Batch processing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Stream processing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Real-time event processing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Online transaction processing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Collecting data over a period and processing it together on a schedule is the definition of batch processing.",
+        "incorrect": "Stream and real-time processing handle data continuously rather than in a single scheduled job.",
+        "examTip": "Batch jobs are typically scheduled (hourly, nightly) and process data in bulk.",
+        "relatedTopics": [
+          "batch processing",
+          "ETL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-006",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which workload type is optimized for a high volume of short, fast insert/update/delete transactions, such as recording sales orders?",
+      "options": [
+        {
+          "id": "A",
+          "text": "OLTP (Online Transaction Processing)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "OLAP (Online Analytical Processing)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Batch analytics",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data warehousing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "OLTP systems are designed for many small, fast transactions that create, read, update, and delete individual records.",
+        "incorrect": "OLAP and data warehousing are optimized for large-scale analytical queries over historical data, not individual transactions.",
+        "examTip": "OLTP = day-to-day operational data; OLAP = historical analysis and reporting.",
+        "relatedTopics": [
+          "OLTP",
+          "OLAP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-007",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "A business intelligence team runs complex queries over years of historical sales data to identify trends. Which workload type does this represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "OLAP (Online Analytical Processing)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "OLTP (Online Transaction Processing)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Transactional replication",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Change data capture",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "OLAP workloads aggregate and analyze large volumes of historical data to support business intelligence and reporting.",
+        "incorrect": "OLTP handles operational transactions rather than large analytical queries.",
+        "examTip": "Data warehouses are typically built to support OLAP workloads.",
+        "relatedTopics": [
+          "OLAP",
+          "data warehouse"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-008",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "In an ELT (Extract, Load, Transform) pipeline, at which stage does data transformation occur relative to loading?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transformation happens after the data is loaded into the target store",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Transformation happens before extraction begins",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Transformation happens in a separate staging server before extraction",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Transformation and extraction occur simultaneously, and loading never occurs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In ELT, raw data is loaded into the target system first, and transformation is performed afterward using the target's processing power.",
+        "incorrect": "The other options misplace the order of operations or omit the load step, which contradicts the ELT pattern.",
+        "examTip": "Compare ELT to ETL, where transformation happens in a staging area before loading into the target.",
+        "relatedTopics": [
+          "ELT",
+          "ETL",
+          "Azure Synapse Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-009",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which statement best distinguishes a data lake from a data warehouse?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A data lake stores raw data in its native format at any scale, while a data warehouse stores processed, structured data optimized for querying",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A data lake only stores relational tables, while a data warehouse only stores files",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A data lake is always more expensive to operate than a data warehouse",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A data warehouse cannot store historical data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data lakes hold raw, unprocessed data of any type and scale, whereas data warehouses hold curated, structured data modeled for reporting and analysis.",
+        "incorrect": "The other options reverse or misstate the actual characteristics of each store.",
+        "examTip": "Data lakes are schema-on-read; data warehouses are schema-on-write.",
+        "relatedTopics": [
+          "data lake",
+          "data warehouse"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-010",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which job role is primarily responsible for designing, implementing, and maintaining data pipelines that move and transform data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data engineer",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Database administrator",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Data analyst",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Solutions architect",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data engineers build and manage the pipelines and infrastructure used to ingest, transform, and move data.",
+        "incorrect": "A DBA focuses on operating and securing databases; a data analyst interprets data to produce insights; a solutions architect designs overall system architecture.",
+        "examTip": "DP-900 distinguishes data engineer, DBA, and data analyst roles by their primary responsibilities.",
+        "relatedTopics": [
+          "data roles",
+          "data engineering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-011",
+      "type": "multiple-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which two of the following are examples of unstructured data? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "A video recording",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A scanned PDF image with no text layer",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A relational table of customer orders",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A CSV file with a fixed set of columns",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Videos and image-only scanned documents have no predefined schema, making them unstructured data.",
+        "incorrect": "Relational tables and CSV files with fixed columns follow a defined tabular schema, so they are structured.",
+        "examTip": "If the data has no rows/columns or tags describing it, it's unstructured.",
+        "relatedTopics": [
+          "unstructured data"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-012",
+      "type": "multiple-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two characteristics are typical of OLTP systems? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "High volume of short read/write transactions",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Data is normalized to reduce redundancy",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Queries typically scan years of aggregated history",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Optimized primarily for business intelligence dashboards",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "OLTP systems handle many small transactions and use normalized schemas to keep data consistent and reduce duplication.",
+        "incorrect": "Scanning years of aggregated history and BI dashboards describe OLAP workloads, not OLTP.",
+        "examTip": "Normalization and transactional speed are hallmarks of OLTP design.",
+        "relatedTopics": [
+          "OLTP",
+          "normalization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-013",
+      "type": "multiple-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two of the following are common file formats used to store data in a data lake? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Parquet",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Avro",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A proprietary compiled binary application",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A printed report",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Parquet and Avro are widely used columnar/row-based file formats for storing structured and semi-structured data efficiently in data lakes.",
+        "incorrect": "Compiled binaries and printed reports are not data storage formats used in data lakes.",
+        "examTip": "Know Parquet, Avro, ORC, JSON, and CSV as common data lake formats.",
+        "relatedTopics": [
+          "data lake",
+          "file formats"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-014",
+      "type": "multiple-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two statements about ETL pipelines are correct? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data is transformed in a staging area before it is loaded into the target store",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ETL is commonly used when the target system has limited processing power for transformations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ETL always loads raw, untransformed data directly into the target",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ETL cannot be used with relational data warehouses",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ETL transforms data before loading, which is useful when the destination system should only receive clean, modeled data.",
+        "incorrect": "Loading raw untransformed data describes ELT, and ETL is very commonly used with relational data warehouses.",
+        "examTip": "ETL: Extract -> Transform (staging) -> Load. ELT: Extract -> Load -> Transform (in target).",
+        "relatedTopics": [
+          "ETL",
+          "data warehouse"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-015",
+      "type": "yes-no-statements",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each statement about data types, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A relational database table is an example of structured data.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A JSON document with nested key-value pairs is an example of unstructured data.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "An MP4 video file is an example of unstructured data.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Relational tables are structured; JSON is semi-structured, not unstructured; video files are unstructured.",
+        "incorrect": "Double-check the definitions: structured has a fixed schema, semi-structured has tags/markers, unstructured has none.",
+        "examTip": "JSON and XML are semi-structured, not unstructured — a common trick on the exam.",
+        "relatedTopics": [
+          "data types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-016",
+      "type": "yes-no-statements",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about OLTP and OLAP, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "OLTP systems are typically used to process a bank's individual ATM withdrawal transactions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "OLAP systems are optimized for very fast single-row inserts.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "OLAP workloads commonly aggregate data across multiple dimensions, such as time and region.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "ATM withdrawals are individual transactions handled by OLTP; OLAP is optimized for analytical aggregation, not single-row inserts.",
+        "incorrect": "Fast single-row inserts describe OLTP, not OLAP.",
+        "examTip": "Associate OLAP with multi-dimensional analysis (cubes, star schemas).",
+        "relatedTopics": [
+          "OLTP",
+          "OLAP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-017",
+      "type": "yes-no-statements",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about batch and stream processing, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Stream processing typically processes data with lower latency than batch processing.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Batch processing is best suited for scenarios requiring an immediate response to each event.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Stream Analytics can be used to process data from Azure Event Hubs in near real time.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Stream processing minimizes latency by handling events as they arrive; batch processing groups data and is not suited to immediate per-event responses.",
+        "incorrect": "Immediate response to each event requires streaming, not batch.",
+        "examTip": "Azure Stream Analytics + Event Hubs is a classic real-time analytics pairing.",
+        "relatedTopics": [
+          "stream processing",
+          "Azure Stream Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-018",
+      "type": "yes-no-statements",
+      "topicId": "data-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement about data lakes and data warehouses, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A data lake applies schema-on-read, meaning structure is applied when the data is queried.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A data warehouse applies schema-on-write, meaning structure is defined before data is loaded.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Data lakes can only store data that has already been cleaned and modeled.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Data lakes defer schema definition until read time, while warehouses require a defined schema before data is written; data lakes can store raw, uncleaned data of any type.",
+        "incorrect": "Requiring cleaned, modeled data contradicts the core purpose of a data lake, which stores raw data at scale.",
+        "examTip": "Schema-on-read = data lake; schema-on-write = data warehouse.",
+        "relatedTopics": [
+          "data lake",
+          "data warehouse",
+          "schema"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-019",
+      "type": "dropdown-select",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the sentence by selecting the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Data that is organized into rows and columns with a fixed schema is called ____ data.",
+          "options": [
+            "structured",
+            "unstructured",
+            "semi-structured"
+          ],
+          "correctAnswer": "structured"
+        },
+        {
+          "id": "d2",
+          "prompt": "Data such as images and audio files with no predefined model is called ____ data.",
+          "options": [
+            "structured",
+            "unstructured",
+            "relational"
+          ],
+          "correctAnswer": "unstructured"
+        }
+      ],
+      "explanation": {
+        "correct": "Structured data follows a fixed tabular schema; unstructured data has no predefined model.",
+        "incorrect": "Review the definitions of each data category before selecting an answer.",
+        "examTip": "Match each data example to structured, semi-structured, or unstructured.",
+        "relatedTopics": [
+          "data types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-020",
+      "type": "dropdown-select",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each sentence about data processing by choosing the correct option.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Processing a large set of collected records on a fixed schedule is known as ____ processing.",
+          "options": [
+            "batch",
+            "streaming",
+            "transactional"
+          ],
+          "correctAnswer": "batch"
+        },
+        {
+          "id": "d2",
+          "prompt": "Processing individual events continuously as they arrive is known as ____ processing.",
+          "options": [
+            "batch",
+            "streaming",
+            "archival"
+          ],
+          "correctAnswer": "streaming"
+        }
+      ],
+      "explanation": {
+        "correct": "Batch processing handles grouped data on a schedule; streaming processes events continuously as they occur.",
+        "incorrect": "Transactional and archival do not describe the timing pattern being asked about here.",
+        "examTip": "Think schedule (batch) vs continuous (stream).",
+        "relatedTopics": [
+          "batch processing",
+          "stream processing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-021",
+      "type": "dropdown-select",
+      "topicId": "data-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the sentences describing ETL and ELT by selecting the correct option in each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "In an ____ pipeline, data is transformed before it is loaded into the target system.",
+          "options": [
+            "ETL",
+            "ELT",
+            "OLTP"
+          ],
+          "correctAnswer": "ETL"
+        },
+        {
+          "id": "d2",
+          "prompt": "In an ____ pipeline, raw data is loaded first and transformation happens inside the target system.",
+          "options": [
+            "ETL",
+            "ELT",
+            "OLAP"
+          ],
+          "correctAnswer": "ELT"
+        }
+      ],
+      "explanation": {
+        "correct": "ETL transforms data prior to loading; ELT loads raw data first and transforms it within the destination system.",
+        "incorrect": "OLTP and OLAP describe workload types, not pipeline ordering.",
+        "examTip": "The letter order in the acronym tells you the sequence of operations.",
+        "relatedTopics": [
+          "ETL",
+          "ELT"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-022",
+      "type": "ordering",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the steps of a typical ETL pipeline in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Extract data from source systems",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Transform data in a staging area",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Load transformed data into the target data store",
+          "correctPosition": 3
+        }
+      ],
+      "explanation": {
+        "correct": "ETL follows Extract, then Transform, then Load, in that order.",
+        "incorrect": "Reordering the steps would not match the standard ETL pattern.",
+        "examTip": "The acronym ETL literally spells out the sequence.",
+        "relatedTopics": [
+          "ETL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-023",
+      "type": "ordering",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Place the steps of a typical ELT pipeline in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Extract data from source systems",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Load raw data into the target data store",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Transform data within the target data store",
+          "correctPosition": 3
+        }
+      ],
+      "explanation": {
+        "correct": "ELT follows Extract, then Load, then Transform, in that order.",
+        "incorrect": "The transformation step comes last in ELT, after loading, unlike in ETL.",
+        "examTip": "ELT is common in cloud data warehouses like Azure Synapse Analytics that have strong compute power.",
+        "relatedTopics": [
+          "ELT"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-024",
+      "type": "drag-drop",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each data example to the category that best describes it.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Structured",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Semi-structured",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Unstructured",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "A relational table of employee records"
+        },
+        {
+          "id": "item2",
+          "text": "A JSON document describing a customer order"
+        },
+        {
+          "id": "item3",
+          "text": "A collection of scanned image files"
+        }
+      ],
+      "explanation": {
+        "correct": "Relational tables are structured, JSON documents are semi-structured, and scanned images are unstructured.",
+        "incorrect": "Review the defining characteristics of each data category if any item was misplaced.",
+        "examTip": "Look for a fixed schema (structured), tags/keys (semi-structured), or no schema at all (unstructured).",
+        "relatedTopics": [
+          "data types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-025",
+      "type": "drag-drop",
+      "topicId": "data-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each workload characteristic to the workload type it best describes.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "OLTP",
+          "acceptsItemIds": [
+            "item1",
+            "item3"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "OLAP",
+          "acceptsItemIds": [
+            "item2",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Handles a high volume of short insert and update transactions"
+        },
+        {
+          "id": "item2",
+          "text": "Aggregates historical data for trend analysis"
+        },
+        {
+          "id": "item3",
+          "text": "Uses a highly normalized schema"
+        },
+        {
+          "id": "item4",
+          "text": "Often uses a star schema with fact and dimension tables"
+        }
+      ],
+      "explanation": {
+        "correct": "OLTP handles frequent, small transactions on normalized schemas; OLAP aggregates historical data, often using star schemas.",
+        "incorrect": "Review OLTP vs OLAP characteristics if an item was placed incorrectly.",
+        "examTip": "Star schemas with fact/dimension tables are a strong signal of OLAP/data warehouse design.",
+        "relatedTopics": [
+          "OLTP",
+          "OLAP",
+          "star schema"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe core data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-026",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "In a relational database, what is used to uniquely identify each row in a table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A primary key",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A foreign key",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A clustered index only",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A view",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A primary key is a column or set of columns whose values uniquely identify every row in a table.",
+        "incorrect": "A foreign key references another table's primary key; indexes speed up lookups but don't define uniqueness by themselves; views are virtual tables.",
+        "examTip": "Every table should have exactly one primary key.",
+        "relatedTopics": [
+          "primary key",
+          "relational concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-027",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of a foreign key in a relational database?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To create a link between two tables by referencing the primary key of another table",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To uniquely identify every row in the same table",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To compress data for storage efficiency",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To encrypt sensitive columns",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A foreign key establishes a relationship between two tables by referring to the primary key column of another table.",
+        "incorrect": "Uniquely identifying rows is the primary key's role; compression and encryption are unrelated concepts.",
+        "examTip": "Foreign keys enforce referential integrity between related tables.",
+        "relatedTopics": [
+          "foreign key",
+          "relational concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-028",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which SQL statement is used to retrieve rows from one or more tables?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SELECT",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "INSERT",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "UPDATE",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DELETE",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SELECT is a Data Manipulation Language (DML) statement used to query and retrieve rows.",
+        "incorrect": "INSERT adds rows, UPDATE modifies rows, and DELETE removes rows — none of these retrieve data.",
+        "examTip": "SELECT, INSERT, UPDATE, DELETE make up the core DML statements.",
+        "relatedTopics": [
+          "SQL",
+          "DML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-029",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which SQL clause is used to filter rows based on a condition before any grouping occurs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "WHERE",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "GROUP BY",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "ORDER BY",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "HAVING",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "WHERE filters individual rows before any aggregation or grouping takes place.",
+        "incorrect": "GROUP BY aggregates rows, ORDER BY sorts results, and HAVING filters after grouping — none filter rows pre-aggregation like WHERE.",
+        "examTip": "Remember the logical order: FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY.",
+        "relatedTopics": [
+          "SQL",
+          "WHERE clause"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-030",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which SQL clause combines rows from two tables based on a related column between them?",
+      "options": [
+        {
+          "id": "A",
+          "text": "JOIN",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "UNION",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "GROUP BY",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DISTINCT",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "JOIN combines columns from two or more tables based on a related column, typically a foreign key to primary key relationship.",
+        "incorrect": "UNION stacks result sets vertically, GROUP BY aggregates rows, and DISTINCT removes duplicate rows.",
+        "examTip": "INNER JOIN, LEFT JOIN, and RIGHT JOIN are common join types to know.",
+        "relatedTopics": [
+          "SQL",
+          "JOIN"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-031",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which SQL clause is used to filter groups of rows after a GROUP BY aggregation has been applied?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HAVING",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "WHERE",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "ORDER BY",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SELECT DISTINCT",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "HAVING filters aggregated groups after GROUP BY has run, such as filtering for groups with a count greater than a value.",
+        "incorrect": "WHERE filters rows before grouping and cannot reference aggregate functions in most databases.",
+        "examTip": "Use WHERE for row-level filters and HAVING for group-level filters.",
+        "relatedTopics": [
+          "SQL",
+          "HAVING clause"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-032",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the main purpose of normalizing a relational database schema?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To reduce data redundancy and improve data integrity",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To store all data in a single large table for simplicity",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To eliminate the need for primary keys",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To convert structured data into unstructured data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Normalization organizes data into related tables to minimize duplication and maintain consistency.",
+        "incorrect": "Normalization typically results in more tables, not fewer, and does not remove the need for keys.",
+        "examTip": "Common normal forms include 1NF, 2NF, and 3NF, each reducing a specific type of redundancy.",
+        "relatedTopics": [
+          "normalization",
+          "relational design"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-033",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the primary benefit of adding an index to a frequently queried column?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It speeds up data retrieval for queries that filter or sort on that column",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "It automatically normalizes the table",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "It removes the need for a primary key",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It converts the table into a NoSQL structure",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Indexes create an efficient lookup structure that speeds up read queries filtering or sorting on the indexed column.",
+        "incorrect": "Indexes don't perform normalization, replace primary keys, or change the underlying data model type.",
+        "examTip": "Indexes speed up reads but can slow down writes since they must be maintained.",
+        "relatedTopics": [
+          "indexes",
+          "query performance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-034",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service is a fully managed relational database offering that supports near 100% compatibility with SQL Server, including cross-database queries and SQL Agent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure SQL Managed Instance",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure SQL Database (single database)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Cosmos DB",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure SQL Managed Instance offers near-complete SQL Server engine compatibility, including features like SQL Server Agent and cross-database queries.",
+        "incorrect": "Azure SQL Database (single database) has some feature limitations compared to Managed Instance; Cosmos DB and Table Storage are non-relational services.",
+        "examTip": "Managed Instance is aimed at 'lift and shift' migrations of on-premises SQL Server.",
+        "relatedTopics": [
+          "Azure SQL Managed Instance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-035",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "A startup wants a fully managed relational database in Azure with minimal administrative overhead, and it does not need full SQL Server instance-level features like SQL Agent.",
+      "questionText": "Which Azure service is the best fit for this scenario?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure SQL Database (single database)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure SQL Managed Instance",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "SQL Server on an Azure Virtual Machine",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Cosmos DB",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure SQL Database (single database) is a fully managed PaaS offering ideal for new applications that don't require instance-level SQL Server features.",
+        "incorrect": "Managed Instance and SQL Server on a VM provide more instance-level control but at higher management overhead; Cosmos DB is non-relational.",
+        "examTip": "Use SQL Database for new cloud-native apps, Managed Instance for lift-and-shift, and SQL on VM for full OS/instance control.",
+        "relatedTopics": [
+          "Azure SQL Database"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-036",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service provides a fully managed, open-source relational database compatible with the MySQL engine?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Database for MySQL",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure SQL Managed Instance",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Cosmos DB for MongoDB",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Database for MySQL is a managed service based on the community edition of the MySQL engine.",
+        "incorrect": "Managed Instance is SQL Server-based; Cosmos DB's MongoDB API emulates MongoDB, not MySQL; Table Storage is a NoSQL key-value store.",
+        "examTip": "Azure offers managed open-source database services for MySQL, PostgreSQL, and MariaDB.",
+        "relatedTopics": [
+          "Azure Database for MySQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-037",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure Database for PostgreSQL deployment option is designed for large-scale workloads by horizontally scaling across multiple nodes using sharding?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Cosmos DB for PostgreSQL (formerly Hyperscale/Citus)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Database for PostgreSQL - Single Server (retired option)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Table Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Blob Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Hyperscale (Citus) deployment, now offered as Azure Cosmos DB for PostgreSQL, shards data across multiple nodes for horizontal scale-out.",
+        "incorrect": "Single Server does not shard data across nodes; Table Storage and Blob Storage are unrelated non-relational services.",
+        "examTip": "Sharding across nodes is the key differentiator of the Hyperscale (Citus) option.",
+        "relatedTopics": [
+          "Azure Database for PostgreSQL",
+          "sharding"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-038",
+      "type": "single-choice",
+      "topicId": "relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company is migrating an on-premises SQL Server instance that relies heavily on SQL Server Agent jobs, cross-database queries, and CLR integration. They want to move to Azure with the least amount of application rework.",
+      "questionText": "Which Azure data service should they choose?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure SQL Managed Instance",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure SQL Database (single database)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Cosmos DB",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Database for MySQL",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Managed Instance supports instance-scoped features like SQL Server Agent, cross-database queries, and CLR, making migration easier with minimal changes.",
+        "incorrect": "Single database lacks some instance-level features; Cosmos DB and MySQL are not SQL Server compatible.",
+        "examTip": "Instance-level features (Agent jobs, cross-database queries, CLR) point to Managed Instance over single database.",
+        "relatedTopics": [
+          "Azure SQL Managed Instance",
+          "migration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-039",
+      "type": "multiple-choice",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two of the following are examples of Data Definition Language (DDL) statements in SQL? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "CREATE TABLE",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ALTER TABLE",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SELECT",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "UPDATE",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "CREATE and ALTER are DDL statements that define or modify database object structures.",
+        "incorrect": "SELECT and UPDATE are DML statements that operate on data, not on schema definitions.",
+        "examTip": "DDL = structure (CREATE, ALTER, DROP); DML = data (SELECT, INSERT, UPDATE, DELETE).",
+        "relatedTopics": [
+          "SQL",
+          "DDL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-040",
+      "type": "multiple-choice",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which two of the following are managed relational database services available in Azure? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure SQL Database",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Database for PostgreSQL",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Blob Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Cosmos DB for Table",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure SQL Database and Azure Database for PostgreSQL are both managed relational database offerings.",
+        "incorrect": "Blob Storage and Cosmos DB's Table API are non-relational storage services.",
+        "examTip": "Relational Azure services: SQL Database, SQL Managed Instance, SQL on VM, PostgreSQL, MySQL.",
+        "relatedTopics": [
+          "Azure relational services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-041",
+      "type": "multiple-choice",
+      "topicId": "relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which two statements about database normalization are correct? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "First normal form (1NF) requires that each column contain atomic, indivisible values",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Normalization can reduce data redundancy by splitting data into related tables",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Normalization always improves read query performance",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A fully normalized database never needs joins",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "1NF requires atomic column values, and normalization reduces redundancy by splitting data across related tables.",
+        "incorrect": "Normalization can sometimes require more joins, potentially reducing read performance, and joins are frequently needed in normalized schemas.",
+        "examTip": "Normalization favors data integrity; denormalization favors read performance.",
+        "relatedTopics": [
+          "normalization",
+          "1NF"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-042",
+      "type": "multiple-choice",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two SQL keywords would you use together to sort the result of a query by a column in descending order?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ORDER BY",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "DESC",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "GROUP BY",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DISTINCT",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ORDER BY specifies the sort column, and DESC specifies descending order.",
+        "incorrect": "GROUP BY aggregates rows and DISTINCT removes duplicates; neither controls sort direction.",
+        "examTip": "Default sort order is ascending (ASC) unless DESC is specified.",
+        "relatedTopics": [
+          "SQL",
+          "ORDER BY"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-043",
+      "type": "yes-no-statements",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each statement about relational database concepts, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A table can have more than one foreign key.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A table can have more than one primary key.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A view is a virtual table based on the result of a SQL query.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Tables can have multiple foreign keys referencing different tables, but only one primary key; a view is indeed a virtual, query-based table.",
+        "incorrect": "A table can only have a single primary key, though that key may be composed of multiple columns.",
+        "examTip": "A composite primary key uses multiple columns but is still one key.",
+        "relatedTopics": [
+          "primary key",
+          "foreign key",
+          "views"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-044",
+      "type": "yes-no-statements",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each SQL statement description, select Yes if it correctly describes the keyword, or No if it does not.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The WHERE clause can filter rows using conditions on column values.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The GROUP BY clause is used to sort the final result set alphabetically.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "An INNER JOIN returns only rows that have matching values in both joined tables.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "WHERE filters rows on conditions; INNER JOIN returns only matching rows between tables. GROUP BY aggregates data, it does not sort results (ORDER BY does that).",
+        "incorrect": "Sorting the final result set is the role of ORDER BY, not GROUP BY.",
+        "examTip": "Don't confuse GROUP BY (aggregation) with ORDER BY (sorting).",
+        "relatedTopics": [
+          "SQL clauses",
+          "JOIN"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-045",
+      "type": "yes-no-statements",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about Azure relational database services, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure SQL Managed Instance supports SQL Server Agent jobs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure SQL Database (single database) is a good fit for a lift-and-shift migration that needs full instance-level SQL Server features.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Database for PostgreSQL is a managed relational database service.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Managed Instance supports SQL Agent; single database lacks some instance-level features, making Managed Instance the better lift-and-shift target; PostgreSQL is indeed a managed relational service.",
+        "incorrect": "Instance-level feature requirements point away from single database toward Managed Instance.",
+        "examTip": "Match migration requirements to the Azure SQL deployment option that supports the needed features.",
+        "relatedTopics": [
+          "Azure SQL Database",
+          "Azure SQL Managed Instance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-046",
+      "type": "yes-no-statements",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A DBA notices that a large reporting table has slow query performance and is considering adding indexes to speed up read queries.",
+      "questionText": "For each statement about indexes, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A clustered index determines the physical order in which rows are stored in a table.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A table can have multiple clustered indexes.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Adding many indexes can slow down insert and update operations because indexes must also be maintained.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "A clustered index defines physical row order and a table can have only one; excessive indexing adds write overhead since each index must be updated.",
+        "incorrect": "Only one clustered index is allowed per table because it dictates physical storage order.",
+        "examTip": "A table can have many non-clustered indexes but only one clustered index.",
+        "relatedTopics": [
+          "indexes",
+          "clustered index"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-047",
+      "type": "dropdown-select",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the SQL statement description by choosing the correct option from each dropdown.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To retrieve rows from a table, use the ____ statement.",
+          "options": [
+            "SELECT",
+            "INSERT",
+            "DELETE"
+          ],
+          "correctAnswer": "SELECT"
+        },
+        {
+          "id": "d2",
+          "prompt": "To add a new row to a table, use the ____ statement.",
+          "options": [
+            "SELECT",
+            "INSERT",
+            "UPDATE"
+          ],
+          "correctAnswer": "INSERT"
+        }
+      ],
+      "explanation": {
+        "correct": "SELECT retrieves data, and INSERT adds new rows to a table.",
+        "incorrect": "UPDATE modifies existing rows and DELETE removes rows; neither adds new rows.",
+        "examTip": "Know the four core DML verbs: SELECT, INSERT, UPDATE, DELETE.",
+        "relatedTopics": [
+          "SQL",
+          "DML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-048",
+      "type": "dropdown-select",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the sentences about Azure relational services using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "____ is best suited for lift-and-shift migrations requiring near-full SQL Server instance compatibility.",
+          "options": [
+            "Azure SQL Managed Instance",
+            "Azure SQL Database (single database)",
+            "Azure Cosmos DB"
+          ],
+          "correctAnswer": "Azure SQL Managed Instance"
+        },
+        {
+          "id": "d2",
+          "prompt": "____ is a fully managed, open-source relational database service compatible with the MySQL engine.",
+          "options": [
+            "Azure Database for MySQL",
+            "Azure Table Storage",
+            "Azure Blob Storage"
+          ],
+          "correctAnswer": "Azure Database for MySQL"
+        }
+      ],
+      "explanation": {
+        "correct": "Managed Instance targets lift-and-shift migrations; Azure Database for MySQL is the managed MySQL-compatible offering.",
+        "incorrect": "Cosmos DB, Table Storage, and Blob Storage are non-relational services.",
+        "examTip": "Match each Azure data service to its intended workload and compatibility level.",
+        "relatedTopics": [
+          "Azure SQL Managed Instance",
+          "Azure Database for MySQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-049",
+      "type": "dropdown-select",
+      "topicId": "relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the sentences about SQL clause execution order using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The ____ clause filters individual rows before any grouping occurs.",
+          "options": [
+            "WHERE",
+            "HAVING",
+            "ORDER BY"
+          ],
+          "correctAnswer": "WHERE"
+        },
+        {
+          "id": "d2",
+          "prompt": "The ____ clause filters groups of rows after aggregation with GROUP BY.",
+          "options": [
+            "WHERE",
+            "HAVING",
+            "SELECT"
+          ],
+          "correctAnswer": "HAVING"
+        }
+      ],
+      "explanation": {
+        "correct": "WHERE filters rows before grouping; HAVING filters aggregated groups after GROUP BY.",
+        "incorrect": "ORDER BY sorts results and SELECT chooses columns; neither filters rows or groups.",
+        "examTip": "Logical query order: FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY.",
+        "relatedTopics": [
+          "SQL",
+          "query execution order"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-050",
+      "type": "ordering",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following SQL query clauses in the order they logically execute (not the order they are typed).",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "FROM (identify source tables)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "WHERE (filter individual rows)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "GROUP BY (aggregate rows into groups)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "HAVING (filter aggregated groups)",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "ORDER BY (sort the final result)",
+          "correctPosition": 5
+        }
+      ],
+      "explanation": {
+        "correct": "SQL logically processes FROM, then WHERE, then GROUP BY, then HAVING, then ORDER BY, even though it is typed differently.",
+        "incorrect": "Mixing up WHERE and HAVING order is a common mistake — WHERE always comes before grouping, HAVING after.",
+        "examTip": "SELECT is written first but logically evaluated near the end, just before ORDER BY.",
+        "relatedTopics": [
+          "SQL",
+          "query execution order"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-051",
+      "type": "ordering",
+      "topicId": "relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Place the following steps of designing a normalized relational schema in a logical order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify entities and their attributes",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Define primary keys for each entity/table",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Define foreign keys to represent relationships between tables",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Apply normalization rules to remove redundancy",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "A typical design flow identifies entities, assigns primary keys, links tables with foreign keys, then normalizes to remove redundancy.",
+        "incorrect": "Foreign keys depend on primary keys already being defined in the referenced tables, so keys must come before relationships.",
+        "examTip": "Primary keys must exist before foreign keys can reference them.",
+        "relatedTopics": [
+          "relational design",
+          "normalization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-052",
+      "type": "drag-drop",
+      "topicId": "relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each Azure relational database service to the scenario it best fits.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Lift-and-shift SQL Server migration needing instance features",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "New cloud-native app needing a simple managed SQL database",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Open-source app requiring MySQL compatibility",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure SQL Managed Instance"
+        },
+        {
+          "id": "item2",
+          "text": "Azure SQL Database (single database)"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Database for MySQL"
+        }
+      ],
+      "explanation": {
+        "correct": "Managed Instance fits lift-and-shift migrations, single database fits new cloud-native apps, and Azure Database for MySQL fits MySQL-compatible workloads.",
+        "incorrect": "Review each service's target use case if a match seems off.",
+        "examTip": "Match services to workload needs: compatibility level, management overhead, and engine type.",
+        "relatedTopics": [
+          "Azure SQL services",
+          "Azure Database for MySQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-053",
+      "type": "drag-drop",
+      "topicId": "relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each SQL keyword to its correct category.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Data Definition Language (DDL)",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Data Manipulation Language (DML)",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "CREATE TABLE"
+        },
+        {
+          "id": "item2",
+          "text": "DROP TABLE"
+        },
+        {
+          "id": "item3",
+          "text": "INSERT"
+        },
+        {
+          "id": "item4",
+          "text": "UPDATE"
+        }
+      ],
+      "explanation": {
+        "correct": "CREATE TABLE and DROP TABLE define or remove schema objects (DDL); INSERT and UPDATE manipulate the data within tables (DML).",
+        "incorrect": "Review the DDL vs DML distinction if any item was placed incorrectly.",
+        "examTip": "DDL changes structure; DML changes data.",
+        "relatedTopics": [
+          "SQL",
+          "DDL",
+          "DML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-054",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service is a globally distributed, multi-model NoSQL database that supports multiple APIs including Core (SQL), MongoDB, Cassandra, Gremlin, and Table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Cosmos DB",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Database for PostgreSQL",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Synapse Analytics",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Cosmos DB is a globally distributed, multi-model database supporting several NoSQL APIs.",
+        "incorrect": "SQL Database and PostgreSQL are relational services; Synapse Analytics is an analytics platform, not a NoSQL database.",
+        "examTip": "Remember Cosmos DB's five APIs: Core (SQL), MongoDB, Cassandra, Gremlin, and Table.",
+        "relatedTopics": [
+          "Azure Cosmos DB"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-055",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "A development team is migrating an existing application built on MongoDB and wants to keep using MongoDB drivers and query syntax without managing their own MongoDB servers.",
+      "questionText": "Which Azure Cosmos DB API should they use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "API for MongoDB",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Core (SQL) API",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Gremlin API",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Cassandra API",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Azure Cosmos DB API for MongoDB allows existing MongoDB applications and drivers to work with minimal changes.",
+        "incorrect": "The Core (SQL), Gremlin, and Cassandra APIs use different query languages and drivers that would require rewriting the application.",
+        "examTip": "Choose the Cosmos DB API that matches the client drivers/tools already in use.",
+        "relatedTopics": [
+          "Azure Cosmos DB",
+          "API for MongoDB"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-056",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "A team needs to model and query highly connected data, such as a social network of friends-of-friends relationships, using graph traversal queries.",
+      "questionText": "Which Azure Cosmos DB API is best suited for this scenario?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gremlin API",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Table API",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Core (SQL) API",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Cassandra API",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Gremlin API supports graph data models with vertices and edges, ideal for traversing connected relationships.",
+        "incorrect": "Table, Core (SQL), and Cassandra APIs do not natively support graph traversal query semantics.",
+        "examTip": "Graph scenarios (nodes/edges, traversals) point to the Gremlin API.",
+        "relatedTopics": [
+          "Azure Cosmos DB",
+          "Gremlin API",
+          "graph databases"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-057",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure storage service is best suited for storing simple NoSQL key-value data with a partition key and row key, without the global distribution features of Cosmos DB?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Table Storage",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Blob Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Files",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Table Storage stores structured NoSQL key-value data addressed by partition key and row key.",
+        "incorrect": "Blob Storage stores unstructured binary objects, SQL Database is relational, and Azure Files provides SMB file shares.",
+        "examTip": "Table Storage can also be accessed via the Cosmos DB Table API for added capabilities like global distribution.",
+        "relatedTopics": [
+          "Azure Table Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-058",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure Blob Storage access tier is optimized for data that is accessed frequently?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hot tier",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Cool tier",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Archive tier",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Premium file share tier",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Hot tier has the highest storage cost but the lowest access cost, making it ideal for frequently accessed data.",
+        "incorrect": "Cool and Archive tiers are optimized for infrequently accessed or long-term archival data, with higher access costs.",
+        "examTip": "Hot = frequent access, Cool = infrequent (30+ days), Archive = rarely accessed (180+ days), offline.",
+        "relatedTopics": [
+          "Azure Blob Storage",
+          "access tiers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-059",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company needs to retain seven years of compliance records that are almost never accessed but must not be deleted, and cost is the primary concern.",
+      "questionText": "Which Azure Blob Storage access tier should they use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Archive tier",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Hot tier",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Cool tier",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Premium tier",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Archive tier offers the lowest storage cost, appropriate for data rarely accessed and retained for long compliance periods, though retrieval takes longer.",
+        "incorrect": "Hot and Cool tiers cost more to store data long-term, and Premium is optimized for low-latency high-performance workloads, not archival.",
+        "examTip": "Archive tier data must be rehydrated before it can be read, which can take hours.",
+        "relatedTopics": [
+          "Azure Blob Storage",
+          "Archive tier"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-060",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "In Azure Cosmos DB, what is the primary purpose of a partition key?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To distribute data and workload evenly across physical partitions for scalability",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To encrypt data at rest",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To enforce referential integrity between containers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To define the primary key of a relational table",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The partition key determines how Cosmos DB distributes data across physical partitions, enabling horizontal scalability.",
+        "incorrect": "Encryption, referential integrity, and relational primary keys are unrelated to the Cosmos DB partition key's role.",
+        "examTip": "Choosing a good partition key with high cardinality is essential for even distribution and performance.",
+        "relatedTopics": [
+          "Azure Cosmos DB",
+          "partition key"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-061",
+      "type": "single-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An application needs wide-column, highly available storage compatible with existing Apache Cassandra client drivers and CQL queries.",
+      "questionText": "Which Azure Cosmos DB API should be used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cassandra API",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Core (SQL) API",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Table API",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Gremlin API",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Cassandra API in Azure Cosmos DB is wire-protocol compatible with existing Cassandra drivers and CQL.",
+        "incorrect": "The other APIs use different query languages and would not be compatible with existing Cassandra client code without changes.",
+        "examTip": "Match the API to the existing client protocol/drivers being used by the application.",
+        "relatedTopics": [
+          "Azure Cosmos DB",
+          "Cassandra API"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-062",
+      "type": "multiple-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which two of the following are examples of non-relational (NoSQL) Azure data stores? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Cosmos DB",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Table Storage",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Database for PostgreSQL",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Cosmos DB and Table Storage are NoSQL, non-relational data stores.",
+        "incorrect": "Azure SQL Database and Azure Database for PostgreSQL are relational database services.",
+        "examTip": "Group Azure data services into relational vs non-relational buckets for the exam.",
+        "relatedTopics": [
+          "non-relational data",
+          "Azure data services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-063",
+      "type": "multiple-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two of the following are valid Azure Cosmos DB APIs? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gremlin API",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Core (SQL) API",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "T-SQL API",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "REST for PostgreSQL API",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Gremlin and Core (SQL) are two of the five supported Cosmos DB APIs.",
+        "incorrect": "T-SQL API and 'REST for PostgreSQL API' are not real Cosmos DB API names.",
+        "examTip": "The five Cosmos DB APIs are Core (SQL), MongoDB, Cassandra, Gremlin, and Table.",
+        "relatedTopics": [
+          "Azure Cosmos DB APIs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-064",
+      "type": "multiple-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two statements about Azure Blob Storage access tiers are correct? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Hot tier has higher storage costs but lower access costs than the Cool tier",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The Archive tier requires data to be rehydrated before it can be read",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The Cool tier is intended for data accessed multiple times per second",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Blob access tiers cannot be changed once set",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Hot tier trades higher storage cost for lower access cost, and Archive tier data must be rehydrated (moved to an online tier) before reading.",
+        "incorrect": "Cool tier is for infrequently accessed data, not high-frequency access, and access tiers can generally be changed after creation.",
+        "examTip": "Understand the cost/access trade-offs across Hot, Cool, and Archive tiers.",
+        "relatedTopics": [
+          "Azure Blob Storage tiers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-065",
+      "type": "multiple-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An engineer is designing a new Azure Cosmos DB container that must scale to millions of items while keeping requests evenly distributed across partitions.",
+      "questionText": "Which two factors are important when choosing a partition key for an Azure Cosmos DB container? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "High cardinality to spread data evenly across partitions",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A value frequently used in query filters for efficient routing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A value that is the same for every item in the container",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A value that changes randomly on every read operation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A good partition key has high cardinality for even distribution and is commonly used in queries to avoid cross-partition scans.",
+        "incorrect": "A single repeated value creates a 'hot partition' with uneven load, and partition keys should be stable, not constantly changing.",
+        "examTip": "Avoid low-cardinality partition keys that create hot partitions.",
+        "relatedTopics": [
+          "Azure Cosmos DB",
+          "partition key design"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-066",
+      "type": "multiple-choice",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which two of the following describe Azure Blob Storage? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is optimized for storing large amounts of unstructured data such as images and videos",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "It organizes data into containers that hold blobs",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It requires all data to conform to a relational schema",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It only supports the Archive access tier",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Blob Storage stores unstructured data inside containers, which act as logical groupings for blobs.",
+        "incorrect": "Blob Storage does not require a relational schema, and it supports Hot, Cool, and Archive tiers, not just Archive.",
+        "examTip": "Blob Storage hierarchy: storage account -> container -> blob.",
+        "relatedTopics": [
+          "Azure Blob Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-067",
+      "type": "yes-no-statements",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each statement about Azure Cosmos DB, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Cosmos DB can be distributed across multiple Azure regions globally.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Cosmos DB only supports a single API for data access.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Cosmos DB is a non-relational, multi-model database service.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Cosmos DB supports global distribution across regions and offers multiple APIs, making it a multi-model, non-relational service.",
+        "incorrect": "Cosmos DB supports five different APIs, not just one.",
+        "examTip": "Global distribution and multi-model support are defining Cosmos DB features.",
+        "relatedTopics": [
+          "Azure Cosmos DB"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-068",
+      "type": "yes-no-statements",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about Azure Blob Storage, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Blobs are organized within containers inside a storage account.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The Cool access tier is the cheapest per-GB storage option available.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Block blobs are commonly used for storing text and binary files such as documents and images.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Containers organize blobs; block blobs are the standard choice for typical file storage. The Archive tier, not Cool, offers the lowest per-GB storage cost.",
+        "incorrect": "Archive tier has the lowest storage cost, cheaper than Cool.",
+        "examTip": "Cost order from cheapest to most expensive storage: Archive < Cool < Hot.",
+        "relatedTopics": [
+          "Azure Blob Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-069",
+      "type": "yes-no-statements",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about Azure Table Storage, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Table Storage stores data as entities identified by a partition key and a row key.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Table Storage enforces a fixed relational schema across all rows.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Table Storage is a NoSQL key-value store.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Table Storage entities are identified by partition and row keys and it is a schemaless NoSQL key-value store.",
+        "incorrect": "Table Storage does not enforce a fixed relational schema; different entities in the same table can have different properties.",
+        "examTip": "Table Storage is schemaless — rows in the same table can have different columns.",
+        "relatedTopics": [
+          "Azure Table Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-070",
+      "type": "yes-no-statements",
+      "topicId": "non-relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement about choosing a Cosmos DB API, select Yes if the statement correctly matches the scenario, or No if it does not.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The Gremlin API is the best choice for querying deeply connected relationship data using graph traversals.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The Table API is the best choice for complex multi-table relational joins.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "The Core (SQL) API allows querying JSON documents using a SQL-like syntax.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Gremlin suits graph traversal scenarios, and Core (SQL) API uses a SQL-like syntax over JSON documents. NoSQL APIs, including Table API, are not designed for relational joins.",
+        "incorrect": "Multi-table relational joins are a relational database concept, not something the NoSQL Table API is designed for.",
+        "examTip": "Cosmos DB APIs are NoSQL; joins across containers are generally avoided in favor of denormalized documents.",
+        "relatedTopics": [
+          "Azure Cosmos DB APIs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-071",
+      "type": "dropdown-select",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each sentence about Azure Blob Storage tiers using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Data accessed frequently should be stored in the ____ tier.",
+          "options": [
+            "Hot",
+            "Cool",
+            "Archive"
+          ],
+          "correctAnswer": "Hot"
+        },
+        {
+          "id": "d2",
+          "prompt": "Data rarely accessed and kept mainly for long-term retention should be stored in the ____ tier.",
+          "options": [
+            "Hot",
+            "Cool",
+            "Archive"
+          ],
+          "correctAnswer": "Archive"
+        }
+      ],
+      "explanation": {
+        "correct": "Hot tier suits frequent access, Archive tier suits rarely accessed long-term data.",
+        "incorrect": "Cool tier fits infrequent, but not rarely, accessed data with a 30-day minimum storage duration.",
+        "examTip": "Rank the tiers: Hot (frequent), Cool (infrequent), Archive (rare, offline).",
+        "relatedTopics": [
+          "Azure Blob Storage tiers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-072",
+      "type": "dropdown-select",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the sentences about Azure Cosmos DB APIs using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "An application built on existing MongoDB drivers should use the Cosmos DB ____ API.",
+          "options": [
+            "MongoDB",
+            "Gremlin",
+            "Table"
+          ],
+          "correctAnswer": "MongoDB"
+        },
+        {
+          "id": "d2",
+          "prompt": "An application that models data as vertices and edges should use the Cosmos DB ____ API.",
+          "options": [
+            "MongoDB",
+            "Gremlin",
+            "Cassandra"
+          ],
+          "correctAnswer": "Gremlin"
+        }
+      ],
+      "explanation": {
+        "correct": "MongoDB API supports existing MongoDB drivers; Gremlin API is used for graph data with vertices and edges.",
+        "incorrect": "Table and Cassandra APIs serve different data models and client protocols.",
+        "examTip": "Choose the Cosmos DB API based on the existing client protocol or the data model shape.",
+        "relatedTopics": [
+          "Azure Cosmos DB APIs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-073",
+      "type": "dropdown-select",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the sentence about Azure Table Storage using the dropdown provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "In Azure Table Storage, each entity is uniquely identified by the combination of a partition key and a ____ key.",
+          "options": [
+            "row",
+            "foreign",
+            "primary"
+          ],
+          "correctAnswer": "row"
+        }
+      ],
+      "explanation": {
+        "correct": "Entities in Azure Table Storage are uniquely identified by the combination of partition key and row key.",
+        "incorrect": "Table Storage does not use relational foreign or primary key terminology.",
+        "examTip": "Partition key + row key together form the unique identifier for a Table Storage entity.",
+        "relatedTopics": [
+          "Azure Table Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-074",
+      "type": "dropdown-select",
+      "topicId": "non-relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the sentences about Cosmos DB partitioning using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A partition key with ____ cardinality helps distribute data and requests evenly across partitions.",
+          "options": [
+            "high",
+            "low",
+            "zero"
+          ],
+          "correctAnswer": "high"
+        },
+        {
+          "id": "d2",
+          "prompt": "Choosing a partition key with very ____ cardinality can create a 'hot partition' that limits scalability.",
+          "options": [
+            "high",
+            "low",
+            "medium"
+          ],
+          "correctAnswer": "low"
+        }
+      ],
+      "explanation": {
+        "correct": "High cardinality partition keys spread load evenly, while low cardinality keys concentrate load onto a few partitions, creating hot partitions.",
+        "incorrect": "Zero and medium do not correctly describe the extremes discussed in Cosmos DB partition key guidance.",
+        "examTip": "Avoid partition keys like 'status' with only a few possible values.",
+        "relatedTopics": [
+          "Azure Cosmos DB",
+          "partition key"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-075",
+      "type": "dropdown-select",
+      "topicId": "non-relational-data",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the sentence about Azure Blob Storage structure using the dropdown provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Within a storage account, blobs are organized into logical groupings called ____.",
+          "options": [
+            "containers",
+            "databases",
+            "tables"
+          ],
+          "correctAnswer": "containers"
+        }
+      ],
+      "explanation": {
+        "correct": "Blobs are grouped into containers within a storage account.",
+        "incorrect": "Databases and tables are relational or Table Storage concepts, not Blob Storage groupings.",
+        "examTip": "Storage account -> container -> blob is the Blob Storage hierarchy.",
+        "relatedTopics": [
+          "Azure Blob Storage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-076",
+      "type": "ordering",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the Azure Blob Storage access tiers in order from lowest storage cost to highest storage cost.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Archive tier",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Cool tier",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Hot tier",
+          "correctPosition": 3
+        }
+      ],
+      "explanation": {
+        "correct": "Archive has the lowest storage cost, followed by Cool, then Hot, which has the highest storage cost but lowest access cost.",
+        "incorrect": "Reordering would misrepresent the actual cost structure of Azure Blob Storage tiers.",
+        "examTip": "Storage cost and access cost move in opposite directions across the tiers.",
+        "relatedTopics": [
+          "Azure Blob Storage tiers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-077",
+      "type": "ordering",
+      "topicId": "non-relational-data",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following steps for retrieving a blob that is currently in the Archive tier in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Change the blob's tier to Hot or Cool to initiate rehydration",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Wait for the rehydration process to complete (this can take hours)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Read the blob's contents once it is back in an online tier",
+          "correctPosition": 3
+        }
+      ],
+      "explanation": {
+        "correct": "Archive tier blobs are offline and must be rehydrated to an online tier before they can be read, which is a process that takes time.",
+        "incorrect": "You cannot read an Archive tier blob directly without first rehydrating it.",
+        "examTip": "Archive tier trades low cost for higher retrieval latency — plan accordingly.",
+        "relatedTopics": [
+          "Azure Blob Storage",
+          "Archive tier",
+          "rehydration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-078",
+      "type": "drag-drop",
+      "topicId": "non-relational-data",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each scenario to the Azure Cosmos DB API that best fits it.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Core (SQL) API",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "MongoDB API",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Gremlin API",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "A new application built natively for Cosmos DB using JSON documents and SQL-like queries"
+        },
+        {
+          "id": "item2",
+          "text": "An existing application using MongoDB drivers and BSON documents"
+        },
+        {
+          "id": "item3",
+          "text": "An application traversing a social graph of connections between people"
+        }
+      ],
+      "explanation": {
+        "correct": "Core (SQL) API fits native JSON/SQL-style querying, MongoDB API fits existing MongoDB apps, and Gremlin API fits graph traversal scenarios.",
+        "incorrect": "Review each API's intended use case if an item was placed incorrectly.",
+        "examTip": "Match the API to existing drivers/protocols or the natural shape of the data model.",
+        "relatedTopics": [
+          "Azure Cosmos DB APIs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe how to work with non-relational data on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-079",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service is a cloud-based ETL and data integration service used to orchestrate and automate data movement and transformation pipelines?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Data Factory",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Databricks",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Power BI",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Data Factory is a managed service for building and orchestrating ETL/ELT data pipelines.",
+        "incorrect": "Databricks is an analytics/Spark platform, Power BI is a visualization tool, and Table Storage is a NoSQL data store.",
+        "examTip": "Data Factory pipelines are made up of activities that move and transform data.",
+        "relatedTopics": [
+          "Azure Data Factory"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-080",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service provides a unified analytics platform that combines big data processing and data warehousing capabilities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Synapse Analytics",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Data Factory",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Event Hubs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Synapse Analytics unifies data warehousing and big data analytics into a single service.",
+        "incorrect": "Data Factory focuses on orchestration, Event Hubs on event ingestion, and Table Storage on NoSQL key-value data.",
+        "examTip": "Synapse combines SQL pools, Spark pools, and pipelines in one workspace.",
+        "relatedTopics": [
+          "Azure Synapse Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-081",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "A data science team wants a collaborative, notebook-based environment built on Apache Spark to run large-scale data engineering and machine learning workloads.",
+      "questionText": "Which Azure service best fits this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Databricks",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Data Factory",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Power BI",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Databricks is an Apache Spark-based analytics platform offering collaborative notebooks for data engineering and machine learning.",
+        "incorrect": "Data Factory orchestrates pipelines but is not primarily a notebook-based Spark environment; Power BI is for visualization; Table Storage is a data store.",
+        "examTip": "Databricks is built by the creators of Apache Spark and integrates tightly with Azure.",
+        "relatedTopics": [
+          "Azure Databricks",
+          "Apache Spark"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-082",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "A company wants to deploy a managed Hadoop and Spark cluster environment in Azure to run open-source big data frameworks like Hive and HBase.",
+      "questionText": "Which Azure service should they use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure HDInsight",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Synapse Analytics",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Power BI",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure HDInsight is a managed service for running popular open-source big data frameworks such as Hadoop, Spark, Hive, and HBase.",
+        "incorrect": "Synapse focuses on unified analytics and data warehousing, Power BI on visualization, and SQL Database on relational OLTP workloads.",
+        "examTip": "HDInsight is Azure's managed offering for open-source big data cluster technologies.",
+        "relatedTopics": [
+          "Azure HDInsight"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-083",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "In Power BI, which artifact typically combines multiple visualizations from one or more reports into a single, often single-page, high-level view for monitoring key metrics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A dashboard",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A dataflow",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A workspace",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A Power BI dashboard is a single-page canvas that pins visuals from one or more reports for at-a-glance monitoring.",
+        "incorrect": "A dataset is the underlying data model, a dataflow is a reusable data prep process, and a workspace is a collaboration container for Power BI content.",
+        "examTip": "Reports contain multiple pages of visuals; dashboards pin tiles from reports onto one page.",
+        "relatedTopics": [
+          "Power BI",
+          "dashboards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-084",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In Power BI, what is a 'dataset'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A collection of data that Power BI uses to create visualizations and reports",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A single-page collection of pinned visual tiles",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A container used only to share dashboards with external users",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A scheduled data pipeline that moves data between storage accounts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A dataset is the collection of data (from one or more sources) that Power BI uses as the basis for reports and visualizations.",
+        "incorrect": "A single-page collection of pinned tiles describes a dashboard, and datasets are not pipelines for moving data between storage accounts.",
+        "examTip": "Reports and dashboards are both built on top of one or more datasets.",
+        "relatedTopics": [
+          "Power BI",
+          "datasets"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-085",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure service is designed to ingest and process millions of streaming events per second from sources such as IoT devices and application telemetry?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Event Hubs",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Data Factory",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Power BI Desktop",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Event Hubs is a big data streaming platform and event ingestion service capable of receiving and processing millions of events per second.",
+        "incorrect": "Data Factory orchestrates batch/ETL pipelines, SQL Database is a relational store, and Power BI Desktop is a report authoring tool.",
+        "examTip": "Event Hubs is often paired with Azure Stream Analytics for real-time processing.",
+        "relatedTopics": [
+          "Azure Event Hubs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-086",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company ingests telemetry from thousands of IoT sensors through Azure Event Hubs and needs to run continuous SQL-like queries over the streaming data to detect anomalies in real time before storing results.",
+      "questionText": "Which Azure service should they use to process the streaming data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Stream Analytics",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Data Factory",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Power BI",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure SQL Managed Instance",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Stream Analytics allows continuous SQL-like queries over streaming data sources such as Event Hubs, ideal for real-time anomaly detection.",
+        "incorrect": "Data Factory is oriented toward batch orchestration, Power BI toward visualization, and SQL Managed Instance toward relational storage rather than stream processing.",
+        "examTip": "Stream Analytics uses a SQL-like query language specifically designed for streaming data.",
+        "relatedTopics": [
+          "Azure Stream Analytics",
+          "Azure Event Hubs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-087",
+      "type": "single-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A BI team needs multiple analysts to collaborate on shared Power BI reports and dashboards, with controlled access for different departments.",
+      "questionText": "Which Power BI concept enables this kind of collaboration and access control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Workspaces",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Datasets",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Dataflows",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Gateways",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Power BI workspaces are collaborative containers where teams can create, share, and manage access to dashboards, reports, and datasets.",
+        "incorrect": "Datasets and dataflows are data-related artifacts, and gateways connect on-premises data sources, none of which manage team collaboration directly.",
+        "examTip": "Workspaces control who can view or edit shared Power BI content.",
+        "relatedTopics": [
+          "Power BI workspaces"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-088",
+      "type": "multiple-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two of the following are components you can typically work with inside an Azure Synapse Analytics workspace? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "SQL pools for data warehousing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Apache Spark pools for big data processing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Power BI Desktop installation files",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SQL Server Agent jobs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Synapse Analytics workspaces include both SQL pools and Spark pools for different processing needs.",
+        "incorrect": "Power BI Desktop is a separate application, and SQL Server Agent is a SQL Server/Managed Instance feature, not part of Synapse.",
+        "examTip": "Synapse Studio provides a unified experience across SQL and Spark pools plus pipelines.",
+        "relatedTopics": [
+          "Azure Synapse Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-089",
+      "type": "multiple-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which two of the following are valid Power BI artifacts? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reports",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Dashboards",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Containers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Partitions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Reports and dashboards are core Power BI artifacts used to present and monitor data.",
+        "incorrect": "Containers relate to Blob Storage, and partitions relate to Cosmos DB or table partitioning, not Power BI.",
+        "examTip": "Core Power BI building blocks: datasets, reports, dashboards, workspaces, and dataflows.",
+        "relatedTopics": [
+          "Power BI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-090",
+      "type": "multiple-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which two of the following are Azure services commonly used for building batch data pipelines? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Data Factory",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Synapse Pipelines",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Stream Analytics",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Power BI Desktop",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Data Factory and Synapse Pipelines (which share the same pipeline engine) are used to orchestrate batch ETL/ELT data movement.",
+        "incorrect": "Stream Analytics is designed for real-time streaming, not batch orchestration, and Power BI Desktop is a report authoring tool.",
+        "examTip": "Synapse Pipelines is built on the same technology as Azure Data Factory.",
+        "relatedTopics": [
+          "Azure Data Factory",
+          "Azure Synapse Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-091",
+      "type": "multiple-choice",
+      "topicId": "analytics-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which two of the following statements about real-time analytics on Azure are correct? (Select two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Event Hubs can ingest high-throughput streaming data from many producers simultaneously",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Stream Analytics jobs use a SQL-like query language to analyze streaming data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Real-time analytics pipelines always require data to be batched daily before analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Power BI cannot display data from streaming sources",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Event Hubs handles high-throughput ingestion, and Stream Analytics uses SQL-like queries over streaming data; daily batching contradicts real-time processing, and Power BI does support streaming datasets.",
+        "incorrect": "Real-time analytics is specifically meant to avoid daily batching delays, and Power BI supports real-time/streaming tiles and dashboards.",
+        "examTip": "Power BI can consume streaming datasets pushed from Stream Analytics for near real-time dashboards.",
+        "relatedTopics": [
+          "real-time analytics",
+          "Azure Stream Analytics",
+          "Power BI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-092",
+      "type": "yes-no-statements",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each statement about Azure Data Factory, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Data Factory can orchestrate data movement between many different source and destination systems.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Data Factory is primarily used to create Power BI dashboards.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Data Factory pipelines are made up of one or more activities.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Data Factory orchestrates data movement/transformation across many systems via pipelines made of activities; it does not create Power BI dashboards.",
+        "incorrect": "Dashboard creation is a Power BI function, not a Data Factory function.",
+        "examTip": "Data Factory = orchestration and movement; Power BI = visualization.",
+        "relatedTopics": [
+          "Azure Data Factory"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-093",
+      "type": "yes-no-statements",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company wants a single analytics workspace where its team can run both traditional data warehouse queries and large-scale Spark jobs, then share results through Power BI.",
+      "questionText": "For each statement about Azure Synapse Analytics, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Synapse Analytics can run both SQL-based data warehousing queries and Apache Spark-based big data jobs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Synapse Analytics cannot integrate with Power BI.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Synapse Studio provides a single web-based interface for managing pipelines, SQL pools, and Spark pools.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Synapse unifies SQL and Spark analytics and integrates with Power BI directly from Synapse Studio.",
+        "incorrect": "Synapse Analytics does integrate with Power BI, including Power BI reports embedded within Synapse Studio.",
+        "examTip": "Synapse Studio is the unified workspace experience for Synapse Analytics.",
+        "relatedTopics": [
+          "Azure Synapse Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-094",
+      "type": "yes-no-statements",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about Power BI, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A Power BI report can contain multiple pages of visualizations built from a dataset.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A Power BI dashboard can only display visuals pinned from a single report.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Power BI workspaces allow teams to collaborate on and share content.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Reports can have multiple pages, and workspaces support team collaboration; dashboards can actually pin tiles from multiple reports and datasets, not just one.",
+        "incorrect": "Dashboards are not limited to a single report — they can aggregate tiles from several reports.",
+        "examTip": "Dashboards provide a consolidated view that can span multiple underlying reports.",
+        "relatedTopics": [
+          "Power BI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-095",
+      "type": "yes-no-statements",
+      "topicId": "analytics-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement about streaming analytics on Azure, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Event Hubs is designed for high-throughput ingestion of streaming events.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Stream Analytics can output results directly to destinations such as Power BI or Blob Storage.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Stream Analytics queries must be written in a general-purpose programming language like Python.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Event Hubs is built for high-throughput ingestion, and Stream Analytics can route output to sinks like Power BI or Blob Storage. Stream Analytics queries use a SQL-like language, not general-purpose code.",
+        "incorrect": "Stream Analytics uses its own SQL-like query language rather than requiring Python or similar languages.",
+        "examTip": "Stream Analytics jobs define inputs, a SQL-like query, and one or more outputs.",
+        "relatedTopics": [
+          "Azure Stream Analytics",
+          "Azure Event Hubs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-096",
+      "type": "yes-no-statements",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about Azure Databricks and HDInsight, select Yes if the statement is correct, or No if it is incorrect.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure Databricks provides collaborative, notebook-based access to Apache Spark.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure HDInsight can only run Apache Spark and no other open-source frameworks.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Both Azure Databricks and Azure HDInsight can be used to process large-scale big data workloads.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Databricks offers notebook-based Spark access, and both Databricks and HDInsight support large-scale big data processing. HDInsight supports multiple frameworks beyond Spark, such as Hadoop, Hive, and HBase.",
+        "incorrect": "HDInsight is not limited to Spark; it supports several open-source big data frameworks.",
+        "examTip": "HDInsight supports Hadoop, Spark, Hive, HBase, Kafka, and more.",
+        "relatedTopics": [
+          "Azure Databricks",
+          "Azure HDInsight"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-097",
+      "type": "dropdown-select",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the sentences about Azure analytics services using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "____ is used to orchestrate and schedule data movement and transformation pipelines.",
+          "options": [
+            "Azure Data Factory",
+            "Power BI",
+            "Azure Event Hubs"
+          ],
+          "correctAnswer": "Azure Data Factory"
+        },
+        {
+          "id": "d2",
+          "prompt": "____ is used to create interactive reports and dashboards for business users.",
+          "options": [
+            "Power BI",
+            "Azure Data Factory",
+            "Azure HDInsight"
+          ],
+          "correctAnswer": "Power BI"
+        }
+      ],
+      "explanation": {
+        "correct": "Data Factory orchestrates pipelines, while Power BI is used to build reports and dashboards for business consumption.",
+        "incorrect": "Event Hubs is for event ingestion, and HDInsight is for open-source big data clusters, not reporting.",
+        "examTip": "Match each Azure analytics tool to its primary purpose: ingest, process, orchestrate, or visualize.",
+        "relatedTopics": [
+          "Azure Data Factory",
+          "Power BI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-098",
+      "type": "dropdown-select",
+      "topicId": "analytics-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete the sentences about real-time analytics using the dropdowns provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "____ ingests large volumes of streaming events from many producers such as IoT devices.",
+          "options": [
+            "Azure Event Hubs",
+            "Azure Data Factory",
+            "Power BI Desktop"
+          ],
+          "correctAnswer": "Azure Event Hubs"
+        },
+        {
+          "id": "d2",
+          "prompt": "____ runs continuous SQL-like queries over streaming data to produce real-time insights.",
+          "options": [
+            "Azure Stream Analytics",
+            "Azure Database for MySQL",
+            "Azure Table Storage"
+          ],
+          "correctAnswer": "Azure Stream Analytics"
+        }
+      ],
+      "explanation": {
+        "correct": "Event Hubs ingests streaming events at scale, and Stream Analytics processes that stream using SQL-like queries.",
+        "incorrect": "Data Factory and Power BI Desktop do not ingest streaming events, and MySQL/Table Storage are not stream processing engines.",
+        "examTip": "Event Hubs (ingest) + Stream Analytics (process) is the classic real-time analytics pairing on Azure.",
+        "relatedTopics": [
+          "Azure Event Hubs",
+          "Azure Stream Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-099",
+      "type": "dropdown-select",
+      "topicId": "analytics-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete the sentence about Power BI using the dropdown provided.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A Power BI ____ is a single-page view that pins visual tiles for at-a-glance monitoring of key metrics.",
+          "options": [
+            "dashboard",
+            "dataset",
+            "dataflow"
+          ],
+          "correctAnswer": "dashboard"
+        }
+      ],
+      "explanation": {
+        "correct": "A dashboard is the single-page, pinned-tile view used for quick monitoring in Power BI.",
+        "incorrect": "A dataset is the underlying data, and a dataflow is a reusable data preparation process, neither of which is the pinned-tile view itself.",
+        "examTip": "Dashboards are built from tiles pinned out of one or more reports.",
+        "relatedTopics": [
+          "Power BI dashboards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-100",
+      "type": "ordering",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the following stages of a typical batch analytics pipeline on Azure in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Ingest raw data into a data lake using Azure Data Factory",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Transform and process the data using Azure Synapse Analytics or Azure Databricks",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Load curated data into a data warehouse or serving layer",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Visualize the data using Power BI reports and dashboards",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "A typical pipeline ingests raw data, processes/transforms it, loads curated results, then visualizes them for end users.",
+        "incorrect": "Visualization depends on curated data being available, so it must come after ingestion and transformation.",
+        "examTip": "Think of the flow: ingest -> process -> store -> visualize.",
+        "relatedTopics": [
+          "analytics pipeline",
+          "Azure Data Factory",
+          "Power BI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-101",
+      "type": "ordering",
+      "topicId": "analytics-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the following stages of a real-time analytics pipeline in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "IoT devices send telemetry events",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Azure Event Hubs ingests the streaming events",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Azure Stream Analytics processes the events with a continuous query",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Results are pushed to a Power BI streaming dashboard",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "The real-time flow starts at the event source, moves through ingestion, then processing, and finally visualization.",
+        "incorrect": "Processing cannot occur before ingestion, and visualization depends on processed output.",
+        "examTip": "This ingest-process-visualize pattern is central to real-time analytics on Azure.",
+        "relatedTopics": [
+          "real-time analytics",
+          "Azure Event Hubs",
+          "Azure Stream Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-102",
+      "type": "drag-drop",
+      "topicId": "analytics-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each Azure analytics service to the role it plays in an end-to-end analytics solution.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Orchestration / ETL",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Big data processing",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Visualization",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "Streaming ingestion",
+          "acceptsItemIds": [
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure Data Factory"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Databricks"
+        },
+        {
+          "id": "item3",
+          "text": "Power BI"
+        },
+        {
+          "id": "item4",
+          "text": "Azure Event Hubs"
+        }
+      ],
+      "explanation": {
+        "correct": "Data Factory orchestrates ETL, Databricks processes big data, Power BI visualizes results, and Event Hubs ingests streaming events.",
+        "incorrect": "Review each service's primary role in the analytics pipeline if an item was placed incorrectly.",
+        "examTip": "Recognizing each service's role helps answer scenario-based questions about designing analytics solutions.",
+        "relatedTopics": [
+          "Azure analytics services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "dp900-103",
+      "type": "drag-drop",
+      "topicId": "analytics-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each scenario to the Azure service that best matches it.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Azure Synapse Analytics",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Azure HDInsight",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Azure Stream Analytics",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "A team wants a single workspace combining SQL-based data warehousing and Spark-based big data processing"
+        },
+        {
+          "id": "item2",
+          "text": "A team needs to run an existing Apache Hive workload with minimal changes on managed open-source clusters"
+        },
+        {
+          "id": "item3",
+          "text": "A team needs to run a continuous SQL-like query over an incoming event stream and output alerts in real time"
+        }
+      ],
+      "explanation": {
+        "correct": "Synapse unifies SQL and Spark analytics, HDInsight runs open-source frameworks like Hive with minimal changes, and Stream Analytics runs continuous queries over streaming data.",
+        "incorrect": "Review the primary purpose of each analytics service if a match seems incorrect.",
+        "examTip": "Scenario questions often hinge on a single distinguishing requirement — look for the key phrase that points to one service over another.",
+        "relatedTopics": [
+          "Azure Synapse Analytics",
+          "Azure HDInsight",
+          "Azure Stream Analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe an analytics workload on Azure",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/dp-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

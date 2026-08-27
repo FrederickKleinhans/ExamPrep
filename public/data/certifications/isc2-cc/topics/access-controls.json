@@ -1,0 +1,3444 @@
+{
+  "certificationId": "isc2-cc",
+  "topicId": "access-controls",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "isc2cc-011",
+      "type": "drag-drop",
+      "topicId": "access-controls",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each access control scenario to the model it BEST represents.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "DAC",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "MAC",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "RBAC",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "ABAC",
+          "acceptsItemIds": [
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "A file owner shares edit access to their document with a specific colleague of their choosing"
+        },
+        {
+          "id": "item2",
+          "text": "A classified document can only be opened by users whose clearance level meets or exceeds the document's label"
+        },
+        {
+          "id": "item3",
+          "text": "All members of the 'HR Manager' group automatically receive access to the HR system"
+        },
+        {
+          "id": "item4",
+          "text": "Access is granted only if the request comes from a company device, during business hours, and from an employee in the Finance department"
+        }
+      ],
+      "explanation": {
+        "correct": "Match each scenario's key phrase — owner discretion, classification labels, role membership, or multiple combined attributes — to its access control model.",
+        "incorrect": "Review the CC classification for these items.",
+        "examTip": "DAC=owner discretion, MAC=classification labels, RBAC=role membership, ABAC=multiple attributes.",
+        "relatedTopics": [
+          "Access control models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-053",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of a physical access control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A mantrap at a secure facility entrance",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A firewall access control list",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A password policy",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A digital certificate",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A mantrap is a physical security mechanism that controls entry to a facility by allowing only one person through at a time after verification.",
+        "incorrect": "Firewall ACLs, password policies, and digital certificates are logical/technical or administrative controls, not physical.",
+        "examTip": "Physical access controls include locks, badges, mantraps, fences, and security guards.",
+        "relatedTopics": [
+          "Physical access controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-054",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary purpose of a 'mantrap' in physical security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To allow multiple people to enter a facility simultaneously without verification",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To allow only one authenticated individual to pass through a secure entry point at a time, preventing tailgating",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To record video footage of a facility's exterior",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To control temperature and humidity in a data center",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A mantrap consists of two interlocking doors, allowing only one verified individual through at a time, which helps prevent tailgating/piggybacking.",
+        "incorrect": "Mantraps specifically prevent multiple simultaneous entries; video recording and climate control are different physical security or facilities functions.",
+        "examTip": "Mantraps directly combat the social engineering tactic of tailgating.",
+        "relatedTopics": [
+          "Mantrap",
+          "Tailgating"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-055",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is 'tailgating' (or 'piggybacking') in the context of physical security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An unauthorized person following an authorized person through a secured door without their own credentials",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A network attack that floods a server with traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A method of encrypting data in transit",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A formal process for granting user access rights",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Tailgating occurs when an unauthorized individual follows closely behind an authorized person to gain access to a restricted area without using their own credentials.",
+        "incorrect": "The other options describe a DoS-style network attack, encryption, and account provisioning — unrelated to tailgating.",
+        "examTip": "Security awareness training and mantraps are common controls to mitigate tailgating.",
+        "relatedTopics": [
+          "Tailgating"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-056",
+      "type": "multiple-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are examples of physical access controls? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Security guards",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Fences and gates",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Biometric door locks",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Role-based access control lists in an application",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "CCTV cameras",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Guards, fences/gates, biometric locks, and CCTV are all physical security measures protecting tangible spaces.",
+        "incorrect": "Role-based access control lists in an application are a logical/technical control, not physical.",
+        "examTip": "Physical controls protect buildings, rooms, and equipment; logical controls protect data and systems.",
+        "relatedTopics": [
+          "Physical access controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-057",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of a logical (technical) access control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A security guard at the front desk",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An access control list (ACL) on a network router",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A fence around a parking lot",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A visitor sign-in log",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An ACL on a network router is a technical/logical control implemented through hardware/software configuration to restrict access.",
+        "incorrect": "Guards, fences, and sign-in logs are physical or administrative controls, not logical/technical ones.",
+        "examTip": "Logical controls are implemented within computing systems: ACLs, encryption, authentication mechanisms.",
+        "relatedTopics": [
+          "Logical access controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-058",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary purpose of 'identity and access management' (IAM) within an organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To manage the lifecycle of user identities and their associated access rights across systems",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To design network topology diagrams",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To calculate the return on investment for security tools",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage physical building maintenance schedules",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IAM encompasses processes and technologies for creating, managing, and revoking user identities and their access rights throughout the employee/user lifecycle.",
+        "incorrect": "Network diagrams, ROI calculations, and building maintenance are unrelated to the scope of IAM.",
+        "examTip": "IAM covers the full lifecycle: provisioning, modifying (role changes), and deprovisioning (offboarding) access.",
+        "relatedTopics": [
+          "Identity and access management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-059",
+      "type": "ordering",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the following identity lifecycle stages in the order they typically occur for an employee.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Provisioning (creating the account and initial access)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Access review and modification (e.g., role change)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Deprovisioning (revoking access upon termination)",
+          "correctPosition": 3
+        }
+      ],
+      "explanation": {
+        "correct": "The identity lifecycle follows the employee's tenure: creation, ongoing management, and finally revocation.",
+        "incorrect": "Review the CC identity management lifecycle.",
+        "examTip": "Sequence: Provisioning → Modification → Deprovisioning.",
+        "relatedTopics": [
+          "Identity lifecycle",
+          "IAM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-060",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Why is it important to promptly deprovision (disable/remove) a user's access when they leave an organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To reduce electricity costs associated with idle accounts",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To prevent unauthorized access via orphaned accounts, reducing security risk",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To comply with marketing regulations",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To increase the number of active licenses purchased",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Prompt deprovisioning prevents former employees or attackers from exploiting orphaned/unused accounts to gain unauthorized access.",
+        "incorrect": "The other options are unrelated or incorrect motivations for deprovisioning.",
+        "examTip": "Orphaned accounts are a frequently tested audit finding and security risk in IAM.",
+        "relatedTopics": [
+          "Deprovisioning",
+          "Identity lifecycle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-061",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does Single Sign-On (SSO) allow a user to do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use one set of credentials to access multiple independent systems or applications",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Log in using only a fingerprint, with no password required",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Bypass all authorization checks after logging in once",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Share their password with coworkers securely",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SSO allows a user to authenticate once and gain access to multiple related systems or applications without re-entering credentials for each one.",
+        "incorrect": "SSO doesn't require biometric-only login, does not bypass authorization for each resource, and never involves sharing passwords.",
+        "examTip": "SSO improves user convenience but can create a larger blast radius if the SSO credential itself is compromised.",
+        "relatedTopics": [
+          "SSO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-062",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a notable security risk associated with Single Sign-On (SSO) implementations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Users must remember many different passwords, increasing helpdesk calls",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "If the SSO credential is compromised, an attacker may gain access to ALL connected systems, increasing blast radius",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SSO makes multi-factor authentication impossible to implement",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SSO always requires storing passwords in plaintext",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Because SSO grants access to multiple systems with one credential, compromise of that single credential can expose all connected applications — a larger blast radius risk.",
+        "incorrect": "SSO actually reduces password fatigue/helpdesk calls, can be combined with MFA, and does not require plaintext password storage.",
+        "examTip": "This is why SSO implementations are frequently paired with strong MFA to mitigate the single-point-of-compromise risk.",
+        "relatedTopics": [
+          "SSO",
+          "Risk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-063",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which technology allows a user to authenticate once with an Identity Provider (IdP) and then access multiple Service Providers (SPs) without re-authenticating, commonly used in federated identity scenarios?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAML-based Single Sign-On",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A stateless firewall",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "An intrusion prevention system",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A virtual private network (VPN)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SAML (Security Assertion Markup Language) is a common standard enabling federated SSO between an Identity Provider and multiple Service Providers.",
+        "incorrect": "Firewalls, IPS, and VPNs serve different network security functions and are not identity federation technologies.",
+        "examTip": "Federated identity extends SSO concepts across organizational boundaries (e.g., logging into a partner's app with your corporate identity).",
+        "relatedTopics": [
+          "Federated identity",
+          "SSO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-064",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of a physical access control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A mantrap at a secure facility entrance",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A firewall access control list",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A password policy",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A digital certificate",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A mantrap is a physical security mechanism that controls entry to a facility by allowing only one person through at a time after verification.",
+        "incorrect": "Firewall ACLs, password policies, and digital certificates are logical/technical or administrative controls, not physical.",
+        "examTip": "Physical access controls include locks, badges, mantraps, fences, and security guards.",
+        "relatedTopics": [
+          "Physical access controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-065",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary purpose of a 'mantrap' in physical security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To allow multiple people to enter a facility simultaneously without verification",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To allow only one authenticated individual to pass through a secure entry point at a time, preventing tailgating",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To record video footage of a facility's exterior",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To control temperature and humidity in a data center",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A mantrap consists of two interlocking doors, allowing only one verified individual through at a time, which helps prevent tailgating/piggybacking.",
+        "incorrect": "Mantraps specifically prevent multiple simultaneous entries; video recording and climate control are different physical security or facilities functions.",
+        "examTip": "Mantraps directly combat the social engineering tactic of tailgating.",
+        "relatedTopics": [
+          "Mantrap",
+          "Tailgating"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-066",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is 'tailgating' (or 'piggybacking') in the context of physical security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An unauthorized person following an authorized person through a secured door without their own credentials",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A network attack that floods a server with traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A method of encrypting data in transit",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A formal process for granting user access rights",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Tailgating occurs when an unauthorized individual follows closely behind an authorized person to gain access to a restricted area without using their own credentials.",
+        "incorrect": "The other options describe a DoS-style network attack, encryption, and account provisioning — unrelated to tailgating.",
+        "examTip": "Security awareness training and mantraps are common controls to mitigate tailgating.",
+        "relatedTopics": [
+          "Tailgating"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-067",
+      "type": "multiple-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are examples of physical access controls? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Security guards",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Fences and gates",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Biometric door locks",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Role-based access control lists in an application",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "CCTV cameras",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Guards, fences/gates, biometric locks, and CCTV are all physical security measures protecting tangible spaces.",
+        "incorrect": "Role-based access control lists in an application are a logical/technical control, not physical.",
+        "examTip": "Physical controls protect buildings, rooms, and equipment; logical controls protect data and systems.",
+        "relatedTopics": [
+          "Physical access controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-068",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of a logical (technical) access control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A security guard at the front desk",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An access control list (ACL) on a network router",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A fence around a parking lot",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A visitor sign-in log",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An ACL on a network router is a technical/logical control implemented through hardware/software configuration to restrict access.",
+        "incorrect": "Guards, fences, and sign-in logs are physical or administrative controls, not logical/technical ones.",
+        "examTip": "Logical controls are implemented within computing systems: ACLs, encryption, authentication mechanisms.",
+        "relatedTopics": [
+          "Logical access controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-069",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary purpose of 'identity and access management' (IAM) within an organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To manage the lifecycle of user identities and their associated access rights across systems",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To design network topology diagrams",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To calculate the return on investment for security tools",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage physical building maintenance schedules",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IAM encompasses processes and technologies for creating, managing, and revoking user identities and their access rights throughout the employee/user lifecycle.",
+        "incorrect": "Network diagrams, ROI calculations, and building maintenance are unrelated to the scope of IAM.",
+        "examTip": "IAM covers the full lifecycle: provisioning, modifying (role changes), and deprovisioning (offboarding) access.",
+        "relatedTopics": [
+          "Identity and access management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-070",
+      "type": "ordering",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the following identity lifecycle stages in the order they typically occur for an employee.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Provisioning (creating the account and initial access)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Access review and modification (e.g., role change)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Deprovisioning (revoking access upon termination)",
+          "correctPosition": 3
+        }
+      ],
+      "explanation": {
+        "correct": "The identity lifecycle follows the employee's tenure: creation, ongoing management, and finally revocation.",
+        "incorrect": "Review the CC identity management lifecycle.",
+        "examTip": "Sequence: Provisioning → Modification → Deprovisioning.",
+        "relatedTopics": [
+          "Identity lifecycle",
+          "IAM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-071",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Why is it important to promptly deprovision (disable/remove) a user's access when they leave an organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To reduce electricity costs associated with idle accounts",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To prevent unauthorized access via orphaned accounts, reducing security risk",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To comply with marketing regulations",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To increase the number of active licenses purchased",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Prompt deprovisioning prevents former employees or attackers from exploiting orphaned/unused accounts to gain unauthorized access.",
+        "incorrect": "The other options are unrelated or incorrect motivations for deprovisioning.",
+        "examTip": "Orphaned accounts are a frequently tested audit finding and security risk in IAM.",
+        "relatedTopics": [
+          "Deprovisioning",
+          "Identity lifecycle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-072",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does Single Sign-On (SSO) allow a user to do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use one set of credentials to access multiple independent systems or applications",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Log in using only a fingerprint, with no password required",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Bypass all authorization checks after logging in once",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Share their password with coworkers securely",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SSO allows a user to authenticate once and gain access to multiple related systems or applications without re-entering credentials for each one.",
+        "incorrect": "SSO doesn't require biometric-only login, does not bypass authorization for each resource, and never involves sharing passwords.",
+        "examTip": "SSO improves user convenience but can create a larger blast radius if the SSO credential itself is compromised.",
+        "relatedTopics": [
+          "SSO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-073",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a notable security risk associated with Single Sign-On (SSO) implementations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Users must remember many different passwords, increasing helpdesk calls",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "If the SSO credential is compromised, an attacker may gain access to ALL connected systems, increasing blast radius",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SSO makes multi-factor authentication impossible to implement",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SSO always requires storing passwords in plaintext",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Because SSO grants access to multiple systems with one credential, compromise of that single credential can expose all connected applications — a larger blast radius risk.",
+        "incorrect": "SSO actually reduces password fatigue/helpdesk calls, can be combined with MFA, and does not require plaintext password storage.",
+        "examTip": "This is why SSO implementations are frequently paired with strong MFA to mitigate the single-point-of-compromise risk.",
+        "relatedTopics": [
+          "SSO",
+          "Risk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-074",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which technology allows a user to authenticate once with an Identity Provider (IdP) and then access multiple Service Providers (SPs) without re-authenticating, commonly used in federated identity scenarios?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAML-based Single Sign-On",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A stateless firewall",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "An intrusion prevention system",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A virtual private network (VPN)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SAML (Security Assertion Markup Language) is a common standard enabling federated SSO between an Identity Provider and multiple Service Providers.",
+        "incorrect": "Firewalls, IPS, and VPNs serve different network security functions and are not identity federation technologies.",
+        "examTip": "Federated identity extends SSO concepts across organizational boundaries (e.g., logging into a partner's app with your corporate identity).",
+        "relatedTopics": [
+          "Federated identity",
+          "SSO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-075",
+      "type": "yes-no-statements",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Decide whether each statement about authentication factors is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A smart card used for login is an example of 'something you have'.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A fingerprint scan is an example of 'something you know'.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Multi-factor authentication requires combining factors from at least two DIFFERENT categories.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "A PIN code is an example of 'something you are'.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fingerprints and other biometrics belong to 'something you are'; PINs and passwords belong to 'something you know'.",
+        "incorrect": "Review the CC authentication factor definitions.",
+        "examTip": "Remember: something you know (password), something you have (token), something you are (biometric), somewhere you are (location).",
+        "relatedTopics": [
+          "Authentication factors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-076",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which biometric characteristic is generally considered MORE reliable for authentication due to its uniqueness and stability over a person's lifetime: fingerprint or typing pattern (keystroke dynamics)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fingerprint, because it is a physiological characteristic that changes very little over time",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Typing pattern, because it never changes",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Neither is used for authentication",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Both are equally unreliable and never used in practice",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fingerprints are physiological biometrics that remain relatively stable over a lifetime, generally making them more reliable than behavioral biometrics like typing patterns, which can vary with stress, injury, or context.",
+        "incorrect": "Typing patterns (a behavioral biometric) can vary over time and context; both types are actually used in different practical applications.",
+        "examTip": "Physiological biometrics (fingerprint, iris, face) vs. behavioral biometrics (typing rhythm, gait, signature) is a useful distinction to know.",
+        "relatedTopics": [
+          "Biometrics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-077",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "In biometric authentication systems, what does a 'False Acceptance Rate' (FAR) measure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The rate at which the system incorrectly rejects a legitimate authorized user",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The rate at which the system incorrectly accepts an unauthorized individual as legitimate",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The average time taken to enroll a new user into the biometric system",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The percentage of users who refuse to use biometric authentication",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "FAR measures how often an unauthorized person is incorrectly granted access (a security risk), while FRR measures how often a legitimate user is incorrectly denied (a usability issue).",
+        "incorrect": "Incorrect rejection of legitimate users is the False Rejection Rate (FRR); enrollment time and user refusal rates are unrelated metrics.",
+        "examTip": "Lower FAR is prioritized for high-security systems, even if it slightly raises FRR, and vice versa depending on context.",
+        "relatedTopics": [
+          "Biometrics",
+          "FAR",
+          "FRR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-078",
+      "type": "dropdown-select",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the sentences about biometric error rates.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The rate at which a biometric system incorrectly denies access to a legitimate, authorized user is the False __________ Rate.",
+          "options": [
+            "Rejection",
+            "Acceptance",
+            "Positive",
+            "Negative"
+          ],
+          "correctAnswer": "Rejection"
+        },
+        {
+          "id": "d2",
+          "prompt": "The point where the False Acceptance Rate and False Rejection Rate are equal is called the __________ error rate.",
+          "options": [
+            "Crossover",
+            "Median",
+            "Baseline",
+            "Threshold"
+          ],
+          "correctAnswer": "Crossover"
+        }
+      ],
+      "explanation": {
+        "correct": "The Crossover Error Rate (CER) is often used to compare the overall accuracy of different biometric systems — lower CER is better.",
+        "incorrect": "Review the CC biometric systems documentation.",
+        "examTip": "Remember: FAR = False Accept, FRR = False Reject, CER = Crossover Error Rate.",
+        "relatedTopics": [
+          "Biometrics",
+          "FAR",
+          "FRR",
+          "CER"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-079",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of an 'Access Control List' (ACL) on a file or network device?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To specify which users or systems are permitted or denied specific types of access to a resource",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To record a history of all system boot events",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To list all software installed on a workstation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To define the physical dimensions of a server rack",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An ACL defines rules specifying which subjects (users, groups, systems) are permitted or denied particular types of access (read, write, execute, etc.) to a resource.",
+        "incorrect": "Boot logs, installed software lists, and rack dimensions are unrelated to the function of an ACL.",
+        "examTip": "ACLs can exist on files/folders (filesystem ACLs) or on network devices (router/firewall ACLs) — the concept is analogous.",
+        "relatedTopics": [
+          "Access control list"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-080",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "An employee moves from the Sales department to the Finance department. Best practice dictates that their OLD Sales-related access should be:",
+      "scenarioText": "An employee who previously worked in the Sales department, with access to the CRM and sales reporting tools, has just transferred internally to the Finance department, which requires access to accounting software instead.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Left in place indefinitely, in addition to the new Finance access",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Removed/revoked, while granting only the new access required for the Finance role",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Left in place only if the employee requests it",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Automatically expanded to include both departments' full access",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Best practice (aligned with least privilege) is to remove access no longer needed for the new role while granting only what is required for the new position — avoiding 'access creep'.",
+        "incorrect": "Retaining unnecessary old access, leaving the decision to the employee, or expanding access unnecessarily all violate least privilege and increase risk.",
+        "examTip": "This scenario describes preventing 'privilege creep' or 'access creep' during internal role transfers.",
+        "relatedTopics": [
+          "Least privilege",
+          "Access reviews"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-081",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of conducting periodic 'access reviews' or 'access recertification'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To verify that users still require the access rights currently assigned to them and remove unnecessary permissions",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To reset all user passwords simultaneously",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To install the latest operating system patches",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To physically inspect network cabling",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Access reviews validate that existing access assignments remain appropriate and necessary, helping to detect and remove excessive or stale permissions (access creep).",
+        "incorrect": "Password resets, patching, and cabling inspections are separate operational activities unrelated to access recertification.",
+        "examTip": "Regular access reviews are a common audit and compliance requirement (e.g., quarterly or annual recertification).",
+        "relatedTopics": [
+          "Access reviews"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-082",
+      "type": "multiple-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are valid reasons an organization implements 'least privilege' and periodic access reviews together? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "To reduce the potential damage if an account is compromised",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To detect and remove unnecessary or excessive permissions over time (privilege creep)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To guarantee zero security incidents will ever occur",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To support compliance with regulatory or audit requirements",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Reducing blast radius, catching privilege creep, and supporting compliance/audit requirements are all legitimate reasons for these practices.",
+        "incorrect": "No control can guarantee zero incidents — this is an unrealistic claim.",
+        "examTip": "Access reviews and least privilege work together as complementary, ongoing practices rather than one-time actions.",
+        "relatedTopics": [
+          "Least privilege",
+          "Access reviews"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-083",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is 'provisioning' in the context of identity and access management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The process of creating a user account and granting initial appropriate access",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The process of terminating a user's employment",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The process of encrypting network traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The process of patching an operating system",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Provisioning is the process of creating user accounts and assigning the appropriate initial access rights when a person joins an organization or system.",
+        "incorrect": "Termination relates to deprovisioning; encryption and patching are unrelated technical processes.",
+        "examTip": "Provisioning, access modification, and deprovisioning together form the identity lifecycle.",
+        "relatedTopics": [
+          "Provisioning",
+          "Identity lifecycle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-084",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which access control concept ensures that users are only given access to the specific information required to perform their current task, even if they otherwise hold sufficient clearance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Least privilege",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Need to know",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Separation of duties",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Mandatory access control",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Need to know restricts access to specific information based on whether it is required for a current task, even among users with the necessary general clearance level.",
+        "incorrect": "Least privilege is the broader principle about minimal access overall; separation of duties splits processes; MAC is a specific model, not this narrower principle.",
+        "examTip": "Need to know is often applied alongside MAC in classified environments: clearance AND need to know are both required.",
+        "relatedTopics": [
+          "Need to know"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-085",
+      "type": "drag-drop",
+      "topicId": "access-controls",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each access control scenario to the model it BEST represents.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "DAC",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "MAC",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "RBAC",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "ABAC",
+          "acceptsItemIds": [
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "A file owner shares edit access to their document with a specific colleague of their choosing"
+        },
+        {
+          "id": "item2",
+          "text": "A classified document can only be opened by users whose clearance level meets or exceeds the document's label"
+        },
+        {
+          "id": "item3",
+          "text": "All members of the 'HR Manager' group automatically receive access to the HR system"
+        },
+        {
+          "id": "item4",
+          "text": "Access is granted only if the request comes from a company device, during business hours, and from an employee in the Finance department"
+        }
+      ],
+      "explanation": {
+        "correct": "Match each scenario's key phrase — owner discretion, classification labels, role membership, or multiple combined attributes — to its access control model.",
+        "incorrect": "Review the CC access control model definitions.",
+        "examTip": "DAC=owner discretion, MAC=classification labels, RBAC=role membership, ABAC=multiple attributes.",
+        "relatedTopics": [
+          "Access control models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-086",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which access control model evaluates multiple attributes (such as user department, device type, location, and time of day) together to make a dynamic access decision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Discretionary Access Control (DAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Mandatory Access Control (MAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Attribute-Based Access Control (ABAC)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Role-Based Access Control (RBAC)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ABAC evaluates a combination of attributes about the user, resource, and environment to make dynamic, context-aware access decisions.",
+        "incorrect": "DAC relies on owner discretion, MAC on classification labels, and RBAC on role membership alone — none combine multiple contextual attributes in this way.",
+        "examTip": "ABAC is considered the most flexible and granular of the common access control models.",
+        "relatedTopics": [
+          "ABAC"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-087",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A company wants remote employees to connect securely to internal resources over the public internet. Which technology is MOST directly relevant to enforcing secure, authenticated remote access?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Virtual Private Network (VPN) with strong authentication",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A physical mantrap",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A data classification policy",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A BIA report",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A VPN with strong authentication provides an encrypted tunnel and identity verification for remote employees accessing internal resources over the internet.",
+        "incorrect": "A mantrap is physical security, a classification policy governs data handling, and a BIA report is a business continuity artifact — none directly enable secure remote access.",
+        "examTip": "VPNs are frequently paired with MFA for remote access to strengthen the authentication piece of access control.",
+        "relatedTopics": [
+          "VPN",
+          "Remote access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D4.4",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-088",
+      "type": "yes-no-statements",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about privileged accounts, decide whether it is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Privileged (administrator) accounts should be used for everyday tasks like checking email to save time.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Privileged access should be monitored and audited more closely than standard user access due to higher risk.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A Privileged Access Management (PAM) solution can help control, monitor, and record use of administrative credentials.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Administrators should use separate standard accounts for routine tasks and reserve privileged accounts strictly for administrative work.",
+        "incorrect": "Review the CC privileged access management guidance.",
+        "examTip": "Privileged accounts are high-value targets — they need extra oversight.",
+        "relatedTopics": [
+          "Privileged access management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-089",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Why is it considered a poor security practice for system administrators to use their privileged (admin) account for routine daily tasks such as browsing the web or checking email?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It slows down the computer significantly",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It increases the potential impact if that account is compromised via phishing or malware, since it has elevated privileges",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Privileged accounts cannot send or receive email at all",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It violates copyright law",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "If a privileged account is compromised (e.g., through a phishing email opened during routine use), the attacker gains elevated access, dramatically increasing potential damage compared to a standard account compromise.",
+        "incorrect": "Performance impact, email restrictions, and copyright law are not the security rationale behind this best practice.",
+        "examTip": "This is why least privilege recommends separate standard and administrative accounts for the same person.",
+        "relatedTopics": [
+          "Least privilege",
+          "Privileged accounts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-090",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is the BEST example of 'something you have' as an authentication factor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A PIN number memorized by the user",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A hardware token that generates a one-time passcode",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A fingerprint",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A security question answer",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A hardware token that generates one-time passcodes is a physical item the user possesses, representing 'something you have'.",
+        "incorrect": "PINs and security question answers are knowledge-based; fingerprints are biometric ('something you are').",
+        "examTip": "Smart cards, hardware tokens, and mobile authenticator apps are common 'something you have' examples.",
+        "relatedTopics": [
+          "Authentication factors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-091",
+      "type": "multiple-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are common components of a strong password policy? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Minimum length requirement",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Complexity requirements (mixed character types)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Regular password reuse of the exact same password every cycle",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Account lockout after repeated failed attempts",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Minimum length, complexity, and lockout thresholds are standard components of strong password policies that reduce the risk of successful attacks.",
+        "incorrect": "Encouraging reuse of the exact same password defeats the purpose of password rotation and is not a recommended practice.",
+        "examTip": "Modern guidance (e.g., NIST 800-63B) increasingly favors length and breach-list checking over frequent forced complexity changes, but exam content follows traditional CC guidance.",
+        "relatedTopics": [
+          "Password policy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-092",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of an account lockout policy that disables an account after a set number of failed login attempts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To prevent brute-force password guessing attacks",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To reduce electricity consumption",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To automatically upgrade the user's access level",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To comply with fire safety codes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Account lockout policies help defend against brute-force and password-guessing attacks by disabling the account after repeated failed attempts.",
+        "incorrect": "The other options are unrelated to the security purpose of lockout policies.",
+        "examTip": "Lockout thresholds must balance security (stopping brute force) against usability/availability (avoiding excessive legitimate user lockouts, a form of self-inflicted DoS).",
+        "relatedTopics": [
+          "Account lockout"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-093",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "An organization sets an account lockout threshold of 3 failed login attempts with NO automatic unlock, requiring a helpdesk call to restore access. An attacker exploits this by intentionally entering wrong passwords for many user accounts. What type of risk has been introduced?",
+      "scenarioText": "A company configures its systems to permanently lock any account after just 3 failed login attempts, requiring a helpdesk call for reactivation. An attacker discovers this policy and begins deliberately entering incorrect passwords for many employee usernames, without ever attempting to guess the correct password.",
+      "options": [
+        {
+          "id": "A",
+          "text": "A confidentiality risk only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An availability risk, since the attacker can lock out legitimate users (a denial-of-service-like effect)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "No risk, since the accounts are more secure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An integrity risk to the stored passwords",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "This describes an intentional lockout / denial-of-service style attack, where an attacker deliberately triggers lockouts to deny legitimate users access — an availability impact.",
+        "incorrect": "This is not primarily about data confidentiality or integrity; the strict lockout actually created a new availability risk rather than eliminating risk.",
+        "examTip": "Overly aggressive lockout policies can themselves become an availability vulnerability — balance is key.",
+        "relatedTopics": [
+          "Account lockout",
+          "Availability"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-094",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of a physical access control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A mantrap at a secure facility entrance",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A firewall access control list",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A password policy",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A digital certificate",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A mantrap is a physical security mechanism that controls entry to a facility by allowing only one person through at a time after verification.",
+        "incorrect": "Firewall ACLs, password policies, and digital certificates are logical/technical or administrative controls, not physical.",
+        "examTip": "Physical access controls include locks, badges, mantraps, fences, and security guards.",
+        "relatedTopics": [
+          "Physical access controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-095",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary purpose of a 'mantrap' in physical security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To allow multiple people to enter a facility simultaneously without verification",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To allow only one authenticated individual to pass through a secure entry point at a time, preventing tailgating",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To record video footage of a facility's exterior",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To control temperature and humidity in a data center",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A mantrap consists of two interlocking doors, allowing only one verified individual through at a time, which helps prevent tailgating/piggybacking.",
+        "incorrect": "Mantraps specifically prevent multiple simultaneous entries; video recording and climate control are different physical security or facilities functions.",
+        "examTip": "Mantraps directly combat the social engineering tactic of tailgating.",
+        "relatedTopics": [
+          "Mantrap",
+          "Tailgating"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-096",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is 'tailgating' (or 'piggybacking') in the context of physical security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An unauthorized person following an authorized person through a secured door without their own credentials",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A network attack that floods a server with traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A method of encrypting data in transit",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A formal process for granting user access rights",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Tailgating occurs when an unauthorized individual follows closely behind an authorized person to gain access to a restricted area without using their own credentials.",
+        "incorrect": "The other options describe a DoS-style network attack, encryption, and account provisioning — unrelated to tailgating.",
+        "examTip": "Security awareness training and mantraps are common controls to mitigate tailgating.",
+        "relatedTopics": [
+          "Tailgating"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-097",
+      "type": "multiple-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are examples of physical access controls? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Security guards",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Fences and gates",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Biometric door locks",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Role-based access control lists in an application",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "CCTV cameras",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Guards, fences/gates, biometric locks, and CCTV are all physical security measures protecting tangible spaces.",
+        "incorrect": "Role-based access control lists in an application are a logical/technical control, not physical.",
+        "examTip": "Physical controls protect buildings, rooms, and equipment; logical controls protect data and systems.",
+        "relatedTopics": [
+          "Physical access controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-098",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of a logical (technical) access control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A security guard at the front desk",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An access control list (ACL) on a network router",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A fence around a parking lot",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A visitor sign-in log",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An ACL on a network router is a technical/logical control implemented through hardware/software configuration to restrict access.",
+        "incorrect": "Guards, fences, and sign-in logs are physical or administrative controls, not logical/technical ones.",
+        "examTip": "Logical controls are implemented within computing systems: ACLs, encryption, authentication mechanisms.",
+        "relatedTopics": [
+          "Logical access controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-099",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary purpose of 'identity and access management' (IAM) within an organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To manage the lifecycle of user identities and their associated access rights across systems",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To design network topology diagrams",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To calculate the return on investment for security tools",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage physical building maintenance schedules",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IAM encompasses processes and technologies for creating, managing, and revoking user identities and their access rights throughout the employee/user lifecycle.",
+        "incorrect": "Network diagrams, ROI calculations, and building maintenance are unrelated to the scope of IAM.",
+        "examTip": "IAM covers the full lifecycle: provisioning, modifying (role changes), and deprovisioning (offboarding) access.",
+        "relatedTopics": [
+          "Identity and access management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-100",
+      "type": "ordering",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the following identity lifecycle stages in the order they typically occur for an employee.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Provisioning (creating the account and initial access)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Access review and modification (e.g., role change)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Deprovisioning (revoking access upon termination)",
+          "correctPosition": 3
+        }
+      ],
+      "explanation": {
+        "correct": "The identity lifecycle follows the employee's tenure: creation, ongoing management, and finally revocation.",
+        "incorrect": "Review the CC identity management lifecycle.",
+        "examTip": "Sequence: Provisioning → Modification → Deprovisioning.",
+        "relatedTopics": [
+          "Identity lifecycle",
+          "IAM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-101",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Why is it important to promptly deprovision (disable/remove) a user's access when they leave an organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To reduce electricity costs associated with idle accounts",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To prevent unauthorized access via orphaned accounts, reducing security risk",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To comply with marketing regulations",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To increase the number of active licenses purchased",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Prompt deprovisioning prevents former employees or attackers from exploiting orphaned/unused accounts to gain unauthorized access.",
+        "incorrect": "The other options are unrelated or incorrect motivations for deprovisioning.",
+        "examTip": "Orphaned accounts are a frequently tested audit finding and security risk in IAM.",
+        "relatedTopics": [
+          "Deprovisioning",
+          "Identity lifecycle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-102",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does Single Sign-On (SSO) allow a user to do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use one set of credentials to access multiple independent systems or applications",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Log in using only a fingerprint, with no password required",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Bypass all authorization checks after logging in once",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Share their password with coworkers securely",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SSO allows a user to authenticate once and gain access to multiple related systems or applications without re-entering credentials for each one.",
+        "incorrect": "SSO doesn't require biometric-only login, does not bypass authorization for each resource, and never involves sharing passwords.",
+        "examTip": "SSO improves user convenience but can create a larger blast radius if the SSO credential itself is compromised.",
+        "relatedTopics": [
+          "SSO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-103",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a notable security risk associated with Single Sign-On (SSO) implementations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Users must remember many different passwords, increasing helpdesk calls",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "If the SSO credential is compromised, an attacker may gain access to ALL connected systems, increasing blast radius",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SSO makes multi-factor authentication impossible to implement",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SSO always requires storing passwords in plaintext",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Because SSO grants access to multiple systems with one credential, compromise of that single credential can expose all connected applications — a larger blast radius risk.",
+        "incorrect": "SSO actually reduces password fatigue/helpdesk calls, can be combined with MFA, and does not require plaintext password storage.",
+        "examTip": "This is why SSO implementations are frequently paired with strong MFA to mitigate the single-point-of-compromise risk.",
+        "relatedTopics": [
+          "SSO",
+          "Risk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-104",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which technology allows a user to authenticate once with an Identity Provider (IdP) and then access multiple Service Providers (SPs) without re-authenticating, commonly used in federated identity scenarios?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAML-based Single Sign-On",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A stateless firewall",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "An intrusion prevention system",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A virtual private network (VPN)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SAML (Security Assertion Markup Language) is a common standard enabling federated SSO between an Identity Provider and multiple Service Providers.",
+        "incorrect": "Firewalls, IPS, and VPNs serve different network security functions and are not identity federation technologies.",
+        "examTip": "Federated identity extends SSO concepts across organizational boundaries (e.g., logging into a partner's app with your corporate identity).",
+        "relatedTopics": [
+          "Federated identity",
+          "SSO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-105",
+      "type": "yes-no-statements",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Decide whether each statement about authentication factors is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A smart card used for login is an example of 'something you have'.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A fingerprint scan is an example of 'something you know'.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Multi-factor authentication requires combining factors from at least two DIFFERENT categories.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "A PIN code is an example of 'something you are'.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fingerprints and other biometrics belong to 'something you are'; PINs and passwords belong to 'something you know'.",
+        "incorrect": "Review the CC authentication factor definitions.",
+        "examTip": "Remember: something you know (password), something you have (token), something you are (biometric), somewhere you are (location).",
+        "relatedTopics": [
+          "Authentication factors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-106",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which biometric characteristic is generally considered MORE reliable for authentication due to its uniqueness and stability over a person's lifetime: fingerprint or typing pattern (keystroke dynamics)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fingerprint, because it is a physiological characteristic that changes very little over time",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Typing pattern, because it never changes",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Neither is used for authentication",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Both are equally unreliable and never used in practice",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fingerprints are physiological biometrics that remain relatively stable over a lifetime, generally making them more reliable than behavioral biometrics like typing patterns, which can vary with stress, injury, or context.",
+        "incorrect": "Typing patterns (a behavioral biometric) can vary over time and context; both types are actually used in different practical applications.",
+        "examTip": "Physiological biometrics (fingerprint, iris, face) vs. behavioral biometrics (typing rhythm, gait, signature) is a useful distinction to know.",
+        "relatedTopics": [
+          "Biometrics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-107",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "In biometric authentication systems, what does a 'False Acceptance Rate' (FAR) measure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The rate at which the system incorrectly rejects a legitimate authorized user",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The rate at which the system incorrectly accepts an unauthorized individual as legitimate",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The average time taken to enroll a new user into the biometric system",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The percentage of users who refuse to use biometric authentication",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "FAR measures how often an unauthorized person is incorrectly granted access (a security risk), while FRR measures how often a legitimate user is incorrectly denied (a usability issue).",
+        "incorrect": "Incorrect rejection of legitimate users is the False Rejection Rate (FRR); enrollment time and user refusal rates are unrelated metrics.",
+        "examTip": "Lower FAR is prioritized for high-security systems, even if it slightly raises FRR, and vice versa depending on context.",
+        "relatedTopics": [
+          "Biometrics",
+          "FAR",
+          "FRR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-108",
+      "type": "dropdown-select",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the sentences about biometric error rates.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The rate at which a biometric system incorrectly denies access to a legitimate, authorized user is the False __________ Rate.",
+          "options": [
+            "Rejection",
+            "Acceptance",
+            "Positive",
+            "Negative"
+          ],
+          "correctAnswer": "Rejection"
+        },
+        {
+          "id": "d2",
+          "prompt": "The point where the False Acceptance Rate and False Rejection Rate are equal is called the __________ error rate.",
+          "options": [
+            "Crossover",
+            "Median",
+            "Baseline",
+            "Threshold"
+          ],
+          "correctAnswer": "Crossover"
+        }
+      ],
+      "explanation": {
+        "correct": "The Crossover Error Rate (CER) is often used to compare the overall accuracy of different biometric systems — lower CER is better.",
+        "incorrect": "Review the CC biometric systems documentation.",
+        "examTip": "Remember: FAR = False Accept, FRR = False Reject, CER = Crossover Error Rate.",
+        "relatedTopics": [
+          "Biometrics",
+          "FAR",
+          "FRR",
+          "CER"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-109",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of an 'Access Control List' (ACL) on a file or network device?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To specify which users or systems are permitted or denied specific types of access to a resource",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To record a history of all system boot events",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To list all software installed on a workstation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To define the physical dimensions of a server rack",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An ACL defines rules specifying which subjects (users, groups, systems) are permitted or denied particular types of access (read, write, execute, etc.) to a resource.",
+        "incorrect": "Boot logs, installed software lists, and rack dimensions are unrelated to the function of an ACL.",
+        "examTip": "ACLs can exist on files/folders (filesystem ACLs) or on network devices (router/firewall ACLs) — the concept is analogous.",
+        "relatedTopics": [
+          "Access control list"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-110",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "An employee moves from the Sales department to the Finance department. Best practice dictates that their OLD Sales-related access should be:",
+      "scenarioText": "An employee who previously worked in the Sales department, with access to the CRM and sales reporting tools, has just transferred internally to the Finance department, which requires access to accounting software instead.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Left in place indefinitely, in addition to the new Finance access",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Removed/revoked, while granting only the new access required for the Finance role",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Left in place only if the employee requests it",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Automatically expanded to include both departments' full access",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Best practice (aligned with least privilege) is to remove access no longer needed for the new role while granting only what is required for the new position — avoiding 'access creep'.",
+        "incorrect": "Retaining unnecessary old access, leaving the decision to the employee, or expanding access unnecessarily all violate least privilege and increase risk.",
+        "examTip": "This scenario describes preventing 'privilege creep' or 'access creep' during internal role transfers.",
+        "relatedTopics": [
+          "Least privilege",
+          "Access reviews"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-111",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of conducting periodic 'access reviews' or 'access recertification'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To verify that users still require the access rights currently assigned to them and remove unnecessary permissions",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To reset all user passwords simultaneously",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To install the latest operating system patches",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To physically inspect network cabling",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Access reviews validate that existing access assignments remain appropriate and necessary, helping to detect and remove excessive or stale permissions (access creep).",
+        "incorrect": "Password resets, patching, and cabling inspections are separate operational activities unrelated to access recertification.",
+        "examTip": "Regular access reviews are a common audit and compliance requirement (e.g., quarterly or annual recertification).",
+        "relatedTopics": [
+          "Access reviews"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-112",
+      "type": "multiple-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are valid reasons an organization implements 'least privilege' and periodic access reviews together? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "To reduce the potential damage if an account is compromised",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To detect and remove unnecessary or excessive permissions over time (privilege creep)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To guarantee zero security incidents will ever occur",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To support compliance with regulatory or audit requirements",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Reducing blast radius, catching privilege creep, and supporting compliance/audit requirements are all legitimate reasons for these practices.",
+        "incorrect": "No control can guarantee zero incidents — this is an unrealistic claim.",
+        "examTip": "Access reviews and least privilege work together as complementary, ongoing practices rather than one-time actions.",
+        "relatedTopics": [
+          "Least privilege",
+          "Access reviews"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-113",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is 'provisioning' in the context of identity and access management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The process of creating a user account and granting initial appropriate access",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The process of terminating a user's employment",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The process of encrypting network traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The process of patching an operating system",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Provisioning is the process of creating user accounts and assigning the appropriate initial access rights when a person joins an organization or system.",
+        "incorrect": "Termination relates to deprovisioning; encryption and patching are unrelated technical processes.",
+        "examTip": "Provisioning, access modification, and deprovisioning together form the identity lifecycle.",
+        "relatedTopics": [
+          "Provisioning",
+          "Identity lifecycle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-114",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which access control concept ensures that users are only given access to the specific information required to perform their current task, even if they otherwise hold sufficient clearance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Least privilege",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Need to know",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Separation of duties",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Mandatory access control",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Need to know restricts access to specific information based on whether it is required for a current task, even among users with the necessary general clearance level.",
+        "incorrect": "Least privilege is the broader principle about minimal access overall; separation of duties splits processes; MAC is a specific model, not this narrower principle.",
+        "examTip": "Need to know is often applied alongside MAC in classified environments: clearance AND need to know are both required.",
+        "relatedTopics": [
+          "Need to know"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-115",
+      "type": "drag-drop",
+      "topicId": "access-controls",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each access control scenario to the model it BEST represents.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "DAC",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "MAC",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "RBAC",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "ABAC",
+          "acceptsItemIds": [
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "A file owner shares edit access to their document with a specific colleague of their choosing"
+        },
+        {
+          "id": "item2",
+          "text": "A classified document can only be opened by users whose clearance level meets or exceeds the document's label"
+        },
+        {
+          "id": "item3",
+          "text": "All members of the 'HR Manager' group automatically receive access to the HR system"
+        },
+        {
+          "id": "item4",
+          "text": "Access is granted only if the request comes from a company device, during business hours, and from an employee in the Finance department"
+        }
+      ],
+      "explanation": {
+        "correct": "Match each scenario's key phrase — owner discretion, classification labels, role membership, or multiple combined attributes — to its access control model.",
+        "incorrect": "Review the CC access control model definitions.",
+        "examTip": "DAC=owner discretion, MAC=classification labels, RBAC=role membership, ABAC=multiple attributes.",
+        "relatedTopics": [
+          "Access control models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-116",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which access control model evaluates multiple attributes (such as user department, device type, location, and time of day) together to make a dynamic access decision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Discretionary Access Control (DAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Mandatory Access Control (MAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Attribute-Based Access Control (ABAC)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Role-Based Access Control (RBAC)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ABAC evaluates a combination of attributes about the user, resource, and environment to make dynamic, context-aware access decisions.",
+        "incorrect": "DAC relies on owner discretion, MAC on classification labels, and RBAC on role membership alone — none combine multiple contextual attributes in this way.",
+        "examTip": "ABAC is considered the most flexible and granular of the common access control models.",
+        "relatedTopics": [
+          "ABAC"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-117",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A company wants remote employees to connect securely to internal resources over the public internet. Which technology is MOST directly relevant to enforcing secure, authenticated remote access?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Virtual Private Network (VPN) with strong authentication",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A physical mantrap",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A data classification policy",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A BIA report",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A VPN with strong authentication provides an encrypted tunnel and identity verification for remote employees accessing internal resources over the internet.",
+        "incorrect": "A mantrap is physical security, a classification policy governs data handling, and a BIA report is a business continuity artifact — none directly enable secure remote access.",
+        "examTip": "VPNs are frequently paired with MFA for remote access to strengthen the authentication piece of access control.",
+        "relatedTopics": [
+          "VPN",
+          "Remote access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D4.4",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-118",
+      "type": "yes-no-statements",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement about privileged accounts, decide whether it is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Privileged (administrator) accounts should be used for everyday tasks like checking email to save time.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Privileged access should be monitored and audited more closely than standard user access due to higher risk.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A Privileged Access Management (PAM) solution can help control, monitor, and record use of administrative credentials.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Administrators should use separate standard accounts for routine tasks and reserve privileged accounts strictly for administrative work.",
+        "incorrect": "Review the CC privileged access management guidance.",
+        "examTip": "Privileged accounts are high-value targets — they need extra oversight.",
+        "relatedTopics": [
+          "Privileged access management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-119",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Why is it considered a poor security practice for system administrators to use their privileged (admin) account for routine daily tasks such as browsing the web or checking email?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It slows down the computer significantly",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It increases the potential impact if that account is compromised via phishing or malware, since it has elevated privileges",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Privileged accounts cannot send or receive email at all",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It violates copyright law",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "If a privileged account is compromised (e.g., through a phishing email opened during routine use), the attacker gains elevated access, dramatically increasing potential damage compared to a standard account compromise.",
+        "incorrect": "Performance impact, email restrictions, and copyright law are not the security rationale behind this best practice.",
+        "examTip": "This is why least privilege recommends separate standard and administrative accounts for the same person.",
+        "relatedTopics": [
+          "Least privilege",
+          "Privileged accounts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-120",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is the BEST example of 'something you have' as an authentication factor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A PIN number memorized by the user",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A hardware token that generates a one-time passcode",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A fingerprint",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A security question answer",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A hardware token that generates one-time passcodes is a physical item the user possesses, representing 'something you have'.",
+        "incorrect": "PINs and security question answers are knowledge-based; fingerprints are biometric ('something you are').",
+        "examTip": "Smart cards, hardware tokens, and mobile authenticator apps are common 'something you have' examples.",
+        "relatedTopics": [
+          "Authentication factors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-121",
+      "type": "multiple-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are common components of a strong password policy? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Minimum length requirement",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Complexity requirements (mixed character types)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Regular password reuse of the exact same password every cycle",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Account lockout after repeated failed attempts",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Minimum length, complexity, and lockout thresholds are standard components of strong password policies that reduce the risk of successful attacks.",
+        "incorrect": "Encouraging reuse of the exact same password defeats the purpose of password rotation and is not a recommended practice.",
+        "examTip": "Modern guidance (e.g., NIST 800-63B) increasingly favors length and breach-list checking over frequent forced complexity changes, but exam content follows traditional CC guidance.",
+        "relatedTopics": [
+          "Password policy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-122",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of an account lockout policy that disables an account after a set number of failed login attempts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To prevent brute-force password guessing attacks",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To reduce electricity consumption",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To automatically upgrade the user's access level",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To comply with fire safety codes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Account lockout policies help defend against brute-force and password-guessing attacks by disabling the account after repeated failed attempts.",
+        "incorrect": "The other options are unrelated to the security purpose of lockout policies.",
+        "examTip": "Lockout thresholds must balance security (stopping brute force) against usability/availability (avoiding excessive legitimate user lockouts, a form of self-inflicted DoS).",
+        "relatedTopics": [
+          "Account lockout"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-123",
+      "type": "single-choice",
+      "topicId": "access-controls",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "An organization sets an account lockout threshold of 3 failed login attempts with NO automatic unlock, requiring a helpdesk call to restore access. An attacker exploits this by intentionally entering wrong passwords for many user accounts. What type of risk has been introduced?",
+      "scenarioText": "A company configures its systems to permanently lock any account after just 3 failed login attempts, requiring a helpdesk call for reactivation. An attacker discovers this policy and begins deliberately entering incorrect passwords for many employee usernames, without ever attempting to guess the correct password.",
+      "options": [
+        {
+          "id": "A",
+          "text": "A confidentiality risk only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An availability risk, since the attacker can lock out legitimate users (a denial-of-service-like effect)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "No risk, since the accounts are more secure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An integrity risk to the stored passwords",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "This describes an intentional lockout / denial-of-service style attack, where an attacker deliberately triggers lockouts to deny legitimate users access — an availability impact.",
+        "incorrect": "This is not primarily about data confidentiality or integrity; the strict lockout actually created a new availability risk rather than eliminating risk.",
+        "examTip": "Overly aggressive lockout policies can themselves become an availability vulnerability — balance is key.",
+        "relatedTopics": [
+          "Account lockout",
+          "Availability"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

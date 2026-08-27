@@ -1,0 +1,1687 @@
+{
+  "certificationId": "isc2-cc",
+  "topicId": "security-principles",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "isc2cc-001",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following BEST describes the 'Confidentiality' element of the CIA triad?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ensuring data is accurate and unaltered",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Ensuring data is accessible when needed",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Ensuring data is only accessible to authorized individuals",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Ensuring actions can be traced to a specific user",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Confidentiality ensures that information is disclosed only to authorized individuals, entities, or processes.",
+        "incorrect": "The other options describe integrity, availability, and non-repudiation/accountability respectively.",
+        "examTip": "Memorize CIA: Confidentiality (secrecy), Integrity (accuracy), Availability (accessibility).",
+        "relatedTopics": [
+          "CIA triad",
+          "Confidentiality"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-002",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which element of the CIA triad ensures that data has not been altered in an unauthorized manner?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Confidentiality",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Integrity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Availability",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Authentication",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Integrity ensures the accuracy and completeness of data, protecting it from unauthorized modification.",
+        "incorrect": "Confidentiality protects secrecy, availability ensures access, and authentication verifies identity.",
+        "examTip": "Hashing and checksums are common controls used to support integrity.",
+        "relatedTopics": [
+          "CIA triad",
+          "Integrity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-003",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A company's e-commerce website experiences a distributed denial-of-service (DDoS) attack, making it unreachable by customers. Which element of the CIA triad is PRIMARILY being impacted?",
+      "scenarioText": "An online retailer's website becomes completely unreachable for several hours after being flooded with an overwhelming volume of traffic from thousands of compromised devices.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Confidentiality",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Integrity",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Availability",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Non-repudiation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A DDoS attack overwhelms system resources, preventing legitimate users from accessing the service — a direct attack on availability.",
+        "incorrect": "Confidentiality and integrity concern data secrecy and accuracy, not accessibility; non-repudiation is unrelated to this scenario.",
+        "examTip": "DoS/DDoS attacks are the classic exam example for availability attacks.",
+        "relatedTopics": [
+          "CIA triad",
+          "Availability",
+          "DDoS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-004",
+      "type": "yes-no-statements",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Decide whether each scenario primarily represents a violation of Confidentiality (Yes) or not (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "An attacker intercepts and reads unencrypted emails containing customer social security numbers.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A server crashes and customers cannot log into their accounts for two hours.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "An insider copies a proprietary source code repository and sells it to a competitor.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "A hacker modifies a bank account balance without authorization.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Each statement is evaluated independently against (ISC)2 CC domain definitions.",
+        "incorrect": "Review the CC exam outline definitions for the concepts referenced above.",
+        "examTip": "Focus on whether unauthorized parties gained access to sensitive information (confidentiality) versus accuracy or accessibility issues.",
+        "relatedTopics": [
+          "CIA triad",
+          "Confidentiality"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-005",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary difference between authentication and authorization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Authentication verifies identity; authorization determines what an authenticated identity is permitted to do",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Authentication determines permissions; authorization verifies identity",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "They are synonyms and can be used interchangeably",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Authentication applies only to networks; authorization applies only to applications",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Authentication confirms who a user is (e.g., via password or biometric), while authorization determines what actions/resources that verified identity may access.",
+        "incorrect": "The other options reverse the definitions or incorrectly claim they are synonymous or domain-limited.",
+        "examTip": "Sequence: Identification -> Authentication -> Authorization -> Accountability (often abbreviated IAAA).",
+        "relatedTopics": [
+          "Authentication",
+          "Authorization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-006",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A user enters a correct username and password, and the system grants access to the network. The system then checks whether this user is permitted to open the payroll application. Which concept does this second check represent?",
+      "scenarioText": "After successfully logging into the corporate network with a username and password, an employee attempts to open the payroll application. The system evaluates whether this specific employee is permitted to use that application.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Authentication",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Authorization",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Identification",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Non-repudiation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Determining whether an already-authenticated user has permission to access a specific resource (the payroll app) is authorization.",
+        "incorrect": "Authentication and identification already occurred at login; non-repudiation is unrelated to permission checks.",
+        "examTip": "Authorization always occurs after successful authentication.",
+        "relatedTopics": [
+          "Authorization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-007",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which access control principle states that users should be granted only the minimum access necessary to perform their job functions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Separation of duties",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Least privilege",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Need to know",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Defense in depth",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Least privilege means granting only the minimum rights and permissions needed to perform a task, reducing the attack surface.",
+        "incorrect": "Separation of duties splits tasks among multiple people; need-to-know restricts information access specifically; defense in depth layers multiple controls.",
+        "examTip": "Least privilege applies to permissions/access rights broadly (systems, files, network); need-to-know is often applied specifically to sensitive information.",
+        "relatedTopics": [
+          "Least privilege"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-008",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which principle requires that no single individual should have control over an entire critical process, such as both initiating and approving a financial payment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Least privilege",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Separation of duties",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Defense in depth",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Due diligence",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Separation of duties divides critical tasks and responsibilities among multiple people to reduce the risk of fraud or error by any single individual.",
+        "incorrect": "Least privilege limits access scope but doesn't necessarily split a process across roles; defense in depth layers technical controls; due diligence relates to reasonable care in decision-making.",
+        "examTip": "Separation of duties is a classic fraud-prevention control in financial and administrative processes.",
+        "relatedTopics": [
+          "Separation of duties"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-009",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What security concept refers to layering multiple, different security controls (physical, technical, and administrative) so that if one control fails, others still provide protection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Defense in depth",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Single point of failure",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Security through obscurity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Least privilege",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defense in depth uses multiple, overlapping layers of controls across different categories so no single point of failure compromises the whole system.",
+        "incorrect": "A single point of failure is a weakness this strategy aims to avoid; security through obscurity relies on secrecy of design rather than layered controls; least privilege addresses access scope, not layering.",
+        "examTip": "Think of defense in depth like layers of an onion: perimeter, network, host, application, and data layers.",
+        "relatedTopics": [
+          "Defense in depth"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-012",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which access control model assigns permissions based on a user's role within an organization, such as 'Manager' or 'Accountant'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Discretionary Access Control (DAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Mandatory Access Control (MAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Role-Based Access Control (RBAC)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Rule-Based Access Control",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RBAC assigns permissions to roles, and users are granted access by being assigned to appropriate roles, simplifying administration.",
+        "incorrect": "DAC lets resource owners grant access at their discretion; MAC uses centrally-defined security labels; rule-based control uses predefined rules rather than roles.",
+        "examTip": "RBAC is widely used in enterprises because it scales well and aligns with job functions.",
+        "relatedTopics": [
+          "RBAC",
+          "Access control models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-013",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In which access control model does the OWNER of a resource have the discretion to decide who else may access it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mandatory Access Control (MAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Discretionary Access Control (DAC)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Role-Based Access Control (RBAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Attribute-Based Access Control (ABAC)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DAC allows the resource owner to determine and modify access permissions for other users at their own discretion.",
+        "incorrect": "MAC is enforced centrally using classification labels, not owner discretion; RBAC uses roles; ABAC uses attributes/policies.",
+        "examTip": "DAC is common in general-purpose operating systems (e.g., file permissions set by the file's creator).",
+        "relatedTopics": [
+          "DAC",
+          "Access control models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-014",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A military system enforces access based on centrally assigned classification labels (e.g., Secret, Top Secret) and clearance levels, where individual users CANNOT change permissions on files they create. Which access control model does this describe?",
+      "scenarioText": "A government defense system assigns every document a classification label such as 'Secret' or 'Top Secret', and every user a corresponding clearance level. Individual document creators cannot grant access to users who lack the appropriate clearance, regardless of their personal preference.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Discretionary Access Control (DAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Mandatory Access Control (MAC)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Role-Based Access Control (RBAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Rule-Based Access Control",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "MAC enforces access centrally through classification labels and clearance levels, and individual users cannot override these assignments — typical of military/government systems.",
+        "incorrect": "DAC would allow the resource creator to set permissions; RBAC assigns access by job role, not classification labels; rule-based control uses conditional rules, which is a different mechanism.",
+        "examTip": "MAC = mandatory, centrally controlled, label-based, commonly associated with government/military environments (e.g., Bell-LaPadula model).",
+        "relatedTopics": [
+          "MAC",
+          "Access control models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-015",
+      "type": "yes-no-statements",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Decide whether each statement about access control models is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "In RBAC, permissions are primarily tied to job roles rather than individual user identities.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "In DAC, a central security administrator is the ONLY entity permitted to change access permissions.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "MAC relies on comparing a subject's clearance level to an object's classification label.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "ABAC can incorporate multiple attributes, such as time of day, location, and department, into access decisions.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "DAC specifically empowers the resource owner (not necessarily a central administrator) to change permissions.",
+        "incorrect": "Review the access control model definitions in the CC exam outline.",
+        "examTip": "DAC = owner discretion; MAC = central labels; RBAC = roles; ABAC = multiple attributes.",
+        "relatedTopics": [
+          "Access control models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.3",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-016",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What ethical and legal concept requires an organization to exercise reasonable care and take necessary precautions to protect its assets, similar to a standard of prudent behavior?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Due diligence",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Non-repudiation",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Least privilege",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data minimization",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Due care/due diligence refers to the reasonable steps an organization takes to protect assets and avoid negligence, often assessed against an industry standard of care.",
+        "incorrect": "Non-repudiation, least privilege, and data minimization are related but distinct security concepts, not this legal/ethical standard.",
+        "examTip": "Due diligence is often examined alongside legal liability and negligence concepts on the exam.",
+        "relatedTopics": [
+          "Due diligence",
+          "Due care"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-017",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which term describes unwanted or unexpected events that could negatively impact an organization's assets, operations, or objectives?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vulnerability",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Risk",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Threat",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Control",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A threat is any potential danger (event or actor) that could exploit a vulnerability and cause harm.",
+        "incorrect": "A vulnerability is a weakness; risk is the likelihood/impact of a threat exploiting a vulnerability; a control is a safeguard.",
+        "examTip": "Remember the relationship: Threat exploits Vulnerability, creating Risk, which controls aim to reduce.",
+        "relatedTopics": [
+          "Threat",
+          "Risk terminology"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-018",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A weakness in an application's input validation that could allow SQL injection is an example of which of the following?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A threat",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A vulnerability",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A risk appetite statement",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A control objective",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A vulnerability is a weakness or flaw (like poor input validation) that could be exploited by a threat, such as an attacker performing SQL injection.",
+        "incorrect": "The weakness itself is not the threat (the attacker/attack is); risk appetite and control objectives are unrelated governance terms.",
+        "examTip": "Vulnerability = weakness; Threat = the potential exploiter/event; Risk = likelihood x impact of exploitation.",
+        "relatedTopics": [
+          "Vulnerability"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-019",
+      "type": "dropdown-select",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the sentences describing risk terminology.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The likelihood that a threat will exploit a vulnerability, combined with the resulting impact, is called __________.",
+          "options": [
+            "risk",
+            "control",
+            "asset",
+            "policy"
+          ],
+          "correctAnswer": "risk"
+        },
+        {
+          "id": "d2",
+          "prompt": "A safeguard or countermeasure put in place to reduce risk is called a __________.",
+          "options": [
+            "control",
+            "threat",
+            "vulnerability",
+            "asset"
+          ],
+          "correctAnswer": "control"
+        }
+      ],
+      "explanation": {
+        "correct": "Risk = likelihood x impact; controls are implemented to reduce risk to an acceptable level.",
+        "incorrect": "Review the CC risk management definitions.",
+        "examTip": "Risk terminology is frequently tested - memorize the key definitions.",
+        "relatedTopics": [
+          "Risk terminology"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-020",
+      "type": "multiple-choice",
+      "topicId": "security-principles",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "An organization identifies a risk of data breach from an unpatched server. Which of the following are valid risk treatment (response) options it could choose? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Risk mitigation — patch the server to reduce the vulnerability",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Risk acceptance — formally accept the risk if it is within tolerance",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Risk transfer — purchase cyber insurance to offset financial impact",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Risk avoidance — decommission the server and the service it provides",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Risk elimination — guarantee that the risk can never occur again",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Mitigation, acceptance, transfer, and avoidance are the four standard risk treatment options recognized in security governance.",
+        "incorrect": "Risk can never be fully 'eliminated' with a guarantee — this is an unrealistic distractor, as some residual risk always remains.",
+        "examTip": "Remember the four risk responses: Mitigate, Accept, Transfer, Avoid (sometimes summarized as MATA).",
+        "relatedTopics": [
+          "Risk treatment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-021",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is 'residual risk'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The total risk before any controls are applied",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The risk that remains after controls have been implemented",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The risk assumed entirely by a third-party insurer",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A risk that has been completely eliminated",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Residual risk is the risk that remains after security controls and treatments have been applied; it is rarely zero.",
+        "incorrect": "Inherent risk (not residual) is the risk before controls; risk transfer shifts some financial impact but does not eliminate all residual risk; risk is never fully eliminated.",
+        "examTip": "Inherent risk minus the effect of controls equals residual risk.",
+        "relatedTopics": [
+          "Residual risk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-022",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of 'something you know' in authentication factor categories?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A fingerprint scan",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A password or PIN",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A hardware security token",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A retina scan",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A password or PIN is knowledge-based, representing the 'something you know' authentication factor.",
+        "incorrect": "Fingerprints and retina scans are 'something you are' (biometric); a hardware token is 'something you have'.",
+        "examTip": "The three classic factors: something you know, something you have, something you are.",
+        "relatedTopics": [
+          "Authentication factors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-023",
+      "type": "multiple-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are recognized authentication factor categories? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Something you know",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Something you have",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Something you are",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Something you like",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "Somewhere you are",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Recognized factors include something you know, have, are, and increasingly somewhere you are (location-based); 'something you like' is not a defined factor.",
+        "incorrect": "'Something you like' is a distractor and not a recognized authentication factor category.",
+        "examTip": "Multi-factor authentication (MFA) combines two or more DIFFERENT factor categories, not just two passwords.",
+        "relatedTopics": [
+          "Authentication factors",
+          "MFA"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-024",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Why is combining a password with a one-time code from a mobile authenticator app considered stronger than using two different passwords?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because it uses two different authentication factor categories rather than two instances of the same factor",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Because passwords are never secure under any circumstance",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Because mobile apps are immune to compromise",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Because using two passwords is technically impossible",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "True multi-factor authentication requires factors from different categories (e.g., knowledge + possession); two passwords are both 'something you know' and provide weaker assurance.",
+        "incorrect": "The other statements are false or overly absolute.",
+        "examTip": "Two-factor 'knowledge' items (e.g., password + security question) do NOT constitute true MFA.",
+        "relatedTopics": [
+          "MFA",
+          "Authentication factors"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D3.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-025",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does 'data classification' primarily help an organization determine?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The programming language used to build an application",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The appropriate level of protection and handling required for different types of data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The physical location of a data center",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The number of employees in the IT department",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data classification categorizes information (e.g., public, internal, confidential, restricted) to determine appropriate protective controls and handling procedures.",
+        "incorrect": "The other options are unrelated to the purpose of data classification.",
+        "examTip": "Common classification levels: Public, Internal, Confidential, Restricted/Secret — know a typical hierarchy.",
+        "relatedTopics": [
+          "Data classification"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-026",
+      "type": "ordering",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the following data classification levels from LEAST sensitive to MOST sensitive, based on a typical commercial classification scheme.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Public",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Internal Use Only",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Confidential",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Restricted/Secret",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Classification schemes vary by organization, but this progression from public to highly restricted is a common pattern.",
+        "incorrect": "Review the CC data classification guidance.",
+        "examTip": "Remember the typical order: Public < Internal < Confidential < Restricted/Secret.",
+        "relatedTopics": [
+          "Data classification"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-027",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Who is typically responsible for determining the classification level of a specific piece of data and approving access to it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The data custodian",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The data owner",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The end user",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The network administrator",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The data owner (often a business role) is accountable for classifying data and determining who may access it, based on business value and sensitivity.",
+        "incorrect": "The data custodian implements technical protections per the owner's direction; end users consume data; network administrators manage infrastructure, not classification decisions.",
+        "examTip": "Distinguish data owner (decision-maker/accountable) from data custodian (implements controls/responsible for day-to-day protection).",
+        "relatedTopics": [
+          "Data governance roles",
+          "Data owner"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-028",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the role of a 'data custodian' in data governance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deciding the business value and classification of data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Implementing and maintaining the technical controls that protect data as directed by the data owner",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Using data to perform daily job tasks without any protective responsibility",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Approving the corporate security budget",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The data custodian is responsible for the day-to-day technical management and protection of data, such as backups and access control implementation, per the data owner's direction.",
+        "incorrect": "Classification decisions belong to the data owner; end users are the general consumers of data; budget approval is a management/executive function.",
+        "examTip": "Custodian = implements/maintains; Owner = decides/accountable.",
+        "relatedTopics": [
+          "Data governance roles",
+          "Data custodian"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-029",
+      "type": "multiple-choice",
+      "topicId": "security-principles",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which of the following are appropriate methods for securely destroying data on storage media at end-of-life? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cryptographic erasure of encrypted data",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Physical destruction (e.g., shredding or degaussing) of the media",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Simply deleting files via the operating system's standard delete function",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Overwriting/wiping the media using a recognized data sanitization standard",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Cryptographic erasure, physical destruction, and standards-based overwriting/wiping are all recognized secure data destruction methods.",
+        "incorrect": "Simply deleting files via the OS typically only removes the file pointer/index, leaving recoverable data on the media, and is not considered secure destruction.",
+        "examTip": "NIST SP 800-88 is a commonly referenced standard for media sanitization.",
+        "relatedTopics": [
+          "Data destruction",
+          "Data handling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-030",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of a physical security control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A firewall rule blocking inbound traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A security guard checking ID badges at a building entrance",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An access control list on a file server",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A password complexity policy",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A security guard checking badges is a physical control, restricting physical access to a facility.",
+        "incorrect": "Firewall rules, ACLs, and password policies are technical (logical) or administrative controls, not physical.",
+        "examTip": "Physical controls protect tangible assets: locks, guards, fences, badges, cameras, mantraps.",
+        "relatedTopics": [
+          "Physical security controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.4",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-031",
+      "type": "drag-drop",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each control example into the correct control category: Physical, Technical (Logical), or Administrative.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Physical",
+          "acceptsItemIds": [
+            "i1",
+            "i2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Technical (Logical)",
+          "acceptsItemIds": [
+            "i3",
+            "i4"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Administrative",
+          "acceptsItemIds": [
+            "i5",
+            "i6"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "i1",
+          "text": "A fence surrounding a data center"
+        },
+        {
+          "id": "i2",
+          "text": "A biometric door lock"
+        },
+        {
+          "id": "i3",
+          "text": "A firewall rule"
+        },
+        {
+          "id": "i4",
+          "text": "Disk encryption software"
+        },
+        {
+          "id": "i5",
+          "text": "A security awareness training policy"
+        },
+        {
+          "id": "i6",
+          "text": "A background check requirement for new hires"
+        }
+      ],
+      "explanation": {
+        "correct": "Physical = tangible barriers; Technical = hardware/software mechanisms; Administrative = policies, procedures, and processes.",
+        "incorrect": "Review the control categories in the CC exam outline.",
+        "examTip": "Physical = tangible (fences, locks, guards); Technical = software/hardware (firewalls, encryption); Administrative = policies/processes (training, checks).",
+        "relatedTopics": [
+          "Control categories"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.4",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-032",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which type of control is a written 'Acceptable Use Policy' that employees must sign before receiving system access?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Physical control",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Technical control",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Administrative control",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Detective control",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Policies, procedures, and guidelines like an Acceptable Use Policy are administrative controls, governing human behavior through documented rules.",
+        "incorrect": "Physical and technical controls involve tangible or system-based mechanisms; while policies can have a detective aspect, the category asked for here is administrative.",
+        "examTip": "Administrative controls are often the foundation that technical and physical controls help enforce.",
+        "relatedTopics": [
+          "Administrative controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.4",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-033",
+      "type": "multiple-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are examples of administrative controls? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Security policies and standards",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Mandatory vacation policy",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Firewall configuration",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Background checks for new employees",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Encryption algorithms",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Policies, mandatory vacation, and background checks are all process/people-based administrative controls.",
+        "incorrect": "Firewall configuration and encryption algorithms are technical controls, not administrative.",
+        "examTip": "Administrative controls are frequently tested alongside technical/physical controls to check categorization skills.",
+        "relatedTopics": [
+          "Administrative controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.4",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-034",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following BEST describes the relationship between a security 'policy' and a security 'procedure'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A policy states high-level rules and expectations; a procedure provides detailed, step-by-step instructions to implement the policy",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A procedure is broader and more strategic than a policy",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Policies and procedures are legally identical documents",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Procedures are optional while policies are always mandatory to have detail",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A policy sets the high-level 'what' and 'why', while a procedure provides the detailed 'how-to' steps for implementing that policy.",
+        "incorrect": "Procedures are more detailed/operational, not broader than policies, and the two serve distinct but complementary purposes.",
+        "examTip": "Hierarchy: Policy > Standard > Procedure/Guideline (from most to least general).",
+        "relatedTopics": [
+          "Security policy",
+          "Security procedure"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.4",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-035",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A company's security policy mandates 'strong password protection' but does not specify exact requirements. The IT department creates a document specifying 'minimum 12 characters, mixed case, one number, one symbol, changed every 90 days.' What type of document has the IT department created?",
+      "scenarioText": "A company's high-level security policy simply states that all systems must use 'strong password protection.' The IT department then publishes a document specifying exact required password length, complexity, and rotation frequency for all employees to follow.",
+      "options": [
+        {
+          "id": "A",
+          "text": "A security policy",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A security standard",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A risk register",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A business impact analysis",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A standard provides specific, mandatory technical requirements (like exact password parameters) that implement the more general policy statement.",
+        "incorrect": "The high-level policy already exists; a risk register tracks identified risks; a BIA analyzes the impact of disruptions — neither matches this specific, mandatory technical requirement document.",
+        "examTip": "Standards are mandatory and specific; guidelines are recommended and flexible.",
+        "relatedTopics": [
+          "Security standards",
+          "Security policy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.4",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-036",
+      "type": "single-choice",
+      "topicId": "security-principles",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What ethical framework or code is a (ISC)2 certified professional expected to uphold, which includes protecting society, acting honorably, and providing diligent service?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The (ISC)2 Code of Ethics",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The OSI reference model",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The CIA triad",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The RACI matrix",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "(ISC)2 certified professionals must adhere to the (ISC)2 Code of Ethics, which includes canons about protecting society and acting with honesty and diligence.",
+        "incorrect": "The OSI model, CIA triad, and RACI matrix are unrelated technical or governance frameworks, not an ethics code.",
+        "examTip": "Know that the Code of Ethics is a mandatory requirement of (ISC)2 certification, and violations can result in revocation.",
+        "relatedTopics": [
+          "(ISC)2 Code of Ethics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-037",
+      "type": "yes-no-statements",
+      "topicId": "security-principles",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Decide whether each statement about the (ISC)2 Code of Ethics is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Certified professionals are expected to act honorably, honestly, justly, responsibly, and legally.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The Code of Ethics is optional guidance that certified professionals may choose to ignore.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Protecting society, the common good, and public trust is a canon of the Code of Ethics.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "The Code of Ethics is a binding requirement of holding an (ISC)2 certification, not optional guidance.",
+        "incorrect": "Review the (ISC)2 Code of Ethics in the exam outline.",
+        "examTip": "The Code of Ethics has four canons: Protect society, act honorably, provide diligent service, and promote understanding.",
+        "relatedTopics": [
+          "(ISC)2 Code of Ethics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D1.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

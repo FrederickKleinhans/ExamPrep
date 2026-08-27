@@ -1,0 +1,989 @@
+{
+  "certificationId": "az-204",
+  "topicId": "azure-services",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "az204-006",
+      "type": "drag-drop",
+      "topicId": "azure-services",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Match the Azure service to its primary use case:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Event-driven serverless compute",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Hybrid integration for enterprise workflows",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Real-time data ingestion and analytics",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Azure Functions"
+        },
+        {
+          "id": "item2",
+          "text": "Azure Logic Apps"
+        },
+        {
+          "id": "item3",
+          "text": "Azure Event Hubs"
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Functions is event-driven; Logic Apps is for workflow integration; Event Hubs for telemetry ingestion.",
+        "incorrect": "Mixing them up misses their distinct purposes.",
+        "examTip": "Remember Functions are code-first, Logic Apps are designer-first.",
+        "relatedTopics": [
+          "Azure compute options"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-010",
+      "type": "dropdown-select",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You need to process millions of IoT messages per second. Choose the correct service:",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Service",
+          "options": [
+            "Azure Service Bus",
+            "Azure Event Grid",
+            "Azure Event Hubs",
+            "Azure Queue Storage"
+          ],
+          "correctAnswer": "Azure Event Hubs"
+        }
+      ],
+      "explanation": {
+        "correct": "Event Hubs is built for high-throughput telemetry ingestion.",
+        "incorrect": "Service Bus and Queue Storage are for lower throughput; Event Grid is for event routing.",
+        "examTip": "Event Hubs uses partitions for scalability.",
+        "relatedTopics": [
+          "Event Hubs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-015",
+      "type": "yes-no-statements",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are using Azure Service Bus topics with subscriptions. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Each subscription receives a copy of the message.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "You can apply filters to subscriptions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Messages are removed from the topic when one subscription reads them.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Topics broadcast messages to all subscriptions and filters can be applied.",
+        "incorrect": "Messages remain until all subscriptions have read them (unless auto-delete).",
+        "examTip": "Topics are for publish/subscribe patterns with multiple consumers.",
+        "relatedTopics": [
+          "Service Bus topics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-019",
+      "type": "single-choice",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "You are building an e-commerce system that sends order confirmation emails and updates inventory. You want to decouple email and inventory processing.",
+      "questionText": "Which Azure service should you use to publish order events?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Event Hubs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Service Bus",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Event Grid",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Azure Notification Hubs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Event Grid is ideal for event-driven reactive processing with many subscribers.",
+        "incorrect": "Event Hubs is for streaming; Service Bus is for messaging; Notification Hubs for push notifications.",
+        "examTip": "Use Event Grid for event-driven architectures.",
+        "relatedTopics": [
+          "Event Grid"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-023",
+      "type": "ordering",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the steps for creating a new API Management instance and applying a policy:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create API Management service",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Add an API",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create a policy (e.g., rate limiting)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Publish the API product",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Service, then API, then policy, then product publish.",
+        "incorrect": "Policy can only be applied after API is added.",
+        "examTip": "Policies are applied to APIs or operations.",
+        "relatedTopics": [
+          "API Management policies"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-027",
+      "type": "yes-no-statements",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You are designing a solution using Azure Logic Apps. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Logic Apps is a low-code integration platform.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Logic Apps can call custom code via Azure Functions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Logic Apps cannot connect to on-premises data.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Logic Apps is low-code, can call Functions, and uses on-premises data gateway.",
+        "incorrect": "It does connect to on-premises through gateways.",
+        "examTip": "Use Logic Apps for visual workflows.",
+        "relatedTopics": [
+          "Logic Apps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-031",
+      "type": "single-choice",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service is used to cache frequently accessed data in-memory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Redis Cache",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Blob Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Redis Cache is an in-memory data store for caching.",
+        "incorrect": "SQL, Blob, and Table are persistent stores, not caching.",
+        "examTip": "Use Redis for session state and caching.",
+        "relatedTopics": [
+          "Redis Cache"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-035",
+      "type": "ordering",
+      "topicId": "azure-services",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Order the sequence for an Event Grid subscription with a webhook:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a topic",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a subscription with a webhook endpoint",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Publish an event to the topic",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Endpoint receives the event payload",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Topic, subscription, publish, then delivery.",
+        "incorrect": "Subscription must exist before publishing.",
+        "examTip": "Event Grid retries on failure.",
+        "relatedTopics": [
+          "Event Grid"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-040",
+      "type": "dropdown-select",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "To limit API calls from a single client, which API Management policy should you use?",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Policy",
+          "options": [
+            "rate-limit",
+            "ip-filter",
+            "cors",
+            "check-header"
+          ],
+          "correctAnswer": "rate-limit"
+        }
+      ],
+      "explanation": {
+        "correct": "Rate-limit policy limits call rates per client.",
+        "incorrect": "IP filter restricts IPs, CORS handles cross-origin, check-header validates headers.",
+        "examTip": "Use quotas for longer-term limits.",
+        "relatedTopics": [
+          "API Management policies"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-045",
+      "type": "yes-no-statements",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are using Azure Service Bus. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Sessions are used to enforce ordered message processing.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A queue can have multiple subscribers.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Dead-letter queue holds messages that cannot be delivered.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Sessions ensure order; DLQ holds undelivered messages.",
+        "incorrect": "Queues have one consumer; topics have multiple subscriptions.",
+        "examTip": "Use sessions for FIFO.",
+        "relatedTopics": [
+          "Service Bus"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-049",
+      "type": "single-choice",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which service is designed for real-time streaming data ingestion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Event Hubs",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Service Bus",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Queue Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Table Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Event Hubs is optimized for high-volume streaming.",
+        "incorrect": "Service Bus and Queue are for messaging; Table is NoSQL.",
+        "examTip": "Event Hubs supports AMQP and Kafka.",
+        "relatedTopics": [
+          "Event Hubs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-053",
+      "type": "ordering",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the flow of an Event Grid event from publisher to subscriber:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Publisher sends event to Event Grid topic",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Event Grid filters by subscription",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Event Grid delivers to endpoint",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Subscriber processes event",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Publisher, filter, deliver, process.",
+        "incorrect": "Filtering happens before delivery.",
+        "examTip": "Event Grid supports advanced filters.",
+        "relatedTopics": [
+          "Event Grid"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-057",
+      "type": "yes-no-statements",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "You are using Azure API Management. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Products contain one or more APIs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Subscriptions are required to access products.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Policies are applied only at the API level.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Products group APIs; subscriptions authorize access; policies can be at product or operation.",
+        "incorrect": "Policies are also at product and operation level.",
+        "examTip": "Use named values for secrets in policies.",
+        "relatedTopics": [
+          "API Management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-062",
+      "type": "multiple-choice",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure services support serverless architectures? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Functions",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Logic Apps",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Virtual Machines",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure SQL Database",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Functions and Logic Apps are serverless.",
+        "incorrect": "VMs and SQL are not serverless.",
+        "examTip": "Serverless = no infrastructure management.",
+        "relatedTopics": [
+          "Serverless"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-065",
+      "type": "ordering",
+      "topicId": "azure-services",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Order the steps to configure a Service Bus topic with subscription filters:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create a Service Bus namespace",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a topic",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create subscriptions with filters",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Send messages to the topic",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Namespace, topic, subscriptions, then send.",
+        "incorrect": "Subscriptions must exist before messages are sent.",
+        "examTip": "Filters can be SQL or boolean.",
+        "relatedTopics": [
+          "Service Bus topics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-070",
+      "type": "dropdown-select",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which service should you use to add caching to your existing web app with minimal code changes?",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Service",
+          "options": [
+            "Azure Redis Cache",
+            "Azure CDN",
+            "Azure Traffic Manager",
+            "Azure Front Door"
+          ],
+          "correctAnswer": "Azure Redis Cache"
+        }
+      ],
+      "explanation": {
+        "correct": "Redis Cache is for in-memory caching with client libraries.",
+        "incorrect": "CDN is for static content; Traffic Manager for routing.",
+        "examTip": "Redis supports various data structures.",
+        "relatedTopics": [
+          "Redis Cache"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-074",
+      "type": "multiple-choice",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which features are offered by Azure API Management? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rate limiting",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "API versioning",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Data encryption",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data replication",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "API Management supports rate limiting and versioning.",
+        "incorrect": "Encryption and replication are infrastructure-level.",
+        "examTip": "Use versioning for API evolution.",
+        "relatedTopics": [
+          "API Management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-078",
+      "type": "drag-drop",
+      "topicId": "azure-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each integration service with its primary function:",
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Workflow automation",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Event routing",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Messaging with dead-letter",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "Logic Apps"
+        },
+        {
+          "id": "item2",
+          "text": "Event Grid"
+        },
+        {
+          "id": "item3",
+          "text": "Service Bus"
+        }
+      ],
+      "explanation": {
+        "correct": "Logic Apps automates workflows; Event Grid routes events; Service Bus handles messaging.",
+        "incorrect": "Confusing Event Grid and Service Bus is common.",
+        "examTip": "Event Grid is push-based; Service Bus is pull-based.",
+        "relatedTopics": [
+          "Integration services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-085",
+      "type": "single-choice",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which service provides a fully managed CDN for Azure content?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Content Delivery Network",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Azure Front Door",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Azure Traffic Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Application Gateway",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure CDN is the dedicated content delivery service.",
+        "incorrect": "Front Door is global load balancer; Traffic Manager is DNS; Gateway is WAF.",
+        "examTip": "Use CDN for static assets.",
+        "relatedTopics": [
+          "Azure CDN"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-089",
+      "type": "ordering",
+      "topicId": "azure-services",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Order the steps to set up API Management with a back-end API:",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Create API Management instance",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Add API by importing from OpenAPI",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Configure backend URL",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Add rate-limiting policy",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Instance, import, backend, policy.",
+        "incorrect": "Backend must be set before policies.",
+        "examTip": "Import from Swagger for easy setup.",
+        "relatedTopics": [
+          "API Management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-094",
+      "type": "dropdown-select",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "To build a visual integration workflow with minimal code, use _____.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Service",
+          "options": [
+            "Azure Logic Apps",
+            "Azure Functions",
+            "Azure Data Factory",
+            "Azure Service Bus"
+          ],
+          "correctAnswer": "Azure Logic Apps"
+        }
+      ],
+      "explanation": {
+        "correct": "Logic Apps is low-code and visual.",
+        "incorrect": "Functions are code-first; Data Factory is ETL.",
+        "examTip": "Logic Apps has hundreds of connectors.",
+        "relatedTopics": [
+          "Logic Apps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "az204-099",
+      "type": "yes-no-statements",
+      "topicId": "azure-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "You are using Azure Event Hubs. Evaluate these statements:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Event Hubs uses partitions for scaling.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Events are retained for up to 7 days by default.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "You can set a consumer group per application.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Partitions allow parallelism; consumer groups separate readers.",
+        "incorrect": "Default retention is 1 day, configurable up to 7.",
+        "examTip": "Each consumer group has its own offset.",
+        "relatedTopics": [
+          "Event Hubs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Connect to Azure services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/az-204"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

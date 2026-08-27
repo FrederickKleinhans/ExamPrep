@@ -1,0 +1,727 @@
+{
+  "certificationId": "isc2-cc",
+  "topicId": "business-continuity",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "isc2cc-038",
+      "type": "single-choice",
+      "topicId": "business-continuity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary purpose of a Business Continuity Plan (BCP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To restore IT infrastructure after a disaster",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To ensure critical business functions can continue operating during and after a disruptive event",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To investigate the root cause of security incidents",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To classify data according to sensitivity",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A BCP focuses on maintaining or quickly resuming critical business operations and functions during and after a disruption.",
+        "incorrect": "Restoring IT infrastructure is more specifically the focus of a Disaster Recovery Plan; incident investigation and data classification are separate activities.",
+        "examTip": "BCP = keep the BUSINESS running; DRP = restore the technical/IT systems.",
+        "relatedTopics": [
+          "BCP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-039",
+      "type": "single-choice",
+      "topicId": "business-continuity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary focus of a Disaster Recovery Plan (DRP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Restoring IT systems, applications, and data after a disruptive event",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Training employees on password hygiene",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Developing marketing strategy after a crisis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Classifying data based on sensitivity",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A DRP focuses specifically on restoring IT infrastructure, systems, and data following a disaster, and is typically a subset of the broader BCP.",
+        "incorrect": "Training, marketing strategy, and data classification are unrelated to the technical recovery focus of a DRP.",
+        "examTip": "DRP is often considered a technical component supporting the broader business continuity effort.",
+        "relatedTopics": [
+          "DRP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-040",
+      "type": "yes-no-statements",
+      "topicId": "business-continuity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Decide whether each statement comparing BCP and DRP is correct (Yes) or incorrect (No).",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "BCP has a broader organizational scope than DRP, covering people, processes, and facilities as well as technology.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "DRP is typically considered a subset of the overall business continuity effort, focused on IT recovery.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A BCP and a DRP are always the exact same document with no distinction.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "BCP is the umbrella plan; DRP zooms in specifically on technology recovery.",
+        "incorrect": "Review the CC business continuity documentation.",
+        "examTip": "BCP = whole organization; DRP = just IT/technology.",
+        "relatedTopics": [
+          "BCP",
+          "DRP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-041",
+      "type": "single-choice",
+      "topicId": "business-continuity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 'Recovery Time Objective' (RTO) represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The maximum acceptable amount of data loss, measured in time",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The maximum acceptable amount of time a system or process can be down before causing unacceptable harm",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The exact time a disaster is expected to occur",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The total budget allocated for disaster recovery",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RTO defines the maximum tolerable duration a system, application, or process can be unavailable before significant harm occurs to the business.",
+        "incorrect": "Data loss tolerance is described by RPO, not RTO; RTO has nothing to do with predicting when a disaster occurs or budget amounts.",
+        "examTip": "RTO = 'How long can we be DOWN?' RPO = 'How much data can we afford to LOSE?'",
+        "relatedTopics": [
+          "RTO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-042",
+      "type": "single-choice",
+      "topicId": "business-continuity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 'Recovery Point Objective' (RPO) represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The maximum acceptable downtime for a system",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The maximum acceptable amount of data loss, measured as a point in time to which data must be restored",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The physical location of the recovery site",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The individual responsible for declaring a disaster",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RPO defines the maximum acceptable amount of data loss measured in time, indicating how far back (to what point) data must be recoverable.",
+        "incorrect": "Downtime tolerance is RTO; recovery site location and disaster declaration roles are separate BC/DR planning elements.",
+        "examTip": "If RPO is 4 hours, backups must occur at least every 4 hours to meet that objective.",
+        "relatedTopics": [
+          "RPO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-043",
+      "type": "single-choice",
+      "topicId": "business-continuity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A company's critical order-processing system has an RPO of 1 hour and an RTO of 4 hours. Backups currently run every 6 hours, and the disaster recovery process is estimated to take 8 hours to complete. What is the CORRECT conclusion?",
+      "scenarioText": "A company's critical order-processing system has a defined Recovery Point Objective (RPO) of 1 hour and a Recovery Time Objective (RTO) of 4 hours. However, its current backup schedule only runs every 6 hours, and testing shows the full disaster recovery process takes approximately 8 hours to complete.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both RPO and RTO targets are currently being met",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The RPO target is at risk because backups run less frequently than required; the RTO target is also at risk because recovery takes longer than allowed",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Only the RTO target is at risk; RPO is fine",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Neither RTO nor RPO applies to order-processing systems",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "With an RPO of 1 hour but backups every 6 hours, up to 6 hours of data could be lost — exceeding the RPO. Similarly, an 8-hour recovery process exceeds the 4-hour RTO, so both targets are at risk.",
+        "incorrect": "The scenario numbers clearly show both objectives are currently unmet, so 'meeting both' or 'only one at risk' misreads the data; RTO/RPO apply broadly to critical systems.",
+        "examTip": "Always compare the STATED objective against the ACTUAL capability (backup frequency vs RPO; recovery duration vs RTO) to assess risk.",
+        "relatedTopics": [
+          "RTO",
+          "RPO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-044",
+      "type": "single-choice",
+      "topicId": "business-continuity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary purpose of a Business Impact Analysis (BIA)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To identify and prioritize critical business functions and assess the impact of their disruption",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "To configure firewall rules for the network perimeter",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To perform penetration testing on web applications",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To design the physical layout of a data center",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A BIA identifies critical business functions/processes and evaluates the potential operational and financial impact if they are disrupted, informing RTO/RPO and recovery priorities.",
+        "incorrect": "Firewall configuration, penetration testing, and data center layout are unrelated technical/security activities, not the purpose of a BIA.",
+        "examTip": "The BIA is typically performed BEFORE finalizing RTOs/RPOs, since it identifies which functions are most critical.",
+        "relatedTopics": [
+          "BIA"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-045",
+      "type": "ordering",
+      "topicId": "business-continuity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the following business continuity planning activities in a logical sequence.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Conduct a Business Impact Analysis (BIA)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Determine RTOs and RPOs for critical functions",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Develop the Business Continuity Plan and recovery strategies",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Test and exercise the plan",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Review and update the plan periodically",
+          "correctPosition": 5
+        }
+      ],
+      "explanation": {
+        "correct": "The BIA must come first to identify what's critical before recovery objectives and strategies can be meaningfully defined.",
+        "incorrect": "Review the CC business continuity planning sequence.",
+        "examTip": "Sequence: BIA → RTO/RPO → Plan development → Testing → Review/update.",
+        "relatedTopics": [
+          "BIA",
+          "BCP",
+          "RTO",
+          "RPO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-046",
+      "type": "dropdown-select",
+      "topicId": "business-continuity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete the sentences about alternate recovery sites.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A recovery site with fully configured hardware, software, and near real-time data replication, allowing near-immediate failover, is called a __________ site.",
+          "options": [
+            "hot",
+            "cold",
+            "warm",
+            "mobile"
+          ],
+          "correctAnswer": "hot"
+        },
+        {
+          "id": "d2",
+          "prompt": "A recovery site with basic infrastructure like power and space, but requiring significant time to install and configure equipment, is called a __________ site.",
+          "options": [
+            "cold",
+            "hot",
+            "warm",
+            "mobile"
+          ],
+          "correctAnswer": "cold"
+        }
+      ],
+      "explanation": {
+        "correct": "Hot = fastest/most expensive; Warm = partially equipped, moderate cost/time; Cold = basic facility, slowest/cheapest.",
+        "incorrect": "Review the CC alternate site definitions.",
+        "examTip": "Hot = immediate, Warm = partial, Cold = slowest.",
+        "relatedTopics": [
+          "Alternate sites",
+          "Hot site",
+          "Cold site"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-047",
+      "type": "single-choice",
+      "topicId": "business-continuity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A 'warm site' for disaster recovery is BEST described as which of the following?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A site with no equipment, only basic power and space",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A site partially equipped with hardware and connectivity, needing some time and effort to become fully operational",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A site that is already fully operational and mirrors production in real time",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A temporary tent or trailer used only for on-site security staff",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A warm site has some pre-installed infrastructure and equipment but requires additional configuration/data restoration time before becoming fully operational — a middle ground between hot and cold sites.",
+        "incorrect": "No equipment describes a cold site; full real-time mirroring describes a hot site; a security tent/trailer isn't a recognized DR site type.",
+        "examTip": "Warm sites balance cost and recovery speed compared to hot (fast/expensive) and cold (slow/cheap) sites.",
+        "relatedTopics": [
+          "Warm site",
+          "Alternate sites"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.1",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-048",
+      "type": "single-choice",
+      "topicId": "business-continuity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which phase of the incident response process focuses on limiting the scope and impact of an ongoing security incident?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Preparation",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Containment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Eradication",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Lessons learned",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Containment focuses on limiting the spread and impact of an incident, such as isolating affected systems from the network.",
+        "incorrect": "Preparation happens before an incident; eradication removes the root cause after containment; lessons learned occurs after recovery.",
+        "examTip": "Standard IR phases: Preparation, Detection/Identification, Containment, Eradication, Recovery, Lessons Learned.",
+        "relatedTopics": [
+          "Incident response phases",
+          "Containment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-049",
+      "type": "ordering",
+      "topicId": "business-continuity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Arrange the following incident response phases in the correct standard order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Preparation",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Detection and Identification",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Containment",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Eradication",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Recovery",
+          "correctPosition": 5
+        },
+        {
+          "id": "o6",
+          "text": "Lessons Learned (Post-Incident Activity)",
+          "correctPosition": 6
+        }
+      ],
+      "explanation": {
+        "correct": "This is the standard six-phase incident response lifecycle commonly referenced in security frameworks.",
+        "incorrect": "Review the CC incident response lifecycle.",
+        "examTip": "Remember: P-D-C-E-R-L (Prepare, Detect, Contain, Eradicate, Recover, Learn).",
+        "relatedTopics": [
+          "Incident response phases"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-050",
+      "type": "single-choice",
+      "topicId": "business-continuity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "During which incident response phase would an organization remove malware from infected systems and eliminate the root cause of the compromise?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Containment",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Eradication",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detection",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Preparation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Eradication focuses on removing the threat entirely from the environment, such as deleting malware and closing the exploited vulnerability, after containment has limited the spread.",
+        "incorrect": "Containment limits spread but doesn't necessarily remove the cause; detection identifies the incident; preparation occurs before any incident.",
+        "examTip": "Eradication typically follows containment and precedes recovery in the IR lifecycle.",
+        "relatedTopics": [
+          "Eradication",
+          "Incident response phases"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-051",
+      "type": "single-choice",
+      "topicId": "business-continuity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A security analyst detects unusual outbound traffic from a server, confirms it is compromised, and immediately disconnects the server from the network to prevent the malware from spreading further, without yet removing the malware itself. Which incident response phase does this action represent?",
+      "scenarioText": "During a security monitoring shift, an analyst notices unusual outbound network traffic from a production server. After confirming the server has been compromised by malware, the analyst immediately disconnects its network cable to stop further data exfiltration, planning to remove the malware afterward.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Eradication",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Containment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Recovery",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Lessons learned",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Disconnecting a compromised system from the network to stop the spread of an incident, without yet removing the cause, is the definition of containment.",
+        "incorrect": "Eradication would involve actually removing the malware; recovery restores normal operations; lessons learned occurs after the incident is resolved.",
+        "examTip": "Containment often has short-term (isolate now) and long-term (patch/monitor) sub-strategies.",
+        "relatedTopics": [
+          "Containment",
+          "Incident response phases"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "isc2cc-052",
+      "type": "multiple-choice",
+      "topicId": "business-continuity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following activities typically occur during the 'Lessons Learned' (post-incident) phase of incident response? (Select all that apply)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Documenting what happened and how the team responded",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Identifying gaps in the incident response process for improvement",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Updating policies, procedures, or controls based on findings",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Immediately isolating the compromised system from the network",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Documentation, gap identification, and updating policies/controls based on the incident are all core lessons-learned activities.",
+        "incorrect": "Isolating a compromised system is a containment activity, which occurs much earlier in the process, not during lessons learned.",
+        "examTip": "Lessons learned closes the loop, feeding improvements back into the Preparation phase for future incidents.",
+        "relatedTopics": [
+          "Lessons learned",
+          "Incident response phases"
+        ]
+      },
+      "metadata": {
+        "examObjective": "D2.2",
+        "references": [
+          "https://www.isc2.org/certifications/cc"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}
