@@ -6,7 +6,7 @@ import { useAuth } from '../store/useAuth';
 import { requiresAuthForCert } from '../lib/guestGuard';
 import { AuthModal } from '../components/AuthModal';
 import { SupportAccessModal } from '../components/SupportAccessModal';
-import { hasSupportUnlock } from '../lib/certAccess';
+import { requiresSupportUnlock } from '../lib/certAccess';
 import { CareerTrack, CatalogCert, TrackLevel } from '../types';
 
 const LEVEL_ORDER = ['foundation', 'associate', 'professional'];
@@ -58,7 +58,7 @@ export function TracksPage() {
       setShowAuthModal(true);
       return;
     }
-    if (firstCertId && firstCertId !== progress.selectedCertification && !hasSupportUnlock(firstCertId)) {
+    if (firstCertId && requiresSupportUnlock(firstCertId, progress.selectedCertification)) {
       setSupportCertId(firstCertId);
       return;
     }
@@ -76,7 +76,7 @@ export function TracksPage() {
       setShowAuthModal(true);
       return;
     }
-    if (certId !== progress.selectedCertification && !hasSupportUnlock(certId)) {
+    if (requiresSupportUnlock(certId, progress.selectedCertification)) {
       setSupportCertId(certId);
       return;
     }

@@ -18,6 +18,13 @@ export function hasSupportUnlock(certId: string): boolean {
   return readUnlocks()[certId] === true;
 }
 
+export function requiresSupportUnlock(
+  targetCertId: string,
+  activeCertId: string,
+): boolean {
+  return activeCertId !== '' && targetCertId !== activeCertId && !hasSupportUnlock(targetCertId);
+}
+
 export function grantSupportUnlock(certId: string): void {
   localStorage.setItem(SUPPORT_UNLOCK_KEY, JSON.stringify({
     ...readUnlocks(),

@@ -9,7 +9,7 @@ import { useAuth } from '../store/useAuth';
 import { requiresAuthForCert } from '../lib/guestGuard';
 import { AuthModal } from '../components/AuthModal';
 import { SupportAccessModal } from '../components/SupportAccessModal';
-import { hasSupportUnlock } from '../lib/certAccess';
+import { requiresSupportUnlock } from '../lib/certAccess';
 import { CareerTrack } from '../types';
 
 export function SettingsPage() {
@@ -152,7 +152,7 @@ export function SettingsPage() {
       setShowAuthModal(true);
       return;
     }
-    if (!hasSupportUnlock(newCertId)) {
+    if (requiresSupportUnlock(newCertId, progress.selectedCertification)) {
       setSupportCertId(newCertId);
       return;
     }

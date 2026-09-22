@@ -21,7 +21,7 @@ import { useAuth } from '../store/useAuth';
 import { requiresAuthForCert } from '../lib/guestGuard';
 import { AuthModal } from '../components/AuthModal';
 import { SupportAccessModal } from '../components/SupportAccessModal';
-import { hasSupportUnlock } from '../lib/certAccess';
+import { requiresSupportUnlock } from '../lib/certAccess';
 import { CatalogCert, Certification } from '../types';
 
 type PendingAction = { certId: string; then: 'study' | 'exam' | 'activate' } | null;
@@ -108,7 +108,7 @@ export function CertificationPage() {
       setShowAuthModal(true);
       return;
     }
-    if (!hasSupportUnlock(id)) {
+    if (requiresSupportUnlock(id, progress.selectedCertification)) {
       setPendingSupportAction(action);
       setShowSupportModal(true);
       return;
