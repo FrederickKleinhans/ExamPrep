@@ -32,7 +32,7 @@ export async function pushProgress(
   userId: string,
   progress: UserProgress,
 ): Promise<void> {
-  if (!isSupabaseConfigured) return;
+  if (!isSupabaseConfigured || !supabase) return;
 
   try {
     const { error } = await supabase
@@ -57,7 +57,7 @@ export async function pushProgress(
  * Returns null if not found, not configured, or on error.
  */
 export async function pullProgress(userId: string): Promise<UserProgress | null> {
-  if (!isSupabaseConfigured) return null;
+  if (!isSupabaseConfigured || !supabase) return null;
 
   try {
     const { data, error } = await supabase

@@ -30,7 +30,7 @@ export const useAuth = create<AuthState>((set) => ({
   error: null,
 
   initialise: async () => {
-    if (!isSupabaseConfigured) {
+    if (!isSupabaseConfigured || !supabase) {
       set({ isInitialised: true });
       return;
     }
@@ -56,7 +56,7 @@ export const useAuth = create<AuthState>((set) => ({
   },
 
   signInWithEmail: async (email, password) => {
-    if (!isSupabaseConfigured) return null;
+    if (!isSupabaseConfigured || !supabase) return null;
     set({ isLoading: true, error: null });
     const { error } = await supabase.auth.signInWithPassword({ email, password });
     set({ isLoading: false, error: error?.message ?? null });
@@ -64,7 +64,7 @@ export const useAuth = create<AuthState>((set) => ({
   },
 
   signUpWithEmail: async (email, password) => {
-    if (!isSupabaseConfigured) return null;
+    if (!isSupabaseConfigured || !supabase) return null;
     set({ isLoading: true, error: null });
     const { error } = await supabase.auth.signUp({ email, password });
     set({ isLoading: false, error: error?.message ?? null });
@@ -72,7 +72,7 @@ export const useAuth = create<AuthState>((set) => ({
   },
 
   signInWithProvider: async (provider) => {
-    if (!isSupabaseConfigured) return null;
+    if (!isSupabaseConfigured || !supabase) return null;
     set({ isLoading: true, error: null });
     const { error } = await supabase.auth.signInWithOAuth({
       provider,
@@ -87,7 +87,7 @@ export const useAuth = create<AuthState>((set) => ({
 
   signOut: async () => {
     set({ isLoading: true });
-    if (!isSupabaseConfigured) {
+    if (!isSupabaseConfigured || !supabase) {
       set({ session: null, user: null, isLoading: false });
       return;
     }

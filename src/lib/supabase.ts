@@ -2,6 +2,8 @@ import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
+export const isSupabaseConfigured =
+  Boolean(supabaseUrl) && Boolean(supabaseAnonKey);
 
 if (!supabaseUrl || !supabaseAnonKey) {
   console.warn(
@@ -11,13 +13,6 @@ if (!supabaseUrl || !supabaseAnonKey) {
   );
 }
 
-// createClient is safe to call with empty strings — all auth/sync calls
-// will fail gracefully and fall back to localStorage-only mode.
-export const supabase = createClient(
-  supabaseUrl ?? '',
-  supabaseAnonKey ?? '',
-);
-
-/** True when Supabase is configured and available. */
-export const isSupabaseConfigured =
-  Boolean(supabaseUrl) && Boolean(supabaseAnonKey);
+export const supabase = isSupabaseConfigured
+  ? createClient(supabaseUrl, supabaseAnonKey)
+  : null;
