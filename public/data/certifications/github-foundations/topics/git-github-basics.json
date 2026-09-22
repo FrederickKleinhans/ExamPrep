@@ -1,0 +1,1272 @@
+{
+  "certificationId": "github-foundations",
+  "topicId": "git-github-basics",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "github-001",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Git?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A cloud-based code hosting platform",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A distributed version control system that tracks changes to files over time",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A programming language for automation scripts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A project management tool for software teams",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Git is a distributed version control system (DVCS) created by Linus Torvalds in 2005. It tracks changes to files, allows multiple people to collaborate, and maintains a full history of every change.",
+        "incorrect": "GitHub is the cloud-based hosting platform. Git is the underlying tool that works locally and remotely.",
+        "examTip": "Git = the tool (local). GitHub = the hosting platform (cloud). You can use Git without GitHub, but GitHub requires Git.",
+        "relatedTopics": [
+          "git",
+          "version-control",
+          "DVCS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Git basics",
+        "references": [
+          "https://docs.github.com/en/get-started/using-git/about-git"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-002",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the difference between Git and GitHub?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are the same tool with different names",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Git is the version control system; GitHub is a cloud-based platform that hosts Git repositories and adds collaboration features",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "GitHub is the command-line tool; Git is the web interface",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Git is owned by Microsoft; GitHub is owned by the open source community",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Git is the open-source version control system that runs locally. GitHub is a cloud platform (owned by Microsoft) that hosts Git repositories and adds features like pull requests, issues, Actions, and Codespaces.",
+        "incorrect": "GitHub is owned by Microsoft (acquired 2018). Git is maintained by the open source community.",
+        "examTip": "Git = VCS tool. GitHub = hosting platform with collaboration features. Other Git hosts: GitLab, Bitbucket, Azure Repos.",
+        "relatedTopics": [
+          "git",
+          "github",
+          "version-control"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub",
+        "references": [
+          "https://docs.github.com/en/get-started"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-003",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does `git init` do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Downloads a remote repository to your local machine",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Initialises a new Git repository in the current directory",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Pushes local changes to a remote repository",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Lists all branches in the repository",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "`git init` creates a new empty Git repository in the current directory by adding a hidden `.git` folder that stores all version control metadata.",
+        "incorrect": "`git clone` downloads a remote repo. `git push` uploads changes. `git branch` lists branches.",
+        "examTip": "git init = start a new repo locally. git clone = copy an existing remote repo. Two ways to start working with Git.",
+        "relatedTopics": [
+          "git-init",
+          "repository",
+          "git-commands"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Use basic Git commands",
+        "references": [
+          "https://docs.github.com/en/get-started/using-git"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-004",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of `git clone`?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creates a copy of a remote repository on your local machine",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Creates a duplicate branch from the current branch",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Copies files from one directory to another",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Merges two branches together",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "`git clone <url>` copies a remote repository (including its full history) to your local machine, setting up a connection to the remote as `origin`.",
+        "incorrect": "Branch duplication = `git branch`. File copying is OS commands. Merging = `git merge`.",
+        "examTip": "git clone copies the entire repository history, not just current files. Sets up `origin` remote automatically.",
+        "relatedTopics": [
+          "git-clone",
+          "remote-repository"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Use basic Git commands",
+        "references": [
+          "https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-005",
+      "type": "ordering",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the steps of the basic Git workflow in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Edit files in the working directory",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Stage changes with `git add`",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Commit changes with `git commit`",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Push to remote with `git push`",
+          "correctPosition": 4
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Git workflow: Edit â†’ Stage (add) â†’ Commit â†’ Push. The staging area allows you to craft commits carefully before saving them.",
+        "incorrect": "You must stage before committing. Committing saves locally. Pushing uploads to remote.",
+        "examTip": "Git areas: Working Directory â†’ Staging Area (index) â†’ Local Repository â†’ Remote Repository. Each step moves changes forward.",
+        "relatedTopics": [
+          "git-workflow",
+          "staging",
+          "commit",
+          "push"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe the Git workflow",
+        "references": [
+          "https://docs.github.com/en/get-started/using-git"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-006",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does `git commit -m \"message\"` do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uploads staged changes to GitHub",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Saves staged changes to the local repository history with a descriptive message",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Adds all changed files to the staging area",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Creates a new branch with the given message as its name",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "`git commit` saves the staged changes as a snapshot in the local repository history. The `-m` flag provides a commit message describing what changed.",
+        "incorrect": "Uploading = `git push`. Staging all = `git add .`. Creating branch = `git branch` or `git checkout -b`.",
+        "examTip": "Commits are local until pushed. Good commit messages: present tense, descriptive, explain WHY not just WHAT.",
+        "relatedTopics": [
+          "git-commit",
+          "commit-message",
+          "local-repo"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Use basic Git commands",
+        "references": [
+          "https://docs.github.com/en/get-started/using-git/about-commits"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-007",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between `git fetch` and `git pull`?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are identical commands",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "`git fetch` downloads changes from remote without merging; `git pull` fetches AND merges into the current branch",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "`git pull` downloads files; `git fetch` downloads commits only",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "`git fetch` works offline; `git pull` requires internet",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "`git fetch` downloads remote changes to your local repo but doesn't modify your working files. `git pull` = `git fetch` + `git merge` â€” downloads and integrates changes.",
+        "incorrect": "Both require internet. Both download commits. The key difference is whether changes are merged into the working branch.",
+        "examTip": "Fetch = safe preview (see what changed). Pull = fetch + merge (update your branch). Use fetch first when unsure about incoming changes.",
+        "relatedTopics": [
+          "git-fetch",
+          "git-pull",
+          "remote-tracking"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe remote operations",
+        "references": [
+          "https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-008",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a commit hash in Git?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A password used to authenticate with GitHub",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A unique identifier (SHA-1 checksum) that uniquely identifies each commit",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A compressed archive of the repository files",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A tag applied to mark a specific release",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Every Git commit is identified by a 40-character SHA-1 hash (e.g., `a3f2bc1...`) that is computed from the commit content. This guarantees integrity â€” any change produces a different hash.",
+        "incorrect": "GitHub authentication uses tokens/SSH keys. Compressed archives are different. Tags are human-readable labels that can point to commits.",
+        "examTip": "You can reference commits by their full hash or the first 7 characters (short hash). Git uses SHA-1 (transitioning to SHA-256) for content-addressable storage.",
+        "relatedTopics": [
+          "commit-hash",
+          "SHA-1",
+          "git-integrity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Git concepts",
+        "references": [
+          "https://docs.github.com/en/get-started/using-git/about-commits"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-009",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of a `.gitignore` file?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Specifies files and patterns that Git should not track or commit",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Lists contributors who should be ignored in pull request reviews",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Hides files from the GitHub web interface",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Prevents specific branches from being pushed",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "`.gitignore` contains patterns for files and directories that Git should not track â€” like build artifacts, `node_modules/`, `.env` files with secrets, IDE settings, and OS files like `.DS_Store`.",
+        "incorrect": "`.gitignore` is about file tracking, not contributors, UI visibility, or branch protection.",
+        "examTip": "Common .gitignore entries: `node_modules/`, `*.log`, `.env`, `dist/`, `.DS_Store`. GitHub provides language-specific .gitignore templates.",
+        "relatedTopics": [
+          "gitignore",
+          "untracked-files",
+          "repository-setup"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe repository basics",
+        "references": [
+          "https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-010",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does `git stash` do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Permanently deletes uncommitted changes",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Temporarily saves uncommitted changes so you can work on something else and restore them later",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Moves commits from one branch to another",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Archives old branches for long-term storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "`git stash` saves uncommitted changes (both staged and unstaged) to a temporary stack, cleaning your working directory. `git stash pop` restores the most recent stash.",
+        "incorrect": "Stash is temporary and reversible â€” not deletion. Moving commits = `git cherry-pick` or `git rebase`. Archiving is a different concept.",
+        "examTip": "git stash use case: you're mid-feature and need to urgently fix a bug. Stash your changes, fix the bug, then pop the stash to continue.",
+        "relatedTopics": [
+          "git-stash",
+          "working-directory",
+          "workflow"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Use Git commands",
+        "references": [
+          "https://docs.github.com/en/get-started/using-git/about-git-rebase"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-011",
+      "type": "yes-no-statements",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Git concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Git stores snapshots of the entire project, not just differences between files.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "`git add .` stages all changed files in the current directory.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A Git tag always points to the latest commit on a branch.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Every commit in Git contains a reference to its parent commit(s).",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Git snapshots entire state. `git add .` stages all changes. Every commit has a parent (forming the history chain). Tags point to specific commits, not necessarily the latest.",
+        "incorrect": "Tags point to a specific fixed commit (like v1.0.0), not the moving tip of a branch. Branches point to the latest commit.",
+        "examTip": "Tag = fixed pointer to a specific commit (like a release marker). Branch = moving pointer that advances with each new commit.",
+        "relatedTopics": [
+          "git-snapshots",
+          "git-add",
+          "tags",
+          "commit-history"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Git fundamentals",
+        "references": [
+          "https://docs.github.com/en/get-started/using-git"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-012",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a remote in Git?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A branch that is stored only on your local machine",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A reference to a repository hosted on a server (like GitHub) that you can push to and pull from",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A Git command for working with files remotely",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A backup copy of the repository stored locally",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A remote is a named reference to a repository hosted elsewhere (GitHub, GitLab, etc.). `origin` is the conventional name for the primary remote set up by `git clone`.",
+        "incorrect": "Remotes point to external servers, not local machines. `git remote` is a command but 'remote' itself is the concept.",
+        "examTip": "Common remote commands: `git remote -v` (list remotes), `git remote add origin <url>` (add remote), `git push origin main` (push to remote branch).",
+        "relatedTopics": [
+          "git-remote",
+          "origin",
+          "remote-repository"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe remote operations",
+        "references": [
+          "https://docs.github.com/en/get-started/using-git/managing-remote-repositories"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-049",
+      "type": "dropdown-select",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each Git command to its correct purpose.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Download remote changes and merge into current branch",
+          "options": [
+            "git push",
+            "git pull",
+            "git fetch",
+            "git clone"
+          ],
+          "correctAnswer": "git pull"
+        },
+        {
+          "id": "d2",
+          "prompt": "Upload local commits to a remote repository",
+          "options": [
+            "git push",
+            "git pull",
+            "git fetch",
+            "git clone"
+          ],
+          "correctAnswer": "git push"
+        },
+        {
+          "id": "d3",
+          "prompt": "Download remote changes without modifying working files",
+          "options": [
+            "git push",
+            "git pull",
+            "git fetch",
+            "git clone"
+          ],
+          "correctAnswer": "git fetch"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "git pull = fetch + merge. git push = upload local commits. git fetch = download metadata only (no merge). git clone = initial copy of entire repo.",
+        "incorrect": "These four commands are the core remote operations. Know the difference between fetch and pull.",
+        "examTip": "Remote operations: clone (first time), fetch (see what changed), pull (fetch+merge), push (upload). Most common: pull then push.",
+        "relatedTopics": [
+          "git-commands",
+          "remote-operations"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Use Git commands",
+        "references": [
+          "https://docs.github.com/en/get-started/using-git"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-051",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is `HEAD` in Git?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The first commit ever made in the repository",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A pointer indicating the current position in the repository â€” usually the tip of the current branch",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The main or default branch of a repository",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A special tag applied to the most recent commit",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "HEAD is a symbolic reference pointing to the current branch (and the latest commit on that branch). A 'detached HEAD' occurs when you check out a specific commit rather than a branch.",
+        "incorrect": "HEAD is not the first commit, the main branch itself, or a tag. It points to where you currently are.",
+        "examTip": "HEAD = where you are now. Usually HEAD â†’ branch â†’ latest commit. Detached HEAD = HEAD â†’ specific commit hash.",
+        "relatedTopics": [
+          "HEAD",
+          "git-concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Git fundamentals",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-061",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does `git log` show?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Files changed in the working directory",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The commit history including hashes, authors, dates, and messages",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "All active branches in the repository",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A log of Git errors and warnings",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "`git log` displays the commit history. Use flags: `--oneline` (condensed), `--graph` (visual), `--author` (filter).",
+        "incorrect": "Changed files = `git status`. Branches = `git branch`.",
+        "examTip": "`git log --oneline --graph` shows a visual branch history. `git log --since='2 weeks ago'` filters by time.",
+        "relatedTopics": [
+          "git-log",
+          "commit-history"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Use Git commands",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-065",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does `git status` show?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The most recent commit hash and message",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The current branch, staged files, unstaged changes, and untracked files",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The connection status to the remote repository",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The list of active branches",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "`git status` shows the working tree state: current branch, staged files, modified unstaged files, and untracked files.",
+        "incorrect": "Last commit = `git log -1`. Remote = `git remote -v`. Branches = `git branch`.",
+        "examTip": "Run `git status` frequently â€” it's read-only and tells you exactly what to do next.",
+        "relatedTopics": [
+          "git-status",
+          "working-directory"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Use Git commands",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-066",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between `git reset` and `git revert`?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are identical â€” both undo the last commit",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "`git reset` rewrites history; `git revert` creates a new commit undoing changes, preserving history",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "`git revert` only works on staged changes; `git reset` on committed changes",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "`git reset` works on remote branches; `git revert` on local only",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "`git reset` moves the branch pointer backwards rewriting history â€” dangerous on shared branches. `git revert` creates a new commit inverting the target commit â€” safe on shared branches.",
+        "incorrect": "They are fundamentally different. Revert is safe for shared branches.",
+        "examTip": "Shared branch? Use `git revert`. Local-only? Can use `git reset`. Never rewrite pushed commits others depend on.",
+        "relatedTopics": [
+          "git-reset",
+          "git-revert",
+          "history"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Use Git commands",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-068",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a merge conflict in Git?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An error that prevents pushing to a remote branch",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A situation where two branches made conflicting changes to the same part of a file that Git cannot automatically resolve",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A failed merge of a deleted branch",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A permission error when merging a protected branch",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Merge conflicts occur when two branches modify the same lines differently. Git marks conflicting sections with `<<<<<<<`, `=======`, `>>>>>>>` markers for manual resolution.",
+        "incorrect": "Push errors are different. Deleted branch merges fail differently. Permission errors = branch protection.",
+        "examTip": "Resolve conflicts: open file, choose changes, remove markers, `git add`, `git commit`. Use a visual merge tool for complex conflicts.",
+        "relatedTopics": [
+          "merge-conflict",
+          "conflict-resolution"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Git operations",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-069",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between SSH and HTTPS authentication for GitHub?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HTTPS is more secure; SSH is only for advanced users",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SSH uses key-based authentication (no password after setup); HTTPS uses username/token credentials",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SSH only works on Linux",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "HTTPS supports pushing; SSH only supports pulling",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SSH uses public/private key pairs â€” no password needed after setup. HTTPS uses username + personal access token. Both are secure and support push/pull.",
+        "incorrect": "SSH works on all platforms. Both support push and pull. Both are secure.",
+        "examTip": "SSH setup: `ssh-keygen` â†’ add public key to GitHub Settings â†’ SSH Keys. HTTPS: use a PAT (passwords removed Aug 2021).",
+        "relatedTopics": [
+          "SSH",
+          "HTTPS",
+          "authentication"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub authentication",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-072",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is `git cherry-pick`?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Selects which files to include in a commit",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Applies changes from a specific commit onto the current branch without merging the entire branch",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Selects the best merge strategy automatically",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Filters commits by author",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "`git cherry-pick <hash>` takes a specific commit and applies its changes to the current branch â€” useful for backporting a bug fix to a release branch.",
+        "incorrect": "File selection = `git add -p`. Auto merge strategy = Git internals. Author filtering = `git log --author`.",
+        "examTip": "Cherry-pick: apply a hotfix to multiple release branches, backport a specific feature. Creates a new commit with a different hash.",
+        "relatedTopics": [
+          "git-cherry-pick",
+          "backporting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Use Git commands",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-081",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A developer accidentally committed sensitive API keys to a public repository and pushed to GitHub.",
+      "questionText": "What are the MOST important immediate steps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Delete the commit using `git reset` and force push",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Immediately revoke and rotate the exposed credentials, then clean the repository history",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Make the repository private temporarily",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Delete the entire repository and recreate it",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Assume credentials were already scraped. First: revoke/rotate immediately. Then clean history using `git filter-repo` or BFG Repo Cleaner.",
+        "incorrect": "Making private doesn't protect already-exposed credentials. Deleting the repo loses all history.",
+        "examTip": "Exposed secret response: 1) Revoke. 2) Rotate. 3) Clean history. 4) Add to .gitignore. 5) Add pre-commit hooks to prevent recurrence.",
+        "relatedTopics": [
+          "secret-exposure",
+          "security-incident",
+          "gitignore"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security best practices",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-086",
+      "type": "ordering",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the steps of the GitHub open source contribution workflow in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Fork the upstream repository to your GitHub account",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Clone your fork locally",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create a feature branch and make changes",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Push branch to your fork on GitHub",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Open a pull request from your fork to the upstream repository",
+          "correctPosition": 5
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Open source workflow: Fork â†’ Clone â†’ Branch & Change â†’ Push to fork â†’ PR to upstream. This is the standard contribution pattern.",
+        "incorrect": "You must fork before cloning. Push before PR. PR is the final step to propose changes.",
+        "examTip": "This is the GitHub Flow for open source: Fork + Clone + Branch + Push + PR. For internal projects: just Branch + Push + PR (no fork needed).",
+        "relatedTopics": [
+          "open-source-workflow",
+          "fork",
+          "pull-request"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe contribution workflow",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-090",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is `git diff` used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Shows the commit history of the repository",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Shows the differences between the working directory, staging area, or commits",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Displays which branches differ from main",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Identifies merge conflicts in a file",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "`git diff` shows line-by-line differences. `git diff` = unstaged changes. `git diff --staged` = staged changes. `git diff branch1 branch2` = between branches.",
+        "incorrect": "History = `git log`. Branch differences = `git diff branch1 branch2`. Conflicts = shown in file content after failed merge.",
+        "examTip": "git diff variants: `git diff` (working vs staged), `git diff --staged` (staged vs last commit), `git diff HEAD` (all changes vs last commit), `git diff hash1 hash2`.",
+        "relatedTopics": [
+          "git-diff",
+          "changes",
+          "comparison"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Use Git commands",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-093",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does `git branch -d feature-branch` do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deletes the branch from the remote repository",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Deletes the local branch if its changes have been merged",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Disables the branch from receiving new commits",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Detaches HEAD from the branch",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "`git branch -d` deletes a local branch safely â€” it fails if the branch has unmerged changes. Use `-D` (force) to delete regardless. To delete remote: `git push origin --delete feature-branch`.",
+        "incorrect": "Remote deletion needs `git push origin --delete`. `-d` doesn't disable or detach.",
+        "examTip": "Branch cleanup: `git branch -d branch` (safe local delete), `git push origin --delete branch` (remote delete). GitHub can auto-delete branches after PR merge.",
+        "relatedTopics": [
+          "git-branch",
+          "branch-deletion"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Use Git commands",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-098",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is `git rebase -i` (interactive rebase) used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rebasing between two remote repositories interactively",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Rewriting, squashing, reordering, or editing commits in a branch's history before sharing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Interactively resolving merge conflicts one file at a time",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Reviewing code changes interactively before committing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Interactive rebase opens an editor showing commits you can reword, squash (combine), fixup, drop, or reorder â€” letting you clean up a messy local history before sharing a well-organised set of commits.",
+        "incorrect": "Interactive rebase is for local history editing, not remote-to-remote rebase, conflict resolution, or pre-commit review.",
+        "examTip": "Interactive rebase commands: pick (keep), reword (edit message), squash (combine with previous), fixup (squash, discard message), drop (remove). Use before pushing.",
+        "relatedTopics": [
+          "git-rebase",
+          "interactive-rebase",
+          "history-cleanup"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Use Git commands",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-100",
+      "type": "single-choice",
+      "topicId": "git-github-basics",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the GitHub Flow branching strategy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A strategy with main, develop, feature, release, and hotfix branches",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A simple workflow: branch from main, commit, open PR, review, merge to main, deploy",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A strategy where all developers commit directly to main without branches",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A workflow using tags instead of branches for release management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Flow is a lightweight branching strategy: create a branch from main â†’ commit changes â†’ open PR â†’ review â†’ merge to main â†’ deploy. Main is always deployable.",
+        "incorrect": "main + develop + feature + release + hotfix = Git Flow (more complex). Direct commits to main = trunk-based development. Tags are for versioning, not flow.",
+        "examTip": "GitHub Flow: simple, continuous delivery. main = always deployable. Branch â†’ PR â†’ merge â†’ deploy. Suitable for small teams and continuous deployment environments.",
+        "relatedTopics": [
+          "GitHub-Flow",
+          "branching-strategy",
+          "workflows"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe branching strategies",
+        "references": [
+          "https://docs.github.com/en/get-started/using-github/github-flow"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

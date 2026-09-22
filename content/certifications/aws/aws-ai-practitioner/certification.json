@@ -1,0 +1,27 @@
+{
+  "id": "aws-ai-practitioner",
+  "name": "AWS AI Practitioner",
+  "provider": "AWS",
+  "examCode": "AIF-C01",
+  "version": "2024-01",
+  "questionCount": 100,
+  "passingScore": 70,
+  "timeLimitMinutes": 90,
+  "topics": [
+    { "id": "ai-ml-fundamentals", "name": "Fundamentals of AI and ML", "weight": 20 },
+    { "id": "generative-ai", "name": "Fundamentals of Generative AI", "weight": 24 },
+    { "id": "foundation-models", "name": "Applications of Foundation Models", "weight": 28 },
+    { "id": "responsible-ai", "name": "Guidelines for Responsible AI", "weight": 14 },
+    { "id": "security-compliance", "name": "Security, Compliance and Governance", "weight": 14 }
+  ],
+  "resources": [
+    {
+      "title": "AWS Certified AI Practitioner Exam Guide",
+      "url": "https://aws.amazon.com/certification/certified-ai-practitioner/"
+    },
+    {
+      "title": "AWS AI/ML Services Documentation",
+      "url": "https://docs.aws.amazon.com/machine-learning/"
+    }
+  ]
+}

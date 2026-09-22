@@ -1,0 +1,1115 @@
+{
+  "certificationId": "istqb-agile",
+  "topicId": "agile-fundamentals",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "istqb-agile-001",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following BEST describes the core principle behind the Agile Manifesto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Comprehensive documentation over working software",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Individuals and interactions over processes and tools",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Following a plan over responding to change",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Contract negotiation over customer collaboration",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Agile Manifesto values individuals and interactions, working software, customer collaboration, and responding to change â€” placing these over processes, documentation, contracts, and plans.",
+        "incorrect": "The Manifesto explicitly reverses these priorities â€” documentation, plans, and contracts are valued less than the items on the left side.",
+        "examTip": "Agile Manifesto: 4 values, 12 principles. Values: Individuals > Processes, Working software > Docs, Customer collab > Contract, Responding to change > Plan.",
+        "relatedTopics": [
+          "Agile-Manifesto",
+          "Agile-values"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Agile Software Development",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-002",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "In Scrum, what is the purpose of a Sprint Retrospective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To demonstrate completed work to stakeholders",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To plan the work for the next sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "To inspect the team process and identify improvements for the next sprint",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "To groom and prioritise the product backlog",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Sprint Retrospective is a meeting where the team inspects how the last sprint went (processes, tools, relationships) and creates an improvement plan for the next sprint.",
+        "incorrect": "Sprint Review = demo to stakeholders. Sprint Planning = plan next sprint work. Backlog Refinement = groom the backlog.",
+        "examTip": "Scrum events: Sprint Planning, Daily Scrum, Sprint Review (demo), Sprint Retrospective (improve). Retro = team improvement, Review = stakeholder demo.",
+        "relatedTopics": [
+          "Scrum",
+          "Sprint-Retrospective",
+          "continuous-improvement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Scrum",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-003",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are the three roles defined in the Scrum framework?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Project Manager, Developer, Tester",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Product Owner, Scrum Master, Development Team",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Business Analyst, Tech Lead, QA Engineer",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Product Owner, Release Manager, Development Team",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Scrum defines exactly three roles: Product Owner (maximises value, owns backlog), Scrum Master (servant-leader, removes impediments), and Development Team (self-organising, cross-functional).",
+        "incorrect": "Scrum has no Project Manager, Release Manager, Business Analyst, or separate Tester role. The Development Team is cross-functional and includes all skills needed.",
+        "examTip": "No Project Manager in Scrum â€” that role is distributed. PO = what to build. SM = how the team works. Dev Team = builds it.",
+        "relatedTopics": [
+          "Scrum-roles",
+          "Product-Owner",
+          "Scrum-Master"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Scrum",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-004",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Agile principle BEST describes the concept of delivering working software frequently?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Welcome changing requirements, even late in development",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Deliver working software frequently, from a couple of weeks to a couple of months",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Build projects around motivated individuals",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Simplicity is essential",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "One of the 12 Agile principles explicitly states: 'Deliver working software frequently, from a couple of weeks to a couple of months, with a preference for the shorter timescale.'",
+        "incorrect": "The other options are also Agile principles but describe different concepts â€” change acceptance, motivated teams, and simplicity.",
+        "examTip": "12 Agile principles address: customer satisfaction, change, frequent delivery, collaboration, motivation, face-to-face, working software, sustainability, technical excellence, simplicity, self-organisation, reflection.",
+        "relatedTopics": [
+          "Agile-principles",
+          "frequent-delivery",
+          "iterations"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Agile principles",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-005",
+      "type": "yes-no-statements",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Agile development concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "In Kanban, work items are visualised on a board and WIP limits are used to control flow.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A Scrum Sprint always lasts exactly 4 weeks.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Extreme Programming (XP) includes practices such as pair programming and test-driven development.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "The Product Backlog is owned and managed by the Scrum Master.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Kanban uses WIP limits and visual boards. XP includes pair programming, TDD, continuous integration. The Product Backlog is owned by the Product Owner. Sprints are 1-4 weeks (timeboxed but not fixed at 4 weeks).",
+        "incorrect": "Sprints can be 1-4 weeks. The Product Owner owns the backlog, not the Scrum Master.",
+        "examTip": "Product Owner = owns and prioritises backlog. Scrum Master = facilitates and removes impediments. Dev Team = delivers.",
+        "relatedTopics": [
+          "Kanban",
+          "XP",
+          "Scrum",
+          "Product-Backlog"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Agile frameworks",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-006",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a Definition of Done (DoD) in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To define the acceptance criteria for individual user stories",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To provide a shared understanding of what 'complete' means for any increment of work",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To document the release criteria for the final product",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To specify the test cases that must pass before a story is accepted",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Definition of Done is a shared checklist that every increment must meet to be considered complete â€” typically covering coding, testing, reviewing, and documentation standards.",
+        "incorrect": "Acceptance criteria are story-specific. DoD applies to all stories. Release criteria may be separate. Test cases are part of DoD but not the whole definition.",
+        "examTip": "DoD = team-level quality gate (applies to every story). Acceptance Criteria = story-specific business conditions. Both must be met.",
+        "relatedTopics": [
+          "Definition-of-Done",
+          "quality-standards",
+          "Agile"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Agile testing concepts",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-007",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "In Kanban, what is the purpose of a WIP (Work In Progress) limit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To limit the number of team members working at any time",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To control the amount of work in each stage to improve flow and identify bottlenecks",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To restrict the number of user stories in the product backlog",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To limit the number of sprints in a release",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "WIP limits cap the number of items in each workflow stage, preventing overloading, exposing bottlenecks, and improving the overall flow of work through the system.",
+        "incorrect": "WIP limits apply to work items, not people, backlogs, or sprints.",
+        "examTip": "Kanban principles: visualise work, limit WIP, manage flow, make policies explicit, implement feedback loops, improve collaboratively.",
+        "relatedTopics": [
+          "Kanban",
+          "WIP-limits",
+          "flow"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Kanban",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-008",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A team has been using Scrum for 3 months. During retrospectives, they keep identifying the same impediment â€” the test environment is frequently unavailable during sprints. The Scrum Master has noted the impediment but no action has been taken.",
+      "questionText": "According to Agile principles, what should the Scrum Master do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Remove the impediment from the retrospective notes as it is outside the team's control",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Actively work to resolve the impediment, escalating to management if necessary",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Add the impediment to the product backlog for the Product Owner to resolve",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Ask the Development Team to work around the issue themselves",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Scrum Master's primary responsibility is removing impediments to the Development Team's progress. When an impediment persists, the SM must escalate and actively resolve it.",
+        "incorrect": "Ignoring, adding to the backlog (impediments are not product features), or delegating back to the team are all incorrect Scrum Master behaviours.",
+        "examTip": "Scrum Master = servant leader and impediment remover. If the SM can't resolve it alone, they escalate to management or the organisation.",
+        "relatedTopics": [
+          "Scrum-Master",
+          "impediments",
+          "servant-leadership"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Scrum Master role",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-009",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the key difference between Agile and traditional (waterfall) development from a testing perspective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In Agile, testing only happens at the end of the project",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "In Agile, testing is integrated throughout the development cycle rather than being a separate final phase",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "In Agile, testing is performed only by dedicated QA specialists",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "In Agile, there is no formal test documentation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In Agile, testing is continuous and integrated â€” testers work alongside developers within each iteration. In waterfall, testing is typically a separate phase that occurs after development is complete.",
+        "incorrect": "End-of-project testing is waterfall. Agile testing is shared responsibility. Agile has lightweight but still meaningful test documentation.",
+        "examTip": "Agile testing = continuous, everyone's responsibility, integrated. Waterfall testing = separate phase, dedicated QA team, sequential.",
+        "relatedTopics": [
+          "Agile-vs-waterfall",
+          "continuous-testing",
+          "testing-integration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Testing in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-010",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Agile framework focuses on visualising workflow, limiting work in progress, and managing flow rather than fixed-length iterations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scrum",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Extreme Programming (XP)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Kanban",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "SAFe",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Kanban is a flow-based method that uses a visual board, WIP limits, and continuous flow â€” there are no sprints or iterations. Work is pulled when capacity is available.",
+        "incorrect": "Scrum uses fixed sprints. XP uses iterations with specific engineering practices. SAFe scales Agile across large enterprises.",
+        "examTip": "Scrum = timeboxed sprints. Kanban = continuous flow. XP = engineering practices (TDD, pair programming). Know when each is most applicable.",
+        "relatedTopics": [
+          "Kanban",
+          "Scrum",
+          "Agile-frameworks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Agile frameworks",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-011",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does 'inspect and adapt' mean in the context of Scrum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The QA team inspects code and adapts the test plan accordingly",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The team regularly examines progress and processes, then makes adjustments to improve",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Management inspects team velocity and adapts resource allocation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The Product Owner inspects the increment and adapts the release plan",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "'Inspect and adapt' is a core Scrum principle where the team regularly examines their work, processes, and progress, then makes necessary adjustments â€” embodied in the Sprint Review and Retrospective.",
+        "incorrect": "Inspect and adapt applies to the whole team and their processes, not just code inspection or management review.",
+        "examTip": "Scrum pillars: Transparency, Inspection, Adaptation. All Scrum events are inspect-and-adapt opportunities.",
+        "relatedTopics": [
+          "inspect-and-adapt",
+          "Scrum-pillars",
+          "continuous-improvement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Scrum principles",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-012",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a user story in Agile development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A detailed technical specification of a software feature",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A short description of a feature from the perspective of the end user, capturing what they want and why",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A log of bugs found during testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A test case written in natural language",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A user story is a lightweight requirement expressed from the user's perspective: 'As a [user], I want [feature] so that [benefit].' It focuses on value, not technical implementation.",
+        "incorrect": "Technical specs are too detailed for user stories. Bug logs are different. Test cases have a different format and purpose.",
+        "examTip": "User story format: 'As a [persona], I want [goal], so that [reason].' Include acceptance criteria to define when the story is complete.",
+        "relatedTopics": [
+          "user-story",
+          "requirements",
+          "Agile"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Agile requirements",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-047",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does INVEST stand for in the context of user stories?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Independent, Negotiable, Valuable, Estimable, Small, Testable",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Iterative, Necessary, Verified, Efficient, Scheduled, Tested",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Incremental, New, Valuable, Executable, Stable, Tracked",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Integrated, Noted, Verifiable, Essential, Simple, Transparent",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "INVEST is a quality checklist for user stories: Independent (can be developed independently), Negotiable (not a contract), Valuable (delivers value), Estimable (can be estimated), Small (fits in a sprint), Testable (clear acceptance criteria).",
+        "incorrect": "Only option A correctly spells out the INVEST acronym.",
+        "examTip": "INVEST checklist: I-N-V-E-S-T. If a story isn't testable, it can't be accepted. If it's not small, it should be split. If not independent, scheduling becomes complex.",
+        "relatedTopics": [
+          "INVEST",
+          "user-story-quality",
+          "story-criteria"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 User story quality",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-053",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the daily standup (Daily Scrum) in Scrum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A one-hour status meeting led by the project manager",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A 15-minute time-boxed daily meeting where the team synchronises activity and identifies blockers",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A daily code review session led by the tech lead",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A meeting to report sprint progress to management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Daily Scrum is a 15-minute time-boxed event for the Development Team to synchronise, plan the next 24 hours, and identify impediments. It is not a status report to management.",
+        "incorrect": "No project manager leads the Daily Scrum. It's not a code review or management report. It's strictly time-boxed to 15 minutes.",
+        "examTip": "Daily Scrum: What did I do yesterday? What will I do today? Any blockers? Scrum Master facilitates but doesn't own it. Keep to 15 minutes strictly.",
+        "relatedTopics": [
+          "Daily-Scrum",
+          "standup",
+          "synchronisation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Scrum events",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-058",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of story points in Agile estimation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To measure the exact number of hours a story will take to complete",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To estimate the relative effort, complexity, and uncertainty of a user story compared to other stories",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To track the number of test cases written for each story",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To score the business value of each story for prioritisation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Story points are a relative measure of size/effort/complexity â€” not absolute time. They allow teams to estimate without committing to specific hours and improve through calibration over multiple sprints.",
+        "incorrect": "Story points are not hours, test counts, or business value scores (though value is a separate consideration for prioritisation).",
+        "examTip": "Story points: relative sizing using Fibonacci (1,2,3,5,8,13,21...). 1 point = simplest story. Larger = more complex/unknown. Team consensus via planning poker.",
+        "relatedTopics": [
+          "story-points",
+          "estimation",
+          "planning-poker"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Agile estimation",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-060",
+      "type": "yes-no-statements",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Scrum concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The Sprint Goal is set during Sprint Planning and provides focus for the sprint.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The Scrum Master has the authority to remove items from the Product Backlog.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "The Sprint Backlog is owned by the Development Team and can be updated throughout the sprint.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "In Scrum, a sprint can be cancelled by the Scrum Master if progress is too slow.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Sprint Goal is set in planning. Sprint Backlog is owned and managed by Dev Team. Only the Product Owner can remove backlog items. Only the Product Owner can cancel a sprint (rarely done).",
+        "incorrect": "Scrum Master does not own the backlog. Only the Product Owner can cancel a sprint â€” and only if the Sprint Goal becomes obsolete.",
+        "examTip": "PO owns: Product Backlog, Sprint Goal alignment, sprint cancellation. Dev Team owns: Sprint Backlog, technical decisions. SM owns: process facilitation.",
+        "relatedTopics": [
+          "Scrum",
+          "Sprint-Backlog",
+          "Product-Owner",
+          "Scrum-Master"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Scrum artifacts and roles",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-066",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the role of the Product Owner in relation to testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Product Owner performs all user acceptance testing",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The Product Owner defines acceptance criteria, reviews demos, and accepts or rejects completed stories based on whether they meet the acceptance criteria",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The Product Owner writes automated acceptance tests",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The Product Owner has no testing responsibilities â€” that belongs to the Development Team",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Product Owner owns the acceptance criteria that define when a story is done from a business perspective. They review demos at the Sprint Review and provide feedback on whether stories meet business needs.",
+        "incorrect": "PO typically doesn't write automated tests. UAT may involve the PO but the whole team is responsible for testing. PO has critical testing responsibilities.",
+        "examTip": "PO testing role: define acceptance criteria, participate in story reviews, accept/reject stories at Sprint Review. Clear AC = testable stories.",
+        "relatedTopics": [
+          "Product-Owner",
+          "acceptance-criteria",
+          "sprint-review"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Scrum roles and testing",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-069",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a product increment in Scrum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A list of all features added to the product backlog in a sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The sum of all completed backlog items at the end of a sprint that is in a potentially shippable state",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A minor version release of the software",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The set of user stories planned for the current sprint",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Increment is the sum of all Product Backlog items completed during a sprint plus all previous sprints' increments â€” it must be in a usable, potentially releasable state regardless of whether it is released.",
+        "incorrect": "The increment is about completed, working software â€” not backlog additions, version releases, or sprint plan items.",
+        "examTip": "Increment = all done stories from this sprint + all previous sprints. Must meet DoD. Must be potentially releasable â€” even if not actually released.",
+        "relatedTopics": [
+          "increment",
+          "Scrum",
+          "potentially-shippable"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Scrum artifacts",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-072",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the concept of 'sustainable pace' in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Delivering the maximum amount of features possible in every sprint regardless of team capacity",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Working at a pace that the team can maintain indefinitely without burning out, ensuring consistent long-term quality and delivery",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Slowing down delivery to ensure thorough documentation is produced",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Delivering the same number of story points every sprint",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Agile principle of sustainable pace means the team works at a consistent, manageable rate â€” overtime and crunch are red flags that indicate process problems, not badges of honour.",
+        "incorrect": "Maximising output without regard for sustainability leads to burnout and quality decline. Sustainable pace is not about slowing down or fixed velocity.",
+        "examTip": "Agile principle: 'The sponsors, developers, and users should be able to maintain a constant pace indefinitely.' Overtime = process failure, not success.",
+        "relatedTopics": [
+          "sustainable-pace",
+          "Agile-principles",
+          "team-health"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Agile principles",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-076",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does the Agile principle 'working software over comprehensive documentation' mean for testers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testers should produce no test documentation in Agile projects",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Test documentation should be sufficient to serve its purpose but not created for its own sake â€” focus on what adds value",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Testers should focus on writing code instead of documentation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Test reports are not needed because working software proves quality",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Agile doesn't eliminate documentation â€” it eliminates unnecessary documentation. Testers should produce test charters, defect reports, automation results, and session notes where they add value, but avoid heavyweight test plans that nobody reads.",
+        "incorrect": "No documentation is an extreme. Testers don't become coders. Test results are still needed for accountability and risk management.",
+        "examTip": "Agile test documentation: produce what's needed for communication and risk management. Executable tests + defect logs + automated reports often suffice.",
+        "relatedTopics": [
+          "test-documentation",
+          "Agile-Manifesto",
+          "documentation-lightweight"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Agile test documentation",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-081",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In SAFe (Scaled Agile Framework), how is testing coordinated across multiple Agile teams?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Each team tests independently with no coordination",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A centralised test team performs all testing for all Agile teams",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Teams coordinate testing at the Program Increment (PI) level, including system integration testing across teams",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Testing is deferred to a separate hardening sprint after all development is complete",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In SAFe, teams work in Program Increments (typically 8-12 weeks of 4 sprints + 1 IP sprint). System-level integration testing and cross-team dependencies are coordinated at the PI level through System Demos and IP sprints.",
+        "incorrect": "Independent testing misses integration issues. Centralised test teams contradict Agile's whole-team quality. Deferring testing is an anti-pattern SAFe explicitly addresses.",
+        "examTip": "SAFe testing: each team tests their own stories + system integration testing across teams. System Demo = combined increment demo. IP sprint = integration and hardening.",
+        "relatedTopics": [
+          "SAFe",
+          "scaled-Agile",
+          "system-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Scaled Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-087",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is an epic in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A very complex technical task assigned to senior developers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A large body of work that can be broken down into multiple user stories",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A sprint that is longer than usual due to project complexity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A high-level project milestone in the release plan",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An epic is a large requirement or feature that is too big to fit in a single sprint and must be decomposed into multiple user stories for implementation.",
+        "incorrect": "Epics are requirement-level artifacts, not technical tasks, extended sprints, or milestones.",
+        "examTip": "Hierarchy: Theme > Epic > User Story > Task. Epics are split into stories that fit in a sprint. Stories are split into tasks during sprint planning.",
+        "relatedTopics": [
+          "epic",
+          "user-story",
+          "backlog-hierarchy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Agile requirements",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-093",
+      "type": "single-choice",
+      "topicId": "agile-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the concept of 'walking skeleton' in Agile development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A minimal team structure required to run an Agile project",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A thin, end-to-end implementation of the system architecture that demonstrates the overall flow without full functionality",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A stripped-down version of the product backlog containing only core features",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A minimal viable test suite that covers only the critical paths",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A walking skeleton is a minimal end-to-end slice of the architecture (e.g., a thin vertical slice that touches all layers: UI, API, database) that proves the architecture works before adding full functionality.",
+        "incorrect": "Walking skeleton is about architecture validation through a thin vertical slice, not team structure, backlog, or test coverage.",
+        "examTip": "Walking skeleton enables early integration testing and CI setup. It's the first 'story' that proves the architecture works end-to-end.",
+        "relatedTopics": [
+          "walking-skeleton",
+          "architecture",
+          "vertical-slicing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Agile development concepts",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

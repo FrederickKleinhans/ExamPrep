@@ -1,0 +1,81 @@
+{
+  "id": "comptia-network-plus",
+  "name": "CompTIA Network+",
+  "provider": "CompTIA",
+  "examCode": "N10-009",
+  "version": "2024-01",
+  "questionCount": 100,
+  "passingScore": 72,
+  "timeLimitMinutes": 90,
+  "topics": [
+    {
+      "id": "networking-concepts",
+      "name": "Networking Concepts",
+      "weight": 23
+    },
+    {
+      "id": "network-implementation",
+      "name": "Network Implementation",
+      "weight": 20
+    },
+    {
+      "id": "network-operations",
+      "name": "Network Operations",
+      "weight": 19
+    },
+    {
+      "id": "network-security",
+      "name": "Network Security",
+      "weight": 14
+    },
+    {
+      "id": "network-troubleshooting",
+      "name": "Network Troubleshooting",
+      "weight": 24
+    }
+  ],
+  "resources": [
+    {
+      "title": "CompTIA Network+ Certification Overview",
+      "url": "https://www.comptia.org/certifications/network"
+    }
+  ],
+  "vendor": "CompTIA",
+  "vendorColor": "#C8202F",
+  "level": "beginner",
+  "accessTier": "free",
+  "description": "Validates the technical skills needed to securely establish, maintain and troubleshoot the essential networks that businesses rely on.",
+  "examDetails": {
+    "durationMinutes": 90,
+    "questionCount": 90,
+    "passingScore": 72,
+    "priceUSD": 369
+  },
+  "topicChunks": [
+    {
+      "topicId": "networking-concepts",
+      "path": "/data/certifications/comptia-network-plus/topics/networking-concepts.json",
+      "questionCount": 28
+    },
+    {
+      "topicId": "network-implementation",
+      "path": "/data/certifications/comptia-network-plus/topics/network-implementation.json",
+      "questionCount": 18
+    },
+    {
+      "topicId": "network-operations",
+      "path": "/data/certifications/comptia-network-plus/topics/network-operations.json",
+      "questionCount": 18
+    },
+    {
+      "topicId": "network-security",
+      "path": "/data/certifications/comptia-network-plus/topics/network-security.json",
+      "questionCount": 18
+    },
+    {
+      "topicId": "network-troubleshooting",
+      "path": "/data/certifications/comptia-network-plus/topics/network-troubleshooting.json",
+      "questionCount": 18
+    }
+  ]
+}

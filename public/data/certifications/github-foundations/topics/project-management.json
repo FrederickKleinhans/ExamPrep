@@ -1,0 +1,965 @@
+{
+  "certificationId": "github-foundations",
+  "topicId": "project-management",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "github-041",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What are GitHub Projects?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Separate GitHub accounts for managing large organisations",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An adaptable spreadsheet and board tool for planning and tracking work with issues and pull requests",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "GitHub's premium plan for enterprise teams",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A feature for creating project documentation wikis",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Projects (Projects v2) is a flexible project management tool supporting board, table, and roadmap views. It aggregates issues and PRs, supports custom fields, and can span multiple repositories.",
+        "incorrect": "Organisations are separate. GitHub Projects is a free planning tool. Enterprise is a billing tier. Wikis are separate.",
+        "examTip": "GitHub Projects views: Board (Kanban), Table (spreadsheet), Roadmap (timeline). Custom fields: text, number, date, single select, iteration. Auto-populate from issues/PRs.",
+        "relatedTopics": [
+          "GitHub-Projects",
+          "project-management",
+          "Kanban"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Projects",
+        "references": [
+          "https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-042",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between a GitHub organisation and a personal account?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Organisations are free; personal accounts require payment",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Organisations provide shared workspaces with team management, permissions, and policies for multiple collaborators",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Personal accounts can have unlimited repositories; organisations are limited to 10",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Organisations cannot use GitHub Actions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Organisations provide shared repositories, team management (with different permission levels), centralised billing, security policies, and audit logs â€” ideal for companies and open source projects.",
+        "incorrect": "Both have free and paid tiers. Both support unlimited repos and GitHub Actions.",
+        "examTip": "Org features: teams (with permission levels), enterprise policies, centralised billing, audit log, SAML SSO. Members can belong to multiple orgs.",
+        "relatedTopics": [
+          "organisations",
+          "teams",
+          "access-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub account types",
+        "references": [
+          "https://docs.github.com/en/organizations"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-043",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are the repository-level permission roles available in a GitHub organisation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Owner, Admin, and User",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Read, Triage, Write, Maintain, and Admin",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Viewer, Contributor, and Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Guest, Member, and Owner",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub repository roles: Read (view/clone/comment on issues), Triage (manage issues/PRs), Write (push code), Maintain (manage repo settings without destructive actions), Admin (full access including dangerous settings).",
+        "incorrect": "These are the 5 standard GitHub repository permission levels introduced for granular control.",
+        "examTip": "Repository roles: Read < Triage < Write < Maintain < Admin. Most contributors need Write. Maintainers of open source projects get Maintain. Admins have full control.",
+        "relatedTopics": [
+          "repository-permissions",
+          "access-control",
+          "teams"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub permissions",
+        "references": [
+          "https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-044",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub's Audit Log?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A log of all code reviews and comments in pull requests",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A record of all security and administrative actions performed in an organisation for compliance and investigation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A tool for auditing code quality and test coverage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "GitHub's system for tracking billing and usage costs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Audit Log records organisation-level events: member additions/removals, permission changes, repository visibility changes, Actions usage, billing changes â€” supporting security investigation and compliance.",
+        "incorrect": "PR comments are in the PR thread. Code quality = third-party tools. Billing = billing settings.",
+        "examTip": "Audit Log available to: Organisation owners, GitHub Enterprise admins. Query by actor, action type, time range. Export as JSON/CSV for SIEM integration.",
+        "relatedTopics": [
+          "audit-log",
+          "security",
+          "compliance",
+          "organisation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub security features",
+        "references": [
+          "https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-045",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is GitHub Mobile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A lightweight version of GitHub only for viewing files",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A mobile app (iOS and Android) for managing issues, reviewing PRs, and responding to notifications on the go",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A GitHub feature optimised for mobile web browsers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A service for deploying applications to mobile devices from GitHub Actions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Mobile is a native iOS and Android app that lets you manage notifications, review and comment on PRs, manage issues, search repositories, and access your profile from your phone.",
+        "incorrect": "GitHub Mobile is a full-featured native app, not just a file viewer or mobile website.",
+        "examTip": "GitHub Mobile features: notifications, issue/PR management, code review, Copilot chat, 2FA. Available on iOS and Android.",
+        "relatedTopics": [
+          "GitHub-Mobile",
+          "notifications",
+          "mobile-workflow"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub features",
+        "references": [
+          "https://docs.github.com/en/get-started/using-github/github-mobile"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-046",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the GitHub CLI (`gh`) used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A replacement for Git that runs from the command line",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A command-line tool that enables GitHub operations (PRs, issues, releases) directly from the terminal",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A graphical interface for GitHub that runs in the terminal",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A tool for writing GitHub Actions workflows from the command line",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The GitHub CLI (`gh`) lets you interact with GitHub features from your terminal: `gh pr create`, `gh issue list`, `gh repo clone`, `gh release create`, `gh workflow run`, etc.",
+        "incorrect": "`gh` is separate from `git` â€” it wraps GitHub API operations, not Git operations. It's not a GUI or an Actions authoring tool.",
+        "examTip": "Common gh commands: `gh repo clone`, `gh pr create`, `gh pr list`, `gh issue create`, `gh workflow run`, `gh release create`. Authenticate with `gh auth login`.",
+        "relatedTopics": [
+          "GitHub-CLI",
+          "developer-tools",
+          "terminal"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub tools",
+        "references": [
+          "https://cli.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-047",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub Gist?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A feature for creating visual summaries of repository activity",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A simple way to share code snippets, notes, or text files as standalone mini-repositories",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A compressed archive format for sharing GitHub repositories",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "GitHub's internal documentation format for API references",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Gists are lightweight Git repositories for sharing individual files or small collections of files â€” code snippets, config files, notes. They can be public or secret and support versioning.",
+        "incorrect": "Gists are for sharing code snippets, not activity summaries, archives, or API docs.",
+        "examTip": "Gist: public (searchable) or secret (not searchable, but accessible via URL). Supports Git operations. Useful for sharing config files, scripts, and code examples.",
+        "relatedTopics": [
+          "GitHub-Gist",
+          "code-sharing",
+          "snippets"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub features",
+        "references": [
+          "https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/about-gists"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-048",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company has 50 developers working across 20 repositories. They want to enforce a security policy requiring all repositories to use Dependabot and secret scanning.",
+      "questionText": "Which GitHub feature enables enforcing this policy across all repositories at once?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Repository branch protection rules",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "GitHub Organisation security policies and settings",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "CODEOWNERS files in each repository",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "GitHub Actions workflows in each repository",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Organisation-level security settings allow owners to enable Dependabot, secret scanning, and other security features across all repositories in the organisation at once â€” no need to configure each repo individually.",
+        "incorrect": "Branch protection rules apply to specific branches. CODEOWNERS is for code review. Actions workflows run automation but don't enforce security settings.",
+        "examTip": "Org security settings: enable/enforce Dependabot, secret scanning, code scanning, 2FA requirement for all members across all repos simultaneously.",
+        "relatedTopics": [
+          "organisation-security",
+          "policy-enforcement",
+          "Dependabot"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub organisation security",
+        "references": [
+          "https://docs.github.com/en/organizations/keeping-your-organization-secure"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-050",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub's Insights feature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A tool for generating AI-powered code suggestions",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Analytics and reports showing repository activity â€” commits, contributors, traffic, dependency usage, and more",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A security dashboard showing vulnerability alerts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A feature for tracking which GitHub features your organisation uses most",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Repository Insights provides analytics: Contributors graph, commit activity, code frequency, dependency graph, network graph, forks, traffic (views, clones), and pulse (summary of recent activity).",
+        "incorrect": "AI suggestions = Copilot. Vulnerability alerts = Security tab. Feature usage = separate.",
+        "examTip": "Insights tabs: Pulse (recent activity), Contributors, Community standards, Commits, Code frequency, Dependency graph, Network, Forks, Traffic (views/clones).",
+        "relatedTopics": [
+          "GitHub-Insights",
+          "analytics",
+          "repository-metrics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub features",
+        "references": [
+          "https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/using-pulse-to-view-a-summary-of-repository-activity"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-060",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of GitHub's `CONTRIBUTING.md` file?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lists all contributors and their commit counts",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Provides guidelines on how to contribute â€” setup, code standards, and PR process",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Grants contribution permissions to specified GitHub users",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Automatically adds contributors to the team",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "CONTRIBUTING.md explains HOW to contribute â€” dev environment setup, coding standards, commit format, testing requirements, and PR process. GitHub links to it when contributors open issues or PRs.",
+        "incorrect": "Contributor lists = AUTHORS file. Permissions = repository settings. Team management = org settings.",
+        "examTip": "Community health files in `.github/`: CONTRIBUTING.md, CODE_OF_CONDUCT.md, SECURITY.md, SUPPORT.md, FUNDING.yml, ISSUE_TEMPLATE/, PULL_REQUEST_TEMPLATE.md.",
+        "relatedTopics": [
+          "CONTRIBUTING",
+          "community-health"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe community files",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-070",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub Sponsors?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Corporate advertising on repository pages",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A platform for financially supporting open source developers directly through GitHub",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "GitHub's enterprise customer support programme",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A grants programme for GitHub Actions minutes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Sponsors lets community members fund developers and organisations who maintain open source projects, through recurring or one-time payments.",
+        "incorrect": "Sponsors is developer funding, not advertising, enterprise support, or Actions grants.",
+        "examTip": "Add FUNDING.yml to display sponsor buttons. GitHub waives its service fee for sponsors.",
+        "relatedTopics": [
+          "GitHub-Sponsors",
+          "open-source-funding"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub features",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-071",
+      "type": "yes-no-statements",
+      "topicId": "project-management",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes GitHub security and access features.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Two-factor authentication (2FA) can be enforced for all members of a GitHub organisation.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Deploy keys provide read (or read/write) access to a single repository for automated systems.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "GitHub organisation members can always see code in private repositories they haven't been granted access to.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Fine-grained personal access tokens allow scoping to specific repositories and permissions.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "2FA can be org-enforced. Deploy keys = per-repo SSH keys. Org members cannot access private repos unless explicitly granted. Fine-grained PATs have repo-level and permission-level scoping.",
+        "incorrect": "Private repos require explicit access even within an org.",
+        "examTip": "Auth methods: SSH keys (interactive), PAT (scripting/API), OAuth apps, GitHub Apps. Use fine-grained PATs for minimal access.",
+        "relatedTopics": [
+          "2FA",
+          "PAT",
+          "deploy-keys",
+          "access-control"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub authentication",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-074",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a GitHub profile README?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A README displayed at the top of every repository you own",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A special README in a repository matching your username that appears on your GitHub profile page",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An automatically generated summary of coding activity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A README visible only to your followers",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Create a repository with the same name as your GitHub username and add a README.md â€” it displays as a profile card with skills, projects, GitHub stats.",
+        "incorrect": "Profile README is in a special repo (username/username), manually created.",
+        "examTip": "Profile README: create repo `your-username/your-username` â†’ add README.md â†’ it appears on profile. Supports markdown, HTML, widgets.",
+        "relatedTopics": [
+          "profile-README",
+          "GitHub-profile"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub features",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-077",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of GitHub's `SECURITY.md` file?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Configures GitHub's secret scanning settings",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Explains how to responsibly report security vulnerabilities in the project",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Lists security certifications the project has achieved",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Grants security researchers access for bug bounty testing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SECURITY.md defines the project's security policy â€” how to report vulnerabilities, supported versions, and expected response timelines. GitHub links to it from the Security tab.",
+        "incorrect": "Security scanning is configured separately. It's a policy document, not certifications or access grants.",
+        "examTip": "Private vulnerability reporting: researchers can report vulnerabilities privately through Security â†’ Advisories without public disclosure.",
+        "relatedTopics": [
+          "SECURITY.md",
+          "responsible-disclosure"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe repository security",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-080",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the GitHub dependency graph?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A visual diagram of a repository's git branch structure",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A feature showing what packages a repository depends on and which repos depend on it",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A network graph showing connections between forks",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A deployment pipeline diagram in GitHub Actions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The dependency graph parses manifest files (package.json, requirements.txt) to show what packages a repository uses. Dependabot uses it to detect vulnerabilities.",
+        "incorrect": "Branch structure = network graph. Fork connections = network graph. Deployment pipeline = Actions visualisation.",
+        "examTip": "Dependency graph enables: Dependabot security alerts, version updates, supply chain security. Found in Insights â†’ Dependency graph.",
+        "relatedTopics": [
+          "dependency-graph",
+          "supply-chain",
+          "Dependabot"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe repository security features",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-083",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the GitHub CLI (`gh`) used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A replacement for Git at the command line",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A command-line tool for GitHub operations (PRs, issues, releases) from the terminal",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A graphical interface for GitHub in the terminal",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A tool for writing GitHub Actions workflows",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The GitHub CLI (`gh`) wraps GitHub API operations: `gh pr create`, `gh issue list`, `gh repo clone`, `gh release create`, `gh workflow run`.",
+        "incorrect": "`gh` is separate from `git`. It's not a GUI or an Actions authoring tool.",
+        "examTip": "Common gh commands: `gh repo clone`, `gh pr create`, `gh pr list`, `gh issue create`, `gh release create`. Authenticate with `gh auth login`.",
+        "relatedTopics": [
+          "GitHub-CLI",
+          "developer-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub tools",
+        "references": [
+          "https://cli.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-085",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between a GitHub organisation and a personal account?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Organisations are free; personal accounts require payment",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Organisations provide shared workspaces with team management, permissions, and policies for multiple collaborators",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Personal accounts have unlimited repositories; organisations are limited to 10",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Organisations cannot use GitHub Actions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Organisations provide shared repositories, team management with permission levels, centralised billing, security policies, and audit logs.",
+        "incorrect": "Both have free and paid tiers. Both support unlimited repos and GitHub Actions.",
+        "examTip": "Org features: teams, enterprise policies, centralised billing, audit log, SAML SSO. Members can belong to multiple orgs.",
+        "relatedTopics": [
+          "organisations",
+          "teams",
+          "access-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub account types",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-088",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are the repository permission roles in a GitHub organisation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Owner, Admin, and User",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Read, Triage, Write, Maintain, and Admin",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Viewer, Contributor, and Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Guest, Member, and Owner",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub repository roles: Read (view/clone/comment), Triage (manage issues/PRs), Write (push code), Maintain (manage settings without destructive actions), Admin (full access).",
+        "incorrect": "These are the 5 standard GitHub repository permission levels.",
+        "examTip": "Roles: Read < Triage < Write < Maintain < Admin. Most contributors need Write. Open source maintainers get Maintain.",
+        "relatedTopics": [
+          "repository-permissions",
+          "access-control"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub permissions",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-092",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub's audit log used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A log of all code reviews and comments in pull requests",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A record of security and administrative actions in an organisation for compliance and investigation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A tool for auditing code quality and test coverage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "GitHub's system for tracking billing and usage costs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Audit Log records org-level events: member additions/removals, permission changes, repo visibility changes, Actions usage â€” supporting security investigation and compliance.",
+        "incorrect": "PR comments are in the PR thread. Code quality = third-party tools. Billing = billing settings.",
+        "examTip": "Audit Log: available to org owners and Enterprise admins. Query by actor, action, time. Export as JSON/CSV for SIEM integration.",
+        "relatedTopics": [
+          "audit-log",
+          "compliance",
+          "organisation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub organisation security",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-099",
+      "type": "single-choice",
+      "topicId": "project-management",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub's 'inner source' concept?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A hidden source code repository visible only to senior engineers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Applying open source collaboration practices (forks, PRs, issues) within a private enterprise context",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "GitHub's internal source code management for its own products",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A security practice for reviewing source code internally before releasing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Inner source adapts open source workflows (fork, PR, code review, issues) for use within a company's private or internal repositories â€” enabling cross-team collaboration at enterprise scale.",
+        "incorrect": "Inner source is a collaboration philosophy, not a secret repo type, GitHub's internal code, or security review.",
+        "examTip": "Inner source benefits: reuse code across teams, improve cross-team collaboration, apply open source quality practices internally. GitHub Enterprise's 'internal' visibility supports this.",
+        "relatedTopics": [
+          "inner-source",
+          "enterprise",
+          "collaboration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Enterprise features",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

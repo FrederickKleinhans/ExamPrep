@@ -1,0 +1,61 @@
+{
+  "id": "istqb-agile",
+  "name": "ISTQB Agile Tester",
+  "provider": "ISTQB",
+  "examCode": "CTFL-AT",
+  "version": "2024-01",
+  "questionCount": 100,
+  "passingScore": 65,
+  "timeLimitMinutes": 60,
+  "topics": [
+    {
+      "id": "agile-fundamentals",
+      "name": "Agile Software Development",
+      "weight": 25
+    },
+    {
+      "id": "testing-agile",
+      "name": "Testing in Agile Projects",
+      "weight": 35
+    },
+    {
+      "id": "agile-testing-methods",
+      "name": "Agile Testing Methods, Techniques & Tools",
+      "weight": 40
+    }
+  ],
+  "resources": [
+    {
+      "title": "ISTQB Agile Tester Extension Syllabus",
+      "url": "https://www.istqb.org/certifications/agile-tester"
+    }
+  ],
+  "vendor": "ISTQB",
+  "vendorColor": "#003366",
+  "level": "intermediate",
+  "accessTier": "premium",
+  "description": "Testing practices in Agile projects, including test-driven development, behavior-driven development, and continuous testing.",
+  "examDetails": {
+    "durationMinutes": 60,
+    "questionCount": 40,
+    "passingScore": 65,
+    "priceUSD": 250
+  },
+  "topicChunks": [
+    {
+      "topicId": "agile-fundamentals",
+      "path": "/data/certifications/istqb-agile/topics/agile-fundamentals.json",
+      "questionCount": 23
+    },
+    {
+      "topicId": "testing-agile",
+      "path": "/data/certifications/istqb-agile/topics/testing-agile.json",
+      "questionCount": 43
+    },
+    {
+      "topicId": "agile-testing-methods",
+      "path": "/data/certifications/istqb-agile/topics/agile-testing-methods.json",
+      "questionCount": 34
+    }
+  ]
+}

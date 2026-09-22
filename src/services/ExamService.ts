@@ -1,14 +1,27 @@
 import { Question, ExamSession, ExamResult } from '../types';
 
 export class ExamService {
+  /**
+   * Returns a uniformly shuffled copy using the Fisher–Yates algorithm.
+   * The input array is never mutated.
+   */
+  static shuffleQuestions<T>(questions: T[]): T[] {
+    const shuffled = [...questions];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
   static createSession(
     certificationId: string,
     questions: Question[],
     timeLimitMinutes: number,
     questionCount: number
   ): ExamSession {
-    // Randomly select questions for the exam
-    const shuffled = [...questions].sort(() => Math.random() - 0.5);
+    // Randomly select unique questions for the exam
+    const shuffled = ExamService.shuffleQuestions(questions);
     const selected = shuffled.slice(0, Math.min(questionCount, shuffled.length));
 
     return {

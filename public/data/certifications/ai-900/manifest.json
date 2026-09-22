@@ -1,0 +1,81 @@
+{
+  "id": "ai-900",
+  "name": "AI-900",
+  "provider": "Microsoft",
+  "examCode": "AI-900",
+  "version": "2024-01",
+  "questionCount": 100,
+  "passingScore": 70,
+  "timeLimitMinutes": 60,
+  "topics": [
+    {
+      "id": "ai-workloads",
+      "name": "AI Workloads & Considerations",
+      "weight": 20
+    },
+    {
+      "id": "machine-learning",
+      "name": "Machine Learning on Azure",
+      "weight": 30
+    },
+    {
+      "id": "computer-vision",
+      "name": "Computer Vision Workloads",
+      "weight": 15
+    },
+    {
+      "id": "nlp",
+      "name": "Natural Language Processing",
+      "weight": 15
+    },
+    {
+      "id": "generative-ai",
+      "name": "Generative AI Workloads",
+      "weight": 20
+    }
+  ],
+  "resources": [
+    {
+      "title": "AI-900 Exam Overview",
+      "url": "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+    }
+  ],
+  "vendor": "Microsoft",
+  "vendorColor": "#0078D4",
+  "level": "beginner",
+  "accessTier": "free",
+  "description": "Foundational knowledge of machine learning and AI concepts and related Microsoft Azure services.",
+  "examDetails": {
+    "durationMinutes": 60,
+    "questionCount": 40,
+    "passingScore": 70,
+    "priceUSD": 99
+  },
+  "topicChunks": [
+    {
+      "topicId": "ai-workloads",
+      "path": "/data/certifications/ai-900/topics/ai-workloads.json",
+      "questionCount": 17
+    },
+    {
+      "topicId": "machine-learning",
+      "path": "/data/certifications/ai-900/topics/machine-learning.json",
+      "questionCount": 27
+    },
+    {
+      "topicId": "computer-vision",
+      "path": "/data/certifications/ai-900/topics/computer-vision.json",
+      "questionCount": 15
+    },
+    {
+      "topicId": "nlp",
+      "path": "/data/certifications/ai-900/topics/nlp.json",
+      "questionCount": 17
+    },
+    {
+      "topicId": "generative-ai",
+      "path": "/data/certifications/ai-900/topics/generative-ai.json",
+      "questionCount": 24
+    }
+  ]
+}

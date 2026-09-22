@@ -1,0 +1,1527 @@
+{
+  "certificationId": "sc-900",
+  "topicId": "security-solutions",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "sc900-025",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Microsoft Defender for Cloud primarily used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing Microsoft 365 email and calendar",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Providing security posture management and threat protection for cloud workloads",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Creating virtual networks in Azure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Managing user licenses",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Defender for Cloud (formerly Azure Security Center + Azure Defender) provides Cloud Security Posture Management (CSPM) and Cloud Workload Protection (CWP) for Azure, hybrid, and multi-cloud environments.",
+        "incorrect": "Email/calendar = Microsoft 365. VNet creation = Azure Networking. License management = Microsoft 365 admin center.",
+        "examTip": "Defender for Cloud = CSPM + CWP. Secure Score shows security posture. Recommendations show what to improve.",
+        "relatedTopics": [
+          "Defender-for-Cloud",
+          "CSPM",
+          "security-posture"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Cloud",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-026",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft Sentinel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An endpoint antivirus solution",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A cloud-native SIEM and SOAR solution",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A web application firewall",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A network performance monitor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Sentinel is a cloud-native Security Information and Event Management (SIEM) and Security Orchestration, Automation, and Response (SOAR) solution that collects data at scale, detects threats, and enables automated response.",
+        "incorrect": "Endpoint antivirus = Defender Antivirus. WAF = Azure WAF. Network monitoring = Azure Monitor / Network Watcher.",
+        "examTip": "Sentinel = cloud-native SIEM + SOAR. Collects logs, runs analytics rules, triggers playbooks (Azure Logic Apps) for automated response.",
+        "relatedTopics": [
+          "Sentinel",
+          "SIEM",
+          "SOAR",
+          "threat-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft Sentinel",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-027",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft Defender product protects endpoints such as laptops and desktops from malware and advanced threats?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Defender for Identity",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Defender for Endpoint",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Defender for Cloud Apps",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft Defender for Office 365",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Defender for Endpoint provides endpoint detection and response (EDR), antivirus, attack surface reduction, and threat intelligence for devices.",
+        "incorrect": "Defender for Identity = AD threat detection. Defender for Cloud Apps = SaaS security. Defender for Office 365 = email/collaboration security.",
+        "examTip": "Microsoft Defender XDR suite: Endpoint (devices), Identity (AD), Office 365 (email), Cloud Apps (SaaS), Cloud (Azure workloads).",
+        "relatedTopics": [
+          "Defender-for-Endpoint",
+          "EDR",
+          "endpoint-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft Defender products",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-028",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Defender for Office 365 protect against?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Malware on physical servers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Phishing, malicious attachments, and unsafe links in email and collaboration tools",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Unauthorized access to Azure virtual machines",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data loss from USB drives",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Office 365 protects against email-based threats including phishing, malicious attachments (Safe Attachments), and dangerous links (Safe Links) in Exchange Online, Teams, SharePoint, and OneDrive.",
+        "incorrect": "Physical server malware = Defender for Endpoint. VM access = Defender for Cloud. USB DLP = Microsoft Purview DLP.",
+        "examTip": "Defender for Office 365 key features: Safe Links, Safe Attachments, Anti-phishing, Attack Simulator.",
+        "relatedTopics": [
+          "Defender-for-Office-365",
+          "email-security",
+          "phishing-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Office 365",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-029",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company notices unusual sign-in activity suggesting compromised Active Directory accounts. Their environment is hybrid (on-premises AD + Azure).",
+      "questionText": "Which Microsoft security solution is BEST suited to detect and investigate compromised AD identities and lateral movement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Defender for Endpoint",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Defender for Identity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Sentinel",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft Defender for Cloud Apps",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Identity monitors on-premises Active Directory signals (LDAP, Kerberos, NTLM) to detect compromised accounts, lateral movement, and privilege escalation.",
+        "incorrect": "Defender for Endpoint focuses on device threats. Sentinel aggregates all signals (including Defender for Identity). Defender for Cloud Apps monitors SaaS usage.",
+        "examTip": "Defender for Identity = on-premises AD protection. It detects: pass-the-hash, Golden Ticket, reconnaissance, lateral movement.",
+        "relatedTopics": [
+          "Defender-for-Identity",
+          "Active-Directory",
+          "threat-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Identity",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-030",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft Defender for Cloud Apps primarily designed to protect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure virtual machines",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "On-premises file servers",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "SaaS application usage â€” shadow IT discovery, data protection, and threat detection",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Network perimeter traffic",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Cloud Apps (formerly MCAS) is a Cloud Access Security Broker (CASB) that provides visibility into SaaS app usage, detects shadow IT, enforces data loss prevention, and detects threats in cloud apps.",
+        "incorrect": "VMs = Defender for Cloud. File servers = Defender for Identity/Endpoint. Network perimeter = Azure Firewall.",
+        "examTip": "Defender for Cloud Apps = CASB. Key capabilities: Cloud Discovery (shadow IT), App Control, DLP, threat analytics.",
+        "relatedTopics": [
+          "Defender-for-Cloud-Apps",
+          "CASB",
+          "shadow-IT"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Cloud Apps",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-031",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Azure Firewall?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A physical firewall appliance for Azure datacenters",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A managed cloud-native network security service that protects Azure Virtual Network resources",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An endpoint protection solution for Azure VMs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A web filtering tool for Microsoft 365",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Firewall is a managed, stateful, cloud-native network security service that protects Azure Virtual Network resources with built-in high availability and unrestricted cloud scalability.",
+        "incorrect": "It's cloud-native, not physical. Endpoint protection = Defender for Endpoint. Web filtering = Defender for Office 365 / Entra Internet Access.",
+        "examTip": "Azure Firewall = Layer 3-7 network protection. Azure DDoS = volume protection. NSGs = basic Layer 3-4 subnet filtering.",
+        "relatedTopics": [
+          "Azure-Firewall",
+          "network-security",
+          "Azure"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure network security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-032",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of Azure DDoS Protection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To block unauthorized users from accessing Azure portals",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To detect and mitigate volumetric network attacks against Azure resources",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt data stored in Azure Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage firewall rules for virtual networks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure DDoS Protection defends against Distributed Denial of Service attacks that flood Azure resources with traffic, automatically absorbing and mitigating attacks.",
+        "incorrect": "User access = Entra ID/Conditional Access. Storage encryption = Azure Storage encryption. Firewall rules = Azure Firewall/NSGs.",
+        "examTip": "Azure DDoS tiers: Basic (free, platform-level) and Network Protection (enhanced, per-VNet). Network Protection includes cost protection and rapid response.",
+        "relatedTopics": [
+          "DDoS-Protection",
+          "network-security",
+          "Azure"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure network security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-033",
+      "type": "yes-no-statements",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Microsoft security solutions.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Microsoft Sentinel can ingest data from non-Microsoft security tools.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Microsoft Defender for Cloud only protects Azure workloads.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Network Security Groups (NSGs) can filter inbound and outbound traffic to subnets.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Microsoft Defender XDR requires a separate SIEM to correlate alerts.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Sentinel ingests data from any source via connectors. Defender for Cloud protects Azure, AWS, and GCP (multi-cloud). NSGs filter subnet traffic. Defender XDR has built-in correlation across its products.",
+        "incorrect": "Defender for Cloud is multi-cloud. Defender XDR correlates signals natively.",
+        "examTip": "Sentinel = open SIEM. Defender XDR = integrated XDR. Both can work together for comprehensive coverage.",
+        "relatedTopics": [
+          "Sentinel",
+          "Defender-for-Cloud",
+          "NSG",
+          "Defender-XDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft security solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-034",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Secure Score measure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The performance speed of Azure resources",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An organization's security posture based on recommended security actions taken",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The number of active security incidents",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The compliance status against specific regulations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Secure Score is a measurement of an organization's security posture â€” higher scores indicate more recommended security actions have been implemented. It provides improvement recommendations.",
+        "incorrect": "Performance = Azure Monitor. Active incidents = Defender XDR incidents queue. Compliance = Compliance Manager/Compliance Score.",
+        "examTip": "Secure Score is in Microsoft Defender XDR and Defender for Cloud. Higher = better security posture. Each improvement action has a point value.",
+        "relatedTopics": [
+          "Secure-Score",
+          "security-posture",
+          "Defender-XDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Secure Score",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-035",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A security analyst needs to investigate a suspicious sign-in that triggered multiple alerts across Defender for Endpoint, Defender for Identity, and Defender for Office 365.",
+      "questionText": "Which Microsoft solution automatically correlates these alerts into a single incident for investigation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Sentinel",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Defender XDR",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Defender for Cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Monitor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Defender XDR (Extended Detection and Response) automatically correlates alerts from across the Defender product suite into a single incident, providing a unified attack story.",
+        "incorrect": "Sentinel can also correlate but across all sources. Defender for Cloud focuses on workload security. Azure Monitor is for performance.",
+        "examTip": "Defender XDR = automatic cross-product correlation. One incident = multiple alerts from different Defender products stitched together.",
+        "relatedTopics": [
+          "Defender-XDR",
+          "incident-correlation",
+          "XDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender XDR",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-036",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of Azure Key Vault?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To manage user login credentials for Azure portals",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To securely store and manage secrets, keys, and certificates used by applications",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To provide network access control for Azure subscriptions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To back up Azure virtual machines",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Key Vault provides a secure, centralized store for secrets (passwords, API keys), encryption keys, and certificates used by applications and services.",
+        "incorrect": "User credentials = Entra ID. Network access = NSGs/Azure Firewall. VM backup = Azure Backup.",
+        "examTip": "Never hardcode secrets in application code. Use Key Vault with managed identities to access secrets without storing credentials anywhere.",
+        "relatedTopics": [
+          "Key-Vault",
+          "secrets-management",
+          "key-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure Key Vault",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-037",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a Network Security Group (NSG) in Azure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A cloud-based identity provider",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A set of security rules that filter inbound and outbound network traffic to Azure resources",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A tool for managing security compliance reports",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A machine learning model that detects threats",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "NSGs contain security rules that allow or deny inbound and outbound network traffic based on source/destination IP, port, and protocol. They can be applied to subnets or network interfaces.",
+        "incorrect": "Identity = Entra ID. Compliance reports = Compliance Manager. Threat detection = Defender products / Sentinel.",
+        "examTip": "NSG rules have priority (100-4096, lower = higher priority) and a default deny-all rule at priority 65500. Applied to subnet or NIC.",
+        "relatedTopics": [
+          "NSG",
+          "network-security",
+          "Azure-networking"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure network security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-038",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft solution provides automated threat response by running playbooks when alerts are triggered in Microsoft Sentinel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Policy",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Logic Apps (Sentinel Playbooks)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Purview",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Blueprints",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sentinel uses Azure Logic Apps as playbooks for automated responses â€” when an alert fires, a playbook can automatically block an IP, disable a user, or send a notification.",
+        "incorrect": "Azure Policy enforces resource configurations. Purview handles data governance. Blueprints deploy environments.",
+        "examTip": "Sentinel SOAR = Logic Apps playbooks. Playbooks = SOAR automation. Can integrate with Teams, ServiceNow, and any REST API.",
+        "relatedTopics": [
+          "Sentinel",
+          "SOAR",
+          "Logic-Apps",
+          "automation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Sentinel capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-039",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is threat intelligence in the context of Microsoft Sentinel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A database of all Azure user accounts",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Information about known threats, indicators of compromise, and attacker tactics used to improve detection",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A list of Azure service outages",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An inventory of Azure subscriptions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Threat intelligence (TI) provides data about known malicious IPs, domains, file hashes, and attacker TTPs that Sentinel uses to match against incoming logs for detection.",
+        "incorrect": "User accounts = Entra ID. Service outages = Azure Service Health. Subscription inventory = Azure Cost Management.",
+        "examTip": "Sentinel ingests TI from Microsoft Threat Intelligence, MISP, and TAXII feeds. Matched indicators generate alerts automatically.",
+        "relatedTopics": [
+          "threat-intelligence",
+          "Sentinel",
+          "IOCs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Sentinel capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-040",
+      "type": "ordering",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the Microsoft Defender XDR incident response steps in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Alerts from Defender products are generated",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Alerts are automatically correlated into an incident",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Analyst investigates the incident timeline and entities",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Automated remediation or manual response actions are taken",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Incident is closed and lessons learned are documented",
+          "correctPosition": 5
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Alerts â†’ Correlation â†’ Investigation â†’ Remediation â†’ Closure is the standard XDR incident response flow.",
+        "incorrect": "Correlation happens automatically before analyst investigation. Remediation follows investigation.",
+        "examTip": "Defender XDR auto-correlates and can auto-remediate low-confidence threats. Analysts handle complex incidents.",
+        "relatedTopics": [
+          "Defender-XDR",
+          "incident-response",
+          "SOAR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender XDR",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-057",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does the Secure Score in Microsoft Defender for Cloud represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number of active security incidents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A percentage showing how many security recommendations have been addressed",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The total cost of security tools deployed",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The compliance score against GDPR",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Cloud's Secure Score measures what percentage of security recommendations have been implemented. A higher score = better security posture.",
+        "incorrect": "Active incidents = incidents queue. Security costs = Azure Cost Management. GDPR compliance = Compliance Manager.",
+        "examTip": "Improve Secure Score by addressing high-impact recommendations. Each resource group gets its own score.",
+        "relatedTopics": [
+          "Secure-Score",
+          "Defender-for-Cloud",
+          "CSPM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Cloud",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-058",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service provides a Web Application Firewall (WAF) to protect web applications from common exploits?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure VPN Gateway",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Application Gateway with WAF",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Virtual Network",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Load Balancer",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Application Gateway includes a WAF that protects web applications against common web exploits like SQL injection, XSS, and OWASP Top 10 vulnerabilities.",
+        "incorrect": "VPN Gateway provides encrypted connectivity. VNet is the network fabric. Load Balancer distributes traffic without inspection.",
+        "examTip": "Azure WAF runs on Application Gateway or Azure Front Door. It uses OWASP Core Rule Set (CRS) to block common attacks.",
+        "relatedTopics": [
+          "WAF",
+          "Application-Gateway",
+          "web-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure network security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-059",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft Defender product monitors behavior of users and entities to detect advanced attacks using machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Defender Antivirus",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Defender for Endpoint with UEBA",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Sentinel with User and Entity Behavior Analytics (UEBA)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Microsoft Defender for Office 365",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Sentinel's UEBA feature uses machine learning to establish behavioral baselines for users and entities, detecting anomalies that may indicate compromised accounts or insider threats.",
+        "incorrect": "Defender Antivirus = signature-based malware. Defender for Endpoint has some behavioral analytics but UEBA is a Sentinel feature. Defender for Office 365 = email threats.",
+        "examTip": "UEBA in Sentinel: establishes baselines â†’ detects deviations â†’ surfaces anomalies as insights or alerts.",
+        "relatedTopics": [
+          "UEBA",
+          "Sentinel",
+          "behavioral-analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Sentinel capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-060",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An organization wants to protect sensitive API keys and database connection strings used by their Azure App Service, without embedding them in application code.",
+      "questionText": "What is the recommended approach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Store the secrets in environment variables in the application code",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Use Azure Key Vault with a managed identity assigned to the App Service",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Encrypt the secrets and store them in Azure Blob Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Store the secrets in an Azure SQL database table",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Key Vault with a managed identity allows the App Service to retrieve secrets at runtime without storing credentials anywhere. The managed identity authenticates to Key Vault without any hardcoded keys.",
+        "incorrect": "Environment variables in code can be exposed. Blob Storage is not a secrets manager. SQL tables require credentials to access.",
+        "examTip": "Managed identities eliminate the need for credentials in code. App â†’ Managed Identity â†’ Key Vault â†’ Secret. No passwords stored anywhere.",
+        "relatedTopics": [
+          "Key-Vault",
+          "managed-identities",
+          "secrets-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure security capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-065",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary purpose of Microsoft Defender Vulnerability Management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To manage Azure resource deployments",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To continuously discover and prioritize vulnerabilities across endpoints",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To detect phishing emails",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To enforce compliance policies",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender Vulnerability Management provides asset discovery, vulnerability assessment, prioritized recommendations, and remediation tracking for endpoints without requiring additional scanning agents.",
+        "incorrect": "Resource deployment = Azure Resource Manager. Phishing = Defender for Office 365. Compliance = Purview/Azure Policy.",
+        "examTip": "Defender Vulnerability Management integrates with Defender for Endpoint â€” no separate scanner needed. Prioritizes by exposure + threat intelligence.",
+        "relatedTopics": [
+          "Vulnerability-Management",
+          "Defender-for-Endpoint",
+          "CVSS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Endpoint",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-067",
+      "type": "dropdown-select",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each Microsoft security product to its primary function.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Protects endpoints from malware and advanced threats",
+          "options": [
+            "Defender for Endpoint",
+            "Defender for Identity",
+            "Defender for Office 365",
+            "Sentinel"
+          ],
+          "correctAnswer": "Defender for Endpoint"
+        },
+        {
+          "id": "d2",
+          "prompt": "Cloud-native SIEM that aggregates and correlates logs from all sources",
+          "options": [
+            "Defender for Endpoint",
+            "Defender for Identity",
+            "Defender for Office 365",
+            "Sentinel"
+          ],
+          "correctAnswer": "Sentinel"
+        },
+        {
+          "id": "d3",
+          "prompt": "Protects against phishing and malicious email attachments",
+          "options": [
+            "Defender for Endpoint",
+            "Defender for Identity",
+            "Defender for Office 365",
+            "Sentinel"
+          ],
+          "correctAnswer": "Defender for Office 365"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Defender for Endpoint = devices. Sentinel = cloud SIEM. Defender for Office 365 = email/collaboration security.",
+        "incorrect": "Each Defender product has a specific domain. Sentinel is the overarching SIEM that aggregates signals from all of them.",
+        "examTip": "Know which Defender product covers which domain â€” common exam topic.",
+        "relatedTopics": [
+          "Defender-products",
+          "security-solutions",
+          "XDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft security products",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-070",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure Bastion used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Encrypting Azure Storage data at rest",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Providing secure RDP and SSH access to Azure VMs without exposing public IP addresses",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Monitoring compliance against security policies",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Managing Azure subscription permissions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Bastion provides secure, browser-based RDP/SSH connectivity to Azure VMs directly through the Azure portal over TLS, without needing public IPs or open RDP/SSH ports on VMs.",
+        "incorrect": "Storage encryption = Azure Storage encryption. Compliance monitoring = Defender for Cloud. Permissions = Azure RBAC.",
+        "examTip": "Azure Bastion eliminates the need for a jump server. No public IP on VMs = smaller attack surface.",
+        "relatedTopics": [
+          "Azure-Bastion",
+          "secure-access",
+          "RDP",
+          "SSH"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure security capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-074",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A security analyst wants to hunt for threats proactively in Microsoft Sentinel without waiting for alerts to fire.",
+      "questionText": "Which Sentinel feature enables this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Analytics rules",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Hunting queries",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Workbooks",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Playbooks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sentinel Hunting allows analysts to proactively search for threats using KQL queries across ingested data, looking for suspicious patterns before they trigger alerts.",
+        "incorrect": "Analytics rules = scheduled alert generation. Workbooks = dashboards/visualizations. Playbooks = automated responses.",
+        "examTip": "Threat hunting in Sentinel: run KQL hunting queries â†’ find suspicious activity â†’ bookmark findings â†’ convert to incidents for investigation.",
+        "relatedTopics": [
+          "threat-hunting",
+          "Sentinel",
+          "KQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Sentinel capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-078",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does XDR stand for in Microsoft Defender XDR?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Extreme Data Recovery",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Extended Detection and Response",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "External Domain Routing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encrypted Data Repository",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "XDR (Extended Detection and Response) provides unified threat detection and response across multiple security layers â€” endpoints, email, identity, and cloud apps â€” breaking down siloed security data.",
+        "incorrect": "XDR is a security architecture concept, not data recovery, routing, or storage.",
+        "examTip": "XDR extends EDR (endpoint) to cover identity, email, cloud apps, and network. Microsoft Defender XDR = unified XDR across the Defender suite.",
+        "relatedTopics": [
+          "XDR",
+          "EDR",
+          "Defender-XDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender XDR",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-083",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the role of connectors in Microsoft Sentinel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To create firewall rules for Azure resources",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To ingest data from various sources (Microsoft services, third-party products) into Sentinel",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To manage user access in Entra ID",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To run automated remediation actions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sentinel data connectors integrate with Microsoft services (Entra ID, Office 365, Defender products) and third-party sources (Cisco, Palo Alto, AWS) to ingest log data for analysis.",
+        "incorrect": "Firewall rules = Azure Firewall/NSGs. User access = Entra ID. Automated remediation = Playbooks (Logic Apps).",
+        "examTip": "Sentinel ingests data via connectors. More data = better detection. Built-in connectors for all Microsoft products, plus hundreds of third-party connectors.",
+        "relatedTopics": [
+          "Sentinel-connectors",
+          "data-ingestion",
+          "SIEM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Sentinel capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-085",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure Policy used for in the context of security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing user authentication policies",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Enforcing organizational standards and compliance on Azure resources",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting malware on virtual machines",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Managing network routing rules",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Policy enforces organizational standards across Azure resources â€” it can audit, deny, or remediate resource configurations to ensure compliance with security policies (e.g., requiring encryption, specific regions, or approved VM sizes).",
+        "incorrect": "Authentication policies = Conditional Access/Entra ID. Malware detection = Defender for Endpoint/Cloud. Routing = User Defined Routes.",
+        "examTip": "Azure Policy = 'guardrails' for Azure resources. Works at management group, subscription, or resource group level. Can auto-remediate.",
+        "relatedTopics": [
+          "Azure-Policy",
+          "compliance",
+          "governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure governance",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-088",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Defender for Cloud's 'regulatory compliance' dashboard show?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number of active security incidents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "How Azure resources map to controls in specific compliance standards like ISO 27001, PCI DSS, and SOC 2",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "User sign-in compliance status",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure spending compliance against budget",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Cloud's regulatory compliance dashboard maps Azure resource configurations to compliance standard controls, showing which controls are passing and which have gaps.",
+        "incorrect": "Incidents = Defender XDR. User sign-ins = Entra ID. Budget = Azure Cost Management.",
+        "examTip": "Defender for Cloud supports many standards out of the box: Azure Security Benchmark, NIST SP 800-53, ISO 27001, PCI DSS, SOC TSP, and more.",
+        "relatedTopics": [
+          "Defender-for-Cloud",
+          "regulatory-compliance",
+          "CSPM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Cloud",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-090",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between Microsoft Defender for Cloud's free tier and paid (enhanced) workload protections?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The free tier provides no security features at all",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The free tier provides security recommendations; paid tier adds threat detection and advanced protection per workload type",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The paid tier only works on non-Azure environments",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are identical in features",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Cloud free tier (CSPM) provides security recommendations and Secure Score. Enhanced workload protections (paid) add threat detection, vulnerability assessments, and advanced protection for specific workload types (VMs, containers, databases, etc.).",
+        "incorrect": "Free tier is genuinely useful. Paid tiers work across Azure, AWS, and GCP. They are not identical.",
+        "examTip": "Free CSPM = posture management. Paid CWP = threat protection per resource type. Microsoft Defender for Servers, Containers, Databases, etc.",
+        "relatedTopics": [
+          "Defender-for-Cloud",
+          "CSPM",
+          "CWP",
+          "pricing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Cloud",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-094",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A security operations team wants to reduce alert fatigue by automatically closing low-fidelity alerts and escalating only high-confidence incidents to analysts.",
+      "questionText": "Which Microsoft Sentinel feature BEST addresses this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hunting queries",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Automation rules and playbooks",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Workbooks",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Threat intelligence feeds",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Automation rules in Sentinel can automatically triage, close, or escalate incidents based on conditions â€” reducing analyst workload by handling repetitive low-risk alerts automatically.",
+        "incorrect": "Hunting = proactive threat search. Workbooks = dashboards. TI feeds = detection improvement. Automation rules = incident triage automation.",
+        "examTip": "Sentinel automation: Automation rules (lightweight, no code) â†’ trigger Playbooks (Logic Apps, complex actions). Rules run first, then playbooks if triggered.",
+        "relatedTopics": [
+          "Sentinel-automation",
+          "SOAR",
+          "alert-fatigue"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Sentinel SOAR",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-098",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What Microsoft security tool provides visibility into sign-in logs, risky sign-ins, and audit logs for Microsoft Entra ID?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Sentinel",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Entra ID Monitoring and Diagnostics",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Defender for Cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Monitor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Entra ID Monitoring and Diagnostics provides sign-in logs, audit logs, and risky sign-in reports directly within the Entra admin center for identity activity visibility.",
+        "incorrect": "Sentinel ingests these logs for correlation but they originate in Entra ID. Defender for Cloud focuses on workloads. Azure Monitor = infrastructure metrics.",
+        "examTip": "Entra ID logs: Sign-in logs (who signed in when/where), Audit logs (what changes were made), Risky sign-ins (Identity Protection signals).",
+        "relatedTopics": [
+          "Entra-ID",
+          "sign-in-logs",
+          "audit-logs",
+          "monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Entra ID capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

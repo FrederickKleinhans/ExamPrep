@@ -1,0 +1,105 @@
+{
+  "id": "cissp",
+  "name": "CISSP",
+  "provider": "(ISC)²",
+  "examCode": "CISSP",
+  "version": "2024-01",
+  "questionCount": 100,
+  "passingScore": 70,
+  "timeLimitMinutes": 180,
+  "topics": [
+    {
+      "id": "security-governance",
+      "name": "Security & Risk Governance",
+      "weight": 22
+    },
+    {
+      "id": "asset-security",
+      "name": "Asset Security",
+      "weight": 13
+    },
+    {
+      "id": "security-architecture",
+      "name": "Security Architecture & Engineering",
+      "weight": 13
+    },
+    {
+      "id": "communication-security",
+      "name": "Communication & Network Security",
+      "weight": 14
+    },
+    {
+      "id": "identity-access",
+      "name": "Identity & Access Management",
+      "weight": 13
+    },
+    {
+      "id": "security-ops",
+      "name": "Security Assessment & Testing",
+      "weight": 12
+    },
+    {
+      "id": "software-security",
+      "name": "Software Development Security",
+      "weight": 13
+    }
+  ],
+  "resources": [
+    {
+      "title": "CISSP Certification Overview",
+      "url": "https://www.isc2.org/certifications/cissp"
+    },
+    {
+      "title": "CISSP Exam Outline",
+      "url": "https://www.isc2.org/-/media/isc2/files/exam-outlines/cissp-exam-outline.ashx"
+    }
+  ],
+  "vendor": "(ISC)²",
+  "vendorColor": "#005A9C",
+  "level": "expert",
+  "accessTier": "premium",
+  "description": "The gold standard in cybersecurity certification. Validates deep technical and managerial competence to design, engineer, and manage an organization's security posture.",
+  "examDetails": {
+    "durationMinutes": 180,
+    "questionCount": 125,
+    "passingScore": 70,
+    "priceUSD": 749
+  },
+  "topicChunks": [
+    {
+      "topicId": "security-governance",
+      "path": "/data/certifications/cissp/topics/security-governance.json",
+      "questionCount": 24
+    },
+    {
+      "topicId": "asset-security",
+      "path": "/data/certifications/cissp/topics/asset-security.json",
+      "questionCount": 8
+    },
+    {
+      "topicId": "security-architecture",
+      "path": "/data/certifications/cissp/topics/security-architecture.json",
+      "questionCount": 18
+    },
+    {
+      "topicId": "communication-security",
+      "path": "/data/certifications/cissp/topics/communication-security.json",
+      "questionCount": 12
+    },
+    {
+      "topicId": "identity-access",
+      "path": "/data/certifications/cissp/topics/identity-access.json",
+      "questionCount": 11
+    },
+    {
+      "topicId": "security-ops",
+      "path": "/data/certifications/cissp/topics/security-ops.json",
+      "questionCount": 15
+    },
+    {
+      "topicId": "software-security",
+      "path": "/data/certifications/cissp/topics/software-security.json",
+      "questionCount": 12
+    }
+  ]
+}

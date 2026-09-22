@@ -1,6 +1,7 @@
 // @vitest-environment jsdom
 import { beforeEach, describe, expect, it } from 'vitest';
 import { ProgressService } from '../ProgressService';
+import { mergeProgress } from '../SyncService';
 
 describe('ProgressService', () => {
   beforeEach(() => {
@@ -101,5 +102,93 @@ describe('ProgressService', () => {
     expect(progress.version).toBe(2);
     expect(progress.studyStreak.current).toBe(0);
     expect(ProgressService.getCertificationProgress(progress, 'az-900').questionStats).toEqual({});
+  });
+
+  it('mergeProgress handles missing certification maps without throwing', () => {
+    const local = {
+      version: 2,
+      userId: 'local-user',
+      selectedCertification: 'az-900',
+      studyStreak: { current: 2, lastStudyDate: '2026-09-20', longest: 4 },
+      certifications: {
+        'az-900': {
+          questionStats: { q1: { attempts: 1, correct: 1, incorrect: 0, lastAttempted: '2026-09-20', averageTimeMs: 500, confidence: 'medium' } },
+          examHistory: [],
+          weakTopics: [],
+          bookmarks: [],
+          studyGroupIndex: 0,
+          studyStreak: { current: 2, lastStudyDate: '2026-09-20', longest: 4 },
+          sm2: {},
+        },
+      },
+    } as any;
+
+    const remote = {
+      version: 2,
+      userId: 'remote-user',
+      selectedCertification: 'sc-900',
+      studyStreak: { current: 5, lastStudyDate: '2026-09-21', longest: 7 },
+      certifications: {
+        'sc-900': {
+          questionStats: { q9: { attempts: 2, correct: 1, incorrect: 1, lastAttempted: '2026-09-21', averageTimeMs: 600, confidence: 'high' } },
+          examHistory: [],
+          weakTopics: [],
+          bookmarks: [],
+          studyGroupIndex: 0,
+          studyStreak: { current: 5, lastStudyDate: '2026-09-21', longest: 7 },
+          sm2: {},
+        },
+      },
+    } as any;
+
+    const merged = mergeProgress(
+      { ...local, certifications: undefined },
+      remote,
+    );
+
+    expect(merged.certifications['az-900']).toBeUndefined();
+    expect(merged.certifications['sc-900']).toBeDefined();
+    expect(merged.selectedCertification).toBe('az-900');
+    expect(merged.studyStreak.current).toBe(5);
+  });
+
+  it('prefers remote exam results when IDs collide during sync', () => {
+    const local = ProgressService.getProgress();
+    local.userId = 'local-user';
+    local.selectedCertification = 'az-900';
+    local.certifications['az-900'] = {
+      ...ProgressService.getCertificationProgress(local, 'az-900'),
+      examHistory: [{
+        id: 'exam-1',
+        certificationId: 'az-900',
+        date: '2026-09-20T10:10:00.000Z',
+        score: 40,
+        passed: false,
+        timeTakenMs: 600000,
+        answers: {},
+        flaggedQuestions: [],
+      }],
+    };
+
+    const remote = ProgressService.getProgress();
+    remote.userId = 'remote-user';
+    remote.selectedCertification = 'az-900';
+    remote.certifications['az-900'] = {
+      ...ProgressService.getCertificationProgress(remote, 'az-900'),
+      examHistory: [{
+        id: 'exam-1',
+        certificationId: 'az-900',
+        date: '2026-09-20T10:12:00.000Z',
+        score: 80,
+        passed: true,
+        timeTakenMs: 720000,
+        answers: {},
+        flaggedQuestions: [],
+      }],
+    };
+
+    const merged = mergeProgress(local, remote);
+    expect(merged.certifications['az-900'].examHistory[0].passed).toBe(true);
+    expect(merged.certifications['az-900'].examHistory).toHaveLength(1);
   });
 });

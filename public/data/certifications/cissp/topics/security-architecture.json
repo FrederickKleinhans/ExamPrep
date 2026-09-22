@@ -1,0 +1,892 @@
+{
+  "certificationId": "cissp",
+  "topicId": "security-architecture",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "cissp-013",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which security model enforces the concept that no single individual should have enough access to commit fraud or abuse without detection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bell-LaPadula model",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Clark-Wilson model",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Separation of duties",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Biba model",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Separation of duties (SoD) divides critical tasks among multiple people so no single person can commit or conceal fraud alone.",
+        "incorrect": "Bell-LaPadula focuses on confidentiality. Biba focuses on integrity. Clark-Wilson is an integrity model for commercial environments but SoD is the principle that directly addresses fraud prevention.",
+        "examTip": "SoD prevents fraud. Least privilege limits access. Need to know limits information. These are the three key access control principles.",
+        "relatedTopics": [
+          "separation-of-duties",
+          "access-control",
+          "fraud-prevention"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Architecture",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-014",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which security model uses the 'no read up, no write down' rule to protect confidentiality?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Biba Integrity Model",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Clark-Wilson Model",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Bell-LaPadula Model",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Brewer-Nash Model",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Bell-LaPadula enforces confidentiality: Simple Security Property (no read up) prevents reading higher-classified data; *-Property (no write down) prevents leaking data to lower levels.",
+        "incorrect": "Biba uses 'no read down, no write up' for integrity. Clark-Wilson uses transactions and separation of duties. Brewer-Nash (Chinese Wall) prevents conflicts of interest.",
+        "examTip": "Bell-LaPadula = confidentiality = 'no read up, no write down'. Biba = integrity = opposite direction.",
+        "relatedTopics": [
+          "Bell-LaPadula",
+          "security-models",
+          "confidentiality"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Architecture",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-015",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An organization is migrating workloads to the cloud. The security architect wants to ensure the principle of zero trust is applied.",
+      "questionText": "Which statement BEST describes zero trust architecture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Trust all internal network traffic by default",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Never trust, always verify â€” regardless of network location",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Block all external traffic and allow all internal traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Use a single strong perimeter firewall to protect resources",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Zero trust operates on the principle of 'never trust, always verify.' No user or device is trusted by default, even inside the network perimeter.",
+        "incorrect": "Trusting internal traffic is the old castle-and-moat model. Zero trust explicitly rejects perimeter-only security.",
+        "examTip": "Zero trust key tenets: verify explicitly, use least privilege, assume breach.",
+        "relatedTopics": [
+          "zero-trust",
+          "cloud-security",
+          "network-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Architecture",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-016",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which cryptographic algorithm is an asymmetric algorithm commonly used for key exchange?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AES-256",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SHA-256",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Diffie-Hellman",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "3DES",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Diffie-Hellman is an asymmetric key exchange protocol that allows two parties to establish a shared secret over an insecure channel without transmitting the secret itself.",
+        "incorrect": "AES-256 and 3DES are symmetric encryption algorithms. SHA-256 is a hashing algorithm, not an encryption or key exchange algorithm.",
+        "examTip": "DH = key exchange. RSA = encryption and signatures. AES = symmetric encryption. SHA = hashing only.",
+        "relatedTopics": [
+          "cryptography",
+          "key-exchange",
+          "asymmetric-cryptography"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Cryptography",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-017",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a Public Key Infrastructure (PKI)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To encrypt data using symmetric keys",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To manage digital certificates and public/private key pairs",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To provide network address translation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To perform intrusion detection",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "PKI is a framework for managing digital certificates and public/private key pairs, enabling secure communications and authentication.",
+        "incorrect": "PKI uses asymmetric cryptography, not symmetric. NAT is a network function. IDS is separate from PKI.",
+        "examTip": "PKI components: CA (issues certs), RA (validates identity), CRL (revoked certs), OCSP (real-time revocation check).",
+        "relatedTopics": [
+          "PKI",
+          "digital-certificates",
+          "asymmetric-cryptography"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Cryptography",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-018",
+      "type": "dropdown-select",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each cryptographic concept to its correct description.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Ensures data has not been altered in transit",
+          "options": [
+            "Confidentiality",
+            "Integrity",
+            "Non-repudiation",
+            "Availability"
+          ],
+          "correctAnswer": "Integrity"
+        },
+        {
+          "id": "d2",
+          "prompt": "Prevents a sender from denying they sent a message",
+          "options": [
+            "Confidentiality",
+            "Integrity",
+            "Non-repudiation",
+            "Availability"
+          ],
+          "correctAnswer": "Non-repudiation"
+        },
+        {
+          "id": "d3",
+          "prompt": "Ensures data is accessible only to authorized parties",
+          "options": [
+            "Confidentiality",
+            "Integrity",
+            "Non-repudiation",
+            "Availability"
+          ],
+          "correctAnswer": "Confidentiality"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Integrity = data unchanged (hashing). Non-repudiation = proof of origin (digital signatures). Confidentiality = data hidden from unauthorized parties (encryption).",
+        "incorrect": "These are the CIA triad principles plus non-repudiation â€” fundamental concepts in cryptography.",
+        "examTip": "Digital signatures provide both integrity AND non-repudiation. Encryption provides confidentiality.",
+        "relatedTopics": [
+          "CIA-triad",
+          "cryptography",
+          "digital-signatures"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Cryptography",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-019",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which attack targets the weakness in SSL/TLS by forcing a downgrade to a weaker cipher suite?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birthday attack",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "POODLE attack",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Rainbow table attack",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Replay attack",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "POODLE (Padding Oracle On Downgraded Legacy Encryption) exploits a vulnerability in SSL 3.0 by forcing a protocol downgrade from TLS to SSL 3.0, then exploiting the padding oracle vulnerability.",
+        "incorrect": "Birthday attack targets hash collisions. Rainbow tables attack password hashes. Replay attacks reuse captured authentication data.",
+        "examTip": "POODLE = SSL 3.0 downgrade. BEAST = CBC mode attack. BEAST, CRIME, BREACH, POODLE, DROWN are major TLS attacks.",
+        "relatedTopics": [
+          "TLS-attacks",
+          "cryptography",
+          "SSL-vulnerabilities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Cryptography",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-044",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which cloud service model gives the customer the MOST control over the underlying infrastructure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SaaS (Software as a Service)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "PaaS (Platform as a Service)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "IaaS (Infrastructure as a Service)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "FaaS (Function as a Service)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IaaS provides the most customer control â€” customers manage OS, middleware, runtime, applications, and data. The provider manages only hardware, networking, and virtualization.",
+        "incorrect": "PaaS gives control over applications and data. SaaS gives control only over application configuration. FaaS is serverless with minimal customer control.",
+        "examTip": "Control spectrum: IaaS (most) â†’ PaaS â†’ SaaS (least). More control = more responsibility for security.",
+        "relatedTopics": [
+          "cloud-security",
+          "IaaS",
+          "shared-responsibility"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Cloud Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-045",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An organization is moving sensitive workloads to a cloud provider. The legal team is concerned about data sovereignty â€” ensuring customer data never leaves the country.",
+      "questionText": "Which cloud deployment model BEST addresses this concern?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Public cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Private cloud",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Community cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Hybrid cloud",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A private cloud (on-premises or dedicated hosted) gives the organization full control over data location, ensuring data sovereignty compliance.",
+        "incorrect": "Public cloud data may reside in multiple countries. Community cloud is shared among similar organizations. Hybrid cloud still relies partly on public cloud.",
+        "examTip": "Data sovereignty = need to know exactly where data is stored. Private cloud = most control. Public cloud = least control.",
+        "relatedTopics": [
+          "cloud-deployment",
+          "data-sovereignty",
+          "private-cloud"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Cloud Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-051",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which symmetric encryption algorithm is currently recommended as the standard for protecting classified US government information?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3DES",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AES",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "DES",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Blowfish",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "AES (Advanced Encryption Standard) with 128, 192, or 256-bit keys is the NIST-approved standard for symmetric encryption of sensitive and classified government data.",
+        "incorrect": "3DES is deprecated. DES is broken (56-bit key). Blowfish is not a NIST standard.",
+        "examTip": "AES = current standard. AES-256 for top secret. AES-128 for secret. 3DES is being phased out.",
+        "relatedTopics": [
+          "AES",
+          "symmetric-encryption",
+          "NIST"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Cryptography",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-052",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is a digital signature and which cryptographic operation creates it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Encrypting data with the recipient's public key",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Hashing the message and encrypting the hash with the sender's private key",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Hashing the message and encrypting the hash with the recipient's public key",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encrypting data with the sender's public key",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A digital signature is created by hashing the message, then encrypting that hash with the sender's private key. The recipient decrypts the hash with the sender's public key to verify authenticity and integrity.",
+        "incorrect": "Encrypting with recipient's public key provides confidentiality, not a signature. The private key of the sender is used to sign, not the recipient's key.",
+        "examTip": "Sign = hash + encrypt with YOUR private key. Verify = decrypt with sender's public key. Encrypt for confidentiality = recipient's public key.",
+        "relatedTopics": [
+          "digital-signatures",
+          "PKI",
+          "non-repudiation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Cryptography",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-053",
+      "type": "yes-no-statements",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes cloud security concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "In IaaS, the customer is responsible for securing the operating system.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "In SaaS, the customer is responsible for securing the underlying infrastructure.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Cloud Access Security Brokers (CASBs) sit between users and cloud services to enforce security policies.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Multitenancy in cloud environments eliminates the risk of data leakage between tenants.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "IaaS customers own OS and above. In SaaS the provider manages infrastructure. CASBs are intermediaries that enforce policies. Multitenancy creates risks of cross-tenant data leakage through misconfigurations.",
+        "incorrect": "SaaS providers handle infrastructure. Multitenancy requires careful isolation â€” misconfigurations can leak data.",
+        "examTip": "CASB = cloud security broker. Shared responsibility shifts with service model. Multitenancy risk = noisy neighbor + data isolation failures.",
+        "relatedTopics": [
+          "cloud-security",
+          "CASB",
+          "shared-responsibility",
+          "multitenancy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Cloud Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-065",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is defense in depth?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using a single, very strong firewall to protect the network",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Implementing multiple layers of security controls so that if one fails, others remain",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Backing up all data to an offsite location",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Training employees on security awareness",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defense in depth layers multiple security controls (physical, technical, administrative) so that an attacker must overcome each layer, reducing the likelihood of a successful breach.",
+        "incorrect": "A single control is the opposite of defense in depth. Backups and training are components that support the strategy but don't define it.",
+        "examTip": "Defense in depth = Swiss cheese model. Stack multiple controls so holes don't align. No single control is sufficient.",
+        "relatedTopics": [
+          "defense-in-depth",
+          "layered-security",
+          "security-architecture"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Architecture",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-072",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which trusted computing concept ensures that each boot component is verified before the next is loaded, creating a chain of trust from firmware to OS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Secure Boot",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Trusted Platform Module (TPM)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Measured Boot (Trusted Boot)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Hardware Security Module (HSM)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Measured Boot records measurements of each boot component in the TPM, creating a verifiable chain of trust. Remote attestation can then verify the boot integrity.",
+        "incorrect": "Secure Boot uses UEFI to prevent unsigned code from loading. TPM is the hardware component that stores measurements. HSM protects cryptographic keys.",
+        "examTip": "Secure Boot = prevents unsigned code. Measured Boot = records hashes of each boot step in TPM. TPM = hardware chip for key storage and attestation.",
+        "relatedTopics": [
+          "trusted-computing",
+          "measured-boot",
+          "TPM",
+          "chain-of-trust"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Architecture",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-079",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a Hardware Security Module (HSM)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To detect hardware-level intrusions",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To securely generate, store, and manage cryptographic keys",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To provide physical access control to data centers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To accelerate network packet processing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An HSM is a dedicated cryptographic hardware device that securely generates, stores, and manages digital keys and performs cryptographic operations, protecting keys from extraction.",
+        "incorrect": "Intrusion detection is done by IDS. Physical access control uses badge readers and locks. Network acceleration is done by specialized hardware.",
+        "examTip": "HSM = tamper-resistant key storage. If HSM is tampered with, it destroys its keys. Used in PKI, payment systems, code signing.",
+        "relatedTopics": [
+          "HSM",
+          "key-management",
+          "cryptography",
+          "PKI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Cryptography",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-083",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which principle states that systems should be designed to fail in a secure state?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Least privilege",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fail secure (fail closed)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Defense in depth",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Separation of duties",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fail secure (fail closed) means that when a system fails, it defaults to a secure state â€” denying access rather than allowing it. For example, a firewall that denies all traffic if it crashes.",
+        "incorrect": "Least privilege limits permissions. Defense in depth uses layers. SoD divides responsibilities.",
+        "examTip": "Fail secure = deny by default on failure. Fail open = allow by default (dangerous â€” used when availability is critical). Safety vs security tradeoff.",
+        "relatedTopics": [
+          "fail-secure",
+          "fail-safe",
+          "secure-design"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Architecture",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-092",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a key advantage of elliptic curve cryptography (ECC) over RSA?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ECC provides weaker security than RSA",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ECC provides equivalent security with much smaller key sizes",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ECC is a symmetric encryption algorithm",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ECC is primarily used for hashing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ECC provides equivalent or stronger security than RSA with much smaller key sizes. A 256-bit ECC key is roughly equivalent in strength to a 3072-bit RSA key, making it ideal for mobile/IoT devices.",
+        "incorrect": "ECC is at least as strong as RSA. It is asymmetric, not symmetric. It is used for encryption and signatures, not hashing.",
+        "examTip": "ECC = smaller keys, same strength, faster operations. Preferred for TLS, mobile devices, IoT, and code signing.",
+        "relatedTopics": [
+          "ECC",
+          "RSA",
+          "asymmetric-cryptography",
+          "key-size"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Cryptography",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-096",
+      "type": "single-choice",
+      "topicId": "security-architecture",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Common Criteria concept defines the security requirements that a product must meet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Evaluation Assurance Level (EAL)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Security Target (ST)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Protection Profile (PP)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Target of Evaluation (TOE)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A Protection Profile (PP) is an implementation-independent document that specifies security requirements for a category of products (e.g., firewalls, smart cards). It's created by the user community.",
+        "incorrect": "EAL is the assurance level from EAL1-EAL7. Security Target is a vendor-specific document detailing how a product meets requirements. TOE is the product being evaluated.",
+        "examTip": "Common Criteria: PP (what's needed) â†’ ST (how product meets it) â†’ TOE (the product) â†’ EAL (assurance depth 1-7).",
+        "relatedTopics": [
+          "Common-Criteria",
+          "Protection-Profile",
+          "security-evaluation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Architecture",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

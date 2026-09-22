@@ -1,0 +1,1155 @@
+{
+  "certificationId": "sc-900",
+  "topicId": "security-concepts",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "sc900-001",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following BEST describes the CIA triad in information security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Confidentiality, Integrity, Availability",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Compliance, Identity, Authentication",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Control, Inspection, Audit",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Credentials, Infrastructure, Access",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The CIA triad stands for Confidentiality (protect data from unauthorized access), Integrity (ensure data is accurate and unaltered), and Availability (ensure data and systems are accessible when needed).",
+        "incorrect": "The other options are not security frameworks.",
+        "examTip": "CIA = Confidentiality, Integrity, Availability. This is the foundational security model.",
+        "relatedTopics": [
+          "CIA-triad",
+          "security-fundamentals"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-002",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the Zero Trust security model based on?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Trust all users inside the corporate network",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Never trust, always verify â€” regardless of location",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Trust users who have valid passwords",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Trust all cloud-hosted services automatically",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Zero Trust assumes no implicit trust â€” every request must be verified regardless of whether it comes from inside or outside the network.",
+        "incorrect": "Zero Trust explicitly rejects the idea of a trusted internal network.",
+        "examTip": "Zero Trust pillars: verify explicitly, use least privilege, assume breach.",
+        "relatedTopics": [
+          "zero-trust",
+          "identity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Zero Trust",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-003",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following is an example of a phishing attack?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An attacker floods a server with traffic to make it unavailable",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An attacker sends a deceptive email pretending to be a trusted entity to steal credentials",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An attacker intercepts network traffic between two parties",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An attacker exploits an unpatched vulnerability in a web server",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Phishing uses deceptive emails or messages that impersonate trusted sources to trick users into revealing credentials or clicking malicious links.",
+        "incorrect": "Flooding traffic = DDoS. Intercepting traffic = man-in-the-middle. Exploiting vulnerabilities = exploitation attack.",
+        "examTip": "Phishing variants: Spear phishing (targeted), Whaling (executives), Smishing (SMS), Vishing (voice).",
+        "relatedTopics": [
+          "phishing",
+          "social-engineering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe common threats",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-004",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does the principle of least privilege mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Users should have access to all systems to do their job efficiently",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Users should be granted only the minimum access needed to perform their job",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Administrators should have the fewest accounts possible",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Systems should run with minimal hardware requirements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Least privilege limits user access rights to only what is necessary for their role, reducing the attack surface and limiting damage from compromised accounts.",
+        "incorrect": "Least privilege is about access rights, not the number of accounts or hardware.",
+        "examTip": "Least privilege reduces blast radius â€” if an account is compromised, damage is limited to only what that account can access.",
+        "relatedTopics": [
+          "least-privilege",
+          "access-control"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-005",
+      "type": "yes-no-statements",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes a security concept.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Encryption protects data confidentiality by making it unreadable without the correct key.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A firewall is used to detect and remove viruses from endpoints.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Multi-factor authentication requires two or more verification methods from different categories.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "A DDoS attack targets a single user's credentials.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Encryption = confidentiality. MFA = multiple factor categories. Firewalls filter network traffic (not antivirus). DDoS = floods a service to deny availability.",
+        "incorrect": "Firewalls are not antivirus. DDoS attacks services, not individual credentials.",
+        "examTip": "Know the difference: Firewall (network traffic), Antivirus (malware), IDS/IPS (intrusion detection/prevention).",
+        "relatedTopics": [
+          "encryption",
+          "MFA",
+          "DDoS",
+          "firewall"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-006",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What type of attack involves encrypting a victim's files and demanding payment for the decryption key?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Spyware",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Ransomware",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Adware",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Rootkit",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Ransomware encrypts the victim's data and demands a ransom payment (usually cryptocurrency) in exchange for the decryption key.",
+        "incorrect": "Spyware collects information. Adware displays unwanted ads. Rootkit hides malicious processes.",
+        "examTip": "Ransomware defense: backups, endpoint protection, email filtering, patch management.",
+        "relatedTopics": [
+          "ransomware",
+          "malware",
+          "threats"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe common threats",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-007",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which security model uses three pillars: identify, protect, and recover to address cybersecurity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CIA triad",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "NIST Cybersecurity Framework",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Zero Trust model",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Shared responsibility model",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The NIST CSF has five functions: Identify, Protect, Detect, Respond, Recover â€” providing a comprehensive approach to managing cybersecurity risk.",
+        "incorrect": "CIA triad covers confidentiality/integrity/availability. Zero Trust is an access model. Shared responsibility defines cloud responsibilities.",
+        "examTip": "NIST CSF 5 functions: Identify, Protect, Detect, Respond, Recover. CSF 2.0 adds Govern.",
+        "relatedTopics": [
+          "NIST-CSF",
+          "security-frameworks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-008",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In the shared responsibility model for cloud services, which responsibility always remains with the customer regardless of the service model (IaaS, PaaS, SaaS)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Physical security of datacenters",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Patching the underlying hypervisor",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Identity and access management for their own users",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Network infrastructure management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Regardless of the cloud service model, customers are always responsible for managing their own identities, accounts, and access policies.",
+        "incorrect": "Physical security, hypervisor patching, and network infrastructure are always the cloud provider's responsibility.",
+        "examTip": "Customer always owns: identities, data, and devices. Provider always owns: physical datacenters and core infrastructure.",
+        "relatedTopics": [
+          "shared-responsibility",
+          "cloud-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe shared responsibility",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-009",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is defense in depth and how does it apply to cloud security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using a single powerful security tool to protect all resources",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Applying multiple layered security controls so each layer compensates if another fails",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Encrypting data only at the network perimeter",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Storing backups in a second cloud region",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defense in depth stacks multiple security layers (physical, identity, perimeter, network, compute, application, data) so an attacker must overcome every layer.",
+        "incorrect": "Single tools and perimeter-only security are the opposite of defense in depth.",
+        "examTip": "Azure defense in depth layers: Physical â†’ Identity â†’ Perimeter â†’ Network â†’ Compute â†’ Application â†’ Data.",
+        "relatedTopics": [
+          "defense-in-depth",
+          "layered-security",
+          "cloud-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe defense in depth",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-010",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of encryption?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To make data available 24/7",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To protect data confidentiality by making it unreadable without the correct key",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To verify that data has not been altered",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To prevent unauthorized users from accessing the network",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Encryption transforms plaintext into ciphertext using a key, protecting confidentiality so only authorized parties with the correct key can read the data.",
+        "incorrect": "Availability = redundancy/backups. Integrity verification = hashing. Network access control = firewalls/NAC.",
+        "examTip": "Encryption = confidentiality. Hashing = integrity. Both together provide strong data protection.",
+        "relatedTopics": [
+          "encryption",
+          "confidentiality"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-011",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which term describes a weakness in a system that could be exploited by a threat?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Threat",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Risk",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Vulnerability",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Exploit",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A vulnerability is a weakness or flaw in a system that could be exploited by a threat actor to gain unauthorized access or cause harm.",
+        "incorrect": "Threat = potential danger. Risk = likelihood Ã— impact. Exploit = the method used to take advantage of a vulnerability.",
+        "examTip": "Threat exploits a Vulnerability to create Risk. Know the difference between all three.",
+        "relatedTopics": [
+          "vulnerability",
+          "threat",
+          "risk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-012",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of a physical security control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Antivirus software",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A firewall rule",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A locked server room door",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Multi-factor authentication",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A locked server room door is a physical security control that prevents unauthorized physical access to hardware and infrastructure.",
+        "incorrect": "Antivirus, firewalls, and MFA are technical/logical controls.",
+        "examTip": "Security control types: Physical (locks, cameras), Technical (firewalls, MFA), Administrative (policies, training).",
+        "relatedTopics": [
+          "physical-security",
+          "security-controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security controls",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-051",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which type of attack involves an attacker positioning themselves between two communicating parties to intercept or modify data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Denial of Service",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Man-in-the-Middle (MitM)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SQL Injection",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Cross-Site Scripting",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A Man-in-the-Middle attack intercepts communications between two parties, allowing the attacker to eavesdrop on or modify data in transit.",
+        "incorrect": "DoS = availability attack. SQL injection = database attack. XSS = web application attack.",
+        "examTip": "MitM defense: use HTTPS/TLS, certificate pinning, and mutual authentication to prevent interception.",
+        "relatedTopics": [
+          "MitM",
+          "network-attacks",
+          "encryption"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe common threats",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-052",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of a security audit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To install new security software on all systems",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To systematically evaluate security controls and identify gaps against standards",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To train employees on cybersecurity awareness",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To back up all organizational data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A security audit evaluates existing security controls, processes, and policies against defined standards or regulations to identify gaps and areas for improvement.",
+        "incorrect": "Software installation, training, and backups are different activities.",
+        "examTip": "Security audit = assess controls. Vulnerability assessment = find technical weaknesses. Penetration test = exploit vulnerabilities.",
+        "relatedTopics": [
+          "security-audit",
+          "compliance",
+          "controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-053",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the role of a Security Operations Center (SOC)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To develop new software applications",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To centrally monitor, detect, investigate, and respond to security incidents",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To manage employee HR records",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To configure network hardware devices",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A SOC is a centralized team and facility that continuously monitors security tools and data to detect, analyze, and respond to cybersecurity threats and incidents.",
+        "incorrect": "Software development = dev team. HR = HR department. Network config = network/infrastructure team.",
+        "examTip": "SOC tools: SIEM (detect), SOAR (respond), EDR (endpoint), Threat Intel feeds. Microsoft Sentinel supports all SOC functions.",
+        "relatedTopics": [
+          "SOC",
+          "incident-response",
+          "threat-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security operations",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-062",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does the term 'attack vector' mean in cybersecurity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The severity of a cyberattack",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The path or method an attacker uses to gain unauthorized access",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The type of data stolen in a breach",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The geographic origin of a cyberattack",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An attack vector is the specific path or method used by an attacker to gain entry â€” examples include phishing emails, unpatched vulnerabilities, weak passwords, and compromised third-party software.",
+        "incorrect": "Severity = impact. Stolen data = data breach consequences. Geographic origin is threat attribution.",
+        "examTip": "Common attack vectors: phishing, credential theft, unpatched software, misconfigured services, supply chain, insider threats.",
+        "relatedTopics": [
+          "attack-vector",
+          "threat",
+          "vulnerabilities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-066",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is an Indicator of Compromise (IoC)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A security policy that defines access rights",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Evidence that a security breach or attack has occurred",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A hardware device that monitors network traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A user identity in Microsoft Entra ID",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An IoC is a piece of evidence (malicious IP, file hash, domain name, registry key) that indicates a system has been compromised or attacked, used by security tools to detect threats.",
+        "incorrect": "Access policies = Conditional Access/RBAC. Hardware monitoring = network taps. Entra ID user = identity object.",
+        "examTip": "Common IoCs: malicious file hashes, C2 IP addresses, suspicious domains, unusual registry keys. Used in threat intelligence feeds.",
+        "relatedTopics": [
+          "IoC",
+          "threat-intelligence",
+          "incident-response"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-072",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of security information and event management (SIEM)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To replace endpoint antivirus protection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To collect and correlate security logs from multiple sources for threat detection and compliance",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To automatically patch vulnerable systems",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage user identities and access rights",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A SIEM aggregates logs from across the environment, correlates events to detect threats, generates alerts, and provides compliance reporting â€” all in one centralized platform.",
+        "incorrect": "Antivirus = endpoint protection. Patching = patch management tools. Identity = IAM solutions.",
+        "examTip": "Microsoft Sentinel is a cloud-native SIEM. Traditional SIEMs = Splunk, IBM QRadar. SIEM = detect. SOAR = respond.",
+        "relatedTopics": [
+          "SIEM",
+          "log-management",
+          "threat-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe SIEM",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-076",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which term describes the practice of granting users only the access they need for their specific job function?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Defense in depth",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Least privilege",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Zero Trust",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Separation of duties",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Least privilege grants users the minimum access required to do their job â€” no more, no less. It limits the damage from compromised accounts or insider threats.",
+        "incorrect": "Defense in depth = layers. Zero Trust = never trust, always verify. SoD = divides duties to prevent fraud.",
+        "examTip": "Implement least privilege through RBAC. Review and remove excessive permissions regularly with Access Reviews.",
+        "relatedTopics": [
+          "least-privilege",
+          "access-control",
+          "RBAC"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-081",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the difference between symmetric and asymmetric encryption?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Symmetric uses two keys; asymmetric uses one key",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Symmetric uses one shared key; asymmetric uses a public/private key pair",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Symmetric is slower; asymmetric is faster",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are the same but use different algorithms",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Symmetric encryption uses a single shared key for both encryption and decryption. Asymmetric uses a key pair â€” public key encrypts, private key decrypts (or private key signs, public key verifies).",
+        "incorrect": "It's the opposite â€” symmetric (one key, fast) and asymmetric (two keys, slower but solves key distribution).",
+        "examTip": "Symmetric = AES (fast, used for bulk data). Asymmetric = RSA/ECC (slower, used for key exchange and signatures). TLS uses both.",
+        "relatedTopics": [
+          "symmetric-encryption",
+          "asymmetric-encryption",
+          "cryptography"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe encryption concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-087",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company is adopting a cloud-first strategy and wants to apply security policies consistently across cloud resources, on-premises servers, and devices worldwide.",
+      "questionText": "Which Microsoft security approach BEST enables this unified policy enforcement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Apply separate security policies for each environment independently",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft's unified security operations platform (Defender XDR + Sentinel + Purview)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Deploy multiple on-premises firewalls for each office",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Use separate SIEM tools for cloud and on-premises",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft's unified security operations platform combines Defender XDR (threat protection), Sentinel (SIEM/SOAR), and Purview (compliance/data) to provide centralized, consistent security across all environments.",
+        "incorrect": "Separate policies and tools create silos and gaps. On-premises firewalls don't cover cloud. Separate SIEMs reduce visibility.",
+        "examTip": "SC-900 theme: Microsoft's integrated security platform provides end-to-end coverage across identity, endpoints, data, apps, and infrastructure.",
+        "relatedTopics": [
+          "unified-security",
+          "Defender-XDR",
+          "Sentinel",
+          "Purview"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft security capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-092",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of security awareness training in an organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To replace technical security controls",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To educate employees to recognize and respond appropriately to security threats",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To certify employees as security professionals",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To enforce password complexity requirements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Security awareness training educates employees about threats like phishing, social engineering, and safe data handling â€” reducing the risk of human-error-related security incidents.",
+        "incorrect": "Training complements, not replaces, technical controls. It doesn't certify employees or enforce password policies.",
+        "examTip": "Microsoft Defender for Office 365 includes Attack Simulation Training â€” send fake phishing emails to test and train employees.",
+        "relatedTopics": [
+          "security-awareness",
+          "phishing",
+          "human-factor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-097",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which type of malware replicates itself and spreads to other systems without user interaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Trojan horse",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Worm",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Adware",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Spyware",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A worm is self-replicating malware that spreads across networks without requiring user interaction â€” it exploits vulnerabilities to copy itself to other systems.",
+        "incorrect": "Trojans masquerade as legitimate software. Adware displays ads. Spyware collects information silently. None self-replicate automatically.",
+        "examTip": "Worm vs. Virus: Worm = self-propagating (no user action). Virus = requires host file and user action to spread.",
+        "relatedTopics": [
+          "worm",
+          "malware",
+          "threats"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe common threats",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-100",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following BEST describes the concept of 'assume breach' in Zero Trust?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Assuming that all users are malicious and blocking everyone by default",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Designing security with the mindset that a breach has already occurred, minimizing blast radius and ensuring rapid detection",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Assuming the network perimeter is fully secure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encrypting all data on the assumption it will be stolen",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "'Assume breach' means designing systems as if attackers are already inside â€” minimizing lateral movement with segmentation, logging everything for detection, and having response plans ready.",
+        "incorrect": "Assume breach doesn't mean blocking everyone. It's not about the perimeter or just encryption.",
+        "examTip": "Zero Trust pillars: Verify explicitly + Use least privilege + Assume breach. 'Assume breach' drives segmentation, continuous monitoring, and rapid IR.",
+        "relatedTopics": [
+          "zero-trust",
+          "assume-breach",
+          "security-mindset"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Zero Trust",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

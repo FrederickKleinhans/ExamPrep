@@ -74,6 +74,21 @@ body {
   width: 100%;
 }
 
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+button,
+[role='button'],
+[role='checkbox'],
+[role='radio'] {
+  min-height: 44px;
+}
+
 /* Only lock overflow on larger screens where the fixed sidebar layout applies */
 @media (min-width: 768px) {
 
@@ -276,6 +291,11 @@ body {
 
 @media (max-width: 767px) {
 
+  html,
+  body {
+    font-size: 15px;
+  }
+
   /* On mobile: hide sidebar, show bottom tab bar, add padding so content clears tab bar */
   .sidebar-desktop {
     display: none !important;
@@ -285,9 +305,100 @@ body {
     display: block !important;
   }
 
-  /* Main content area needs bottom padding to clear the fixed tab bar (~64px) */
   main {
     padding-bottom: 72px !important;
+  }
+
+  .modal-surface {
+    width: min(100%, 420px) !important;
+    max-width: calc(100vw - 20px) !important;
+    padding: clamp(18px, 5vw, 24px) !important;
+  }
+
+  .card-surface,
+  .card-surface-sm,
+  .modal-surface {
+    border-radius: 18px !important;
+  }
+
+  .dashboard-content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 18px 12px 24px !important;
+  }
+
+  .dashboard-header {
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .dashboard-header h1 {
+    font-size: 30px !important;
+  }
+
+  .dashboard-header-actions {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 8px !important;
+  }
+
+  .dashboard-header-actions > button {
+    min-width: 0;
+    width: 100%;
+    padding-inline: 10px !important;
+  }
+
+  .dashboard-cert-hero {
+    align-items: stretch !important;
+    padding: 16px !important;
+    gap: 14px !important;
+  }
+
+  .dashboard-cert-hero h1,
+  .dashboard-cert-hero .text-heading {
+    overflow-wrap: anywhere;
+  }
+
+  .dashboard-cert-actions {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px !important;
+  }
+
+  .dashboard-cert-actions > button {
+    justify-content: center;
+    min-width: 0;
+    padding-inline: 8px !important;
+  }
+
+  .dashboard-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  .dashboard-metrics > .card-surface {
+    min-width: 0;
+    padding: 14px !important;
+  }
+
+  .dashboard-metrics > .card-surface > div:first-child {
+    margin-bottom: 10px !important;
+  }
+
+  .dashboard-metrics > .card-surface > div:nth-child(2) {
+    font-size: 28px !important;
+  }
+
+  .dashboard-bottom-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .dashboard-progress-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
   }
 }
 
@@ -298,8 +409,43 @@ body {
     display: none !important;
   }
 
-  .sidebar-cert-widget {
+  .active-cert-widget {
     display: none !important;
+  }
+
+  .sidebar-auth-widget {
+    display: block !important;
+  }
+
+  .sidebar-auth-widget > button {
+    min-height: 44px;
+    padding: 10px 0 !important;
+  }
+
+  .sidebar-auth-widget > button > span {
+    display: none;
+  }
+
+  .sidebar-user-row {
+    justify-content: center;
+    padding: 4px !important;
+  }
+
+  .sidebar-user-row > img,
+  .sidebar-user-row > span {
+    display: none;
+  }
+
+  .sidebar-user-row > button {
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    border-radius: 10px;
+    background: var(--bg-tertiary) !important;
+    border: 1px solid var(--border) !important;
   }
 
   .sidebar-inner {

@@ -7,6 +7,33 @@ import {
   StudyStreak,
   UserProgress,
 } from '../types';
+import { pushProgress } from './SyncService';
+
+// ── Sync helpers ───────────────────────────────────────────────────────────
+
+/**
+ * The authenticated user ID set after sign-in.
+ * When null, sync is skipped (guest mode).
+ */
+let _syncUserId: string | null = null;
+
+/** Called by useAuth when a session is established or cleared. */
+export function setSyncUserId(userId: string | null): void {
+  _syncUserId = userId;
+}
+
+/** Saves to localStorage and fires a background push to Supabase if signed in. */
+function saveAndSync(progress: UserProgress): void {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  } catch (error) {
+    console.error('Failed to save progress to localStorage:', error);
+  }
+  if (_syncUserId) {
+    // Fire-and-forget — UI never waits for this
+    void pushProgress(_syncUserId, progress);
+  }
+}
 
 const STORAGE_KEY = 'certready_progress';
 const LEGACY_BACKUP_KEY = 'certready_progress_v1_backup';
@@ -204,11 +231,7 @@ export class ProgressService {
   }
 
   static saveProgress(progress: UserProgress): void {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
-    } catch (error) {
-      console.error('Failed to save progress to localStorage:', error);
-    }
+    saveAndSync(progress);
   }
 
   static getCertificationProgress(progress: UserProgress, certificationId: string): CertificationProgress {

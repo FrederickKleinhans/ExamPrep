@@ -1,0 +1,812 @@
+[
+  {
+    "id": "aws-ai-051",
+    "type": "single-choice",
+    "topicId": "generative-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon Titan Text in Amazon Bedrock?",
+    "options": [
+      { "id": "A", "text": "A text compression algorithm for reducing model sizes", "isCorrect": false },
+      { "id": "B", "text": "Amazon's own large language model for text generation, summarisation, and question answering", "isCorrect": true },
+      { "id": "C", "text": "A text-to-image generation model", "isCorrect": false },
+      { "id": "D", "text": "A search engine for querying Amazon documentation", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Amazon Titan Text is Amazon's own LLM available in Bedrock for text generation, summarisation, Q&A, and classification tasks. Part of the Titan family alongside Titan Embeddings and Titan Image Generator.", "incorrect": "Titan Text is for text generation/NLP, not compression, image generation (that's Titan Image Generator), or documentation search.", "examTip": "Amazon Titan models: Titan Text (text generation), Titan Embeddings (vectors for RAG), Titan Image Generator (image creation). All available via Bedrock API.", "relatedTopics": ["Amazon-Titan", "Bedrock-models", "LLM"] },
+    "metadata": { "examObjective": "Domain 2: Foundation models", "references": ["https://aws.amazon.com/bedrock/titan/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-052",
+    "type": "single-choice",
+    "topicId": "generative-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon Bedrock's Model Evaluation feature used for?",
+    "options": [
+      { "id": "A", "text": "Evaluating the cost of running different foundation models", "isCorrect": false },
+      { "id": "B", "text": "Comparing foundation model responses against benchmark datasets to select the best model for a use case", "isCorrect": true },
+      { "id": "C", "text": "Evaluating the security configuration of a Bedrock deployment", "isCorrect": false },
+      { "id": "D", "text": "Monitoring deployed model performance over time", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Bedrock Model Evaluation lets you compare multiple FMs on your own prompt datasets using automated metrics (accuracy, toxicity, robustness) or human review — helping select the right model before deploying.", "incorrect": "Cost comparison = Bedrock pricing calculator. Security evaluation = AWS Security Hub. Production monitoring = CloudWatch.", "examTip": "Model Evaluation: bring your own prompts + ground truth → Bedrock evaluates multiple models → compare accuracy, toxicity, robustness. Choose best model for your specific use case.", "relatedTopics": ["Bedrock-Model-Evaluation", "model-selection", "benchmarking"] },
+    "metadata": { "examObjective": "Domain 3: FM applications", "references": ["https://aws.amazon.com/bedrock/model-evaluation/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-053",
+    "type": "single-choice",
+    "topicId": "foundation-models",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is continued pre-training in the context of Amazon Bedrock?",
+    "options": [
+      { "id": "A", "text": "Continuing to use a model after its initial deployment", "isCorrect": false },
+      { "id": "B", "text": "Training a foundation model on domain-specific unlabelled data to improve its knowledge in that domain", "isCorrect": true },
+      { "id": "C", "text": "Training a model on new labelled examples to improve task performance", "isCorrect": false },
+      { "id": "D", "text": "Re-running a training job that was interrupted", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Continued pre-training (also called domain adaptation pre-training) exposes a foundation model to large amounts of domain-specific unlabelled text (e.g., medical literature, legal documents) to improve its domain knowledge.", "incorrect": "Continued pre-training uses unlabelled data for domain knowledge. Fine-tuning uses labelled examples for task performance. These are distinct customisation approaches.", "examTip": "Customisation options in Bedrock: Continued pre-training (unlabelled, domain knowledge) → Fine-tuning (labelled, task performance) → RAG (real-time knowledge). Progressive levels of customisation.", "relatedTopics": ["continued-pre-training", "fine-tuning", "FM-customisation"] },
+    "metadata": { "examObjective": "Domain 3: FM customisation", "references": ["https://aws.amazon.com/bedrock/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-054",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon Textract primarily used for?",
+    "options": [
+      { "id": "A", "text": "Translating text between languages", "isCorrect": false },
+      { "id": "B", "text": "Extracting text, tables, and structured data from scanned documents and images", "isCorrect": true },
+      { "id": "C", "text": "Analysing the sentiment of customer reviews", "isCorrect": false },
+      { "id": "D", "text": "Converting text files to audio", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Amazon Textract goes beyond basic OCR — it not only extracts text but also identifies document structure (forms, tables, key-value pairs), making it ideal for processing invoices, tax forms, medical records, and contracts.", "incorrect": "Translation = Translate. Sentiment = Comprehend. Text-to-audio = Polly.", "examTip": "Textract vs Rekognition: Textract = extract text and structured data from documents. Rekognition = detect text in natural images. Textract understands document structure.", "relatedTopics": ["Amazon-Textract", "document-extraction", "OCR"] },
+    "metadata": { "examObjective": "Domain 1: AWS AI services", "references": ["https://aws.amazon.com/textract/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-055",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon Fraud Detector?",
+    "options": [
+      { "id": "A", "text": "A network security tool for detecting fraudulent API calls", "isCorrect": false },
+      { "id": "B", "text": "A fully managed ML service for detecting potentially fraudulent online activity", "isCorrect": true },
+      { "id": "C", "text": "An IAM policy analyzer for detecting misconfigured permissions", "isCorrect": false },
+      { "id": "D", "text": "A compliance tool for detecting regulatory violations", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Amazon Fraud Detector uses ML to detect fraud in real time — account takeover, fake account creation, online payment fraud, transaction fraud — using the same technology AWS uses internally.", "incorrect": "Fraud Detector is specifically for detecting fraudulent business activities, not API security, IAM analysis, or compliance.", "examTip": "Fraud Detector use cases: online payment fraud, fake account creation, promo/loyalty abuse, account takeover. No ML experience needed — uses your historical fraud data.", "relatedTopics": ["Amazon-Fraud-Detector", "fraud-detection", "AWS-AI-services"] },
+    "metadata": { "examObjective": "Domain 1: AWS AI services", "references": ["https://aws.amazon.com/fraud-detector/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-056",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What type of ML problem is spam email classification?",
+    "options": [
+      { "id": "A", "text": "Regression", "isCorrect": false },
+      { "id": "B", "text": "Binary classification", "isCorrect": true },
+      { "id": "C", "text": "Clustering", "isCorrect": false },
+      { "id": "D", "text": "Anomaly detection", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Spam classification is binary classification — predict one of two categories (spam or not spam) for each email based on its features.", "incorrect": "Regression predicts continuous numbers. Clustering groups without labels. Anomaly detection finds outliers. Spam has two fixed classes = binary classification.", "examTip": "Classification types: Binary (2 classes: spam/not, fraud/legit), Multi-class (3+ classes: dog/cat/bird), Multi-label (multiple labels per item). All use labelled training data.", "relatedTopics": ["binary-classification", "supervised-learning", "ML-task-types"] },
+    "metadata": { "examObjective": "Domain 1: ML concepts", "references": ["https://aws.amazon.com/certification/certified-ai-practitioner/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-057",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "hard",
+    "points": 1,
+    "scenarioText": "A company has an ML model that achieves 92% accuracy on training data but only 64% on test data.",
+    "questionText": "What does this indicate and what should the team do?",
+    "options": [
+      { "id": "A", "text": "The model is underfitting — increase training time", "isCorrect": false },
+      { "id": "B", "text": "The model is overfitting — apply regularisation, get more data, or simplify the model", "isCorrect": true },
+      { "id": "C", "text": "The model is performing well — 64% test accuracy is acceptable", "isCorrect": false },
+      { "id": "D", "text": "The test data is wrong — discard it and use more training data", "isCorrect": false }
+    ],
+    "explanation": { "correct": "High training accuracy (92%) with low test accuracy (64%) is overfitting — the model memorised training data rather than learning generalisable patterns. Solutions: regularisation (L1/L2), more training data, simpler model, dropout.", "incorrect": "Underfitting shows low accuracy on both sets. 64% test with 92% train is clearly overfitting. Test data should not be discarded.", "examTip": "SageMaker tools for overfitting: Autopilot tests multiple algorithms with regularisation, Debugger monitors training metrics. Use cross-validation to detect early.", "relatedTopics": ["overfitting", "model-evaluation", "regularisation"] },
+    "metadata": { "examObjective": "Domain 1: ML concepts", "references": ["https://aws.amazon.com/certification/certified-ai-practitioner/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-058",
+    "type": "single-choice",
+    "topicId": "generative-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is the purpose of a system prompt in Amazon Bedrock?",
+    "options": [
+      { "id": "A", "text": "A technical prompt used to initialise the Bedrock infrastructure", "isCorrect": false },
+      { "id": "B", "text": "Instructions provided to the model that set its persona, behaviour, and constraints for a conversation", "isCorrect": true },
+      { "id": "C", "text": "A prompt automatically generated by AWS to optimise model performance", "isCorrect": false },
+      { "id": "D", "text": "A system-level alert sent when a model exceeds token limits", "isCorrect": false }
+    ],
+    "explanation": { "correct": "The system prompt (also called a preamble) provides context and instructions to the model before any user interaction — defining its role, tone, constraints, and domain focus. Not visible to end users.", "incorrect": "System prompts are human-written instructions, not infrastructure initialisation, auto-generated optimisations, or alerts.", "examTip": "System prompt example: 'You are a helpful AWS cloud architect assistant. Only answer AWS-related questions. Always recommend AWS best practices. Do not provide information about competitor cloud providers.'", "relatedTopics": ["system-prompt", "prompt-engineering", "Bedrock"] },
+    "metadata": { "examObjective": "Domain 2: Prompt engineering", "references": ["https://aws.amazon.com/bedrock/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-059",
+    "type": "single-choice",
+    "topicId": "generative-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is few-shot prompting?",
+    "options": [
+      { "id": "A", "text": "Running a model for only a few training steps", "isCorrect": false },
+      { "id": "B", "text": "Providing a small number of input-output examples in the prompt to demonstrate the desired output format or task", "isCorrect": true },
+      { "id": "C", "text": "Limiting the model to generate only a few tokens in response", "isCorrect": false },
+      { "id": "D", "text": "Using only a small portion of the available context window", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Few-shot prompting includes a small number of examples (usually 2-10) showing the task input-output pairs before the actual question — teaching the model the expected format and approach without fine-tuning.", "incorrect": "Few-shot is a prompting technique, not a training technique, output length limit, or context window restriction.", "examTip": "Prompting spectrum: Zero-shot (no examples) → Few-shot (2-10 examples) → Fine-tuning (many labelled examples, model update). Few-shot is often surprisingly effective.", "relatedTopics": ["few-shot-prompting", "prompt-engineering", "in-context-learning"] },
+    "metadata": { "examObjective": "Domain 2: Prompt engineering", "references": ["https://aws.amazon.com/certification/certified-ai-practitioner/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-060",
+    "type": "single-choice",
+    "topicId": "generative-ai",
+    "difficulty": "hard",
+    "points": 1,
+    "scenarioText": "A company's customer service chatbot using Amazon Bedrock occasionally generates responses that contain competitor product recommendations, which violates company policy.",
+    "questionText": "What is the MOST effective way to prevent this?",
+    "options": [
+      { "id": "A", "text": "Set model temperature to 0 for deterministic responses", "isCorrect": false },
+      { "id": "B", "text": "Configure Amazon Bedrock Guardrails with a denied topics policy for competitor mentions", "isCorrect": true },
+      { "id": "C", "text": "Fine-tune the model to remove knowledge of competitors", "isCorrect": false },
+      { "id": "D", "text": "Switch to a different foundation model", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Bedrock Guardrails' denied topics feature filters out specific topic areas from both inputs and outputs — the most direct and reliable way to prevent competitor mentions regardless of what the model might otherwise generate.", "incorrect": "Temperature 0 = deterministic but doesn't restrict topics. Fine-tuning reduces but doesn't guarantee restriction. Different models may have the same issue.", "examTip": "Guardrails denied topics: define what the chatbot should never discuss. Works as a post-processing filter on all responses. Apply on top of any Bedrock model.", "relatedTopics": ["Bedrock-Guardrails", "denied-topics", "content-policy"] },
+    "metadata": { "examObjective": "Domain 2: Responsible AI", "references": ["https://aws.amazon.com/bedrock/guardrails/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-061",
+    "type": "single-choice",
+    "topicId": "foundation-models",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon Bedrock Studio?",
+    "options": [
+      { "id": "A", "text": "A music production tool powered by generative AI", "isCorrect": false },
+      { "id": "B", "text": "A collaborative workspace for teams to build, test, and share generative AI applications using Bedrock", "isCorrect": true },
+      { "id": "C", "text": "A video editing platform using Bedrock AI models", "isCorrect": false },
+      { "id": "D", "text": "An IDE plugin for writing Bedrock API code", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Amazon Bedrock Studio is a collaborative workspace where teams can quickly build, test, share, and iterate on generative AI applications — experimenting with prompts, knowledge bases, and agents in a team environment.", "incorrect": "Bedrock Studio is for generative AI application development, not music, video, or code editing.", "examTip": "Bedrock Studio: create projects, share with team members, build and test chatbots and RAG apps quickly. Designed for business users and developers collaborating on GenAI apps.", "relatedTopics": ["Bedrock-Studio", "generative-AI", "collaboration"] },
+    "metadata": { "examObjective": "Domain 3: FM applications", "references": ["https://aws.amazon.com/bedrock/studio/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-062",
+    "type": "single-choice",
+    "topicId": "foundation-models",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is chunking in the context of Amazon Bedrock Knowledge Bases?",
+    "options": [
+      { "id": "A", "text": "Splitting API requests into smaller batches for rate limiting", "isCorrect": false },
+      { "id": "B", "text": "Dividing large documents into smaller segments that fit within the model's context window for embedding and retrieval", "isCorrect": true },
+      { "id": "C", "text": "Compressing vector embeddings to reduce storage costs", "isCorrect": false },
+      { "id": "D", "text": "Breaking model responses into smaller parts for streaming output", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Chunking divides large documents into smaller segments (chunks) before converting them to embeddings. This allows retrieval of only the relevant portion of a document rather than the entire file, staying within context limits.", "incorrect": "Chunking is a document preparation technique for RAG, not API batching, vector compression, or response streaming.", "examTip": "Bedrock Knowledge Bases chunking strategies: Default (300 tokens), Fixed size, Hierarchical, Semantic. Chunk size affects retrieval precision vs recall tradeoff.", "relatedTopics": ["chunking", "RAG", "Bedrock-Knowledge-Bases"] },
+    "metadata": { "examObjective": "Domain 3: RAG architecture", "references": ["https://aws.amazon.com/bedrock/knowledge-bases/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-063",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon SageMaker Canvas?",
+    "options": [
+      { "id": "A", "text": "A data visualisation tool for creating charts from ML model outputs", "isCorrect": false },
+      { "id": "B", "text": "A no-code ML tool enabling business analysts to build ML models without programming", "isCorrect": true },
+      { "id": "C", "text": "A drawing tool for creating ML pipeline architecture diagrams", "isCorrect": false },
+      { "id": "D", "text": "An interface for managing SageMaker training job logs", "isCorrect": false }
+    ],
+    "explanation": { "correct": "SageMaker Canvas is a visual, no-code ML tool designed for business analysts — import data, build models with point-and-click, generate predictions, and share models with data science teams without writing any code.", "incorrect": "Canvas is specifically no-code ML for non-technical users, not a visualisation, diagram, or logging tool.", "examTip": "Canvas target user: business analysts. Studio target user: data scientists. Autopilot target user: MLOps/data scientists wanting AutoML. Canvas outputs can be imported into Studio.", "relatedTopics": ["SageMaker-Canvas", "no-code-ML", "business-analysts"] },
+    "metadata": { "examObjective": "Domain 1: SageMaker features", "references": ["https://aws.amazon.com/sagemaker/canvas/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-064",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is the purpose of Amazon SageMaker Pipelines?",
+    "options": [
+      { "id": "A", "text": "Network data pipelines for transferring ML training data", "isCorrect": false },
+      { "id": "B", "text": "A CI/CD service for ML that automates and manages end-to-end ML workflows", "isCorrect": true },
+      { "id": "C", "text": "Data transformation pipelines using Apache Spark", "isCorrect": false },
+      { "id": "D", "text": "An API gateway for routing requests to different ML endpoints", "isCorrect": false }
+    ],
+    "explanation": { "correct": "SageMaker Pipelines is a purpose-built CI/CD service for ML — defining, automating, and managing repeatable ML workflows (data prep → training → evaluation → deployment) with step tracking and reuse.", "incorrect": "Pipelines is for ML workflow automation, not network data transfer, Spark processing, or API routing.", "examTip": "SageMaker Pipelines = MLOps. Define DAG of steps (Processing, Training, Evaluation, Condition, Model Register, Transform). Automate retraining when new data arrives.", "relatedTopics": ["SageMaker-Pipelines", "MLOps", "CI-CD-ML"] },
+    "metadata": { "examObjective": "Domain 1: MLOps", "references": ["https://aws.amazon.com/sagemaker/pipelines/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-065",
+    "type": "single-choice",
+    "topicId": "responsible-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is the EU AI Act and why is it relevant to AWS AI practitioners?",
+    "options": [
+      { "id": "A", "text": "An AWS compliance framework for European customers", "isCorrect": false },
+      { "id": "B", "text": "A regulation that classifies AI systems by risk level and imposes requirements for transparency, human oversight, and compliance", "isCorrect": true },
+      { "id": "C", "text": "A technical standard for AI model accuracy", "isCorrect": false },
+      { "id": "D", "text": "A certification programme for AI practitioners in Europe", "isCorrect": false }
+    ],
+    "explanation": { "correct": "The EU AI Act categorises AI systems by risk (unacceptable, high, limited, minimal) and imposes requirements based on risk level — including transparency, human oversight, data governance, and accuracy standards. Relevant to anyone deploying AI in the EU.", "incorrect": "The EU AI Act is a European Union regulation, not an AWS framework, technical standard, or certification programme.", "examTip": "EU AI Act risk levels: Unacceptable (banned: social scoring), High (medical devices, hiring AI — strict requirements), Limited (chatbots — transparency required), Minimal (spam filters — few requirements).", "relatedTopics": ["EU-AI-Act", "AI-regulation", "compliance"] },
+    "metadata": { "examObjective": "Domain 4: AI governance", "references": ["https://aws.amazon.com/certification/certified-ai-practitioner/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-066",
+    "type": "single-choice",
+    "topicId": "responsible-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is human-in-the-loop (HITL) in AI systems?",
+    "options": [
+      { "id": "A", "text": "Requiring a human to manually review and approve all AI outputs before they are used", "isCorrect": false },
+      { "id": "B", "text": "A design approach where humans provide feedback, oversight, or intervention at critical decision points in an AI workflow", "isCorrect": true },
+      { "id": "C", "text": "Using human-generated data as the only source for AI training", "isCorrect": false },
+      { "id": "D", "text": "A technique where humans and AI take turns completing tasks", "isCorrect": false }
+    ],
+    "explanation": { "correct": "HITL incorporates human judgment at key points — humans may review uncertain predictions, provide feedback for active learning, approve high-stakes decisions, or intervene when the AI has low confidence.", "incorrect": "HITL is a design principle for appropriate human involvement, not a requirement to review every output or a turntaking approach.", "examTip": "HITL on AWS: SageMaker Ground Truth (human labelling), Amazon Augmented AI (A2I) for custom human review workflows. Use for high-stakes decisions where AI errors are costly.", "relatedTopics": ["human-in-the-loop", "Amazon-A2I", "AI-oversight"] },
+    "metadata": { "examObjective": "Domain 4: Responsible AI", "references": ["https://aws.amazon.com/augmented-ai/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-067",
+    "type": "single-choice",
+    "topicId": "responsible-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon Augmented AI (A2I)?",
+    "options": [
+      { "id": "A", "text": "An augmented reality service for visualising AI model outputs", "isCorrect": false },
+      { "id": "B", "text": "A service that makes it easy to build human review workflows for ML predictions requiring human oversight", "isCorrect": true },
+      { "id": "C", "text": "A feature that automatically augments training datasets", "isCorrect": false },
+      { "id": "D", "text": "An AI assistant that augments the capabilities of human workers", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Amazon A2I enables human review of ML predictions when confidence is low or for random sampling. It integrates with Rekognition, Textract, and custom models to route uncertain predictions to human reviewers.", "incorrect": "A2I is about human review workflows, not augmented reality, data augmentation, or AI assistants.", "examTip": "A2I use cases: review low-confidence Rekognition predictions, audit a sample of Textract extractions, human review for medical AI predictions. Integrates with Amazon Mechanical Turk or private reviewers.", "relatedTopics": ["Amazon-A2I", "human-review", "human-in-the-loop"] },
+    "metadata": { "examObjective": "Domain 4: Human oversight", "references": ["https://aws.amazon.com/augmented-ai/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-068",
+    "type": "yes-no-statements",
+    "topicId": "responsible-ai",
+    "difficulty": "hard",
+    "points": 1,
+    "questionText": "For each statement, indicate whether it correctly describes responsible AI practices on AWS.",
+    "statements": [
+      { "id": "s1", "text": "SageMaker Clarify can detect pre-training bias in datasets before a model is trained.", "isCorrectYes": true },
+      { "id": "s2", "text": "A model that performs equally well across all demographic groups is considered fair.", "isCorrectYes": true },
+      { "id": "s3", "text": "Removing demographic features like age and gender from training data always eliminates bias.", "isCorrectYes": false },
+      { "id": "s4", "text": "AWS recommends documenting AI system limitations in model cards before deployment.", "isCorrectYes": true }
+    ],
+    "options": [],
+    "explanation": { "correct": "Clarify detects pre-training bias. Equal performance = fairness. Model cards should document limitations. Removing demographic features doesn't eliminate bias — proxies (zip code, name) can encode the same information.", "incorrect": "Removing protected attributes is insufficient — proxy variables can still encode demographic information. This is known as 'fairness through unawareness' fallacy.", "examTip": "Bias can persist even after removing demographic features through proxy variables. Need statistical fairness testing (Clarify) not just feature removal.", "relatedTopics": ["bias-detection", "fairness", "model-cards", "proxy-variables"] },
+    "metadata": { "examObjective": "Domain 4: Bias and fairness", "references": ["https://aws.amazon.com/sagemaker/clarify/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-069",
+    "type": "single-choice",
+    "topicId": "security-compliance",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is the shared responsibility model's implication for AI/ML workloads on AWS?",
+    "options": [
+      { "id": "A", "text": "AWS is responsible for everything including ML model quality and predictions", "isCorrect": false },
+      { "id": "B", "text": "AWS secures the underlying infrastructure; customers are responsible for their data, model security, and appropriate AI use", "isCorrect": true },
+      { "id": "C", "text": "Customers have no security responsibilities when using managed services like Bedrock", "isCorrect": false },
+      { "id": "D", "text": "The AI model provider (Anthropic, Meta) is responsible for model outputs", "isCorrect": false }
+    ],
+    "explanation": { "correct": "In the shared responsibility model: AWS secures infrastructure, hardware, and the managed service layer. Customers are responsible for their data, IAM access control, model selection, prompt security, and ensuring appropriate AI use.", "incorrect": "Customers always retain responsibility for their data and how they use AI services. Managed services reduce but don't eliminate customer responsibility.", "examTip": "AI shared responsibility: AWS = infrastructure, model availability, service security. Customer = data security, IAM, prompt design, responsible use, output validation.", "relatedTopics": ["shared-responsibility", "security", "AI-governance"] },
+    "metadata": { "examObjective": "Domain 5: Security", "references": ["https://aws.amazon.com/compliance/shared-responsibility-model/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-070",
+    "type": "single-choice",
+    "topicId": "security-compliance",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is AWS Nitro Enclaves' role in protecting sensitive AI workloads?",
+    "options": [
+      { "id": "A", "text": "It speeds up ML model inference using dedicated hardware", "isCorrect": false },
+      { "id": "B", "text": "It provides isolated compute environments with no persistent storage, network access, or operator visibility for processing sensitive data", "isCorrect": true },
+      { "id": "C", "text": "It encrypts ML model weights to prevent intellectual property theft", "isCorrect": false },
+      { "id": "D", "text": "It provides a hardware security module for storing ML API keys", "isCorrect": false }
+    ],
+    "explanation": { "correct": "AWS Nitro Enclaves create isolated, hardened virtual machines with no persistent storage, no network connectivity, and no operator access — ideal for processing highly sensitive data (PHI, PII, financial data) in ML workloads.", "incorrect": "Nitro Enclaves are for sensitive data isolation, not inference acceleration (Inferentia), model weight encryption, or key storage (KMS/HSM).", "examTip": "Nitro Enclaves use cases: processing sensitive health records, financial data analysis, cryptographic operations. Data processed but never stored or exposed.", "relatedTopics": ["Nitro-Enclaves", "confidential-computing", "data-security"] },
+    "metadata": { "examObjective": "Domain 5: Advanced security", "references": ["https://aws.amazon.com/ec2/nitro/nitro-enclaves/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-071",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon Comprehend Medical?",
+    "options": [
+      { "id": "A", "text": "A health insurance benefit for Amazon employees", "isCorrect": false },
+      { "id": "B", "text": "A version of Amazon Comprehend specialised for extracting medical information from clinical notes and medical records", "isCorrect": true },
+      { "id": "C", "text": "A medical imaging analysis service", "isCorrect": false },
+      { "id": "D", "text": "A HIPAA compliance certification for AWS services", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Amazon Comprehend Medical uses NLP to extract medical entities from unstructured text — medical conditions, medications, dosages, test results, anatomy, and protected health information (PHI).", "incorrect": "Comprehend Medical is an NLP service for clinical text, not an employee benefit, imaging service, or compliance certification.", "examTip": "Comprehend Medical capabilities: extract PHI, medications, conditions, anatomy, test results from clinical notes. HIPAA eligible. Extract ICD-10-CM and RxNorm codes.", "relatedTopics": ["Comprehend-Medical", "healthcare-AI", "clinical-NLP"] },
+    "metadata": { "examObjective": "Domain 1: AWS AI services", "references": ["https://aws.amazon.com/comprehend/medical/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-072",
+    "type": "single-choice",
+    "topicId": "foundation-models",
+    "difficulty": "hard",
+    "points": 1,
+    "scenarioText": "A developer is building a generative AI app using Bedrock. Users report that the model sometimes generates toxic or harmful content. The developer needs a solution that works across multiple foundation models without changing model-specific code.",
+    "questionText": "What is the BEST approach?",
+    "options": [
+      { "id": "A", "text": "Switch to a model with stronger built-in safety training", "isCorrect": false },
+      { "id": "B", "text": "Configure Amazon Bedrock Guardrails to filter harmful content and apply it to all model invocations", "isCorrect": true },
+      { "id": "C", "text": "Add explicit instructions not to generate harmful content in every user prompt", "isCorrect": false },
+      { "id": "D", "text": "Set temperature to 0 to eliminate randomness in outputs", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Bedrock Guardrails applies the same content filters across ALL foundation models without model-specific code changes — a single policy that intercepts and filters inputs/outputs regardless of which model is used.", "incorrect": "Switching models doesn't guarantee safety. Prompt instructions can be bypassed. Temperature 0 doesn't prevent harmful content.", "examTip": "Guardrails advantage: model-agnostic. Same safety policy applies whether you use Claude, Titan, Llama, or any other Bedrock model. Centralise safety policies.", "relatedTopics": ["Bedrock-Guardrails", "content-safety", "model-agnostic"] },
+    "metadata": { "examObjective": "Domain 3: FM deployment", "references": ["https://aws.amazon.com/bedrock/guardrails/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-073",
+    "type": "single-choice",
+    "topicId": "generative-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon Bedrock's Playground?",
+    "options": [
+      { "id": "A", "text": "A children's educational AI application built on Bedrock", "isCorrect": false },
+      { "id": "B", "text": "An interactive console environment for testing and experimenting with foundation models before building applications", "isCorrect": true },
+      { "id": "C", "text": "A sandbox AWS account for testing Bedrock without charges", "isCorrect": false },
+      { "id": "D", "text": "A game development tool using Bedrock AI models", "isCorrect": false }
+    ],
+    "explanation": { "correct": "The Bedrock Playground (in AWS console) lets developers and researchers test foundation models interactively — experiment with prompts, compare models, adjust inference parameters (temperature, max tokens), and evaluate outputs before writing code.", "incorrect": "Playground is a developer testing tool in the AWS console, not an educational app, free sandbox, or game tool.", "examTip": "Bedrock Playground: Chat mode (conversational), Text mode (completion), Image mode (Stable Diffusion). Adjust parameters in real-time. Great for prompt engineering iteration.", "relatedTopics": ["Bedrock-Playground", "prompt-testing", "developer-tools"] },
+    "metadata": { "examObjective": "Domain 2: Generative AI tools", "references": ["https://aws.amazon.com/bedrock/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-074",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "What is deep learning?",
+    "options": [
+      { "id": "A", "text": "A type of machine learning that uses deep databases for training", "isCorrect": false },
+      { "id": "B", "text": "A subset of machine learning using artificial neural networks with many layers to learn complex representations from data", "isCorrect": true },
+      { "id": "C", "text": "Machine learning models that require deep domain expertise to build", "isCorrect": false },
+      { "id": "D", "text": "A technique for deeply analysing structured data in relational databases", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Deep learning uses neural networks with multiple hidden layers — 'deep' refers to the depth of layers. These layers automatically learn increasingly abstract representations of data, enabling tasks like image recognition and natural language understanding.", "incorrect": "Deep learning refers to neural network depth, not database depth, domain expertise, or database analytics.", "examTip": "Deep learning excels at: image recognition (CNNs), NLP/LLMs (Transformers), speech recognition (RNNs). Requires large datasets and significant compute (GPUs/TPUs).", "relatedTopics": ["deep-learning", "neural-networks", "AI-concepts"] },
+    "metadata": { "examObjective": "Domain 1: AI/ML fundamentals", "references": ["https://aws.amazon.com/certification/certified-ai-practitioner/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-075",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is the difference between batch inference and real-time inference in Amazon SageMaker?",
+    "options": [
+      { "id": "A", "text": "Batch inference is faster than real-time inference", "isCorrect": false },
+      { "id": "B", "text": "Batch Transform processes large datasets offline; real-time endpoints respond to individual requests immediately", "isCorrect": true },
+      { "id": "C", "text": "Real-time inference only works with tabular data", "isCorrect": false },
+      { "id": "D", "text": "They are the same but run in different AWS regions", "isCorrect": false }
+    ],
+    "explanation": { "correct": "SageMaker Batch Transform processes entire datasets in bulk (e.g., score all customers overnight). Real-time inference endpoints respond immediately to individual requests (e.g., fraud check during payment processing).", "incorrect": "Real-time is faster per request. Both support various data types. They serve fundamentally different use cases.", "examTip": "SageMaker inference types: Real-time endpoint (immediate, persistent), Serverless endpoint (on-demand, auto-scale to zero), Batch Transform (offline bulk scoring), Async endpoint (large payloads).", "relatedTopics": ["batch-inference", "real-time-inference", "SageMaker"] },
+    "metadata": { "examObjective": "Domain 1: ML deployment", "references": ["https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-076",
+    "type": "single-choice",
+    "topicId": "security-compliance",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is AWS Macie's role in AI/ML data governance?",
+    "options": [
+      { "id": "A", "text": "Macie provides ML model performance monitoring", "isCorrect": false },
+      { "id": "B", "text": "Macie automatically discovers and protects sensitive data (PII, financial data) in S3 that may be used for ML training", "isCorrect": true },
+      { "id": "C", "text": "Macie encrypts ML model weights stored in S3", "isCorrect": false },
+      { "id": "D", "text": "Macie enforces IAM policies for SageMaker access", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Amazon Macie uses ML to automatically discover, classify, and protect sensitive data (PII, financial information, credentials) stored in S3 — critical for ensuring training data doesn't contain unprotected sensitive information.", "incorrect": "Model monitoring = SageMaker Model Monitor. Model encryption = KMS. IAM enforcement = IAM/SCP.", "examTip": "Macie in ML governance: scan S3 training data for PII before training, ensure compliance with data protection regulations (GDPR, CCPA, HIPAA). Alerts on sensitive data exposure.", "relatedTopics": ["AWS-Macie", "data-governance", "PII-detection"] },
+    "metadata": { "examObjective": "Domain 5: Data governance", "references": ["https://aws.amazon.com/macie/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-077",
+    "type": "single-choice",
+    "topicId": "foundation-models",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon Kendra Intelligent Ranking?",
+    "options": [
+      { "id": "A", "text": "A system for ranking Amazon product reviews", "isCorrect": false },
+      { "id": "B", "text": "An ML-powered feature that semantically re-ranks search results from existing search engines for more relevant results", "isCorrect": true },
+      { "id": "C", "text": "A tool for ranking the relevance of Bedrock foundation models", "isCorrect": false },
+      { "id": "D", "text": "A scoring system for evaluating ML model quality", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Kendra Intelligent Ranking uses deep learning to semantically re-rank results from existing search systems (like Elasticsearch or OpenSearch) without replacing them — improving relevance through semantic understanding.", "incorrect": "Kendra is enterprise search. Intelligent Ranking specifically enhances existing search with semantic capabilities.", "examTip": "Amazon Kendra: ML-powered enterprise search that understands natural language queries. Intelligent Ranking: upgrade existing search results with semantic ML re-ranking. Both complement RAG approaches.", "relatedTopics": ["Amazon-Kendra", "intelligent-search", "semantic-search"] },
+    "metadata": { "examObjective": "Domain 3: Search and retrieval", "references": ["https://aws.amazon.com/kendra/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-078",
+    "type": "single-choice",
+    "topicId": "generative-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is multi-modal AI?",
+    "options": [
+      { "id": "A", "text": "AI that uses multiple ML algorithms simultaneously", "isCorrect": false },
+      { "id": "B", "text": "AI that can process and generate multiple types of data — text, images, audio, and video in a unified model", "isCorrect": true },
+      { "id": "C", "text": "AI deployed across multiple AWS regions simultaneously", "isCorrect": false },
+      { "id": "D", "text": "AI models that use multiple independent training datasets", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Multi-modal AI processes and generates multiple data types in a single model — e.g., Claude 3 and GPT-4V can understand both images and text. Amazon Titan Multimodal Embeddings supports text and images.", "incorrect": "Multi-modal refers to data types (modalities), not algorithms, regions, or datasets.", "examTip": "Multi-modal Bedrock models: Claude 3 (text + image input), Amazon Titan Multimodal Embeddings (text + image → vectors). Enable use cases like visual Q&A, document understanding with images.", "relatedTopics": ["multi-modal-AI", "foundation-models", "Bedrock"] },
+    "metadata": { "examObjective": "Domain 2: Foundation model types", "references": ["https://aws.amazon.com/bedrock/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-079",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon SageMaker Studio?",
+    "options": [
+      { "id": "A", "text": "A mobile app for monitoring SageMaker training jobs", "isCorrect": false },
+      { "id": "B", "text": "A fully integrated web-based IDE for the complete ML lifecycle in a single environment", "isCorrect": true },
+      { "id": "C", "text": "A recording studio for creating AI-generated audio content", "isCorrect": false },
+      { "id": "D", "text": "A visual analytics dashboard for ML model metrics", "isCorrect": false }
+    ],
+    "explanation": { "correct": "SageMaker Studio is a unified web-based IDE providing all tools for the ML lifecycle in one place: notebooks, data preparation, feature engineering, model training, debugging, deployment, and monitoring.", "incorrect": "Studio is a web IDE for data scientists, not a mobile app, audio tool, or dashboard.", "examTip": "SageMaker Studio components: JupyterLab notebooks, Data Wrangler, Feature Store, Experiments, Debugger, Pipelines, Model Registry, Monitor. All in one browser-based IDE.", "relatedTopics": ["SageMaker-Studio", "ML-IDE", "SageMaker"] },
+    "metadata": { "examObjective": "Domain 1: SageMaker features", "references": ["https://aws.amazon.com/sagemaker/studio/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-080",
+    "type": "single-choice",
+    "topicId": "responsible-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is data minimisation in the context of responsible AI?",
+    "options": [
+      { "id": "A", "text": "Using the smallest possible training dataset to reduce compute costs", "isCorrect": false },
+      { "id": "B", "text": "Collecting and using only the data necessary for the specific AI purpose, reducing privacy risks", "isCorrect": true },
+      { "id": "C", "text": "Compressing data before storing in S3 for ML training", "isCorrect": false },
+      { "id": "D", "text": "Limiting model output to the minimum required information", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Data minimisation (a GDPR and privacy principle) means collecting only the data necessary for the stated purpose — reducing the privacy risk surface and limiting potential harm from data breaches or misuse.", "incorrect": "Data minimisation is a privacy principle, not a cost optimisation, compression, or output limiting technique.", "examTip": "Privacy principles for AI: data minimisation (collect only necessary), purpose limitation (use only for stated purpose), storage limitation (don't keep longer than needed), accuracy (keep data current).", "relatedTopics": ["data-minimisation", "privacy", "GDPR"] },
+    "metadata": { "examObjective": "Domain 4: Privacy", "references": ["https://aws.amazon.com/machine-learning/responsible-machine-learning/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-081",
+    "type": "ordering",
+    "topicId": "foundation-models",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Place the steps for building a RAG application with Amazon Bedrock Knowledge Bases in the correct order.",
+    "orderItems": [
+      { "id": "o1", "text": "Store source documents in Amazon S3", "correctPosition": 1 },
+      { "id": "o2", "text": "Create a Knowledge Base and sync documents (chunk, embed, store in vector store)", "correctPosition": 2 },
+      { "id": "o3", "text": "User submits a query to the application", "correctPosition": 3 },
+      { "id": "o4", "text": "Knowledge Base retrieves relevant document chunks", "correctPosition": 4 },
+      { "id": "o5", "text": "Bedrock FM generates a grounded response using retrieved context", "correctPosition": 5 }
+    ],
+    "options": [],
+    "explanation": { "correct": "RAG pipeline: S3 documents → Knowledge Base sync (chunk + embed + vector store) → user query → retrieve relevant chunks → FM generates grounded response.", "incorrect": "Documents must be indexed before queries. Retrieval happens before generation. Storage is the first step.", "examTip": "Bedrock Knowledge Bases handles steps 1-2 automatically. At query time (steps 3-5), it retrieves and augments the prompt with retrieved context transparently.", "relatedTopics": ["RAG", "Bedrock-Knowledge-Bases", "vector-search"] },
+    "metadata": { "examObjective": "Domain 3: RAG architecture", "references": ["https://aws.amazon.com/bedrock/knowledge-bases/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-082",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is transfer learning and how does it relate to foundation models?",
+    "options": [
+      { "id": "A", "text": "Moving a trained ML model between AWS regions", "isCorrect": false },
+      { "id": "B", "text": "Using knowledge learned during training on one task to improve performance on a different but related task", "isCorrect": true },
+      { "id": "C", "text": "Transferring training data between S3 buckets", "isCorrect": false },
+      { "id": "D", "text": "Converting a model from one framework to another", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Transfer learning takes a model trained on a large general task and adapts it for a specific use case. Foundation models embody transfer learning at scale — pre-trained on massive data, then fine-tuned or prompted for specific tasks.", "incorrect": "Transfer learning is a machine learning technique, not region migration, data transfer, or framework conversion.", "examTip": "Foundation models = transfer learning at massive scale. The pre-training on diverse data transfers knowledge that benefits many downstream applications through prompting or fine-tuning.", "relatedTopics": ["transfer-learning", "foundation-models", "fine-tuning"] },
+    "metadata": { "examObjective": "Domain 1: ML concepts", "references": ["https://aws.amazon.com/certification/certified-ai-practitioner/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-083",
+    "type": "single-choice",
+    "topicId": "security-compliance",
+    "difficulty": "hard",
+    "points": 1,
+    "scenarioText": "A company wants to use a Bedrock LLM to process customer support emails. Legal requires that all customer names and email addresses are removed from the data before it is sent to the model.",
+    "questionText": "Which approach BEST satisfies this requirement?",
+    "options": [
+      { "id": "A", "text": "Ask the model to ignore any personal information in the emails", "isCorrect": false },
+      { "id": "B", "text": "Use Amazon Comprehend to detect and redact PII before sending text to Bedrock, and enable Bedrock Guardrails PII redaction", "isCorrect": true },
+      { "id": "C", "text": "Manually review all emails before processing", "isCorrect": false },
+      { "id": "D", "text": "Use a private Bedrock endpoint so data doesn't leave the company", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Comprehend PII detection + redaction removes PII before it reaches Bedrock. Bedrock Guardrails PII redaction provides an additional safety layer. Defense in depth for PII protection.", "incorrect": "Asking the model to ignore PII doesn't prevent it from processing it. Manual review is not scalable. VPC endpoints protect data in transit but don't remove PII from content.", "examTip": "PII protection pipeline: Comprehend (detect + redact in text) → Bedrock Guardrails (redact PII in prompts/responses) → VPC endpoints (network isolation). Layer defences.", "relatedTopics": ["Comprehend-PII", "Bedrock-Guardrails", "PII-redaction"] },
+    "metadata": { "examObjective": "Domain 5: Privacy and data protection", "references": ["https://aws.amazon.com/comprehend/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-084",
+    "type": "single-choice",
+    "topicId": "generative-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon Q Developer?",
+    "options": [
+      { "id": "A", "text": "A code quality analysis tool for checking AWS SDK usage", "isCorrect": false },
+      { "id": "B", "text": "An AI coding assistant that helps developers write code, fix bugs, explain code, and answer AWS questions in IDEs", "isCorrect": true },
+      { "id": "C", "text": "A developer certification programme for AWS AI services", "isCorrect": false },
+      { "id": "D", "text": "A query builder tool for Amazon DynamoDB", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Amazon Q Developer is an AI assistant for developers — integrated into IDEs (VS Code, JetBrains, CLI) to generate code, explain functions, find bugs, write tests, and answer AWS technical questions.", "incorrect": "Q Developer is an AI coding assistant, not a code quality tool, certification, or database query builder.", "examTip": "Q Developer features: code generation, code explanation, test generation, security scanning, upgrade assistance, AWS documentation Q&A. Available in VS Code, JetBrains, AWS console.", "relatedTopics": ["Amazon-Q-Developer", "AI-coding-assistant", "developer-productivity"] },
+    "metadata": { "examObjective": "Domain 2: AWS Generative AI services", "references": ["https://aws.amazon.com/q/developer/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-085",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is the purpose of Amazon SageMaker Experiments?",
+    "options": [
+      { "id": "A", "text": "A/B testing for ML models in production", "isCorrect": false },
+      { "id": "B", "text": "Tracking, comparing, and managing multiple ML training runs to identify the best model", "isCorrect": true },
+      { "id": "C", "text": "Experimenting with Bedrock foundation models in the playground", "isCorrect": false },
+      { "id": "D", "text": "Testing new AWS AI service features before general availability", "isCorrect": false }
+    ],
+    "explanation": { "correct": "SageMaker Experiments tracks training runs (hyperparameters, metrics, artifacts) and lets you compare multiple experiments to identify which model configuration performed best — enabling systematic model development.", "incorrect": "Production A/B testing = SageMaker endpoints with traffic splitting. Bedrock playground is separate. Feature testing = AWS previews.", "examTip": "SageMaker Experiments: log runs → compare metrics (accuracy, loss) → visualise → select best run → register winning model. Integrates with Studio for visual comparison.", "relatedTopics": ["SageMaker-Experiments", "experiment-tracking", "model-selection"] },
+    "metadata": { "examObjective": "Domain 1: MLOps", "references": ["https://aws.amazon.com/sagemaker/experiments/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-086",
+    "type": "yes-no-statements",
+    "topicId": "foundation-models",
+    "difficulty": "hard",
+    "points": 1,
+    "questionText": "For each statement, indicate whether it correctly describes Amazon Bedrock features.",
+    "statements": [
+      { "id": "s1", "text": "Bedrock supports serverless inference — you pay per token, not for persistent infrastructure.", "isCorrectYes": true },
+      { "id": "s2", "text": "Provisioned throughput in Bedrock guarantees consistent performance for latency-sensitive applications.", "isCorrectYes": true },
+      { "id": "s3", "text": "Fine-tuned models in Bedrock can be accessed by all customers in the same AWS region.", "isCorrectYes": false },
+      { "id": "s4", "text": "Bedrock Guardrails can block specific words or phrases from appearing in model responses.", "isCorrectYes": true }
+    ],
+    "options": [],
+    "explanation": { "correct": "Bedrock on-demand = pay per token (serverless). Provisioned throughput = consistent rate for production. Guardrails word filters block specific content. Fine-tuned models are private to your account.", "incorrect": "Fine-tuned models are strictly isolated to the customer's account — never shared with other customers.", "examTip": "Bedrock pricing models: On-demand (pay per token, variable capacity), Provisioned throughput (reserved capacity, consistent performance, better pricing at scale). Choose based on usage pattern.", "relatedTopics": ["Bedrock-pricing", "provisioned-throughput", "model-isolation"] },
+    "metadata": { "examObjective": "Domain 3: FM deployment", "references": ["https://aws.amazon.com/bedrock/pricing/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-087",
+    "type": "single-choice",
+    "topicId": "responsible-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What does it mean for AI to be 'robust'?",
+    "options": [
+      { "id": "A", "text": "The AI can process very large datasets quickly", "isCorrect": false },
+      { "id": "B", "text": "The AI performs reliably and consistently across diverse inputs and conditions, including adversarial inputs and edge cases", "isCorrect": true },
+      { "id": "C", "text": "The AI uses strong encryption to protect its model weights", "isCorrect": false },
+      { "id": "D", "text": "The AI has been tested for a minimum number of hours before deployment", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Robustness means an AI system maintains consistent, reliable performance even with unexpected inputs, adversarial attacks (inputs designed to fool the model), noisy data, and edge cases — not just ideal conditions.", "incorrect": "Robustness is about reliability and resilience of model behaviour, not processing speed, encryption, or testing duration.", "examTip": "Robustness testing: evaluate model performance on diverse data distributions, adversarial examples, and edge cases. Use SageMaker Clarify and model monitoring for production robustness.", "relatedTopics": ["AI-robustness", "adversarial-inputs", "responsible-AI"] },
+    "metadata": { "examObjective": "Domain 4: Responsible AI dimensions", "references": ["https://aws.amazon.com/machine-learning/responsible-machine-learning/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-088",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What AWS service is used for building conversational AI interfaces (chatbots) using voice and text?",
+    "options": [
+      { "id": "A", "text": "Amazon Polly", "isCorrect": false },
+      { "id": "B", "text": "Amazon Lex", "isCorrect": true },
+      { "id": "C", "text": "Amazon Transcribe", "isCorrect": false },
+      { "id": "D", "text": "Amazon Comprehend", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Amazon Lex is the same technology powering Alexa — enabling developers to build conversational interfaces using voice and text with natural language understanding (NLU) and automatic speech recognition (ASR).", "incorrect": "Polly = text to speech. Transcribe = speech to text. Comprehend = text NLP. Lex = conversational interface/chatbots.", "examTip": "Lex + Lambda = conversational AI with business logic. Lex + Kendra = intelligent Q&A chatbot. Lex + Bedrock = generative AI-powered conversation.", "relatedTopics": ["Amazon-Lex", "chatbot", "conversational-AI"] },
+    "metadata": { "examObjective": "Domain 1: AWS AI services", "references": ["https://aws.amazon.com/lex/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-089",
+    "type": "single-choice",
+    "topicId": "security-compliance",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is model poisoning in the context of AI security?",
+    "options": [
+      { "id": "A", "text": "Deliberately providing incorrect feedback to degrade a production model over time", "isCorrect": false },
+      { "id": "B", "text": "An attack where malicious data is injected into the training dataset to corrupt the model's behaviour", "isCorrect": true },
+      { "id": "C", "text": "Using a model in a way that violates its terms of service", "isCorrect": false },
+      { "id": "D", "text": "Overloading a model endpoint to cause denial of service", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Model poisoning (training data poisoning) injects malicious examples into the training dataset — causing the trained model to make specific wrong predictions or to have backdoor behaviours triggered by specific inputs.", "incorrect": "Feedback degradation is different (though related). ToS violations are governance issues. Endpoint overloading = DoS attack, not poisoning.", "examTip": "AI security threats: model poisoning (training data), adversarial examples (inference), model inversion (extract training data), membership inference (determine if data was used for training).", "relatedTopics": ["model-poisoning", "AI-security", "training-data-security"] },
+    "metadata": { "examObjective": "Domain 5: AI security threats", "references": ["https://aws.amazon.com/certification/certified-ai-practitioner/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-090",
+    "type": "single-choice",
+    "topicId": "generative-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What are AWS Inferentia and Trainium chips?",
+    "options": [
+      { "id": "A", "text": "Standard CPUs optimised for ML workloads", "isCorrect": false },
+      { "id": "B", "text": "AWS-designed custom chips — Trainium for ML training and Inferentia for ML inference — optimised for cost and performance", "isCorrect": true },
+      { "id": "C", "text": "GPU instances for running ML workloads", "isCorrect": false },
+      { "id": "D", "text": "Network adapters that accelerate ML data transfer", "isCorrect": false }
+    ],
+    "explanation": { "correct": "AWS Trainium (Trn1 instances) is custom silicon for ML training — up to 50% cost savings over GPU-based training for large models. AWS Inferentia (Inf1/Inf2 instances) is custom silicon for ML inference — lowest cost per inference in the cloud.", "incorrect": "These are custom AWS silicon chips, not CPUs, GPUs, or network adapters.", "examTip": "AWS ML chips: Trainium = training (large models, cost-efficient). Inferentia = inference (production serving, low latency, cost-efficient). Alternative to NVIDIA GPUs for ML workloads.", "relatedTopics": ["AWS-Trainium", "AWS-Inferentia", "ML-hardware"] },
+    "metadata": { "examObjective": "Domain 1: ML infrastructure", "references": ["https://aws.amazon.com/machine-learning/trainium/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-091",
+    "type": "single-choice",
+    "topicId": "foundation-models",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon Bedrock's Converse API?",
+    "options": [
+      { "id": "A", "text": "An API for converting between different data formats in Bedrock", "isCorrect": false },
+      { "id": "B", "text": "A unified API that provides a consistent conversational interface across all supported Bedrock foundation models", "isCorrect": true },
+      { "id": "C", "text": "A feature for converting Bedrock outputs to different languages", "isCorrect": false },
+      { "id": "D", "text": "A tool for converting fine-tuned models to serverless endpoints", "isCorrect": false }
+    ],
+    "explanation": { "correct": "The Converse API provides a consistent, standardised conversational interface across all Bedrock models — so you can switch between Claude, Titan, Llama, etc. without rewriting your application code.", "incorrect": "The Converse API is about unified model interface, not data format conversion, translation, or deployment conversion.", "examTip": "Converse API benefit: write once, switch models easily. No model-specific code changes needed. Supports multi-turn conversations, system prompts, tool use, and streaming across all models.", "relatedTopics": ["Bedrock-Converse-API", "model-abstraction", "foundation-models"] },
+    "metadata": { "examObjective": "Domain 3: FM development", "references": ["https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-092",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "easy",
+    "points": 1,
+    "questionText": "What is reinforcement learning from human feedback (RLHF)?",
+    "options": [
+      { "id": "A", "text": "A technique for having humans manually review and fix ML errors", "isCorrect": false },
+      { "id": "B", "text": "A training technique that uses human preference feedback to align LLM outputs with human values and expectations", "isCorrect": true },
+      { "id": "C", "text": "A way for humans to provide real-time feedback during model inference", "isCorrect": false },
+      { "id": "D", "text": "Reinforcement learning where humans serve as the environment", "isCorrect": false }
+    ],
+    "explanation": { "correct": "RLHF fine-tunes LLMs by having humans compare model outputs and indicate preferences. A reward model is trained on these preferences, then used to guide further training — making the model more helpful, harmless, and honest.", "incorrect": "RLHF is a specific training alignment technique, not manual error correction, real-time feedback, or humans-as-environment.", "examTip": "RLHF is used to align LLMs: ChatGPT, Claude, and other major LLMs use RLHF. The reward model learns human preferences and guides the LLM toward better responses.", "relatedTopics": ["RLHF", "LLM-alignment", "fine-tuning"] },
+    "metadata": { "examObjective": "Domain 1: LLM training concepts", "references": ["https://aws.amazon.com/certification/certified-ai-practitioner/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-093",
+    "type": "single-choice",
+    "topicId": "security-compliance",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon Bedrock's approach to compliance certifications?",
+    "options": [
+      { "id": "A", "text": "Bedrock has no compliance certifications as it is a new service", "isCorrect": false },
+      { "id": "B", "text": "Amazon Bedrock inherits AWS's compliance programmes including HIPAA, SOC, ISO, and PCI DSS eligibility", "isCorrect": true },
+      { "id": "C", "text": "Customers must independently certify their Bedrock applications", "isCorrect": false },
+      { "id": "D", "text": "Compliance is the responsibility of the foundation model providers (Anthropic, Meta)", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Amazon Bedrock is included in AWS's compliance programmes — HIPAA eligible, SOC 1/2/3, ISO 27001, PCI DSS, and others. Customers can build compliant applications using Bedrock within their own compliance frameworks.", "incorrect": "Bedrock is a mature service with compliance coverage. AWS manages service-level compliance. Model providers don't manage AWS compliance.", "examTip": "Check AWS Compliance Programmes page for current Bedrock certifications. Use AWS Artifact to download compliance reports and BAAs.", "relatedTopics": ["Bedrock-compliance", "HIPAA", "compliance-programmes"] },
+    "metadata": { "examObjective": "Domain 5: Compliance", "references": ["https://aws.amazon.com/bedrock/security-compliance/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-094",
+    "type": "dropdown-select",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "Match each ML evaluation metric to what it measures.",
+    "dropdowns": [
+      { "id": "d1", "prompt": "Percentage of correct predictions out of all predictions", "options": ["Accuracy", "Precision", "Recall", "F1 Score"], "correctAnswer": "Accuracy" },
+      { "id": "d2", "prompt": "Percentage of actual positives correctly identified (minimise false negatives)", "options": ["Accuracy", "Precision", "Recall", "F1 Score"], "correctAnswer": "Recall" },
+      { "id": "d3", "prompt": "Harmonic mean of precision and recall", "options": ["Accuracy", "Precision", "Recall", "F1 Score"], "correctAnswer": "F1 Score" }
+    ],
+    "options": [],
+    "explanation": { "correct": "Accuracy = correct/total. Recall = true positives/(true positives + false negatives). F1 = harmonic mean of precision and recall (balances both).", "incorrect": "These are the four primary classification metrics. Each reveals different aspects of model performance.", "examTip": "Metric selection: Imbalanced data → F1 or AUC-ROC over accuracy. Medical/fraud (miss = costly) → maximise Recall. Spam filter (false positives = annoying) → maximise Precision.", "relatedTopics": ["model-evaluation-metrics", "precision", "recall", "F1-score"] },
+    "metadata": { "examObjective": "Domain 1: Model evaluation", "references": ["https://aws.amazon.com/certification/certified-ai-practitioner/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-095",
+    "type": "single-choice",
+    "topicId": "generative-ai",
+    "difficulty": "hard",
+    "points": 1,
+    "scenarioText": "A company uses Amazon Bedrock to power a customer-facing generative AI application. They are concerned that users might attempt to extract the system prompt or bypass safety restrictions through cleverly crafted inputs.",
+    "questionText": "What combination of defences BEST addresses these risks?",
+    "options": [
+      { "id": "A", "text": "Use a private system prompt and set temperature to 0", "isCorrect": false },
+      { "id": "B", "text": "Implement Bedrock Guardrails for input/output filtering plus prompt injection detection, and design system prompts to be robust to manipulation", "isCorrect": true },
+      { "id": "C", "text": "Switch to a larger, more capable model that is harder to manipulate", "isCorrect": false },
+      { "id": "D", "text": "Limit the context window to prevent users from providing long inputs", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Layered defence: Guardrails detect and block prompt injection attempts, filter harmful content, and protect PII. Well-designed system prompts include explicit instructions about resisting manipulation. Temperature 0 doesn't help with security.", "incorrect": "Privacy of system prompt doesn't prevent injection. Larger models can still be manipulated. Context limits can be bypassed.", "examTip": "Prompt injection defence layers: 1) Guardrails (automated detection), 2) Robust system prompt (explicit security instructions), 3) Input validation, 4) Output monitoring. No single control is sufficient.", "relatedTopics": ["prompt-injection", "Bedrock-Guardrails", "LLM-security"] },
+    "metadata": { "examObjective": "Domain 5: AI security", "references": ["https://aws.amazon.com/bedrock/guardrails/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-096",
+    "type": "single-choice",
+    "topicId": "responsible-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon CodeWhisperer (now part of Amazon Q Developer) and its key responsible AI feature?",
+    "options": [
+      { "id": "A", "text": "A code optimisation tool that flags performance issues; it reports bugs to AWS", "isCorrect": false },
+      { "id": "B", "text": "An AI coding assistant that generates code and includes a reference tracker to identify potentially open source-inspired code with licence information", "isCorrect": true },
+      { "id": "C", "text": "A security scanner that checks AWS IAM policies", "isCorrect": false },
+      { "id": "D", "text": "An ML model that predicts code defects before deployment", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Q Developer (formerly CodeWhisperer) generates code and uniquely includes a reference tracker — if a suggestion resembles open source code, it shows the repository and licence, helping developers manage IP and licence obligations responsibly.", "incorrect": "The reference tracker is a key responsible AI differentiator — not a bug reporter, IAM scanner, or defect predictor.", "examTip": "Q Developer responsible AI feature: Reference Tracker flags code suggestions that may resemble open source projects, showing the source and licence. Helps avoid unintentional licence violations.", "relatedTopics": ["Amazon-Q-Developer", "CodeWhisperer", "responsible-AI", "IP-protection"] },
+    "metadata": { "examObjective": "Domain 4: Responsible AI features", "references": ["https://aws.amazon.com/q/developer/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-097",
+    "type": "single-choice",
+    "topicId": "foundation-models",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is the difference between Amazon Bedrock and Amazon SageMaker JumpStart for deploying foundation models?",
+    "options": [
+      { "id": "A", "text": "They are identical — both provide the same deployment options", "isCorrect": false },
+      { "id": "B", "text": "Bedrock = serverless managed API access; JumpStart = deploy open models on your own SageMaker infrastructure with full control", "isCorrect": true },
+      { "id": "C", "text": "Bedrock is only for custom models; JumpStart is only for AWS models", "isCorrect": false },
+      { "id": "D", "text": "JumpStart is faster to deploy; Bedrock provides more model choices", "isCorrect": false }
+    ],
+    "explanation": { "correct": "Bedrock is fully serverless — AWS manages the infrastructure, you pay per token. JumpStart deploys models on dedicated SageMaker endpoints (ml.g5 instances, etc.) that you manage and pay for by the hour.", "incorrect": "They have fundamentally different deployment models. Bedrock has proprietary (Titan) and third-party models. JumpStart has open-source models.", "examTip": "Choose Bedrock when: need managed service, want multiple model options, serverless scaling. Choose JumpStart when: need full infrastructure control, specific open-source model, cost optimisation at scale with consistent load.", "relatedTopics": ["Amazon-Bedrock", "SageMaker-JumpStart", "FM-deployment"] },
+    "metadata": { "examObjective": "Domain 3: FM deployment options", "references": ["https://aws.amazon.com/bedrock/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-098",
+    "type": "single-choice",
+    "topicId": "ai-ml-fundamentals",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What is Amazon SageMaker Model Registry used for?",
+    "options": [
+      { "id": "A", "text": "A marketplace for buying and selling ML models", "isCorrect": false },
+      { "id": "B", "text": "A centralised repository for versioning, tracking, and managing the lifecycle of ML models from development to production", "isCorrect": true },
+      { "id": "C", "text": "A registry of AWS compliance certifications for ML services", "isCorrect": false },
+      { "id": "D", "text": "A domain registry for AI-related domain names", "isCorrect": false }
+    ],
+    "explanation": { "correct": "SageMaker Model Registry stores trained model versions with metadata (metrics, training data, parameters), manages approval workflows (pending/approved/rejected), and tracks lineage from training run to deployment.", "incorrect": "Model Registry is for internal model governance, not a marketplace, compliance registry, or domain names.", "examTip": "Model Registry workflow: train → evaluate → register model → approval workflow → deploy to endpoint. Tracks: version, metrics, training job, approval status, deployment history.", "relatedTopics": ["SageMaker-Model-Registry", "MLOps", "model-governance"] },
+    "metadata": { "examObjective": "Domain 1: MLOps", "references": ["https://aws.amazon.com/sagemaker/model-registry/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-099",
+    "type": "single-choice",
+    "topicId": "responsible-ai",
+    "difficulty": "medium",
+    "points": 1,
+    "questionText": "What does 'AI transparency' mean from AWS's responsible AI perspective?",
+    "options": [
+      { "id": "A", "text": "Making all AI model source code publicly available", "isCorrect": false },
+      { "id": "B", "text": "Being open about how AI systems work, what data they use, how they make decisions, and their limitations", "isCorrect": true },
+      { "id": "C", "text": "Providing real-time visibility into AI system performance metrics", "isCorrect": false },
+      { "id": "D", "text": "Publishing the internal architecture of all AWS AI services", "isCorrect": false }
+    ],
+    "explanation": { "correct": "AI transparency means clearly communicating: what the system does, what data it was trained on, how it makes decisions, its limitations, and appropriate use cases — enabling informed trust and oversight.", "incorrect": "Transparency is about openness of intent, capabilities, and limitations — not necessarily open-source code, performance dashboards, or internal architecture disclosure.", "examTip": "AWS transparency mechanisms: AI Service Cards (intended use, limitations), Model Cards (performance documentation), Bedrock Guardrails (policy transparency), CloudTrail (action transparency).", "relatedTopics": ["AI-transparency", "responsible-AI", "AI-Service-Cards"] },
+    "metadata": { "examObjective": "Domain 4: Transparency", "references": ["https://aws.amazon.com/machine-learning/responsible-machine-learning/"], "lastUpdated": "2024-01-15" }
+  },
+  {
+    "id": "aws-ai-100",
+    "type": "single-choice",
+    "topicId": "foundation-models",
+    "difficulty": "hard",
+    "points": 1,
+    "scenarioText": "A company wants to deploy a generative AI application on AWS. They have three requirements: (1) use Claude 3 as the model, (2) ground responses in their proprietary knowledge base, (3) allow the AI to make bookings by calling their reservation API.",
+    "questionText": "Which Amazon Bedrock features BEST address all three requirements together?",
+    "options": [
+      { "id": "A", "text": "Bedrock Fine-tuning + SageMaker endpoints + Lambda", "isCorrect": false },
+      { "id": "B", "text": "Bedrock Model Access (Claude 3) + Knowledge Bases (RAG) + Agents (API actions)", "isCorrect": true },
+      { "id": "C", "text": "Amazon Lex + Amazon Kendra + Amazon Q", "isCorrect": false },
+      { "id": "D", "text": "SageMaker JumpStart + OpenSearch + API Gateway", "isCorrect": false }
+    ],
+    "explanation": { "correct": "All three requirements map directly to Bedrock features: Claude 3 = Bedrock model access, proprietary knowledge base = Bedrock Knowledge Bases (RAG), reservation API = Bedrock Agents (calls Lambda/APIs). All within the Bedrock platform.", "incorrect": "Fine-tuning doesn't provide real-time knowledge. Lex/Kendra/Q are separate services without the same integrated capabilities. JumpStart requires managing infrastructure.", "examTip": "Bedrock feature mapping: Need a specific FM → Model Access. Need company knowledge → Knowledge Bases. Need to take actions → Agents. Need safety → Guardrails. Often use all together.", "relatedTopics": ["Amazon-Bedrock", "Bedrock-Knowledge-Bases", "Bedrock-Agents", "FM-applications"] },
+    "metadata": { "examObjective": "Domain 3: FM applications", "references": ["https://aws.amazon.com/bedrock/"], "lastUpdated": "2024-01-15" }
+  }
+]

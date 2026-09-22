@@ -1,0 +1,397 @@
+{
+  "certificationId": "cissp",
+  "topicId": "asset-security",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "cissp-009",
+      "type": "single-choice",
+      "topicId": "asset-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which data classification label is typically used by the US government for information whose unauthorized disclosure could cause serious damage to national security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Confidential",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Secret",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Top Secret",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Sensitive",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Secret classification applies to information whose unauthorized disclosure could cause serious damage to national security.",
+        "incorrect": "Top Secret = exceptionally grave damage. Confidential = damage. Sensitive is not a formal government classification tier.",
+        "examTip": "US Gov levels: Top Secret (exceptionally grave) > Secret (serious) > Confidential (damage) > Unclassified.",
+        "relatedTopics": [
+          "data-classification",
+          "government-classification",
+          "asset-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Asset Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-010",
+      "type": "single-choice",
+      "topicId": "asset-security",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company stores customer credit card numbers in a database. The security team wants to protect the data so that even if the database is compromised, the actual card numbers cannot be used by an attacker.",
+      "questionText": "Which technique BEST achieves this goal while still allowing the application to process transactions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hashing the card numbers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Tokenization",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Steganography",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data masking",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Tokenization replaces sensitive data with a non-sensitive placeholder (token) that maps back to the real value in a secure token vault. It allows transaction processing without exposing actual card numbers.",
+        "incorrect": "Hashing is one-way and can't be used for transaction processing. Steganography hides data in media. Data masking obscures data for display but isn't used for live transaction processing.",
+        "examTip": "Tokenization is the PCI DSS-preferred method for protecting cardholder data in databases.",
+        "relatedTopics": [
+          "tokenization",
+          "PCI-DSS",
+          "data-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Asset Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-011",
+      "type": "yes-no-statements",
+      "topicId": "asset-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes data handling requirements.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Data owners are responsible for classifying data.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Data custodians are responsible for defining data classification levels.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Data processors handle data on behalf of the data controller.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "The data subject is the organization that collects personal data.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Data owners classify data. Data processors act on instructions of the controller. The data subject is the individual whose data is collected.",
+        "incorrect": "Custodians implement controls set by owners. Controllers (not subjects) collect and determine purposes for personal data.",
+        "examTip": "Owner = classifies and is accountable. Custodian = maintains and protects. Subject = the individual. Controller = organization collecting data.",
+        "relatedTopics": [
+          "data-ownership",
+          "GDPR",
+          "data-classification"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Asset Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-012",
+      "type": "single-choice",
+      "topicId": "asset-security",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An organization is decommissioning old hard drives that contained classified data. The drives are not functioning and cannot be wiped using software tools.",
+      "questionText": "Which media sanitization method is MOST appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Degaussing",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Overwriting with zeros",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Physical destruction (shredding)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Reformatting",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Physical destruction (shredding or disintegration) is the most appropriate method for non-functional drives containing classified data. It ensures no data can be recovered.",
+        "incorrect": "Degaussing works for magnetic media but may not be verifiable on modern drives. Overwriting requires a functional drive. Reformatting does not securely erase data.",
+        "examTip": "For non-functional classified media: destroy it. NIST 800-88 provides sanitization guidelines: Clear, Purge, Destroy.",
+        "relatedTopics": [
+          "media-sanitization",
+          "data-destruction",
+          "NIST-800-88"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Asset Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-060",
+      "type": "single-choice",
+      "topicId": "asset-security",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company is implementing a data lifecycle management program. They want to ensure that data is only retained for as long as it is needed for business or legal purposes.",
+      "questionText": "Which principle governs how long data should be retained?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data minimization",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Data retention policy",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Data classification",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data masking",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A data retention policy specifies how long different types of data must be kept based on business needs, legal requirements, and regulatory obligations.",
+        "incorrect": "Data minimization limits collection. Classification assigns sensitivity labels. Masking obscures sensitive fields.",
+        "examTip": "Data lifecycle: Create â†’ Store â†’ Use â†’ Share â†’ Archive â†’ Destroy. Retention policy governs the archive-to-destroy transition.",
+        "relatedTopics": [
+          "data-retention",
+          "data-lifecycle",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Asset Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-070",
+      "type": "single-choice",
+      "topicId": "asset-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "In the context of data security, what is the difference between data at rest and data in transit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data at rest is being processed; data in transit is stored",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Data at rest is stored; data in transit is actively moving across a network",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Data at rest is backed up; data in transit is in active use",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data at rest is classified; data in transit is unclassified",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data at rest = data stored in databases, files, storage media. Data in transit = data moving between systems over networks. Data in use = data being processed in memory.",
+        "incorrect": "Processing refers to data in use. Backup is a state of data at rest. Classification applies regardless of state.",
+        "examTip": "Three states: At rest (stored) = encrypt with AES. In transit (moving) = encrypt with TLS/IPSec. In use (processing) = DRM, secure enclaves.",
+        "relatedTopics": [
+          "data-states",
+          "data-at-rest",
+          "data-in-transit",
+          "encryption"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Asset Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-090",
+      "type": "single-choice",
+      "topicId": "asset-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which privacy concept gives individuals the right to have their personal data permanently deleted?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data portability",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Right to access",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Right to erasure (right to be forgotten)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Data minimization",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The right to erasure (Article 17 of GDPR) allows individuals to request deletion of their personal data when it's no longer necessary, when consent is withdrawn, or when it was unlawfully processed.",
+        "incorrect": "Data portability = receive your data in machine-readable format. Right to access = see what data is held. Data minimization = collect only necessary data.",
+        "examTip": "GDPR rights: Access, Rectification, Erasure, Portability, Objection, Restriction, Not subject to automated decisions.",
+        "relatedTopics": [
+          "GDPR",
+          "right-to-erasure",
+          "privacy",
+          "data-subject-rights"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Asset Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-098",
+      "type": "single-choice",
+      "topicId": "asset-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data remanence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The process of encrypting data before storing it",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Residual data that remains on storage media after deletion or formatting",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The backup copy of critical business data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data transmitted over an insecure channel",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data remanence is the residual representation of data that remains on storage media after deletion or formatting. This is why simply deleting files or reformatting is insufficient for secure disposal.",
+        "incorrect": "Encryption protects data in use/transit/rest. Backups are copies. Transmitted data is data in transit.",
+        "examTip": "To eliminate data remanence: overwrite (clear), degauss (for magnetic media), or physically destroy. NIST 800-88 provides guidance.",
+        "relatedTopics": [
+          "data-remanence",
+          "media-sanitization",
+          "secure-disposal"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Asset Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

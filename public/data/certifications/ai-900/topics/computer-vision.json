@@ -1,0 +1,731 @@
+{
+  "certificationId": "ai-900",
+  "topicId": "computer-vision",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "ai900-019",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is computer vision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A display technology for high-resolution monitors",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An area of AI that enables computers to interpret and understand visual information from images and videos",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Software that helps people with visual impairments use computers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A hardware component that improves graphics processing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Computer vision is the field of AI that trains computers to interpret visual information â€” identifying objects, people, text, and scenes in images and video.",
+        "incorrect": "This is not about display technology, accessibility software, or hardware components.",
+        "examTip": "Computer vision tasks: image classification, object detection, semantic segmentation, OCR, facial analysis, image generation.",
+        "relatedTopics": [
+          "computer-vision",
+          "image-recognition"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe computer vision workloads",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-020",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between image classification and object detection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Image classification identifies all objects in an image; object detection classifies the whole image",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Image classification assigns a label to the whole image; object detection identifies and locates multiple objects within an image with bounding boxes",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They are identical tasks with different names",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Object detection only works on video; image classification works on static images",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Image classification = what is this image? (one label for the whole image). Object detection = what objects are in this image and where are they? (multiple labels + bounding boxes).",
+        "incorrect": "These are distinct tasks. Object detection works on both images and video.",
+        "examTip": "Classification = 'this is a cat'. Detection = 'there is a cat at coordinates [x1,y1,x2,y2] and a dog at [x3,y3,x4,y4]'. Azure Custom Vision supports both.",
+        "relatedTopics": [
+          "image-classification",
+          "object-detection",
+          "computer-vision"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe computer vision tasks",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-021",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service provides pre-built computer vision capabilities including OCR, face detection, and image analysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Machine Learning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure AI Vision (formerly Computer Vision)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Cognitive Search",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Databricks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Vision (formerly Azure Computer Vision) provides pre-built APIs for image analysis, OCR (Read API), object detection, spatial analysis, and image description.",
+        "incorrect": "Azure ML = custom model training. Cognitive Search = search indexing. Databricks = data processing.",
+        "examTip": "Azure AI Vision features: Image Analysis (tags, objects, description), OCR (Read API for text extraction), Face (face detection/analysis), Custom Vision (train custom models).",
+        "relatedTopics": [
+          "Azure-AI-Vision",
+          "computer-vision-services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Vision",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-022",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A retail company wants to build a system that detects when specific products are out of stock on shelves using store cameras.",
+      "questionText": "Which Azure service is MOST appropriate for training a custom model for this use case?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Language",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Custom Vision",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Speech",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Cognitive Search",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Custom Vision allows you to train custom image classification or object detection models with your own labelled images â€” perfect for product detection on store shelves.",
+        "incorrect": "Language = text NLP. Speech = audio. Cognitive Search = document search. Custom Vision is specifically for custom image tasks.",
+        "examTip": "Pre-built vision = Azure AI Vision (general tasks). Custom vision = Azure Custom Vision (train your own model on custom images). Both require no ML expertise.",
+        "relatedTopics": [
+          "Azure-Custom-Vision",
+          "object-detection",
+          "retail-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure computer vision services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-023",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is OCR (Optical Character Recognition) used for in computer vision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Recognising and identifying human faces in images",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Extracting and digitising printed or handwritten text from images and documents",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting and classifying objects in images",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Generating descriptive captions for images",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "OCR converts images of text (printed or handwritten) into machine-readable digital text â€” used for scanning documents, reading invoices, digitising forms, and extracting text from photos.",
+        "incorrect": "Face recognition = Azure Face. Object detection = Azure AI Vision. Image captioning = Azure AI Vision describe feature.",
+        "examTip": "Azure AI Vision Read API = OCR for documents and images. Azure Document Intelligence (Form Recognizer) = structured document extraction (invoices, receipts, forms).",
+        "relatedTopics": [
+          "OCR",
+          "text-extraction",
+          "document-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe OCR",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-024",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Azure service uses computer vision to analyse and index video content, extracting insights like transcripts, speakers, labels, and key frames?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Vision",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Video Indexer",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Media Services",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Custom Vision",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Video Indexer uses AI to extract rich insights from video â€” transcription, speaker identification, face detection, object labelling, key scenes, topics, and sentiment.",
+        "incorrect": "Azure AI Vision = static image analysis. Media Services = video streaming/encoding. Custom Vision = custom image classification/detection.",
+        "examTip": "Video Indexer = AI insights from video content (transcripts, faces, labels, emotions). Powered by multiple Azure AI services behind the scenes.",
+        "relatedTopics": [
+          "Azure-Video-Indexer",
+          "video-AI",
+          "computer-vision"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe computer vision services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-045",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure Document Intelligence (formerly Form Recognizer)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A tool for creating and editing Word documents in Azure",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An AI service that extracts structured data from documents like invoices, receipts, contracts, and forms",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A search engine for finding documents in SharePoint",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A service for managing document permissions in Azure Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Document Intelligence uses AI to automatically extract key-value pairs, tables, and structured data from documents â€” supporting invoices, receipts, ID documents, health insurance cards, tax forms, and custom document types.",
+        "incorrect": "It's for AI-powered data extraction, not document editing, search, or permissions.",
+        "examTip": "Document Intelligence pre-built models: Invoice, Receipt, ID Document, Business Card, Tax Form (W-2), Health Insurance Card. Custom models for unique formats.",
+        "relatedTopics": [
+          "Azure-Document-Intelligence",
+          "OCR",
+          "document-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Vision services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-050",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company wants to ensure their public-facing website does not display images that contain nudity, violence, or other offensive content uploaded by users.",
+      "questionText": "Which Azure service should be used to automatically moderate uploaded images?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Custom Vision",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure AI Content Safety",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Vision image analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Document Intelligence",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Content Safety is designed for content moderation â€” it detects adult content, violence, hate, and self-harm in both text and images, returning severity scores that can trigger moderation actions.",
+        "incorrect": "Custom Vision trains custom classifiers. AI Vision does image analysis but not content moderation specifically. Document Intelligence handles document data extraction.",
+        "examTip": "Content Safety = content moderation (hate, violence, sexual, self-harm). Severity levels 0-6 for each category. Integrate into upload pipelines to auto-moderate.",
+        "relatedTopics": [
+          "Azure-AI-Content-Safety",
+          "content-moderation",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-056",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is semantic segmentation in computer vision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Classifying the entire image with a single label",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Detecting objects with bounding boxes",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Assigning a class label to every pixel in an image to identify regions belonging to different categories",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Extracting text from images using OCR",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Semantic segmentation classifies every pixel in an image â€” for example, in an autonomous driving scene, each pixel is labelled as road, car, pedestrian, building, or sky.",
+        "incorrect": "Whole image label = classification. Bounding boxes = object detection. Text extraction = OCR. Segmentation is pixel-level classification.",
+        "examTip": "Vision tasks: Classification (image label) â†’ Detection (bounding boxes) â†’ Semantic Segmentation (pixel labels) â†’ Instance Segmentation (individual object masks).",
+        "relatedTopics": [
+          "semantic-segmentation",
+          "computer-vision",
+          "image-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe computer vision tasks",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-057",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure AI service can detect, identify, and analyse human faces in images?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Vision Image Analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure AI Face",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Custom Vision",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Document Intelligence",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Face provides face detection (locate faces), face analysis (age estimate, emotion, accessories, blur, exposure), face verification (are these the same person?), and face identification (who is this person from a known group).",
+        "incorrect": "Image Analysis provides general image tagging. Custom Vision = custom classifiers. Document Intelligence = document data extraction.",
+        "examTip": "Azure AI Face: Detection, Analysis, Verification (1:1 compare), Identification (1:N find in group). Note: facial recognition features require approved access (limited access).",
+        "relatedTopics": [
+          "Azure-AI-Face",
+          "facial-recognition",
+          "computer-vision"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Face",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-058",
+      "type": "yes-no-statements",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Azure computer vision services.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure AI Vision can generate descriptive captions for images automatically.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Custom Vision requires thousands of training images to build any model.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Document Intelligence can extract data from structured forms like tax documents.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "OCR in Azure AI Vision can only read printed text, not handwriting.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "AI Vision generates captions. Document Intelligence handles structured forms. Custom Vision works well with as few as 15-50 images per class. Azure AI Vision Read API supports both printed and handwritten text.",
+        "incorrect": "Custom Vision doesn't need thousands of images. The Read API supports handwritten text.",
+        "examTip": "Custom Vision minimum images: 15 per tag recommended (more = better accuracy). Read API: supports printed + handwritten in many languages.",
+        "relatedTopics": [
+          "Azure-AI-Vision",
+          "Custom-Vision",
+          "OCR",
+          "Document-Intelligence"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure computer vision",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-074",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A manufacturing company wants to automate quality control by detecting defects on products on an assembly line using cameras. Products have unique defect patterns specific to their factory.",
+      "questionText": "Which Azure service BEST supports building this custom defect detection model?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Vision (pre-built analysis)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Custom Vision",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Document Intelligence",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Language",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Custom Vision lets you train custom object detection or image classification models with your own labelled images â€” ideal for factory-specific defect patterns that pre-built models wouldn't recognise.",
+        "incorrect": "Pre-built AI Vision wouldn't know factory-specific defects. Document Intelligence handles documents. Language handles text.",
+        "examTip": "Manufacturing AI = Custom Vision (visual quality control), Azure ML (predictive maintenance), Azure AI Vision (general scene analysis). Custom Vision = your specific objects.",
+        "relatedTopics": [
+          "Azure-Custom-Vision",
+          "object-detection",
+          "manufacturing-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure computer vision services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-082",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is spatial analysis in Azure AI Vision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Analysing 3D spatial data from LiDAR sensors",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Analysing live video to understand the movement and presence of people in a physical space",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting the geographic location of where a photo was taken",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Measuring the physical dimensions of objects in an image",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Spatial analysis in Azure AI Vision processes live video streams to count people, detect when people enter zones, measure distance between people, and understand how people move through physical spaces.",
+        "incorrect": "It uses standard cameras, not LiDAR. It doesn't detect photo geolocation or measure physical dimensions.",
+        "examTip": "Spatial analysis use cases: retail foot traffic, social distancing monitoring, occupancy counting, queue length measurement. Requires edge device or Azure stack.",
+        "relatedTopics": [
+          "spatial-analysis",
+          "Azure-AI-Vision",
+          "video-analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Vision",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-087",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is image classification used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Identifying the location of multiple objects within an image",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Assigning one or more labels to an entire image to describe its content",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Extracting text from an image",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Enhancing the resolution of low-quality images",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Image classification assigns category labels to the whole image â€” 'this is a dog', 'this is a pizza', 'this X-ray shows pneumonia'. Multi-label classification can assign multiple labels.",
+        "incorrect": "Object location = object detection. Text extraction = OCR. Image enhancement = super-resolution. Classification is about labelling the whole image.",
+        "examTip": "Classification: one label per image. Multi-label: multiple labels per image. Detection: labels + locations. Azure Custom Vision supports both classification and detection.",
+        "relatedTopics": [
+          "image-classification",
+          "computer-vision",
+          "Custom-Vision"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe computer vision tasks",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-093",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A developer builds an app that allows users to take a photo of a plant and receive information about its species. The app must work for hundreds of plant species.",
+      "questionText": "Which Azure service and feature BEST supports this use case?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Vision Read API",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Custom Vision classification model trained on plant species images",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Language sentiment analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Face",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Custom Vision can be trained with labelled images of each plant species, building a custom image classifier that can identify the species from a new photo.",
+        "incorrect": "Read API = OCR (text in images). Language sentiment = text emotion. Face = human faces. Custom Vision is the tool for custom image classification.",
+        "examTip": "Custom Vision image classification: train with 15+ images per class, test with new images, publish model, call via REST API or SDK.",
+        "relatedTopics": [
+          "Azure-Custom-Vision",
+          "image-classification",
+          "mobile-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure computer vision services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

@@ -1,6 +1,54 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { ExamService } from '../ExamService';
 import type { Question } from '../../types';
+
+function makeQuestion(id: string): Question {
+  return {
+    id,
+    type: 'single-choice',
+    topicId: 't1',
+    difficulty: 'easy',
+    points: 1,
+    questionText: id,
+    options: [{ id: 'a', text: 'A', isCorrect: true }],
+    explanation: { correct: '', incorrect: '', examTip: '', relatedTopics: [] },
+    metadata: { examObjective: '', references: ['https://example.com'], lastUpdated: '' },
+  };
+}
+
+describe('ExamService.createSession', () => {
+  it('selects the requested number of unique questions without mutating the bank', () => {
+    const questions = ['q1', 'q2', 'q3', 'q4', 'q5'].map(makeQuestion);
+    const originalOrder = questions.map((question) => question.id);
+    const session = ExamService.createSession('az-900', questions, 60, 3);
+    const selectedIds = session.questions.map((question) => question.id);
+
+    expect(session.questions).toHaveLength(3);
+    expect(new Set(selectedIds).size).toBe(3);
+    expect(selectedIds.every((id) => originalOrder.includes(id))).toBe(true);
+    expect(questions.map((question) => question.id)).toEqual(originalOrder);
+  });
+
+  it('uses Fisher–Yates swaps for a predictable seeded shuffle', () => {
+    const randomValues = [0, 0, 0, 0];
+    vi.spyOn(Math, 'random').mockImplementation(() => randomValues.shift() ?? 0);
+
+    try {
+      const shuffled = ExamService.shuffleQuestions(['q1', 'q2', 'q3', 'q4']);
+      expect(shuffled).toEqual(['q2', 'q3', 'q4', 'q1']);
+    } finally {
+      vi.restoreAllMocks();
+    }
+  });
+
+  it('returns the whole bank when the requested count exceeds available questions', () => {
+    const questions = ['q1', 'q2'].map(makeQuestion);
+    const session = ExamService.createSession('az-900', questions, 60, 10);
+
+    expect(session.questions).toHaveLength(2);
+    expect(new Set(session.questions.map((question) => question.id)).size).toBe(2);
+  });
+});
 
 describe('ExamService.calculateQuestionPoints', () => {
   it('scores single-choice and true-false as 1/1', () => {

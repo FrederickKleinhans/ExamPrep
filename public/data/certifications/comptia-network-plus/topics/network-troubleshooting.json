@@ -1,0 +1,889 @@
+{
+  "certificationId": "comptia-network-plus",
+  "topicId": "network-troubleshooting",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "netplus-046",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "A user cannot connect to any network resources. The first step in troubleshooting should be to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Replace the network cable immediately",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Identify the problem by gathering information and checking the obvious first",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Escalate to the network team immediately",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Reinstall the network adapter drivers",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The CompTIA troubleshooting methodology starts with identifying the problem â€” gathering information, checking the obvious (is the cable plugged in? Is the NIC enabled?), and defining the scope before taking action.",
+        "incorrect": "Physical replacement, escalation, and driver reinstall are all premature before the problem is identified.",
+        "examTip": "CompTIA troubleshooting steps: 1.Identify 2.Establish theory 3.Test theory 4.Establish plan 5.Implement 6.Verify 7.Document.",
+        "relatedTopics": [
+          "troubleshooting-methodology",
+          "CompTIA",
+          "problem-identification"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting methodology",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-047",
+      "type": "ordering",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the CompTIA Network+ troubleshooting methodology steps in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify the problem",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Establish a theory of probable cause",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Test the theory to determine cause",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Establish a plan of action and implement",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Verify full system functionality",
+          "correctPosition": 5
+        },
+        {
+          "id": "o6",
+          "text": "Document findings and outcomes",
+          "correctPosition": 6
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "CompTIA's 6-step troubleshooting process: Identify â†’ Theory â†’ Test â†’ Plan/Implement â†’ Verify â†’ Document.",
+        "incorrect": "Documentation always comes last. Theory must come before testing.",
+        "examTip": "This methodology applies to all CompTIA exams (A+, Network+, Security+). Memorise all 6 steps in order.",
+        "relatedTopics": [
+          "troubleshooting-methodology",
+          "CompTIA"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting methodology",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-048",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A user reports intermittent connection drops on their PC. The network cable is plugged in and the link light is on. Other users on the same switch have no issues.",
+      "questionText": "What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The switch is overloaded",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Faulty network cable or NIC on the user's PC",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The DHCP server is down",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Incorrect VLAN configuration on the switch",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Since only one user is affected and others on the same switch are fine, the issue is isolated to that specific connection â€” most likely a faulty cable or failing NIC.",
+        "incorrect": "Switch overload would affect all users. DHCP failure would cause APIPA, not intermittent drops. VLAN misconfiguration would cause consistent failure, not intermittent.",
+        "examTip": "Intermittent = flaky cable, bad connector, duplex mismatch, or failing NIC. Replace the cable first â€” it's the cheapest and quickest fix.",
+        "relatedTopics": [
+          "cable-issues",
+          "NIC",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting physical issues",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-049",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A host has the IP address 169.254.10.5. What does this indicate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The host has been assigned a static IP address",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The host could not reach a DHCP server and self-assigned an APIPA address",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The host is on a different subnet from the rest of the network",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The host has a valid private IP address assigned by the router",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "169.254.x.x is the APIPA (Automatic Private IP Addressing) range. A host self-assigns an APIPA address when DHCP is unreachable, allowing only link-local communication.",
+        "incorrect": "Static IPs are manually configured. APIPA is not a static or valid routable address. Routers don't assign 169.254.x.x.",
+        "examTip": "169.254.x.x = DHCP failure. Check: DHCP server running? Cable connected? Switch port working? Correct VLAN? Is there a DHCP relay for cross-subnet?",
+        "relatedTopics": [
+          "APIPA",
+          "DHCP",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting IP issues",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-050",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "Users on a subnet report they can access resources on the local network but cannot reach the internet. Other subnets have normal internet access.",
+      "questionText": "What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DNS server is down",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The default gateway for the affected subnet is misconfigured or unreachable",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The ISP link is down",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The DHCP server is providing incorrect subnet masks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Local communication works (Layer 2/3 local routing OK) but internet fails â€” this points to a problem with the default gateway for that specific subnet. The gateway may be misconfigured, down, or filtering internet-bound traffic.",
+        "incorrect": "If DNS were down, users could still access resources by IP. ISP failure would affect all subnets. Incorrect subnet masks would break local communication too.",
+        "examTip": "Can reach local resources but not internet = default gateway issue. Check: gateway IP correct? Gateway responding to ping? Routing to internet from gateway?",
+        "relatedTopics": [
+          "default-gateway",
+          "routing",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting connectivity",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-051",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which tool is used to test whether a specific TCP or UDP port is open on a remote host?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ping",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "traceroute",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "nmap / port scanner",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "nslookup",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Nmap (Network Mapper) is a port scanner that tests which TCP/UDP ports are open, filtered, or closed on a remote host, useful for both troubleshooting and security assessments.",
+        "incorrect": "Ping tests ICMP reachability only. Traceroute maps the path. Nslookup tests DNS resolution.",
+        "examTip": "nmap -sS = TCP SYN scan. nmap -sU = UDP scan. nmap -A = aggressive (OS detection, version, scripts). Always get authorisation before scanning.",
+        "relatedTopics": [
+          "nmap",
+          "port-scanning",
+          "troubleshooting-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-052",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does the netstat command show on a host?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The ARP cache for the local network",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Active network connections, listening ports, and protocol statistics",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The DNS resolver cache",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The path packets take to a remote destination",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "netstat shows active TCP/UDP connections, ports the system is listening on, and network protocol statistics â€” useful for identifying unexpected connections or services.",
+        "incorrect": "ARP cache = arp -a. DNS cache = ipconfig /displaydns. Path to destination = traceroute.",
+        "examTip": "netstat -an = all connections with numbers. netstat -b (Windows) = shows which process owns each connection. Look for unexpected outbound connections.",
+        "relatedTopics": [
+          "netstat",
+          "troubleshooting-tools",
+          "active-connections"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-053",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A newly installed switch port shows the amber light instead of green. After checking, the admin discovers a duplex mismatch between the switch port and the connected device.",
+      "questionText": "What symptoms would a duplex mismatch MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complete loss of connectivity",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Slow performance, late collisions, and high error counts on the interface",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The port being placed into err-disabled state",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "VLAN traffic being blocked on the port",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A duplex mismatch (one side full-duplex, other half-duplex) causes late collisions, FCS errors, and very poor performance â€” the half-duplex side thinks collisions are occurring while the full-duplex side keeps transmitting.",
+        "incorrect": "Connectivity still exists but is degraded. Err-disable = BPDU Guard/port security violation. VLAN blocking = STP or access VLAN misconfiguration.",
+        "examTip": "Duplex mismatch symptoms: slow transfer speeds, late collisions in interface counters, high error rates. Fix: set both sides to auto-negotiate or force identical settings.",
+        "relatedTopics": [
+          "duplex-mismatch",
+          "interface-errors",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting physical issues",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-054",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A user can ping the default gateway but cannot resolve domain names. What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The default gateway is down",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "DNS server is unreachable or misconfigured",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The user's IP address is incorrect",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The network cable is faulty",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Successful gateway ping proves Layer 3 connectivity is working. DNS failure means the DNS server is unreachable, down, or the host has an incorrect DNS server configured.",
+        "incorrect": "Gateway is confirmed up. Incorrect IP would cause inability to reach even the gateway. Faulty cable would prevent the gateway ping.",
+        "examTip": "Troubleshoot DNS: ping by IP first (if that works, it's DNS). Use nslookup to test DNS resolution. Check DNS server IP in ipconfig /all.",
+        "relatedTopics": [
+          "DNS",
+          "troubleshooting",
+          "name-resolution"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting connectivity",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-055",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which tool is used to test the integrity and performance of copper network cables?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Optical power meter",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Cable tester / certifier",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Wi-Fi analyser",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Tone generator and probe",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A cable tester checks for continuity, wiring faults (opens, shorts, crossed pairs), and certifiers test against standards (Cat5e, Cat6) by measuring attenuation, NEXT, return loss, etc.",
+        "incorrect": "Optical power meter tests fibre. Wi-Fi analyser tests wireless. Tone generator traces cable paths (not test performance).",
+        "examTip": "Cable testing tools: Toner/probe (trace cable), Cable tester (basic continuity), Certifier (full performance testing). Use certifier for Cat6a installations.",
+        "relatedTopics": [
+          "cable-testing",
+          "troubleshooting-tools",
+          "copper-cable"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-056",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does it mean when a switch port LED is showing a solid amber/orange colour?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The port is operating normally at 100 Mbps",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The port is blocked by STP or is in an error state",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The port has PoE enabled",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The port is in half-duplex mode",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A solid amber/orange LED on a switch port typically indicates the port is blocked by Spanning Tree Protocol (STP) or is in an error/disabled state.",
+        "incorrect": "Normal operation = green. PoE state has its own indicator on some switches. Duplex mode is not indicated by colour.",
+        "examTip": "Switch port LEDs: Green = active/forwarding. Amber = STP blocked or err-disabled. Off = no link. Flashing green = activity.",
+        "relatedTopics": [
+          "STP",
+          "switch-LEDs",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting physical issues",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-079",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "After a power outage, a switch reboots and a port that was previously forwarding is now stuck in a blocking state even though it is the only uplink.",
+      "questionText": "What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The port's VLAN has been removed from the switch",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "STP has placed the port in blocking state due to a topology change",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The cable connecting to this port is faulty",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The port security violation mode is set to shutdown",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "After a reboot, STP recalculates the topology. If the port is not a designated or root port, STP may place it in blocking state. On single-uplink access switches, ensure PortFast or RSTP is configured to prevent this.",
+        "incorrect": "VLAN removal would cause all VLAN traffic to stop. A faulty cable wouldn't cause a blocking state (the link light would be off). Port security violation requires a MAC address trigger.",
+        "examTip": "Single uplink switch = enable PortFast on the uplink. Or use RSTP (802.1w) which converges in seconds vs 30-50 for classic STP.",
+        "relatedTopics": [
+          "STP",
+          "blocking-state",
+          "PortFast"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting switching issues",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-080",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does a high number of CRC errors on a switch interface typically indicate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High network utilisation",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Physical layer issues such as a faulty cable, bad connector, or duplex mismatch",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A routing loop in the network",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "VLAN misconfiguration",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "CRC (Cyclic Redundancy Check) errors indicate frames arrived with data corruption. This is typically caused by physical layer issues: bad cable, damaged connector, EMI interference, or duplex mismatch.",
+        "incorrect": "High utilisation causes drops/congestion, not CRC errors. Routing loops affect Layer 3. VLAN issues cause no traffic or wrong traffic.",
+        "examTip": "Interface error counters: CRC = physical/electrical problem. Late collisions = duplex mismatch. Input drops = buffer overflow (congestion).",
+        "relatedTopics": [
+          "CRC-errors",
+          "physical-layer",
+          "interface-statistics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting physical issues",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-081",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A user reports they can access websites by IP address but not by domain name.",
+      "questionText": "What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The user's firewall is blocking web traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "DNS resolution is failing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The default gateway is misconfigured",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The user's network cable is faulty",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Access by IP works (network routing is fine) but by name fails â€” this isolates the problem to DNS. Either the DNS server is unreachable, has wrong records, or is misconfigured on the client.",
+        "incorrect": "If the firewall blocked web traffic, IP access would also fail. Default gateway = both would fail. Faulty cable = nothing would work.",
+        "examTip": "Classic Network+ question: works by IP, fails by name = DNS problem. Use nslookup to verify. Check DNS server IP in ipconfig /all.",
+        "relatedTopics": [
+          "DNS",
+          "name-resolution",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting connectivity",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-091",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "Two hosts in the same VLAN cannot communicate with each other. Both show correct IP addresses on the same subnet. The switch shows both ports as active and forwarding.",
+      "questionText": "What should the admin check NEXT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Check the routing table on the router",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Verify both ports are in the same VLAN on the switch",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Check if the DHCP server is running",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Replace the network cables on both hosts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Same subnet, ports forwarding, but can't communicate â€” the most likely cause is that the ports are actually in different VLANs on the switch, even though the IPs appear correct. Check 'show vlan brief' on the switch.",
+        "incorrect": "Routing is Layer 3 (same subnet = no routing needed). DHCP is already assigned (IPs are correct). Cables would cause link failures, not shown.",
+        "examTip": "Same subnet, no comms, ports up = VLAN mismatch. Check switch VLAN assignments first. 'show vlan brief' on Cisco shows which ports are in which VLAN.",
+        "relatedTopics": [
+          "VLAN",
+          "troubleshooting",
+          "Layer-2"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting switching",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-097",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A wireless client shows full signal bars but cannot connect to the network or obtain an IP address. Other wireless clients nearby connect successfully.",
+      "questionText": "What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The AP is overloaded with too many clients",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The client's wireless NIC driver or settings are misconfigured",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The SSID is hidden",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The AP is too far away",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Full signal but no connection on one device when others work indicates a client-side issue â€” NIC driver, security settings mismatch (wrong password/certificate), or adapter configuration issue.",
+        "incorrect": "AP overload would affect all clients. Hidden SSID would prevent connection attempt entirely. Distance = weak signal, not full bars.",
+        "examTip": "Wireless troubleshooting: Check if signal is strong (AP issue ruled out). Then check client credentials, drivers, IP configuration, and whether the device connects to other networks.",
+        "relatedTopics": [
+          "wireless-troubleshooting",
+          "DHCP",
+          "client-connectivity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting wireless",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-098",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A network admin runs traceroute and sees that packets reach a certain hop and then all subsequent hops show '* * *'. What does this indicate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The destination host is offline",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A routing loop exists in the network",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A device is blocking ICMP TTL-exceeded messages, or traffic is being dropped beyond that point",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "The network is congested beyond that hop",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Asterisks in traceroute output mean no ICMP TTL-exceeded reply was received. This can mean a firewall is blocking ICMP, the router is not responding to ICMP, or packets are being dropped beyond that point.",
+        "incorrect": "Offline destination would show the last hop before the destination as * * *. A loop would show repeated hops. Congestion shows high latency, not silence.",
+        "examTip": "* * * in traceroute = ICMP blocked or dropped. Try traceroute with TCP (tcptraceroute) to bypass ICMP filtering. Check if the last responding hop is a firewall.",
+        "relatedTopics": [
+          "traceroute",
+          "ICMP-filtering",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-100",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A help desk ticket states: 'I can browse the internet fine, but I cannot connect to our company's internal file server by hostname. I CAN connect to it using its IP address directly.'",
+      "questionText": "What is the MOST precise diagnosis and recommended fix?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The file server is offline; restart it",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Internal DNS is not resolving the file server's hostname; check the internal DNS A record and DNS server configuration",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The user's default gateway is incorrect; update it",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The file server's firewall is blocking ICMP; disable it",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Internet works (external DNS and routing OK). IP access works (network path OK). Hostname fails = internal DNS problem. The internal DNS server may be missing or have an incorrect A record for the file server.",
+        "incorrect": "Server is online (accessible by IP). Default gateway is fine (internet works). ICMP/firewall is irrelevant since IP access works.",
+        "examTip": "Works by IP, fails by name = DNS. For internal resources: check internal DNS server A records. Use nslookup server-name to test. Verify client has correct DNS server IP.",
+        "relatedTopics": [
+          "DNS",
+          "internal-DNS",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting connectivity",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

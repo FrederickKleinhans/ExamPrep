@@ -2,15 +2,26 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import { Download, Upload, Trash2, AlertTriangle, Sun, Moon } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { ProgressService } from '../services/ProgressService';
+import { DataLoader } from '../services/DataLoader';
 import { usePreferences } from '../store/usePreferences';
 import { useTheme } from '../store/useTheme';
+import { useAuth } from '../store/useAuth';
+import { requiresAuthForCert } from '../lib/guestGuard';
+import { AuthModal } from '../components/AuthModal';
+import { SupportAccessModal } from '../components/SupportAccessModal';
+import { hasSupportUnlock } from '../lib/certAccess';
+import { CareerTrack } from '../types';
 
 export function SettingsPage() {
-  const { manifest, progress, initialize, isLoading, selectCertification, refreshProgress, hasActiveSession } = useStore();
+  const { manifest, progress, initialize, isLoading, selectCertification, selectTrack, refreshProgress, hasActiveSession } = useStore();
   const { analyticsEnabled, toggleAnalytics, debugMode, toggleDebugMode } = usePreferences();
   const { theme, toggle: toggleTheme } = useTheme();
+  const { user } = useAuth();
   const [showResetConfirm, setShowResetConfirm] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [supportCertId, setSupportCertId] = useState<string | null>(null);
   const [pendingCertId, setPendingCertId] = useState<string | null>(null);
+  const [tracks, setTracks] = useState<CareerTrack[]>([]);
   const [importStatus, setImportStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const fileInputRef = useRef<HTMLInputElement>(null);
   const resetTriggerRef = useRef<HTMLButtonElement>(null);
@@ -20,6 +31,16 @@ export function SettingsPage() {
   useEffect(() => {
     if (!manifest) initialize();
   }, [manifest, initialize]);
+
+  useEffect(() => {
+    let cancelled = false;
+    void DataLoader.loadTracks().then((loadedTracks) => {
+      if (!cancelled) setTracks(loadedTracks);
+    }).catch(() => {
+      console.warn('[SettingsPage] Failed to load track metadata for certification selection');
+    });
+    return () => { cancelled = true; };
+  }, []);
 
   // Move focus into modal on open; restore on close
   useEffect(() => {
@@ -103,20 +124,51 @@ export function SettingsPage() {
     setShowResetConfirm(false);
   };
 
+  const findTrackForCertification = (certId: string): string | undefined => {
+    const currentTrack = tracks.find((track) =>
+      track.id === progress.selectedTrackId &&
+      track.levels.some((level) => level.certs.some((cert) => cert.certId === certId)),
+    );
+    if (currentTrack) return currentTrack.id;
+
+    return tracks.find((track) =>
+      track.levels.some((level) => level.certs.some((cert) => cert.certId === certId)),
+    )?.id;
+  };
+
+  const selectCertAndTrack = async (certId: string) => {
+    const trackId = findTrackForCertification(certId);
+    if (trackId) {
+      await selectTrack(trackId);
+    }
+    await selectCertification(certId);
+  };
+
   const handleCertChangeRequest = (newCertId: string) => {
     if (newCertId === '' || newCertId === progress.selectedCertification) return;
+
+    // Guest trying to switch to a second cert — require sign-in first
+    if (requiresAuthForCert(!!user, newCertId, progress)) {
+      setShowAuthModal(true);
+      return;
+    }
+    if (!hasSupportUnlock(newCertId)) {
+      setSupportCertId(newCertId);
+      return;
+    }
+
     // If a study or exam session is in progress, require confirmation —
     // switching certs will wipe the in-flight session.
     if (hasActiveSession()) {
       setPendingCertId(newCertId);
     } else {
-      void selectCertification(newCertId);
+      void selectCertAndTrack(newCertId);
     }
   };
 
   const confirmCertSwitch = () => {
     if (pendingCertId) {
-      void selectCertification(pendingCertId);
+      void selectCertAndTrack(pendingCertId);
     }
     setPendingCertId(null);
   };
@@ -197,7 +249,6 @@ export function SettingsPage() {
           )}
         </div>
       </Section>
-
       {/* Preferences */}
       <Section title="Preferences" titleId="prefs-section-title">
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -248,6 +299,25 @@ export function SettingsPage() {
           </div>
         </button>
       </div>
+
+      {/* Auth modal — shown when guest tries to switch to a second cert */}
+      {showAuthModal && <AuthModal onClose={() => setShowAuthModal(false)} />}
+      {supportCertId && (
+        <SupportAccessModal
+          certId={supportCertId}
+          certName={manifest.certifications.find((cert) => cert.id === supportCertId)?.name ?? supportCertId}
+          onClose={() => setSupportCertId(null)}
+          onUnlocked={() => {
+            const targetCertId = supportCertId;
+            setSupportCertId(null);
+            if (hasActiveSession()) {
+              setPendingCertId(targetCertId);
+            } else {
+              void selectCertAndTrack(targetCertId);
+            }
+          }}
+        />
+      )}
 
       {/* Reset confirmation modal — with focus trap, focus management, aria-labelledby, Escape */}
       {showResetConfirm && (

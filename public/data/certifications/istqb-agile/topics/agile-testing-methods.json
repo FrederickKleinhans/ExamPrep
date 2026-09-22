@@ -1,0 +1,1669 @@
+{
+  "certificationId": "istqb-agile",
+  "topicId": "agile-testing-methods",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "istqb-agile-026",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Test-Driven Development (TDD)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Writing all test cases before the project starts and executing them at the end",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A development practice where tests are written before the production code, guiding the design and implementation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A technique for driving the development team using test metrics",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Running automated regression tests before deploying to production",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "TDD follows the Red-Green-Refactor cycle: write a failing test (Red), write minimal code to make it pass (Green), then refactor the code while keeping tests passing.",
+        "incorrect": "TDD is a story-level micro-cycle, not a project-level activity. It's about developer workflow, not metrics or deployment gating.",
+        "examTip": "TDD cycle: Red (write failing test) â†’ Green (write minimal code to pass) â†’ Refactor (clean up). Drives clean, testable design. Primarily unit test level.",
+        "relatedTopics": [
+          "TDD",
+          "Red-Green-Refactor",
+          "unit-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 TDD",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-027",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Acceptance Test-Driven Development (ATDD)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An extension of TDD where unit tests are used for acceptance testing",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A collaborative practice where the whole team defines acceptance tests before development to create a shared understanding of requirements",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A process where customers perform acceptance testing after every sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Automated deployment driven by acceptance test results",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ATDD involves business, developers, and testers collaboratively defining acceptance tests (in the form of examples or scenarios) before development begins â€” creating a shared understanding and executable specifications.",
+        "incorrect": "ATDD is not unit testing. It involves the whole team, not just customers. It's not about deployment automation.",
+        "examTip": "ATDD = collaborative requirements + acceptance tests before coding. BDD is an implementation of ATDD using Given/When/Then format. Both improve shared understanding.",
+        "relatedTopics": [
+          "ATDD",
+          "BDD",
+          "acceptance-testing",
+          "collaboration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 ATDD",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-028",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Behaviour-Driven Development (BDD) and what format are its scenarios written in?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A testing framework that focuses on the behaviour of individual code units; scenarios are written in programming language syntax",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A collaborative development approach where scenarios are expressed in Given/When/Then format to describe expected system behaviour",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A performance testing approach that describes user behaviour under load",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A test management framework using case-based reasoning",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "BDD extends ATDD by using a natural language format (Given/When/Then â€” Gherkin syntax) to describe system behaviour as executable specifications that all stakeholders can understand.",
+        "incorrect": "BDD is not unit testing, performance testing, or case-based reasoning.",
+        "examTip": "BDD format: Given [precondition], When [action], Then [expected outcome]. Tools: Cucumber, SpecFlow, Behave. Creates living documentation.",
+        "relatedTopics": [
+          "BDD",
+          "Given-When-Then",
+          "Gherkin",
+          "Cucumber"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 BDD",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-029",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of a BDD scenario written in correct Given/When/Then format?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Test: user_login. Steps: enter username, enter password, click login. Expected: dashboard displayed.",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Given the user has valid credentials, When they submit the login form, Then they should be redirected to the dashboard.",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "As a user, I want to log in so that I can access my account.",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Verify that login works with valid username and password.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Option B correctly uses the Given (precondition), When (action/event), Then (expected outcome) BDD format for expressing system behaviour.",
+        "incorrect": "Option A is a traditional test case format. Option C is a user story format. Option D is a vague test objective without Given/When/Then structure.",
+        "examTip": "BDD = Given/When/Then. Multiple Whens and Thens use 'And'. Background = shared Given steps. Scenario Outline = parameterised scenarios.",
+        "relatedTopics": [
+          "BDD",
+          "Given-When-Then",
+          "scenario-writing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 BDD",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-030",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the difference between TDD, ATDD, and BDD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are three names for the same practice",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "TDD = developer unit tests; ATDD = team-defined acceptance tests; BDD = behaviour scenarios in natural language bridging business and technical perspectives",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "TDD = manual testing; ATDD = automated testing; BDD = performance testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "TDD is for testers, ATDD for business analysts, BDD for developers",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "TDD focuses at the unit/code level (developer-facing). ATDD focuses at the story/acceptance level (whole team). BDD extends ATDD with natural language (Given/When/Then) to improve collaboration between business and technical team members.",
+        "incorrect": "They are distinct practices at different levels. TDD is developer-focused, not tester-focused. None of them map to manual/automated/performance testing.",
+        "examTip": "Progression: TDD (code level, developer) â†’ ATDD (story level, team) â†’ BDD (natural language, bridges business and tech). All support shift-left.",
+        "relatedTopics": [
+          "TDD",
+          "ATDD",
+          "BDD",
+          "comparison"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 TDD/ATDD/BDD",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-031",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a task board (information radiator) in an Agile team?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To display the team's performance metrics to management",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To provide the team with real-time, highly visible information about sprint progress and blockers",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To track individual developer productivity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To replace all formal status reporting to stakeholders",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Information radiators (task boards, burndown charts) make work visible to the entire team â€” showing what's in progress, blocked, or done â€” enabling self-organisation and quick identification of issues.",
+        "incorrect": "Task boards are for the team's benefit, not management surveillance or tracking individual productivity.",
+        "examTip": "Information radiators: task board (stories/tasks), burndown chart (remaining work), test results dashboard. Visible to whole team and stakeholders.",
+        "relatedTopics": [
+          "information-radiator",
+          "task-board",
+          "transparency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Agile testing tools",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-032",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does a burndown chart show in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number of defects found per sprint over time",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The remaining work versus time, showing progress toward completing the sprint or release goal",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The team's velocity trend across sprints",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The cost burn rate of the project against budget",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A burndown chart plots remaining work (story points or hours) against time. An ideal burndown line shows linear progress toward zero by the end of the sprint or release.",
+        "incorrect": "Defect trends are shown in defect trend charts. Velocity is shown in velocity charts. Cost is shown in financial burndown charts â€” all different.",
+        "examTip": "Sprint burndown: remaining story points per day. Flat line = blocked. Rising line = more work added. Steep drop = high productivity or over-estimation.",
+        "relatedTopics": [
+          "burndown-chart",
+          "sprint-progress",
+          "information-radiator"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Agile metrics",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-033",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A team is using BDD with Cucumber. During a three amigos meeting, the business analyst, developer, and tester are defining scenarios for a new payment feature. They discover that the feature behaves differently for premium vs standard accounts.",
+      "questionText": "What is the BEST way to capture this in BDD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Write one generic scenario and add a comment explaining the difference",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Write separate scenarios or use a Scenario Outline with an Examples table to cover both account types",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Create a separate feature file for each account type",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Add the account type difference to a test plan document instead",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A Scenario Outline with an Examples table is the BDD way to run the same scenario with different data (premium vs standard). This keeps scenarios DRY and makes the differences explicit and executable.",
+        "incorrect": "Comments are not executable. Separate feature files are over-engineering. Test plan documents separate the specification from the executable tests.",
+        "examTip": "Scenario Outline + Examples table = parameterised BDD tests. Each row in the Examples table creates a separate test run. Keeps scenarios concise.",
+        "relatedTopics": [
+          "Scenario-Outline",
+          "Cucumber",
+          "BDD",
+          "three-amigos"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 BDD techniques",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-034",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a 'three amigos' meeting in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A daily standup for the three most senior team members",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A short meeting between a business analyst, developer, and tester to clarify a story and define examples before development",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A meeting between three Scrum teams to coordinate work",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A retrospective format involving three rounds of feedback",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The three amigos meeting brings together the business (BA/PO), developer, and tester to discuss a story from three perspectives â€” ensuring shared understanding, surfacing edge cases, and defining examples before coding begins.",
+        "incorrect": "It's a story-level collaboration meeting, not a daily standup, team coordination event, or retrospective format.",
+        "examTip": "Three amigos = BA + Dev + Tester. Prevents misunderstandings. Produces examples that can become BDD scenarios or acceptance criteria.",
+        "relatedTopics": [
+          "three-amigos",
+          "collaboration",
+          "story-refinement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Agile collaboration techniques",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-035",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is velocity in Agile and how is it useful for testing planning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The speed at which individual developers write code",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The average amount of work (story points) a team completes per sprint, used to forecast future sprint capacity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The number of test cases executed per day",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A measure of how quickly defects are resolved",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Velocity measures how many story points a team completes per sprint on average. Testers can use velocity to plan testing capacity â€” estimating how much testing can realistically fit in upcoming sprints.",
+        "incorrect": "Velocity is a team metric, not individual speed. It's not about test execution rate or defect resolution time.",
+        "examTip": "Velocity = team capacity predictor. Used for release forecasting. New teams need 3-5 sprints to establish a stable velocity.",
+        "relatedTopics": [
+          "velocity",
+          "sprint-planning",
+          "capacity-planning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Agile metrics",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-036",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the role of a tester in a DevOps/continuous delivery pipeline?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To perform manual testing gates before each deployment to production",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To design, build, and maintain automated test suites that run as quality gates in the CI/CD pipeline",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To manage the production deployment process",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To approve changes to the production environment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In DevOps, testers shift towards engineering â€” building automated test suites, defining quality gates in the pipeline, and collaborating on testing strategies that enable continuous, safe deployment.",
+        "incorrect": "Manual gates slow down continuous delivery. Deployment management and change approvals are operational roles, not primary tester responsibilities.",
+        "examTip": "DevOps tester: write automated tests, define pipeline quality gates, monitor production (testing in production), contribute to CI/CD pipeline design.",
+        "relatedTopics": [
+          "DevOps",
+          "CI-CD",
+          "automated-testing",
+          "quality-gates"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Testing tools in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-039",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 'test first' mean in Agile development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Running all tests before writing any code",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Writing automated tests or acceptance criteria before writing the production code they verify",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Prioritising testing tasks over development tasks in the sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Testing in production before releasing to all users",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Test first means writing the test/acceptance criteria before the code â€” as in TDD (write failing test, then code) or ATDD (define acceptance tests before development). It drives design and prevents misunderstanding.",
+        "incorrect": "Test first is a workflow principle, not a project sequencing rule. It's not about sprint priorities or production testing strategies.",
+        "examTip": "Test first = TDD at unit level, ATDD at story level. Both ensure testability and clear requirements before coding begins.",
+        "relatedTopics": [
+          "test-first",
+          "TDD",
+          "ATDD",
+          "shift-left"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Test-first approaches",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-040",
+      "type": "yes-no-statements",
+      "topicId": "agile-testing-methods",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Agile testing methods and tools.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A test automation framework should be maintained like production code â€” reviewed, refactored, and kept up to date.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "BDD scenarios should be written by the tester alone to ensure technical accuracy.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Pair testing (a developer and tester working together) can improve code quality and test coverage.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Once a test is automated, it never needs to be reviewed or updated.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Test automation code requires maintenance like production code. BDD scenarios should be written collaboratively (three amigos). Pair testing improves quality. Automated tests must be updated when requirements change.",
+        "incorrect": "BDD is collaborative by definition. Automated tests become outdated and must be maintained as the product evolves.",
+        "examTip": "Test automation debt: outdated tests, brittle tests, slow tests. Regular refactoring of the test suite is as important as maintaining production code.",
+        "relatedTopics": [
+          "test-automation",
+          "BDD",
+          "pair-testing",
+          "test-maintenance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Agile testing tools",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-043",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a spike in Agile development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A sudden increase in the number of defects reported",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A time-boxed investigation to reduce uncertainty in a technical or business problem before committing to a solution",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An emergency sprint to fix critical production defects",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A type of performance test that simulates sudden traffic spikes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A spike is a timeboxed research or prototyping activity used to gain knowledge needed to estimate or plan future work â€” reducing uncertainty before committing to a full implementation.",
+        "incorrect": "A spike is about learning, not defect response, emergency sprints, or performance testing.",
+        "examTip": "Technical spike = research a technology approach. Functional spike = prototype a feature concept. Output = knowledge/recommendation, not shippable product.",
+        "relatedTopics": [
+          "spike",
+          "research",
+          "uncertainty-reduction"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Agile concepts",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-045",
+      "type": "ordering",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the TDD (Test-Driven Development) cycle steps in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Write a failing test for the new functionality (Red)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Write the minimal production code to make the test pass (Green)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Refactor the code while keeping all tests passing",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Repeat for the next piece of functionality",
+          "correctPosition": 4
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "TDD Red-Green-Refactor: write failing test first (Red), implement minimal code to pass (Green), clean up the code (Refactor), then repeat.",
+        "incorrect": "Writing code before the test defeats the purpose of TDD â€” the test must drive the implementation.",
+        "examTip": "Red = test fails (expected â€” no code yet). Green = test passes (minimal code). Refactor = improve code quality. Never skip refactor.",
+        "relatedTopics": [
+          "TDD",
+          "Red-Green-Refactor",
+          "unit-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 TDD cycle",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-049",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a retrospective action item from a testing improvement perspective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To document what testing was completed in the sprint for the project record",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To commit to a specific, measurable improvement to the testing process that the team will implement in the next sprint",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To assign blame for testing failures in the previous sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To list all defects found in the sprint for management review",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Retrospective action items are concrete commitments to improve â€” for testing this might be: automate a specific regression test, add missing test environment, or implement a new testing technique.",
+        "incorrect": "Retrospectives are forward-looking improvements, not documentation, blame, or defect reporting sessions.",
+        "examTip": "Effective retro actions: specific, assigned to someone, timeboxed, and reviewed at the next retro. Avoid generic actions like 'improve communication'.",
+        "relatedTopics": [
+          "retrospective",
+          "continuous-improvement",
+          "testing-process"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Agile testing activities",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-051",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a Definition of Ready (DoR) in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To define when the sprint is ready to end",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To define the criteria a user story must meet before the team can commit to it in sprint planning",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To describe when the product is ready for release to production",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To define when testers are ready to start executing test cases",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Definition of Ready is a checklist of conditions a backlog item must meet before the team commits to it in sprint planning â€” typically: story is written, acceptance criteria defined, dependencies identified, and it's estimable.",
+        "incorrect": "DoR is about story readiness for sprint commitment, not sprint end, product release, or tester readiness.",
+        "examTip": "DoR = story must meet this before pulling into sprint. DoD = story must meet this before calling it complete. Both prevent quality issues.",
+        "relatedTopics": [
+          "Definition-of-Ready",
+          "sprint-planning",
+          "backlog-refinement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Agile concepts",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-054",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A team's automated test suite has a 15% false failure rate â€” 15% of test failures are not caused by actual defects but by test environment instability, timing issues, or flaky tests.",
+      "questionText": "What is the risk of a high false failure rate and what should the team do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No risk â€” false failures are expected and can be ignored",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It erodes trust in the test suite, causing developers to ignore failures. The team should investigate and fix flaky tests as a priority.",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Add more tests to compensate for the false failures",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Remove the failing tests from the CI pipeline until the environment is stable",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Flaky tests erode trust â€” when developers see failures they assume are false, they stop taking failures seriously and real defects get ignored. Fixing or quarantining flaky tests is critical to maintaining pipeline credibility.",
+        "incorrect": "False failures cannot be ignored. More tests worsen the problem. Removing failing tests hides the issue and reduces coverage.",
+        "examTip": "Flaky test management: quarantine flaky tests, investigate root cause (timing, environment, data), fix or delete them. Pipeline credibility depends on reliable results.",
+        "relatedTopics": [
+          "flaky-tests",
+          "test-reliability",
+          "CI-pipeline"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Test automation quality",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-056",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which tool category is most commonly used to support BDD in automated testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Load testing tools (e.g., JMeter, Gatling)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Behaviour specification frameworks (e.g., Cucumber, SpecFlow, Behave)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Static analysis tools (e.g., SonarQube)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Test case management tools (e.g., TestRail)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "BDD frameworks like Cucumber (Java/Ruby), SpecFlow (.NET), and Behave (Python) parse Gherkin Given/When/Then scenarios and execute them as automated tests, linking business language to code.",
+        "incorrect": "JMeter = performance. SonarQube = static code analysis. TestRail = test management. None support Given/When/Then scenario automation.",
+        "examTip": "BDD tools: Cucumber, SpecFlow, Behave, JBehave. Use Gherkin syntax. Scenarios become living documentation that's also executable.",
+        "relatedTopics": [
+          "BDD-tools",
+          "Cucumber",
+          "SpecFlow",
+          "Gherkin"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Agile testing tools",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-059",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is 'testing in production' and when might it be appropriate in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing performed by end users who discover bugs naturally",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Deliberate strategies like A/B testing, canary releases, and feature flags that validate behaviour with real users in the production environment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Skipping test environments and deploying directly to production to save time",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Having the QA team work in the production environment to test",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Testing in production includes deliberate techniques: A/B testing (compare variants), canary releases (gradual rollout), feature flags (selective enablement), and monitoring/observability â€” all used to validate real-world behaviour safely.",
+        "incorrect": "Testing in production is a deliberate strategy, not accidental, a shortcut, or physical access to production servers.",
+        "examTip": "Testing in production techniques: A/B testing, canary deployment, blue-green deployment, chaos engineering, synthetic monitoring. All require good observability.",
+        "relatedTopics": [
+          "testing-in-production",
+          "A-B-testing",
+          "canary-release",
+          "feature-flags"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Advanced Agile testing techniques",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-062",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 'living documentation' mean in the context of BDD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Documentation that is updated manually by the technical writer after each sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Executable BDD scenarios that serve as both automated tests and always up-to-date specification documentation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An online wiki that the team updates after each release",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A living document approach where requirements evolve with user feedback",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In BDD, Given/When/Then scenarios are both executable tests and specifications. When the tests pass, the documentation is accurate. They are 'living' because they automatically stay in sync with the system behaviour.",
+        "incorrect": "Living documentation in BDD context is about executable specifications, not manually maintained wikis or requirements evolution.",
+        "examTip": "BDD living documentation: scenarios = specs = tests. Tools like Cucumber + Serenity generate HTML reports showing which scenarios pass â€” always accurate documentation.",
+        "relatedTopics": [
+          "living-documentation",
+          "BDD",
+          "executable-specifications"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 BDD benefits",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-064",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a test coverage metric in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To guarantee that the software has no defects",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To indicate how much of the code, requirements, or risk areas are exercised by tests, helping the team identify gaps",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To measure individual tester productivity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To determine whether a story can be marked as done",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Test coverage metrics (code coverage, requirements coverage, risk coverage) help identify untested areas â€” not to guarantee quality, but to inform risk decisions about what has and hasn't been tested.",
+        "incorrect": "100% coverage doesn't guarantee no defects. Coverage is a team metric, not individual. DoD determines done status.",
+        "examTip": "Coverage types: code coverage (% of code executed), requirements coverage (% of requirements tested), risk coverage (% of risk areas addressed). All have limitations.",
+        "relatedTopics": [
+          "test-coverage",
+          "metrics",
+          "quality-indicators"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Agile metrics",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-067",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is continuous testing in a DevOps context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Having a tester continuously clicking through the application all day",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The practice of running automated tests at every stage of the software delivery pipeline to provide immediate risk feedback",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Writing new test cases continuously throughout the sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Continuously improving the test strategy document",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Continuous testing runs automated tests at every pipeline stage â€” from unit tests on commit, through integration and acceptance tests, to performance and security tests â€” providing risk assessment at each stage.",
+        "incorrect": "Continuous testing is about automated pipeline execution, not manual clicking, test writing, or documentation improvement.",
+        "examTip": "Continuous testing enables continuous delivery. Each pipeline stage provides a quality gate. Failed gate = fix before progressing, not skip and continue.",
+        "relatedTopics": [
+          "continuous-testing",
+          "DevOps",
+          "CI-CD-pipeline"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Continuous testing",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-071",
+      "type": "yes-no-statements",
+      "topicId": "agile-testing-methods",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes test automation best practices in Agile.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Automated tests should be independent of each other to prevent cascading failures.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "UI-level automated tests are the most efficient type because they test the complete system.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Test data management is a critical part of maintaining a reliable automated test suite.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "The goal of automation should be to replace all manual testing within 6 months.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Independent tests prevent cascading failures. Test data management prevents flakiness. UI tests are the least efficient (slow, brittle) â€” unit tests are most efficient. Automation complements, not replaces, manual testing â€” no fixed timeline.",
+        "incorrect": "UI tests are valuable but not the most efficient â€” they're slowest and most brittle. Automation doesn't replace all manual testing.",
+        "examTip": "Automation best practices: independent tests, manage test data, mock external dependencies, favour unit over UI tests for speed, maintain like production code.",
+        "relatedTopics": [
+          "test-automation",
+          "best-practices",
+          "test-independence"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Test automation",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-074",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a sprint testing board separate from the team's main task board?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To keep testers' work hidden from developers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To provide testers with their own workflow visibility showing stories ready for test, in test, blocked, and done",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To track defects found in previous sprints",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To replace the main team board for testing activities",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A testing board or testing swimlane gives testers visibility into their specific workflow, helping them manage their work in progress, identify bottlenecks, and communicate testing status transparently to the team.",
+        "incorrect": "The testing board is visible to the whole team. It's for workflow management, not defect tracking or replacement of the main board.",
+        "examTip": "Testing workflow states: Story Ready for Test â†’ In Test â†’ Defects Raised â†’ Fixed, Retest â†’ Done. Makes testing work visible and manageable.",
+        "relatedTopics": [
+          "testing-board",
+          "workflow-visibility",
+          "Kanban"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Agile testing tools",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-077",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between a mock and a stub in test automation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A mock and a stub are identical â€” both return pre-programmed responses",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A stub provides pre-programmed responses to calls; a mock additionally verifies that specific interactions occurred as expected",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A mock is for UI testing; a stub is for API testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A stub is more advanced than a mock because it can simulate complex behaviours",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A stub returns pre-defined responses to calls (state-based testing). A mock also records interactions and verifies they happened correctly â€” e.g., verifying a specific method was called with specific parameters (behaviour-based testing).",
+        "incorrect": "They are different test double types. Neither is limited by test layer. Mocks verify behaviour, stubs just provide data.",
+        "examTip": "Test doubles: Dummy, Fake, Stub (canned responses), Spy (records calls), Mock (verifies interactions). From simplest to most complex.",
+        "relatedTopics": [
+          "mocks",
+          "stubs",
+          "test-doubles",
+          "unit-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Test techniques",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-079",
+      "type": "dropdown-select",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each Agile Testing Quadrant to its correct description.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Technology-facing tests that support the team",
+          "options": [
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4"
+          ],
+          "correctAnswer": "Q1"
+        },
+        {
+          "id": "d2",
+          "prompt": "Business-facing tests that critique the product (e.g., exploratory, usability)",
+          "options": [
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4"
+          ],
+          "correctAnswer": "Q3"
+        },
+        {
+          "id": "d3",
+          "prompt": "Technology-facing tests that critique the product (e.g., performance, security)",
+          "options": [
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4"
+          ],
+          "correctAnswer": "Q4"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Q1=technology-facing/support team (unit, component tests). Q2=business-facing/support team (functional, story tests). Q3=business-facing/critique product (exploratory, usability). Q4=technology-facing/critique product (performance, security).",
+        "incorrect": "The quadrants are defined by two axes: business vs technology facing, and support team vs critique product.",
+        "examTip": "Agile Testing Quadrants axes: X=business vs technology facing; Y=support team vs critique product. All four quadrants are needed for complete test coverage.",
+        "relatedTopics": [
+          "Agile-Testing-Quadrants",
+          "test-categories",
+          "test-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Agile Testing Quadrants",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-083",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is contract testing and why is it valuable in microservices architectures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing that verifies service level agreements in production",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A testing approach where each service independently verifies that it can fulfil the expectations of its consumers, enabling independent deployment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A type of acceptance testing where business contracts define test cases",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "End-to-end testing that verifies all microservices work together",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Consumer-driven contract testing (e.g., Pact) lets each service verify it meets its consumers' expectations independently â€” without needing all services running simultaneously. This enables independent deployment in microservices.",
+        "incorrect": "Contract testing is about API compatibility, not SLAs, business contracts, or full integration tests. It's specifically valuable for reducing integration test dependencies.",
+        "examTip": "Consumer-driven contracts: consumer defines what it needs â†’ provider verifies it meets those needs. Tools: Pact, Spring Cloud Contract. Enables independent CI/CD per service.",
+        "relatedTopics": [
+          "contract-testing",
+          "microservices",
+          "consumer-driven-contracts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Advanced testing techniques",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-085",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a unit test in the context of TDD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A test that verifies an entire user story works end-to-end",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A fast, automated test that verifies the behaviour of a small, isolated piece of code (a function or method)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A test performed by the business unit to validate functionality",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A test that checks one unit of the complete application per sprint",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A unit test verifies a single function or method in isolation, running fast (milliseconds), with no external dependencies (mocked). They form the base of the test pyramid and are the primary output of TDD.",
+        "incorrect": "Unit tests are code-level, not story-level, business, or sprint-level. They test isolated code units, not integrated systems.",
+        "examTip": "Unit test properties: Fast, Isolated, Repeatable, Self-validating, Timely (F.I.R.S.T principles). Written by developers, run in CI on every commit.",
+        "relatedTopics": [
+          "unit-testing",
+          "TDD",
+          "test-pyramid"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 TDD and unit testing",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-090",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is 'specification by example' and how does it relate to Agile testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Writing detailed specifications before development begins",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Using concrete examples to illustrate requirements, which then become automated acceptance tests (the basis of ATDD/BDD)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Providing example test data to developers to guide their implementation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Creating example reports to show stakeholders what the finished product will look like",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Specification by example uses concrete, illustrative examples to clarify requirements. These examples are then converted into automated acceptance tests (ATDD/BDD), creating executable specifications that drive development.",
+        "incorrect": "Specification by example is a collaborative requirements technique that produces executable tests, not traditional specs, test data, or mockups.",
+        "examTip": "Specification by example = concrete examples â†’ acceptance tests â†’ working software. Examples eliminate ambiguity in requirements better than abstract descriptions.",
+        "relatedTopics": [
+          "specification-by-example",
+          "ATDD",
+          "BDD",
+          "executable-specifications"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Specification by example",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-092",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the role of test management tools in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To replace all informal communication between testers and developers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To track test cases, defects, test execution results, and coverage, providing visibility across the team and supporting decision-making",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To automatically generate test cases from user stories",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage sprint scheduling and resource allocation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Test management tools (Jira, TestRail, Zephyr, qTest) help teams organise test cases, track defects, view coverage, and report results â€” providing transparency without replacing the direct communication that Agile values.",
+        "incorrect": "Tools support communication but don't replace it. Automated test generation from stories is not standard. Sprint scheduling is Agile project management.",
+        "examTip": "Agile test tools: Jira (test + defect management), Confluence (documentation), TestRail (test case management), Zephyr/Xray (Jira test plugins). Tools support, not replace, collaboration.",
+        "relatedTopics": [
+          "test-management-tools",
+          "Jira",
+          "test-visibility"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Agile testing tools",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-095",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is 'technical excellence' in Agile and how does it relate to testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using the most advanced technology stack available for development",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Continuously applying good engineering practices (TDD, refactoring, code reviews, test automation) to maintain high code quality and enable sustainable delivery",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Hiring only senior engineers and testers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Following strict coding standards documented in the project handbook",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Technical excellence (XP principle, Agile principle 9) means continuously applying engineering best practices â€” TDD, refactoring, pair programming, CI â€” to keep the codebase clean and adaptable, enabling sustained agility.",
+        "incorrect": "Technical excellence is about practices and mindset, not technology choices, seniority, or documentation standards.",
+        "examTip": "Agile principle 9: 'Continuous attention to technical excellence and good design enhances agility.' Poor technical quality slows down future delivery.",
+        "relatedTopics": [
+          "technical-excellence",
+          "XP-practices",
+          "engineering-practices"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Agile principles",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-097",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a test automation pyramid's 'service/integration' layer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To test the user interface components of the application",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To test interactions between components, services, and APIs without a full end-to-end UI â€” faster than E2E but more realistic than unit tests",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To perform non-functional testing like load and security testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To test the integration of the development team with business stakeholders",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Integration/service tests verify how components work together (API calls, database interactions, service contracts) â€” more realistic than unit tests but much faster than UI/E2E tests. They form the middle layer of the pyramid.",
+        "incorrect": "UI testing is the top layer. Non-functional testing spans all layers. Team integration is a process concern, not a test type.",
+        "examTip": "Pyramid middle layer: API tests, service tests, integration tests. Fast, no browser needed. Good for: REST APIs, database CRUD, service interactions.",
+        "relatedTopics": [
+          "integration-testing",
+          "API-testing",
+          "test-pyramid"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Test levels",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-099",
+      "type": "single-choice",
+      "topicId": "agile-testing-methods",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is chaos engineering and how does it relate to Agile testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing performed in an unstructured, ad-hoc manner without any plan",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Deliberately injecting failures into a system to verify it can withstand real-world disruptions and recover gracefully",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Introducing random code changes to test the team's response time",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A technique for testing with chaotic or randomised test data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Chaos engineering (Netflix's Chaos Monkey) deliberately introduces failures (kill servers, inject latency, cut network connections) to test system resilience and recovery. It's a sophisticated Agile/DevOps testing technique for distributed systems.",
+        "incorrect": "Chaos engineering is deliberate and controlled, not unstructured. It's about system resilience, not code changes or random test data.",
+        "examTip": "Chaos engineering: break things on purpose in controlled conditions. Discover weaknesses before production incidents do. Requires mature monitoring and deployment practices.",
+        "relatedTopics": [
+          "chaos-engineering",
+          "resilience-testing",
+          "DevOps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Advanced testing techniques",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

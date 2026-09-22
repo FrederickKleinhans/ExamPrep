@@ -1,0 +1,738 @@
+{
+  "certificationId": "cissp",
+  "topicId": "security-ops",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "cissp-032",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the PRIMARY purpose of a vulnerability assessment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To exploit vulnerabilities to gain unauthorized access",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To identify and prioritize security weaknesses in systems",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To test the physical security of a facility",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To investigate a security incident after it has occurred",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A vulnerability assessment identifies, quantifies, and prioritizes security weaknesses so they can be remediated before attackers exploit them.",
+        "incorrect": "Exploiting vulnerabilities is penetration testing. Physical security testing is a separate activity. Post-incident investigation is forensics.",
+        "examTip": "Vulnerability assessment = find and rank weaknesses. Penetration test = find and exploit. Audit = measure compliance.",
+        "relatedTopics": [
+          "vulnerability-assessment",
+          "security-testing",
+          "penetration-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Assessment and Testing",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-033",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A penetration tester is given no information about the target organization's network before beginning the test.",
+      "questionText": "What type of penetration test is being performed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "White-box test",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Gray-box test",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Black-box test",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Crystal-box test",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A black-box test simulates an external attacker with no prior knowledge of the target. The tester must gather all information through reconnaissance.",
+        "incorrect": "White-box tests provide full knowledge (source code, network diagrams). Gray-box provides partial knowledge. Crystal-box is another term for white-box.",
+        "examTip": "Black = no knowledge (external attacker). Gray = partial knowledge (insider). White/Crystal = full knowledge (internal team).",
+        "relatedTopics": [
+          "penetration-testing",
+          "black-box",
+          "security-assessment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Assessment and Testing",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-034",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which metric in software security testing measures the percentage of code executed during testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Code review coverage",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Test coverage (code coverage)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Cyclomatic complexity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "MTBF (Mean Time Between Failures)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Code coverage (test coverage) measures the percentage of source code that is executed when the test suite runs, helping identify untested code paths.",
+        "incorrect": "Code review is manual inspection. Cyclomatic complexity measures code complexity. MTBF is a reliability metric.",
+        "examTip": "High code coverage doesn't guarantee security â€” you need quality tests that check for security conditions, not just execution paths.",
+        "relatedTopics": [
+          "code-coverage",
+          "security-testing",
+          "SAST"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Assessment and Testing",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-035",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which type of security audit involves independent auditors from outside the organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "First-party audit",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Second-party audit",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Third-party audit",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Internal audit",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Third-party audits are conducted by independent external auditors, providing the highest level of objectivity. Examples include SOC 2 Type II audits and ISO 27001 certification audits.",
+        "incorrect": "First-party = internal audit. Second-party = customer auditing a supplier. Third-party = independent external auditors.",
+        "examTip": "SOC 2 Type II is a common third-party audit for cloud service providers â€” demonstrates security controls effectiveness over time.",
+        "relatedTopics": [
+          "security-audit",
+          "SOC2",
+          "third-party-audit"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Assessment and Testing",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-036",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "During a security assessment, a tester discovers that a web application reflects user input directly in the page response without sanitization.",
+      "questionText": "Which vulnerability is MOST likely present?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SQL Injection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Cross-Site Scripting (XSS)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "CSRF",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Command Injection",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "When user input is reflected in the page response without sanitization, it creates a reflected XSS vulnerability â€” attackers can inject malicious scripts that execute in victims' browsers.",
+        "incorrect": "SQL injection targets database queries. CSRF tricks authenticated users into making unintended requests. Command injection targets OS commands.",
+        "examTip": "XSS = script injection into web pages. Stored XSS persists in DB. Reflected XSS is in the URL/response. DOM XSS manipulates the DOM.",
+        "relatedTopics": [
+          "XSS",
+          "web-security",
+          "OWASP-Top-10"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Assessment and Testing",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-046",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between an IDS and an IPS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "IDS encrypts traffic; IPS does not",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "IDS detects and alerts; IPS detects and actively blocks",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "IPS is passive; IDS is active",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "IDS operates at Layer 7; IPS operates at Layer 3",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IDS (Intrusion Detection System) monitors and alerts on suspicious activity. IPS (Intrusion Prevention System) monitors AND takes active action to block threats in real time.",
+        "incorrect": "IDS is passive (detect/alert). IPS is active (detect/block). Neither encrypts traffic. Both can operate at multiple layers.",
+        "examTip": "IDS = smoke detector (alerts you). IPS = sprinkler system (alerts and acts). IPS must be inline to block traffic.",
+        "relatedTopics": [
+          "IDS",
+          "IPS",
+          "network-monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Operations",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-047",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A forensic investigator is called to examine a compromised server. Before beginning the investigation, the investigator must ensure evidence is preserved properly.",
+      "questionText": "Which action should the investigator take FIRST?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Shut down the server immediately to preserve disk state",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Capture volatile data (RAM, running processes, network connections) before anything else",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Create a disk image of the hard drive",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Interview the system administrator",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Volatile data (RAM, running processes, active network connections, ARP cache) is lost when the system is powered off. It must be captured first according to the order of volatility.",
+        "incorrect": "Shutting down immediately destroys volatile evidence. Disk imaging can wait â€” disk data persists after shutdown. Interviews are important but not the first technical step.",
+        "examTip": "Order of volatility: RAM â†’ CPU cache â†’ network connections â†’ running processes â†’ disk â†’ remote/archival storage. Capture most volatile first.",
+        "relatedTopics": [
+          "digital-forensics",
+          "order-of-volatility",
+          "incident-response"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Operations",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-057",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the MAIN purpose of a Security Information and Event Management (SIEM) system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To prevent all security incidents from occurring",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To aggregate logs from multiple sources and correlate events to detect threats",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt data in transit across the network",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage user access rights and permissions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SIEM aggregates and correlates log data from multiple sources (firewalls, IDS, servers, applications) to provide real-time analysis, threat detection, and compliance reporting.",
+        "incorrect": "SIEM detects threats, it doesn't prevent them. Encryption is not a SIEM function. IAM manages access rights.",
+        "examTip": "SIEM = Security Information + Event Management. Key features: log aggregation, correlation, alerting, dashboards, compliance reports.",
+        "relatedTopics": [
+          "SIEM",
+          "log-management",
+          "threat-detection",
+          "SOC"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Operations",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-059",
+      "type": "ordering",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the steps of the digital forensics investigation process in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify and secure the scene",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Collect and preserve evidence (maintain chain of custody)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Examine and analyze the evidence",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Document findings and prepare report",
+          "correctPosition": 4
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Forensics order: Identify/secure â†’ Collect/preserve (chain of custody) â†’ Examine/analyze â†’ Document/report.",
+        "incorrect": "Chain of custody must be established during collection, before analysis. Documentation comes last.",
+        "examTip": "Chain of custody = documented record of who had evidence and when. Breaks in chain can make evidence inadmissible.",
+        "relatedTopics": [
+          "digital-forensics",
+          "chain-of-custody",
+          "evidence-collection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Operations",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-069",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An analyst detects that a compromised internal host is communicating with an external IP address at regular 10-minute intervals, sending small amounts of data.",
+      "questionText": "What type of malicious activity is MOST likely occurring?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Port scanning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Command and Control (C2) beaconing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Data exfiltration via FTP",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Brute force attack",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Regular periodic communications at fixed intervals from a compromised host to an external IP is the hallmark of C2 beaconing â€” malware checking in with its command and control server.",
+        "incorrect": "Port scanning is outbound probing of multiple ports/hosts. FTP exfiltration would show large data transfers. Brute force involves rapid authentication attempts.",
+        "examTip": "C2 beaconing = regular heartbeat to attacker's server. Look for: consistent timing, small payloads, outbound to unusual IPs.",
+        "relatedTopics": [
+          "C2-beaconing",
+          "malware",
+          "threat-hunting",
+          "IDS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Operations",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-074",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An organization wants to verify that its security controls are operating effectively, not just that they exist.",
+      "questionText": "Which assessment type BEST evaluates whether controls are working as intended?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vulnerability scan",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Control effectiveness assessment / SOC 2 Type II audit",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Asset inventory",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Penetration test",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A SOC 2 Type II audit (or control effectiveness assessment) tests whether controls actually worked over a period of time, not just whether they exist (Type I).",
+        "incorrect": "Vulnerability scans identify technical weaknesses. Asset inventories list assets. Penetration tests find exploitable vulnerabilities but don't measure all control effectiveness.",
+        "examTip": "SOC 2 Type I = controls exist (design). Type II = controls work over time (operational effectiveness). Type II is more valuable.",
+        "relatedTopics": [
+          "SOC2",
+          "control-effectiveness",
+          "audit",
+          "assurance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Assessment and Testing",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-080",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which concept describes the ability to prove that a specific user performed a specific action in a system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Authentication",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Authorization",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Accountability",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Availability",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Accountability links actions to a specific authenticated identity, enabled through audit logs and monitoring. It's what makes users responsible for their actions.",
+        "incorrect": "Authentication verifies identity. Authorization grants permissions. Availability ensures access. Accountability traces actions back to users.",
+        "examTip": "Accountability requires: identification + authentication + audit logging. Without all three, you can't prove who did what.",
+        "relatedTopics": [
+          "accountability",
+          "audit-logs",
+          "non-repudiation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Operations",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-084",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the MAIN difference between vulnerability scanning and penetration testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vulnerability scanning is manual; penetration testing is automated",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Vulnerability scanning identifies weaknesses; penetration testing actively exploits them",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Penetration testing only covers web applications",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Vulnerability scanning requires system downtime",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Vulnerability scanning discovers and enumerates weaknesses. Penetration testing goes further by actively exploiting vulnerabilities to demonstrate real-world impact.",
+        "incorrect": "Scanning is often automated. Pen testing covers all systems, not just web apps. Neither typically requires downtime.",
+        "examTip": "Vuln scan = find holes. Pen test = prove you can drive through them. Both are needed for a complete security program.",
+        "relatedTopics": [
+          "vulnerability-scanning",
+          "penetration-testing",
+          "security-assessment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Assessment and Testing",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-089",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a honeypot in network security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To encrypt sensitive data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To attract and study attacker behavior by simulating vulnerable systems",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To provide secure remote access for administrators",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To filter and block malicious network traffic",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A honeypot is a decoy system designed to attract attackers, allowing defenders to observe attack techniques, tools, and behaviors without risk to real systems.",
+        "incorrect": "Encryption is unrelated. VPNs/jump servers provide remote access. Firewalls/IPS filter traffic.",
+        "examTip": "Honeypot = decoy to attract and study attackers. Honeynet = network of honeypots. Legal consideration: entrapment laws may apply.",
+        "relatedTopics": [
+          "honeypot",
+          "threat-intelligence",
+          "deception-technology"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Operations",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-094",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A security analyst is investigating suspicious activity. The analyst needs to determine all systems that a compromised user account has accessed in the last 30 days.",
+      "questionText": "Which type of logs would be MOST useful for this investigation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Application error logs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Authentication and access logs (directory service / SIEM)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Network performance logs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Firewall drop logs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Authentication and access logs (from Active Directory, SIEM, or identity providers) record which systems a user authenticated to and when â€” directly answering the investigation question.",
+        "incorrect": "Error logs show application failures. Performance logs track resource usage. Firewall drops show blocked traffic, not successful access.",
+        "examTip": "For user activity investigation: authentication logs first, then access logs, then application logs. SIEM correlation helps tie events together.",
+        "relatedTopics": [
+          "audit-logs",
+          "SIEM",
+          "identity-investigation",
+          "forensics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Operations",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1012 @@
+{
+  "certificationId": "github-foundations",
+  "topicId": "github-features",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "github-031",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is GitHub Actions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A project management board for tracking issues",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A CI/CD and automation platform built into GitHub that runs workflows triggered by repository events",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A tool for reviewing and approving pull requests",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A service for hosting static websites",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Actions is a CI/CD and general automation platform. Workflows are defined in YAML files triggered by events (push, PR, schedule, manual) and run jobs on GitHub-hosted or self-hosted runners.",
+        "incorrect": "Project boards = GitHub Projects. PR reviews = pull request reviews. Static hosting = GitHub Pages.",
+        "examTip": "GitHub Actions: event â†’ workflow â†’ jobs â†’ steps. YAML files in `.github/workflows/`. Free minutes for public repos; limited for private.",
+        "relatedTopics": [
+          "GitHub-Actions",
+          "CI-CD",
+          "automation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Actions",
+        "references": [
+          "https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-032",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a GitHub Actions workflow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A pull request template for standardising contribution workflows",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A YAML file in `.github/workflows/` that defines automated processes triggered by GitHub events",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A visual diagram of the repository's branching strategy",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A checklist attached to issues to track completion steps",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A workflow is a YAML configuration file stored in `.github/workflows/` that defines one or more jobs that run automatically when triggered by events like `push`, `pull_request`, `schedule`, or `workflow_dispatch`.",
+        "incorrect": "PR templates are separate files. Branching diagrams are visual tools. Issue checklists are task lists.",
+        "examTip": "Workflow file structure: `on:` (triggers), `jobs:` (parallel/sequential steps), `steps:` (individual actions/commands). Stored in .github/workflows/.",
+        "relatedTopics": [
+          "GitHub-Actions",
+          "workflow-YAML",
+          "CI-CD"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Actions workflows",
+        "references": [
+          "https://docs.github.com/en/actions/using-workflows/about-workflows"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-033",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub Copilot?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An automated code deployment tool that ships code to production",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An AI pair programmer that suggests code completions, generates functions, and explains code in your IDE",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A code quality scanner that detects security vulnerabilities",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A tool for managing GitHub repositories from the command line",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Copilot is an AI coding assistant powered by OpenAI models. It provides code suggestions inline in IDEs (VS Code, JetBrains, Neovim), generates functions from comments, and includes Copilot Chat for Q&A.",
+        "incorrect": "Deployment = Actions/CD pipelines. Security scanning = Dependabot/CodeQL. CLI management = GitHub CLI (`gh`).",
+        "examTip": "GitHub Copilot features: inline suggestions, Copilot Chat, explain code, fix bugs, generate tests. Available in VS Code, JetBrains, Visual Studio, Neovim.",
+        "relatedTopics": [
+          "GitHub-Copilot",
+          "AI-coding",
+          "developer-productivity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Copilot",
+        "references": [
+          "https://docs.github.com/en/copilot"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-034",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub Codespaces?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A namespace management system for organising GitHub repositories",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A cloud-based development environment that lets you code in a browser or VS Code without local setup",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A feature for creating private workspaces for sensitive repositories",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A tool for managing deployment environments in GitHub Actions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Codespaces provides fully configured cloud development environments (based on VS Code) that spin up in seconds, with your repo code, extensions, and settings pre-configured.",
+        "incorrect": "Namespaces are a different concept. Codespaces is for development, not private workspace management or deployment environments.",
+        "examTip": "Codespaces: `devcontainer.json` configures the environment. Run in browser or connect with local VS Code. Billed by compute hours. Ideal for onboarding and consistency.",
+        "relatedTopics": [
+          "GitHub-Codespaces",
+          "cloud-development",
+          "devcontainer"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Codespaces",
+        "references": [
+          "https://docs.github.com/en/codespaces"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-035",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is GitHub Pages?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A documentation system for creating wiki pages within a repository",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A free static site hosting service that publishes content directly from a GitHub repository",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A feature for creating repository landing pages visible only to collaborators",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A paid service for hosting dynamic web applications on GitHub infrastructure",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Pages hosts static websites (HTML, CSS, JS) directly from a repository. Often used for project documentation, personal portfolios, and open source project sites. Supports Jekyll for static site generation.",
+        "incorrect": "Wikis are separate from Pages. Pages is public-facing (not collaborators-only). Pages is for static sites only â€” no server-side code.",
+        "examTip": "GitHub Pages URL: `username.github.io/repo-name`. Publish from `main`, `gh-pages` branch, or `/docs` folder. Supports custom domains.",
+        "relatedTopics": [
+          "GitHub-Pages",
+          "static-hosting",
+          "Jekyll"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Pages",
+        "references": [
+          "https://docs.github.com/en/pages"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-036",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub Packages?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A system for packaging GitHub repositories as zip files for distribution",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A package registry integrated with GitHub that supports npm, Maven, Docker, NuGet, and other package formats",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A billing feature for managing GitHub subscription packages",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A tool for managing dependencies in GitHub Actions workflows",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Packages is a package hosting service that lets you publish and consume packages (npm, Docker images, Maven, Gradle, NuGet, RubyGems) directly within GitHub alongside your code.",
+        "incorrect": "GitHub Packages is a registry service, not zip downloads, billing management, or Actions dependency management.",
+        "examTip": "GitHub Packages: host packages next to code. Authenticate with GITHUB_TOKEN. Supports: npm, Docker (Container Registry), Maven, Gradle, NuGet, RubyGems.",
+        "relatedTopics": [
+          "GitHub-Packages",
+          "package-registry",
+          "Docker"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Packages",
+        "references": [
+          "https://docs.github.com/en/packages"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-037",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Dependabot do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automatically merges pull requests when all checks pass",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Automatically detects outdated or vulnerable dependencies and creates pull requests to update them",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Monitors repository traffic and alerts on unusual access patterns",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Scans code for hardcoded secrets and credentials",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Dependabot scans repository dependency files (package.json, requirements.txt, etc.) for known vulnerabilities (security alerts) and outdated versions (version updates), automatically creating PRs to fix them.",
+        "incorrect": "Auto-merge = separate GitHub feature. Traffic monitoring = GitHub Insights. Secret scanning is a separate GitHub security feature.",
+        "examTip": "Dependabot features: Security alerts (CVE-based), Version updates (keeps deps current), automatic PRs. Configure in `.github/dependabot.yml`.",
+        "relatedTopics": [
+          "Dependabot",
+          "dependency-security",
+          "supply-chain"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub security features",
+        "references": [
+          "https://docs.github.com/en/code-security/dependabot"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-038",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub's secret scanning feature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Encrypts sensitive files in a repository",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Automatically detects accidentally committed secrets like API keys, tokens, and passwords in a repository",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Hides secret branches from non-collaborators",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Scans for malicious code submitted through pull requests",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Secret scanning automatically searches repository content for known secret patterns (API keys, tokens, credentials) from 100+ service providers and alerts repository owners or notifies the service provider.",
+        "incorrect": "File encryption is a separate concern. Secret scanning detects exposed secrets, doesn't hide branches or scan for malicious logic.",
+        "examTip": "Secret scanning: enabled by default for public repos, optional for private (GitHub Advanced Security). When detected: revoke immediately, rotate credentials.",
+        "relatedTopics": [
+          "secret-scanning",
+          "security",
+          "credentials"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub security features",
+        "references": [
+          "https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-039",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is CodeQL in GitHub?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A query language for searching GitHub repositories",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A static analysis engine that treats code as data to find security vulnerabilities",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A code quality metrics tool that measures lines of code and complexity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A database for storing code snippets and reusable functions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "CodeQL is GitHub's semantic code analysis engine. It queries code like a database, finding security vulnerabilities (SQL injection, XSS, buffer overflows) across many languages. Powers GitHub code scanning.",
+        "incorrect": "GitHub search uses Elasticsearch. CodeQL finds vulnerabilities, not metrics. It's not a snippet database.",
+        "examTip": "CodeQL = GitHub Advanced Security feature. Runs in Actions as code scanning. Finds OWASP Top 10 and more. Supports: JavaScript, Python, Java, C/C++, C#, Go, Ruby, Swift.",
+        "relatedTopics": [
+          "CodeQL",
+          "code-scanning",
+          "SAST"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub security features",
+        "references": [
+          "https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-040",
+      "type": "yes-no-statements",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes GitHub features.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "GitHub Actions workflows are stored as YAML files in the `.github/workflows/` directory.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "GitHub Codespaces requires installing VS Code locally to use.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "GitHub Copilot can generate code, explain existing code, and suggest fixes for bugs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Dependabot can only detect security vulnerabilities, not outdated dependency versions.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Actions workflows = .github/workflows/ YAML. Copilot = generates, explains, fixes code. Dependabot has both security alerts AND version updates. Codespaces works in browser â€” no local VS Code needed.",
+        "incorrect": "Codespaces runs in browser or optionally connects to local VS Code. Dependabot does both security AND version updates.",
+        "examTip": "Codespaces: browser (JetBrains, VS Code web) OR connect to desktop VS Code via extension. Both are supported.",
+        "relatedTopics": [
+          "GitHub-Actions",
+          "Codespaces",
+          "Copilot",
+          "Dependabot"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub features",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-057",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a GitHub Actions runner?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A developer who manually runs test suites",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A server that executes GitHub Actions workflow jobs",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A script that runs inside a Docker container",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A GitHub bot that comments on pull requests",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A runner is a server that picks up and executes GitHub Actions jobs. GitHub provides hosted runners (Ubuntu, Windows, macOS) or you can configure self-hosted runners.",
+        "incorrect": "Runners are automated servers, not people, scripts, or bots.",
+        "examTip": "GitHub-hosted runners: ubuntu-latest, windows-latest, macos-latest. Self-hosted: your own server, more control, can access private networks.",
+        "relatedTopics": [
+          "GitHub-Actions",
+          "runners"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Actions",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-058",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the GitHub Marketplace?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A store for purchasing GitHub subscription plans",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A platform for discovering and installing GitHub Apps, Actions, and developer tools",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A job board for developers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A repository for sharing open source packages",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Marketplace is a discovery platform for GitHub Apps (integrations like Slack, Jira) and GitHub Actions (reusable workflow components).",
+        "incorrect": "Subscriptions are managed in billing settings. Marketplace has tools, not jobs. Packages are in GitHub Packages.",
+        "examTip": "Marketplace: GitHub Apps (full integrations), Actions (workflow building blocks). Many popular Actions come from Marketplace: actions/checkout, actions/setup-node.",
+        "relatedTopics": [
+          "GitHub-Marketplace",
+          "GitHub-Apps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub ecosystem",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-059",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are GitHub Actions secrets used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hiding private repositories from public view",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Storing sensitive values like API keys and tokens that workflows need but should not be hardcoded",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Encrypting commit messages",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Creating hidden branches",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Actions secrets store sensitive values securely. They are encrypted, masked in logs, and accessible via `${{ secrets.SECRET_NAME }}` in workflows.",
+        "incorrect": "Secrets are for workflow credentials, not repository visibility, commit encryption, or hidden branches.",
+        "examTip": "Secret scopes: Repository, Environment (deployment), Organisation. Use fine-grained PATs and environment secrets for production deployments.",
+        "relatedTopics": [
+          "Actions-secrets",
+          "security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Actions security",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-063",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the `GITHUB_TOKEN` in GitHub Actions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A personal access token created manually for each workflow",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An automatically generated token with scoped permissions for each workflow run",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A deployment token stored in repository secrets",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A GitHub Enterprise licence key",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GITHUB_TOKEN is auto-created for each workflow run, scoped to the repository, and expires when the job completes. Used to interact with GitHub API, create PRs, comment on issues, push to repo.",
+        "incorrect": "It's automatic â€” no manual creation. Distinct from custom secrets.",
+        "examTip": "`${{ secrets.GITHUB_TOKEN }}` available in all workflows automatically. Default permissions are limited; configure write permissions explicitly when needed.",
+        "relatedTopics": [
+          "GITHUB_TOKEN",
+          "GitHub-Actions"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Actions security",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-064",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are GitHub Actions environments used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Different operating systems on GitHub-hosted runners",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Named deployment targets (staging, production) with protection rules, secrets, and approvals",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Development configurations for GitHub Apps",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Virtual environments for running Python or Node.js",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Environments define deployment targets with environment-specific secrets, required reviewers (manual approval gate), and wait timers â€” providing deployment protection.",
+        "incorrect": "Runner OS options are ubuntu/windows/macos. Environments are specifically for deployment protection.",
+        "examTip": "Environment protection rules: required reviewers, wait timer, branch filter. Use environment secrets for production credentials.",
+        "relatedTopics": [
+          "Actions-environments",
+          "deployment-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Actions",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-073",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Git LFS (Large File Storage)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A GitHub feature for storing large repositories in a separate data centre",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An extension that stores large files outside the Git repository, replacing them with lightweight pointers",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A compression algorithm that reduces file sizes before committing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "GitHub's paid storage tier for repositories over 5GB",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Git LFS replaces large files (videos, datasets, binaries) with small pointer files in the repo while storing actual content on an LFS server. Keeps the repository lean and fast to clone.",
+        "incorrect": "LFS is an open standard extension, not a data centre location, compression, or billing tier.",
+        "examTip": "Git LFS: track with `git lfs track '*.psd'`. Creates `.gitattributes` entry. Use for game assets, design files, datasets, compiled binaries.",
+        "relatedTopics": [
+          "Git-LFS",
+          "large-files"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub features",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-078",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a devcontainer (`devcontainer.json`) used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Configuring Docker containers for production deployment",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Defining a reproducible development environment for GitHub Codespaces and VS Code Dev Containers",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Specifying which container image GitHub Actions runners use",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Setting up GitHub Package registry container images",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "devcontainer.json defines the development container â€” base image, installed tools, VS Code extensions, port forwarding, startup commands. Used by Codespaces and VS Code Dev Containers.",
+        "incorrect": "devcontainer is for development environments, not production, Actions runners, or package publishing.",
+        "examTip": "devcontainer.json: `image`, `features` (add tools), `extensions` (VS Code), `postCreateCommand`. Ensures every developer has the same environment.",
+        "relatedTopics": [
+          "devcontainer",
+          "Codespaces"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Codespaces",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-082",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub's Insights feature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A tool for generating AI-powered code suggestions",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Analytics showing repository activity â€” commits, contributors, traffic, and more",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A security dashboard showing vulnerability alerts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A feature tracking which GitHub features your org uses most",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Insights provides analytics: Contributors graph, commit activity, code frequency, dependency graph, network, traffic (views, clones), and pulse.",
+        "incorrect": "AI suggestions = Copilot. Vulnerability alerts = Security tab.",
+        "examTip": "Insights tabs: Pulse, Contributors, Commits, Code frequency, Dependency graph, Network, Forks, Traffic.",
+        "relatedTopics": [
+          "GitHub-Insights",
+          "analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub features",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-087",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A team wants tests to run on every PR and deployment to staging only after PRs are merged to main.",
+      "questionText": "How would you configure this in GitHub Actions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "One workflow triggered on `push` with conditions for both",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Two workflows: one on `pull_request` for testing, one on `push` to `main` for deployment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A single manual workflow the team runs when needed",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Configure branch protection to run tests before PRs can be opened",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Best practice: separate workflows by concern. `on: pull_request` for CI tests. `on: push: branches: [main]` for deployment after merge.",
+        "incorrect": "A push-only workflow doesn't run on PRs. Manual workflows remove automation. Branch protection enforces checks but doesn't define them.",
+        "examTip": "Common triggers: `pull_request` (CI), `push` to main (deploy), `schedule` (nightly), `workflow_dispatch` (manual), `release` (publish).",
+        "relatedTopics": [
+          "GitHub-Actions",
+          "CI-CD",
+          "workflow-triggers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Configure GitHub Actions",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-089",
+      "type": "yes-no-statements",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes GitHub security features.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Secret scanning is enabled by default for all public repositories.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "CodeQL can only scan JavaScript and Python code.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Dependabot security alerts notify when dependencies have known CVEs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "GitHub Advanced Security features are available for free on all private repositories.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Secret scanning is default for public repos. Dependabot alerts = CVE-based. CodeQL supports many languages (JS, Python, Java, C/C++, C#, Go, Ruby, Swift). GHAS = paid feature for private repos.",
+        "incorrect": "CodeQL supports 8+ languages, not just JS/Python. GHAS requires a paid plan for private repos.",
+        "examTip": "GitHub Advanced Security (GHAS): CodeQL code scanning, secret scanning for private repos, dependency review. Free for public repos.",
+        "relatedTopics": [
+          "secret-scanning",
+          "CodeQL",
+          "Dependabot",
+          "GHAS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub security",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-096",
+      "type": "single-choice",
+      "topicId": "github-features",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub Copilot Chat?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A team messaging feature integrated into GitHub repositories",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An AI-powered conversational assistant for coding questions, code explanation, and debugging within the IDE",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A real-time chat for pull request discussions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "GitHub's customer support chat system",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Copilot Chat is a conversational AI interface in the IDE (VS Code, JetBrains) that answers coding questions, explains code, suggests fixes, generates tests, and helps understand error messages.",
+        "incorrect": "Copilot Chat is an AI coding assistant, not team messaging, PR discussions, or customer support.",
+        "examTip": "Copilot Chat commands: `/explain` (explain code), `/fix` (suggest fixes), `/tests` (generate tests), `/doc` (generate documentation). Ask in natural language.",
+        "relatedTopics": [
+          "GitHub-Copilot",
+          "Copilot-Chat",
+          "AI-coding"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Copilot",
+        "references": [
+          "https://docs.github.com/en/copilot"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

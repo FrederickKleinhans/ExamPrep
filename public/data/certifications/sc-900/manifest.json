@@ -1,0 +1,71 @@
+{
+  "id": "sc-900",
+  "name": "SC-900",
+  "provider": "Microsoft",
+  "examCode": "SC-900",
+  "version": "2024-01",
+  "questionCount": 100,
+  "passingScore": 70,
+  "timeLimitMinutes": 60,
+  "topics": [
+    {
+      "id": "security-concepts",
+      "name": "Security, Compliance & Identity Concepts",
+      "weight": 25
+    },
+    {
+      "id": "azure-ad",
+      "name": "Microsoft Entra ID & Identity",
+      "weight": 25
+    },
+    {
+      "id": "security-solutions",
+      "name": "Microsoft Security Solutions",
+      "weight": 30
+    },
+    {
+      "id": "compliance-solutions",
+      "name": "Microsoft Compliance Solutions",
+      "weight": 20
+    }
+  ],
+  "resources": [
+    {
+      "title": "SC-900 Exam Overview",
+      "url": "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+    }
+  ],
+  "vendor": "Microsoft",
+  "vendorColor": "#0078D4",
+  "level": "beginner",
+  "accessTier": "free",
+  "description": "Demonstrate foundational knowledge of security, compliance, and identity concepts across cloud-based and related Microsoft services.",
+  "examDetails": {
+    "durationMinutes": 60,
+    "questionCount": 40,
+    "passingScore": 70,
+    "priceUSD": 99
+  },
+  "topicChunks": [
+    {
+      "topicId": "security-concepts",
+      "path": "/data/certifications/sc-900/topics/security-concepts.json",
+      "questionCount": 24
+    },
+    {
+      "topicId": "azure-ad",
+      "path": "/data/certifications/sc-900/topics/azure-ad.json",
+      "questionCount": 24
+    },
+    {
+      "topicId": "security-solutions",
+      "path": "/data/certifications/sc-900/topics/security-solutions.json",
+      "questionCount": 31
+    },
+    {
+      "topicId": "compliance-solutions",
+      "path": "/data/certifications/sc-900/topics/compliance-solutions.json",
+      "questionCount": 21
+    }
+  ]
+}

@@ -90,7 +90,12 @@ async function findCertificationDirectories(directory) {
     const path = join(directory, entry.name);
     try {
       await readFile(join(path, 'certification.json'));
-      directories.push(path);
+      try {
+        await readFile(join(path, 'questions.json'));
+        directories.push(path);
+      } catch {
+        console.warn(`Skipping ${path}: certification.json exists but questions.json is missing.`);
+      }
     } catch {
       directories.push(...await findCertificationDirectories(path));
     }

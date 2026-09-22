@@ -1,0 +1,1024 @@
+{
+  "certificationId": "sc-900",
+  "topicId": "compliance-solutions",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "sc900-041",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the Microsoft Purview compliance portal used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing Azure virtual machine configurations",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Managing data governance, compliance, and risk across Microsoft 365 and Azure",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Monitoring network performance",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Creating and managing Azure subscriptions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Purview compliance portal is the unified platform for managing compliance, data governance, information protection, and risk management across Microsoft 365 services.",
+        "incorrect": "VM configuration = Azure Portal. Network monitoring = Azure Monitor. Subscriptions = Azure Portal.",
+        "examTip": "Purview umbrella covers: Compliance Manager, Information Protection, Data Loss Prevention, Insider Risk, eDiscovery, Audit.",
+        "relatedTopics": [
+          "Purview",
+          "compliance",
+          "data-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft Purview",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-042",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Compliance Manager help organizations do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deploy Azure resources in compliance with cost budgets",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Assess, track, and improve their compliance posture against regulatory standards",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Monitor user activity for insider threats",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Classify and label sensitive data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Compliance Manager provides a Compliance Score, pre-built assessments for regulations (GDPR, ISO 27001, HIPAA), and improvement actions to help organizations meet compliance requirements.",
+        "incorrect": "Cost budgets = Azure Cost Management. Insider threats = Purview Insider Risk Management. Data classification = Purview Information Protection.",
+        "examTip": "Compliance Manager â‰  Secure Score. Compliance Score = regulatory compliance. Secure Score = security best practices.",
+        "relatedTopics": [
+          "Compliance-Manager",
+          "compliance-score",
+          "regulatory-compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Compliance Manager",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-043",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft Purview Information Protection used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Protecting Azure virtual networks from external attacks",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Classifying and protecting sensitive data through labels and encryption",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Monitoring user sign-in activity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Detecting phishing emails",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Purview Information Protection enables organizations to discover, classify, label, and protect sensitive data (like PII, financial data) with sensitivity labels that apply encryption, watermarks, and access restrictions.",
+        "incorrect": "Network protection = Azure Firewall/NSGs. Sign-in monitoring = Entra ID/Sentinel. Phishing = Defender for Office 365.",
+        "examTip": "Sensitivity labels: Public, General, Confidential, Highly Confidential. Labels persist with the document wherever it goes.",
+        "relatedTopics": [
+          "Information-Protection",
+          "sensitivity-labels",
+          "data-classification"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Information Protection",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-044",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Purview Data Loss Prevention (DLP) do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Backs up data to prevent accidental loss",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Detects and prevents sharing of sensitive information outside the organization",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Recovers deleted emails",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encrypts all data in Azure Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DLP policies detect sensitive information (credit card numbers, SSNs, health records) in emails, documents, and chats, and prevent it from being shared externally or with unauthorized parties.",
+        "incorrect": "Backup = Azure Backup. Email recovery = Exchange retention policies. Storage encryption = Azure Storage service encryption.",
+        "examTip": "DLP works across Exchange, SharePoint, OneDrive, Teams, and endpoints. Policies match sensitive info types and take actions (block, warn, notify).",
+        "relatedTopics": [
+          "DLP",
+          "data-loss-prevention",
+          "Purview"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe DLP",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-045",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company needs to hold specific employee emails for legal proceedings without the users being aware. The legal team must be able to search and export this content.",
+      "questionText": "Which Microsoft Purview feature BEST supports this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sensitivity labels",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "eDiscovery and Legal Hold",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Data Loss Prevention",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Insider Risk Management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Purview eDiscovery with Legal Hold preserves content (emails, Teams chats, documents) from deletion for legal proceedings and allows authorized personnel to search and export it.",
+        "incorrect": "Sensitivity labels protect data in use. DLP prevents external sharing. Insider Risk detects risky behavior â€” none of these handle legal holds.",
+        "examTip": "eDiscovery workflow: Create case â†’ Add custodians â†’ Place on hold â†’ Search content â†’ Review â†’ Export.",
+        "relatedTopics": [
+          "eDiscovery",
+          "legal-hold",
+          "Purview",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe eDiscovery",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-046",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft Purview Insider Risk Management designed to detect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "External hacking attempts on Azure resources",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Risky or malicious activity by users within the organization",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Compliance gaps against external regulations",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Phishing emails targeting employees",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Insider Risk Management uses ML to detect potentially risky user behavior like mass file downloads, IP theft, policy violations, and data leakage by employees or contractors.",
+        "incorrect": "External hacking = Defender for Cloud/Sentinel. Regulatory compliance = Compliance Manager. Phishing = Defender for Office 365.",
+        "examTip": "Insider Risk Management uses signals from Microsoft 365 activity. Privacy-by-design: names are anonymized by default until investigation is escalated.",
+        "relatedTopics": [
+          "Insider-Risk",
+          "Purview",
+          "data-leakage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Insider Risk Management",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-047",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What are Microsoft Purview retention policies used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To retain employees for specific project durations",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To ensure content is kept for a required period and deleted after that period expires",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To retain Azure resource configurations",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To keep user passwords active for set periods",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Retention policies in Microsoft Purview ensure that content (emails, documents, Teams messages) is kept for the required minimum period for compliance and deleted when it's no longer needed.",
+        "incorrect": "This is about data retention â€” not HR, infrastructure, or passwords.",
+        "examTip": "Retention label vs. policy: Label = apply to specific content. Policy = apply broadly to locations (Exchange, SharePoint, OneDrive, Teams).",
+        "relatedTopics": [
+          "retention-policies",
+          "Purview",
+          "compliance",
+          "data-lifecycle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe retention policies",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-048",
+      "type": "yes-no-statements",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Microsoft Purview compliance solutions.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Sensitivity labels can be applied to emails, Office documents, and Teams messages.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Compliance Manager automatically implements remediation actions on your behalf.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Microsoft Purview Audit logs user and admin activity across Microsoft 365 services.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "DLP policies can only be applied to emails, not to Teams chats.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Sensitivity labels apply to many content types. Purview Audit logs activity. Compliance Manager provides guidance but admins take action. DLP covers Teams, SharePoint, OneDrive, Exchange, and endpoints.",
+        "incorrect": "Compliance Manager doesn't auto-remediate. DLP covers Teams too.",
+        "examTip": "Purview Audit has two tiers: Audit (Standard) and Audit (Premium) with longer retention and more events.",
+        "relatedTopics": [
+          "Purview",
+          "sensitivity-labels",
+          "DLP",
+          "audit"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-049",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Microsoft Purview feature allows organizations to understand, manage, and protect sensitive data across their entire data estate including multi-cloud and on-premises?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Compliance Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Purview Data Map",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "eDiscovery",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Insider Risk Management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Purview Data Map scans and catalogs data assets across Azure, AWS, on-premises, and SaaS to create a unified map of where sensitive data lives â€” enabling data governance at scale.",
+        "incorrect": "Compliance Manager handles regulatory compliance. eDiscovery is for legal holds/searches. Insider Risk focuses on user behavior.",
+        "examTip": "Purview Data Map = unified data catalog for governance. Scans data sources, classifies data, tracks lineage, and provides sensitivity insights.",
+        "relatedTopics": [
+          "Purview-Data-Map",
+          "data-governance",
+          "data-catalog"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview data governance",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-050",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of Microsoft Purview Communication Compliance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To block all external email communications",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To detect policy violations in internal and external communications like harassment or sensitive data sharing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To manage email routing rules",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To archive all employee communications",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Communication Compliance uses ML to detect communications that match policies for harassment, inappropriate content, regulatory violations, or sensitive data in Teams, Exchange, and third-party platforms.",
+        "incorrect": "Blocking external email = Exchange transport rules. Email routing = Exchange. Archiving = retention policies.",
+        "examTip": "Communication Compliance is used by regulated industries (finance, healthcare) to meet compliance requirements for monitoring employee communications.",
+        "relatedTopics": [
+          "Communication-Compliance",
+          "Purview",
+          "regulatory-compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-063",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Where can organizations find documentation about how Microsoft handles and protects their data in cloud services?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Security Center",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Service Trust Portal",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Resource Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft Defender XDR",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Microsoft Service Trust Portal provides access to audit reports, compliance guides, trust documents, and information about Microsoft's data protection practices and certifications.",
+        "incorrect": "Security Center = security posture. Resource Manager = Azure resource management. Defender XDR = threat detection.",
+        "examTip": "Service Trust Portal = transparency documents. Access SOC reports, ISO certifications, penetration test results, and compliance documentation there.",
+        "relatedTopics": [
+          "Service-Trust-Portal",
+          "compliance",
+          "transparency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe trust and privacy",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-064",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft's commitment to data privacy for customers using its cloud services?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft can use customer data to train its AI models without restriction",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft processes customer data only according to the customer's instructions and applicable law",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft shares customer data with government agencies by default",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Customers have no control over how Microsoft uses their data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft's privacy principles commit to processing customer data only as directed by the customer and in compliance with applicable laws. Customers own their data.",
+        "incorrect": "Microsoft does not use customer data to train AI without consent, does not share with governments by default, and customers retain data ownership and control.",
+        "examTip": "Microsoft Privacy Principles: Control, Transparency, Security, Strong legal protections, No content-based targeting, Benefits to customer.",
+        "relatedTopics": [
+          "privacy",
+          "data-ownership",
+          "Microsoft-Privacy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft privacy",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-069",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the difference between the Microsoft Compliance Score and Microsoft Secure Score?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They measure the same things with different scales",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Compliance Score measures regulatory compliance posture; Secure Score measures security best practices posture",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Secure Score measures compliance; Compliance Score measures security",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Compliance Score only covers GDPR; Secure Score covers all regulations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Compliance Score (in Compliance Manager) tracks progress against regulatory requirements. Secure Score (in Defender XDR/Defender for Cloud) tracks security configuration best practices.",
+        "incorrect": "They measure different things â€” one is regulatory, one is security hygiene.",
+        "examTip": "High Secure Score = good security practices. High Compliance Score = meeting regulatory requirements. Both are important but independent.",
+        "relatedTopics": [
+          "Compliance-Score",
+          "Secure-Score",
+          "compliance",
+          "security-posture"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe compliance and security scores",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-073",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Purview Audit provide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automated patching of security vulnerabilities",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A record of user and admin activities across Microsoft 365 for compliance and investigation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Real-time blocking of malicious emails",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Automated data classification",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Purview Audit captures and retains audit logs of user and admin activities (file access, email actions, configuration changes) across Microsoft 365 for security investigations and compliance.",
+        "incorrect": "Patching = patch management. Email blocking = Defender for Office 365. Data classification = Information Protection.",
+        "examTip": "Audit Standard = 90 days retention. Audit Premium = up to 1 year (or longer with add-ons). Premium also captures more event types.",
+        "relatedTopics": [
+          "Purview-Audit",
+          "audit-logs",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview Audit",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-077",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft Purview feature helps organizations identify and remediate risky activities like mass data downloads or sending data to personal email?",
+      "options": [
+        {
+          "id": "A",
+          "text": "eDiscovery",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Insider Risk Management",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Compliance Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data Loss Prevention",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Insider Risk Management detects risky user behaviors (data theft, IP exfiltration, policy violations) using ML on Microsoft 365 activity signals, helping identify potential insider threats.",
+        "incorrect": "eDiscovery = legal holds. Compliance Manager = regulatory compliance. DLP = prevents data leaving the org, but Insider Risk Management detects the behavioral pattern.",
+        "examTip": "Insider Risk = detect suspicious behavior patterns. DLP = block specific sensitive data sharing. Both work together for data protection.",
+        "relatedTopics": [
+          "Insider-Risk",
+          "data-exfiltration",
+          "Purview"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Insider Risk Management",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-080",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the Microsoft Trust Center?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A security dashboard in the Azure portal",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A public-facing resource with information about Microsoft's security, privacy, and compliance practices",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A tool for managing Azure Active Directory tenants",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A threat intelligence platform",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Microsoft Trust Center is a public website providing information about Microsoft's security, privacy, and compliance practices, helping customers make informed decisions about Microsoft cloud services.",
+        "incorrect": "Azure security dashboard = Defender for Cloud. AD tenant management = Entra admin center. Threat intelligence = Microsoft Defender Threat Intelligence.",
+        "examTip": "Trust Center = public transparency. Service Trust Portal = detailed audit reports. Both are about building customer trust.",
+        "relatedTopics": [
+          "Trust-Center",
+          "transparency",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe trust and privacy",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-084",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of sensitivity labels in Microsoft Purview Information Protection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To physically label printed documents with classification stamps",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To classify and protect digital content by applying encryption, access restrictions, and visual markings",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To label Azure resources for cost management",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To flag emails as spam",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sensitivity labels classify digital content (documents, emails) and enforce protection actions like encryption, header/footer/watermark, and access restrictions that travel with the content.",
+        "incorrect": "Labels are digital. Azure resource labels = tags (for cost management). Spam filtering = Defender for Office 365.",
+        "examTip": "Sensitivity labels persist with the file. Even if emailed or uploaded to personal storage, the label's encryption and restrictions remain.",
+        "relatedTopics": [
+          "sensitivity-labels",
+          "Information-Protection",
+          "data-classification"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Information Protection",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-089",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does the term 'data residency' mean in cloud computing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "How long data is retained before deletion",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The physical or geographic location where data is stored",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The process of encrypting data at rest",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The backup frequency for cloud data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data residency refers to the physical location (country or region) where data is stored. Many regulations (GDPR, local laws) require data to stay within specific geographic boundaries.",
+        "incorrect": "Data retention = how long. Encryption at rest = confidentiality control. Backup frequency = RPO/RTO planning.",
+        "examTip": "Microsoft allows customers to specify their data residency region when creating services. Paired regions keep backup data in the same geography.",
+        "relatedTopics": [
+          "data-residency",
+          "data-sovereignty",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe trust and privacy",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-093",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of Microsoft Purview Records Management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing employee performance records",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Managing high-value business and regulatory records with immutable retention and disposition",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Tracking security incidents",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Managing Azure resource configurations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Records Management handles high-value content that must be retained as immutable records for legal, regulatory, or business purposes, with controlled disposition when the retention period ends.",
+        "incorrect": "HR records = HR systems. Security incidents = Sentinel/Defender XDR. Azure resources = Azure Resource Manager.",
+        "examTip": "Records Management vs. Retention Policies: Records = immutable (can't be edited/deleted during retention). Retention policies = can retain but allow editing.",
+        "relatedTopics": [
+          "Records-Management",
+          "Purview",
+          "immutable-records",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview compliance solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-095",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the role of Microsoft Purview in a multi-cloud environment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It only governs data within Microsoft 365 services",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It provides unified data governance across Microsoft 365, Azure, AWS, and on-premises sources",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It manages virtual machines across cloud providers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It replaces third-party security tools in non-Microsoft clouds",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Purview Data Map can scan and catalog data assets across Azure, AWS S3, on-premises SQL, SAP, and other sources, providing unified governance across the entire data estate.",
+        "incorrect": "Purview is not limited to Microsoft 365. It doesn't manage VMs or replace third-party security tools.",
+        "examTip": "Purview Data Map scans: Azure Data Lake, Azure SQL, Amazon S3, on-prem SQL Server, Power BI, and many more.",
+        "relatedTopics": [
+          "Purview",
+          "multi-cloud",
+          "data-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview data governance",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-099",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A global financial services company needs to demonstrate to regulators that all Teams and Exchange messages related to financial transactions have been retained for 7 years and cannot be deleted by users.",
+      "questionText": "Which Microsoft Purview features BEST address this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sensitivity labels and DLP policies",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Retention policies with locked settings (Preservation Lock) and Records Management",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "eDiscovery and Legal Hold",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Compliance Manager assessments",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Retention policies with Preservation Lock make the policy immutable (regulators can verify it can't be weakened), and Records Management can declare content as immutable records that users cannot modify or delete.",
+        "incorrect": "Sensitivity labels protect access. Legal hold = specific litigation hold. Compliance Manager = tracking improvement actions â€” not enforcing retention.",
+        "examTip": "Preservation Lock = regulators can verify the policy can't be turned off or weakened. Required for SEC 17a-4, FINRA, and similar regulations.",
+        "relatedTopics": [
+          "Preservation-Lock",
+          "Records-Management",
+          "retention",
+          "regulatory-compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview compliance solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

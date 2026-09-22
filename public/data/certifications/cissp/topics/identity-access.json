@@ -1,0 +1,544 @@
+{
+  "certificationId": "cissp",
+  "topicId": "identity-access",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "cissp-026",
+      "type": "single-choice",
+      "topicId": "identity-access",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which access control model grants access based on the user's identity and the discretion of the resource owner?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mandatory Access Control (MAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Role-Based Access Control (RBAC)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Discretionary Access Control (DAC)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Attribute-Based Access Control (ABAC)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DAC allows the resource owner to grant or restrict access at their discretion. It's the most flexible but least secure model (common in commercial OS like Windows/Linux file systems).",
+        "incorrect": "MAC uses labels set by system administrators. RBAC assigns access based on roles. ABAC uses attributes and policies.",
+        "examTip": "DAC = owner controls access (flexible, least secure). MAC = system enforces labels (rigid, most secure). RBAC = roles. ABAC = attributes.",
+        "relatedTopics": [
+          "DAC",
+          "access-control",
+          "IAM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identity and Access Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-027",
+      "type": "single-choice",
+      "topicId": "identity-access",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A large enterprise wants to implement an access control system where a new employee's access rights are automatically determined by their job function and department, without requiring individual access approvals for each resource.",
+      "questionText": "Which access control model BEST meets this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DAC",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "MAC",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "RBAC",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Rule-Based Access Control",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RBAC assigns permissions to roles (job functions/departments), and users are assigned to roles. New employees automatically receive appropriate access based on their role without individual approvals.",
+        "incorrect": "DAC requires individual owner decisions. MAC uses classification labels. Rule-based uses automated rules about conditions, not job roles.",
+        "examTip": "RBAC = best for large organizations with clear job functions. Reduces administrative overhead significantly.",
+        "relatedTopics": [
+          "RBAC",
+          "IAM",
+          "access-control"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identity and Access Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-028",
+      "type": "single-choice",
+      "topicId": "identity-access",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the MAIN security risk of using Kerberos in a Windows Active Directory environment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kerberos does not support mutual authentication",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The KDC is a single point of failure and high-value target",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Kerberos tickets cannot be encrypted",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Kerberos only supports IPv4",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Key Distribution Center (KDC) in Kerberos is a single point of failure. If compromised, attackers can forge tickets (Golden Ticket attack) and access any resource in the domain.",
+        "incorrect": "Kerberos does support mutual authentication. Tickets are encrypted. Kerberos is not limited to IPv4.",
+        "examTip": "Kerberos weakness: KDC is SPOF. Golden Ticket attack = forged TGT using KRBTGT hash. Silver Ticket = forged service ticket.",
+        "relatedTopics": [
+          "Kerberos",
+          "Active-Directory",
+          "authentication",
+          "Golden-Ticket"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identity and Access Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-029",
+      "type": "single-choice",
+      "topicId": "identity-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which authentication factor category does a fingerprint scan belong to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Something you know",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Something you have",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Something you are",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Somewhere you are",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Biometric authentication (fingerprint, retina, face, voice) falls under 'something you are' â€” inherence factors.",
+        "incorrect": "Something you know = password/PIN. Something you have = token/smart card. Somewhere you are = geolocation.",
+        "examTip": "5 authentication factors: Know (password), Have (token), Are (biometric), Do (behavior), Where (location).",
+        "relatedTopics": [
+          "authentication-factors",
+          "biometrics",
+          "MFA"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identity and Access Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-030",
+      "type": "single-choice",
+      "topicId": "identity-access",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A cloud service provider claims their biometric authentication system has a False Acceptance Rate (FAR) of 0.001% and a False Rejection Rate (FRR) of 2%.",
+      "questionText": "What does the Crossover Error Rate (CER) represent in this context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The point where FAR equals FRR â€” used to compare biometric system accuracy",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The maximum number of failed authentication attempts allowed",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The rate at which the system rejects legitimate users",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The rate at which the system accepts unauthorized users",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "CER (also called Equal Error Rate/EER) is the point where FAR equals FRR. A lower CER indicates a more accurate biometric system.",
+        "incorrect": "CER is not a threshold for lockouts. FRR alone measures rejection of legitimate users. FAR alone measures acceptance of impostors.",
+        "examTip": "Lower CER = better biometric accuracy. FAR = security risk. FRR = usability issue.",
+        "relatedTopics": [
+          "biometrics",
+          "FAR",
+          "FRR",
+          "CER"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identity and Access Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-031",
+      "type": "yes-no-statements",
+      "topicId": "identity-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes IAM concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Provisioning is the process of creating and managing user accounts and access rights.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Single Sign-On (SSO) requires users to authenticate separately to each application.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Privileged Access Management (PAM) focuses on controlling access for highly privileged accounts.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Federated identity allows organizations to share identities only within the same company.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Provisioning manages account lifecycle. PAM controls privileged accounts. SSO allows one login for multiple systems. Federated identity allows identity sharing across organizations/domains.",
+        "incorrect": "SSO reduces authentication prompts. Federation explicitly enables cross-organizational identity sharing.",
+        "examTip": "SSO = one login, many apps. Federation = cross-org identity. PAM = privileged accounts. Provisioning = account lifecycle.",
+        "relatedTopics": [
+          "SSO",
+          "federation",
+          "PAM",
+          "provisioning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identity and Access Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-054",
+      "type": "single-choice",
+      "topicId": "identity-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which protocol is commonly used for federated identity management, allowing users to authenticate once and access multiple service providers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "LDAP",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SAML",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "RADIUS",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Diameter",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SAML (Security Assertion Markup Language) is an XML-based standard for exchanging authentication and authorization data between identity providers and service providers, enabling SSO and federation.",
+        "incorrect": "LDAP is a directory protocol. RADIUS is used for network access authentication. Diameter is RADIUS's successor for AAA.",
+        "examTip": "SAML = federation/SSO (XML-based). OAuth 2.0 = authorization delegation. OpenID Connect = authentication on top of OAuth.",
+        "relatedTopics": [
+          "SAML",
+          "SSO",
+          "federation",
+          "identity-provider"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identity and Access Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-064",
+      "type": "single-choice",
+      "topicId": "identity-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which access control concept ensures that user access rights are reviewed and updated periodically to prevent accumulation of unnecessary privileges?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Least privilege",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Access recertification (access review)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Separation of duties",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Need to know",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Access recertification (periodic access review) is the process of reviewing and revalidating user access rights at regular intervals to remove unnecessary privileges that accumulate over time (privilege creep).",
+        "incorrect": "Least privilege defines the principle. Access recertification enforces it over time. SoD divides duties. Need to know limits information access.",
+        "examTip": "Privilege creep = accumulation of access over time. Access recertification/review is the control that prevents it.",
+        "relatedTopics": [
+          "access-review",
+          "privilege-creep",
+          "least-privilege"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identity and Access Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-082",
+      "type": "single-choice",
+      "topicId": "identity-access",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A user successfully authenticates and receives a session token. An attacker intercepts this token and uses it to impersonate the user without knowing the password.",
+      "questionText": "What type of attack has occurred?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Brute force attack",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Session hijacking (session token theft)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Man-in-the-middle attack",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Credential stuffing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Session hijacking occurs when an attacker steals a valid session token and uses it to impersonate an authenticated user without needing credentials.",
+        "incorrect": "Brute force attacks guess passwords. MitM intercepts communications in real time (which could be used to steal a token, but the attack itself is session hijacking). Credential stuffing uses leaked credentials.",
+        "examTip": "Prevent session hijacking: use HTTPS, set Secure and HttpOnly flags on cookies, regenerate tokens after login, use short session timeouts.",
+        "relatedTopics": [
+          "session-hijacking",
+          "session-management",
+          "authentication"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identity and Access Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-087",
+      "type": "single-choice",
+      "topicId": "identity-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which standard protocol is used for delegated authorization, allowing a third-party application to access resources on behalf of a user without sharing credentials?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAML 2.0",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "OAuth 2.0",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Kerberos",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "LDAP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts without exposing passwords â€” used when apps request 'sign in with Google/Facebook'.",
+        "incorrect": "SAML handles authentication and SSO. Kerberos is a ticket-based authentication protocol. LDAP is a directory protocol.",
+        "examTip": "OAuth = authorization delegation (what can app do). OpenID Connect = authentication on top of OAuth (who are you). SAML = authentication + authorization for enterprise SSO.",
+        "relatedTopics": [
+          "OAuth",
+          "authorization",
+          "API-security",
+          "identity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identity and Access Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-093",
+      "type": "single-choice",
+      "topicId": "identity-access",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does MFA stand for and how does it improve security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Multi-Factor Authentication â€” requires multiple passwords",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Multi-Factor Authentication â€” requires two or more different authentication factor categories",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Managed Firewall Access â€” filters network traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Multi-Function Authorization â€” grants multiple permissions at once",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "MFA requires two or more authentication factors from different categories (know/have/are). Even if one factor is compromised, the attacker still cannot authenticate without the others.",
+        "incorrect": "Two passwords are the same factor category (know). MFA requires factors from different categories.",
+        "examTip": "MFA = two+ factor CATEGORIES, not just two items. Password + PIN = same category = not true MFA. Password + OTP token = MFA.",
+        "relatedTopics": [
+          "MFA",
+          "authentication-factors",
+          "identity-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identity and Access Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

@@ -1,0 +1,841 @@
+{
+  "certificationId": "ai-900",
+  "topicId": "ai-workloads",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "ai900-001",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following BEST describes artificial intelligence (AI)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Software that can only follow pre-programmed rules",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Systems that simulate human intelligence to perform tasks and improve from experience",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Hardware designed to process data faster than traditional computers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A database that stores large amounts of structured data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "AI refers to systems that simulate human cognitive functions â€” reasoning, learning, problem solving, and perception â€” to perform tasks that would normally require human intelligence.",
+        "incorrect": "Rule-based systems are not AI. Hardware speed is not AI. Databases store data but are not AI.",
+        "examTip": "AI > ML > Deep Learning. AI is the broad concept; ML is a subset; deep learning is a subset of ML using neural networks.",
+        "relatedTopics": [
+          "AI-concepts",
+          "machine-learning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe AI workloads",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-002",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the difference between AI, machine learning, and deep learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are three different names for the same technology",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AI is the broadest concept; machine learning is a subset of AI; deep learning is a subset of machine learning using neural networks",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Deep learning is the broadest; AI is the most specific",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Machine learning requires human supervision; AI and deep learning do not",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "AI is the overarching field. ML is AI that learns from data without being explicitly programmed. Deep learning is ML using multi-layered neural networks that can automatically learn features from raw data.",
+        "incorrect": "They are distinct but nested concepts â€” not synonyms, and not in the reverse order.",
+        "examTip": "Think of concentric circles: AI (outer) â†’ ML (middle) â†’ Deep Learning (inner). All deep learning is ML, all ML is AI.",
+        "relatedTopics": [
+          "AI",
+          "ML",
+          "deep-learning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe AI workloads",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-003",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which AI principle ensures that AI systems do not discriminate against individuals based on protected characteristics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reliability and safety",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fairness",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Transparency",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Inclusiveness",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fairness in AI ensures systems treat all people equitably and do not produce biased outcomes based on characteristics like gender, race, age, or disability.",
+        "incorrect": "Reliability = consistent, safe operation. Transparency = explainability. Inclusiveness = designed to benefit everyone. All are Microsoft Responsible AI principles but fairness specifically addresses discrimination.",
+        "examTip": "Microsoft Responsible AI principles: Fairness, Reliability & Safety, Privacy & Security, Inclusiveness, Transparency, Accountability.",
+        "relatedTopics": [
+          "responsible-AI",
+          "fairness",
+          "bias"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-004",
+      "type": "yes-no-statements",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Microsoft's Responsible AI principles.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Transparency means AI systems should be understandable, with explanations of how decisions are made.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Accountability means AI systems should operate autonomously without human oversight.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Privacy and security requires protecting personal data used in AI systems.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Inclusiveness means AI should only be designed for technical users.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Transparency = explainability. Privacy = data protection. Accountability = human oversight and responsibility â€” not autonomous operation. Inclusiveness = benefits everyone, not just technical users.",
+        "incorrect": "Accountability specifically requires human oversight. Inclusiveness targets all people, including those with disabilities.",
+        "examTip": "6 Responsible AI principles: Fairness, Reliability & Safety, Privacy & Security, Inclusiveness, Transparency, Accountability. Know each definition.",
+        "relatedTopics": [
+          "responsible-AI",
+          "Microsoft-AI-principles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI principles",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-005",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A hospital deploys an AI system to assist with diagnosis. Doctors want to understand why the system recommends a particular diagnosis so they can validate it.",
+      "questionText": "Which Responsible AI principle is MOST relevant to this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fairness",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Inclusiveness",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Transparency",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Reliability",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Transparency requires that AI systems be explainable â€” users should be able to understand how and why the system made a decision, especially in high-stakes domains like healthcare.",
+        "incorrect": "Fairness = no discrimination. Inclusiveness = accessible to all. Reliability = consistent performance. Transparency specifically addresses explainability.",
+        "examTip": "Healthcare + 'why did AI decide this' = Transparency. Financial decisions, medical diagnoses, and legal outcomes all require explainable AI.",
+        "relatedTopics": [
+          "transparency",
+          "explainability",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-006",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of an AI workload involving anomaly detection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Translating text from English to French",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Detecting unusual patterns in bank transactions that may indicate fraud",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Generating realistic images from text descriptions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Converting spoken words to written text",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Anomaly detection identifies unusual patterns that deviate from expected behaviour â€” fraud detection is a classic use case where the AI flags transactions that look different from a customer's normal spending patterns.",
+        "incorrect": "Translation = NLP. Image generation = generative AI. Speech to text = speech recognition.",
+        "examTip": "Anomaly detection use cases: fraud detection, manufacturing quality control, network intrusion detection, predictive maintenance.",
+        "relatedTopics": [
+          "anomaly-detection",
+          "AI-workloads"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identify AI workload scenarios",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-007",
+      "type": "dropdown-select",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each AI workload to its correct description.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Predicting whether a customer will cancel their subscription",
+          "options": [
+            "Regression",
+            "Classification",
+            "Clustering",
+            "Anomaly detection"
+          ],
+          "correctAnswer": "Classification"
+        },
+        {
+          "id": "d2",
+          "prompt": "Predicting the sale price of a house based on its features",
+          "options": [
+            "Regression",
+            "Classification",
+            "Clustering",
+            "Anomaly detection"
+          ],
+          "correctAnswer": "Regression"
+        },
+        {
+          "id": "d3",
+          "prompt": "Grouping customers by purchasing behaviour without predefined categories",
+          "options": [
+            "Regression",
+            "Classification",
+            "Clustering",
+            "Anomaly detection"
+          ],
+          "correctAnswer": "Clustering"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Classification = predict a category (yes/no, churn/no-churn). Regression = predict a numeric value (price, temperature). Clustering = group similar items without labels.",
+        "incorrect": "These are the three foundational ML task types. Know which to use for each scenario.",
+        "examTip": "Classification = labels/categories. Regression = numbers/values. Clustering = unsupervised grouping. Anomaly detection = finding outliers.",
+        "relatedTopics": [
+          "classification",
+          "regression",
+          "clustering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identify ML workload types",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-046",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which AI principle requires that AI systems operate consistently and safely, avoiding unintended harmful outcomes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fairness",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Transparency",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Reliability and Safety",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Inclusiveness",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Reliability and Safety ensures AI systems perform as intended consistently, fail gracefully, and are designed to avoid harmful unintended consequences â€” especially critical in safety-critical applications.",
+        "incorrect": "Fairness = no discrimination. Transparency = explainability. Inclusiveness = accessible to all.",
+        "examTip": "Reliability & Safety applies to: autonomous vehicles, medical devices, critical infrastructure. AI must be tested thoroughly before deployment in high-stakes environments.",
+        "relatedTopics": [
+          "reliability-safety",
+          "responsible-AI",
+          "AI-principles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI principles",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-055",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company wants to use AI to predict when factory equipment is likely to fail, so maintenance can be scheduled before a breakdown occurs.",
+      "questionText": "What type of AI workload is this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Anomaly detection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Predictive maintenance (regression/classification)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Computer vision",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Natural language processing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Predictive maintenance uses ML to predict equipment failure before it happens, based on sensor readings, usage patterns, and historical failure data â€” enabling proactive maintenance scheduling.",
+        "incorrect": "Anomaly detection finds outliers in real-time. Computer vision = image/video analysis. NLP = text/speech. Predictive maintenance uses regression (time to failure) or classification (will it fail?)",
+        "examTip": "Predictive maintenance = IoT sensors + ML = predict failures. Classic Industry 4.0 AI use case. Uses regression or binary classification models.",
+        "relatedTopics": [
+          "predictive-maintenance",
+          "AI-workloads",
+          "regression"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identify AI workload scenarios",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-062",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of a content moderation AI workload?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Predicting customer churn",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Automatically detecting and filtering inappropriate content posted by users on a social platform",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Translating product descriptions to multiple languages",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Generating personalised product recommendations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Content moderation uses AI to automatically review and filter user-generated content â€” detecting hate speech, nudity, violence, or spam to keep platforms safe and compliant.",
+        "incorrect": "Churn prediction = classification. Translation = NLP. Recommendations = recommender systems. Content moderation is its own AI workload category.",
+        "examTip": "Content moderation AI: Azure AI Content Safety, Azure AI Vision (adult content detection), custom classifiers. Used by social platforms, marketplaces, communication tools.",
+        "relatedTopics": [
+          "content-moderation",
+          "AI-workloads",
+          "Azure-AI-Content-Safety"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identify AI workloads",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-066",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Responsible AI principle ensures that AI systems are designed and built to be accessible to people regardless of ability, age, or background?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accountability",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fairness",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Inclusiveness",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Transparency",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Inclusiveness ensures AI systems are designed to benefit and be accessible to all people â€” including those with disabilities, across different cultures, languages, and socioeconomic backgrounds.",
+        "incorrect": "Accountability = human oversight and responsibility. Fairness = non-discrimination. Transparency = explainability. Inclusiveness = accessible to everyone.",
+        "examTip": "Inclusiveness in AI: support multiple languages, screen readers, keyboard navigation, voice interaction. Designs should not exclude any group.",
+        "relatedTopics": [
+          "inclusiveness",
+          "responsible-AI",
+          "accessibility"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI principles",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-070",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A financial services company uses an AI model to approve or reject loan applications. A group of applicants from a specific demographic are being rejected at a much higher rate than other groups, even when their financial profiles are similar.",
+      "questionText": "Which Responsible AI principle is being violated and what should be done?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reliability â€” the model should be retrained more frequently",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fairness â€” the model should be audited for bias and the training data reviewed for discriminatory patterns",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Transparency â€” the model's algorithm should be published publicly",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Inclusiveness â€” the application form should support more languages",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The model is producing biased outcomes against a demographic group â€” violating the Fairness principle. The team should use tools like Azure AI Fairness assessment, review training data for historical bias, and apply bias mitigation techniques.",
+        "incorrect": "Reliability = consistent operation. Transparency = explainability. Inclusiveness = accessibility. Discriminatory outcomes = Fairness violation.",
+        "examTip": "Fairness in financial AI is legally regulated in many countries (Equal Credit Opportunity Act, EU AI Act). Use model explainability tools to detect and address bias.",
+        "relatedTopics": [
+          "fairness",
+          "bias-detection",
+          "responsible-AI",
+          "financial-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-073",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a recommendation system and where is it commonly used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A system that recommends which cloud services to use for a workload",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An AI system that predicts items a user is likely to prefer based on behaviour and preferences",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A compliance system that recommends security patches",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A chatbot that recommends answers to customer questions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Recommendation systems use ML to predict what products, content, or services a user will find relevant â€” used by Netflix (show recommendations), Amazon (product recommendations), Spotify (music), and social media (content feeds).",
+        "incorrect": "Recommendation systems are about personalised content/product suggestions, not cloud architecture, security, or chatbots.",
+        "examTip": "Azure Personalizer (now deprecated in favour of Azure OpenAI) provided real-time recommendation. Collaborative filtering and content-based filtering are the two main approaches.",
+        "relatedTopics": [
+          "recommendation-systems",
+          "personalisation",
+          "AI-workloads"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identify AI workloads",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-079",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the difference between AI and traditional software?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Traditional software runs in the cloud; AI only runs on-premises",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Traditional software follows explicit rules programmed by developers; AI learns patterns from data to make decisions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "AI always produces more accurate results than traditional software",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Traditional software uses databases; AI does not",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Traditional software explicitly encodes rules (if X then Y). AI learns patterns from data and can make decisions in situations not explicitly programmed â€” handling ambiguity, variability, and complex patterns.",
+        "incorrect": "Both can run anywhere. AI can make errors. Both can use databases.",
+        "examTip": "Traditional software: rules coded by humans. ML: rules learned from data. When rules are too complex to code explicitly (image recognition, speech) â†’ use AI.",
+        "relatedTopics": [
+          "AI-vs-traditional-software",
+          "machine-learning",
+          "AI-concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe AI concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-086",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the Accountability principle in Microsoft's Responsible AI framework?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Making AI outputs explainable to users",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Ensuring humans remain responsible for AI systems and their decisions, with governance frameworks in place",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Keeping track of AI model version history",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Ensuring AI is available 24/7 without downtime",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Accountability means humans â€” not AI systems themselves â€” are ultimately responsible for the decisions and outcomes of AI. This includes governance, oversight, audit trails, and clear ownership.",
+        "incorrect": "Explainability = Transparency. Version history = MLOps. 24/7 availability = Reliability. Accountability = human responsibility for AI outcomes.",
+        "examTip": "Accountability = humans own AI outcomes. Who is responsible when AI makes a mistake? There must be an answer â€” a person, team, or organisation.",
+        "relatedTopics": [
+          "accountability",
+          "AI-governance",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-092",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the Privacy and Security principle in Microsoft's Responsible AI framework?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AI should keep all data secret from users",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AI systems should protect personal data, ensure confidentiality, and resist security threats",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "AI should only be deployed in private cloud environments",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AI model code should be kept proprietary and never shared",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Privacy and Security means AI systems must handle personal data responsibly â€” applying data minimisation, anonymisation, encryption, access controls, and protecting against adversarial attacks.",
+        "incorrect": "It's about responsible data handling and system security, not hiding data from users, cloud placement, or code secrecy.",
+        "examTip": "AI privacy: GDPR compliance, data minimisation, anonymisation of training data, differential privacy. Security: protect against model poisoning, adversarial examples, data breaches.",
+        "relatedTopics": [
+          "privacy-security",
+          "responsible-AI",
+          "data-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI principles",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-099",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company deploys a chatbot that answers questions about their products. Over time, users report that the bot sometimes gives answers that are factually wrong and not based on the company's product catalogue.",
+      "questionText": "Which Responsible AI principle is MOST at risk, and what technique can address it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fairness â€” use bias detection tools",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Reliability â€” use RAG to ground chatbot responses in the verified product catalogue",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Inclusiveness â€” add more languages to the chatbot",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Accountability â€” assign a human to approve every chatbot response",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Factually wrong responses violate the Reliability and Safety principle (the system doesn't perform as expected). RAG grounds the chatbot in verified product catalogue data, preventing hallucinations about products.",
+        "incorrect": "Fairness = discrimination. Inclusiveness = accessibility. Accountability = human oversight. Wrong facts = Reliability issue, solved by grounding.",
+        "examTip": "Chatbot hallucinations â†’ Reliability concern â†’ RAG solution. Ground chatbot responses in authoritative data sources to ensure factual accuracy.",
+        "relatedTopics": [
+          "reliability",
+          "RAG",
+          "hallucination",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

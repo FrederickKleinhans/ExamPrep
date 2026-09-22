@@ -39,7 +39,6 @@
     "prerequisites": [],
     "nextSteps": [
       "az-104",
-      "az-204",
       "az-305",
       "az-500",
       "dp-900",
@@ -638,8 +637,7 @@
       }
     ],
     "prerequisites": [
-      "az-104",
-      "az-204"
+      "az-104"
     ],
     "nextSteps": [],
     "domain": "devops"
@@ -962,57 +960,6 @@
     "domain": "networking"
   },
   {
-    "id": "az-204",
-    "code": "AZ-204",
-    "name": "Azure Developer Associate",
-    "vendor": "Microsoft",
-    "vendorColor": "#0078D4",
-    "level": "intermediate",
-    "accessTier": "premium",
-    "description": "Develop Azure compute solutions, storage, implement security, monitor, troubleshoot, and optimize Azure solutions.",
-    "examDetails": {
-      "durationMinutes": 120,
-      "questionCount": 40,
-      "passingScore": 70,
-      "priceUSD": 165
-    },
-    "domains": [
-      {
-        "id": "azure-compute",
-        "label": "Develop Azure compute solutions",
-        "weight": 0.25
-      },
-      {
-        "id": "azure-storage",
-        "label": "Develop for Azure storage",
-        "weight": 0.15
-      },
-      {
-        "id": "azure-security",
-        "label": "Implement Azure security",
-        "weight": 0.2
-      },
-      {
-        "id": "monitoring",
-        "label": "Monitor, troubleshoot, and optimize Azure solutions",
-        "weight": 0.15
-      },
-      {
-        "id": "azure-services",
-        "label": "Connect to and consume Azure services and third-party services",
-        "weight": 0.25
-      }
-    ],
-    "prerequisites": [
-      "az-900"
-    ],
-    "nextSteps": [
-      "az-400",
-      "az-305"
-    ],
-    "domain": "software-development"
-  },
-  {
     "id": "aws-developer",
     "code": "DVA-C02",
     "name": "AWS Developer Associate",
@@ -1149,55 +1096,8 @@
       "az-900"
     ],
     "nextSteps": [
-      "dp-203",
       "dp-300",
       "ai-900"
-    ],
-    "domain": "data"
-  },
-  {
-    "id": "dp-203",
-    "code": "DP-203",
-    "name": "Azure Data Engineer",
-    "vendor": "Microsoft",
-    "vendorColor": "#0078D4",
-    "level": "intermediate",
-    "accessTier": "premium",
-    "description": "Design and implement data storage, data processing, and data security solutions on Azure.",
-    "examDetails": {
-      "durationMinutes": 120,
-      "questionCount": 40,
-      "passingScore": 70,
-      "priceUSD": 165
-    },
-    "domains": [
-      {
-        "id": "data-storage",
-        "label": "Design and implement data storage",
-        "weight": 0.25
-      },
-      {
-        "id": "data-processing",
-        "label": "Develop data processing",
-        "weight": 0.3
-      },
-      {
-        "id": "data-security",
-        "label": "Secure, monitor, and optimize data storage and data processing",
-        "weight": 0.25
-      },
-      {
-        "id": "data-integration",
-        "label": "Design and implement data integration",
-        "weight": 0.2
-      }
-    ],
-    "prerequisites": [
-      "dp-900"
-    ],
-    "nextSteps": [
-      "dp-100",
-      "ai-102"
     ],
     "domain": "data"
   },
@@ -1247,51 +1147,51 @@
       "az-900"
     ],
     "nextSteps": [
-      "ai-102",
+      "ai-103",
       "dp-100"
     ],
     "domain": "data"
   },
   {
-    "id": "ai-102",
-    "code": "AI-102",
-    "name": "Azure AI Engineer",
+    "id": "ai-103",
+    "code": "AI-103",
+    "name": "Azure AI Apps and Agents Developer Associate",
     "vendor": "Microsoft",
     "vendorColor": "#0078D4",
     "level": "intermediate",
     "accessTier": "premium",
-    "description": "Build, manage, and deploy AI solutions that leverage Azure Cognitive Services, Azure Applied AI services, and Azure Bot Service.",
+    "description": "Design, develop, and deploy advanced Azure AI solutions including agentic architectures, generative AI applications, and multi-step reasoning workflows on Microsoft Foundry.",
     "examDetails": {
       "durationMinutes": 120,
-      "questionCount": 40,
+      "questionCount": 50,
       "passingScore": 70,
       "priceUSD": 165
     },
     "domains": [
       {
         "id": "plan-manage",
-        "label": "Plan and manage an Azure AI solution",
-        "weight": 0.15
+        "label": "Plan and manage Azure AI solutions",
+        "weight": 15
       },
       {
-        "id": "vision",
-        "label": "Implement image and video processing solutions",
-        "weight": 0.2
+        "id": "generative-ai-agents",
+        "label": "Implement generative AI and agentic solutions",
+        "weight": 35
       },
       {
-        "id": "nlp",
-        "label": "Implement natural language processing solutions",
-        "weight": 0.2
+        "id": "computer-vision",
+        "label": "Implement computer vision solutions",
+        "weight": 20
       },
       {
-        "id": "knowledge-mining",
-        "label": "Implement knowledge mining solutions",
-        "weight": 0.2
+        "id": "text-analysis",
+        "label": "Implement text analysis solutions",
+        "weight": 15
       },
       {
-        "id": "conversational-ai",
-        "label": "Implement conversational AI solutions",
-        "weight": 0.25
+        "id": "information-extraction",
+        "label": "Implement information extraction solutions",
+        "weight": 15
       }
     ],
     "prerequisites": [

@@ -1,0 +1,4879 @@
+{
+  "questions": [
+    {
+      "id": "ai900-001",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following BEST describes artificial intelligence (AI)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Software that can only follow pre-programmed rules",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Systems that simulate human intelligence to perform tasks and improve from experience",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Hardware designed to process data faster than traditional computers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A database that stores large amounts of structured data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "AI refers to systems that simulate human cognitive functions â€” reasoning, learning, problem solving, and perception â€” to perform tasks that would normally require human intelligence.",
+        "incorrect": "Rule-based systems are not AI. Hardware speed is not AI. Databases store data but are not AI.",
+        "examTip": "AI > ML > Deep Learning. AI is the broad concept; ML is a subset; deep learning is a subset of ML using neural networks.",
+        "relatedTopics": [
+          "AI-concepts",
+          "machine-learning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe AI workloads",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-002",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the difference between AI, machine learning, and deep learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are three different names for the same technology",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AI is the broadest concept; machine learning is a subset of AI; deep learning is a subset of machine learning using neural networks",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Deep learning is the broadest; AI is the most specific",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Machine learning requires human supervision; AI and deep learning do not",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "AI is the overarching field. ML is AI that learns from data without being explicitly programmed. Deep learning is ML using multi-layered neural networks that can automatically learn features from raw data.",
+        "incorrect": "They are distinct but nested concepts â€” not synonyms, and not in the reverse order.",
+        "examTip": "Think of concentric circles: AI (outer) â†’ ML (middle) â†’ Deep Learning (inner). All deep learning is ML, all ML is AI.",
+        "relatedTopics": [
+          "AI",
+          "ML",
+          "deep-learning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe AI workloads",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-003",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which AI principle ensures that AI systems do not discriminate against individuals based on protected characteristics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reliability and safety",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fairness",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Transparency",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Inclusiveness",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fairness in AI ensures systems treat all people equitably and do not produce biased outcomes based on characteristics like gender, race, age, or disability.",
+        "incorrect": "Reliability = consistent, safe operation. Transparency = explainability. Inclusiveness = designed to benefit everyone. All are Microsoft Responsible AI principles but fairness specifically addresses discrimination.",
+        "examTip": "Microsoft Responsible AI principles: Fairness, Reliability & Safety, Privacy & Security, Inclusiveness, Transparency, Accountability.",
+        "relatedTopics": [
+          "responsible-AI",
+          "fairness",
+          "bias"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-004",
+      "type": "yes-no-statements",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Microsoft's Responsible AI principles.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Transparency means AI systems should be understandable, with explanations of how decisions are made.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Accountability means AI systems should operate autonomously without human oversight.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Privacy and security requires protecting personal data used in AI systems.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Inclusiveness means AI should only be designed for technical users.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Transparency = explainability. Privacy = data protection. Accountability = human oversight and responsibility â€” not autonomous operation. Inclusiveness = benefits everyone, not just technical users.",
+        "incorrect": "Accountability specifically requires human oversight. Inclusiveness targets all people, including those with disabilities.",
+        "examTip": "6 Responsible AI principles: Fairness, Reliability & Safety, Privacy & Security, Inclusiveness, Transparency, Accountability. Know each definition.",
+        "relatedTopics": [
+          "responsible-AI",
+          "Microsoft-AI-principles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI principles",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-005",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A hospital deploys an AI system to assist with diagnosis. Doctors want to understand why the system recommends a particular diagnosis so they can validate it.",
+      "questionText": "Which Responsible AI principle is MOST relevant to this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fairness",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Inclusiveness",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Transparency",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Reliability",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Transparency requires that AI systems be explainable â€” users should be able to understand how and why the system made a decision, especially in high-stakes domains like healthcare.",
+        "incorrect": "Fairness = no discrimination. Inclusiveness = accessible to all. Reliability = consistent performance. Transparency specifically addresses explainability.",
+        "examTip": "Healthcare + 'why did AI decide this' = Transparency. Financial decisions, medical diagnoses, and legal outcomes all require explainable AI.",
+        "relatedTopics": [
+          "transparency",
+          "explainability",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-006",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of an AI workload involving anomaly detection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Translating text from English to French",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Detecting unusual patterns in bank transactions that may indicate fraud",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Generating realistic images from text descriptions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Converting spoken words to written text",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Anomaly detection identifies unusual patterns that deviate from expected behaviour â€” fraud detection is a classic use case where the AI flags transactions that look different from a customer's normal spending patterns.",
+        "incorrect": "Translation = NLP. Image generation = generative AI. Speech to text = speech recognition.",
+        "examTip": "Anomaly detection use cases: fraud detection, manufacturing quality control, network intrusion detection, predictive maintenance.",
+        "relatedTopics": [
+          "anomaly-detection",
+          "AI-workloads"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identify AI workload scenarios",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-007",
+      "type": "dropdown-select",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each AI workload to its correct description.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Predicting whether a customer will cancel their subscription",
+          "options": [
+            "Regression",
+            "Classification",
+            "Clustering",
+            "Anomaly detection"
+          ],
+          "correctAnswer": "Classification"
+        },
+        {
+          "id": "d2",
+          "prompt": "Predicting the sale price of a house based on its features",
+          "options": [
+            "Regression",
+            "Classification",
+            "Clustering",
+            "Anomaly detection"
+          ],
+          "correctAnswer": "Regression"
+        },
+        {
+          "id": "d3",
+          "prompt": "Grouping customers by purchasing behaviour without predefined categories",
+          "options": [
+            "Regression",
+            "Classification",
+            "Clustering",
+            "Anomaly detection"
+          ],
+          "correctAnswer": "Clustering"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Classification = predict a category (yes/no, churn/no-churn). Regression = predict a numeric value (price, temperature). Clustering = group similar items without labels.",
+        "incorrect": "These are the three foundational ML task types. Know which to use for each scenario.",
+        "examTip": "Classification = labels/categories. Regression = numbers/values. Clustering = unsupervised grouping. Anomaly detection = finding outliers.",
+        "relatedTopics": [
+          "classification",
+          "regression",
+          "clustering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identify ML workload types",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-008",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is supervised machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Training a model on unlabelled data to discover patterns",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Training a model on labelled data where the correct answers are provided",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Training a model through trial and error using rewards and penalties",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Training a model by having humans supervise the process at each step",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Supervised learning uses labelled training data â€” each example has input features and a known correct output (label). The model learns to map inputs to outputs.",
+        "incorrect": "Unlabelled data = unsupervised learning. Rewards/penalties = reinforcement learning. Human supervision of each step is not the definition.",
+        "examTip": "Supervised = labelled data (you know the answers). Unsupervised = unlabelled data (discover patterns). Reinforcement = learn by rewards.",
+        "relatedTopics": [
+          "supervised-learning",
+          "machine-learning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-009",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which machine learning technique trains a model by having it interact with an environment, receiving rewards for correct actions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Supervised learning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Unsupervised learning",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Reinforcement learning",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Transfer learning",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Reinforcement learning trains an agent to make decisions by rewarding correct actions and penalising incorrect ones â€” used in game playing, robotics, and autonomous systems.",
+        "incorrect": "Supervised = labelled data. Unsupervised = finding patterns. Transfer = using a pre-trained model on a new task.",
+        "examTip": "Reinforcement learning examples: game-playing AI (chess, Go), robot navigation, recommendation systems optimisation.",
+        "relatedTopics": [
+          "reinforcement-learning",
+          "machine-learning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML techniques",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-010",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a training dataset in machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To evaluate the final performance of a trained model on unseen data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To teach the model by exposing it to examples so it can learn patterns",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To fine-tune hyperparameters during model development",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To monitor model performance after deployment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The training dataset is used to teach the model â€” it's exposed to many examples so it learns the patterns and relationships between inputs and outputs.",
+        "incorrect": "Evaluating final performance = test dataset. Hyperparameter tuning = validation dataset. Post-deployment monitoring = separate process.",
+        "examTip": "Data splits: Training (teach the model) â†’ Validation (tune hyperparameters) â†’ Test (evaluate final performance). Never use test data during training.",
+        "relatedTopics": [
+          "training-data",
+          "ML-process",
+          "data-splits"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-011",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 'overfitting' mean in machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The model performs poorly on both training and test data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The model learns the training data too well, including noise, and performs poorly on new data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The model is too simple to capture the patterns in the data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The training process takes too long due to excessive data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Overfitting occurs when a model memorises the training data (including noise) rather than learning general patterns, resulting in high training accuracy but poor performance on new unseen data.",
+        "incorrect": "Poor on both = underfitting. Too simple = underfitting. Training time is not overfitting.",
+        "examTip": "Overfitting = high train accuracy, low test accuracy (too complex). Underfitting = low train and test accuracy (too simple). Goal = balance (generalisation).",
+        "relatedTopics": [
+          "overfitting",
+          "underfitting",
+          "model-evaluation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-012",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Azure Machine Learning used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing Azure virtual machines and cloud infrastructure",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Building, training, deploying, and managing machine learning models at scale",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Storing and querying large datasets in the cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Creating and managing Azure Active Directory users",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Machine Learning is a cloud platform for the full ML lifecycle â€” data preparation, model training, hyperparameter tuning, deployment as web services, and monitoring.",
+        "incorrect": "VM management = Azure Resource Manager. Data storage = Azure Storage/SQL. Identity = Entra ID.",
+        "examTip": "Azure ML key features: designer (no-code), automated ML (AutoML), notebooks, pipelines, model registry, managed endpoints.",
+        "relatedTopics": [
+          "Azure-Machine-Learning",
+          "ML-platform"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-013",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Automated ML (AutoML) in Azure Machine Learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A feature that automatically deploys models to production without human review",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A feature that automatically tries multiple algorithms and hyperparameters to find the best model for a dataset",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An automated process for collecting and labelling training data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A tool that automatically writes Python code for machine learning",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "AutoML automates the model selection and hyperparameter tuning process â€” it iterates through many algorithm/parameter combinations and returns the best performing model, reducing the need for deep ML expertise.",
+        "incorrect": "AutoML finds the best model, it doesn't auto-deploy, label data, or write code.",
+        "examTip": "AutoML is ideal for non-ML experts who want to quickly build models. It handles algorithm selection, feature engineering, and hyperparameter tuning automatically.",
+        "relatedTopics": [
+          "AutoML",
+          "Azure-ML",
+          "hyperparameter-tuning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-014",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which model evaluation metric measures the percentage of correct predictions out of all predictions made?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Precision",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Recall",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Accuracy",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "AUC",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Accuracy = (correct predictions) / (total predictions). It measures overall correctness across all classes.",
+        "incorrect": "Precision = correct positive predictions / all positive predictions. Recall = correct positives / all actual positives. AUC = area under ROC curve.",
+        "examTip": "Accuracy is misleading with imbalanced data. If 95% of emails are not spam, a model that predicts 'not spam' always achieves 95% accuracy but is useless.",
+        "relatedTopics": [
+          "accuracy",
+          "model-evaluation",
+          "classification-metrics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML model evaluation",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-015",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A medical AI model is used to screen patients for a serious disease. The model has high accuracy but frequently misses positive cases (people who have the disease).",
+      "questionText": "Which metric should be prioritised to reduce missed positive cases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accuracy",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Precision",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Recall (Sensitivity)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Specificity",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Recall (sensitivity) measures how many actual positive cases the model correctly identifies. In disease screening, missing a positive case (false negative) is dangerous â€” high recall minimises missed diagnoses.",
+        "incorrect": "Accuracy is misleading with imbalanced medical data. Precision measures false positives, not misses. Specificity measures true negatives.",
+        "examTip": "Medical screening = maximise Recall (catch all sick people). Spam filter = maximise Precision (don't block legitimate emails). High-stakes = recall. False alarms acceptable = recall. Wrong positives costly = precision.",
+        "relatedTopics": [
+          "recall",
+          "precision",
+          "model-evaluation",
+          "healthcare-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe model evaluation metrics",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-016",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does the Azure Machine Learning Designer provide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A command-line interface for training models in Azure",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A visual drag-and-drop interface for building ML pipelines without writing code",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A pre-built model library for common business scenarios",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An automated tool for deploying models to edge devices",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure ML Designer is a visual canvas where you connect dataset and module components to build, train, and deploy ML pipelines â€” no code required, ideal for non-developers.",
+        "incorrect": "CLI = Azure ML CLI. Pre-built models = Azure AI Services. Edge deployment = Azure IoT Edge/ONNX.",
+        "examTip": "Azure ML Designer = visual/drag-drop (no code). Azure ML notebooks = code-based (Python). AutoML = automated algorithm selection.",
+        "relatedTopics": [
+          "Azure-ML-Designer",
+          "no-code-ML",
+          "Azure-ML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML tools",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-017",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a feature in the context of machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The final output prediction made by the model",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An individual measurable input variable used to train a model",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A new capability added to an AI product",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The accuracy score of a trained model",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A feature is an individual measurable input variable (attribute) used by the model for training and prediction. For a house price model, features might be: square footage, number of bedrooms, location.",
+        "incorrect": "Output = label. Product capability = product feature (different context). Accuracy = evaluation metric.",
+        "examTip": "Features = inputs (X). Labels = outputs (Y). Feature engineering = creating better features from raw data to improve model performance.",
+        "relatedTopics": [
+          "features",
+          "labels",
+          "ML-concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-018",
+      "type": "yes-no-statements",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Azure Machine Learning concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "An Azure ML workspace is the top-level resource that contains all ML assets including experiments, models, and datasets.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure ML compute clusters can only run on a single virtual machine.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A model endpoint in Azure ML allows applications to send data and receive predictions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "AutoML requires users to specify which algorithm to use before training begins.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Workspace = top-level container for all ML resources. Endpoints = inference APIs. Compute clusters = multi-node scalable compute. AutoML = automatically selects algorithms, no user specification needed.",
+        "incorrect": "Compute clusters can scale across many nodes. AutoML's whole purpose is to try many algorithms automatically.",
+        "examTip": "Azure ML workspace contains: datasets, experiments, models, endpoints, compute, environments, pipelines.",
+        "relatedTopics": [
+          "Azure-ML-workspace",
+          "endpoints",
+          "AutoML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-019",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is computer vision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A display technology for high-resolution monitors",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An area of AI that enables computers to interpret and understand visual information from images and videos",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Software that helps people with visual impairments use computers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A hardware component that improves graphics processing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Computer vision is the field of AI that trains computers to interpret visual information â€” identifying objects, people, text, and scenes in images and video.",
+        "incorrect": "This is not about display technology, accessibility software, or hardware components.",
+        "examTip": "Computer vision tasks: image classification, object detection, semantic segmentation, OCR, facial analysis, image generation.",
+        "relatedTopics": [
+          "computer-vision",
+          "image-recognition"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe computer vision workloads",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-020",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between image classification and object detection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Image classification identifies all objects in an image; object detection classifies the whole image",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Image classification assigns a label to the whole image; object detection identifies and locates multiple objects within an image with bounding boxes",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They are identical tasks with different names",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Object detection only works on video; image classification works on static images",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Image classification = what is this image? (one label for the whole image). Object detection = what objects are in this image and where are they? (multiple labels + bounding boxes).",
+        "incorrect": "These are distinct tasks. Object detection works on both images and video.",
+        "examTip": "Classification = 'this is a cat'. Detection = 'there is a cat at coordinates [x1,y1,x2,y2] and a dog at [x3,y3,x4,y4]'. Azure Custom Vision supports both.",
+        "relatedTopics": [
+          "image-classification",
+          "object-detection",
+          "computer-vision"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe computer vision tasks",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-021",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service provides pre-built computer vision capabilities including OCR, face detection, and image analysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Machine Learning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure AI Vision (formerly Computer Vision)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Cognitive Search",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Databricks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Vision (formerly Azure Computer Vision) provides pre-built APIs for image analysis, OCR (Read API), object detection, spatial analysis, and image description.",
+        "incorrect": "Azure ML = custom model training. Cognitive Search = search indexing. Databricks = data processing.",
+        "examTip": "Azure AI Vision features: Image Analysis (tags, objects, description), OCR (Read API for text extraction), Face (face detection/analysis), Custom Vision (train custom models).",
+        "relatedTopics": [
+          "Azure-AI-Vision",
+          "computer-vision-services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Vision",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-022",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A retail company wants to build a system that detects when specific products are out of stock on shelves using store cameras.",
+      "questionText": "Which Azure service is MOST appropriate for training a custom model for this use case?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Language",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Custom Vision",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Speech",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Cognitive Search",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Custom Vision allows you to train custom image classification or object detection models with your own labelled images â€” perfect for product detection on store shelves.",
+        "incorrect": "Language = text NLP. Speech = audio. Cognitive Search = document search. Custom Vision is specifically for custom image tasks.",
+        "examTip": "Pre-built vision = Azure AI Vision (general tasks). Custom vision = Azure Custom Vision (train your own model on custom images). Both require no ML expertise.",
+        "relatedTopics": [
+          "Azure-Custom-Vision",
+          "object-detection",
+          "retail-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure computer vision services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-023",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is OCR (Optical Character Recognition) used for in computer vision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Recognising and identifying human faces in images",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Extracting and digitising printed or handwritten text from images and documents",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting and classifying objects in images",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Generating descriptive captions for images",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "OCR converts images of text (printed or handwritten) into machine-readable digital text â€” used for scanning documents, reading invoices, digitising forms, and extracting text from photos.",
+        "incorrect": "Face recognition = Azure Face. Object detection = Azure AI Vision. Image captioning = Azure AI Vision describe feature.",
+        "examTip": "Azure AI Vision Read API = OCR for documents and images. Azure Document Intelligence (Form Recognizer) = structured document extraction (invoices, receipts, forms).",
+        "relatedTopics": [
+          "OCR",
+          "text-extraction",
+          "document-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe OCR",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-024",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Azure service uses computer vision to analyse and index video content, extracting insights like transcripts, speakers, labels, and key frames?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Vision",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Video Indexer",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Media Services",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Custom Vision",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Video Indexer uses AI to extract rich insights from video â€” transcription, speaker identification, face detection, object labelling, key scenes, topics, and sentiment.",
+        "incorrect": "Azure AI Vision = static image analysis. Media Services = video streaming/encoding. Custom Vision = custom image classification/detection.",
+        "examTip": "Video Indexer = AI insights from video content (transcripts, faces, labels, emotions). Powered by multiple Azure AI services behind the scenes.",
+        "relatedTopics": [
+          "Azure-Video-Indexer",
+          "video-AI",
+          "computer-vision"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe computer vision services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-025",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Natural Language Processing (NLP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A technique for compressing natural language documents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An area of AI that enables computers to understand, interpret, and generate human language",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A programming language for writing AI algorithms",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A hardware component that processes text faster",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "NLP enables computers to understand and work with human language in text or speech form â€” powering translation, sentiment analysis, chatbots, search, and language generation.",
+        "incorrect": "NLP is an AI field, not compression, a programming language, or hardware.",
+        "examTip": "NLP tasks: sentiment analysis, language detection, key phrase extraction, named entity recognition, text classification, translation, summarisation.",
+        "relatedTopics": [
+          "NLP",
+          "text-analytics",
+          "language-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe NLP workloads",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-026",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure AI service provides sentiment analysis, key phrase extraction, and named entity recognition?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Vision",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure AI Language",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Speech",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Translator",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Language (formerly Text Analytics) provides NLP capabilities: sentiment analysis, key phrase extraction, named entity recognition, language detection, and text classification.",
+        "incorrect": "Vision = images. Speech = audio/voice. Translator = language-to-language translation. Language service handles text analytics.",
+        "examTip": "Azure AI Language features: Sentiment Analysis, Key Phrase Extraction, Named Entity Recognition (NER), Language Detection, Custom Text Classification, Conversational Language Understanding (CLU).",
+        "relatedTopics": [
+          "Azure-AI-Language",
+          "text-analytics",
+          "NLP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-027",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between Azure AI Speech and Azure AI Translator?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They provide identical functionality with different pricing",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure AI Speech converts between spoken audio and text; Azure AI Translator converts text between languages",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Translator converts audio to text; Azure AI Speech translates between languages",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Speech is deprecated and replaced by Translator",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Speech = audio â†” text (speech-to-text, text-to-speech, speech translation). Azure AI Translator = text â†” text in different languages (translate written content).",
+        "incorrect": "Their functions are distinct and both are current services.",
+        "examTip": "Speech = audio conversion (voice â†” text). Translator = language conversion (text in one language â†’ text in another). Speech service also has speech translation (audio â†’ different language text).",
+        "relatedTopics": [
+          "Azure-AI-Speech",
+          "Azure-AI-Translator",
+          "NLP-services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Speech and Translator",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-028",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company wants to build a customer service chatbot that understands natural language questions and maps them to appropriate actions â€” for example, 'What is my account balance?' should trigger the balance inquiry function.",
+      "questionText": "Which Azure service is BEST suited for this intent recognition use case?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Translator",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Conversational Language Understanding (CLU) in Azure AI Language",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Vision",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Speech",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Conversational Language Understanding (CLU) in Azure AI Language is specifically designed to understand natural language utterances, classify intent, and extract entities â€” exactly what a chatbot needs.",
+        "incorrect": "Translator = language translation. Vision = images. Speech = audio conversion. CLU is the intent understanding service.",
+        "examTip": "CLU (Conversational Language Understanding) = understand what the user WANTS (intent) and extract KEY INFO (entities). Replaces the older LUIS service.",
+        "relatedTopics": [
+          "CLU",
+          "intent-recognition",
+          "chatbot",
+          "Azure-AI-Language"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-029",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does sentiment analysis in Azure AI Language determine?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The language a text is written in",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The emotional tone (positive, negative, neutral) expressed in text",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The key topics or phrases in a text",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The named entities (people, places, organisations) in text",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sentiment analysis detects the emotional tone in text â€” returning positive, negative, or neutral sentiment scores. Used for social media monitoring, customer feedback analysis, and product reviews.",
+        "incorrect": "Language detection = identifies what language. Key phrase extraction = important terms. NER = named entity recognition.",
+        "examTip": "Sentiment analysis use cases: product review analysis, customer service quality monitoring, social media brand monitoring, call centre transcript analysis.",
+        "relatedTopics": [
+          "sentiment-analysis",
+          "Azure-AI-Language",
+          "NLP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-030",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure AI Bot Service used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automatically testing web applications",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Building, deploying, and connecting intelligent chatbots to multiple communication channels",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Automating repetitive IT tasks using robotic process automation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Managing automated ML training pipelines",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Bot Service provides a framework for building chatbots that can be connected to channels like Teams, Slack, Web Chat, Facebook, and Cortana. It integrates with CLU and QnA Maker for NLP.",
+        "incorrect": "Web testing = test tools. RPA = Power Automate/Azure Logic Apps. ML pipelines = Azure ML.",
+        "examTip": "Bot Service + CLU = intent-understanding chatbot. Bot Service + Question Answering = FAQ chatbot. Channels: Teams, Web Chat, Slack, Telegram, etc.",
+        "relatedTopics": [
+          "Azure-Bot-Service",
+          "chatbot",
+          "NLP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure Bot Service",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-031",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Azure AI Translator support beyond simple text translation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only translating between English and one other language",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Translation between 100+ languages, custom translation models, and document translation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Only translating structured data formats like JSON and XML",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Translating between programming languages like Python and Java",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Translator supports 100+ languages, custom terminology via Custom Translator (domain-specific translations), and Document Translation for bulk document processing.",
+        "incorrect": "Translator handles many languages, natural language text, and documents â€” not programming languages or structured data formats.",
+        "examTip": "Translator features: text translation, document translation, Custom Translator (train on domain-specific terminology), transliteration (script conversion).",
+        "relatedTopics": [
+          "Azure-AI-Translator",
+          "translation",
+          "multilingual"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Translator",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-032",
+      "type": "yes-no-statements",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Azure NLP services.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure AI Speech can convert text to spoken audio (text-to-speech).",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Named Entity Recognition (NER) identifies the sentiment of a text.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Question Answering in Azure AI Language can create a knowledge base from existing documents and FAQs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Azure AI Language can only process English text.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Speech service supports TTS. Question Answering builds knowledge bases from existing content. Azure AI Language supports many languages. NER identifies entities (people, places), not sentiment.",
+        "incorrect": "NER extracts named entities, not sentiment (that's sentiment analysis). Azure AI Language supports many languages.",
+        "examTip": "NER = people, places, organisations, dates. Sentiment = positive/negative/neutral. Key Phrase = important topics. All separate NLP features.",
+        "relatedTopics": [
+          "NER",
+          "Question-Answering",
+          "Azure-AI-Language",
+          "multilingual"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe NLP capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-033",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is generative AI?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AI that only classifies existing data into categories",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AI that can create new original content such as text, images, audio, and code based on training data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "AI that generates reports from structured databases",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AI that automates repetitive business processes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Generative AI models learn patterns from training data and can generate new, original content â€” writing essays, creating images, composing music, writing code, and more.",
+        "incorrect": "Classification = discriminative AI. Report generation from structured data is not generative AI. Process automation = RPA.",
+        "examTip": "Generative AI examples: GPT (text), DALL-E (images), Codex (code), Stable Diffusion (images), Whisper (speech). All create new content.",
+        "relatedTopics": [
+          "generative-AI",
+          "LLM",
+          "content-generation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-034",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a Large Language Model (LLM)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A very large library of pre-written text documents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A deep learning model trained on vast amounts of text data that can understand and generate human-like text",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A model that can only answer yes/no questions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A database that stores language translations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "LLMs are transformer-based deep learning models trained on massive text datasets, giving them the ability to understand context, answer questions, generate text, summarise, translate, and more.",
+        "incorrect": "LLMs are AI models, not document libraries, simple classifiers, or databases.",
+        "examTip": "LLMs (GPT-3, GPT-4, Llama, Claude, Gemini) power chatbots, copilots, and text generation. Azure OpenAI Service provides access to GPT models in Azure.",
+        "relatedTopics": [
+          "LLM",
+          "transformers",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe LLMs",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-035",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure OpenAI Service?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A free version of ChatGPT built into Azure",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An Azure service that provides access to OpenAI's models (GPT-4, DALL-E, Codex) with Azure's security, compliance, and enterprise features",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A tool for training custom language models from scratch on Azure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An open-source AI framework for building chatbots",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure OpenAI Service gives enterprise customers access to OpenAI's GPT-4, DALL-E, Embeddings, and Whisper models through Azure APIs, with Azure's enterprise security, compliance, private networking, and responsible AI features.",
+        "incorrect": "It's not free, not for training from scratch, and not an open-source framework.",
+        "examTip": "Azure OpenAI = OpenAI models + Azure enterprise security. Accessed via REST API or Azure AI Studio. Requires approved access.",
+        "relatedTopics": [
+          "Azure-OpenAI",
+          "GPT-4",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure OpenAI Service",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-036",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is prompt engineering?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The process of training a new language model from scratch",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The practice of crafting effective input instructions to guide an LLM towards producing desired outputs",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A software engineering discipline for building AI infrastructure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A method for compressing large AI models to run on smaller devices",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Prompt engineering involves designing input text (prompts) that effectively communicate intent to an LLM â€” including context, instructions, examples, and constraints to get the best output.",
+        "incorrect": "Training from scratch = model development. AI infrastructure = MLOps. Model compression = quantisation/distillation.",
+        "examTip": "Prompt techniques: zero-shot (no examples), few-shot (a few examples), chain-of-thought (step-by-step reasoning), system prompts (set context/persona).",
+        "relatedTopics": [
+          "prompt-engineering",
+          "LLM",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-037",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a 'hallucination' in the context of generative AI?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When an AI model crashes due to insufficient memory",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "When a generative AI model produces confident but factually incorrect or fabricated information",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "When an AI generates images that appear blurry",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "When an AI misinterprets the user's prompt",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Hallucination refers to when an LLM generates plausible-sounding but factually incorrect, fabricated, or nonsensical information â€” presenting it as if it were true. This is a key limitation of LLMs.",
+        "incorrect": "Hallucinations are about factual accuracy, not memory errors, image quality, or prompt misinterpretation.",
+        "examTip": "Hallucination mitigation: RAG (Retrieval-Augmented Generation), grounding with factual sources, human review, confidence scores. Always verify AI-generated facts.",
+        "relatedTopics": [
+          "hallucination",
+          "LLM-limitations",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI limitations",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-038",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is Retrieval-Augmented Generation (RAG)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A technique for training LLMs on proprietary company data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A technique that combines an LLM with a retrieval system to ground responses in relevant, up-to-date information from a knowledge base",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A method for generating synthetic training data for ML models",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A compression technique that reduces LLM size for deployment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RAG retrieves relevant documents from a knowledge base (vector database), provides them as context to the LLM, and the LLM generates an answer grounded in those retrieved facts â€” reducing hallucinations and enabling up-to-date responses.",
+        "incorrect": "Training on proprietary data = fine-tuning. Synthetic data = data augmentation. Model compression = quantisation.",
+        "examTip": "RAG pattern: user query â†’ retrieve relevant docs from vector DB â†’ add docs to LLM prompt â†’ LLM generates grounded answer. Azure AI Search enables RAG.",
+        "relatedTopics": [
+          "RAG",
+          "grounding",
+          "vector-search",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI techniques",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-039",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft Copilot?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A flight simulation software for pilot training",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An AI assistant powered by LLMs that is integrated into Microsoft products to help users with tasks using natural language",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A code testing tool that automatically finds bugs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A cloud cost management tool for Azure subscriptions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Copilot is an AI assistant powered by GPT-4 and other LLMs, integrated into Microsoft 365 (Word, Excel, Teams, Outlook), GitHub, Azure, and Windows to help users with tasks using natural language.",
+        "incorrect": "Copilot is an AI assistant, not flight simulation, a bug finder, or a cost tool.",
+        "examTip": "Microsoft Copilot family: M365 Copilot (Office apps), GitHub Copilot (code), Azure Copilot (infrastructure), Bing Chat/Copilot (web search). All powered by Azure OpenAI.",
+        "relatedTopics": [
+          "Microsoft-Copilot",
+          "generative-AI",
+          "LLM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft Copilot",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-040",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure AI Studio used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creating and editing video content using AI tools",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A unified platform for exploring, building, testing, and deploying generative AI applications and models",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Managing Azure virtual machines and cloud infrastructure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Designing user interfaces for Azure applications",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Studio is the central platform for working with generative AI on Azure â€” explore foundation models, deploy them, build RAG apps, test with a playground, and manage AI safety with Azure AI Content Safety.",
+        "incorrect": "AI Studio is for AI model development, not video editing, infrastructure management, or UI design.",
+        "examTip": "Azure AI Studio features: Model Catalog (browse foundation models), Playground (test models), Prompt Flow (orchestrate AI workflows), Evaluation, Azure AI Content Safety.",
+        "relatedTopics": [
+          "Azure-AI-Studio",
+          "generative-AI",
+          "foundation-models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Studio",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-041",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company wants to use a large language model to answer employee questions based on their internal HR policy documents. The documents are updated monthly and the LLM should always use the latest content.",
+      "questionText": "Which approach BEST addresses this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fine-tune the LLM on the HR documents every month",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Implement RAG using Azure AI Search to index the documents, allowing the LLM to retrieve current content at query time",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Prompt the LLM with the entire policy document in every conversation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Train a new LLM from scratch each month with the updated documents",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RAG with Azure AI Search indexes the documents and retrieves the most relevant, current content at query time â€” no retraining needed when documents are updated, and responses are grounded in factual current content.",
+        "incorrect": "Monthly fine-tuning is expensive and slow. Sending full documents in every prompt would exceed context limits. Training from scratch monthly is impractical.",
+        "examTip": "RAG is the go-to pattern for enterprise knowledge bases that change frequently. Azure AI Search + Azure OpenAI = RAG solution on Azure.",
+        "relatedTopics": [
+          "RAG",
+          "Azure-AI-Search",
+          "knowledge-base",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI use cases",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-042",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure AI Content Safety?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A firewall that blocks malicious traffic to Azure AI services",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A service that detects and filters harmful content (hate speech, violence, sexual content, self-harm) in text and images",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An encryption service that protects AI model weights",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A compliance tool that checks AI models against regulatory requirements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Content Safety detects harmful content in user inputs and AI outputs â€” screening for hate speech, violence, sexual content, and self-harm across text and image content, returning severity scores.",
+        "incorrect": "It's content moderation, not a network firewall, encryption service, or compliance checker.",
+        "examTip": "Content Safety is key for responsible generative AI deployment. Integrate it as a layer around your LLM to filter both inputs (user prompts) and outputs (model responses).",
+        "relatedTopics": [
+          "Azure-AI-Content-Safety",
+          "responsible-AI",
+          "content-moderation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Content Safety",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-043",
+      "type": "yes-no-statements",
+      "topicId": "generative-ai",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes generative AI concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Fine-tuning an LLM adapts a pre-trained model to a specific domain using additional training data.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Tokens in LLMs always correspond to exactly one word.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Embeddings represent words or concepts as numerical vectors to capture semantic meaning.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Increasing the temperature parameter of an LLM makes its outputs more deterministic.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Fine-tuning = adapt pre-trained model. Embeddings = numerical vector representations of meaning. Tokens â‰  one word (a word can be multiple tokens). Higher temperature = more random/creative, not more deterministic.",
+        "incorrect": "Tokens are sub-word units â€” 'running' might be one token, 'antidisestablishmentarianism' several. Temperature 0 = deterministic, temperature 1+ = creative/random.",
+        "examTip": "Temperature: 0 = same answer every time (deterministic). 1 = creative/varied. Use low temp for factual tasks, higher for creative writing.",
+        "relatedTopics": [
+          "fine-tuning",
+          "tokens",
+          "embeddings",
+          "temperature"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-044",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Azure Machine Learning's model registry do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It automatically trains models on a schedule",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It provides a centralised store to version, track, and manage trained ML models",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It registers Azure subscription quotas for ML compute",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It stores training datasets for reuse across experiments",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The model registry stores trained model files with version numbers, metadata, performance metrics, and lineage information â€” enabling teams to track, compare, and promote models through environments (dev â†’ staging â†’ production).",
+        "incorrect": "Scheduled training = ML pipelines. Quotas = Azure subscription management. Datasets are stored in data assets, not the model registry.",
+        "examTip": "Model registry = central store for model versions. Track: version, metrics, training run, dataset used. Promote winning models to deployment.",
+        "relatedTopics": [
+          "model-registry",
+          "MLOps",
+          "Azure-ML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-045",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure Document Intelligence (formerly Form Recognizer)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A tool for creating and editing Word documents in Azure",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An AI service that extracts structured data from documents like invoices, receipts, contracts, and forms",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A search engine for finding documents in SharePoint",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A service for managing document permissions in Azure Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Document Intelligence uses AI to automatically extract key-value pairs, tables, and structured data from documents â€” supporting invoices, receipts, ID documents, health insurance cards, tax forms, and custom document types.",
+        "incorrect": "It's for AI-powered data extraction, not document editing, search, or permissions.",
+        "examTip": "Document Intelligence pre-built models: Invoice, Receipt, ID Document, Business Card, Tax Form (W-2), Health Insurance Card. Custom models for unique formats.",
+        "relatedTopics": [
+          "Azure-Document-Intelligence",
+          "OCR",
+          "document-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Vision services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-046",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which AI principle requires that AI systems operate consistently and safely, avoiding unintended harmful outcomes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fairness",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Transparency",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Reliability and Safety",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Inclusiveness",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Reliability and Safety ensures AI systems perform as intended consistently, fail gracefully, and are designed to avoid harmful unintended consequences â€” especially critical in safety-critical applications.",
+        "incorrect": "Fairness = no discrimination. Transparency = explainability. Inclusiveness = accessible to all.",
+        "examTip": "Reliability & Safety applies to: autonomous vehicles, medical devices, critical infrastructure. AI must be tested thoroughly before deployment in high-stakes environments.",
+        "relatedTopics": [
+          "reliability-safety",
+          "responsible-AI",
+          "AI-principles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI principles",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-047",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a confusion matrix used for in machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To visualise the structure of a neural network",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To evaluate a classification model by showing counts of correct and incorrect predictions for each class",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To compare training and validation loss during model training",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To display the importance of each feature in a model",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A confusion matrix shows the counts of True Positives, True Negatives, False Positives, and False Negatives for a classifier â€” revealing exactly which classes the model confuses with others.",
+        "incorrect": "Network visualisation = different tools. Training/validation curves = loss plots. Feature importance = separate chart.",
+        "examTip": "Confusion matrix: TP (correct positive), TN (correct negative), FP (false alarm), FN (missed positive). From it you calculate accuracy, precision, recall, F1.",
+        "relatedTopics": [
+          "confusion-matrix",
+          "model-evaluation",
+          "classification"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe model evaluation",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-048",
+      "type": "ordering",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the steps of a typical machine learning workflow in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Define the problem and gather data",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Prepare and clean the data (feature engineering)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Train the model on training data",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Evaluate the model on test data",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Deploy the model as a service",
+          "correctPosition": 5
+        },
+        {
+          "id": "o6",
+          "text": "Monitor and retrain as needed",
+          "correctPosition": 6
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "ML lifecycle: Define problem â†’ Prepare data â†’ Train â†’ Evaluate â†’ Deploy â†’ Monitor. This mirrors CRISP-DM and Azure ML's process.",
+        "incorrect": "Data must be prepared before training. Evaluation comes after training. Deployment follows evaluation. Monitoring is ongoing after deployment.",
+        "examTip": "This ML lifecycle is a recurring exam topic. Azure ML supports all these steps in one platform.",
+        "relatedTopics": [
+          "ML-lifecycle",
+          "CRISP-DM",
+          "Azure-ML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML process",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-049",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the Question Answering feature of Azure AI Language used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Generating new questions from a text passage",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Creating a knowledge base from existing FAQs and documents that a bot can query to answer user questions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Answering mathematical equations",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Translating questions from one language to another",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Question Answering (formerly QnA Maker) allows you to build a knowledge base from FAQ pages, documents, and manuals. A bot can then query it to return the most relevant answer to a user's natural language question.",
+        "incorrect": "It answers from an existing knowledge base, doesn't generate questions, solve equations, or translate.",
+        "examTip": "Question Answering = FAQ-style knowledge base. CLU = intent/entity recognition for task-oriented bots. Both are Azure AI Language features for building bots.",
+        "relatedTopics": [
+          "Question-Answering",
+          "knowledge-base",
+          "Azure-AI-Language"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-050",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company wants to ensure their public-facing website does not display images that contain nudity, violence, or other offensive content uploaded by users.",
+      "questionText": "Which Azure service should be used to automatically moderate uploaded images?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Custom Vision",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure AI Content Safety",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Vision image analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Document Intelligence",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Content Safety is designed for content moderation â€” it detects adult content, violence, hate, and self-harm in both text and images, returning severity scores that can trigger moderation actions.",
+        "incorrect": "Custom Vision trains custom classifiers. AI Vision does image analysis but not content moderation specifically. Document Intelligence handles document data extraction.",
+        "examTip": "Content Safety = content moderation (hate, violence, sexual, self-harm). Severity levels 0-6 for each category. Integrate into upload pipelines to auto-moderate.",
+        "relatedTopics": [
+          "Azure-AI-Content-Safety",
+          "content-moderation",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-051",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary purpose of Azure AI Search in a generative AI solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To train foundation models on proprietary data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To index and retrieve relevant documents to ground LLM responses in factual content",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To translate user queries between languages before sending to the LLM",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To monitor LLM performance in production",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Search provides vector search and semantic search capabilities that retrieve relevant documents from a knowledge base â€” used as the retrieval component in RAG architectures to ground LLM responses in factual data.",
+        "incorrect": "Training = Azure ML / fine-tuning. Translation = Azure AI Translator. Monitoring = Azure Monitor / Azure ML monitoring.",
+        "examTip": "Azure AI Search in RAG: index documents â†’ convert to embeddings â†’ store in vector index â†’ at query time retrieve top-k relevant chunks â†’ send to LLM as context.",
+        "relatedTopics": [
+          "Azure-AI-Search",
+          "RAG",
+          "vector-search"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure generative AI tools",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-052",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure OpenAI model is specifically designed for generating images from text descriptions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GPT-4",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "DALL-E",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Whisper",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Embeddings (Ada)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DALL-E is OpenAI's image generation model â€” it creates realistic images from text prompts. Available through Azure OpenAI Service.",
+        "incorrect": "GPT-4 = text generation and reasoning. Whisper = speech recognition. Ada/Embeddings = converting text to vector representations.",
+        "examTip": "Azure OpenAI models: GPT-4/GPT-3.5 (text), DALL-E (images), Whisper (speech-to-text), Ada/text-embedding (embeddings). Each serves a different purpose.",
+        "relatedTopics": [
+          "DALL-E",
+          "image-generation",
+          "Azure-OpenAI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure OpenAI models",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-053",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of cross-validation in machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To validate that the model code has no syntax errors",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To get a more reliable estimate of model performance by training and evaluating on multiple data splits",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To check that training and test data come from the same distribution",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To validate that all features are normalised before training",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Cross-validation (e.g., k-fold) splits data into k subsets, trains on k-1, tests on 1, rotates through all combinations, and averages results â€” giving a more reliable performance estimate than a single train/test split.",
+        "incorrect": "Cross-validation is about model evaluation reliability, not code validation, distribution checks, or data preprocessing.",
+        "examTip": "k-fold cross-validation: split into k folds, train k times (each time using a different fold as test), average results. Reduces evaluation variance.",
+        "relatedTopics": [
+          "cross-validation",
+          "model-evaluation",
+          "ML-concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML model evaluation",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-054",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is transfer learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Moving a trained model from one Azure region to another",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Reusing a model trained on a large dataset as the starting point for training on a smaller related task",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Transferring training data between different ML frameworks",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Copying model weights between different team members",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Transfer learning takes a model pre-trained on a large general dataset (e.g., ImageNet for images, GPT for text) and fine-tunes it on a smaller domain-specific dataset â€” saving time and compute while achieving good results.",
+        "incorrect": "Transfer learning is an AI technique, not a data migration, framework conversion, or file sharing process.",
+        "examTip": "Transfer learning enables: training custom image classifiers with few examples (Custom Vision), fine-tuning LLMs on domain data. Pre-trained â†’ fine-tuned on your data.",
+        "relatedTopics": [
+          "transfer-learning",
+          "fine-tuning",
+          "pre-trained-models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML techniques",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-055",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company wants to use AI to predict when factory equipment is likely to fail, so maintenance can be scheduled before a breakdown occurs.",
+      "questionText": "What type of AI workload is this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Anomaly detection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Predictive maintenance (regression/classification)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Computer vision",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Natural language processing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Predictive maintenance uses ML to predict equipment failure before it happens, based on sensor readings, usage patterns, and historical failure data â€” enabling proactive maintenance scheduling.",
+        "incorrect": "Anomaly detection finds outliers in real-time. Computer vision = image/video analysis. NLP = text/speech. Predictive maintenance uses regression (time to failure) or classification (will it fail?)",
+        "examTip": "Predictive maintenance = IoT sensors + ML = predict failures. Classic Industry 4.0 AI use case. Uses regression or binary classification models.",
+        "relatedTopics": [
+          "predictive-maintenance",
+          "AI-workloads",
+          "regression"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identify AI workload scenarios",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-056",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is semantic segmentation in computer vision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Classifying the entire image with a single label",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Detecting objects with bounding boxes",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Assigning a class label to every pixel in an image to identify regions belonging to different categories",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Extracting text from images using OCR",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Semantic segmentation classifies every pixel in an image â€” for example, in an autonomous driving scene, each pixel is labelled as road, car, pedestrian, building, or sky.",
+        "incorrect": "Whole image label = classification. Bounding boxes = object detection. Text extraction = OCR. Segmentation is pixel-level classification.",
+        "examTip": "Vision tasks: Classification (image label) â†’ Detection (bounding boxes) â†’ Semantic Segmentation (pixel labels) â†’ Instance Segmentation (individual object masks).",
+        "relatedTopics": [
+          "semantic-segmentation",
+          "computer-vision",
+          "image-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe computer vision tasks",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-057",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure AI service can detect, identify, and analyse human faces in images?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Vision Image Analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure AI Face",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Custom Vision",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Document Intelligence",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Face provides face detection (locate faces), face analysis (age estimate, emotion, accessories, blur, exposure), face verification (are these the same person?), and face identification (who is this person from a known group).",
+        "incorrect": "Image Analysis provides general image tagging. Custom Vision = custom classifiers. Document Intelligence = document data extraction.",
+        "examTip": "Azure AI Face: Detection, Analysis, Verification (1:1 compare), Identification (1:N find in group). Note: facial recognition features require approved access (limited access).",
+        "relatedTopics": [
+          "Azure-AI-Face",
+          "facial-recognition",
+          "computer-vision"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Face",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-058",
+      "type": "yes-no-statements",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Azure computer vision services.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure AI Vision can generate descriptive captions for images automatically.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure Custom Vision requires thousands of training images to build any model.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Document Intelligence can extract data from structured forms like tax documents.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "OCR in Azure AI Vision can only read printed text, not handwriting.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "AI Vision generates captions. Document Intelligence handles structured forms. Custom Vision works well with as few as 15-50 images per class. Azure AI Vision Read API supports both printed and handwritten text.",
+        "incorrect": "Custom Vision doesn't need thousands of images. The Read API supports handwritten text.",
+        "examTip": "Custom Vision minimum images: 15 per tag recommended (more = better accuracy). Read API: supports printed + handwritten in many languages.",
+        "relatedTopics": [
+          "Azure-AI-Vision",
+          "Custom-Vision",
+          "OCR",
+          "Document-Intelligence"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure computer vision",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-059",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A global e-commerce company wants to automatically categorise customer reviews by product category (Electronics, Clothing, Books) and detect if they are complaints.",
+      "questionText": "Which Azure AI Language feature is MOST appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Named Entity Recognition",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Custom Text Classification",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Key Phrase Extraction",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Language Detection",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Custom Text Classification allows you to train a text classifier on your own labelled data â€” perfect for categorising reviews into custom categories (Electronics, Clothing, Books) and detecting complaints.",
+        "incorrect": "NER extracts named entities. Key phrases extract important terms. Language detection identifies what language is used. Custom classification is the right tool for custom category assignment.",
+        "examTip": "Pre-built NLP = standard tasks (sentiment, NER, language detection). Custom NLP = your own categories or entities. Custom Text Classification + Custom NER available in Azure AI Language.",
+        "relatedTopics": [
+          "Custom-Text-Classification",
+          "Azure-AI-Language",
+          "NLP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-060",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Azure AI Speech's text-to-speech capability enable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Converting audio recordings to text transcripts",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Synthesising natural-sounding spoken audio from written text",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting the emotion of a speaker from their voice",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Translating spoken content into a different language",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Text-to-speech (TTS) converts written text into natural-sounding spoken audio â€” used in virtual assistants, accessibility tools, audiobook narration, and customer service bots.",
+        "incorrect": "Audio to text = speech-to-text. Emotion from voice = speaker emotion recognition (separate feature). Voice translation = speech translation.",
+        "examTip": "Azure AI Speech TTS supports: neural voices (very natural), custom neural voice (clone a voice), SSML (Speech Synthesis Markup Language) for control.",
+        "relatedTopics": [
+          "text-to-speech",
+          "Azure-AI-Speech",
+          "voice-synthesis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Speech",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-061",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of normalisation/scaling in machine learning data preparation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To remove duplicate records from the training dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To bring features onto a similar scale so no single feature dominates model training",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To convert categorical features into text labels",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To split the dataset into training and test sets",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Normalisation (0-1 range) or standardisation (mean 0, std 1) ensures features with large scales (e.g., salary: 50,000) don't dominate over features with small scales (e.g., age: 35) during model training.",
+        "incorrect": "Deduplication removes duplicates. One-hot encoding = categorical to numerical. Train/test split = data partitioning.",
+        "examTip": "Feature scaling matters for: gradient descent-based models, k-NN, SVMs, neural networks. Tree-based models (Random Forest, XGBoost) don't require scaling.",
+        "relatedTopics": [
+          "normalisation",
+          "feature-scaling",
+          "data-preparation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML data preparation",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-062",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of a content moderation AI workload?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Predicting customer churn",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Automatically detecting and filtering inappropriate content posted by users on a social platform",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Translating product descriptions to multiple languages",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Generating personalised product recommendations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Content moderation uses AI to automatically review and filter user-generated content â€” detecting hate speech, nudity, violence, or spam to keep platforms safe and compliant.",
+        "incorrect": "Churn prediction = classification. Translation = NLP. Recommendations = recommender systems. Content moderation is its own AI workload category.",
+        "examTip": "Content moderation AI: Azure AI Content Safety, Azure AI Vision (adult content detection), custom classifiers. Used by social platforms, marketplaces, communication tools.",
+        "relatedTopics": [
+          "content-moderation",
+          "AI-workloads",
+          "Azure-AI-Content-Safety"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identify AI workloads",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-063",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is 'grounding' in the context of generative AI?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The process of connecting the AI model to electrical earth for safety",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Providing an LLM with relevant factual context to anchor its responses to verified information",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Training the LLM on a foundational dataset before fine-tuning",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Setting the base parameters of the model before deployment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Grounding means providing the LLM with specific, verified factual context (retrieved documents, structured data) so its responses are anchored in real information rather than relying solely on training data â€” reducing hallucinations.",
+        "incorrect": "Grounding is a technique for factual accuracy, not electrical safety, pre-training, or parameter configuration.",
+        "examTip": "Grounding = anchoring LLM responses to facts. RAG is the primary grounding technique. System prompts can also provide grounding context.",
+        "relatedTopics": [
+          "grounding",
+          "RAG",
+          "hallucination-prevention"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-064",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A data scientist trains a model that achieves 99% accuracy on training data but only 62% accuracy on the test set.",
+      "questionText": "What is MOST likely happening and what should be done?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The model is underfitting â€” more training data is needed",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The model is overfitting â€” regularisation, more data, or a simpler model should be tried",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The model is performing well â€” 62% test accuracy is acceptable",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The test data is corrupted and should be replaced",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "High train accuracy (99%) with low test accuracy (62%) is a classic overfitting signature â€” the model memorised the training data. Solutions: add regularisation (L1/L2, dropout), get more training data, simplify the model, or use early stopping.",
+        "incorrect": "Underfitting = low accuracy on both train AND test. 62% test accuracy with 99% train is clearly overfitting. Test data corruption is unlikely to cause this specific pattern.",
+        "examTip": "Overfitting fix: more data, regularisation, dropout (neural nets), pruning (trees), simpler model, data augmentation, cross-validation.",
+        "relatedTopics": [
+          "overfitting",
+          "regularisation",
+          "model-evaluation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML model issues",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-065",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of speech-to-text in Azure AI Speech?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To convert written text into spoken audio for accessibility",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To transcribe spoken audio into written text in real time or from recordings",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To detect the language spoken in an audio file",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To translate speech from one language to another",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Speech-to-text (STT) transcribes audio â€” voice commands, meeting recordings, call centre conversations, dictation â€” into written text, supporting real-time and batch transcription.",
+        "incorrect": "Text-to-speech = written â†’ audio. Language detection = identify the language. Speech translation = transcribe AND translate to another language.",
+        "examTip": "Azure AI Speech STT use cases: voice commands, call centre transcription, meeting transcription (Teams), accessibility (real-time captions), voice search.",
+        "relatedTopics": [
+          "speech-to-text",
+          "Azure-AI-Speech",
+          "transcription"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Speech",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-066",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Responsible AI principle ensures that AI systems are designed and built to be accessible to people regardless of ability, age, or background?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accountability",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fairness",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Inclusiveness",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Transparency",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Inclusiveness ensures AI systems are designed to benefit and be accessible to all people â€” including those with disabilities, across different cultures, languages, and socioeconomic backgrounds.",
+        "incorrect": "Accountability = human oversight and responsibility. Fairness = non-discrimination. Transparency = explainability. Inclusiveness = accessible to everyone.",
+        "examTip": "Inclusiveness in AI: support multiple languages, screen readers, keyboard navigation, voice interaction. Designs should not exclude any group.",
+        "relatedTopics": [
+          "inclusiveness",
+          "responsible-AI",
+          "accessibility"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI principles",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-067",
+      "type": "dropdown-select",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each Azure AI service to its primary function.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Converts spoken audio to text and text to speech",
+          "options": [
+            "Azure AI Language",
+            "Azure AI Speech",
+            "Azure AI Translator",
+            "Azure AI Vision"
+          ],
+          "correctAnswer": "Azure AI Speech"
+        },
+        {
+          "id": "d2",
+          "prompt": "Translates written text between 100+ languages",
+          "options": [
+            "Azure AI Language",
+            "Azure AI Speech",
+            "Azure AI Translator",
+            "Azure AI Vision"
+          ],
+          "correctAnswer": "Azure AI Translator"
+        },
+        {
+          "id": "d3",
+          "prompt": "Performs sentiment analysis, NER, and key phrase extraction on text",
+          "options": [
+            "Azure AI Language",
+            "Azure AI Speech",
+            "Azure AI Translator",
+            "Azure AI Vision"
+          ],
+          "correctAnswer": "Azure AI Language"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Speech = audio â†” text conversion. Translator = text language translation. Language = text NLP (sentiment, NER, key phrases, CLU).",
+        "incorrect": "These four services cover distinct AI domains: vision (images), speech (audio), language (text NLP), translator (language conversion).",
+        "examTip": "Azure AI Services family: Vision, Face, Speech, Language, Translator, Document Intelligence, Content Safety, Bot Service, OpenAI. Each has a specific domain.",
+        "relatedTopics": [
+          "Azure-AI-services",
+          "NLP-services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-068",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the system message (system prompt) in Azure OpenAI Service used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To send the user's question to the model",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To set the context, persona, instructions, and constraints for how the model should behave throughout the conversation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To specify the maximum number of tokens the model can generate",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To authenticate the API request to Azure OpenAI",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The system message appears before user messages in a chat conversation and instructs the model how to behave â€” setting its persona, tone, language, restrictions, and domain focus.",
+        "incorrect": "User message = what the user asks. Token limit = max_tokens parameter. Authentication = API key/Entra ID.",
+        "examTip": "System prompt example: 'You are a helpful customer service agent for Contoso. Only answer questions about our products. Always be polite.' Sets guardrails for the conversation.",
+        "relatedTopics": [
+          "system-message",
+          "prompt-engineering",
+          "Azure-OpenAI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure OpenAI features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-069",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data labelling in the context of supervised machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adding column headers to a CSV dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Annotating training examples with the correct output (class, value, or bounding box) for the model to learn from",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Assigning version numbers to trained models",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Tagging Azure resources for cost management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data labelling (annotation) is the process of adding correct output labels to training data â€” e.g., marking images as 'cat' or 'dog', drawing bounding boxes around objects, or tagging text with sentiment.",
+        "incorrect": "CSV headers = data schema. Model versioning = MLOps. Resource tags = Azure cost management.",
+        "examTip": "Azure ML Data Labelling is a service for crowdsourcing and managing labelling projects. Quality and quantity of labels directly impacts model performance.",
+        "relatedTopics": [
+          "data-labelling",
+          "annotation",
+          "supervised-learning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-070",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A financial services company uses an AI model to approve or reject loan applications. A group of applicants from a specific demographic are being rejected at a much higher rate than other groups, even when their financial profiles are similar.",
+      "questionText": "Which Responsible AI principle is being violated and what should be done?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reliability â€” the model should be retrained more frequently",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fairness â€” the model should be audited for bias and the training data reviewed for discriminatory patterns",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Transparency â€” the model's algorithm should be published publicly",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Inclusiveness â€” the application form should support more languages",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The model is producing biased outcomes against a demographic group â€” violating the Fairness principle. The team should use tools like Azure AI Fairness assessment, review training data for historical bias, and apply bias mitigation techniques.",
+        "incorrect": "Reliability = consistent operation. Transparency = explainability. Inclusiveness = accessibility. Discriminatory outcomes = Fairness violation.",
+        "examTip": "Fairness in financial AI is legally regulated in many countries (Equal Credit Opportunity Act, EU AI Act). Use model explainability tools to detect and address bias.",
+        "relatedTopics": [
+          "fairness",
+          "bias-detection",
+          "responsible-AI",
+          "financial-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-071",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are embeddings in the context of generative AI and NLP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Images embedded within text documents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Numerical vector representations of words, sentences, or documents that capture semantic meaning",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Model weights embedded in a deployment container",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Code snippets embedded in the LLM training data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Embeddings convert text into dense numerical vectors in a high-dimensional space where semantically similar items are close together. Used for semantic search, RAG vector databases, and similarity comparisons.",
+        "incorrect": "Embeddings are mathematical vector representations, not visual elements, model weights, or code.",
+        "examTip": "Embeddings enable semantic search: 'car' and 'automobile' have similar vectors even though they're different words. Azure OpenAI's text-embedding-ada-002 creates embeddings for RAG.",
+        "relatedTopics": [
+          "embeddings",
+          "vector-search",
+          "semantic-search",
+          "RAG"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-072",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of the Azure Machine Learning model monitoring feature after deployment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To retrain the model automatically when accuracy drops",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To detect data drift and performance degradation in production, alerting when the model needs retraining",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To monitor Azure infrastructure costs for the ML workload",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To provide audit trails for regulatory compliance",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Model monitoring tracks data drift (input distribution change), concept drift (relationship between inputs and outputs changes), and performance metrics â€” alerting teams when the deployed model needs retraining.",
+        "incorrect": "Auto-retraining is a separate pipeline. Cost monitoring = Azure Cost Management. Compliance auditing = separate tools.",
+        "examTip": "Data drift: training data distribution â‰  production data distribution over time. Causes model degradation. Monitor â†’ detect drift â†’ retrain cycle.",
+        "relatedTopics": [
+          "model-monitoring",
+          "data-drift",
+          "MLOps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML operations",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-073",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a recommendation system and where is it commonly used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A system that recommends which cloud services to use for a workload",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An AI system that predicts items a user is likely to prefer based on behaviour and preferences",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A compliance system that recommends security patches",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A chatbot that recommends answers to customer questions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Recommendation systems use ML to predict what products, content, or services a user will find relevant â€” used by Netflix (show recommendations), Amazon (product recommendations), Spotify (music), and social media (content feeds).",
+        "incorrect": "Recommendation systems are about personalised content/product suggestions, not cloud architecture, security, or chatbots.",
+        "examTip": "Azure Personalizer (now deprecated in favour of Azure OpenAI) provided real-time recommendation. Collaborative filtering and content-based filtering are the two main approaches.",
+        "relatedTopics": [
+          "recommendation-systems",
+          "personalisation",
+          "AI-workloads"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Identify AI workloads",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-074",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A manufacturing company wants to automate quality control by detecting defects on products on an assembly line using cameras. Products have unique defect patterns specific to their factory.",
+      "questionText": "Which Azure service BEST supports building this custom defect detection model?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Vision (pre-built analysis)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Custom Vision",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Document Intelligence",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Language",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Custom Vision lets you train custom object detection or image classification models with your own labelled images â€” ideal for factory-specific defect patterns that pre-built models wouldn't recognise.",
+        "incorrect": "Pre-built AI Vision wouldn't know factory-specific defects. Document Intelligence handles documents. Language handles text.",
+        "examTip": "Manufacturing AI = Custom Vision (visual quality control), Azure ML (predictive maintenance), Azure AI Vision (general scene analysis). Custom Vision = your specific objects.",
+        "relatedTopics": [
+          "Azure-Custom-Vision",
+          "object-detection",
+          "manufacturing-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure computer vision services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-075",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the difference between batch inferencing and real-time inferencing in Azure Machine Learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Batch runs faster than real-time",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Batch processes large volumes of data asynchronously; real-time returns instant predictions for individual requests",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Real-time only works with tabular data; batch works with images",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are the same but run in different Azure regions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Batch inferencing processes large datasets in bulk (e.g., score all customers overnight). Real-time inferencing responds immediately to individual requests (e.g., fraud check at point of payment).",
+        "incorrect": "Real-time is faster per request but batch has higher throughput. Both support various data types. They serve different use cases.",
+        "examTip": "Batch = high volume, latency tolerable (reports, recommendations). Real-time = immediate response needed (fraud, recommendations at click-time, medical alerts).",
+        "relatedTopics": [
+          "batch-inferencing",
+          "real-time-inferencing",
+          "model-deployment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML deployment",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-076",
+      "type": "yes-no-statements",
+      "topicId": "generative-ai",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Azure generative AI services and concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure AI Studio allows you to test and compare different foundation models in a playground before deployment.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Microsoft Copilot for Microsoft 365 can only be used in Word and Excel.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure OpenAI Assistants API allows building AI assistants that can use tools like code interpreter and file search.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "All Azure OpenAI models are available to all Azure customers immediately upon subscription.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "AI Studio has a model playground. Copilot for M365 works in Word, Excel, PowerPoint, Outlook, Teams, and more. Assistants API supports tools. Azure OpenAI requires approved access (limited access programme).",
+        "incorrect": "Copilot for M365 works across the entire Microsoft 365 suite. Azure OpenAI requires an approved application for access.",
+        "examTip": "Azure OpenAI = requires approved access (responsible AI gate). Not available to all by default. Apply at https://aka.ms/oai/access.",
+        "relatedTopics": [
+          "Azure-AI-Studio",
+          "Microsoft-Copilot",
+          "Azure-OpenAI-access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-077",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A developer wants to build a voice-enabled assistant that listens to spoken questions, understands the intent, and reads the answer aloud. The solution should work in English and Spanish.",
+      "questionText": "Which combination of Azure AI services is needed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Vision + Azure AI Language",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure AI Speech (STT + TTS) + Azure AI Language (CLU) + Azure AI Translator",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure OpenAI + Azure AI Vision",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Speech + Azure AI Document Intelligence",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The solution needs: Speech-to-text (listen â†’ text), CLU (understand intent), optionally Translator (multilingual), and Text-to-speech (answer â†’ spoken audio). Together these create a complete voice assistant pipeline.",
+        "incorrect": "Vision handles images, not voice. Document Intelligence handles documents. OpenAI alone doesn't handle speech I/O natively.",
+        "examTip": "Voice assistant pipeline: Microphone â†’ Speech-to-text â†’ NLU (CLU/OpenAI) â†’ Response text â†’ Text-to-speech â†’ Speaker. Azure services map to each step.",
+        "relatedTopics": [
+          "voice-assistant",
+          "Azure-AI-Speech",
+          "CLU",
+          "multilingual"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-078",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary benefit of using Azure Machine Learning pipelines?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They automatically select the best ML algorithm for a dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "They orchestrate reusable, automated workflows for data preparation, training, evaluation, and deployment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They provide a visual interface for data scientists to explore datasets",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They manage cost allocation for ML compute resources",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure ML pipelines automate the end-to-end ML workflow as a series of steps â€” data preprocessing, training, evaluation, registration â€” that can be scheduled, reused, and versioned for reproducibility.",
+        "incorrect": "Algorithm selection = AutoML. Visual exploration = Azure ML Designer/notebooks. Cost management = Azure Cost Management.",
+        "examTip": "ML pipelines = automation + reproducibility + reusability. Each step can be run independently. Re-run only changed steps for efficiency.",
+        "relatedTopics": [
+          "Azure-ML-pipelines",
+          "MLOps",
+          "automation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-079",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the difference between AI and traditional software?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Traditional software runs in the cloud; AI only runs on-premises",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Traditional software follows explicit rules programmed by developers; AI learns patterns from data to make decisions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "AI always produces more accurate results than traditional software",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Traditional software uses databases; AI does not",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Traditional software explicitly encodes rules (if X then Y). AI learns patterns from data and can make decisions in situations not explicitly programmed â€” handling ambiguity, variability, and complex patterns.",
+        "incorrect": "Both can run anywhere. AI can make errors. Both can use databases.",
+        "examTip": "Traditional software: rules coded by humans. ML: rules learned from data. When rules are too complex to code explicitly (image recognition, speech) â†’ use AI.",
+        "relatedTopics": [
+          "AI-vs-traditional-software",
+          "machine-learning",
+          "AI-concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe AI concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-080",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure AI Foundry (formerly Azure AI Studio) Model Catalog?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A library of pre-built code samples for AI development",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A collection of foundation models from Microsoft, OpenAI, Meta, Hugging Face and others that can be deployed and fine-tuned on Azure",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A catalogue of Azure AI service pricing plans",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A data catalogue for managing ML training datasets",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Model Catalog in Azure AI Foundry provides access to hundreds of foundation models â€” GPT-4, Llama, Mistral, Phi, Stable Diffusion, and more â€” that can be tested in the playground, deployed, or fine-tuned.",
+        "incorrect": "Model Catalog = models, not code samples, pricing, or datasets.",
+        "examTip": "Model Catalog providers: OpenAI (GPT-4), Meta (Llama), Mistral, Cohere, Hugging Face, Microsoft (Phi). Compare models side-by-side before choosing.",
+        "relatedTopics": [
+          "Model-Catalog",
+          "Azure-AI-Foundry",
+          "foundation-models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Studio",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-081",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is MLOps and why is it important?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A machine learning technique for optimising model hyperparameters",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The practice of applying DevOps principles to ML to automate and manage the ML lifecycle reliably and at scale",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A cloud service for deploying ML models to edge devices",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A method for labelling large datasets using crowdsourcing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "MLOps (ML + DevOps) applies CI/CD principles to machine learning â€” automating training pipelines, model versioning, testing, deployment, and monitoring to make ML production-ready and maintainable.",
+        "incorrect": "Hyperparameter tuning = AutoML/grid search. Edge deployment = Azure IoT Edge/ONNX. Data labelling = annotation tools.",
+        "examTip": "MLOps lifecycle: Data versioning â†’ Experiment tracking â†’ Model registry â†’ CI/CD pipelines â†’ Model monitoring â†’ Feedback loop. Azure ML supports all stages.",
+        "relatedTopics": [
+          "MLOps",
+          "CI-CD",
+          "model-deployment",
+          "Azure-ML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML operations",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-082",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is spatial analysis in Azure AI Vision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Analysing 3D spatial data from LiDAR sensors",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Analysing live video to understand the movement and presence of people in a physical space",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting the geographic location of where a photo was taken",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Measuring the physical dimensions of objects in an image",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Spatial analysis in Azure AI Vision processes live video streams to count people, detect when people enter zones, measure distance between people, and understand how people move through physical spaces.",
+        "incorrect": "It uses standard cameras, not LiDAR. It doesn't detect photo geolocation or measure physical dimensions.",
+        "examTip": "Spatial analysis use cases: retail foot traffic, social distancing monitoring, occupancy counting, queue length measurement. Requires edge device or Azure stack.",
+        "relatedTopics": [
+          "spatial-analysis",
+          "Azure-AI-Vision",
+          "video-analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Vision",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-083",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Named Entity Recognition (NER) in Azure AI Language?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Recognising the names of files and folders in a storage account",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Identifying and classifying specific entities in text such as people, organisations, locations, dates, and quantities",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting the tone and emotion expressed in a piece of text",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Recognising the author's name from their writing style",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "NER identifies and classifies named entities in text into categories: Person (John Smith), Organisation (Microsoft), Location (Seattle), Date (January 2024), Quantity (100 units), etc.",
+        "incorrect": "NER is about text entity extraction, not file systems, emotions (= sentiment analysis), or authorship identification.",
+        "examTip": "NER use cases: extract key information from contracts (parties, dates, amounts), news articles (people, companies, places), medical records (medications, conditions).",
+        "relatedTopics": [
+          "NER",
+          "entity-extraction",
+          "Azure-AI-Language"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-084",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A developer is building a customer support chatbot using Azure OpenAI. Users are attempting to bypass safety guidelines by crafting clever prompts (jailbreaking). The chatbot is generating responses that violate company policy.",
+      "questionText": "What is the BEST way to mitigate this risk?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Switch to a different LLM provider",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Implement Azure AI Content Safety to filter inputs and outputs, and use a strong system prompt with clear constraints",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Remove the chatbot from production until jailbreaking is impossible",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Increase the model temperature to make responses less predictable",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Combining Azure AI Content Safety (blocks harmful content in I/O) with a strong system prompt (sets guardrails) provides layered protection against prompt injection and jailbreaking attempts.",
+        "incorrect": "Switching providers doesn't solve the problem. Waiting for perfect safety is impractical. Higher temperature increases randomness but not safety.",
+        "examTip": "Jailbreak mitigation: strong system prompt + Azure AI Content Safety + input/output validation + monitoring. No single control is sufficient â€” use layered defences.",
+        "relatedTopics": [
+          "jailbreaking",
+          "prompt-injection",
+          "Azure-AI-Content-Safety",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible generative AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-085",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of splitting a dataset into training and test sets?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To make the dataset smaller and faster to process",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To train the model on one portion and evaluate its performance on unseen data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To train two different models and compare them",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To separate numeric features from categorical features",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The training set teaches the model. The test set evaluates how well the model performs on data it has never seen â€” simulating real-world performance and checking for overfitting.",
+        "incorrect": "Splits don't reduce data size by default. Training two models is a different concept. Feature separation is preprocessing.",
+        "examTip": "Typical splits: 80/20 or 70/30 (train/test). With validation: 60/20/20. Never use test data during training â€” it would give falsely optimistic results.",
+        "relatedTopics": [
+          "train-test-split",
+          "model-evaluation",
+          "ML-concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-086",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the Accountability principle in Microsoft's Responsible AI framework?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Making AI outputs explainable to users",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Ensuring humans remain responsible for AI systems and their decisions, with governance frameworks in place",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Keeping track of AI model version history",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Ensuring AI is available 24/7 without downtime",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Accountability means humans â€” not AI systems themselves â€” are ultimately responsible for the decisions and outcomes of AI. This includes governance, oversight, audit trails, and clear ownership.",
+        "incorrect": "Explainability = Transparency. Version history = MLOps. 24/7 availability = Reliability. Accountability = human responsibility for AI outcomes.",
+        "examTip": "Accountability = humans own AI outcomes. Who is responsible when AI makes a mistake? There must be an answer â€” a person, team, or organisation.",
+        "relatedTopics": [
+          "accountability",
+          "AI-governance",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-087",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is image classification used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Identifying the location of multiple objects within an image",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Assigning one or more labels to an entire image to describe its content",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Extracting text from an image",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Enhancing the resolution of low-quality images",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Image classification assigns category labels to the whole image â€” 'this is a dog', 'this is a pizza', 'this X-ray shows pneumonia'. Multi-label classification can assign multiple labels.",
+        "incorrect": "Object location = object detection. Text extraction = OCR. Image enhancement = super-resolution. Classification is about labelling the whole image.",
+        "examTip": "Classification: one label per image. Multi-label: multiple labels per image. Detection: labels + locations. Azure Custom Vision supports both classification and detection.",
+        "relatedTopics": [
+          "image-classification",
+          "computer-vision",
+          "Custom-Vision"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe computer vision tasks",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-088",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between fine-tuning an LLM and using RAG?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are identical approaches with different names",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fine-tuning modifies model weights with additional training; RAG retrieves external documents at query time without changing the model",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Fine-tuning is cheaper and faster than RAG",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "RAG requires retraining the model for each new document added",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fine-tuning permanently updates model weights through additional training on domain data â€” expensive and requires retraining when data changes. RAG retrieves documents at query time without changing the model â€” cheaper and easily updated by adding documents.",
+        "incorrect": "They are fundamentally different. Fine-tuning is typically slower and more expensive. RAG doesn't retrain the model when documents are added.",
+        "examTip": "When to fine-tune: teach the model a new style, format, or domain vocabulary. When to use RAG: provide up-to-date facts and reduce hallucinations. RAG is usually the first choice.",
+        "relatedTopics": [
+          "fine-tuning",
+          "RAG",
+          "LLM-customisation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-089",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is key phrase extraction in Azure AI Language?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Extracting cryptographic keys from text documents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Identifying the most important words and phrases that summarise the main topics of a text",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Extracting all proper nouns from a text",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Finding duplicate phrases across multiple documents",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Key phrase extraction automatically identifies the most significant terms in a text â€” summarising what a document is about. Useful for tagging, indexing, and summarising large volumes of text.",
+        "incorrect": "Not cryptographic keys. NER extracts proper nouns specifically. Duplicate detection is a different task.",
+        "examTip": "Key phrase extraction use cases: auto-tagging articles, search indexing, document summarisation, categorising customer feedback. Different from NER (entities) or sentiment.",
+        "relatedTopics": [
+          "key-phrase-extraction",
+          "Azure-AI-Language",
+          "text-analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-090",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a neural network in the context of deep learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A biological network of neurons in the human brain",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A computational model inspired by the brain, consisting of interconnected layers of nodes that learn representations from data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A network of Azure AI services connected together",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A decision tree with multiple branches",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An artificial neural network has an input layer, one or more hidden layers, and an output layer. Each node applies a weighted function and activation. Deep learning = many hidden layers enabling automatic feature learning.",
+        "incorrect": "This is artificial/computational, not biological. It's not an Azure architecture diagram or a decision tree.",
+        "examTip": "Neural network layers: Input â†’ Hidden (1+ layers) â†’ Output. Deep = many hidden layers. Enables: image recognition, NLP, speech. Requires large data and compute.",
+        "relatedTopics": [
+          "neural-network",
+          "deep-learning",
+          "machine-learning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe deep learning concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-091",
+      "type": "ordering",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the steps of a RAG (Retrieval-Augmented Generation) workflow in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "User submits a natural language query",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Query is converted to an embedding vector",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Vector search retrieves relevant document chunks from the knowledge base",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Retrieved chunks and user query are combined into a prompt",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "LLM generates a grounded response based on the prompt",
+          "correctPosition": 5
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "RAG flow: query â†’ embed query â†’ vector search â†’ retrieve chunks â†’ augmented prompt â†’ LLM response. The retrieved documents ground the LLM in factual content.",
+        "incorrect": "The embedding step must happen before vector search. Retrieval must happen before prompt construction. LLM generates last.",
+        "examTip": "RAG components: Azure OpenAI (embeddings + generation), Azure AI Search (indexing + vector search), your documents (knowledge base). All three needed.",
+        "relatedTopics": [
+          "RAG-workflow",
+          "vector-search",
+          "embeddings",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe RAG",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-092",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the Privacy and Security principle in Microsoft's Responsible AI framework?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AI should keep all data secret from users",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AI systems should protect personal data, ensure confidentiality, and resist security threats",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "AI should only be deployed in private cloud environments",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AI model code should be kept proprietary and never shared",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Privacy and Security means AI systems must handle personal data responsibly â€” applying data minimisation, anonymisation, encryption, access controls, and protecting against adversarial attacks.",
+        "incorrect": "It's about responsible data handling and system security, not hiding data from users, cloud placement, or code secrecy.",
+        "examTip": "AI privacy: GDPR compliance, data minimisation, anonymisation of training data, differential privacy. Security: protect against model poisoning, adversarial examples, data breaches.",
+        "relatedTopics": [
+          "privacy-security",
+          "responsible-AI",
+          "data-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI principles",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-093",
+      "type": "single-choice",
+      "topicId": "computer-vision",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A developer builds an app that allows users to take a photo of a plant and receive information about its species. The app must work for hundreds of plant species.",
+      "questionText": "Which Azure service and feature BEST supports this use case?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Vision Read API",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Custom Vision classification model trained on plant species images",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Language sentiment analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Face",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Custom Vision can be trained with labelled images of each plant species, building a custom image classifier that can identify the species from a new photo.",
+        "incorrect": "Read API = OCR (text in images). Language sentiment = text emotion. Face = human faces. Custom Vision is the tool for custom image classification.",
+        "examTip": "Custom Vision image classification: train with 15+ images per class, test with new images, publish model, call via REST API or SDK.",
+        "relatedTopics": [
+          "Azure-Custom-Vision",
+          "image-classification",
+          "mobile-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure computer vision services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-094",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is GitHub Copilot and how does it relate to generative AI?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A GitHub tool for managing code repositories and pull requests",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An AI-powered coding assistant that uses LLMs to suggest code completions, generate functions, and explain code within IDEs",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A CI/CD tool for automating software deployment pipelines",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A security scanner that detects vulnerabilities in code",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Copilot is a generative AI coding assistant powered by OpenAI Codex/GPT-4. It suggests code completions, generates entire functions from comments, explains code, and helps debug â€” integrated into VS Code, Visual Studio, and other IDEs.",
+        "incorrect": "Repository management = GitHub core. CI/CD = GitHub Actions. Security scanning = GitHub Advanced Security/CodeQL.",
+        "examTip": "GitHub Copilot is a Microsoft Copilot product. Uses Azure OpenAI (GPT-4 Codex). Boost developer productivity. Available as GitHub Copilot Individual, Business, Enterprise.",
+        "relatedTopics": [
+          "GitHub-Copilot",
+          "code-generation",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft Copilot",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-095",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is responsible AI impact assessment and why should it be done before deploying an AI system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A financial cost analysis to determine if AI is cost-effective",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A systematic evaluation of potential harms, biases, and ethical risks an AI system could cause to individuals and society",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A technical performance benchmark comparing different models",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A user satisfaction survey conducted after deployment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A responsible AI impact assessment identifies potential harms (discrimination, privacy violations, safety risks, misuse) before deployment â€” enabling teams to mitigate risks proactively rather than reactively after harm has occurred.",
+        "incorrect": "Not about costs, benchmarks, or post-deployment feedback. Impact assessment is pre-deployment risk analysis.",
+        "examTip": "Microsoft responsible AI tooling: AI Fairness assessment (Fairlearn), model explainability (InterpretML), data profiling, impact assessment templates. All available in Azure ML.",
+        "relatedTopics": [
+          "responsible-AI",
+          "impact-assessment",
+          "AI-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-096",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is language detection in Azure AI Language?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Detecting inappropriate language in user inputs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Identifying which language a piece of text is written in",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting the programming language used in a code snippet",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Identifying whether text is formal or informal in tone",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Language detection identifies the natural language of a text â€” e.g., determining that a customer review is in French, German, or Japanese â€” and returns a confidence score. Supports 120+ languages.",
+        "incorrect": "Inappropriate content = Azure AI Content Safety. Programming language detection = separate tool. Formality = not a standard Azure AI Language feature.",
+        "examTip": "Language detection returns: detected language, ISO 639-1 code (e.g., 'fr' for French), confidence score. First step in multilingual NLP pipelines.",
+        "relatedTopics": [
+          "language-detection",
+          "Azure-AI-Language",
+          "multilingual"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-097",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Prompt Flow in Azure AI Foundry?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A tool for managing API rate limits for Azure OpenAI",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A visual development tool for building, testing, and deploying LLM-based applications as orchestrated workflows",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A feature for creating prompt templates and storing them in a library",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A tool for monitoring LLM token usage and costs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Prompt Flow is a visual development environment in Azure AI Foundry for building LLM applications as executable flows â€” connecting LLM calls, Python functions, data retrieval, and tools into a coherent application pipeline.",
+        "incorrect": "Rate limiting = Azure API Management. Template libraries = different. Token monitoring = Azure OpenAI quotas dashboard.",
+        "examTip": "Prompt Flow: visual orchestration of LLM apps. Supports evaluation (test with datasets), variants (compare prompts), deployment as endpoint. Key for RAG app development.",
+        "relatedTopics": [
+          "Prompt-Flow",
+          "Azure-AI-Foundry",
+          "LLM-orchestration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Foundry tools",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-098",
+      "type": "yes-no-statements",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes machine learning concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Unsupervised learning requires labelled training data.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "A regression model predicts a continuous numeric value.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Feature engineering can significantly improve model performance.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "A model with very high training accuracy always performs well in production.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Unsupervised learning uses unlabelled data. Regression predicts numbers (price, temperature). Feature engineering improves models significantly. High training accuracy can mean overfitting â€” poor production performance.",
+        "incorrect": "Unsupervised = no labels needed. High training accuracy without good test accuracy = overfitting.",
+        "examTip": "Never judge a model by training accuracy alone. Always check test/validation performance. Real-world performance depends on both.",
+        "relatedTopics": [
+          "unsupervised-learning",
+          "regression",
+          "feature-engineering",
+          "overfitting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-099",
+      "type": "single-choice",
+      "topicId": "ai-workloads",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company deploys a chatbot that answers questions about their products. Over time, users report that the bot sometimes gives answers that are factually wrong and not based on the company's product catalogue.",
+      "questionText": "Which Responsible AI principle is MOST at risk, and what technique can address it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fairness â€” use bias detection tools",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Reliability â€” use RAG to ground chatbot responses in the verified product catalogue",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Inclusiveness â€” add more languages to the chatbot",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Accountability â€” assign a human to approve every chatbot response",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Factually wrong responses violate the Reliability and Safety principle (the system doesn't perform as expected). RAG grounds the chatbot in verified product catalogue data, preventing hallucinations about products.",
+        "incorrect": "Fairness = discrimination. Inclusiveness = accessibility. Accountability = human oversight. Wrong facts = Reliability issue, solved by grounding.",
+        "examTip": "Chatbot hallucinations â†’ Reliability concern â†’ RAG solution. Ground chatbot responses in authoritative data sources to ensure factual accuracy.",
+        "relatedTopics": [
+          "reliability",
+          "RAG",
+          "hallucination",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-100",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of evaluating a generative AI application before deploying it to production?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To estimate the monthly Azure cost of running the application",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To assess the quality, safety, and reliability of model outputs against defined metrics before users interact with it",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To train the model on a final validation dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To check that the application meets accessibility requirements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Generative AI evaluation tests model outputs for quality (groundedness, coherence, relevance), safety (harmful content), and performance â€” catching issues before real users are affected.",
+        "incorrect": "Cost estimation = Azure pricing calculator. Final training = separate process. Accessibility = UX testing. Evaluation = quality and safety gate.",
+        "examTip": "Azure AI Foundry evaluation metrics: Groundedness (is it based on sources?), Relevance, Coherence, Fluency, Similarity. Run evaluations before each deployment.",
+        "relatedTopics": [
+          "generative-AI-evaluation",
+          "quality-assessment",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI evaluation",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ],
+  "certificationId": "ai-900",
+  "version": "2024-01"
+}

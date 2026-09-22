@@ -1,0 +1,737 @@
+{
+  "certificationId": "github-foundations",
+  "topicId": "repositories",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "github-013",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a GitHub repository?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A single file that contains all code for a project",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A storage space on GitHub that contains a project's files, history, branches, and related resources",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A GitHub account that stores multiple projects",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A cloud database for storing application data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A GitHub repository (repo) contains all project files, their revision history, branches, issues, pull requests, and settings. It can be public or private.",
+        "incorrect": "A repository contains many files, branches, and history â€” not a single file or account.",
+        "examTip": "Repository = project container. Contains: code, history, branches, PRs, issues, Actions, wiki, packages, settings.",
+        "relatedTopics": [
+          "repository",
+          "github-basics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe repositories",
+        "references": [
+          "https://docs.github.com/en/repositories"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-014",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the difference between a public and private repository on GitHub?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Public repos are faster; private repos have more storage",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Public repos are visible to anyone on the internet; private repos are only accessible to the owner and explicitly invited collaborators",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Public repos support branches; private repos do not",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Private repos cannot use GitHub Actions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Public repositories are visible to everyone on the internet (anyone can view and fork). Private repositories are only accessible to the repository owner and explicitly granted collaborators.",
+        "incorrect": "Speed and storage are not determined by visibility. Both support branches and GitHub Actions.",
+        "examTip": "Public = open source, visible to all, can be forked by anyone. Private = controlled access. Both support all GitHub features.",
+        "relatedTopics": [
+          "public-repo",
+          "private-repo",
+          "visibility"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe repository visibility",
+        "references": [
+          "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-015",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a README file in a GitHub repository?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A configuration file required by GitHub to run a repository",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A markdown file that describes the project, how to use it, and how to contribute",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A file that lists all contributors to the project",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A file containing the project's test results",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "README.md is a markdown file displayed on the repository's main page. It typically includes project description, installation instructions, usage examples, and contribution guidelines.",
+        "incorrect": "README is optional but strongly recommended. It's for humans to understand the project, not a config file.",
+        "examTip": "README.md is displayed automatically on the repo homepage. Use markdown for formatting. It's the first thing visitors see.",
+        "relatedTopics": [
+          "README",
+          "markdown",
+          "repository-documentation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe repository files",
+        "references": [
+          "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-016",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a fork on GitHub?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A copy of a repository in your own GitHub account that is independent from the original",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "A branch created from another branch",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A split of one repository into two separate repositories",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A backup copy of a repository stored on GitHub servers",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Forking creates a copy of someone else's repository under your own GitHub account. You can make changes freely and later submit a pull request to contribute back to the original.",
+        "incorrect": "A fork is a repo-level copy, not a branch. It's used to contribute to projects you don't have write access to.",
+        "examTip": "Fork = repo copy in your account. Clone = local copy of a repo. Typical open source workflow: Fork â†’ Clone â†’ Change â†’ Push â†’ Pull Request.",
+        "relatedTopics": [
+          "fork",
+          "open-source-workflow",
+          "pull-request"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe repository collaboration",
+        "references": [
+          "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-017",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a branch in Git/GitHub?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A copy of the repository stored in a different location",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A lightweight movable pointer to a specific commit, allowing parallel lines of development",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A snapshot of the repository at a specific point in time",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A label attached to a commit to mark a release",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A branch is a lightweight pointer to a commit. Creating a branch lets you develop features or fixes in isolation without affecting the main codebase.",
+        "incorrect": "Snapshot = tag or commit. Release label = tag. Branches are pointers, not copies.",
+        "examTip": "main/master = default branch. Feature branches: branch from main, develop, merge back via PR. Branches are cheap to create in Git.",
+        "relatedTopics": [
+          "branch",
+          "branching",
+          "parallel-development"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe branching",
+        "references": [
+          "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-018",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does `git merge` do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Combines the history of two branches into one",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Copies files from one branch to another without combining history",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Deletes a branch after its changes are no longer needed",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Uploads all local branches to the remote repository",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "`git merge` integrates changes from one branch into another, combining their histories. A merge commit is created if the branches have diverged.",
+        "incorrect": "File copying doesn't combine history. Branch deletion = `git branch -d`. Uploading = `git push`.",
+        "examTip": "Merge strategies: fast-forward (linear history), merge commit (preserves branch history), squash (one commit). GitHub supports all three in pull requests.",
+        "relatedTopics": [
+          "git-merge",
+          "merge-commit",
+          "branching"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe merging",
+        "references": [
+          "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-019",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the difference between `git merge` and `git rebase`?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are identical operations",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "`git merge` preserves branch history with a merge commit; `git rebase` rewrites history by replaying commits on top of another branch for a linear history",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "`git rebase` is faster than `git merge` for large repositories",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "`git merge` can only be used on private repositories",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Merge creates a merge commit that preserves the full branch history. Rebase rewrites commits onto the target branch, creating a cleaner linear history but altering commit hashes.",
+        "incorrect": "They have different history models. Speed is not a distinguishing factor. Both work on any repository.",
+        "examTip": "Golden rule: never rebase shared/public branches (it rewrites history others depend on). Rebase local branches before merging. Merge = preserve history. Rebase = clean history.",
+        "relatedTopics": [
+          "git-merge",
+          "git-rebase",
+          "history"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Git operations",
+        "references": [
+          "https://docs.github.com/en/get-started/using-git/about-git-rebase"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-020",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a Git tag and when is it typically used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A label for a branch that helps identify its purpose",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A fixed pointer to a specific commit, typically used to mark release versions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A categorisation system for GitHub issues",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A marker that automatically triggers a deployment pipeline",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Tags are fixed references to specific commits. They don't move like branches do. Annotated tags (v1.0.0, v2.1.3) are used to mark stable release points.",
+        "incorrect": "Tags point to commits, not branches. Issue labels are separate. Tags can trigger Actions but that's not their definition.",
+        "examTip": "Two tag types: lightweight (simple pointer) and annotated (full object with message, tagger info). Use annotated tags for releases.",
+        "relatedTopics": [
+          "git-tag",
+          "releases",
+          "versioning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Git tags",
+        "references": [
+          "https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-052",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a repository template on GitHub?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A pre-filled issue form for bug reports",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A repository others can use to generate new repositories with the same structure and files",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A repository that auto-forks when starred",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A read-only snapshot of a repository",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Template repositories let teams create new repos pre-populated with standard structure â€” boilerplate code, config files, CI/CD workflows, README â€” without copying history from a fork.",
+        "incorrect": "Issue forms are separate. Stars don't trigger forking. Snapshots = releases/tags.",
+        "examTip": "Template repo vs fork: Template = fresh repo (no history). Fork = copy with full history. Use templates for project scaffolding.",
+        "relatedTopics": [
+          "template-repository",
+          "repository-setup"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe repository features",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-053",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a GitHub Release?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A branch automatically deployed to production",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A deployable version packaged with release notes, optional binaries, and a tag pointing to the released commit",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Permission for contributors to release their own versions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A GitHub Actions workflow that deploys code",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A GitHub Release packages a version with a Git tag, release notes, and optionally compiled binaries. Displayed prominently on the repository page.",
+        "incorrect": "Releases are not branches, contributor permissions, or Actions workflows.",
+        "examTip": "Releases = tagged versions with human-readable changelogs. Use semantic versioning (v1.2.3). GitHub auto-generates changelogs from merged PRs.",
+        "relatedTopics": [
+          "releases",
+          "versioning",
+          "tags"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe releases",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-062",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does archiving a repository on GitHub do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Permanently deletes the repository after 30 days",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Makes the repository read-only while keeping it publicly accessible",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Moves it to a private archive folder only visible to the owner",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Compresses the repository into a downloadable zip",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Archiving makes a repository read-only â€” perfect for completed or abandoned projects that should be preserved but no longer actively maintained.",
+        "incorrect": "Archiving doesn't delete. It's public (not private). It doesn't create a zip. Unarchiving is possible.",
+        "examTip": "Archive vs delete: Archive = preserve for reference (reversible). Delete = permanent. Archive when a project is complete but may be referenced.",
+        "relatedTopics": [
+          "archive",
+          "repository-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe repository management",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-076",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is an open source licence and why does it matter?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A GitHub subscription tier that enables public repositories",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A legal document granting permissions for others to use, copy, modify, and distribute code",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A verified badge GitHub issues to authentic open source projects",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A config file GitHub reads to apply special repository settings",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Without a licence, code is 'all rights reserved'. A licence (MIT, Apache 2.0, GPL) explicitly grants others usage rights under specified conditions.",
+        "incorrect": "Licences are legal documents, not subscription features, badges, or config files.",
+        "examTip": "Popular licences: MIT (permissive), Apache 2.0 (permissive + patent protection), GPL (copyleft). Add a LICENSE file to your repo.",
+        "relatedTopics": [
+          "open-source-licence",
+          "MIT",
+          "GPL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe repository community standards",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-091",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub's community standards checklist?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A security audit checklist run by GitHub against all public repositories",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A list of recommended files (README, LICENSE, CONTRIBUTING, etc.) that make a project welcoming to contributors",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A checklist of coding standards enforced by GitHub Actions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A compliance checklist for enterprise GitHub customers",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The community standards checklist (found in Insights â†’ Community) shows which health files are present: README, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, issue templates, PR templates.",
+        "incorrect": "GitHub doesn't audit code quality. Actions enforce CI rules. Enterprise compliance is separate.",
+        "examTip": "Community standards: README (describe project), LICENSE (usage rights), CONTRIBUTING (how to contribute), CODE_OF_CONDUCT (behaviour standards). All encourage contributions.",
+        "relatedTopics": [
+          "community-standards",
+          "health-files",
+          "open-source"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe repository community files",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-095",
+      "type": "single-choice",
+      "topicId": "repositories",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is GitHub's repository visibility option 'internal' available in GitHub Enterprise?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A private repository visible only to the owner",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A repository visible to all members of the enterprise but not to the public internet",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A repository with internal documentation only accessible via VPN",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An archived repository only accessible to administrators",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Internal visibility (GitHub Enterprise) allows all organisation members within the enterprise to access the repository without making it public â€” perfect for inner source collaboration across an enterprise.",
+        "incorrect": "Internal is a third visibility option beyond public/private, available only in GitHub Enterprise.",
+        "examTip": "Visibility options: Public (internet), Internal (enterprise members), Private (explicit collaborators). 'Inner source' = applying open source practices inside an enterprise using internal repos.",
+        "relatedTopics": [
+          "repository-visibility",
+          "GitHub-Enterprise",
+          "inner-source"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe repository visibility",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-097",
+      "type": "dropdown-select",
+      "topicId": "repositories",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each GitHub file to its purpose.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Defines quality measures for an Increment",
+          "options": [
+            ".gitignore",
+            "CONTRIBUTING.md",
+            "LICENSE",
+            "README.md"
+          ],
+          "correctAnswer": "README.md"
+        },
+        {
+          "id": "d2",
+          "prompt": "Specifies files Git should not track",
+          "options": [
+            ".gitignore",
+            "CONTRIBUTING.md",
+            "LICENSE",
+            "README.md"
+          ],
+          "correctAnswer": ".gitignore"
+        },
+        {
+          "id": "d3",
+          "prompt": "Grants legal usage rights for the code",
+          "options": [
+            ".gitignore",
+            "CONTRIBUTING.md",
+            "LICENSE",
+            "README.md"
+          ],
+          "correctAnswer": "LICENSE"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "README = project description/documentation. .gitignore = exclude files from tracking. LICENSE = legal usage rights. CONTRIBUTING = contribution guidelines.",
+        "incorrect": "Each file serves a distinct purpose in repository health.",
+        "examTip": "Standard repository files: README.md, .gitignore, LICENSE, CONTRIBUTING.md, CODE_OF_CONDUCT.md, SECURITY.md, CHANGELOG.md.",
+        "relatedTopics": [
+          "repository-files",
+          "community-standards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe repository files",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

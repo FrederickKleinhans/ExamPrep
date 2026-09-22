@@ -13,9 +13,15 @@ import {
   CheckCircle2,
   ExternalLink,
   AlertTriangle,
+  Bell,
 } from 'lucide-react';
 import { DataLoader } from '../services/DataLoader';
 import { useStore } from '../store/useStore';
+import { useAuth } from '../store/useAuth';
+import { requiresAuthForCert } from '../lib/guestGuard';
+import { AuthModal } from '../components/AuthModal';
+import { SupportAccessModal } from '../components/SupportAccessModal';
+import { hasSupportUnlock } from '../lib/certAccess';
 import { CatalogCert, Certification } from '../types';
 
 type PendingAction = { certId: string; then: 'study' | 'exam' | 'activate' } | null;
@@ -29,10 +35,14 @@ export function CertificationPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [pendingAction, setPendingAction] = useState<PendingAction>(null);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showSupportModal, setShowSupportModal] = useState(false);
+  const [pendingSupportAction, setPendingSupportAction] = useState<'study' | 'exam' | 'activate' | null>(null);
 
   const progress = useStore((s) => s.progress);
   const selectCertification = useStore((s) => s.selectCertification);
   const hasActiveSession = useStore((s) => s.hasActiveSession);
+  const { user } = useAuth();
 
   const cancelBtnRef = useRef<HTMLButtonElement>(null);
   const confirmTriggerRef = useRef<HTMLButtonElement>(null);
@@ -92,6 +102,18 @@ export function CertificationPage() {
       else if (action === 'exam') navigate('/exam');
       return;
     }
+
+    // Guest trying to activate a second cert — prompt sign-in
+    if (requiresAuthForCert(!!user, id, progress)) {
+      setShowAuthModal(true);
+      return;
+    }
+    if (!hasSupportUnlock(id)) {
+      setPendingSupportAction(action);
+      setShowSupportModal(true);
+      return;
+    }
+
     if (hasActiveSession()) {
       setPendingAction({ certId: id, then: action });
     } else {
@@ -142,6 +164,13 @@ export function CertificationPage() {
     (sum, s) => sum + s.correct, 0,
   );
   const accuracy = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : null;
+
+  // SM-2 due questions count
+  const dueCount = certProgress
+    ? Object.values(certProgress.sm2 ?? {}).filter(
+      (s) => s && s.dueDate <= new Date().toISOString().split('T')[0],
+    ).length
+    : 0;
 
   const vendor = catalogEntry?.vendor ?? certManifest.provider;
   const vendorColor = catalogEntry?.vendorColor ?? 'var(--accent)';
@@ -220,7 +249,18 @@ export function CertificationPage() {
       {/* Progress snapshot */}
       {totalAnswered > 0 && (
         <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg-secondary)] p-5">
-          <h2 className="text-sm font-bold text-[var(--text-primary)] mb-4">Your progress</h2>
+          <div className="flex items-center justify-between mb-4 gap-3 flex-wrap">
+            <h2 className="text-sm font-bold text-[var(--text-primary)]">Your progress</h2>
+            {dueCount > 0 && (
+              <span className="flex items-center gap-1.5 text-xs font-bold px-2.5 py-1 rounded-full"
+                style={{ background: 'rgba(255,174,0,0.12)', color: 'var(--warning)', border: '1px solid rgba(255,174,0,0.25)' }}
+                title="Questions scheduled for review today"
+              >
+                <Bell style={{ width: 11, height: 11 }} aria-hidden="true" />
+                {dueCount} due for review
+              </span>
+            )}
+          </div>
           <div className="grid grid-cols-3 gap-4">
             <ProgressStat label="Questions answered" value={String(totalAnswered)} />
             <ProgressStat label="Accuracy" value={accuracy !== null ? `${accuracy}%` : '—'} />
@@ -309,6 +349,26 @@ export function CertificationPage() {
             ))}
           </ul>
         </div>
+      )}
+
+      {/* Auth modal — shown when guest tries to activate a second cert */}
+      {showAuthModal && <AuthModal onClose={() => setShowAuthModal(false)} />}
+      {showSupportModal && certManifest && (
+        <SupportAccessModal
+          certId={certManifest.id}
+          certName={certManifest.name}
+          onClose={() => setShowSupportModal(false)}
+          onUnlocked={() => {
+            setShowSupportModal(false);
+            const action = pendingSupportAction ?? 'activate';
+            setPendingSupportAction(null);
+            if (hasActiveSession()) {
+              setPendingAction({ certId: certManifest.id, then: action });
+            } else {
+              void executeAction(certManifest.id, action);
+            }
+          }}
+        />
       )}
 
       {/* Confirmation modal — switching cert mid-session */}

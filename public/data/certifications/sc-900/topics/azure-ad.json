@@ -1,0 +1,1164 @@
+{
+  "certificationId": "sc-900",
+  "topicId": "azure-ad",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "sc900-013",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Microsoft Entra ID (formerly Azure Active Directory)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A cloud-based firewall service",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A cloud-based identity and access management service",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A virtual machine management platform",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A network monitoring tool",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Entra ID (formerly Azure AD) is Microsoft's cloud-based identity and access management service that enables users to sign in and access resources.",
+        "incorrect": "Azure Firewall handles network security. Azure Resource Manager manages VMs. Azure Monitor handles monitoring.",
+        "examTip": "Entra ID = cloud IAM. On-premises equivalent = Windows Server Active Directory. They're different products.",
+        "relatedTopics": [
+          "Entra-ID",
+          "Azure-AD",
+          "IAM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft Entra ID",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-014",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft Entra ID feature requires users to provide an additional verification method beyond their password when signing in?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Conditional Access",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Multi-Factor Authentication (MFA)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Privileged Identity Management",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Identity Protection",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "MFA in Microsoft Entra ID requires users to verify their identity using two or more methods (password + authenticator app, phone call, or SMS code).",
+        "incorrect": "Conditional Access enforces access policies. PIM manages privileged role access. Identity Protection detects risky sign-ins.",
+        "examTip": "Microsoft Authenticator app is the recommended MFA method â€” more secure than SMS codes.",
+        "relatedTopics": [
+          "MFA",
+          "Entra-ID",
+          "authentication"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe authentication methods",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-015",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Conditional Access in Microsoft Entra ID allow administrators to do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Block all access to cloud resources from mobile devices",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Enforce access policies based on conditions like user location, device compliance, and risk level",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Automatically delete inactive user accounts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Sync on-premises Active Directory to the cloud",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Conditional Access evaluates signals (user, location, device, app, risk) and enforces access decisions â€” requiring MFA, blocking access, or requiring compliant devices.",
+        "incorrect": "Blocking all mobile access is too broad. Account lifecycle is managed separately. AD sync is done by Entra Connect.",
+        "examTip": "Conditional Access = if (conditions) then (grant/block/require MFA). It's the Zero Trust policy engine.",
+        "relatedTopics": [
+          "Conditional-Access",
+          "Entra-ID",
+          "zero-trust"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Conditional Access",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-016",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of Microsoft Entra Privileged Identity Management (PIM)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To manage and rotate passwords automatically",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To provide just-in-time privileged access and require approval and justification for role activation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To detect compromised user credentials",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To enforce device compliance policies",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "PIM enables just-in-time privileged access â€” users only have elevated roles when needed, reducing the risk of standing privilege and requiring justification/approval.",
+        "incorrect": "Password rotation = other tools. Credential detection = Identity Protection. Device compliance = Intune/Conditional Access.",
+        "examTip": "PIM = JIT access. Principle: no permanent admin roles. Activate when needed, auto-expire when done.",
+        "relatedTopics": [
+          "PIM",
+          "privileged-access",
+          "just-in-time"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe PIM",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-017",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What does Microsoft Entra Identity Protection use to detect risky sign-ins?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Manual review by security administrators",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Machine learning and Microsoft's global threat intelligence signals",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Static firewall rules",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Password complexity requirements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Identity Protection uses ML and Microsoft's global threat intelligence (trillions of signals per day) to detect anomalous sign-ins, leaked credentials, and impossible travel.",
+        "incorrect": "Manual review doesn't scale. Firewalls don't evaluate sign-in risk. Password complexity doesn't detect anomalies.",
+        "examTip": "Identity Protection risk levels: Low, Medium, High. Can trigger Conditional Access policies automatically.",
+        "relatedTopics": [
+          "Identity-Protection",
+          "risk-detection",
+          "Entra-ID"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Identity Protection",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-018",
+      "type": "yes-no-statements",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Microsoft Entra ID features.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Microsoft Entra ID supports single sign-on (SSO) to thousands of SaaS applications.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Microsoft Entra ID is a direct replacement for on-premises Active Directory Domain Services.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "External identities in Entra ID allow partners and customers to access your apps using their own credentials.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Entra ID requires an on-premises domain controller to function.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Entra ID supports SSO and external identities (B2B/B2C). It is a cloud-only service that complements but does not replace on-premises AD DS. It works without on-premises infrastructure.",
+        "incorrect": "Entra ID is cloud-native and doesn't require domain controllers.",
+        "examTip": "Entra ID â‰  AD DS. Entra ID is cloud IAM. AD DS is on-prem directory. Entra Connect syncs between them.",
+        "relatedTopics": [
+          "Entra-ID",
+          "SSO",
+          "external-identities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Entra ID capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-019",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between authentication and authorization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Authentication grants access; authorization verifies identity",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Authentication verifies who you are; authorization determines what you can do",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They are the same thing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Authorization verifies your password; authentication checks your permissions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Authentication (AuthN) = proving identity (who are you?). Authorization (AuthZ) = determining what you're allowed to do (what can you access?).",
+        "incorrect": "These are distinct steps. Authentication always happens before authorization.",
+        "examTip": "AuthN = identity verification (login). AuthZ = access decision (permissions). In Entra ID: authenticate first, then RBAC determines access.",
+        "relatedTopics": [
+          "authentication",
+          "authorization",
+          "IAM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe authentication vs authorization",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-020",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which passwordless authentication method uses biometrics or a PIN tied to the device to sign in to Microsoft services?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SMS one-time code",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Windows Hello for Business",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Email verification code",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Security questions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Windows Hello for Business enables passwordless sign-in using biometrics (fingerprint, face recognition) or a PIN tied to the specific device, providing strong MFA-equivalent security.",
+        "incorrect": "SMS codes are not passwordless. Email codes still require a password step. Security questions are weak authentication.",
+        "examTip": "Microsoft passwordless options: Windows Hello for Business, FIDO2 security keys, Microsoft Authenticator app (phone sign-in).",
+        "relatedTopics": [
+          "passwordless",
+          "Windows-Hello",
+          "authentication"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe passwordless authentication",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-021",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of Entra ID Access Reviews?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To monitor network traffic for suspicious activity",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To periodically review and certify that users still need their current access rights",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To automatically assign roles based on job title",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To reset forgotten passwords",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Access Reviews allow organizations to periodically verify that users, guests, and service principals still require their access â€” preventing privilege creep.",
+        "incorrect": "Network monitoring = Defender for Cloud. Auto role assignment = dynamic groups. Password reset = SSPR.",
+        "examTip": "Access Reviews are key for compliance â€” they document that access was reviewed and unnecessary access was removed.",
+        "relatedTopics": [
+          "access-reviews",
+          "governance",
+          "privilege-creep"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe identity governance",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-022",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the role of an Identity Provider (IdP) in a federated identity scenario?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To store application data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To authenticate users and issue tokens that service providers trust",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To enforce network firewall rules",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage virtual machines",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An Identity Provider authenticates users and issues security tokens (SAML assertions, JWT tokens) that service providers trust, enabling SSO across multiple applications.",
+        "incorrect": "IdPs are focused on identity and authentication, not application data, firewalls, or VMs.",
+        "examTip": "Entra ID acts as an IdP. When you 'Sign in with Microsoft', Entra ID is the IdP authenticating you for a third-party service provider.",
+        "relatedTopics": [
+          "federation",
+          "IdP",
+          "SSO",
+          "tokens"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe federation",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-023",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Entra ID feature allows organizations to manage access to resources based on user attributes like department or job title?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Conditional Access policies",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Dynamic groups",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Identity Protection",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Entitlement Management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Dynamic groups in Entra ID automatically add or remove users based on attribute rules (like department = 'Sales'), eliminating manual group membership management.",
+        "incorrect": "Conditional Access = sign-in policies. Identity Protection = risk detection. Entitlement Management = access packages.",
+        "examTip": "Dynamic groups = auto-membership based on attributes. Static groups = manual membership. Both can be used for RBAC assignments.",
+        "relatedTopics": [
+          "dynamic-groups",
+          "Entra-ID",
+          "group-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Entra ID capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-024",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does Self-Service Password Reset (SSPR) allow users to do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Create new user accounts without admin approval",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Reset their own password without contacting the IT helpdesk",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Grant themselves admin rights temporarily",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "View other users' passwords",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SSPR enables users to reset their password or unlock their account independently using pre-registered verification methods, reducing helpdesk burden.",
+        "incorrect": "SSPR only resets the user's own password. It does not create accounts or grant admin rights.",
+        "examTip": "SSPR requires pre-registration of authentication methods (email, phone, authenticator app). Reduces IT support costs significantly.",
+        "relatedTopics": [
+          "SSPR",
+          "password-management",
+          "Entra-ID"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe SSPR",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-054",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between Microsoft Entra ID Free and Microsoft Entra ID P2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Entra ID Free includes PIM and Identity Protection; P2 does not",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Entra ID P2 adds Identity Protection and Privileged Identity Management to Free tier features",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Entra ID P2 only supports on-premises Active Directory",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are identical in functionality",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Entra ID P2 includes all Free and P1 features plus Identity Protection (risk-based Conditional Access) and Privileged Identity Management (JIT access).",
+        "incorrect": "PIM and Identity Protection are P2-only features. Entra ID is cloud-native regardless of tier.",
+        "examTip": "Entra ID tiers: Free (basic SSO) â†’ P1 (Conditional Access, dynamic groups) â†’ P2 (adds Identity Protection + PIM).",
+        "relatedTopics": [
+          "Entra-ID",
+          "licensing",
+          "PIM",
+          "Identity-Protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Entra ID editions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-055",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company wants to allow external partner employees to collaborate in Microsoft Teams and SharePoint without creating new accounts in their tenant.",
+      "questionText": "Which Microsoft Entra ID feature enables this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Entra ID B2C",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Entra ID B2B Collaboration",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Entra ID Domain Services",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Entra External ID with customer accounts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Entra ID B2B allows external partners to access your resources using their own organizational credentials â€” a guest account is created in your tenant but they authenticate with their own IdP.",
+        "incorrect": "B2C is for customer-facing apps. Domain Services provides AD DS in the cloud. External ID with customer accounts = B2C scenario.",
+        "examTip": "B2B = partners/employees from other orgs. B2C = customers/consumers accessing your public app.",
+        "relatedTopics": [
+          "B2B",
+          "external-identities",
+          "Entra-ID"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe external identities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-056",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft Entra ID Entitlement Management used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing Azure subscription billing",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Managing access packages that bundle resources for groups of users to request",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting compromised sign-in attempts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Enforcing password complexity requirements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Entitlement Management allows creation of access packages (bundles of resources: groups, apps, SharePoint sites) that users can request, with approval workflows and automatic expiry.",
+        "incorrect": "Billing = Azure Cost Management. Compromised sign-ins = Identity Protection. Password policies = Entra ID Password Protection.",
+        "examTip": "Entitlement Management = access packages. Good for onboarding partners or new employees who need access to multiple resources at once.",
+        "relatedTopics": [
+          "Entitlement-Management",
+          "access-packages",
+          "identity-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe identity governance",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-061",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Entra ID Protection's 'risky users' report show?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Users who have not logged in for 30 days",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Users whose credentials may be compromised based on detected risk signals",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Users with the most admin privileges",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Users who failed the most MFA prompts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The risky users report shows users with detected risk events such as leaked credentials, sign-ins from anonymous IPs, impossible travel, or unfamiliar sign-in properties.",
+        "incorrect": "Inactive users = Entra ID activity reports. Admin users = PIM. MFA failures = Entra ID sign-in logs.",
+        "examTip": "Risky users can be automatically required to change their password or complete MFA via Conditional Access risk-based policies.",
+        "relatedTopics": [
+          "Identity-Protection",
+          "risky-users",
+          "risk-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Identity Protection",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-068",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a managed identity in Azure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A user account managed by the IT department",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An automatically managed identity for Azure services to authenticate to other Azure services without credentials",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An identity used for external B2B partners",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A privileged admin account in Microsoft Entra ID",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A managed identity gives an Azure resource (VM, App Service, Function) an identity in Entra ID so it can authenticate to other Azure services (like Key Vault) without storing credentials.",
+        "incorrect": "Managed identities are for Azure resources, not human users, B2B partners, or admin accounts.",
+        "examTip": "Two types: System-assigned (tied to resource lifecycle) and User-assigned (independent, shareable). Use with Key Vault for credential-free secret access.",
+        "relatedTopics": [
+          "managed-identities",
+          "authentication",
+          "zero-secrets"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe managed identities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-071",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What type of identity object in Microsoft Entra ID represents a non-human application or service?",
+      "options": [
+        {
+          "id": "A",
+          "text": "User account",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Service principal",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Guest account",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Security group",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A service principal is an identity for an application or service in Entra ID, allowing it to authenticate and access resources. Every app registration creates a service principal.",
+        "incorrect": "User accounts = humans. Guest accounts = external users. Security groups = collections of users/devices.",
+        "examTip": "App registration creates an app object (global). Service principal is the local instance in a specific tenant. Both have credentials (secrets or certificates).",
+        "relatedTopics": [
+          "service-principal",
+          "app-registration",
+          "Entra-ID"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe identity types",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-075",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the benefit of using FIDO2 security keys as an authentication method?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They use SMS codes for verification",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "They provide phishing-resistant passwordless authentication using hardware",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They require internet connectivity to function",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are less secure than passwords",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "FIDO2 security keys (like YubiKey) use public key cryptography stored in hardware. They are phishing-resistant because the credential is tied to the specific origin domain.",
+        "incorrect": "FIDO2 does not use SMS. They work offline for the local challenge-response. They are significantly more secure than passwords.",
+        "examTip": "FIDO2 = strongest MFA. Phishing-resistant because you can't be tricked into using it on a fake site. Works with Windows, Android, iOS.",
+        "relatedTopics": [
+          "FIDO2",
+          "passwordless",
+          "phishing-resistant-MFA"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe passwordless authentication",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-079",
+      "type": "yes-no-statements",
+      "topicId": "azure-ad",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Zero Trust principles in Microsoft's implementation.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Conditional Access is Microsoft's primary Zero Trust policy enforcement mechanism for identity.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Zero Trust means blocking all remote access to organizational resources.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Device compliance status can be used as a condition in Conditional Access policies.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Under Zero Trust, trusted users on the internal network bypass all security checks.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Conditional Access enforces Zero Trust for identity. Device compliance is a valid Conditional Access signal. Zero Trust enables remote access with continuous verification â€” it doesn't block it. Even internal users must be verified.",
+        "incorrect": "Zero Trust is about continuous verification, not blocking access or trusting internal users.",
+        "examTip": "Zero Trust â‰  no access. It means verified, least-privileged access with continuous monitoring.",
+        "relatedTopics": [
+          "Zero-Trust",
+          "Conditional-Access",
+          "device-compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Zero Trust",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-082",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft Entra ID feature allows an organization to verify that a user's device meets security requirements before granting access?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Identity Protection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Device compliance via Intune + Conditional Access",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Privileged Identity Management",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Multi-Factor Authentication",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Intune enforces device compliance policies (encryption, patch level, antivirus). Conditional Access then uses the device compliance status as a condition to grant or block access.",
+        "incorrect": "Identity Protection = risky sign-ins. PIM = privileged access. MFA = identity verification, not device checking.",
+        "examTip": "Intune + Conditional Access = device-based Zero Trust. Non-compliant devices can be blocked even if the user's credentials are valid.",
+        "relatedTopics": [
+          "Intune",
+          "Conditional-Access",
+          "device-compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Conditional Access",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-086",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does Entra ID Connect (formerly Azure AD Connect) do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Connects Azure VMs to on-premises networks via VPN",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Synchronizes on-premises Active Directory identities to Microsoft Entra ID",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Connects multiple Azure subscriptions together",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Provides direct database connectivity for Azure apps",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Entra ID Connect (formerly Azure AD Connect) synchronizes user accounts, groups, and credentials from on-premises Active Directory Domain Services to Microsoft Entra ID, enabling hybrid identity.",
+        "incorrect": "VPN = Azure VPN Gateway. Subscription linking = management groups. DB connectivity = Azure SQL connection strings.",
+        "examTip": "Hybrid identity: on-prem AD â†’ Entra Connect syncs â†’ Entra ID. Users log in once with their corporate credentials for both on-prem and cloud resources.",
+        "relatedTopics": [
+          "Entra-Connect",
+          "hybrid-identity",
+          "AD-sync"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe hybrid identity",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-091",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft Entra ID feature allows users to securely share and collaborate on resources with users outside their organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Privileged Identity Management",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Entra ID External Identities (B2B)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Conditional Access",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Identity Protection",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Entra External Identities (B2B) enables secure collaboration with external partners by inviting them as guests â€” they authenticate with their own credentials while you control what they can access.",
+        "incorrect": "PIM = privileged access. Conditional Access = policy enforcement. Identity Protection = risk detection. None of these are for external collaboration.",
+        "examTip": "B2B guest users appear in your tenant directory but authenticate at their home organization. You control their access via RBAC and Conditional Access.",
+        "relatedTopics": [
+          "B2B",
+          "external-identities",
+          "guest-access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe external identities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-096",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure Role-Based Access Control (RBAC)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A method of encrypting Azure resources",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A system that controls who has access to Azure resources and what they can do with them",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A network filtering mechanism for Azure VNets",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A compliance framework for Azure",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure RBAC provides fine-grained access management for Azure resources by assigning roles (built-in or custom) to security principals (users, groups, service principals) at a specific scope (subscription, resource group, resource).",
+        "incorrect": "Encryption = Azure Storage/Disk encryption. Network filtering = NSGs/Firewall. Compliance = Defender for Cloud/Purview.",
+        "examTip": "Azure RBAC roles: Owner (full control), Contributor (create/manage, no access grants), Reader (view only). Applied at management group, sub, RG, or resource level.",
+        "relatedTopics": [
+          "Azure-RBAC",
+          "access-control",
+          "authorization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

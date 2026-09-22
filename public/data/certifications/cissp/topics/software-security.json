@@ -1,0 +1,593 @@
+{
+  "certificationId": "cissp",
+  "topicId": "software-security",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "cissp-037",
+      "type": "single-choice",
+      "topicId": "software-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "In the Software Development Lifecycle (SDLC), at which phase is it LEAST expensive to remediate security vulnerabilities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing phase",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Deployment phase",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Requirements/Design phase",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Maintenance phase",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fixing security vulnerabilities during requirements and design is far cheaper than fixing them after deployment. The cost of remediation increases significantly at each later SDLC phase.",
+        "incorrect": "Testing, deployment, and maintenance are progressively more expensive stages to fix vulnerabilities â€” the 'shift left' principle addresses this.",
+        "examTip": "Rule of 10: fixing a bug costs 10x more at each subsequent phase. Design fix = $1. Post-deployment fix = $1,000+.",
+        "relatedTopics": [
+          "SDLC",
+          "shift-left",
+          "secure-design"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Software Development Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-038",
+      "type": "single-choice",
+      "topicId": "software-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which testing technique analyzes software without executing the code?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dynamic Application Security Testing (DAST)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fuzzing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Static Application Security Testing (SAST)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Penetration testing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SAST (Static Analysis) examines source code, bytecode, or binaries without executing the program â€” like a code review done by automated tools.",
+        "incorrect": "DAST tests running applications. Fuzzing sends malformed inputs to running programs. Penetration testing actively exploits vulnerabilities.",
+        "examTip": "SAST = static (code not running) = white-box. DAST = dynamic (app running) = black-box. IAST = instrumented (inside running app).",
+        "relatedTopics": [
+          "SAST",
+          "DAST",
+          "application-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Software Development Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-039",
+      "type": "single-choice",
+      "topicId": "software-security",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A developer stores user passwords using MD5 hashing. The security team advises this is insufficient.",
+      "questionText": "What is the MAIN weakness of using MD5 for password storage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "MD5 is a symmetric encryption algorithm and can be decrypted",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "MD5 is too slow for production environments",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "MD5 is fast and vulnerable to rainbow table and brute-force attacks",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "MD5 produces hashes that are too long to store in a database",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "MD5 is cryptographically broken and computationally fast, making it susceptible to rainbow table attacks and GPU-accelerated brute-force. Password hashing requires slow, salted algorithms like bcrypt, scrypt, or Argon2.",
+        "incorrect": "MD5 is a hash function (one-way), not encryption. It's actually too FAST for passwords, not too slow. MD5 produces 128-bit (32 hex character) hashes which are short.",
+        "examTip": "Password storage: use bcrypt, scrypt, or Argon2 â€” they are deliberately slow. Never use MD5, SHA-1, or plain SHA-256 for passwords.",
+        "relatedTopics": [
+          "password-hashing",
+          "MD5",
+          "rainbow-tables",
+          "bcrypt"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Software Development Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-040",
+      "type": "single-choice",
+      "topicId": "software-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which OWASP Top 10 vulnerability involves inadequate verification of software components, allowing attackers to inject malicious code through third-party libraries?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Insecure Direct Object Reference",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Software and Data Integrity Failures",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Security Misconfiguration",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Broken Access Control",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Software and Data Integrity Failures (OWASP A08) covers cases where code and infrastructure don't protect against integrity violations, including insecure deserialization, compromised software updates, and CI/CD pipeline integrity issues.",
+        "incorrect": "IDOR involves accessing unauthorized objects via direct references. Misconfiguration is improperly configured security settings. Broken access control is improperly enforced permissions.",
+        "examTip": "A08 (Integrity Failures) = supply chain attacks, unsigned packages, unverified updates. SolarWinds attack is a real-world example.",
+        "relatedTopics": [
+          "OWASP-Top-10",
+          "supply-chain",
+          "software-integrity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Software Development Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-041",
+      "type": "single-choice",
+      "topicId": "software-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of threat modeling in software development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To test the application for vulnerabilities after deployment",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To identify and prioritize potential threats during the design phase",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To monitor application performance in production",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To document security incidents",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Threat modeling is performed during design to systematically identify, enumerate, and prioritize potential threats so security controls can be built in from the start.",
+        "incorrect": "Post-deployment testing, performance monitoring, and incident documentation are separate activities.",
+        "examTip": "STRIDE is the most common threat modeling framework: Spoofing, Tampering, Repudiation, Information disclosure, DoS, Elevation of privilege.",
+        "relatedTopics": [
+          "threat-modeling",
+          "STRIDE",
+          "secure-SDLC"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Software Development Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-056",
+      "type": "single-choice",
+      "topicId": "software-security",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A web application accepts user input and constructs database queries dynamically. An attacker inputs: ' OR '1'='1 into a login field, bypassing authentication.",
+      "questionText": "What is the BEST defense against this attack?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Input length validation",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Parameterized queries (prepared statements)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Client-side input filtering",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encrypting the database",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Parameterized queries (prepared statements) separate SQL code from data, making it impossible for user input to be interpreted as SQL commands â€” the primary and most effective defense against SQL injection.",
+        "incorrect": "Length validation doesn't stop SQL injection. Client-side filtering can be bypassed. Encrypting the database doesn't prevent injection at the application layer.",
+        "examTip": "SQL injection defense: #1 = parameterized queries. #2 = stored procedures. #3 = input validation. #4 = WAF as last resort.",
+        "relatedTopics": [
+          "SQL-injection",
+          "parameterized-queries",
+          "input-validation",
+          "OWASP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Software Development Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-062",
+      "type": "single-choice",
+      "topicId": "software-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of input validation in application security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To improve application performance",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To ensure user input conforms to expected format and reject malicious input",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt data before storing it in the database",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage user sessions securely",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Input validation ensures that all user-supplied data conforms to expected types, formats, and ranges before processing, preventing injection attacks and buffer overflows.",
+        "incorrect": "Performance optimization is separate. Encryption is a different control. Session management is handled by different mechanisms.",
+        "examTip": "Validate on the server side â€” client-side validation can always be bypassed. Whitelist (allowlist) validation is stronger than blacklist.",
+        "relatedTopics": [
+          "input-validation",
+          "application-security",
+          "injection-prevention"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Software Development Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-066",
+      "type": "single-choice",
+      "topicId": "software-security",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A software development team practices continuous integration and continuous deployment (CI/CD). The security team wants to integrate security into this pipeline.",
+      "questionText": "What is this approach called?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DevOps",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "DevSecOps",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Agile development",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Waterfall development",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DevSecOps integrates security practices (SAST, DAST, SCA, secret scanning) directly into the CI/CD pipeline, making security a shared responsibility across development, security, and operations teams.",
+        "incorrect": "DevOps is Dev + Ops without the explicit security integration. Agile is a methodology. Waterfall is sequential development.",
+        "examTip": "DevSecOps = shift security left into the CI/CD pipeline. Automate security testing at every stage.",
+        "relatedTopics": [
+          "DevSecOps",
+          "CI-CD",
+          "SDLC",
+          "security-automation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Software Development Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-073",
+      "type": "single-choice",
+      "topicId": "software-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the MAIN security concern with third-party and open-source software components?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are always poorly written",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Supply chain risk â€” vulnerabilities in components can propagate to all applications using them",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They cannot be encrypted",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are not compatible with enterprise security tools",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Third-party and open-source components introduce supply chain risk. A vulnerability in a widely-used library (like Log4Shell in Log4j) can affect thousands of applications simultaneously.",
+        "incorrect": "Quality varies. Encryption is application-level. Compatibility is an operational concern, not a primary security concern.",
+        "examTip": "Software Composition Analysis (SCA) tools scan for known vulnerable open-source components. Maintain an SBOM (Software Bill of Materials).",
+        "relatedTopics": [
+          "supply-chain-security",
+          "open-source",
+          "SCA",
+          "SBOM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Software Development Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-077",
+      "type": "yes-no-statements",
+      "topicId": "software-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes secure software development practices.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Error messages should never reveal internal system details to users.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Security testing should only occur in the final phase of development.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Session tokens should be invalidated after logout.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Using the latest version of a library guarantees it is free of vulnerabilities.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Verbose error messages leak system internals to attackers. Security testing should be continuous (shift left). Session invalidation prevents session hijacking. New versions can still have zero-day vulnerabilities.",
+        "incorrect": "Late-stage-only security testing is expensive and ineffective. No software version can guarantee freedom from vulnerabilities.",
+        "examTip": "Error handling: fail securely, log details server-side, show generic messages to users. Never reveal stack traces publicly.",
+        "relatedTopics": [
+          "secure-coding",
+          "error-handling",
+          "session-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Software Development Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-086",
+      "type": "single-choice",
+      "topicId": "software-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which attack exploits a condition where a program writes data beyond the boundary of an allocated memory buffer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Integer overflow",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Buffer overflow",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Format string attack",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Race condition",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A buffer overflow writes data beyond an allocated buffer boundary, potentially overwriting adjacent memory including return addresses, enabling code execution or crashes.",
+        "incorrect": "Integer overflow occurs when arithmetic exceeds variable size. Format string attacks exploit printf-style format specifiers. Race conditions exploit timing gaps.",
+        "examTip": "Buffer overflow defenses: ASLR (randomize addresses), DEP/NX (non-executable memory), stack canaries (detect overwrites), safe functions (strncpy vs strcpy).",
+        "relatedTopics": [
+          "buffer-overflow",
+          "memory-attacks",
+          "ASLR",
+          "secure-coding"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Software Development Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-099",
+      "type": "single-choice",
+      "topicId": "software-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "In a software development context, what is the purpose of code review?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To test the performance of the application",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To identify bugs, security flaws, and ensure code quality before deployment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To document the application's features for end users",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To deploy the application to production",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Code review is a manual or automated examination of source code by peers or security experts to find bugs, security vulnerabilities, and ensure adherence to coding standards.",
+        "incorrect": "Performance testing is separate. Documentation is a different activity. Deployment is operational, not development.",
+        "examTip": "Security code review focuses on: injection vulnerabilities, hardcoded credentials, insecure crypto, missing input validation, error handling, authentication flaws.",
+        "relatedTopics": [
+          "code-review",
+          "SDLC",
+          "software-quality",
+          "security-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Software Development Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

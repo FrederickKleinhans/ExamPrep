@@ -1,0 +1,843 @@
+{
+  "certificationId": "ai-900",
+  "topicId": "nlp",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "ai900-025",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Natural Language Processing (NLP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A technique for compressing natural language documents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An area of AI that enables computers to understand, interpret, and generate human language",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A programming language for writing AI algorithms",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A hardware component that processes text faster",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "NLP enables computers to understand and work with human language in text or speech form â€” powering translation, sentiment analysis, chatbots, search, and language generation.",
+        "incorrect": "NLP is an AI field, not compression, a programming language, or hardware.",
+        "examTip": "NLP tasks: sentiment analysis, language detection, key phrase extraction, named entity recognition, text classification, translation, summarisation.",
+        "relatedTopics": [
+          "NLP",
+          "text-analytics",
+          "language-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe NLP workloads",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-026",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Azure AI service provides sentiment analysis, key phrase extraction, and named entity recognition?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Vision",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure AI Language",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Speech",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Translator",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Language (formerly Text Analytics) provides NLP capabilities: sentiment analysis, key phrase extraction, named entity recognition, language detection, and text classification.",
+        "incorrect": "Vision = images. Speech = audio/voice. Translator = language-to-language translation. Language service handles text analytics.",
+        "examTip": "Azure AI Language features: Sentiment Analysis, Key Phrase Extraction, Named Entity Recognition (NER), Language Detection, Custom Text Classification, Conversational Language Understanding (CLU).",
+        "relatedTopics": [
+          "Azure-AI-Language",
+          "text-analytics",
+          "NLP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-027",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between Azure AI Speech and Azure AI Translator?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They provide identical functionality with different pricing",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure AI Speech converts between spoken audio and text; Azure AI Translator converts text between languages",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Translator converts audio to text; Azure AI Speech translates between languages",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Speech is deprecated and replaced by Translator",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Speech = audio â†” text (speech-to-text, text-to-speech, speech translation). Azure AI Translator = text â†” text in different languages (translate written content).",
+        "incorrect": "Their functions are distinct and both are current services.",
+        "examTip": "Speech = audio conversion (voice â†” text). Translator = language conversion (text in one language â†’ text in another). Speech service also has speech translation (audio â†’ different language text).",
+        "relatedTopics": [
+          "Azure-AI-Speech",
+          "Azure-AI-Translator",
+          "NLP-services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Speech and Translator",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-028",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company wants to build a customer service chatbot that understands natural language questions and maps them to appropriate actions â€” for example, 'What is my account balance?' should trigger the balance inquiry function.",
+      "questionText": "Which Azure service is BEST suited for this intent recognition use case?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Translator",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Conversational Language Understanding (CLU) in Azure AI Language",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure AI Vision",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Speech",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Conversational Language Understanding (CLU) in Azure AI Language is specifically designed to understand natural language utterances, classify intent, and extract entities â€” exactly what a chatbot needs.",
+        "incorrect": "Translator = language translation. Vision = images. Speech = audio conversion. CLU is the intent understanding service.",
+        "examTip": "CLU (Conversational Language Understanding) = understand what the user WANTS (intent) and extract KEY INFO (entities). Replaces the older LUIS service.",
+        "relatedTopics": [
+          "CLU",
+          "intent-recognition",
+          "chatbot",
+          "Azure-AI-Language"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-029",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does sentiment analysis in Azure AI Language determine?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The language a text is written in",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The emotional tone (positive, negative, neutral) expressed in text",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The key topics or phrases in a text",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The named entities (people, places, organisations) in text",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sentiment analysis detects the emotional tone in text â€” returning positive, negative, or neutral sentiment scores. Used for social media monitoring, customer feedback analysis, and product reviews.",
+        "incorrect": "Language detection = identifies what language. Key phrase extraction = important terms. NER = named entity recognition.",
+        "examTip": "Sentiment analysis use cases: product review analysis, customer service quality monitoring, social media brand monitoring, call centre transcript analysis.",
+        "relatedTopics": [
+          "sentiment-analysis",
+          "Azure-AI-Language",
+          "NLP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-030",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure AI Bot Service used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automatically testing web applications",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Building, deploying, and connecting intelligent chatbots to multiple communication channels",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Automating repetitive IT tasks using robotic process automation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Managing automated ML training pipelines",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Bot Service provides a framework for building chatbots that can be connected to channels like Teams, Slack, Web Chat, Facebook, and Cortana. It integrates with CLU and QnA Maker for NLP.",
+        "incorrect": "Web testing = test tools. RPA = Power Automate/Azure Logic Apps. ML pipelines = Azure ML.",
+        "examTip": "Bot Service + CLU = intent-understanding chatbot. Bot Service + Question Answering = FAQ chatbot. Channels: Teams, Web Chat, Slack, Telegram, etc.",
+        "relatedTopics": [
+          "Azure-Bot-Service",
+          "chatbot",
+          "NLP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure Bot Service",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-031",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Azure AI Translator support beyond simple text translation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only translating between English and one other language",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Translation between 100+ languages, custom translation models, and document translation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Only translating structured data formats like JSON and XML",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Translating between programming languages like Python and Java",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Translator supports 100+ languages, custom terminology via Custom Translator (domain-specific translations), and Document Translation for bulk document processing.",
+        "incorrect": "Translator handles many languages, natural language text, and documents â€” not programming languages or structured data formats.",
+        "examTip": "Translator features: text translation, document translation, Custom Translator (train on domain-specific terminology), transliteration (script conversion).",
+        "relatedTopics": [
+          "Azure-AI-Translator",
+          "translation",
+          "multilingual"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Translator",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-032",
+      "type": "yes-no-statements",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Azure NLP services.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure AI Speech can convert text to spoken audio (text-to-speech).",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Named Entity Recognition (NER) identifies the sentiment of a text.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Question Answering in Azure AI Language can create a knowledge base from existing documents and FAQs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Azure AI Language can only process English text.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Speech service supports TTS. Question Answering builds knowledge bases from existing content. Azure AI Language supports many languages. NER identifies entities (people, places), not sentiment.",
+        "incorrect": "NER extracts named entities, not sentiment (that's sentiment analysis). Azure AI Language supports many languages.",
+        "examTip": "NER = people, places, organisations, dates. Sentiment = positive/negative/neutral. Key Phrase = important topics. All separate NLP features.",
+        "relatedTopics": [
+          "NER",
+          "Question-Answering",
+          "Azure-AI-Language",
+          "multilingual"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe NLP capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-049",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the Question Answering feature of Azure AI Language used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Generating new questions from a text passage",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Creating a knowledge base from existing FAQs and documents that a bot can query to answer user questions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Answering mathematical equations",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Translating questions from one language to another",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Question Answering (formerly QnA Maker) allows you to build a knowledge base from FAQ pages, documents, and manuals. A bot can then query it to return the most relevant answer to a user's natural language question.",
+        "incorrect": "It answers from an existing knowledge base, doesn't generate questions, solve equations, or translate.",
+        "examTip": "Question Answering = FAQ-style knowledge base. CLU = intent/entity recognition for task-oriented bots. Both are Azure AI Language features for building bots.",
+        "relatedTopics": [
+          "Question-Answering",
+          "knowledge-base",
+          "Azure-AI-Language"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-059",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A global e-commerce company wants to automatically categorise customer reviews by product category (Electronics, Clothing, Books) and detect if they are complaints.",
+      "questionText": "Which Azure AI Language feature is MOST appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Named Entity Recognition",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Custom Text Classification",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Key Phrase Extraction",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Language Detection",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Custom Text Classification allows you to train a text classifier on your own labelled data â€” perfect for categorising reviews into custom categories (Electronics, Clothing, Books) and detecting complaints.",
+        "incorrect": "NER extracts named entities. Key phrases extract important terms. Language detection identifies what language is used. Custom classification is the right tool for custom category assignment.",
+        "examTip": "Pre-built NLP = standard tasks (sentiment, NER, language detection). Custom NLP = your own categories or entities. Custom Text Classification + Custom NER available in Azure AI Language.",
+        "relatedTopics": [
+          "Custom-Text-Classification",
+          "Azure-AI-Language",
+          "NLP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-060",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Azure AI Speech's text-to-speech capability enable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Converting audio recordings to text transcripts",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Synthesising natural-sounding spoken audio from written text",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting the emotion of a speaker from their voice",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Translating spoken content into a different language",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Text-to-speech (TTS) converts written text into natural-sounding spoken audio â€” used in virtual assistants, accessibility tools, audiobook narration, and customer service bots.",
+        "incorrect": "Audio to text = speech-to-text. Emotion from voice = speaker emotion recognition (separate feature). Voice translation = speech translation.",
+        "examTip": "Azure AI Speech TTS supports: neural voices (very natural), custom neural voice (clone a voice), SSML (Speech Synthesis Markup Language) for control.",
+        "relatedTopics": [
+          "text-to-speech",
+          "Azure-AI-Speech",
+          "voice-synthesis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Speech",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-065",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of speech-to-text in Azure AI Speech?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To convert written text into spoken audio for accessibility",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To transcribe spoken audio into written text in real time or from recordings",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To detect the language spoken in an audio file",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To translate speech from one language to another",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Speech-to-text (STT) transcribes audio â€” voice commands, meeting recordings, call centre conversations, dictation â€” into written text, supporting real-time and batch transcription.",
+        "incorrect": "Text-to-speech = written â†’ audio. Language detection = identify the language. Speech translation = transcribe AND translate to another language.",
+        "examTip": "Azure AI Speech STT use cases: voice commands, call centre transcription, meeting transcription (Teams), accessibility (real-time captions), voice search.",
+        "relatedTopics": [
+          "speech-to-text",
+          "Azure-AI-Speech",
+          "transcription"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Speech",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-067",
+      "type": "dropdown-select",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each Azure AI service to its primary function.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Converts spoken audio to text and text to speech",
+          "options": [
+            "Azure AI Language",
+            "Azure AI Speech",
+            "Azure AI Translator",
+            "Azure AI Vision"
+          ],
+          "correctAnswer": "Azure AI Speech"
+        },
+        {
+          "id": "d2",
+          "prompt": "Translates written text between 100+ languages",
+          "options": [
+            "Azure AI Language",
+            "Azure AI Speech",
+            "Azure AI Translator",
+            "Azure AI Vision"
+          ],
+          "correctAnswer": "Azure AI Translator"
+        },
+        {
+          "id": "d3",
+          "prompt": "Performs sentiment analysis, NER, and key phrase extraction on text",
+          "options": [
+            "Azure AI Language",
+            "Azure AI Speech",
+            "Azure AI Translator",
+            "Azure AI Vision"
+          ],
+          "correctAnswer": "Azure AI Language"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Speech = audio â†” text conversion. Translator = text language translation. Language = text NLP (sentiment, NER, key phrases, CLU).",
+        "incorrect": "These four services cover distinct AI domains: vision (images), speech (audio), language (text NLP), translator (language conversion).",
+        "examTip": "Azure AI Services family: Vision, Face, Speech, Language, Translator, Document Intelligence, Content Safety, Bot Service, OpenAI. Each has a specific domain.",
+        "relatedTopics": [
+          "Azure-AI-services",
+          "NLP-services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-077",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A developer wants to build a voice-enabled assistant that listens to spoken questions, understands the intent, and reads the answer aloud. The solution should work in English and Spanish.",
+      "questionText": "Which combination of Azure AI services is needed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure AI Vision + Azure AI Language",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure AI Speech (STT + TTS) + Azure AI Language (CLU) + Azure AI Translator",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure OpenAI + Azure AI Vision",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure AI Speech + Azure AI Document Intelligence",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The solution needs: Speech-to-text (listen â†’ text), CLU (understand intent), optionally Translator (multilingual), and Text-to-speech (answer â†’ spoken audio). Together these create a complete voice assistant pipeline.",
+        "incorrect": "Vision handles images, not voice. Document Intelligence handles documents. OpenAI alone doesn't handle speech I/O natively.",
+        "examTip": "Voice assistant pipeline: Microphone â†’ Speech-to-text â†’ NLU (CLU/OpenAI) â†’ Response text â†’ Text-to-speech â†’ Speaker. Azure services map to each step.",
+        "relatedTopics": [
+          "voice-assistant",
+          "Azure-AI-Speech",
+          "CLU",
+          "multilingual"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-083",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Named Entity Recognition (NER) in Azure AI Language?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Recognising the names of files and folders in a storage account",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Identifying and classifying specific entities in text such as people, organisations, locations, dates, and quantities",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting the tone and emotion expressed in a piece of text",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Recognising the author's name from their writing style",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "NER identifies and classifies named entities in text into categories: Person (John Smith), Organisation (Microsoft), Location (Seattle), Date (January 2024), Quantity (100 units), etc.",
+        "incorrect": "NER is about text entity extraction, not file systems, emotions (= sentiment analysis), or authorship identification.",
+        "examTip": "NER use cases: extract key information from contracts (parties, dates, amounts), news articles (people, companies, places), medical records (medications, conditions).",
+        "relatedTopics": [
+          "NER",
+          "entity-extraction",
+          "Azure-AI-Language"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-089",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is key phrase extraction in Azure AI Language?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Extracting cryptographic keys from text documents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Identifying the most important words and phrases that summarise the main topics of a text",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Extracting all proper nouns from a text",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Finding duplicate phrases across multiple documents",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Key phrase extraction automatically identifies the most significant terms in a text â€” summarising what a document is about. Useful for tagging, indexing, and summarising large volumes of text.",
+        "incorrect": "Not cryptographic keys. NER extracts proper nouns specifically. Duplicate detection is a different task.",
+        "examTip": "Key phrase extraction use cases: auto-tagging articles, search indexing, document summarisation, categorising customer feedback. Different from NER (entities) or sentiment.",
+        "relatedTopics": [
+          "key-phrase-extraction",
+          "Azure-AI-Language",
+          "text-analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-096",
+      "type": "single-choice",
+      "topicId": "nlp",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is language detection in Azure AI Language?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Detecting inappropriate language in user inputs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Identifying which language a piece of text is written in",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting the programming language used in a code snippet",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Identifying whether text is formal or informal in tone",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Language detection identifies the natural language of a text â€” e.g., determining that a customer review is in French, German, or Japanese â€” and returns a confidence score. Supports 120+ languages.",
+        "incorrect": "Inappropriate content = Azure AI Content Safety. Programming language detection = separate tool. Formality = not a standard Azure AI Language feature.",
+        "examTip": "Language detection returns: detected language, ISO 639-1 code (e.g., 'fr' for French), confidence score. First step in multilingual NLP pipelines.",
+        "relatedTopics": [
+          "language-detection",
+          "Azure-AI-Language",
+          "multilingual"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Language features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

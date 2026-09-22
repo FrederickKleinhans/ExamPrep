@@ -1,0 +1,1196 @@
+{
+  "certificationId": "cissp",
+  "topicId": "security-governance",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "cissp-001",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which risk management framework published by NIST provides a structured process for integrating security and privacy risk management activities into the system development lifecycle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "NIST SP 800-53",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "NIST RMF (SP 800-37)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "NIST CSF",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "NIST SP 800-171",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "NIST SP 800-37 (Risk Management Framework) provides the structured process for integrating security and privacy into the system development lifecycle through its six steps: Prepare, Categorize, Select, Implement, Assess, Authorize, and Monitor.",
+        "incorrect": "SP 800-53 is a controls catalog, the CSF is a voluntary cybersecurity framework, and SP 800-171 addresses protecting CUI in non-federal systems.",
+        "examTip": "Remember RMF = SP 800-37. The six steps are: Prepare, Categorize, Select, Implement, Assess, Authorize, Monitor.",
+        "relatedTopics": [
+          "risk-management",
+          "NIST",
+          "system-development-lifecycle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security and Risk Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-002",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the PRIMARY goal of information security governance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To eliminate all security risks",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To align security strategy with business objectives",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To implement technical security controls",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To ensure regulatory compliance",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The primary goal of information security governance is to align security strategy with the overall business objectives, ensuring security supports and enables the organization's mission.",
+        "incorrect": "Eliminating all risk is impossible. Technical controls and compliance are outcomes of governance, not its primary goal.",
+        "examTip": "On CISSP, governance questions almost always point to business alignment as the primary goal.",
+        "relatedTopics": [
+          "governance",
+          "business-alignment",
+          "security-strategy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security and Risk Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-003",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company conducts a Business Impact Analysis (BIA) and identifies that their e-commerce platform must be restored within 4 hours of an outage to avoid significant financial loss.",
+      "questionText": "What term describes the maximum acceptable downtime before the business suffers unacceptable consequences?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Recovery Point Objective (RPO)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Maximum Tolerable Downtime (MTD)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Recovery Time Objective (RTO)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Mean Time to Repair (MTTR)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RTO is the maximum acceptable time to restore a system or process after a disruption. The 4-hour requirement described is the RTO.",
+        "incorrect": "RPO defines acceptable data loss in time. MTD is the absolute maximum downtime before the organization cannot recover. MTTR is the average time to repair a system.",
+        "examTip": "RTO = how fast you must recover. RPO = how much data you can lose. MTD > RTO always.",
+        "relatedTopics": [
+          "BCP",
+          "DRP",
+          "RTO",
+          "RPO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Business Continuity Planning",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-004",
+      "type": "multiple-choice",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO elements are essential components of a security policy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scope and purpose",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Technical implementation details",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Roles and responsibilities",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Vendor pricing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Security policies must define their scope/purpose (what they cover and why) and roles/responsibilities (who is accountable).",
+        "incorrect": "Technical details belong in procedures/standards. Vendor pricing is irrelevant to policy.",
+        "examTip": "Policy = high-level WHY and WHO. Standards = WHAT. Procedures = HOW.",
+        "relatedTopics": [
+          "security-policy",
+          "governance",
+          "documentation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security and Risk Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-005",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An organization is evaluating two safeguards for a risk. Safeguard A costs $50,000 annually and reduces the Annual Loss Expectancy (ALE) from $200,000 to $80,000. Safeguard B costs $30,000 annually and reduces ALE from $200,000 to $110,000.",
+      "questionText": "Which safeguard provides better value and why?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Safeguard A, because it reduces ALE more",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Safeguard B, because it costs less",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Safeguard A, because net savings = $70,000 vs $60,000 for B",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Safeguard B, because net savings = $60,000 vs $50,000 for A",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Safeguard A: ALE reduction = $120,000 minus cost $50,000 = net $70,000 savings. Safeguard B: ALE reduction = $90,000 minus cost $30,000 = net $60,000. Safeguard A provides better value.",
+        "incorrect": "You must subtract the safeguard cost from the ALE reduction to get net value, not just compare raw ALE reductions or costs.",
+        "examTip": "Value of safeguard = (ALE before - ALE after) - Annual Safeguard Cost. Pick the highest positive number.",
+        "relatedTopics": [
+          "quantitative-risk-analysis",
+          "ALE",
+          "safeguard-selection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Risk Analysis",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-006",
+      "type": "yes-no-statements",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes a component of risk management.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Threat Ã— Vulnerability Ã— Asset Value is the basic formula for risk.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Risk avoidance means transferring the risk to a third party.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Residual risk is what remains after applying controls.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Risk acceptance requires implementing additional controls.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Risk = Threat Ã— Vulnerability Ã— Asset Value. Residual risk remains after controls. Risk avoidance means stopping the activity entirely. Risk acceptance means acknowledging and living with the risk without additional controls.",
+        "incorrect": "Transferring risk (e.g., insurance) is risk transference, not avoidance. Acceptance requires no new controls by definition.",
+        "examTip": "Four risk responses: Accept, Avoid, Transfer (Mitigate), Reduce (Mitigate). Know each definition cold.",
+        "relatedTopics": [
+          "risk-management",
+          "risk-response",
+          "residual-risk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Risk Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-007",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which law primarily governs the privacy of health information in the United States?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GDPR",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "PCI DSS",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "HIPAA",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "SOX",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "HIPAA (Health Insurance Portability and Accountability Act) governs the privacy and security of protected health information (PHI) in the US.",
+        "incorrect": "GDPR is EU privacy law. PCI DSS covers payment card data. SOX covers financial reporting.",
+        "examTip": "HIPAA = health data (US). GDPR = personal data (EU). PCI DSS = payment cards (global). SOX = financial reporting (US public companies).",
+        "relatedTopics": [
+          "compliance",
+          "privacy",
+          "HIPAA",
+          "regulations"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Legal and Regulatory Issues",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-008",
+      "type": "ordering",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the NIST RMF steps in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Prepare",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Categorize",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Select",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Implement",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Assess",
+          "correctPosition": 5
+        },
+        {
+          "id": "o6",
+          "text": "Authorize",
+          "correctPosition": 6
+        },
+        {
+          "id": "o7",
+          "text": "Monitor",
+          "correctPosition": 7
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "NIST RMF steps: Prepare â†’ Categorize â†’ Select â†’ Implement â†’ Assess â†’ Authorize â†’ Monitor.",
+        "incorrect": "Each step feeds the next. Preparation sets organizational context before system-level categorization begins.",
+        "examTip": "Mnemonic: 'Please Can Sally Improve Any Awful Messes'",
+        "relatedTopics": [
+          "NIST-RMF",
+          "risk-management",
+          "authorization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security and Risk Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-042",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An organization experiences a ransomware attack. After recovery, management wants to prevent future incidents. The CISO is asked to recommend a framework to guide the organization's security program.",
+      "questionText": "Which framework provides a comprehensive, risk-based approach to managing cybersecurity across the enterprise?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ISO 27001",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "NIST Cybersecurity Framework (CSF)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "PCI DSS",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "COBIT",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The NIST CSF provides a flexible, risk-based framework for managing cybersecurity with five core functions: Identify, Protect, Detect, Respond, Recover â€” directly applicable to ransomware recovery and prevention.",
+        "incorrect": "ISO 27001 is a certification standard. PCI DSS is specific to payment card environments. COBIT is an IT governance framework.",
+        "examTip": "NIST CSF = Identify, Protect, Detect, Respond, Recover. Perfect for overall enterprise security program. CSF 2.0 adds 'Govern'.",
+        "relatedTopics": [
+          "NIST-CSF",
+          "cybersecurity-framework",
+          "risk-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security and Risk Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-043",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the CORRECT order of steps in an incident response process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Identification â†’ Preparation â†’ Containment â†’ Eradication â†’ Recovery",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Preparation â†’ Identification â†’ Containment â†’ Eradication â†’ Recovery â†’ Lessons Learned",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Containment â†’ Identification â†’ Eradication â†’ Preparation â†’ Recovery",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Preparation â†’ Containment â†’ Identification â†’ Recovery â†’ Lessons Learned",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "NIST SP 800-61 incident response lifecycle: Preparation â†’ Identification (Detection & Analysis) â†’ Containment â†’ Eradication â†’ Recovery â†’ Post-Incident (Lessons Learned).",
+        "incorrect": "Preparation must come first. You cannot contain before you identify.",
+        "examTip": "IR order: PICERL â€” Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned.",
+        "relatedTopics": [
+          "incident-response",
+          "NIST-800-61",
+          "IR-lifecycle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Operations",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-048",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the MAIN difference between a hot site and a warm site in business continuity planning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A hot site has no equipment; a warm site is fully equipped",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A hot site is fully equipped and operational immediately; a warm site needs some setup time",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A warm site is more expensive than a hot site",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A hot site requires manual data restoration; a warm site does not",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A hot site is fully operational and can take over within minutes/hours. A warm site has hardware but requires data loading and configuration â€” can be operational within hours to days.",
+        "incorrect": "Hot sites are most expensive (full infrastructure + live data sync). Warm sites cost less but require more recovery time.",
+        "examTip": "Hot site = minutes to recover (most expensive). Warm site = hours to days (moderate cost). Cold site = days to weeks (cheapest, just the space).",
+        "relatedTopics": [
+          "BCP",
+          "hot-site",
+          "warm-site",
+          "cold-site"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Business Continuity",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-050",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which type of law imposes legal obligations related to protecting personal data and privacy in the European Union?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HIPAA",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SOX",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "GDPR",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "FISMA",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GDPR (General Data Protection Regulation) is the EU regulation governing personal data protection and privacy, with extraterritorial reach affecting any organization processing EU residents' data.",
+        "incorrect": "HIPAA is US healthcare privacy law. SOX covers US financial reporting. FISMA applies to US federal agencies.",
+        "examTip": "GDPR key rights: right to access, rectification, erasure (right to be forgotten), portability, and objection. Fines up to 4% of global annual revenue.",
+        "relatedTopics": [
+          "GDPR",
+          "privacy",
+          "data-protection",
+          "EU-law"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Legal and Regulatory Issues",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-055",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A manufacturing company uses industrial control systems (ICS) to operate their factory floor. The security team identifies that updating the ICS software will require extended downtime.",
+      "questionText": "Which concept BEST describes the primary security concern in ICS environments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Confidentiality",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Availability",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Non-repudiation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Integrity",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In ICS/OT (Operational Technology) environments, availability is the top priority. Downtime can halt production, cause physical damage, or endanger safety â€” unlike in IT environments where confidentiality often tops the list.",
+        "incorrect": "In traditional IT, confidentiality is often the primary concern. ICS has a reversed priority: Availability > Integrity > Confidentiality.",
+        "examTip": "ICS/OT priority: Availability first! IT priority: Confidentiality first. Know this distinction for CISSP.",
+        "relatedTopics": [
+          "ICS-security",
+          "OT-security",
+          "availability",
+          "SCADA"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security Operations",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-058",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which document defines the expected behavior of employees with respect to information security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Risk register",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Acceptable Use Policy (AUP)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "System Security Plan (SSP)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Business Continuity Plan (BCP)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An Acceptable Use Policy (AUP) defines what constitutes acceptable and unacceptable use of organizational systems, networks, and data by employees.",
+        "incorrect": "A risk register tracks identified risks. An SSP describes security controls for a specific system. A BCP covers continuity in a disaster.",
+        "examTip": "AUP is typically the first security document employees sign. It establishes legal grounds for disciplinary action.",
+        "relatedTopics": [
+          "AUP",
+          "security-policy",
+          "governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security and Risk Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-063",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An organization's CISO is presenting the security program to the board of directors. The board wants to understand the financial impact of potential cyber risks.",
+      "questionText": "Which risk analysis approach provides quantitative financial estimates for potential losses?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Qualitative risk analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Quantitative risk analysis",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Delphi method",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Risk appetite assessment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Quantitative risk analysis uses numerical values (ALE, SLE, ARO) to express risk in financial terms, enabling cost-benefit analysis and direct comparison of risk to safeguard costs.",
+        "incorrect": "Qualitative analysis uses descriptive ratings (High/Medium/Low). Delphi is a qualitative consensus method. Risk appetite is a tolerance statement, not an analysis method.",
+        "examTip": "Quantitative = numbers/money (ALE, SLE, ARO). Qualitative = opinions/ratings (High/Med/Low). Board wants numbers.",
+        "relatedTopics": [
+          "quantitative-risk",
+          "ALE",
+          "SLE",
+          "ARO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Risk Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-067",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which term describes the likelihood that a threat will exploit a vulnerability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Impact",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Exposure factor",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Probability (likelihood)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Annualized Loss Expectancy",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Probability (or likelihood) is the estimated chance that a threat will exploit a specific vulnerability within a given period.",
+        "incorrect": "Impact is the magnitude of harm. Exposure factor is the percentage of asset value lost in a single incident. ALE = SLE Ã— ARO.",
+        "examTip": "Risk = Likelihood Ã— Impact. ALE = SLE Ã— ARO. Know both formulas for CISSP.",
+        "relatedTopics": [
+          "risk-analysis",
+          "probability",
+          "likelihood"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Risk Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-071",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Due Diligence mean in the context of information security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Actually implementing and maintaining security controls",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Researching and understanding the security risks and obligations before taking action",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Transferring risk to a third party through insurance",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Conducting annual security awareness training",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Due Diligence is the practice of investigating, understanding, and evaluating risk and security obligations before making decisions â€” the planning and investigation phase.",
+        "incorrect": "Due Care is actually implementing the security controls. Due Diligence is the research and understanding before doing so.",
+        "examTip": "Due Diligence = research/planning (know what to do). Due Care = actually doing it (implementing controls). Both needed to avoid negligence.",
+        "relatedTopics": [
+          "due-diligence",
+          "due-care",
+          "governance",
+          "liability"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security and Risk Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-075",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of security awareness training?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To replace technical security controls",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To ensure employees understand security policies and can recognize threats like phishing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To certify employees as security professionals",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To monitor employee computer usage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Security awareness training educates employees about security policies, their responsibilities, and how to recognize and respond to threats â€” making people the first line of defense.",
+        "incorrect": "Training complements technical controls, not replaces them. It doesn't certify employees or monitor behavior.",
+        "examTip": "People are the weakest link. Training reduces phishing susceptibility, social engineering success, and accidental policy violations.",
+        "relatedTopics": [
+          "security-awareness",
+          "phishing",
+          "human-factor",
+          "training"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security and Risk Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-078",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company must comply with both GDPR and PCI DSS. The requirements conflict in some areas. The CISO needs to determine which controls to implement.",
+      "questionText": "What is the BEST approach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Comply with only the stricter of the two frameworks",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Implement a unified compliance program that satisfies both frameworks simultaneously",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Choose one framework and document why the other is not applicable",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Apply for an exemption from one of the frameworks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A unified compliance program maps overlapping controls across frameworks, implementing the stricter requirement where they conflict, and covering unique requirements from each â€” reducing duplication and cost.",
+        "incorrect": "You cannot simply ignore one framework you're legally required to comply with. Exemptions are rare and difficult to obtain.",
+        "examTip": "Compliance mapping: identify overlaps between frameworks to reduce work. Where they conflict, implement the stricter control.",
+        "relatedTopics": [
+          "compliance",
+          "GDPR",
+          "PCI-DSS",
+          "unified-compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Legal and Regulatory Issues",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-081",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary objective of a Business Continuity Plan (BCP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To recover IT systems as quickly as possible",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To ensure critical business functions continue during and after a disruption",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To comply with regulatory requirements",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To conduct a post-incident investigation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "BCP focuses on maintaining critical business operations during any type of disruption (disaster, outage, pandemic). IT recovery (DRP) is a subset of BCP.",
+        "incorrect": "DRP focuses on IT system recovery. Compliance is a by-product. Post-incident investigation is part of incident response.",
+        "examTip": "BCP = keep the business running. DRP = restore IT systems. DRP is a subset of BCP.",
+        "relatedTopics": [
+          "BCP",
+          "DRP",
+          "business-continuity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Business Continuity",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-088",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company outsources its payment processing to a third-party vendor. The vendor suffers a data breach exposing customer credit card data.",
+      "questionText": "Who bears ultimate responsibility for protecting customer data under PCI DSS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The payment processor (vendor)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The issuing bank",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The merchant (the company that outsourced)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "The card network (Visa/Mastercard)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Under PCI DSS, the merchant retains ultimate responsibility for protecting cardholder data even when using third-party processors. They must ensure vendors are PCI DSS compliant.",
+        "incorrect": "The vendor is operationally responsible but the merchant cannot transfer ultimate compliance liability to a third party.",
+        "examTip": "You can outsource work but not accountability. Always vet third-party vendors' compliance and include security requirements in contracts.",
+        "relatedTopics": [
+          "PCI-DSS",
+          "third-party-risk",
+          "compliance",
+          "vendor-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Legal and Regulatory Issues",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-091",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which type of social engineering attack involves an attacker creating a fabricated scenario to manipulate a victim into providing information or access?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Phishing",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Pretexting",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Vishing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Baiting",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Pretexting involves creating a fabricated scenario (pretext) to manipulate the victim â€” e.g., impersonating IT support or a bank auditor to extract sensitive information.",
+        "incorrect": "Phishing uses deceptive emails. Vishing uses phone calls. Baiting leaves infected media (USB) for victims to find.",
+        "examTip": "Social engineering types: Phishing (email), Vishing (voice), Smishing (SMS), Pretexting (fake scenario), Baiting (physical media), Tailgating (physical access).",
+        "relatedTopics": [
+          "social-engineering",
+          "pretexting",
+          "phishing",
+          "human-factor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security and Risk Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-097",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which type of disaster recovery test fully tests the recovery process without affecting production systems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tabletop exercise",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Walk-through test",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Parallel test",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Full interruption test",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A parallel test activates the alternate recovery site and verifies it can handle production workloads while the primary site continues operating â€” testing recovery capability without risking production.",
+        "incorrect": "Tabletop = discussion only. Walk-through = reviewing the plan. Full interruption = actually switching to recovery (disruptive, tests everything but risks production).",
+        "examTip": "DR test levels: Tabletop (cheapest, no tech) â†’ Walk-through â†’ Simulation â†’ Parallel (test recovery site) â†’ Full interruption (riskiest, most thorough).",
+        "relatedTopics": [
+          "disaster-recovery",
+          "BCP-testing",
+          "parallel-test"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Business Continuity",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-100",
+      "type": "single-choice",
+      "topicId": "security-governance",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "The board of directors of a publicly traded company asks the CISO: 'What is the minimum acceptable level of risk we can tolerate?' The CISO prepares a response that defines the organization's boundaries around risk-taking.",
+      "questionText": "Which term BEST describes the concept the CISO is defining?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Risk appetite",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Risk tolerance",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Risk threshold",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Residual risk",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Risk appetite is the amount and type of risk an organization is willing to accept in pursuit of its objectives â€” a strategic, high-level statement set by the board.",
+        "incorrect": "Risk tolerance is the acceptable variation around risk appetite (more operational). Risk threshold is a trigger point. Residual risk is what remains after controls.",
+        "examTip": "Risk appetite = strategic (board sets it). Risk tolerance = operational (acceptable deviation from appetite). Both are different from residual risk.",
+        "relatedTopics": [
+          "risk-appetite",
+          "risk-tolerance",
+          "governance",
+          "board-level-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Security and Risk Management",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

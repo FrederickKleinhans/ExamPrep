@@ -1,0 +1,438 @@
+{
+  "certificationId": "psm-i",
+  "topicId": "scrum-theory",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "psm-001",
+      "type": "single-choice",
+      "topicId": "scrum-theory",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What are the three pillars of empiricism that Scrum is founded upon?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Planning, execution, and review",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Transparency, inspection, and adaptation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Commitment, focus, and respect",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Velocity, quality, and delivery",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Scrum is founded on empirical process control theory (empiricism). The three pillars are: Transparency (visible progress and work), Inspection (frequent checks of artifacts and progress), and Adaptation (adjusting when deviations are found).",
+        "incorrect": "Planning/execution/review are phases, not pillars. Commitment/focus/respect are Scrum values. Velocity/quality/delivery are metrics.",
+        "examTip": "Three pillars of empiricism: Transparency â†’ Inspection â†’ Adaptation. All Scrum events exist to enable inspection and adaptation.",
+        "relatedTopics": [
+          "empiricism",
+          "Scrum-pillars"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Scrum Theory",
+        "references": [
+          "https://scrumguides.org/scrum-guide.html"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "psm-002",
+      "type": "single-choice",
+      "topicId": "scrum-theory",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following are the five Scrum values?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transparency, inspection, adaptation, empiricism, and accountability",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Commitment, courage, focus, openness, and respect",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Velocity, quality, delivery, collaboration, and trust",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Planning, flexibility, teamwork, communication, and accountability",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The five Scrum values are: Commitment (to goals), Courage (to do the right thing), Focus (on sprint work), Openness (about work and challenges), and Respect (for each other's abilities).",
+        "incorrect": "Transparency/inspection/adaptation are the three pillars of empiricism. The others are not Scrum values.",
+        "examTip": "Mnemonic for Scrum values: 'Can Coaches Find Our Respect' = Commitment, Courage, Focus, Openness, Respect.",
+        "relatedTopics": [
+          "Scrum-values"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Scrum Theory",
+        "references": [
+          "https://scrumguides.org/scrum-guide.html"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "psm-003",
+      "type": "single-choice",
+      "topicId": "scrum-theory",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does transparency mean in the context of Scrum's empirical pillars?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All team communications must be public and visible to all stakeholders at all times",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The process and work must be visible to those performing and receiving the work so informed decisions can be made",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The Scrum Master must report team progress to management every day",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Team members must be honest about their individual velocity",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Transparency means the significant aspects of the process must be visible to those responsible for the outcome. Without transparency, inspection is flawed and adaptation leads the team astray.",
+        "incorrect": "Transparency is about visibility of the process and artifacts for informed decision-making, not daily reporting or public communication of all conversations.",
+        "examTip": "Transparency enables inspection. Inspection enables adaptation. Hiding problems kills empiricism.",
+        "relatedTopics": [
+          "transparency",
+          "empiricism",
+          "Scrum-pillars"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Scrum Theory",
+        "references": [
+          "https://scrumguides.org/scrum-guide.html"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "psm-004",
+      "type": "single-choice",
+      "topicId": "scrum-theory",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Scrum is described as a framework rather than a methodology. What does this mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scrum provides all the tools and processes needed for software development",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Scrum provides structure and roles within which teams can employ various techniques and practices suited to their context",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Scrum is optional and teams can choose which parts to follow",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Scrum is a theoretical model that cannot be used in practice",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Scrum is a lightweight framework â€” it provides the minimum necessary structure (roles, events, artifacts) and lets the team choose the best engineering practices, tools, and techniques to use within it.",
+        "incorrect": "Scrum does not prescribe specific engineering techniques. It is not optional in the sense that if you call it Scrum, all elements must be present.",
+        "examTip": "Scrum Guide says Scrum is 'a framework within which people can address complex adaptive problems'. It's intentionally incomplete â€” fill it with practices that work for your team.",
+        "relatedTopics": [
+          "Scrum-framework",
+          "Scrum-definition"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Scrum Theory",
+        "references": [
+          "https://scrumguides.org/scrum-guide.html"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "psm-005",
+      "type": "yes-no-statements",
+      "topicId": "scrum-theory",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Scrum theory.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Scrum is based on empiricism and lean thinking.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "In Scrum, adaptation must be delayed until the end of the project to avoid disruption.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "The frequency of inspection should be often enough to detect unacceptable variances without getting in the way of the work.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Transparency requires that all artifacts be perfectly complete before being shown to stakeholders.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Scrum is based on empiricism + lean. Inspection should be frequent but not disruptive. Adaptation should happen as soon as possible. Transparency means showing the real state, not polished completeness.",
+        "incorrect": "Adaptation delayed = waterfall thinking. Transparency doesn't mean 'wait until perfect' â€” it means show the real current state.",
+        "examTip": "Adaptation must happen as soon as possible after deviation is detected. Delay = more cost.",
+        "relatedTopics": [
+          "empiricism",
+          "lean",
+          "adaptation",
+          "transparency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Scrum Theory",
+        "references": [
+          "https://scrumguides.org/scrum-guide.html"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "psm-060",
+      "type": "single-choice",
+      "topicId": "scrum-theory",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Scrum's lean thinking principle contribute to the framework?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It ensures the team focuses on minimising all documentation",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It focuses on reducing waste, delivering value, and continuously improving flow",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It requires the team to use Kanban boards alongside Scrum",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It mandates that teams operate in pairs to reduce waste",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Lean thinking in Scrum focuses on reducing waste (unnecessary work, handoffs, waiting), delivering value, focusing on the whole system, and continuously improving â€” complementing empiricism.",
+        "incorrect": "Lean is not about minimising documentation specifically, mandating Kanban or pairing.",
+        "examTip": "Scrum is built on empiricism AND lean thinking. Lean = eliminate waste, focus on value flow. Empiricism = inspect and adapt based on evidence.",
+        "relatedTopics": [
+          "lean-thinking",
+          "Scrum-theory",
+          "waste-reduction"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Scrum Theory",
+        "references": [
+          "https://scrumguides.org/scrum-guide.html"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "psm-070",
+      "type": "single-choice",
+      "topicId": "scrum-theory",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What type of work is Scrum best suited for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Repetitive, well-defined work where the process is well understood",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Complex work where the requirements and solutions are uncertain and need to be discovered iteratively",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Simple administrative tasks with clear outcomes",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Any type of work â€” Scrum is universally applicable",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Scrum is designed for complex, adaptive problems where requirements evolve and solutions need to be discovered empirically. The iterative, inspect-and-adapt nature is ideal for this domain.",
+        "incorrect": "Repetitive defined work is better handled by traditional approaches. Simple tasks don't need Scrum's overhead. Scrum is not universally the best fit.",
+        "examTip": "Scrum = complex adaptive problems (Cynefin complex domain). Predictable, defined problems = use defined processes (Cynefin complicated or clear domain).",
+        "relatedTopics": [
+          "Scrum-applicability",
+          "complex-adaptive",
+          "empiricism"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Scrum Theory",
+        "references": [
+          "https://scrumguides.org/scrum-guide.html"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "psm-089",
+      "type": "single-choice",
+      "topicId": "scrum-theory",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the relationship between Scrum values and empirical process control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are unrelated â€” values are soft skills, empiricism is a process",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Scrum values enable empiricism â€” transparency requires openness, inspection requires courage, adaptation requires commitment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Empirical process control is more important than Scrum values",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Scrum values replace the need for empirical process control in mature teams",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Scrum values underpin empiricism: Transparency requires Openness (sharing real status) and Courage (sharing bad news). Inspection requires Focus and Commitment. Adaptation requires Courage and Respect. They are deeply interconnected.",
+        "incorrect": "Values and empiricism are not separate â€” they reinforce each other. Neither replaces the other.",
+        "examTip": "Values enable empiricism: Openness enables Transparency, Courage enables sharing problems, Commitment ensures inspect-and-adapt happens. Values are not just 'nice to have'.",
+        "relatedTopics": [
+          "Scrum-values",
+          "empiricism",
+          "Scrum-theory"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Scrum Theory",
+        "references": [
+          "https://scrumguides.org/scrum-guide.html"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "psm-100",
+      "type": "single-choice",
+      "topicId": "scrum-theory",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An organisation has been using Scrum for 2 years. A senior manager says: 'Scrum isn't working for us because we still have projects that go over budget and miss deadlines.' The Scrum Master is asked to explain why.",
+      "questionText": "What is the MOST accurate response?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scrum guarantees on-budget, on-time delivery â€” the team must not be using it correctly",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Scrum provides empirical process control to manage complex work â€” it surfaces problems early but does not guarantee delivery of a predefined scope by a fixed date",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The organisation should switch to a different framework that provides guarantees",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Budget and deadline issues mean the Product Owner needs to be replaced",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Scrum doesn't promise fixed scope + fixed date + fixed quality (the 'iron triangle'). It provides transparency into progress so decisions can be made early. Budget/deadline problems are complex â€” Scrum helps surface them, not prevent them.",
+        "incorrect": "No framework guarantees on-budget, on-time delivery of complex work. The problem likely stems from treating Scrum as waterfall with sprints.",
+        "examTip": "Scrum benefit: early visibility of problems so decisions can be made (reduce scope, add time, accept risk). It doesn't eliminate complexity â€” it makes it manageable.",
+        "relatedTopics": [
+          "empiricism",
+          "Scrum-benefits",
+          "complex-work"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Scrum Theory",
+        "references": [
+          "https://scrumguides.org/scrum-guide.html"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

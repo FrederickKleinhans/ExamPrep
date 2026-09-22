@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { BookOpen, ClipboardCheck, ArrowRight, Sun, Moon } from 'lucide-react';
+import { BookOpen, ClipboardCheck, ArrowRight, Sun, Moon, Bell } from 'lucide-react';
 import { CareerTrack, CatalogCert } from '../types';
 import { useTheme } from '../store/useTheme';
 
@@ -34,6 +34,7 @@ export interface DashboardProps {
   activeTrack: CareerTrack | null;
   nextCert: CatalogCert | null;
   nextCertId: string | null;
+  dueCount: number;
 }
 
 const formatPercent = (value: number) => `${Math.round(value)}%`;
@@ -47,14 +48,20 @@ export function Dashboard({
   activeTrack,
   nextCert,
   nextCertId,
+  dueCount,
 }: DashboardProps) {
   const navigate = useNavigate();
   const { theme, toggle } = useTheme();
 
   const shareDashboard = async () => {
-    const shareData = { title: 'CertArc', text: 'Track your certification progress with CertArc.' };
+    const shareUrl = 'https://exam-prep-lemon-pi.vercel.app/';
+    const shareData = {
+      title: 'CertArc',
+      text: 'Track your certification progress with CertArc.',
+      url: shareUrl,
+    };
     if (navigator.share) { await navigator.share(shareData); return; }
-    await navigator.clipboard?.writeText(window.location.href);
+    await navigator.clipboard?.writeText(shareUrl);
   };
 
   const metricCards = [
@@ -68,15 +75,15 @@ export function Dashboard({
 
   return (
     <div className="page-root" style={{ borderRadius: 24 }}>
-      <main style={{ padding: '26px 28px', display: 'flex', flexDirection: 'column', gap: 20 }}>
+      <main className="dashboard-content" style={{ padding: '26px 28px', display: 'flex', flexDirection: 'column', gap: 20, minWidth: 0, maxWidth: '100%' }}>
 
         {/* ── Header ── */}
-        <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
+        <header className="dashboard-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap', minWidth: 0 }}>
           <div>
             <div className="text-muted" style={{ fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 6 }}>Overview</div>
             <h1 className="text-heading" style={{ margin: 0, fontSize: 40, lineHeight: 1.1, fontWeight: 800 }}>Dashboard</h1>
           </div>
-          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }}>
+          <div className="dashboard-header-actions" style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }}>
             <button
               type="button"
               onClick={() => void shareDashboard()}
@@ -106,7 +113,7 @@ export function Dashboard({
 
         {/* ── Active cert hero ── */}
         <div
-          className="card-surface cert-hero"
+          className="card-surface cert-hero dashboard-cert-hero"
           style={{
             borderColor: `${vendorColor}33`,
             background: `linear-gradient(135deg, ${vendorColor}10 0%, var(--bg-secondary) 100%)`,
@@ -169,13 +176,24 @@ export function Dashboard({
                   {activeCert?.vendor && (
                     <span className="text-muted" style={{ fontSize: 11 }}>· {activeCert.vendor}</span>
                   )}
+                  {dueCount > 0 && (
+                    <button
+                      type="button"
+                      onClick={() => navigate('/study')}
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: 11, fontWeight: 700, color: 'var(--warning)', background: 'rgba(255,174,0,0.12)', border: '1px solid rgba(255,174,0,0.25)', borderRadius: 999, padding: '2px 8px', cursor: 'pointer' }}
+                      title="Start studying to review due questions"
+                    >
+                      <Bell style={{ width: 10, height: 10 }} aria-hidden="true" />
+                      {dueCount} due
+                    </button>
+                  )}
                 </div>
               </>
             )}
           </div>
 
           {(activeCert || activeCertId) && (
-            <div className="page-header-controls" style={{ flexShrink: 0 }}>
+            <div className="page-header-controls dashboard-cert-actions" style={{ flexShrink: 0 }}>
               <button
                 type="button"
                 onClick={() => navigate('/study')}
@@ -195,7 +213,7 @@ export function Dashboard({
         </div>
 
         {/* ── Metric cards ── */}
-        <section style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(140px, 1fr))', gap: 14 }}>
+        <section className="dashboard-metrics" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(140px, 1fr))', gap: 14, minWidth: 0 }}>
           {metricCards.map((card) => (
             <div key={card.label} className="card-surface" style={{ padding: 18 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
@@ -209,7 +227,7 @@ export function Dashboard({
         </section>
 
         {/* ── Bottom row ── */}
-        <section style={{ display: 'grid', gridTemplateColumns: '1.5fr 0.95fr', gap: 14 }}>
+        <section className="dashboard-bottom-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 0.95fr', gap: 14, minWidth: 0 }}>
           {/* My progress */}
           <div className="card-surface" style={{ padding: 18 }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
@@ -222,7 +240,7 @@ export function Dashboard({
               </button>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12 }}>
+            <div className="dashboard-progress-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, minWidth: 0 }}>
               {tracks.length === 0 ? (
                 <div className="text-muted" style={{ fontSize: 13, gridColumn: '1/-1' }}>
                   No certifications started yet.{' '}
@@ -268,6 +286,21 @@ export function Dashboard({
                 </div>
                 <ArrowRight style={{ width: 15, height: 15, color: 'var(--text-secondary)', flexShrink: 0 }} />
               </button>
+            )}
+            {/* Track complete celebration */}
+            {!nextCert && tracks.length > 0 && tracks.every((t) => t.progress === 100) && (
+              <div style={{ marginTop: 14, padding: '14px 16px', borderRadius: 14, background: 'linear-gradient(135deg, rgba(45,212,191,0.1), rgba(79,124,255,0.08))', border: '1px solid rgba(45,212,191,0.3)', textAlign: 'center' }}>
+                <div style={{ fontSize: 24, marginBottom: 6 }}>🏆</div>
+                <div className="text-heading" style={{ fontSize: 14, fontWeight: 700, marginBottom: 4 }}>Track complete!</div>
+                <div className="text-muted" style={{ fontSize: 12 }}>You've passed all available certs on this path.</div>
+                <button
+                  type="button"
+                  onClick={() => navigate('/tracks')}
+                  style={{ marginTop: 10, background: 'none', border: 'none', color: 'var(--accent)', fontSize: 12, fontWeight: 600, cursor: 'pointer' }}
+                >
+                  Explore another path →
+                </button>
+              </div>
             )}
           </div>
 

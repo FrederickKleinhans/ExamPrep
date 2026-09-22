@@ -1,0 +1,4848 @@
+{
+  "questions": [
+    {
+      "id": "sc900-001",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following BEST describes the CIA triad in information security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Confidentiality, Integrity, Availability",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Compliance, Identity, Authentication",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Control, Inspection, Audit",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Credentials, Infrastructure, Access",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The CIA triad stands for Confidentiality (protect data from unauthorized access), Integrity (ensure data is accurate and unaltered), and Availability (ensure data and systems are accessible when needed).",
+        "incorrect": "The other options are not security frameworks.",
+        "examTip": "CIA = Confidentiality, Integrity, Availability. This is the foundational security model.",
+        "relatedTopics": [
+          "CIA-triad",
+          "security-fundamentals"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-002",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the Zero Trust security model based on?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Trust all users inside the corporate network",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Never trust, always verify â€” regardless of location",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Trust users who have valid passwords",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Trust all cloud-hosted services automatically",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Zero Trust assumes no implicit trust â€” every request must be verified regardless of whether it comes from inside or outside the network.",
+        "incorrect": "Zero Trust explicitly rejects the idea of a trusted internal network.",
+        "examTip": "Zero Trust pillars: verify explicitly, use least privilege, assume breach.",
+        "relatedTopics": [
+          "zero-trust",
+          "identity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Zero Trust",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-003",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following is an example of a phishing attack?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An attacker floods a server with traffic to make it unavailable",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An attacker sends a deceptive email pretending to be a trusted entity to steal credentials",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An attacker intercepts network traffic between two parties",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An attacker exploits an unpatched vulnerability in a web server",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Phishing uses deceptive emails or messages that impersonate trusted sources to trick users into revealing credentials or clicking malicious links.",
+        "incorrect": "Flooding traffic = DDoS. Intercepting traffic = man-in-the-middle. Exploiting vulnerabilities = exploitation attack.",
+        "examTip": "Phishing variants: Spear phishing (targeted), Whaling (executives), Smishing (SMS), Vishing (voice).",
+        "relatedTopics": [
+          "phishing",
+          "social-engineering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe common threats",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-004",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does the principle of least privilege mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Users should have access to all systems to do their job efficiently",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Users should be granted only the minimum access needed to perform their job",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Administrators should have the fewest accounts possible",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Systems should run with minimal hardware requirements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Least privilege limits user access rights to only what is necessary for their role, reducing the attack surface and limiting damage from compromised accounts.",
+        "incorrect": "Least privilege is about access rights, not the number of accounts or hardware.",
+        "examTip": "Least privilege reduces blast radius â€” if an account is compromised, damage is limited to only what that account can access.",
+        "relatedTopics": [
+          "least-privilege",
+          "access-control"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-005",
+      "type": "yes-no-statements",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes a security concept.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Encryption protects data confidentiality by making it unreadable without the correct key.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A firewall is used to detect and remove viruses from endpoints.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Multi-factor authentication requires two or more verification methods from different categories.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "A DDoS attack targets a single user's credentials.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Encryption = confidentiality. MFA = multiple factor categories. Firewalls filter network traffic (not antivirus). DDoS = floods a service to deny availability.",
+        "incorrect": "Firewalls are not antivirus. DDoS attacks services, not individual credentials.",
+        "examTip": "Know the difference: Firewall (network traffic), Antivirus (malware), IDS/IPS (intrusion detection/prevention).",
+        "relatedTopics": [
+          "encryption",
+          "MFA",
+          "DDoS",
+          "firewall"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-006",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What type of attack involves encrypting a victim's files and demanding payment for the decryption key?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Spyware",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Ransomware",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Adware",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Rootkit",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Ransomware encrypts the victim's data and demands a ransom payment (usually cryptocurrency) in exchange for the decryption key.",
+        "incorrect": "Spyware collects information. Adware displays unwanted ads. Rootkit hides malicious processes.",
+        "examTip": "Ransomware defense: backups, endpoint protection, email filtering, patch management.",
+        "relatedTopics": [
+          "ransomware",
+          "malware",
+          "threats"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe common threats",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-007",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which security model uses three pillars: identify, protect, and recover to address cybersecurity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CIA triad",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "NIST Cybersecurity Framework",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Zero Trust model",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Shared responsibility model",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The NIST CSF has five functions: Identify, Protect, Detect, Respond, Recover â€” providing a comprehensive approach to managing cybersecurity risk.",
+        "incorrect": "CIA triad covers confidentiality/integrity/availability. Zero Trust is an access model. Shared responsibility defines cloud responsibilities.",
+        "examTip": "NIST CSF 5 functions: Identify, Protect, Detect, Respond, Recover. CSF 2.0 adds Govern.",
+        "relatedTopics": [
+          "NIST-CSF",
+          "security-frameworks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-008",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In the shared responsibility model for cloud services, which responsibility always remains with the customer regardless of the service model (IaaS, PaaS, SaaS)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Physical security of datacenters",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Patching the underlying hypervisor",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Identity and access management for their own users",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Network infrastructure management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Regardless of the cloud service model, customers are always responsible for managing their own identities, accounts, and access policies.",
+        "incorrect": "Physical security, hypervisor patching, and network infrastructure are always the cloud provider's responsibility.",
+        "examTip": "Customer always owns: identities, data, and devices. Provider always owns: physical datacenters and core infrastructure.",
+        "relatedTopics": [
+          "shared-responsibility",
+          "cloud-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe shared responsibility",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-009",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is defense in depth and how does it apply to cloud security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using a single powerful security tool to protect all resources",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Applying multiple layered security controls so each layer compensates if another fails",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Encrypting data only at the network perimeter",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Storing backups in a second cloud region",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defense in depth stacks multiple security layers (physical, identity, perimeter, network, compute, application, data) so an attacker must overcome every layer.",
+        "incorrect": "Single tools and perimeter-only security are the opposite of defense in depth.",
+        "examTip": "Azure defense in depth layers: Physical â†’ Identity â†’ Perimeter â†’ Network â†’ Compute â†’ Application â†’ Data.",
+        "relatedTopics": [
+          "defense-in-depth",
+          "layered-security",
+          "cloud-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe defense in depth",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-010",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of encryption?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To make data available 24/7",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To protect data confidentiality by making it unreadable without the correct key",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To verify that data has not been altered",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To prevent unauthorized users from accessing the network",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Encryption transforms plaintext into ciphertext using a key, protecting confidentiality so only authorized parties with the correct key can read the data.",
+        "incorrect": "Availability = redundancy/backups. Integrity verification = hashing. Network access control = firewalls/NAC.",
+        "examTip": "Encryption = confidentiality. Hashing = integrity. Both together provide strong data protection.",
+        "relatedTopics": [
+          "encryption",
+          "confidentiality"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-011",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which term describes a weakness in a system that could be exploited by a threat?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Threat",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Risk",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Vulnerability",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Exploit",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A vulnerability is a weakness or flaw in a system that could be exploited by a threat actor to gain unauthorized access or cause harm.",
+        "incorrect": "Threat = potential danger. Risk = likelihood Ã— impact. Exploit = the method used to take advantage of a vulnerability.",
+        "examTip": "Threat exploits a Vulnerability to create Risk. Know the difference between all three.",
+        "relatedTopics": [
+          "vulnerability",
+          "threat",
+          "risk"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-012",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an example of a physical security control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Antivirus software",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A firewall rule",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A locked server room door",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Multi-factor authentication",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A locked server room door is a physical security control that prevents unauthorized physical access to hardware and infrastructure.",
+        "incorrect": "Antivirus, firewalls, and MFA are technical/logical controls.",
+        "examTip": "Security control types: Physical (locks, cameras), Technical (firewalls, MFA), Administrative (policies, training).",
+        "relatedTopics": [
+          "physical-security",
+          "security-controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security controls",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-013",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Microsoft Entra ID (formerly Azure Active Directory)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A cloud-based firewall service",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A cloud-based identity and access management service",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A virtual machine management platform",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A network monitoring tool",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Entra ID (formerly Azure AD) is Microsoft's cloud-based identity and access management service that enables users to sign in and access resources.",
+        "incorrect": "Azure Firewall handles network security. Azure Resource Manager manages VMs. Azure Monitor handles monitoring.",
+        "examTip": "Entra ID = cloud IAM. On-premises equivalent = Windows Server Active Directory. They're different products.",
+        "relatedTopics": [
+          "Entra-ID",
+          "Azure-AD",
+          "IAM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft Entra ID",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-014",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft Entra ID feature requires users to provide an additional verification method beyond their password when signing in?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Conditional Access",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Multi-Factor Authentication (MFA)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Privileged Identity Management",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Identity Protection",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "MFA in Microsoft Entra ID requires users to verify their identity using two or more methods (password + authenticator app, phone call, or SMS code).",
+        "incorrect": "Conditional Access enforces access policies. PIM manages privileged role access. Identity Protection detects risky sign-ins.",
+        "examTip": "Microsoft Authenticator app is the recommended MFA method â€” more secure than SMS codes.",
+        "relatedTopics": [
+          "MFA",
+          "Entra-ID",
+          "authentication"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe authentication methods",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-015",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Conditional Access in Microsoft Entra ID allow administrators to do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Block all access to cloud resources from mobile devices",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Enforce access policies based on conditions like user location, device compliance, and risk level",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Automatically delete inactive user accounts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Sync on-premises Active Directory to the cloud",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Conditional Access evaluates signals (user, location, device, app, risk) and enforces access decisions â€” requiring MFA, blocking access, or requiring compliant devices.",
+        "incorrect": "Blocking all mobile access is too broad. Account lifecycle is managed separately. AD sync is done by Entra Connect.",
+        "examTip": "Conditional Access = if (conditions) then (grant/block/require MFA). It's the Zero Trust policy engine.",
+        "relatedTopics": [
+          "Conditional-Access",
+          "Entra-ID",
+          "zero-trust"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Conditional Access",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-016",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of Microsoft Entra Privileged Identity Management (PIM)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To manage and rotate passwords automatically",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To provide just-in-time privileged access and require approval and justification for role activation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To detect compromised user credentials",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To enforce device compliance policies",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "PIM enables just-in-time privileged access â€” users only have elevated roles when needed, reducing the risk of standing privilege and requiring justification/approval.",
+        "incorrect": "Password rotation = other tools. Credential detection = Identity Protection. Device compliance = Intune/Conditional Access.",
+        "examTip": "PIM = JIT access. Principle: no permanent admin roles. Activate when needed, auto-expire when done.",
+        "relatedTopics": [
+          "PIM",
+          "privileged-access",
+          "just-in-time"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe PIM",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-017",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What does Microsoft Entra Identity Protection use to detect risky sign-ins?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Manual review by security administrators",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Machine learning and Microsoft's global threat intelligence signals",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Static firewall rules",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Password complexity requirements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Identity Protection uses ML and Microsoft's global threat intelligence (trillions of signals per day) to detect anomalous sign-ins, leaked credentials, and impossible travel.",
+        "incorrect": "Manual review doesn't scale. Firewalls don't evaluate sign-in risk. Password complexity doesn't detect anomalies.",
+        "examTip": "Identity Protection risk levels: Low, Medium, High. Can trigger Conditional Access policies automatically.",
+        "relatedTopics": [
+          "Identity-Protection",
+          "risk-detection",
+          "Entra-ID"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Identity Protection",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-018",
+      "type": "yes-no-statements",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Microsoft Entra ID features.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Microsoft Entra ID supports single sign-on (SSO) to thousands of SaaS applications.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Microsoft Entra ID is a direct replacement for on-premises Active Directory Domain Services.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "External identities in Entra ID allow partners and customers to access your apps using their own credentials.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Entra ID requires an on-premises domain controller to function.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Entra ID supports SSO and external identities (B2B/B2C). It is a cloud-only service that complements but does not replace on-premises AD DS. It works without on-premises infrastructure.",
+        "incorrect": "Entra ID is cloud-native and doesn't require domain controllers.",
+        "examTip": "Entra ID â‰  AD DS. Entra ID is cloud IAM. AD DS is on-prem directory. Entra Connect syncs between them.",
+        "relatedTopics": [
+          "Entra-ID",
+          "SSO",
+          "external-identities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Entra ID capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-019",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between authentication and authorization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Authentication grants access; authorization verifies identity",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Authentication verifies who you are; authorization determines what you can do",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They are the same thing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Authorization verifies your password; authentication checks your permissions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Authentication (AuthN) = proving identity (who are you?). Authorization (AuthZ) = determining what you're allowed to do (what can you access?).",
+        "incorrect": "These are distinct steps. Authentication always happens before authorization.",
+        "examTip": "AuthN = identity verification (login). AuthZ = access decision (permissions). In Entra ID: authenticate first, then RBAC determines access.",
+        "relatedTopics": [
+          "authentication",
+          "authorization",
+          "IAM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe authentication vs authorization",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-020",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which passwordless authentication method uses biometrics or a PIN tied to the device to sign in to Microsoft services?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SMS one-time code",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Windows Hello for Business",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Email verification code",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Security questions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Windows Hello for Business enables passwordless sign-in using biometrics (fingerprint, face recognition) or a PIN tied to the specific device, providing strong MFA-equivalent security.",
+        "incorrect": "SMS codes are not passwordless. Email codes still require a password step. Security questions are weak authentication.",
+        "examTip": "Microsoft passwordless options: Windows Hello for Business, FIDO2 security keys, Microsoft Authenticator app (phone sign-in).",
+        "relatedTopics": [
+          "passwordless",
+          "Windows-Hello",
+          "authentication"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe passwordless authentication",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-021",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of Entra ID Access Reviews?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To monitor network traffic for suspicious activity",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To periodically review and certify that users still need their current access rights",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To automatically assign roles based on job title",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To reset forgotten passwords",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Access Reviews allow organizations to periodically verify that users, guests, and service principals still require their access â€” preventing privilege creep.",
+        "incorrect": "Network monitoring = Defender for Cloud. Auto role assignment = dynamic groups. Password reset = SSPR.",
+        "examTip": "Access Reviews are key for compliance â€” they document that access was reviewed and unnecessary access was removed.",
+        "relatedTopics": [
+          "access-reviews",
+          "governance",
+          "privilege-creep"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe identity governance",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-022",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the role of an Identity Provider (IdP) in a federated identity scenario?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To store application data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To authenticate users and issue tokens that service providers trust",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To enforce network firewall rules",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage virtual machines",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An Identity Provider authenticates users and issues security tokens (SAML assertions, JWT tokens) that service providers trust, enabling SSO across multiple applications.",
+        "incorrect": "IdPs are focused on identity and authentication, not application data, firewalls, or VMs.",
+        "examTip": "Entra ID acts as an IdP. When you 'Sign in with Microsoft', Entra ID is the IdP authenticating you for a third-party service provider.",
+        "relatedTopics": [
+          "federation",
+          "IdP",
+          "SSO",
+          "tokens"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe federation",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-023",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Entra ID feature allows organizations to manage access to resources based on user attributes like department or job title?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Conditional Access policies",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Dynamic groups",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Identity Protection",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Entitlement Management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Dynamic groups in Entra ID automatically add or remove users based on attribute rules (like department = 'Sales'), eliminating manual group membership management.",
+        "incorrect": "Conditional Access = sign-in policies. Identity Protection = risk detection. Entitlement Management = access packages.",
+        "examTip": "Dynamic groups = auto-membership based on attributes. Static groups = manual membership. Both can be used for RBAC assignments.",
+        "relatedTopics": [
+          "dynamic-groups",
+          "Entra-ID",
+          "group-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Entra ID capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-024",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does Self-Service Password Reset (SSPR) allow users to do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Create new user accounts without admin approval",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Reset their own password without contacting the IT helpdesk",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Grant themselves admin rights temporarily",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "View other users' passwords",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SSPR enables users to reset their password or unlock their account independently using pre-registered verification methods, reducing helpdesk burden.",
+        "incorrect": "SSPR only resets the user's own password. It does not create accounts or grant admin rights.",
+        "examTip": "SSPR requires pre-registration of authentication methods (email, phone, authenticator app). Reduces IT support costs significantly.",
+        "relatedTopics": [
+          "SSPR",
+          "password-management",
+          "Entra-ID"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe SSPR",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-025",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Microsoft Defender for Cloud primarily used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing Microsoft 365 email and calendar",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Providing security posture management and threat protection for cloud workloads",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Creating virtual networks in Azure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Managing user licenses",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Defender for Cloud (formerly Azure Security Center + Azure Defender) provides Cloud Security Posture Management (CSPM) and Cloud Workload Protection (CWP) for Azure, hybrid, and multi-cloud environments.",
+        "incorrect": "Email/calendar = Microsoft 365. VNet creation = Azure Networking. License management = Microsoft 365 admin center.",
+        "examTip": "Defender for Cloud = CSPM + CWP. Secure Score shows security posture. Recommendations show what to improve.",
+        "relatedTopics": [
+          "Defender-for-Cloud",
+          "CSPM",
+          "security-posture"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Cloud",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-026",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft Sentinel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An endpoint antivirus solution",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A cloud-native SIEM and SOAR solution",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A web application firewall",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A network performance monitor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Sentinel is a cloud-native Security Information and Event Management (SIEM) and Security Orchestration, Automation, and Response (SOAR) solution that collects data at scale, detects threats, and enables automated response.",
+        "incorrect": "Endpoint antivirus = Defender Antivirus. WAF = Azure WAF. Network monitoring = Azure Monitor / Network Watcher.",
+        "examTip": "Sentinel = cloud-native SIEM + SOAR. Collects logs, runs analytics rules, triggers playbooks (Azure Logic Apps) for automated response.",
+        "relatedTopics": [
+          "Sentinel",
+          "SIEM",
+          "SOAR",
+          "threat-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft Sentinel",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-027",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft Defender product protects endpoints such as laptops and desktops from malware and advanced threats?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Defender for Identity",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Defender for Endpoint",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Defender for Cloud Apps",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft Defender for Office 365",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Defender for Endpoint provides endpoint detection and response (EDR), antivirus, attack surface reduction, and threat intelligence for devices.",
+        "incorrect": "Defender for Identity = AD threat detection. Defender for Cloud Apps = SaaS security. Defender for Office 365 = email/collaboration security.",
+        "examTip": "Microsoft Defender XDR suite: Endpoint (devices), Identity (AD), Office 365 (email), Cloud Apps (SaaS), Cloud (Azure workloads).",
+        "relatedTopics": [
+          "Defender-for-Endpoint",
+          "EDR",
+          "endpoint-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft Defender products",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-028",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Defender for Office 365 protect against?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Malware on physical servers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Phishing, malicious attachments, and unsafe links in email and collaboration tools",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Unauthorized access to Azure virtual machines",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data loss from USB drives",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Office 365 protects against email-based threats including phishing, malicious attachments (Safe Attachments), and dangerous links (Safe Links) in Exchange Online, Teams, SharePoint, and OneDrive.",
+        "incorrect": "Physical server malware = Defender for Endpoint. VM access = Defender for Cloud. USB DLP = Microsoft Purview DLP.",
+        "examTip": "Defender for Office 365 key features: Safe Links, Safe Attachments, Anti-phishing, Attack Simulator.",
+        "relatedTopics": [
+          "Defender-for-Office-365",
+          "email-security",
+          "phishing-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Office 365",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-029",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company notices unusual sign-in activity suggesting compromised Active Directory accounts. Their environment is hybrid (on-premises AD + Azure).",
+      "questionText": "Which Microsoft security solution is BEST suited to detect and investigate compromised AD identities and lateral movement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Defender for Endpoint",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Defender for Identity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Sentinel",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft Defender for Cloud Apps",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Identity monitors on-premises Active Directory signals (LDAP, Kerberos, NTLM) to detect compromised accounts, lateral movement, and privilege escalation.",
+        "incorrect": "Defender for Endpoint focuses on device threats. Sentinel aggregates all signals (including Defender for Identity). Defender for Cloud Apps monitors SaaS usage.",
+        "examTip": "Defender for Identity = on-premises AD protection. It detects: pass-the-hash, Golden Ticket, reconnaissance, lateral movement.",
+        "relatedTopics": [
+          "Defender-for-Identity",
+          "Active-Directory",
+          "threat-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Identity",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-030",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft Defender for Cloud Apps primarily designed to protect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure virtual machines",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "On-premises file servers",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "SaaS application usage â€” shadow IT discovery, data protection, and threat detection",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Network perimeter traffic",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Cloud Apps (formerly MCAS) is a Cloud Access Security Broker (CASB) that provides visibility into SaaS app usage, detects shadow IT, enforces data loss prevention, and detects threats in cloud apps.",
+        "incorrect": "VMs = Defender for Cloud. File servers = Defender for Identity/Endpoint. Network perimeter = Azure Firewall.",
+        "examTip": "Defender for Cloud Apps = CASB. Key capabilities: Cloud Discovery (shadow IT), App Control, DLP, threat analytics.",
+        "relatedTopics": [
+          "Defender-for-Cloud-Apps",
+          "CASB",
+          "shadow-IT"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Cloud Apps",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-031",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Azure Firewall?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A physical firewall appliance for Azure datacenters",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A managed cloud-native network security service that protects Azure Virtual Network resources",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An endpoint protection solution for Azure VMs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A web filtering tool for Microsoft 365",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Firewall is a managed, stateful, cloud-native network security service that protects Azure Virtual Network resources with built-in high availability and unrestricted cloud scalability.",
+        "incorrect": "It's cloud-native, not physical. Endpoint protection = Defender for Endpoint. Web filtering = Defender for Office 365 / Entra Internet Access.",
+        "examTip": "Azure Firewall = Layer 3-7 network protection. Azure DDoS = volume protection. NSGs = basic Layer 3-4 subnet filtering.",
+        "relatedTopics": [
+          "Azure-Firewall",
+          "network-security",
+          "Azure"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure network security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-032",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of Azure DDoS Protection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To block unauthorized users from accessing Azure portals",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To detect and mitigate volumetric network attacks against Azure resources",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt data stored in Azure Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage firewall rules for virtual networks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure DDoS Protection defends against Distributed Denial of Service attacks that flood Azure resources with traffic, automatically absorbing and mitigating attacks.",
+        "incorrect": "User access = Entra ID/Conditional Access. Storage encryption = Azure Storage encryption. Firewall rules = Azure Firewall/NSGs.",
+        "examTip": "Azure DDoS tiers: Basic (free, platform-level) and Network Protection (enhanced, per-VNet). Network Protection includes cost protection and rapid response.",
+        "relatedTopics": [
+          "DDoS-Protection",
+          "network-security",
+          "Azure"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure network security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-033",
+      "type": "yes-no-statements",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Microsoft security solutions.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Microsoft Sentinel can ingest data from non-Microsoft security tools.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Microsoft Defender for Cloud only protects Azure workloads.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure Network Security Groups (NSGs) can filter inbound and outbound traffic to subnets.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Microsoft Defender XDR requires a separate SIEM to correlate alerts.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Sentinel ingests data from any source via connectors. Defender for Cloud protects Azure, AWS, and GCP (multi-cloud). NSGs filter subnet traffic. Defender XDR has built-in correlation across its products.",
+        "incorrect": "Defender for Cloud is multi-cloud. Defender XDR correlates signals natively.",
+        "examTip": "Sentinel = open SIEM. Defender XDR = integrated XDR. Both can work together for comprehensive coverage.",
+        "relatedTopics": [
+          "Sentinel",
+          "Defender-for-Cloud",
+          "NSG",
+          "Defender-XDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft security solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-034",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Secure Score measure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The performance speed of Azure resources",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An organization's security posture based on recommended security actions taken",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The number of active security incidents",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The compliance status against specific regulations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Secure Score is a measurement of an organization's security posture â€” higher scores indicate more recommended security actions have been implemented. It provides improvement recommendations.",
+        "incorrect": "Performance = Azure Monitor. Active incidents = Defender XDR incidents queue. Compliance = Compliance Manager/Compliance Score.",
+        "examTip": "Secure Score is in Microsoft Defender XDR and Defender for Cloud. Higher = better security posture. Each improvement action has a point value.",
+        "relatedTopics": [
+          "Secure-Score",
+          "security-posture",
+          "Defender-XDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Secure Score",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-035",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A security analyst needs to investigate a suspicious sign-in that triggered multiple alerts across Defender for Endpoint, Defender for Identity, and Defender for Office 365.",
+      "questionText": "Which Microsoft solution automatically correlates these alerts into a single incident for investigation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Sentinel",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Defender XDR",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Defender for Cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Monitor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Defender XDR (Extended Detection and Response) automatically correlates alerts from across the Defender product suite into a single incident, providing a unified attack story.",
+        "incorrect": "Sentinel can also correlate but across all sources. Defender for Cloud focuses on workload security. Azure Monitor is for performance.",
+        "examTip": "Defender XDR = automatic cross-product correlation. One incident = multiple alerts from different Defender products stitched together.",
+        "relatedTopics": [
+          "Defender-XDR",
+          "incident-correlation",
+          "XDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender XDR",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-036",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of Azure Key Vault?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To manage user login credentials for Azure portals",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To securely store and manage secrets, keys, and certificates used by applications",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To provide network access control for Azure subscriptions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To back up Azure virtual machines",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Key Vault provides a secure, centralized store for secrets (passwords, API keys), encryption keys, and certificates used by applications and services.",
+        "incorrect": "User credentials = Entra ID. Network access = NSGs/Azure Firewall. VM backup = Azure Backup.",
+        "examTip": "Never hardcode secrets in application code. Use Key Vault with managed identities to access secrets without storing credentials anywhere.",
+        "relatedTopics": [
+          "Key-Vault",
+          "secrets-management",
+          "key-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure Key Vault",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-037",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a Network Security Group (NSG) in Azure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A cloud-based identity provider",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A set of security rules that filter inbound and outbound network traffic to Azure resources",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A tool for managing security compliance reports",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A machine learning model that detects threats",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "NSGs contain security rules that allow or deny inbound and outbound network traffic based on source/destination IP, port, and protocol. They can be applied to subnets or network interfaces.",
+        "incorrect": "Identity = Entra ID. Compliance reports = Compliance Manager. Threat detection = Defender products / Sentinel.",
+        "examTip": "NSG rules have priority (100-4096, lower = higher priority) and a default deny-all rule at priority 65500. Applied to subnet or NIC.",
+        "relatedTopics": [
+          "NSG",
+          "network-security",
+          "Azure-networking"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure network security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-038",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft solution provides automated threat response by running playbooks when alerts are triggered in Microsoft Sentinel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure Policy",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Logic Apps (Sentinel Playbooks)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Purview",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Blueprints",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sentinel uses Azure Logic Apps as playbooks for automated responses â€” when an alert fires, a playbook can automatically block an IP, disable a user, or send a notification.",
+        "incorrect": "Azure Policy enforces resource configurations. Purview handles data governance. Blueprints deploy environments.",
+        "examTip": "Sentinel SOAR = Logic Apps playbooks. Playbooks = SOAR automation. Can integrate with Teams, ServiceNow, and any REST API.",
+        "relatedTopics": [
+          "Sentinel",
+          "SOAR",
+          "Logic-Apps",
+          "automation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Sentinel capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-039",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is threat intelligence in the context of Microsoft Sentinel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A database of all Azure user accounts",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Information about known threats, indicators of compromise, and attacker tactics used to improve detection",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A list of Azure service outages",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An inventory of Azure subscriptions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Threat intelligence (TI) provides data about known malicious IPs, domains, file hashes, and attacker TTPs that Sentinel uses to match against incoming logs for detection.",
+        "incorrect": "User accounts = Entra ID. Service outages = Azure Service Health. Subscription inventory = Azure Cost Management.",
+        "examTip": "Sentinel ingests TI from Microsoft Threat Intelligence, MISP, and TAXII feeds. Matched indicators generate alerts automatically.",
+        "relatedTopics": [
+          "threat-intelligence",
+          "Sentinel",
+          "IOCs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Sentinel capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-040",
+      "type": "ordering",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the Microsoft Defender XDR incident response steps in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Alerts from Defender products are generated",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Alerts are automatically correlated into an incident",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Analyst investigates the incident timeline and entities",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Automated remediation or manual response actions are taken",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Incident is closed and lessons learned are documented",
+          "correctPosition": 5
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Alerts â†’ Correlation â†’ Investigation â†’ Remediation â†’ Closure is the standard XDR incident response flow.",
+        "incorrect": "Correlation happens automatically before analyst investigation. Remediation follows investigation.",
+        "examTip": "Defender XDR auto-correlates and can auto-remediate low-confidence threats. Analysts handle complex incidents.",
+        "relatedTopics": [
+          "Defender-XDR",
+          "incident-response",
+          "SOAR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender XDR",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-041",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the Microsoft Purview compliance portal used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing Azure virtual machine configurations",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Managing data governance, compliance, and risk across Microsoft 365 and Azure",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Monitoring network performance",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Creating and managing Azure subscriptions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Purview compliance portal is the unified platform for managing compliance, data governance, information protection, and risk management across Microsoft 365 services.",
+        "incorrect": "VM configuration = Azure Portal. Network monitoring = Azure Monitor. Subscriptions = Azure Portal.",
+        "examTip": "Purview umbrella covers: Compliance Manager, Information Protection, Data Loss Prevention, Insider Risk, eDiscovery, Audit.",
+        "relatedTopics": [
+          "Purview",
+          "compliance",
+          "data-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft Purview",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-042",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Compliance Manager help organizations do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deploy Azure resources in compliance with cost budgets",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Assess, track, and improve their compliance posture against regulatory standards",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Monitor user activity for insider threats",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Classify and label sensitive data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Compliance Manager provides a Compliance Score, pre-built assessments for regulations (GDPR, ISO 27001, HIPAA), and improvement actions to help organizations meet compliance requirements.",
+        "incorrect": "Cost budgets = Azure Cost Management. Insider threats = Purview Insider Risk Management. Data classification = Purview Information Protection.",
+        "examTip": "Compliance Manager â‰  Secure Score. Compliance Score = regulatory compliance. Secure Score = security best practices.",
+        "relatedTopics": [
+          "Compliance-Manager",
+          "compliance-score",
+          "regulatory-compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Compliance Manager",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-043",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft Purview Information Protection used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Protecting Azure virtual networks from external attacks",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Classifying and protecting sensitive data through labels and encryption",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Monitoring user sign-in activity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Detecting phishing emails",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Purview Information Protection enables organizations to discover, classify, label, and protect sensitive data (like PII, financial data) with sensitivity labels that apply encryption, watermarks, and access restrictions.",
+        "incorrect": "Network protection = Azure Firewall/NSGs. Sign-in monitoring = Entra ID/Sentinel. Phishing = Defender for Office 365.",
+        "examTip": "Sensitivity labels: Public, General, Confidential, Highly Confidential. Labels persist with the document wherever it goes.",
+        "relatedTopics": [
+          "Information-Protection",
+          "sensitivity-labels",
+          "data-classification"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Information Protection",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-044",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Purview Data Loss Prevention (DLP) do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Backs up data to prevent accidental loss",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Detects and prevents sharing of sensitive information outside the organization",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Recovers deleted emails",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encrypts all data in Azure Storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DLP policies detect sensitive information (credit card numbers, SSNs, health records) in emails, documents, and chats, and prevent it from being shared externally or with unauthorized parties.",
+        "incorrect": "Backup = Azure Backup. Email recovery = Exchange retention policies. Storage encryption = Azure Storage service encryption.",
+        "examTip": "DLP works across Exchange, SharePoint, OneDrive, Teams, and endpoints. Policies match sensitive info types and take actions (block, warn, notify).",
+        "relatedTopics": [
+          "DLP",
+          "data-loss-prevention",
+          "Purview"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe DLP",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-045",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company needs to hold specific employee emails for legal proceedings without the users being aware. The legal team must be able to search and export this content.",
+      "questionText": "Which Microsoft Purview feature BEST supports this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sensitivity labels",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "eDiscovery and Legal Hold",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Data Loss Prevention",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Insider Risk Management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Purview eDiscovery with Legal Hold preserves content (emails, Teams chats, documents) from deletion for legal proceedings and allows authorized personnel to search and export it.",
+        "incorrect": "Sensitivity labels protect data in use. DLP prevents external sharing. Insider Risk detects risky behavior â€” none of these handle legal holds.",
+        "examTip": "eDiscovery workflow: Create case â†’ Add custodians â†’ Place on hold â†’ Search content â†’ Review â†’ Export.",
+        "relatedTopics": [
+          "eDiscovery",
+          "legal-hold",
+          "Purview",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe eDiscovery",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-046",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft Purview Insider Risk Management designed to detect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "External hacking attempts on Azure resources",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Risky or malicious activity by users within the organization",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Compliance gaps against external regulations",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Phishing emails targeting employees",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Insider Risk Management uses ML to detect potentially risky user behavior like mass file downloads, IP theft, policy violations, and data leakage by employees or contractors.",
+        "incorrect": "External hacking = Defender for Cloud/Sentinel. Regulatory compliance = Compliance Manager. Phishing = Defender for Office 365.",
+        "examTip": "Insider Risk Management uses signals from Microsoft 365 activity. Privacy-by-design: names are anonymized by default until investigation is escalated.",
+        "relatedTopics": [
+          "Insider-Risk",
+          "Purview",
+          "data-leakage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Insider Risk Management",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-047",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What are Microsoft Purview retention policies used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To retain employees for specific project durations",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To ensure content is kept for a required period and deleted after that period expires",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To retain Azure resource configurations",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To keep user passwords active for set periods",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Retention policies in Microsoft Purview ensure that content (emails, documents, Teams messages) is kept for the required minimum period for compliance and deleted when it's no longer needed.",
+        "incorrect": "This is about data retention â€” not HR, infrastructure, or passwords.",
+        "examTip": "Retention label vs. policy: Label = apply to specific content. Policy = apply broadly to locations (Exchange, SharePoint, OneDrive, Teams).",
+        "relatedTopics": [
+          "retention-policies",
+          "Purview",
+          "compliance",
+          "data-lifecycle"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe retention policies",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-048",
+      "type": "yes-no-statements",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Microsoft Purview compliance solutions.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Sensitivity labels can be applied to emails, Office documents, and Teams messages.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Compliance Manager automatically implements remediation actions on your behalf.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Microsoft Purview Audit logs user and admin activity across Microsoft 365 services.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "DLP policies can only be applied to emails, not to Teams chats.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Sensitivity labels apply to many content types. Purview Audit logs activity. Compliance Manager provides guidance but admins take action. DLP covers Teams, SharePoint, OneDrive, Exchange, and endpoints.",
+        "incorrect": "Compliance Manager doesn't auto-remediate. DLP covers Teams too.",
+        "examTip": "Purview Audit has two tiers: Audit (Standard) and Audit (Premium) with longer retention and more events.",
+        "relatedTopics": [
+          "Purview",
+          "sensitivity-labels",
+          "DLP",
+          "audit"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-049",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which Microsoft Purview feature allows organizations to understand, manage, and protect sensitive data across their entire data estate including multi-cloud and on-premises?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Compliance Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Purview Data Map",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "eDiscovery",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Insider Risk Management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Purview Data Map scans and catalogs data assets across Azure, AWS, on-premises, and SaaS to create a unified map of where sensitive data lives â€” enabling data governance at scale.",
+        "incorrect": "Compliance Manager handles regulatory compliance. eDiscovery is for legal holds/searches. Insider Risk focuses on user behavior.",
+        "examTip": "Purview Data Map = unified data catalog for governance. Scans data sources, classifies data, tracks lineage, and provides sensitivity insights.",
+        "relatedTopics": [
+          "Purview-Data-Map",
+          "data-governance",
+          "data-catalog"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview data governance",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-050",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of Microsoft Purview Communication Compliance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To block all external email communications",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To detect policy violations in internal and external communications like harassment or sensitive data sharing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To manage email routing rules",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To archive all employee communications",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Communication Compliance uses ML to detect communications that match policies for harassment, inappropriate content, regulatory violations, or sensitive data in Teams, Exchange, and third-party platforms.",
+        "incorrect": "Blocking external email = Exchange transport rules. Email routing = Exchange. Archiving = retention policies.",
+        "examTip": "Communication Compliance is used by regulated industries (finance, healthcare) to meet compliance requirements for monitoring employee communications.",
+        "relatedTopics": [
+          "Communication-Compliance",
+          "Purview",
+          "regulatory-compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-051",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which type of attack involves an attacker positioning themselves between two communicating parties to intercept or modify data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Denial of Service",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Man-in-the-Middle (MitM)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SQL Injection",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Cross-Site Scripting",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A Man-in-the-Middle attack intercepts communications between two parties, allowing the attacker to eavesdrop on or modify data in transit.",
+        "incorrect": "DoS = availability attack. SQL injection = database attack. XSS = web application attack.",
+        "examTip": "MitM defense: use HTTPS/TLS, certificate pinning, and mutual authentication to prevent interception.",
+        "relatedTopics": [
+          "MitM",
+          "network-attacks",
+          "encryption"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe common threats",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-052",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of a security audit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To install new security software on all systems",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To systematically evaluate security controls and identify gaps against standards",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To train employees on cybersecurity awareness",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To back up all organizational data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A security audit evaluates existing security controls, processes, and policies against defined standards or regulations to identify gaps and areas for improvement.",
+        "incorrect": "Software installation, training, and backups are different activities.",
+        "examTip": "Security audit = assess controls. Vulnerability assessment = find technical weaknesses. Penetration test = exploit vulnerabilities.",
+        "relatedTopics": [
+          "security-audit",
+          "compliance",
+          "controls"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-053",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the role of a Security Operations Center (SOC)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To develop new software applications",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To centrally monitor, detect, investigate, and respond to security incidents",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To manage employee HR records",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To configure network hardware devices",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A SOC is a centralized team and facility that continuously monitors security tools and data to detect, analyze, and respond to cybersecurity threats and incidents.",
+        "incorrect": "Software development = dev team. HR = HR department. Network config = network/infrastructure team.",
+        "examTip": "SOC tools: SIEM (detect), SOAR (respond), EDR (endpoint), Threat Intel feeds. Microsoft Sentinel supports all SOC functions.",
+        "relatedTopics": [
+          "SOC",
+          "incident-response",
+          "threat-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security operations",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-054",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between Microsoft Entra ID Free and Microsoft Entra ID P2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Entra ID Free includes PIM and Identity Protection; P2 does not",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Entra ID P2 adds Identity Protection and Privileged Identity Management to Free tier features",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Entra ID P2 only supports on-premises Active Directory",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are identical in functionality",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Entra ID P2 includes all Free and P1 features plus Identity Protection (risk-based Conditional Access) and Privileged Identity Management (JIT access).",
+        "incorrect": "PIM and Identity Protection are P2-only features. Entra ID is cloud-native regardless of tier.",
+        "examTip": "Entra ID tiers: Free (basic SSO) â†’ P1 (Conditional Access, dynamic groups) â†’ P2 (adds Identity Protection + PIM).",
+        "relatedTopics": [
+          "Entra-ID",
+          "licensing",
+          "PIM",
+          "Identity-Protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Entra ID editions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-055",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company wants to allow external partner employees to collaborate in Microsoft Teams and SharePoint without creating new accounts in their tenant.",
+      "questionText": "Which Microsoft Entra ID feature enables this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Entra ID B2C",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Entra ID B2B Collaboration",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Entra ID Domain Services",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Entra External ID with customer accounts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Entra ID B2B allows external partners to access your resources using their own organizational credentials â€” a guest account is created in your tenant but they authenticate with their own IdP.",
+        "incorrect": "B2C is for customer-facing apps. Domain Services provides AD DS in the cloud. External ID with customer accounts = B2C scenario.",
+        "examTip": "B2B = partners/employees from other orgs. B2C = customers/consumers accessing your public app.",
+        "relatedTopics": [
+          "B2B",
+          "external-identities",
+          "Entra-ID"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe external identities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-056",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft Entra ID Entitlement Management used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing Azure subscription billing",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Managing access packages that bundle resources for groups of users to request",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting compromised sign-in attempts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Enforcing password complexity requirements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Entitlement Management allows creation of access packages (bundles of resources: groups, apps, SharePoint sites) that users can request, with approval workflows and automatic expiry.",
+        "incorrect": "Billing = Azure Cost Management. Compromised sign-ins = Identity Protection. Password policies = Entra ID Password Protection.",
+        "examTip": "Entitlement Management = access packages. Good for onboarding partners or new employees who need access to multiple resources at once.",
+        "relatedTopics": [
+          "Entitlement-Management",
+          "access-packages",
+          "identity-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe identity governance",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-057",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does the Secure Score in Microsoft Defender for Cloud represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number of active security incidents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A percentage showing how many security recommendations have been addressed",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The total cost of security tools deployed",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The compliance score against GDPR",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Cloud's Secure Score measures what percentage of security recommendations have been implemented. A higher score = better security posture.",
+        "incorrect": "Active incidents = incidents queue. Security costs = Azure Cost Management. GDPR compliance = Compliance Manager.",
+        "examTip": "Improve Secure Score by addressing high-impact recommendations. Each resource group gets its own score.",
+        "relatedTopics": [
+          "Secure-Score",
+          "Defender-for-Cloud",
+          "CSPM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Cloud",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-058",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure service provides a Web Application Firewall (WAF) to protect web applications from common exploits?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Azure VPN Gateway",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Azure Application Gateway with WAF",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Virtual Network",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Load Balancer",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Application Gateway includes a WAF that protects web applications against common web exploits like SQL injection, XSS, and OWASP Top 10 vulnerabilities.",
+        "incorrect": "VPN Gateway provides encrypted connectivity. VNet is the network fabric. Load Balancer distributes traffic without inspection.",
+        "examTip": "Azure WAF runs on Application Gateway or Azure Front Door. It uses OWASP Core Rule Set (CRS) to block common attacks.",
+        "relatedTopics": [
+          "WAF",
+          "Application-Gateway",
+          "web-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure network security",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-059",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft Defender product monitors behavior of users and entities to detect advanced attacks using machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Defender Antivirus",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Defender for Endpoint with UEBA",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Sentinel with User and Entity Behavior Analytics (UEBA)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Microsoft Defender for Office 365",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Sentinel's UEBA feature uses machine learning to establish behavioral baselines for users and entities, detecting anomalies that may indicate compromised accounts or insider threats.",
+        "incorrect": "Defender Antivirus = signature-based malware. Defender for Endpoint has some behavioral analytics but UEBA is a Sentinel feature. Defender for Office 365 = email threats.",
+        "examTip": "UEBA in Sentinel: establishes baselines â†’ detects deviations â†’ surfaces anomalies as insights or alerts.",
+        "relatedTopics": [
+          "UEBA",
+          "Sentinel",
+          "behavioral-analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Sentinel capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-060",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An organization wants to protect sensitive API keys and database connection strings used by their Azure App Service, without embedding them in application code.",
+      "questionText": "What is the recommended approach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Store the secrets in environment variables in the application code",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Use Azure Key Vault with a managed identity assigned to the App Service",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Encrypt the secrets and store them in Azure Blob Storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Store the secrets in an Azure SQL database table",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Key Vault with a managed identity allows the App Service to retrieve secrets at runtime without storing credentials anywhere. The managed identity authenticates to Key Vault without any hardcoded keys.",
+        "incorrect": "Environment variables in code can be exposed. Blob Storage is not a secrets manager. SQL tables require credentials to access.",
+        "examTip": "Managed identities eliminate the need for credentials in code. App â†’ Managed Identity â†’ Key Vault â†’ Secret. No passwords stored anywhere.",
+        "relatedTopics": [
+          "Key-Vault",
+          "managed-identities",
+          "secrets-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure security capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-061",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Entra ID Protection's 'risky users' report show?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Users who have not logged in for 30 days",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Users whose credentials may be compromised based on detected risk signals",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Users with the most admin privileges",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Users who failed the most MFA prompts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The risky users report shows users with detected risk events such as leaked credentials, sign-ins from anonymous IPs, impossible travel, or unfamiliar sign-in properties.",
+        "incorrect": "Inactive users = Entra ID activity reports. Admin users = PIM. MFA failures = Entra ID sign-in logs.",
+        "examTip": "Risky users can be automatically required to change their password or complete MFA via Conditional Access risk-based policies.",
+        "relatedTopics": [
+          "Identity-Protection",
+          "risky-users",
+          "risk-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Identity Protection",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-062",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does the term 'attack vector' mean in cybersecurity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The severity of a cyberattack",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The path or method an attacker uses to gain unauthorized access",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The type of data stolen in a breach",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The geographic origin of a cyberattack",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An attack vector is the specific path or method used by an attacker to gain entry â€” examples include phishing emails, unpatched vulnerabilities, weak passwords, and compromised third-party software.",
+        "incorrect": "Severity = impact. Stolen data = data breach consequences. Geographic origin is threat attribution.",
+        "examTip": "Common attack vectors: phishing, credential theft, unpatched software, misconfigured services, supply chain, insider threats.",
+        "relatedTopics": [
+          "attack-vector",
+          "threat",
+          "vulnerabilities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-063",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Where can organizations find documentation about how Microsoft handles and protects their data in cloud services?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Security Center",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Service Trust Portal",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Azure Resource Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft Defender XDR",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Microsoft Service Trust Portal provides access to audit reports, compliance guides, trust documents, and information about Microsoft's data protection practices and certifications.",
+        "incorrect": "Security Center = security posture. Resource Manager = Azure resource management. Defender XDR = threat detection.",
+        "examTip": "Service Trust Portal = transparency documents. Access SOC reports, ISO certifications, penetration test results, and compliance documentation there.",
+        "relatedTopics": [
+          "Service-Trust-Portal",
+          "compliance",
+          "transparency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe trust and privacy",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-064",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft's commitment to data privacy for customers using its cloud services?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft can use customer data to train its AI models without restriction",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft processes customer data only according to the customer's instructions and applicable law",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft shares customer data with government agencies by default",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Customers have no control over how Microsoft uses their data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft's privacy principles commit to processing customer data only as directed by the customer and in compliance with applicable laws. Customers own their data.",
+        "incorrect": "Microsoft does not use customer data to train AI without consent, does not share with governments by default, and customers retain data ownership and control.",
+        "examTip": "Microsoft Privacy Principles: Control, Transparency, Security, Strong legal protections, No content-based targeting, Benefits to customer.",
+        "relatedTopics": [
+          "privacy",
+          "data-ownership",
+          "Microsoft-Privacy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft privacy",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-065",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary purpose of Microsoft Defender Vulnerability Management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To manage Azure resource deployments",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To continuously discover and prioritize vulnerabilities across endpoints",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To detect phishing emails",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To enforce compliance policies",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender Vulnerability Management provides asset discovery, vulnerability assessment, prioritized recommendations, and remediation tracking for endpoints without requiring additional scanning agents.",
+        "incorrect": "Resource deployment = Azure Resource Manager. Phishing = Defender for Office 365. Compliance = Purview/Azure Policy.",
+        "examTip": "Defender Vulnerability Management integrates with Defender for Endpoint â€” no separate scanner needed. Prioritizes by exposure + threat intelligence.",
+        "relatedTopics": [
+          "Vulnerability-Management",
+          "Defender-for-Endpoint",
+          "CVSS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Endpoint",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-066",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is an Indicator of Compromise (IoC)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A security policy that defines access rights",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Evidence that a security breach or attack has occurred",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A hardware device that monitors network traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A user identity in Microsoft Entra ID",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An IoC is a piece of evidence (malicious IP, file hash, domain name, registry key) that indicates a system has been compromised or attacked, used by security tools to detect threats.",
+        "incorrect": "Access policies = Conditional Access/RBAC. Hardware monitoring = network taps. Entra ID user = identity object.",
+        "examTip": "Common IoCs: malicious file hashes, C2 IP addresses, suspicious domains, unusual registry keys. Used in threat intelligence feeds.",
+        "relatedTopics": [
+          "IoC",
+          "threat-intelligence",
+          "incident-response"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-067",
+      "type": "dropdown-select",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each Microsoft security product to its primary function.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Protects endpoints from malware and advanced threats",
+          "options": [
+            "Defender for Endpoint",
+            "Defender for Identity",
+            "Defender for Office 365",
+            "Sentinel"
+          ],
+          "correctAnswer": "Defender for Endpoint"
+        },
+        {
+          "id": "d2",
+          "prompt": "Cloud-native SIEM that aggregates and correlates logs from all sources",
+          "options": [
+            "Defender for Endpoint",
+            "Defender for Identity",
+            "Defender for Office 365",
+            "Sentinel"
+          ],
+          "correctAnswer": "Sentinel"
+        },
+        {
+          "id": "d3",
+          "prompt": "Protects against phishing and malicious email attachments",
+          "options": [
+            "Defender for Endpoint",
+            "Defender for Identity",
+            "Defender for Office 365",
+            "Sentinel"
+          ],
+          "correctAnswer": "Defender for Office 365"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Defender for Endpoint = devices. Sentinel = cloud SIEM. Defender for Office 365 = email/collaboration security.",
+        "incorrect": "Each Defender product has a specific domain. Sentinel is the overarching SIEM that aggregates signals from all of them.",
+        "examTip": "Know which Defender product covers which domain â€” common exam topic.",
+        "relatedTopics": [
+          "Defender-products",
+          "security-solutions",
+          "XDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft security products",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-068",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a managed identity in Azure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A user account managed by the IT department",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An automatically managed identity for Azure services to authenticate to other Azure services without credentials",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An identity used for external B2B partners",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A privileged admin account in Microsoft Entra ID",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A managed identity gives an Azure resource (VM, App Service, Function) an identity in Entra ID so it can authenticate to other Azure services (like Key Vault) without storing credentials.",
+        "incorrect": "Managed identities are for Azure resources, not human users, B2B partners, or admin accounts.",
+        "examTip": "Two types: System-assigned (tied to resource lifecycle) and User-assigned (independent, shareable). Use with Key Vault for credential-free secret access.",
+        "relatedTopics": [
+          "managed-identities",
+          "authentication",
+          "zero-secrets"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe managed identities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-069",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the difference between the Microsoft Compliance Score and Microsoft Secure Score?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They measure the same things with different scales",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Compliance Score measures regulatory compliance posture; Secure Score measures security best practices posture",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Secure Score measures compliance; Compliance Score measures security",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Compliance Score only covers GDPR; Secure Score covers all regulations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Compliance Score (in Compliance Manager) tracks progress against regulatory requirements. Secure Score (in Defender XDR/Defender for Cloud) tracks security configuration best practices.",
+        "incorrect": "They measure different things â€” one is regulatory, one is security hygiene.",
+        "examTip": "High Secure Score = good security practices. High Compliance Score = meeting regulatory requirements. Both are important but independent.",
+        "relatedTopics": [
+          "Compliance-Score",
+          "Secure-Score",
+          "compliance",
+          "security-posture"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe compliance and security scores",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-070",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure Bastion used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Encrypting Azure Storage data at rest",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Providing secure RDP and SSH access to Azure VMs without exposing public IP addresses",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Monitoring compliance against security policies",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Managing Azure subscription permissions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Bastion provides secure, browser-based RDP/SSH connectivity to Azure VMs directly through the Azure portal over TLS, without needing public IPs or open RDP/SSH ports on VMs.",
+        "incorrect": "Storage encryption = Azure Storage encryption. Compliance monitoring = Defender for Cloud. Permissions = Azure RBAC.",
+        "examTip": "Azure Bastion eliminates the need for a jump server. No public IP on VMs = smaller attack surface.",
+        "relatedTopics": [
+          "Azure-Bastion",
+          "secure-access",
+          "RDP",
+          "SSH"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure security capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-071",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What type of identity object in Microsoft Entra ID represents a non-human application or service?",
+      "options": [
+        {
+          "id": "A",
+          "text": "User account",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Service principal",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Guest account",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Security group",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A service principal is an identity for an application or service in Entra ID, allowing it to authenticate and access resources. Every app registration creates a service principal.",
+        "incorrect": "User accounts = humans. Guest accounts = external users. Security groups = collections of users/devices.",
+        "examTip": "App registration creates an app object (global). Service principal is the local instance in a specific tenant. Both have credentials (secrets or certificates).",
+        "relatedTopics": [
+          "service-principal",
+          "app-registration",
+          "Entra-ID"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe identity types",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-072",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of security information and event management (SIEM)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To replace endpoint antivirus protection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To collect and correlate security logs from multiple sources for threat detection and compliance",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To automatically patch vulnerable systems",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To manage user identities and access rights",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A SIEM aggregates logs from across the environment, correlates events to detect threats, generates alerts, and provides compliance reporting â€” all in one centralized platform.",
+        "incorrect": "Antivirus = endpoint protection. Patching = patch management tools. Identity = IAM solutions.",
+        "examTip": "Microsoft Sentinel is a cloud-native SIEM. Traditional SIEMs = Splunk, IBM QRadar. SIEM = detect. SOAR = respond.",
+        "relatedTopics": [
+          "SIEM",
+          "log-management",
+          "threat-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe SIEM",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-073",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Purview Audit provide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automated patching of security vulnerabilities",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A record of user and admin activities across Microsoft 365 for compliance and investigation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Real-time blocking of malicious emails",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Automated data classification",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Purview Audit captures and retains audit logs of user and admin activities (file access, email actions, configuration changes) across Microsoft 365 for security investigations and compliance.",
+        "incorrect": "Patching = patch management. Email blocking = Defender for Office 365. Data classification = Information Protection.",
+        "examTip": "Audit Standard = 90 days retention. Audit Premium = up to 1 year (or longer with add-ons). Premium also captures more event types.",
+        "relatedTopics": [
+          "Purview-Audit",
+          "audit-logs",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview Audit",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-074",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A security analyst wants to hunt for threats proactively in Microsoft Sentinel without waiting for alerts to fire.",
+      "questionText": "Which Sentinel feature enables this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Analytics rules",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Hunting queries",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Workbooks",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Playbooks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sentinel Hunting allows analysts to proactively search for threats using KQL queries across ingested data, looking for suspicious patterns before they trigger alerts.",
+        "incorrect": "Analytics rules = scheduled alert generation. Workbooks = dashboards/visualizations. Playbooks = automated responses.",
+        "examTip": "Threat hunting in Sentinel: run KQL hunting queries â†’ find suspicious activity â†’ bookmark findings â†’ convert to incidents for investigation.",
+        "relatedTopics": [
+          "threat-hunting",
+          "Sentinel",
+          "KQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Sentinel capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-075",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the benefit of using FIDO2 security keys as an authentication method?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They use SMS codes for verification",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "They provide phishing-resistant passwordless authentication using hardware",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They require internet connectivity to function",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are less secure than passwords",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "FIDO2 security keys (like YubiKey) use public key cryptography stored in hardware. They are phishing-resistant because the credential is tied to the specific origin domain.",
+        "incorrect": "FIDO2 does not use SMS. They work offline for the local challenge-response. They are significantly more secure than passwords.",
+        "examTip": "FIDO2 = strongest MFA. Phishing-resistant because you can't be tricked into using it on a fake site. Works with Windows, Android, iOS.",
+        "relatedTopics": [
+          "FIDO2",
+          "passwordless",
+          "phishing-resistant-MFA"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe passwordless authentication",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-076",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which term describes the practice of granting users only the access they need for their specific job function?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Defense in depth",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Least privilege",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Zero Trust",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Separation of duties",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Least privilege grants users the minimum access required to do their job â€” no more, no less. It limits the damage from compromised accounts or insider threats.",
+        "incorrect": "Defense in depth = layers. Zero Trust = never trust, always verify. SoD = divides duties to prevent fraud.",
+        "examTip": "Implement least privilege through RBAC. Review and remove excessive permissions regularly with Access Reviews.",
+        "relatedTopics": [
+          "least-privilege",
+          "access-control",
+          "RBAC"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-077",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft Purview feature helps organizations identify and remediate risky activities like mass data downloads or sending data to personal email?",
+      "options": [
+        {
+          "id": "A",
+          "text": "eDiscovery",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Insider Risk Management",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Compliance Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data Loss Prevention",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Insider Risk Management detects risky user behaviors (data theft, IP exfiltration, policy violations) using ML on Microsoft 365 activity signals, helping identify potential insider threats.",
+        "incorrect": "eDiscovery = legal holds. Compliance Manager = regulatory compliance. DLP = prevents data leaving the org, but Insider Risk Management detects the behavioral pattern.",
+        "examTip": "Insider Risk = detect suspicious behavior patterns. DLP = block specific sensitive data sharing. Both work together for data protection.",
+        "relatedTopics": [
+          "Insider-Risk",
+          "data-exfiltration",
+          "Purview"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Insider Risk Management",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-078",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does XDR stand for in Microsoft Defender XDR?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Extreme Data Recovery",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Extended Detection and Response",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "External Domain Routing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encrypted Data Repository",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "XDR (Extended Detection and Response) provides unified threat detection and response across multiple security layers â€” endpoints, email, identity, and cloud apps â€” breaking down siloed security data.",
+        "incorrect": "XDR is a security architecture concept, not data recovery, routing, or storage.",
+        "examTip": "XDR extends EDR (endpoint) to cover identity, email, cloud apps, and network. Microsoft Defender XDR = unified XDR across the Defender suite.",
+        "relatedTopics": [
+          "XDR",
+          "EDR",
+          "Defender-XDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender XDR",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-079",
+      "type": "yes-no-statements",
+      "topicId": "azure-ad",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Zero Trust principles in Microsoft's implementation.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Conditional Access is Microsoft's primary Zero Trust policy enforcement mechanism for identity.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Zero Trust means blocking all remote access to organizational resources.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Device compliance status can be used as a condition in Conditional Access policies.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Under Zero Trust, trusted users on the internal network bypass all security checks.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Conditional Access enforces Zero Trust for identity. Device compliance is a valid Conditional Access signal. Zero Trust enables remote access with continuous verification â€” it doesn't block it. Even internal users must be verified.",
+        "incorrect": "Zero Trust is about continuous verification, not blocking access or trusting internal users.",
+        "examTip": "Zero Trust â‰  no access. It means verified, least-privileged access with continuous monitoring.",
+        "relatedTopics": [
+          "Zero-Trust",
+          "Conditional-Access",
+          "device-compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Zero Trust",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-080",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the Microsoft Trust Center?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A security dashboard in the Azure portal",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A public-facing resource with information about Microsoft's security, privacy, and compliance practices",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A tool for managing Azure Active Directory tenants",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A threat intelligence platform",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Microsoft Trust Center is a public website providing information about Microsoft's security, privacy, and compliance practices, helping customers make informed decisions about Microsoft cloud services.",
+        "incorrect": "Azure security dashboard = Defender for Cloud. AD tenant management = Entra admin center. Threat intelligence = Microsoft Defender Threat Intelligence.",
+        "examTip": "Trust Center = public transparency. Service Trust Portal = detailed audit reports. Both are about building customer trust.",
+        "relatedTopics": [
+          "Trust-Center",
+          "transparency",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe trust and privacy",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-081",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the difference between symmetric and asymmetric encryption?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Symmetric uses two keys; asymmetric uses one key",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Symmetric uses one shared key; asymmetric uses a public/private key pair",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Symmetric is slower; asymmetric is faster",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are the same but use different algorithms",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Symmetric encryption uses a single shared key for both encryption and decryption. Asymmetric uses a key pair â€” public key encrypts, private key decrypts (or private key signs, public key verifies).",
+        "incorrect": "It's the opposite â€” symmetric (one key, fast) and asymmetric (two keys, slower but solves key distribution).",
+        "examTip": "Symmetric = AES (fast, used for bulk data). Asymmetric = RSA/ECC (slower, used for key exchange and signatures). TLS uses both.",
+        "relatedTopics": [
+          "symmetric-encryption",
+          "asymmetric-encryption",
+          "cryptography"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe encryption concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-082",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft Entra ID feature allows an organization to verify that a user's device meets security requirements before granting access?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Identity Protection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Device compliance via Intune + Conditional Access",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Privileged Identity Management",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Multi-Factor Authentication",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Intune enforces device compliance policies (encryption, patch level, antivirus). Conditional Access then uses the device compliance status as a condition to grant or block access.",
+        "incorrect": "Identity Protection = risky sign-ins. PIM = privileged access. MFA = identity verification, not device checking.",
+        "examTip": "Intune + Conditional Access = device-based Zero Trust. Non-compliant devices can be blocked even if the user's credentials are valid.",
+        "relatedTopics": [
+          "Intune",
+          "Conditional-Access",
+          "device-compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Conditional Access",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-083",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the role of connectors in Microsoft Sentinel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To create firewall rules for Azure resources",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To ingest data from various sources (Microsoft services, third-party products) into Sentinel",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To manage user access in Entra ID",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To run automated remediation actions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sentinel data connectors integrate with Microsoft services (Entra ID, Office 365, Defender products) and third-party sources (Cisco, Palo Alto, AWS) to ingest log data for analysis.",
+        "incorrect": "Firewall rules = Azure Firewall/NSGs. User access = Entra ID. Automated remediation = Playbooks (Logic Apps).",
+        "examTip": "Sentinel ingests data via connectors. More data = better detection. Built-in connectors for all Microsoft products, plus hundreds of third-party connectors.",
+        "relatedTopics": [
+          "Sentinel-connectors",
+          "data-ingestion",
+          "SIEM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Sentinel capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-084",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of sensitivity labels in Microsoft Purview Information Protection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To physically label printed documents with classification stamps",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To classify and protect digital content by applying encryption, access restrictions, and visual markings",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To label Azure resources for cost management",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To flag emails as spam",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sensitivity labels classify digital content (documents, emails) and enforce protection actions like encryption, header/footer/watermark, and access restrictions that travel with the content.",
+        "incorrect": "Labels are digital. Azure resource labels = tags (for cost management). Spam filtering = Defender for Office 365.",
+        "examTip": "Sensitivity labels persist with the file. Even if emailed or uploaded to personal storage, the label's encryption and restrictions remain.",
+        "relatedTopics": [
+          "sensitivity-labels",
+          "Information-Protection",
+          "data-classification"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Information Protection",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-085",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure Policy used for in the context of security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing user authentication policies",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Enforcing organizational standards and compliance on Azure resources",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Detecting malware on virtual machines",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Managing network routing rules",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Policy enforces organizational standards across Azure resources â€” it can audit, deny, or remediate resource configurations to ensure compliance with security policies (e.g., requiring encryption, specific regions, or approved VM sizes).",
+        "incorrect": "Authentication policies = Conditional Access/Entra ID. Malware detection = Defender for Endpoint/Cloud. Routing = User Defined Routes.",
+        "examTip": "Azure Policy = 'guardrails' for Azure resources. Works at management group, subscription, or resource group level. Can auto-remediate.",
+        "relatedTopics": [
+          "Azure-Policy",
+          "compliance",
+          "governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure governance",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-086",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does Entra ID Connect (formerly Azure AD Connect) do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Connects Azure VMs to on-premises networks via VPN",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Synchronizes on-premises Active Directory identities to Microsoft Entra ID",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Connects multiple Azure subscriptions together",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Provides direct database connectivity for Azure apps",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Entra ID Connect (formerly Azure AD Connect) synchronizes user accounts, groups, and credentials from on-premises Active Directory Domain Services to Microsoft Entra ID, enabling hybrid identity.",
+        "incorrect": "VPN = Azure VPN Gateway. Subscription linking = management groups. DB connectivity = Azure SQL connection strings.",
+        "examTip": "Hybrid identity: on-prem AD â†’ Entra Connect syncs â†’ Entra ID. Users log in once with their corporate credentials for both on-prem and cloud resources.",
+        "relatedTopics": [
+          "Entra-Connect",
+          "hybrid-identity",
+          "AD-sync"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe hybrid identity",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-087",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company is adopting a cloud-first strategy and wants to apply security policies consistently across cloud resources, on-premises servers, and devices worldwide.",
+      "questionText": "Which Microsoft security approach BEST enables this unified policy enforcement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Apply separate security policies for each environment independently",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft's unified security operations platform (Defender XDR + Sentinel + Purview)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Deploy multiple on-premises firewalls for each office",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Use separate SIEM tools for cloud and on-premises",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft's unified security operations platform combines Defender XDR (threat protection), Sentinel (SIEM/SOAR), and Purview (compliance/data) to provide centralized, consistent security across all environments.",
+        "incorrect": "Separate policies and tools create silos and gaps. On-premises firewalls don't cover cloud. Separate SIEMs reduce visibility.",
+        "examTip": "SC-900 theme: Microsoft's integrated security platform provides end-to-end coverage across identity, endpoints, data, apps, and infrastructure.",
+        "relatedTopics": [
+          "unified-security",
+          "Defender-XDR",
+          "Sentinel",
+          "Purview"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft security capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-088",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Microsoft Defender for Cloud's 'regulatory compliance' dashboard show?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number of active security incidents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "How Azure resources map to controls in specific compliance standards like ISO 27001, PCI DSS, and SOC 2",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "User sign-in compliance status",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure spending compliance against budget",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Cloud's regulatory compliance dashboard maps Azure resource configurations to compliance standard controls, showing which controls are passing and which have gaps.",
+        "incorrect": "Incidents = Defender XDR. User sign-ins = Entra ID. Budget = Azure Cost Management.",
+        "examTip": "Defender for Cloud supports many standards out of the box: Azure Security Benchmark, NIST SP 800-53, ISO 27001, PCI DSS, SOC TSP, and more.",
+        "relatedTopics": [
+          "Defender-for-Cloud",
+          "regulatory-compliance",
+          "CSPM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Cloud",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-089",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does the term 'data residency' mean in cloud computing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "How long data is retained before deletion",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The physical or geographic location where data is stored",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The process of encrypting data at rest",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The backup frequency for cloud data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data residency refers to the physical location (country or region) where data is stored. Many regulations (GDPR, local laws) require data to stay within specific geographic boundaries.",
+        "incorrect": "Data retention = how long. Encryption at rest = confidentiality control. Backup frequency = RPO/RTO planning.",
+        "examTip": "Microsoft allows customers to specify their data residency region when creating services. Paired regions keep backup data in the same geography.",
+        "relatedTopics": [
+          "data-residency",
+          "data-sovereignty",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe trust and privacy",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-090",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between Microsoft Defender for Cloud's free tier and paid (enhanced) workload protections?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The free tier provides no security features at all",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The free tier provides security recommendations; paid tier adds threat detection and advanced protection per workload type",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The paid tier only works on non-Azure environments",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are identical in features",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Defender for Cloud free tier (CSPM) provides security recommendations and Secure Score. Enhanced workload protections (paid) add threat detection, vulnerability assessments, and advanced protection for specific workload types (VMs, containers, databases, etc.).",
+        "incorrect": "Free tier is genuinely useful. Paid tiers work across Azure, AWS, and GCP. They are not identical.",
+        "examTip": "Free CSPM = posture management. Paid CWP = threat protection per resource type. Microsoft Defender for Servers, Containers, Databases, etc.",
+        "relatedTopics": [
+          "Defender-for-Cloud",
+          "CSPM",
+          "CWP",
+          "pricing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Defender for Cloud",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-091",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Microsoft Entra ID feature allows users to securely share and collaborate on resources with users outside their organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Privileged Identity Management",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Entra ID External Identities (B2B)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Conditional Access",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Identity Protection",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Entra External Identities (B2B) enables secure collaboration with external partners by inviting them as guests â€” they authenticate with their own credentials while you control what they can access.",
+        "incorrect": "PIM = privileged access. Conditional Access = policy enforcement. Identity Protection = risk detection. None of these are for external collaboration.",
+        "examTip": "B2B guest users appear in your tenant directory but authenticate at their home organization. You control their access via RBAC and Conditional Access.",
+        "relatedTopics": [
+          "B2B",
+          "external-identities",
+          "guest-access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe external identities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-092",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of security awareness training in an organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To replace technical security controls",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To educate employees to recognize and respond appropriately to security threats",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To certify employees as security professionals",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To enforce password complexity requirements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Security awareness training educates employees about threats like phishing, social engineering, and safe data handling â€” reducing the risk of human-error-related security incidents.",
+        "incorrect": "Training complements, not replaces, technical controls. It doesn't certify employees or enforce password policies.",
+        "examTip": "Microsoft Defender for Office 365 includes Attack Simulation Training â€” send fake phishing emails to test and train employees.",
+        "relatedTopics": [
+          "security-awareness",
+          "phishing",
+          "human-factor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe security concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-093",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of Microsoft Purview Records Management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing employee performance records",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Managing high-value business and regulatory records with immutable retention and disposition",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Tracking security incidents",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Managing Azure resource configurations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Records Management handles high-value content that must be retained as immutable records for legal, regulatory, or business purposes, with controlled disposition when the retention period ends.",
+        "incorrect": "HR records = HR systems. Security incidents = Sentinel/Defender XDR. Azure resources = Azure Resource Manager.",
+        "examTip": "Records Management vs. Retention Policies: Records = immutable (can't be edited/deleted during retention). Retention policies = can retain but allow editing.",
+        "relatedTopics": [
+          "Records-Management",
+          "Purview",
+          "immutable-records",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview compliance solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-094",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A security operations team wants to reduce alert fatigue by automatically closing low-fidelity alerts and escalating only high-confidence incidents to analysts.",
+      "questionText": "Which Microsoft Sentinel feature BEST addresses this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hunting queries",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Automation rules and playbooks",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Workbooks",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Threat intelligence feeds",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Automation rules in Sentinel can automatically triage, close, or escalate incidents based on conditions â€” reducing analyst workload by handling repetitive low-risk alerts automatically.",
+        "incorrect": "Hunting = proactive threat search. Workbooks = dashboards. TI feeds = detection improvement. Automation rules = incident triage automation.",
+        "examTip": "Sentinel automation: Automation rules (lightweight, no code) â†’ trigger Playbooks (Logic Apps, complex actions). Rules run first, then playbooks if triggered.",
+        "relatedTopics": [
+          "Sentinel-automation",
+          "SOAR",
+          "alert-fatigue"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Sentinel SOAR",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-095",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the role of Microsoft Purview in a multi-cloud environment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It only governs data within Microsoft 365 services",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It provides unified data governance across Microsoft 365, Azure, AWS, and on-premises sources",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It manages virtual machines across cloud providers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It replaces third-party security tools in non-Microsoft clouds",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Purview Data Map can scan and catalog data assets across Azure, AWS S3, on-premises SQL, SAP, and other sources, providing unified governance across the entire data estate.",
+        "incorrect": "Purview is not limited to Microsoft 365. It doesn't manage VMs or replace third-party security tools.",
+        "examTip": "Purview Data Map scans: Azure Data Lake, Azure SQL, Amazon S3, on-prem SQL Server, Power BI, and many more.",
+        "relatedTopics": [
+          "Purview",
+          "multi-cloud",
+          "data-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview data governance",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-096",
+      "type": "single-choice",
+      "topicId": "azure-ad",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure Role-Based Access Control (RBAC)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A method of encrypting Azure resources",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A system that controls who has access to Azure resources and what they can do with them",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A network filtering mechanism for Azure VNets",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A compliance framework for Azure",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure RBAC provides fine-grained access management for Azure resources by assigning roles (built-in or custom) to security principals (users, groups, service principals) at a specific scope (subscription, resource group, resource).",
+        "incorrect": "Encryption = Azure Storage/Disk encryption. Network filtering = NSGs/Firewall. Compliance = Defender for Cloud/Purview.",
+        "examTip": "Azure RBAC roles: Owner (full control), Contributor (create/manage, no access grants), Reader (view only). Applied at management group, sub, RG, or resource level.",
+        "relatedTopics": [
+          "Azure-RBAC",
+          "access-control",
+          "authorization"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure identity capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-097",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which type of malware replicates itself and spreads to other systems without user interaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Trojan horse",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Worm",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Adware",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Spyware",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A worm is self-replicating malware that spreads across networks without requiring user interaction â€” it exploits vulnerabilities to copy itself to other systems.",
+        "incorrect": "Trojans masquerade as legitimate software. Adware displays ads. Spyware collects information silently. None self-replicate automatically.",
+        "examTip": "Worm vs. Virus: Worm = self-propagating (no user action). Virus = requires host file and user action to spread.",
+        "relatedTopics": [
+          "worm",
+          "malware",
+          "threats"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe common threats",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-098",
+      "type": "single-choice",
+      "topicId": "security-solutions",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What Microsoft security tool provides visibility into sign-in logs, risky sign-ins, and audit logs for Microsoft Entra ID?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Sentinel",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft Entra ID Monitoring and Diagnostics",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Defender for Cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Azure Monitor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Entra ID Monitoring and Diagnostics provides sign-in logs, audit logs, and risky sign-in reports directly within the Entra admin center for identity activity visibility.",
+        "incorrect": "Sentinel ingests these logs for correlation but they originate in Entra ID. Defender for Cloud focuses on workloads. Azure Monitor = infrastructure metrics.",
+        "examTip": "Entra ID logs: Sign-in logs (who signed in when/where), Audit logs (what changes were made), Risky sign-ins (Identity Protection signals).",
+        "relatedTopics": [
+          "Entra-ID",
+          "sign-in-logs",
+          "audit-logs",
+          "monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Entra ID capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-099",
+      "type": "single-choice",
+      "topicId": "compliance-solutions",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A global financial services company needs to demonstrate to regulators that all Teams and Exchange messages related to financial transactions have been retained for 7 years and cannot be deleted by users.",
+      "questionText": "Which Microsoft Purview features BEST address this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sensitivity labels and DLP policies",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Retention policies with locked settings (Preservation Lock) and Records Management",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "eDiscovery and Legal Hold",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Compliance Manager assessments",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Retention policies with Preservation Lock make the policy immutable (regulators can verify it can't be weakened), and Records Management can declare content as immutable records that users cannot modify or delete.",
+        "incorrect": "Sensitivity labels protect access. Legal hold = specific litigation hold. Compliance Manager = tracking improvement actions â€” not enforcing retention.",
+        "examTip": "Preservation Lock = regulators can verify the policy can't be turned off or weakened. Required for SEC 17a-4, FINRA, and similar regulations.",
+        "relatedTopics": [
+          "Preservation-Lock",
+          "Records-Management",
+          "retention",
+          "regulatory-compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Purview compliance solutions",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "sc900-100",
+      "type": "single-choice",
+      "topicId": "security-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following BEST describes the concept of 'assume breach' in Zero Trust?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Assuming that all users are malicious and blocking everyone by default",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Designing security with the mindset that a breach has already occurred, minimizing blast radius and ensuring rapid detection",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Assuming the network perimeter is fully secure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encrypting all data on the assumption it will be stolen",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "'Assume breach' means designing systems as if attackers are already inside â€” minimizing lateral movement with segmentation, logging everything for detection, and having response plans ready.",
+        "incorrect": "Assume breach doesn't mean blocking everyone. It's not about the perimeter or just encryption.",
+        "examTip": "Zero Trust pillars: Verify explicitly + Use least privilege + Assume breach. 'Assume breach' drives segmentation, continuous monitoring, and rapid IR.",
+        "relatedTopics": [
+          "zero-trust",
+          "assume-breach",
+          "security-mindset"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Zero Trust",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ],
+  "certificationId": "sc-900",
+  "version": "2024-01"
+}

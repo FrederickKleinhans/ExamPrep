@@ -1,0 +1,876 @@
+{
+  "certificationId": "comptia-network-plus",
+  "topicId": "network-security",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "netplus-036",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the function of a firewall in a network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To boost the wireless signal throughout a building",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To filter network traffic based on rules, allowing or blocking connections",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To assign IP addresses to network hosts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To increase the speed of internet connections",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A firewall controls inbound and outbound network traffic based on configured security rules, blocking unauthorised access while allowing legitimate traffic.",
+        "incorrect": "Wireless boosting = WAP/repeater. IP assignment = DHCP. Speed increase = QoS/bandwidth upgrade.",
+        "examTip": "Stateless firewall = inspects individual packets only. Stateful = tracks connection state. Next-gen firewall (NGFW) = also inspects application layer.",
+        "relatedTopics": [
+          "firewall",
+          "network-security",
+          "packet-filtering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Security devices",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-037",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between an IDS and an IPS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "IDS blocks threats; IPS only detects them",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "IDS detects and alerts on threats; IPS detects and actively blocks them inline",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "IPS operates at Layer 7; IDS operates at Layer 3",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "IDS is hardware only; IPS is software only",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IDS (Intrusion Detection System) monitors and alerts. IPS (Intrusion Prevention System) is deployed inline and can actively block malicious traffic in real time.",
+        "incorrect": "IDS = passive detection. IPS = active blocking. Both can operate at multiple OSI layers. Both can be hardware or software.",
+        "examTip": "IDS = out-of-band (tap/SPAN port), can't block. IPS = inline, can block. IPS must be inline to intercept traffic.",
+        "relatedTopics": [
+          "IDS",
+          "IPS",
+          "intrusion-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Security devices",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-038",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a DMZ in network security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A VLAN used exclusively for management traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A network segment that hosts public-facing services, isolated from the internal network",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A wireless network zone for guest users",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A VPN tunnel between two sites",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A DMZ (Demilitarised Zone) is a perimeter network segment that hosts public-facing servers (web, email, DNS), positioned between the internet and the internal network with firewalls on both sides.",
+        "incorrect": "Management VLAN is separate. Guest wireless is a different concept. VPNs are encrypted tunnels.",
+        "examTip": "DMZ architecture: Internet â†’ Firewall â†’ DMZ (public servers) â†’ Firewall â†’ Internal network. Even if DMZ is compromised, internal network is protected.",
+        "relatedTopics": [
+          "DMZ",
+          "network-segmentation",
+          "perimeter-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Network security",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-039",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which attack overwhelms a target with traffic from a single source to make it unavailable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DDoS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "DoS",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Man-in-the-middle",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ARP poisoning",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A DoS (Denial of Service) attack originates from a single source and floods a target with traffic or requests to exhaust its resources and make it unavailable.",
+        "incorrect": "DDoS = multiple sources (distributed). MitM = intercepts communications. ARP poisoning = redirects Layer 2 traffic.",
+        "examTip": "DoS = single source. DDoS = multiple sources (botnet). DDoS is harder to mitigate because you can't just block one IP.",
+        "relatedTopics": [
+          "DoS",
+          "DDoS",
+          "availability-attacks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Network attacks",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-040",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A network admin discovers that a host on the LAN is sending gratuitous ARP replies claiming to be the default gateway, redirecting all traffic through itself.",
+      "questionText": "What type of attack is occurring and what switch feature can prevent it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "VLAN hopping; prevent with BPDU Guard",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ARP poisoning; prevent with Dynamic ARP Inspection (DAI)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "DHCP spoofing; prevent with DHCP Snooping",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "MAC flooding; prevent with port security",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ARP poisoning sends fake ARP replies to poison the ARP caches of other hosts, redirecting traffic through the attacker (MitM). Dynamic ARP Inspection validates ARP packets against the DHCP snooping binding table.",
+        "incorrect": "VLAN hopping exploits trunk negotiation. DHCP spoofing provides fake IP configs. MAC flooding fills the CAM table forcing hub-like behaviour.",
+        "examTip": "DAI requires DHCP Snooping to be enabled first â€” it uses the DHCP snooping binding table to validate ARP replies.",
+        "relatedTopics": [
+          "ARP-poisoning",
+          "DAI",
+          "DHCP-snooping"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Network attacks",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-041",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 802.1X provide in a network environment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Link aggregation across multiple switch ports",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Port-based network access control requiring authentication before granting LAN access",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "VLAN assignment based on interface speed",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encryption of traffic between switches",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "802.1X is an IEEE standard for port-based NAC. Devices must authenticate (via RADIUS) before the switch grants access to the network, blocking unauthenticated devices.",
+        "incorrect": "Link aggregation = LACP (802.3ad). VLAN by speed is not a standard. Traffic encryption = MACsec (802.1AE).",
+        "examTip": "802.1X roles: Supplicant (device), Authenticator (switch/AP), Authentication Server (RADIUS). EAP is the authentication protocol used.",
+        "relatedTopics": [
+          "802.1X",
+          "NAC",
+          "RADIUS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Network access control",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-042",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which VPN protocol encapsulates the entire original IP packet and adds a new header, commonly used for site-to-site VPNs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "IPSec Transport mode",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "IPSec Tunnel mode",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SSL/TLS VPN",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "PPTP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IPSec Tunnel mode encapsulates the entire original IP packet (header + payload) and adds a new outer IP header, used for site-to-site VPNs between gateways.",
+        "incorrect": "Transport mode encrypts only the payload, used for host-to-host. SSL/TLS VPN uses web browser or lightweight client. PPTP is legacy and insecure.",
+        "examTip": "Tunnel mode = site-to-site (whole packet encrypted). Transport mode = host-to-host (payload only). Always use Tunnel mode for site-to-site VPNs.",
+        "relatedTopics": [
+          "IPSec",
+          "VPN",
+          "tunnel-mode"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 VPN",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-043",
+      "type": "yes-no-statements",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes network security concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A stateful firewall tracks the state of active connections and uses this context in filtering decisions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "WPA2-Enterprise uses a pre-shared key for authentication.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "DHCP Snooping prevents rogue DHCP servers from providing false IP configuration to clients.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Port security can prevent MAC flooding attacks by limiting the number of MAC addresses per port.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Stateful firewalls track connections. DHCP snooping blocks rogue DHCP. Port security limits MACs per port preventing flooding. WPA2-Enterprise uses 802.1X/RADIUS (not PSK â€” that's WPA2-Personal).",
+        "incorrect": "WPA2-Enterprise uses 802.1X authentication with individual credentials, not a shared key.",
+        "examTip": "WPA2-Personal = PSK (pre-shared key). WPA2-Enterprise = 802.1X (individual credentials via RADIUS).",
+        "relatedTopics": [
+          "stateful-firewall",
+          "WPA2",
+          "DHCP-snooping",
+          "port-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Network security",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-044",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which attack exploits double-tagging of 802.1Q frames to send traffic from one VLAN to another without routing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ARP poisoning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "MAC flooding",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "VLAN hopping",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "STP manipulation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "VLAN hopping via double-tagging adds two 802.1Q tags to a frame. The first switch strips the outer tag, and the inner tag tricks the second switch into delivering the frame to the target VLAN.",
+        "incorrect": "ARP poisoning targets Layer 2 ARP tables. MAC flooding fills the CAM table. STP manipulation attacks the spanning tree topology.",
+        "examTip": "Prevent VLAN hopping: set the native VLAN to an unused VLAN ID, explicitly tag native VLAN traffic, and don't use VLAN 1 as native VLAN.",
+        "relatedTopics": [
+          "VLAN-hopping",
+          "802.1Q",
+          "switch-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Network attacks",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-045",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a proxy server?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To assign IP addresses to network clients",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To act as an intermediary between clients and servers, providing content filtering, caching, and anonymity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt traffic between two VPN endpoints",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To provide redundancy for critical network services",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A proxy server intercepts client requests, providing content filtering (block malicious sites), caching (improve performance), and hiding client IPs (anonymity/privacy).",
+        "incorrect": "IP assignment = DHCP. VPN encryption = VPN gateway. Redundancy = clustering/failover.",
+        "examTip": "Forward proxy = client â†’ proxy â†’ internet (client anonymity). Reverse proxy = internet â†’ proxy â†’ servers (server protection, load balancing).",
+        "relatedTopics": [
+          "proxy-server",
+          "content-filtering",
+          "network-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Security devices",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-069",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of port security on a switch?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To block all traffic on a port until it is manually enabled",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To limit the number of MAC addresses allowed on a port and take action on violations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt traffic between the switch and connected devices",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To prevent STP topology changes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Port security restricts the number of MAC addresses allowed per switch port, preventing MAC flooding attacks and unauthorised devices from connecting.",
+        "incorrect": "Admin shutdown = different from port security. Switch doesn't encrypt traffic. BPDU Guard/Root Guard prevent STP attacks.",
+        "examTip": "Port security violation modes: protect (drop frames, no alert), restrict (drop + alert), shutdown (err-disable port). Use sticky MAC to auto-learn allowed MACs.",
+        "relatedTopics": [
+          "port-security",
+          "MAC-flooding",
+          "switch-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Switch security",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-070",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which attack involves an attacker sending a large volume of SYN packets without completing the TCP three-way handshake?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Smurf attack",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SYN flood",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Ping of Death",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Teardrop attack",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A SYN flood sends massive numbers of TCP SYN packets without completing the handshake, filling the server's connection queue (half-open connections) and preventing legitimate connections.",
+        "incorrect": "Smurf = ICMP amplification using broadcast. Ping of Death = oversized ping packets. Teardrop = malformed fragmented packets.",
+        "examTip": "SYN flood defense: SYN cookies (server doesn't allocate resources until handshake complete), rate limiting, firewall connection limits.",
+        "relatedTopics": [
+          "SYN-flood",
+          "DoS",
+          "TCP-attacks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Network attacks",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-071",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a honeypot in the context of network security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A device that speeds up network performance by caching data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A decoy system designed to attract and detect attackers",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A type of VPN used for remote access",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A network device that filters spam emails",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A honeypot is a decoy system that mimics a real target to attract attackers, allowing security teams to observe attack techniques and gather threat intelligence without risk to production systems.",
+        "incorrect": "Caching = proxy/CDN. VPN = encrypted tunnel. Email filtering = spam filter/mail gateway.",
+        "examTip": "Honeypot = decoy server. Honeynet = network of honeypots. Any interaction with a honeypot is suspicious by definition.",
+        "relatedTopics": [
+          "honeypot",
+          "deception-technology",
+          "threat-intelligence"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Security concepts",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-072",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which protocol provides encrypted management access to network devices, replacing Telnet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SNMP",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Telnet",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "SSH",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "HTTP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SSH (Secure Shell) provides encrypted terminal access to network devices, replacing Telnet which transmits all data including passwords in cleartext.",
+        "incorrect": "SNMP = network management protocol. Telnet = insecure cleartext. HTTP = unencrypted web.",
+        "examTip": "Always use SSH v2 (never v1 or Telnet). SSH uses TCP port 22. Also use for secure file transfer (SFTP/SCP).",
+        "relatedTopics": [
+          "SSH",
+          "secure-management",
+          "Telnet-replacement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Secure protocols",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-073",
+      "type": "yes-no-statements",
+      "topicId": "network-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes network security concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A VLAN on its own provides strong security isolation equivalent to a physical firewall.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Disabling unused switch ports reduces the attack surface of a network.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "MAC address filtering alone provides strong wireless security.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Changing the default SNMP community string 'public' is an important hardening step.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "VLANs provide logical separation but are vulnerable to VLAN hopping attacks. Disabling unused ports prevents physical access. Default SNMP community strings must be changed. MAC filtering is easily bypassed by MAC spoofing.",
+        "incorrect": "VLANs and MAC filtering alone are insufficient security controls.",
+        "examTip": "Network hardening checklist: disable unused ports, change default credentials, use SNMPv3, enable port security, use 802.1X, segment with firewalls + VLANs.",
+        "relatedTopics": [
+          "network-hardening",
+          "VLAN-security",
+          "SNMP-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Security hardening",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-085",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A security admin wants to prevent users from connecting unauthorised devices (like personal laptops) to the corporate network.",
+      "questionText": "Which technology is MOST effective at enforcing this policy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "MAC address filtering on the switches",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "802.1X port-based Network Access Control",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Disabling DHCP",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Changing the SSID broadcast setting",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "802.1X requires devices to authenticate (via certificates or credentials) before the switch grants network access. Unauthorised devices without valid credentials are blocked at the port level.",
+        "incorrect": "MAC filtering is easily bypassed by MAC spoofing. Disabling DHCP still allows static IP assignment. SSID settings are wireless-only and don't prevent wired connections.",
+        "examTip": "802.1X with certificate-based authentication (EAP-TLS) is the strongest NAC option â€” only domain-joined devices with valid certs can connect.",
+        "relatedTopics": [
+          "802.1X",
+          "NAC",
+          "unauthorised-devices"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Network access control",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-092",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a content filter in a network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To increase the speed of internet access",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To inspect and block access to websites or content based on categories or keywords",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt web traffic between users and websites",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To cache web content to reduce bandwidth usage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Content filters inspect web traffic and block access to prohibited categories (adult content, gambling, malware sites) based on policies â€” commonly deployed as a web proxy or DNS filtering service.",
+        "incorrect": "Speed acceleration = QoS/CDN. Encryption = TLS/VPN. Caching = web proxy (caching function specifically).",
+        "examTip": "Content filtering can be URL-based, DNS-based (e.g., Cisco Umbrella), or deep packet inspection. Also helps block malware download sites.",
+        "relatedTopics": [
+          "content-filter",
+          "web-filtering",
+          "network-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Security devices",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-096",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does AAA stand for in network security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Authentication, Authorisation, Accounting",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Access, Administration, Auditing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Availability, Accuracy, Accountability",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Authorisation, Accessibility, Archiving",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "AAA = Authentication (verify identity), Authorisation (determine access rights), Accounting (log what was done). Implemented by RADIUS or TACACS+ servers.",
+        "incorrect": "The other options are not the correct AAA definition.",
+        "examTip": "RADIUS = AAA for network access (UDP 1812/1813). TACACS+ = AAA for device management (TCP 49, Cisco). Both provide centralised authentication.",
+        "relatedTopics": [
+          "AAA",
+          "RADIUS",
+          "TACACS+"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 AAA",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

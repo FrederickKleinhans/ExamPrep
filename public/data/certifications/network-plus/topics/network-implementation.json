@@ -1,0 +1,873 @@
+{
+  "certificationId": "network-plus",
+  "topicId": "network-implementation",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "netplus-016",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of a VLAN?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To increase physical port speed",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To logically segment a physical network into separate broadcast domains",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To provide wireless connectivity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To assign public IP addresses to internal hosts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "VLANs create logical broadcast domains on a physical switch, isolating traffic between groups without needing separate physical infrastructure.",
+        "incorrect": "VLANs don't affect port speed, wireless access, or IP addressing.",
+        "examTip": "Hosts in different VLANs cannot communicate without a Layer 3 router or Layer 3 switch doing inter-VLAN routing.",
+        "relatedTopics": [
+          "VLAN",
+          "broadcast-domain",
+          "switching"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 VLANs",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-017",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of an 802.1Q trunk port on a switch?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To connect a single end device to one VLAN",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To carry tagged traffic for multiple VLANs between switches or to a router",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To provide out-of-band management access to the switch",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To aggregate multiple physical links into one logical link",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A trunk port uses 802.1Q tagging to carry frames from multiple VLANs over a single link between switches or between a switch and router.",
+        "incorrect": "Access port = single VLAN for end devices. Management port = separate interface. Link aggregation = LACP/port channel.",
+        "examTip": "Access port = untagged (one VLAN). Trunk port = tagged (many VLANs). Native VLAN frames are sent untagged on a trunk.",
+        "relatedTopics": [
+          "trunk-port",
+          "802.1Q",
+          "VLAN-tagging"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 VLANs",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-018",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which STP feature allows a switch port connected to an end device to bypass listening and learning states and go directly to forwarding?",
+      "options": [
+        {
+          "id": "A",
+          "text": "BPDU Guard",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Root Guard",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "PortFast",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Loop Guard",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "PortFast skips the STP listening and learning states on ports connected to end devices, immediately transitioning to forwarding and avoiding the 30-50 second delay.",
+        "incorrect": "BPDU Guard shuts down a PortFast port if BPDUs arrive. Root Guard prevents a port becoming root. Loop Guard prevents forwarding when BPDUs stop.",
+        "examTip": "Always pair PortFast with BPDU Guard on access ports. If someone connects a switch to a PortFast port, BPDU Guard will err-disable it.",
+        "relatedTopics": [
+          "STP",
+          "PortFast",
+          "spanning-tree"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Switching",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-019",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which wireless standard introduced support for both 2.4 GHz and 5 GHz bands with speeds up to 600 Mbps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "802.11a",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "802.11g",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "802.11n (Wi-Fi 4)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "802.11ac (Wi-Fi 5)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "802.11n (Wi-Fi 4) supports both 2.4 GHz and 5 GHz and uses MIMO technology to reach up to 600 Mbps.",
+        "incorrect": "802.11a = 5 GHz only, 54 Mbps. 802.11g = 2.4 GHz only, 54 Mbps. 802.11ac = 5 GHz only, up to 3.5 Gbps.",
+        "examTip": "Wi-Fi gen: b(2.4/11M), a(5/54M), g(2.4/54M), n/Wi-Fi4(both/600M), ac/Wi-Fi5(5/3.5G), ax/Wi-Fi6(both/9.6G).",
+        "relatedTopics": [
+          "wireless",
+          "802.11n",
+          "Wi-Fi-standards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Wireless",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-020",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which wireless security protocol uses CCMP/AES encryption and is the current enterprise minimum standard?",
+      "options": [
+        {
+          "id": "A",
+          "text": "WEP",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "WPA (TKIP)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "WPA2 (CCMP/AES)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "WPS",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "WPA2 uses CCMP based on AES for strong encryption and is the current minimum acceptable wireless security standard.",
+        "incorrect": "WEP uses RC4 and is completely broken. WPA/TKIP has known weaknesses and is deprecated. WPS has a PIN vulnerability and should be disabled.",
+        "examTip": "WEP=broken, WPA/TKIP=deprecated, WPA2/AES=minimum, WPA3=best. Disable WPS. Use WPA2/WPA3 Enterprise (802.1X) for business environments.",
+        "relatedTopics": [
+          "WPA2",
+          "wireless-security",
+          "AES"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Wireless security",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-021",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What cable type supports the highest bandwidth over the longest distances and is immune to electromagnetic interference?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cat6a UTP",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Coaxial cable",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Fibre optic cable",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Cat5e STP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fibre optic cable transmits data as light pulses, providing very high bandwidth, long-distance capability, and complete immunity to EMI/RFI.",
+        "incorrect": "Copper cables (Cat5e/6/6a) max out at 100m and are susceptible to EMI. Coaxial is legacy and still susceptible to interference.",
+        "examTip": "Single-mode fibre (SMF) = laser, long distances (km). Multimode fibre (MMF) = LED, shorter distances (hundreds of metres). Both immune to EMI.",
+        "relatedTopics": [
+          "fibre-optic",
+          "cable-types",
+          "EMI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Cable types",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-022",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does PoE (Power over Ethernet) provide to network devices?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Faster data transmission speeds",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Electrical power through the Ethernet cable, eliminating separate power adapters",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Wireless connectivity over Ethernet cabling",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Extended cable distance beyond 100 metres",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "PoE (IEEE 802.3af/at/bt) delivers power over standard Ethernet cables to devices like IP phones, wireless access points, and security cameras.",
+        "incorrect": "PoE doesn't increase speed, provide wireless access, or extend distance.",
+        "examTip": "PoE tiers: 802.3af=15.4W, 802.3at (PoE+)=30W, 802.3bt (PoE++)=60-100W. Powered by a PoE switch or inline injector.",
+        "relatedTopics": [
+          "PoE",
+          "802.3af",
+          "network-devices"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Network devices",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-023",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the key difference between a hub and a switch?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A hub operates at Layer 3; a switch at Layer 2",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A hub floods all traffic to every port; a switch forwards frames only to the destination port",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A switch broadcasts all traffic; a hub forwards selectively",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A hub uses IP addresses; a switch uses MAC addresses",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A hub (Layer 1) repeats every frame to all ports creating collisions. A switch (Layer 2) learns MAC addresses and forwards frames only to the correct destination port.",
+        "incorrect": "Hubs are Layer 1, switches Layer 2. Switches use MAC addresses, routers use IP addresses.",
+        "examTip": "Hub = one collision domain for all ports. Switch = one collision domain per port. Replace all hubs with switches.",
+        "relatedTopics": [
+          "hub",
+          "switch",
+          "collision-domain"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Network devices",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-024",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is LACP used for in network switching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To prevent switching loops",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To dynamically bundle multiple physical links into one logical high-bandwidth link",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt traffic between switches",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To assign VLANs to switch ports automatically",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "LACP (Link Aggregation Control Protocol / 802.3ad) dynamically negotiates the bundling of multiple physical Ethernet links into one logical link (port channel/EtherChannel), increasing bandwidth and providing redundancy.",
+        "incorrect": "STP prevents loops. Encryption is handled by other protocols. VLAN assignment is manual or via VTP/LLDP.",
+        "examTip": "LACP = 802.3ad = dynamic link aggregation. PAGP = Cisco proprietary version. Both aggregate links for bandwidth and redundancy.",
+        "relatedTopics": [
+          "LACP",
+          "link-aggregation",
+          "EtherChannel"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Link aggregation",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-025",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A building has two floors connected to separate switches. Users on Floor 1 (VLAN 10) need to communicate with users on Floor 2 (VLAN 20).",
+      "questionText": "What is required to enable inter-VLAN routing between the two VLANs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Configure a trunk port between the two access switches",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A Layer 3 device (router or Layer 3 switch) configured with sub-interfaces or SVIs for each VLAN",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Add both VLANs to the same access port",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Enable spanning tree on both switches",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Inter-VLAN routing requires a Layer 3 device. A router-on-a-stick uses sub-interfaces on a trunk link. A Layer 3 switch uses SVIs (Switched Virtual Interfaces) â€” one per VLAN.",
+        "incorrect": "A trunk carries multiple VLANs but doesn't route between them. An access port is in one VLAN only. STP prevents loops but doesn't route.",
+        "examTip": "Router-on-a-stick = router with sub-interfaces on a trunk. Layer 3 switch with SVIs = more scalable option for inter-VLAN routing.",
+        "relatedTopics": [
+          "inter-VLAN-routing",
+          "Layer-3-switch",
+          "SVI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 VLANs",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-062",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the maximum distance for a Cat6 UTP cable segment running at 1 Gbps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "50 metres",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "100 metres",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "150 metres",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "300 metres",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "All copper Ethernet standards (Cat5e, Cat6, Cat6a) are limited to 100 metres (328 feet) for a single cable segment at standard speeds.",
+        "incorrect": "50m is too short. 150m and 300m exceed the copper limit. Note: Cat6a supports 10 Gbps up to 100m.",
+        "examTip": "100m rule applies to ALL copper Ethernet. Extend with a switch or repeater. Fibre is needed for distances beyond 100m.",
+        "relatedTopics": [
+          "Cat6",
+          "cable-distance",
+          "copper-Ethernet"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Cable types",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-063",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between a straight-through cable and a crossover cable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Straight-through connects like devices; crossover connects unlike devices",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Straight-through connects unlike devices (PC to switch); crossover connects like devices (switch to switch)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They are identical in modern networks with auto-MDI/MDIX",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Crossover cables support higher speeds than straight-through",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Straight-through = unlike devices (PC to switch, switch to router). Crossover = like devices (PC to PC, switch to switch). However, modern devices support auto-MDI/MDIX which automatically detects and adjusts.",
+        "incorrect": "The device type rule is the traditional answer. Auto-MDI/MDIX makes crossover cables largely obsolete in modern networks.",
+        "examTip": "Modern Gigabit switches use auto-MDI/MDIX â€” either cable type works. On older networks: straight-through for unlike, crossover for like devices.",
+        "relatedTopics": [
+          "cable-types",
+          "straight-through",
+          "crossover"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Cable types",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-064",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What wireless frequency band typically offers better range but more interference?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5 GHz",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "6 GHz",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "2.4 GHz",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "60 GHz",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "2.4 GHz has better range and wall penetration than 5 GHz due to lower frequency, but has only 3 non-overlapping channels (1, 6, 11) and faces more interference from microwaves and Bluetooth.",
+        "incorrect": "5 GHz = more channels, less interference, shorter range. 6 GHz = Wi-Fi 6E/7, least interference. 60 GHz = WiGig, very short range.",
+        "examTip": "2.4 GHz: 3 non-overlapping channels (1,6,11), longer range, more interference. 5 GHz: 23+ non-overlapping channels, shorter range, less interference.",
+        "relatedTopics": [
+          "wireless-bands",
+          "2.4GHz",
+          "5GHz"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Wireless",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-065",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company is deploying a wireless network for a large office with many users in close proximity. Signal overlap between APs is causing co-channel interference.",
+      "questionText": "What is the BEST solution to reduce co-channel interference on 2.4 GHz?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increase the transmit power of all APs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Assign non-overlapping channels (1, 6, 11) to adjacent APs and consider migrating to 5 GHz",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Use WPA2 encryption on all APs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Enable SSID broadcast on all APs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Co-channel interference is reduced by assigning non-overlapping 2.4 GHz channels (1, 6, 11) to adjacent APs. Migrating to 5 GHz provides 23+ non-overlapping channels, greatly reducing interference.",
+        "incorrect": "Increasing power worsens interference. WPA2 = security, not interference. SSID broadcast is for discoverability, not interference.",
+        "examTip": "2.4 GHz only has 3 usable non-overlapping channels (1, 6, 11). High-density environments should use 5 GHz or 6 GHz (Wi-Fi 6E).",
+        "relatedTopics": [
+          "co-channel-interference",
+          "wireless-channels",
+          "2.4GHz"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Wireless",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-076",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a wireless site survey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To determine the number of users who will connect wirelessly",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To assess RF coverage, interference sources, and optimal AP placement before deployment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To configure SSID and security settings on access points",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To test internet bandwidth from wireless clients",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A wireless site survey assesses the physical environment, measures signal strength, identifies interference sources (other Wi-Fi, microwave ovens, Bluetooth), and determines optimal AP placement for complete coverage.",
+        "incorrect": "User count planning = capacity planning. SSID config = AP configuration. Bandwidth testing = speed test.",
+        "examTip": "Active survey = deploy APs and measure signal. Passive survey = scan existing signals. Heat maps visualise coverage. Always survey before installing permanent APs.",
+        "relatedTopics": [
+          "wireless-site-survey",
+          "RF-planning",
+          "AP-placement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Wireless deployment",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-084",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a proxy ARP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To block ARP requests on a network segment",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To allow a router to respond to ARP requests on behalf of hosts on a different subnet",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt ARP traffic between switches",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To cache ARP responses on a dedicated server",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Proxy ARP allows a router to respond to ARP requests for IP addresses on different subnets. The router responds with its own MAC address, enabling hosts that don't know about subnets to reach remote hosts.",
+        "incorrect": "Proxy ARP enables, not blocks ARP. It's not about encryption or dedicated caching servers.",
+        "examTip": "Proxy ARP is usually disabled in modern networks â€” it can hide subnet misconfiguration. Ensure hosts have correct default gateways instead.",
+        "relatedTopics": [
+          "proxy-ARP",
+          "routing",
+          "ARP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 ARP",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-087",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the function of a wireless access point (AP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To assign IP addresses to wireless clients",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To bridge wireless clients onto a wired network",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To route traffic between different IP subnets wirelessly",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To filter malicious traffic from wireless networks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A wireless AP bridges (Layer 2) wireless client traffic onto the wired LAN infrastructure, acting as a hub between wireless and wired segments.",
+        "incorrect": "IP assignment = DHCP server. Layer 3 routing = router. Traffic filtering = firewall/IPS.",
+        "examTip": "AP = Layer 2 bridge (wireless to wired). In lightweight AP mode, the WLC (Wireless LAN Controller) handles all management. Autonomous AP = self-managed.",
+        "relatedTopics": [
+          "wireless-AP",
+          "bridging",
+          "wireless-infrastructure"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Wireless",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-094",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the native VLAN on an 802.1Q trunk and why is it a security concern?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The VLAN assigned to the switch management interface; it's a concern because management traffic is unencrypted",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The VLAN whose frames are sent untagged on a trunk; it's a concern because double-tagging attacks target the native VLAN",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The first VLAN created on a switch; it must match on all switches",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The VLAN used for voice traffic; it has priority in QoS queues",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The native VLAN carries untagged frames on a trunk. Attackers use VLAN hopping via double-tagging to send frames into any VLAN that matches the native VLAN on the trunk.",
+        "incorrect": "Native VLAN is not the same as the management VLAN (though they're often misconfigured to be the same). It's not necessarily the first VLAN or the voice VLAN.",
+        "examTip": "Security best practice: set native VLAN to an unused VLAN ID (not VLAN 1). Some configs explicitly tag the native VLAN to prevent double-tagging attacks.",
+        "relatedTopics": [
+          "native-VLAN",
+          "VLAN-hopping",
+          "trunk-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 VLANs",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

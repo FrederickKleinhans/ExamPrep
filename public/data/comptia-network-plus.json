@@ -1,0 +1,4851 @@
+{
+  "questions": [
+    {
+      "id": "netplus-001",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which OSI model layer is responsible for logical addressing and routing packets between networks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Layer 2 â€“ Data Link",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Layer 3 â€“ Network",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Layer 4 â€“ Transport",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Layer 5 â€“ Session",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Layer 3 (Network) handles logical IP addressing and routing of packets between different networks. Routers operate at this layer.",
+        "incorrect": "Layer 2 handles MAC addressing and local frame delivery. Layer 4 handles end-to-end transport. Layer 5 manages sessions.",
+        "examTip": "OSI layers 1-7: Physical, Data Link, Network, Transport, Session, Presentation, Application. Mnemonic: 'Please Do Not Throw Sausage Pizza Away'.",
+        "relatedTopics": [
+          "OSI-model",
+          "routing",
+          "IP-addressing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 OSI model",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-002",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary difference between TCP and UDP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "TCP is faster; UDP is slower",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "TCP provides reliable connection-oriented delivery; UDP is connectionless with no guaranteed delivery",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "UDP encrypts data; TCP does not",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "TCP is used for DNS; UDP is used for HTTP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "TCP establishes a connection via 3-way handshake, guarantees delivery, orders packets, and handles retransmission. UDP sends datagrams with no handshake, ordering, or retransmission.",
+        "incorrect": "UDP is faster due to lower overhead. Neither encrypts by default. DNS uses UDP 53. HTTP uses TCP 80.",
+        "examTip": "TCP = reliable (web, email, file transfer). UDP = fast (DNS, DHCP, VoIP, streaming, gaming).",
+        "relatedTopics": [
+          "TCP",
+          "UDP",
+          "transport-layer"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Protocols",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-003",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A host has the IP address 192.168.10.55 with a subnet mask of 255.255.255.0. What is the network address?",
+      "options": [
+        {
+          "id": "A",
+          "text": "192.168.10.0",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "192.168.10.55",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "192.168.10.255",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "192.168.0.0",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "With a /24 mask (255.255.255.0), the first three octets are the network portion. Network address = 192.168.10.0 (all host bits set to zero).",
+        "incorrect": "192.168.10.55 is the host address. 192.168.10.255 is the broadcast. 192.168.0.0 is a /16 network address.",
+        "examTip": "Network address = IP AND subnet mask. Host bits all 0s = network. Host bits all 1s = broadcast.",
+        "relatedTopics": [
+          "subnetting",
+          "IPv4",
+          "subnet-mask"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 IPv4 addressing",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-004",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "How many usable host addresses are available in a /28 subnet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "14",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "16",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "30",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "254",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A /28 has 4 host bits. Total = 2^4 = 16 addresses. Usable = 16 - 2 = 14 (subtract network and broadcast).",
+        "incorrect": "16 is total addresses. /27 gives 30 usable. /24 gives 254 usable.",
+        "examTip": "Usable hosts = 2^(host bits) - 2. /28=14, /27=30, /26=62, /25=126, /24=254.",
+        "relatedTopics": [
+          "subnetting",
+          "CIDR",
+          "IPv4"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 Subnetting",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-005",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an APIPA address that a host assigns itself when no DHCP server is reachable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "192.168.1.100",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "10.0.0.1",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "169.254.45.100",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "172.16.0.1",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "APIPA (Automatic Private IP Addressing) uses the 169.254.0.0/16 range. A host assigns itself an APIPA address when DHCP is unavailable, allowing local communication only.",
+        "incorrect": "192.168.x.x and 10.x.x.x are RFC 1918 private ranges. 172.16.x.x is also private. APIPA is specifically 169.254.x.x.",
+        "examTip": "Seeing a 169.254.x.x address means the host can't reach a DHCP server. Check DHCP server, cable, and switch port.",
+        "relatedTopics": [
+          "APIPA",
+          "DHCP",
+          "IPv4"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 IPv4 addressing",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-006",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which IPv6 address type is automatically configured on every IPv6 interface and is only valid for communication on the local link?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Global unicast (2000::/3)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Unique local (fc00::/7)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Link-local (fe80::/10)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Multicast (ff00::/8)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Link-local addresses (fe80::/10) are automatically assigned to every IPv6 interface and are only usable within the local network segment â€” they are never routed.",
+        "incorrect": "Global unicast = public IPv6 (routable). Unique local = private IPv6 (organisation-wide). Multicast = one-to-many delivery.",
+        "examTip": "fe80:: = link-local (auto-assigned, non-routable). fd00:: = unique local (private). 2001:: = global unicast (public). ::1 = loopback.",
+        "relatedTopics": [
+          "IPv6",
+          "link-local",
+          "addressing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 IPv6 addressing",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-007",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What protocol automatically assigns IP addresses, subnet masks, gateways, and DNS to network hosts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DNS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "DHCP",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ARP",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ICMP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DHCP (Dynamic Host Configuration Protocol) automatically provides complete IP configuration to hosts using the DORA process: Discover, Offer, Request, Acknowledge.",
+        "incorrect": "DNS resolves names to IPs. ARP resolves IPs to MAC addresses. ICMP is for diagnostics (ping).",
+        "examTip": "DHCP uses UDP ports 67 (server) and 68 (client). DORA: Discover (broadcast) â†’ Offer â†’ Request â†’ Acknowledge.",
+        "relatedTopics": [
+          "DHCP",
+          "DORA",
+          "IP-configuration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 DHCP",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-008",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which DNS record type maps a hostname to an IPv4 address?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AAAA",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "MX",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "CNAME",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An A record maps a hostname to an IPv4 address (e.g., www.example.com â†’ 93.184.216.34).",
+        "incorrect": "AAAA = IPv6 address. MX = mail server. CNAME = alias to another hostname.",
+        "examTip": "DNS records: A(IPv4), AAAA(IPv6), CNAME(alias), MX(mail), NS(name server), PTR(reverse), SOA(zone authority), TXT(text/SPF/DKIM/DMARC).",
+        "relatedTopics": [
+          "DNS",
+          "A-record",
+          "name-resolution"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 DNS",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-009",
+      "type": "yes-no-statements",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes network protocols and ports.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "HTTP uses TCP port 80.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "HTTPS uses UDP port 443.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "SSH uses TCP port 22.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "DNS uses only TCP port 53.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "HTTP=TCP 80. SSH=TCP 22. HTTPS uses TCP 443 not UDP. DNS uses UDP 53 primarily but also TCP 53 for large responses and zone transfers.",
+        "incorrect": "HTTPS is TCP only. DNS uses both UDP and TCP on 53.",
+        "examTip": "Key ports to memorise: FTP(21), SSH(22), Telnet(23), SMTP(25), DNS(53), DHCP(67/68), HTTP(80), HTTPS(443), SMB(445), RDP(3389), SNMP(161/162).",
+        "relatedTopics": [
+          "ports",
+          "protocols",
+          "TCP-UDP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Ports and protocols",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-010",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of NAT (Network Address Translation)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To encrypt traffic between internal and external networks",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To translate private IP addresses to a public IP for internet communication",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To assign IP addresses automatically to hosts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To resolve hostnames to IP addresses",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "NAT translates RFC 1918 private IP addresses to one or more public IPs, allowing multiple internal hosts to share a single public IP for internet access.",
+        "incorrect": "Encryption = VPN/TLS. IP assignment = DHCP. Name resolution = DNS.",
+        "examTip": "PAT (Port Address Translation) = many-to-one NAT using unique port numbers. Used by most home/office routers. Static NAT = one-to-one mapping.",
+        "relatedTopics": [
+          "NAT",
+          "PAT",
+          "private-addressing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 NAT",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-011",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A network admin needs to divide the 192.168.1.0/24 network into 4 equal subnets.",
+      "questionText": "What subnet mask should be used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "255.255.255.192 (/26)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "255.255.255.224 (/27)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "255.255.255.128 (/25)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "255.255.255.240 (/28)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "To create 4 subnets, borrow 2 bits (2^2=4). /24 + 2 = /26 (255.255.255.192). Each subnet has 62 usable hosts.",
+        "incorrect": "/27=8 subnets, /25=2 subnets, /28=16 subnets.",
+        "examTip": "Subnets needed â†’ bits borrowed: 2=1bit, 4=2bits, 8=3bits, 16=4bits. Add borrowed bits to prefix.",
+        "relatedTopics": [
+          "subnetting",
+          "CIDR",
+          "subnet-mask"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 Subnetting",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-012",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which protocol resolves IP addresses to MAC addresses on a local network segment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "RARP",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ICMP",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "ARP",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "IGMP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ARP (Address Resolution Protocol) broadcasts a request asking 'who has IP x.x.x.x?' and the owner replies with its MAC address.",
+        "incorrect": "RARP = MAC to IP (legacy, replaced by DHCP). ICMP = diagnostics. IGMP = multicast group membership.",
+        "examTip": "ARP cache stores recent IP-to-MAC mappings. 'arp -a' shows the cache. ARP spoofing/poisoning is a Layer 2 attack.",
+        "relatedTopics": [
+          "ARP",
+          "MAC-address",
+          "Layer-2"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 ARP",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-013",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a default gateway?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The DNS server used by the host",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The router interface that forwards traffic destined for other networks",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The switch port a host is connected to",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The DHCP server on the local subnet",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The default gateway is the router interface on the local subnet. Hosts send all traffic destined for remote networks to the default gateway for forwarding.",
+        "incorrect": "DNS resolves names. The switch port is a physical connection. The DHCP server assigns IPs.",
+        "examTip": "Default gateway must be in the same subnet as the host. If a host has no default gateway, it can only communicate locally.",
+        "relatedTopics": [
+          "default-gateway",
+          "routing",
+          "subnet"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Routing concepts",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-014",
+      "type": "dropdown-select",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each protocol to its correct well-known port number.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "RDP (Remote Desktop Protocol)",
+          "options": [
+            "22",
+            "23",
+            "443",
+            "3389"
+          ],
+          "correctAnswer": "3389"
+        },
+        {
+          "id": "d2",
+          "prompt": "SMTP (Simple Mail Transfer Protocol)",
+          "options": [
+            "25",
+            "110",
+            "143",
+            "465"
+          ],
+          "correctAnswer": "25"
+        },
+        {
+          "id": "d3",
+          "prompt": "SNMP (Simple Network Management Protocol)",
+          "options": [
+            "161",
+            "162",
+            "514",
+            "69"
+          ],
+          "correctAnswer": "161"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "RDP=3389, SMTP=25 (secure submission=587/465), SNMP queries=161 (traps=162).",
+        "incorrect": "SSH=22, Telnet=23, HTTPS=443, POP3=110, IMAP=143, Syslog=514, TFTP=69.",
+        "examTip": "Full port list: FTP(20/21), SSH(22), Telnet(23), SMTP(25), DNS(53), HTTP(80), HTTPS(443), SMB(445), RDP(3389), SNMP(161/162).",
+        "relatedTopics": [
+          "ports",
+          "protocols",
+          "well-known-ports"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Ports and protocols",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-015",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which routing protocol is a link-state protocol that builds a complete topology map using Dijkstra's algorithm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "RIPv2",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "EIGRP",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "OSPF",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "BGP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "OSPF (Open Shortest Path First) is a link-state protocol that floods LSAs to all routers, building a complete topology map and using Dijkstra's SPF algorithm to compute best paths.",
+        "incorrect": "RIP = distance-vector (hop count). EIGRP = Cisco hybrid. BGP = path-vector used between autonomous systems on the internet.",
+        "examTip": "Link-state = OSPF, IS-IS. Distance-vector = RIP. OSPF metric = cost (inversely proportional to bandwidth).",
+        "relatedTopics": [
+          "OSPF",
+          "routing-protocols",
+          "link-state"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Routing protocols",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-016",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of a VLAN?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To increase physical port speed",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To logically segment a physical network into separate broadcast domains",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To provide wireless connectivity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To assign public IP addresses to internal hosts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "VLANs create logical broadcast domains on a physical switch, isolating traffic between groups without needing separate physical infrastructure.",
+        "incorrect": "VLANs don't affect port speed, wireless access, or IP addressing.",
+        "examTip": "Hosts in different VLANs cannot communicate without a Layer 3 router or Layer 3 switch doing inter-VLAN routing.",
+        "relatedTopics": [
+          "VLAN",
+          "broadcast-domain",
+          "switching"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 VLANs",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-017",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of an 802.1Q trunk port on a switch?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To connect a single end device to one VLAN",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To carry tagged traffic for multiple VLANs between switches or to a router",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To provide out-of-band management access to the switch",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To aggregate multiple physical links into one logical link",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A trunk port uses 802.1Q tagging to carry frames from multiple VLANs over a single link between switches or between a switch and router.",
+        "incorrect": "Access port = single VLAN for end devices. Management port = separate interface. Link aggregation = LACP/port channel.",
+        "examTip": "Access port = untagged (one VLAN). Trunk port = tagged (many VLANs). Native VLAN frames are sent untagged on a trunk.",
+        "relatedTopics": [
+          "trunk-port",
+          "802.1Q",
+          "VLAN-tagging"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 VLANs",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-018",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which STP feature allows a switch port connected to an end device to bypass listening and learning states and go directly to forwarding?",
+      "options": [
+        {
+          "id": "A",
+          "text": "BPDU Guard",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Root Guard",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "PortFast",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Loop Guard",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "PortFast skips the STP listening and learning states on ports connected to end devices, immediately transitioning to forwarding and avoiding the 30-50 second delay.",
+        "incorrect": "BPDU Guard shuts down a PortFast port if BPDUs arrive. Root Guard prevents a port becoming root. Loop Guard prevents forwarding when BPDUs stop.",
+        "examTip": "Always pair PortFast with BPDU Guard on access ports. If someone connects a switch to a PortFast port, BPDU Guard will err-disable it.",
+        "relatedTopics": [
+          "STP",
+          "PortFast",
+          "spanning-tree"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Switching",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-019",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which wireless standard introduced support for both 2.4 GHz and 5 GHz bands with speeds up to 600 Mbps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "802.11a",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "802.11g",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "802.11n (Wi-Fi 4)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "802.11ac (Wi-Fi 5)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "802.11n (Wi-Fi 4) supports both 2.4 GHz and 5 GHz and uses MIMO technology to reach up to 600 Mbps.",
+        "incorrect": "802.11a = 5 GHz only, 54 Mbps. 802.11g = 2.4 GHz only, 54 Mbps. 802.11ac = 5 GHz only, up to 3.5 Gbps.",
+        "examTip": "Wi-Fi gen: b(2.4/11M), a(5/54M), g(2.4/54M), n/Wi-Fi4(both/600M), ac/Wi-Fi5(5/3.5G), ax/Wi-Fi6(both/9.6G).",
+        "relatedTopics": [
+          "wireless",
+          "802.11n",
+          "Wi-Fi-standards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Wireless",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-020",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which wireless security protocol uses CCMP/AES encryption and is the current enterprise minimum standard?",
+      "options": [
+        {
+          "id": "A",
+          "text": "WEP",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "WPA (TKIP)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "WPA2 (CCMP/AES)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "WPS",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "WPA2 uses CCMP based on AES for strong encryption and is the current minimum acceptable wireless security standard.",
+        "incorrect": "WEP uses RC4 and is completely broken. WPA/TKIP has known weaknesses and is deprecated. WPS has a PIN vulnerability and should be disabled.",
+        "examTip": "WEP=broken, WPA/TKIP=deprecated, WPA2/AES=minimum, WPA3=best. Disable WPS. Use WPA2/WPA3 Enterprise (802.1X) for business environments.",
+        "relatedTopics": [
+          "WPA2",
+          "wireless-security",
+          "AES"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Wireless security",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-021",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What cable type supports the highest bandwidth over the longest distances and is immune to electromagnetic interference?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cat6a UTP",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Coaxial cable",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Fibre optic cable",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Cat5e STP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fibre optic cable transmits data as light pulses, providing very high bandwidth, long-distance capability, and complete immunity to EMI/RFI.",
+        "incorrect": "Copper cables (Cat5e/6/6a) max out at 100m and are susceptible to EMI. Coaxial is legacy and still susceptible to interference.",
+        "examTip": "Single-mode fibre (SMF) = laser, long distances (km). Multimode fibre (MMF) = LED, shorter distances (hundreds of metres). Both immune to EMI.",
+        "relatedTopics": [
+          "fibre-optic",
+          "cable-types",
+          "EMI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Cable types",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-022",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does PoE (Power over Ethernet) provide to network devices?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Faster data transmission speeds",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Electrical power through the Ethernet cable, eliminating separate power adapters",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Wireless connectivity over Ethernet cabling",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Extended cable distance beyond 100 metres",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "PoE (IEEE 802.3af/at/bt) delivers power over standard Ethernet cables to devices like IP phones, wireless access points, and security cameras.",
+        "incorrect": "PoE doesn't increase speed, provide wireless access, or extend distance.",
+        "examTip": "PoE tiers: 802.3af=15.4W, 802.3at (PoE+)=30W, 802.3bt (PoE++)=60-100W. Powered by a PoE switch or inline injector.",
+        "relatedTopics": [
+          "PoE",
+          "802.3af",
+          "network-devices"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Network devices",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-023",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the key difference between a hub and a switch?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A hub operates at Layer 3; a switch at Layer 2",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A hub floods all traffic to every port; a switch forwards frames only to the destination port",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A switch broadcasts all traffic; a hub forwards selectively",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A hub uses IP addresses; a switch uses MAC addresses",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A hub (Layer 1) repeats every frame to all ports creating collisions. A switch (Layer 2) learns MAC addresses and forwards frames only to the correct destination port.",
+        "incorrect": "Hubs are Layer 1, switches Layer 2. Switches use MAC addresses, routers use IP addresses.",
+        "examTip": "Hub = one collision domain for all ports. Switch = one collision domain per port. Replace all hubs with switches.",
+        "relatedTopics": [
+          "hub",
+          "switch",
+          "collision-domain"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Network devices",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-024",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is LACP used for in network switching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To prevent switching loops",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To dynamically bundle multiple physical links into one logical high-bandwidth link",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt traffic between switches",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To assign VLANs to switch ports automatically",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "LACP (Link Aggregation Control Protocol / 802.3ad) dynamically negotiates the bundling of multiple physical Ethernet links into one logical link (port channel/EtherChannel), increasing bandwidth and providing redundancy.",
+        "incorrect": "STP prevents loops. Encryption is handled by other protocols. VLAN assignment is manual or via VTP/LLDP.",
+        "examTip": "LACP = 802.3ad = dynamic link aggregation. PAGP = Cisco proprietary version. Both aggregate links for bandwidth and redundancy.",
+        "relatedTopics": [
+          "LACP",
+          "link-aggregation",
+          "EtherChannel"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Link aggregation",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-025",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A building has two floors connected to separate switches. Users on Floor 1 (VLAN 10) need to communicate with users on Floor 2 (VLAN 20).",
+      "questionText": "What is required to enable inter-VLAN routing between the two VLANs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Configure a trunk port between the two access switches",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A Layer 3 device (router or Layer 3 switch) configured with sub-interfaces or SVIs for each VLAN",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Add both VLANs to the same access port",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Enable spanning tree on both switches",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Inter-VLAN routing requires a Layer 3 device. A router-on-a-stick uses sub-interfaces on a trunk link. A Layer 3 switch uses SVIs (Switched Virtual Interfaces) â€” one per VLAN.",
+        "incorrect": "A trunk carries multiple VLANs but doesn't route between them. An access port is in one VLAN only. STP prevents loops but doesn't route.",
+        "examTip": "Router-on-a-stick = router with sub-interfaces on a trunk. Layer 3 switch with SVIs = more scalable option for inter-VLAN routing.",
+        "relatedTopics": [
+          "inter-VLAN-routing",
+          "Layer-3-switch",
+          "SVI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 VLANs",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-026",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command-line tool tests basic IP connectivity using ICMP Echo Requests?",
+      "options": [
+        {
+          "id": "A",
+          "text": "tracert / traceroute",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ping",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "nslookup",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "netstat",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Ping sends ICMP Echo Requests and listens for Echo Replies to test reachability and measure round-trip time.",
+        "incorrect": "tracert/traceroute shows path and hop latency. nslookup tests DNS. netstat shows active connections and listening ports.",
+        "examTip": "Ping success = Layer 3 connectivity OK. Ping failure could be: no route, host down, or firewall blocking ICMP. Always test ping first.",
+        "relatedTopics": [
+          "ping",
+          "ICMP",
+          "troubleshooting-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-027",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does SNMP use to receive unsolicited alerts from managed devices when a significant event occurs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SNMP GET requests",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SNMP traps (UDP 162)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SNMP SET commands",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Syslog messages",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SNMP traps are unsolicited notifications sent by managed devices to the NMS (UDP port 162) when important events occur, such as an interface going down or high CPU usage.",
+        "incorrect": "GET = NMS polls a device for data. SET = NMS configures a device. Syslog is a separate logging protocol on UDP 514.",
+        "examTip": "SNMP: GET(poll), SET(config), TRAP(alert from device). Ports: 161=queries, 162=traps. Use SNMPv3 for security.",
+        "relatedTopics": [
+          "SNMP",
+          "traps",
+          "network-monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Network monitoring",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-028",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Why is accurate time synchronisation critical in network environments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It increases network throughput",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It ensures log timestamps are accurate for troubleshooting and security investigations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It assigns IP addresses faster",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It improves wireless signal strength",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Accurate time (via NTP) ensures log timestamps are consistent across all devices, which is essential for correlating events during troubleshooting and security investigations.",
+        "incorrect": "NTP doesn't affect throughput, IP assignment speed, or wireless signal.",
+        "examTip": "NTP = UDP port 123. Kerberos authentication requires clocks within 5 minutes. Inconsistent time makes log correlation impossible.",
+        "relatedTopics": [
+          "NTP",
+          "time-synchronisation",
+          "logging"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 NTP",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-029",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does a protocol analyser (such as Wireshark) capture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Traffic flow metadata such as source/destination IPs and byte counts",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Full packet contents including headers and payload data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SNMP MIB data from managed devices",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "CPU and memory utilisation of network devices",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A packet analyser/sniffer like Wireshark captures raw packets including full headers and payload, enabling deep protocol inspection and troubleshooting.",
+        "incorrect": "Flow metadata only = NetFlow/sFlow. SNMP MIB = SNMP manager. Device health = SNMP/monitoring tools.",
+        "examTip": "Wireshark tip: use a SPAN/mirror port on a switch to capture traffic from other ports. Apply display filters (e.g., ip.addr==192.168.1.1) to focus.",
+        "relatedTopics": [
+          "Wireshark",
+          "packet-capture",
+          "protocol-analyser"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Network tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-030",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a syslog server?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To provide DHCP services to network clients",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To centrally collect and store log messages from network devices",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To monitor real-time bandwidth on WAN links",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To back up device configurations automatically",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A syslog server centralises log messages from routers, switches, firewalls, and servers, making it easier to analyse events and troubleshoot across the network.",
+        "incorrect": "DHCP = IP assignment. Bandwidth = NetFlow/SNMP. Config backup = TFTP/config management.",
+        "examTip": "Syslog uses UDP 514. Severity 0-7: Emergency, Alert, Critical, Error, Warning, Notice, Informational, Debug. Lower = more severe.",
+        "relatedTopics": [
+          "syslog",
+          "logging",
+          "centralised-monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Logging",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-031",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A network admin needs to capture traffic from a specific switch port belonging to a suspicious host without disrupting the existing connection.",
+      "questionText": "Which switch feature enables this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Port mirroring (SPAN)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "PortFast",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "VLAN trunking",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Port security",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SPAN (Switched Port Analyser) copies all traffic from a source port to a destination port where a packet sniffer is connected, without disrupting normal traffic flow.",
+        "incorrect": "PortFast = STP bypass. VLAN trunking = multi-VLAN link. Port security = MAC address limits per port.",
+        "examTip": "SPAN = local mirror. RSPAN = mirror across multiple switches. ERSPAN = mirror to remote IP via GRE. All are non-disruptive.",
+        "relatedTopics": [
+          "SPAN",
+          "port-mirroring",
+          "monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Network tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-032",
+      "type": "yes-no-statements",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes network management concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "NetFlow collects metadata about traffic flows without capturing full packet payloads.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "SNMP traps are sent proactively by managed devices to alert the NMS of significant events.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A bandwidth monitor can detect when a WAN link is congested.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Syslog uses TCP port 514 by default.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "NetFlow = flow metadata only. SNMP traps = proactive alerts. Bandwidth monitors detect congestion. Syslog uses UDP 514 by default (not TCP).",
+        "incorrect": "Syslog is UDP 514 by default. Reliable syslog over TLS uses TCP 6514.",
+        "examTip": "NetFlow = flow analytics (who talked to whom). Syslog = event logs. SNMP = device health polling + traps.",
+        "relatedTopics": [
+          "NetFlow",
+          "SNMP",
+          "syslog",
+          "monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Monitoring",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-033",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does the traceroute (tracert on Windows) command show?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The MAC address of each hop between source and destination",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The path packets take and the round-trip time at each hop",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "All open ports on the destination host",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The DNS records associated with the destination hostname",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Traceroute uses ICMP TTL-exceeded messages to map each router hop between source and destination, showing IP addresses and round-trip times for each hop.",
+        "incorrect": "MAC addresses are not visible beyond Layer 2. Open ports = port scanner (nmap). DNS records = nslookup/dig.",
+        "examTip": "Traceroute uses TTL=1, 2, 3... incrementing each probe. When TTL reaches 0, the router sends back ICMP TTL-exceeded, revealing its IP.",
+        "relatedTopics": [
+          "traceroute",
+          "ICMP",
+          "path-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-034",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the function of the ipconfig /release and ipconfig /renew commands on Windows?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To flush the DNS resolver cache",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To release the current DHCP lease and request a new IP configuration",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To reset the network adapter driver",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To display the routing table",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ipconfig /release sends a DHCP Release message, and ipconfig /renew sends a new DHCP Discover to obtain fresh IP configuration from a DHCP server.",
+        "incorrect": "DNS flush = ipconfig /flushdns. Driver reset = Device Manager. Routing table = route print or netstat -r.",
+        "examTip": "DHCP troubleshooting sequence: ipconfig /release â†’ /renew. If you get 169.254.x.x, the DHCP server is unreachable.",
+        "relatedTopics": [
+          "DHCP",
+          "ipconfig",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-035",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command displays the current IP configuration, MAC address, and default gateway on a Windows host?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ipconfig",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ipconfig /all",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "arp -a",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "netstat -r",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ipconfig /all shows complete IP configuration including IP address, subnet mask, default gateway, DNS servers, DHCP server, MAC address, and lease details.",
+        "incorrect": "ipconfig alone shows basic IP info. arp -a shows the ARP cache. netstat -r shows the routing table.",
+        "examTip": "ipconfig = basic IP. ipconfig /all = full details including MAC, DHCP server, DNS. Use this first in any Windows network troubleshoot.",
+        "relatedTopics": [
+          "ipconfig",
+          "Windows-networking",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-036",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the function of a firewall in a network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To boost the wireless signal throughout a building",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To filter network traffic based on rules, allowing or blocking connections",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To assign IP addresses to network hosts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To increase the speed of internet connections",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A firewall controls inbound and outbound network traffic based on configured security rules, blocking unauthorised access while allowing legitimate traffic.",
+        "incorrect": "Wireless boosting = WAP/repeater. IP assignment = DHCP. Speed increase = QoS/bandwidth upgrade.",
+        "examTip": "Stateless firewall = inspects individual packets only. Stateful = tracks connection state. Next-gen firewall (NGFW) = also inspects application layer.",
+        "relatedTopics": [
+          "firewall",
+          "network-security",
+          "packet-filtering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Security devices",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-037",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between an IDS and an IPS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "IDS blocks threats; IPS only detects them",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "IDS detects and alerts on threats; IPS detects and actively blocks them inline",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "IPS operates at Layer 7; IDS operates at Layer 3",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "IDS is hardware only; IPS is software only",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IDS (Intrusion Detection System) monitors and alerts. IPS (Intrusion Prevention System) is deployed inline and can actively block malicious traffic in real time.",
+        "incorrect": "IDS = passive detection. IPS = active blocking. Both can operate at multiple OSI layers. Both can be hardware or software.",
+        "examTip": "IDS = out-of-band (tap/SPAN port), can't block. IPS = inline, can block. IPS must be inline to intercept traffic.",
+        "relatedTopics": [
+          "IDS",
+          "IPS",
+          "intrusion-detection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Security devices",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-038",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a DMZ in network security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A VLAN used exclusively for management traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A network segment that hosts public-facing services, isolated from the internal network",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A wireless network zone for guest users",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A VPN tunnel between two sites",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A DMZ (Demilitarised Zone) is a perimeter network segment that hosts public-facing servers (web, email, DNS), positioned between the internet and the internal network with firewalls on both sides.",
+        "incorrect": "Management VLAN is separate. Guest wireless is a different concept. VPNs are encrypted tunnels.",
+        "examTip": "DMZ architecture: Internet â†’ Firewall â†’ DMZ (public servers) â†’ Firewall â†’ Internal network. Even if DMZ is compromised, internal network is protected.",
+        "relatedTopics": [
+          "DMZ",
+          "network-segmentation",
+          "perimeter-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Network security",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-039",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which attack overwhelms a target with traffic from a single source to make it unavailable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DDoS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "DoS",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Man-in-the-middle",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ARP poisoning",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A DoS (Denial of Service) attack originates from a single source and floods a target with traffic or requests to exhaust its resources and make it unavailable.",
+        "incorrect": "DDoS = multiple sources (distributed). MitM = intercepts communications. ARP poisoning = redirects Layer 2 traffic.",
+        "examTip": "DoS = single source. DDoS = multiple sources (botnet). DDoS is harder to mitigate because you can't just block one IP.",
+        "relatedTopics": [
+          "DoS",
+          "DDoS",
+          "availability-attacks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Network attacks",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-040",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A network admin discovers that a host on the LAN is sending gratuitous ARP replies claiming to be the default gateway, redirecting all traffic through itself.",
+      "questionText": "What type of attack is occurring and what switch feature can prevent it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "VLAN hopping; prevent with BPDU Guard",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ARP poisoning; prevent with Dynamic ARP Inspection (DAI)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "DHCP spoofing; prevent with DHCP Snooping",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "MAC flooding; prevent with port security",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ARP poisoning sends fake ARP replies to poison the ARP caches of other hosts, redirecting traffic through the attacker (MitM). Dynamic ARP Inspection validates ARP packets against the DHCP snooping binding table.",
+        "incorrect": "VLAN hopping exploits trunk negotiation. DHCP spoofing provides fake IP configs. MAC flooding fills the CAM table forcing hub-like behaviour.",
+        "examTip": "DAI requires DHCP Snooping to be enabled first â€” it uses the DHCP snooping binding table to validate ARP replies.",
+        "relatedTopics": [
+          "ARP-poisoning",
+          "DAI",
+          "DHCP-snooping"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Network attacks",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-041",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 802.1X provide in a network environment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Link aggregation across multiple switch ports",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Port-based network access control requiring authentication before granting LAN access",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "VLAN assignment based on interface speed",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encryption of traffic between switches",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "802.1X is an IEEE standard for port-based NAC. Devices must authenticate (via RADIUS) before the switch grants access to the network, blocking unauthenticated devices.",
+        "incorrect": "Link aggregation = LACP (802.3ad). VLAN by speed is not a standard. Traffic encryption = MACsec (802.1AE).",
+        "examTip": "802.1X roles: Supplicant (device), Authenticator (switch/AP), Authentication Server (RADIUS). EAP is the authentication protocol used.",
+        "relatedTopics": [
+          "802.1X",
+          "NAC",
+          "RADIUS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Network access control",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-042",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which VPN protocol encapsulates the entire original IP packet and adds a new header, commonly used for site-to-site VPNs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "IPSec Transport mode",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "IPSec Tunnel mode",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SSL/TLS VPN",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "PPTP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IPSec Tunnel mode encapsulates the entire original IP packet (header + payload) and adds a new outer IP header, used for site-to-site VPNs between gateways.",
+        "incorrect": "Transport mode encrypts only the payload, used for host-to-host. SSL/TLS VPN uses web browser or lightweight client. PPTP is legacy and insecure.",
+        "examTip": "Tunnel mode = site-to-site (whole packet encrypted). Transport mode = host-to-host (payload only). Always use Tunnel mode for site-to-site VPNs.",
+        "relatedTopics": [
+          "IPSec",
+          "VPN",
+          "tunnel-mode"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 VPN",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-043",
+      "type": "yes-no-statements",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes network security concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A stateful firewall tracks the state of active connections and uses this context in filtering decisions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "WPA2-Enterprise uses a pre-shared key for authentication.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "DHCP Snooping prevents rogue DHCP servers from providing false IP configuration to clients.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Port security can prevent MAC flooding attacks by limiting the number of MAC addresses per port.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Stateful firewalls track connections. DHCP snooping blocks rogue DHCP. Port security limits MACs per port preventing flooding. WPA2-Enterprise uses 802.1X/RADIUS (not PSK â€” that's WPA2-Personal).",
+        "incorrect": "WPA2-Enterprise uses 802.1X authentication with individual credentials, not a shared key.",
+        "examTip": "WPA2-Personal = PSK (pre-shared key). WPA2-Enterprise = 802.1X (individual credentials via RADIUS).",
+        "relatedTopics": [
+          "stateful-firewall",
+          "WPA2",
+          "DHCP-snooping",
+          "port-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Network security",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-044",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which attack exploits double-tagging of 802.1Q frames to send traffic from one VLAN to another without routing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ARP poisoning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "MAC flooding",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "VLAN hopping",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "STP manipulation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "VLAN hopping via double-tagging adds two 802.1Q tags to a frame. The first switch strips the outer tag, and the inner tag tricks the second switch into delivering the frame to the target VLAN.",
+        "incorrect": "ARP poisoning targets Layer 2 ARP tables. MAC flooding fills the CAM table. STP manipulation attacks the spanning tree topology.",
+        "examTip": "Prevent VLAN hopping: set the native VLAN to an unused VLAN ID, explicitly tag native VLAN traffic, and don't use VLAN 1 as native VLAN.",
+        "relatedTopics": [
+          "VLAN-hopping",
+          "802.1Q",
+          "switch-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Network attacks",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-045",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a proxy server?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To assign IP addresses to network clients",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To act as an intermediary between clients and servers, providing content filtering, caching, and anonymity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt traffic between two VPN endpoints",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To provide redundancy for critical network services",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A proxy server intercepts client requests, providing content filtering (block malicious sites), caching (improve performance), and hiding client IPs (anonymity/privacy).",
+        "incorrect": "IP assignment = DHCP. VPN encryption = VPN gateway. Redundancy = clustering/failover.",
+        "examTip": "Forward proxy = client â†’ proxy â†’ internet (client anonymity). Reverse proxy = internet â†’ proxy â†’ servers (server protection, load balancing).",
+        "relatedTopics": [
+          "proxy-server",
+          "content-filtering",
+          "network-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Security devices",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-046",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "A user cannot connect to any network resources. The first step in troubleshooting should be to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Replace the network cable immediately",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Identify the problem by gathering information and checking the obvious first",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Escalate to the network team immediately",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Reinstall the network adapter drivers",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The CompTIA troubleshooting methodology starts with identifying the problem â€” gathering information, checking the obvious (is the cable plugged in? Is the NIC enabled?), and defining the scope before taking action.",
+        "incorrect": "Physical replacement, escalation, and driver reinstall are all premature before the problem is identified.",
+        "examTip": "CompTIA troubleshooting steps: 1.Identify 2.Establish theory 3.Test theory 4.Establish plan 5.Implement 6.Verify 7.Document.",
+        "relatedTopics": [
+          "troubleshooting-methodology",
+          "CompTIA",
+          "problem-identification"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting methodology",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-047",
+      "type": "ordering",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the CompTIA Network+ troubleshooting methodology steps in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Identify the problem",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Establish a theory of probable cause",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Test the theory to determine cause",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Establish a plan of action and implement",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Verify full system functionality",
+          "correctPosition": 5
+        },
+        {
+          "id": "o6",
+          "text": "Document findings and outcomes",
+          "correctPosition": 6
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "CompTIA's 6-step troubleshooting process: Identify â†’ Theory â†’ Test â†’ Plan/Implement â†’ Verify â†’ Document.",
+        "incorrect": "Documentation always comes last. Theory must come before testing.",
+        "examTip": "This methodology applies to all CompTIA exams (A+, Network+, Security+). Memorise all 6 steps in order.",
+        "relatedTopics": [
+          "troubleshooting-methodology",
+          "CompTIA"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting methodology",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-048",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A user reports intermittent connection drops on their PC. The network cable is plugged in and the link light is on. Other users on the same switch have no issues.",
+      "questionText": "What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The switch is overloaded",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Faulty network cable or NIC on the user's PC",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The DHCP server is down",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Incorrect VLAN configuration on the switch",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Since only one user is affected and others on the same switch are fine, the issue is isolated to that specific connection â€” most likely a faulty cable or failing NIC.",
+        "incorrect": "Switch overload would affect all users. DHCP failure would cause APIPA, not intermittent drops. VLAN misconfiguration would cause consistent failure, not intermittent.",
+        "examTip": "Intermittent = flaky cable, bad connector, duplex mismatch, or failing NIC. Replace the cable first â€” it's the cheapest and quickest fix.",
+        "relatedTopics": [
+          "cable-issues",
+          "NIC",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting physical issues",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-049",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A host has the IP address 169.254.10.5. What does this indicate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The host has been assigned a static IP address",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The host could not reach a DHCP server and self-assigned an APIPA address",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The host is on a different subnet from the rest of the network",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The host has a valid private IP address assigned by the router",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "169.254.x.x is the APIPA (Automatic Private IP Addressing) range. A host self-assigns an APIPA address when DHCP is unreachable, allowing only link-local communication.",
+        "incorrect": "Static IPs are manually configured. APIPA is not a static or valid routable address. Routers don't assign 169.254.x.x.",
+        "examTip": "169.254.x.x = DHCP failure. Check: DHCP server running? Cable connected? Switch port working? Correct VLAN? Is there a DHCP relay for cross-subnet?",
+        "relatedTopics": [
+          "APIPA",
+          "DHCP",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting IP issues",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-050",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "Users on a subnet report they can access resources on the local network but cannot reach the internet. Other subnets have normal internet access.",
+      "questionText": "What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DNS server is down",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The default gateway for the affected subnet is misconfigured or unreachable",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The ISP link is down",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The DHCP server is providing incorrect subnet masks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Local communication works (Layer 2/3 local routing OK) but internet fails â€” this points to a problem with the default gateway for that specific subnet. The gateway may be misconfigured, down, or filtering internet-bound traffic.",
+        "incorrect": "If DNS were down, users could still access resources by IP. ISP failure would affect all subnets. Incorrect subnet masks would break local communication too.",
+        "examTip": "Can reach local resources but not internet = default gateway issue. Check: gateway IP correct? Gateway responding to ping? Routing to internet from gateway?",
+        "relatedTopics": [
+          "default-gateway",
+          "routing",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting connectivity",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-051",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which tool is used to test whether a specific TCP or UDP port is open on a remote host?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ping",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "traceroute",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "nmap / port scanner",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "nslookup",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Nmap (Network Mapper) is a port scanner that tests which TCP/UDP ports are open, filtered, or closed on a remote host, useful for both troubleshooting and security assessments.",
+        "incorrect": "Ping tests ICMP reachability only. Traceroute maps the path. Nslookup tests DNS resolution.",
+        "examTip": "nmap -sS = TCP SYN scan. nmap -sU = UDP scan. nmap -A = aggressive (OS detection, version, scripts). Always get authorisation before scanning.",
+        "relatedTopics": [
+          "nmap",
+          "port-scanning",
+          "troubleshooting-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-052",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does the netstat command show on a host?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The ARP cache for the local network",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Active network connections, listening ports, and protocol statistics",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The DNS resolver cache",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The path packets take to a remote destination",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "netstat shows active TCP/UDP connections, ports the system is listening on, and network protocol statistics â€” useful for identifying unexpected connections or services.",
+        "incorrect": "ARP cache = arp -a. DNS cache = ipconfig /displaydns. Path to destination = traceroute.",
+        "examTip": "netstat -an = all connections with numbers. netstat -b (Windows) = shows which process owns each connection. Look for unexpected outbound connections.",
+        "relatedTopics": [
+          "netstat",
+          "troubleshooting-tools",
+          "active-connections"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-053",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A newly installed switch port shows the amber light instead of green. After checking, the admin discovers a duplex mismatch between the switch port and the connected device.",
+      "questionText": "What symptoms would a duplex mismatch MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complete loss of connectivity",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Slow performance, late collisions, and high error counts on the interface",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The port being placed into err-disabled state",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "VLAN traffic being blocked on the port",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A duplex mismatch (one side full-duplex, other half-duplex) causes late collisions, FCS errors, and very poor performance â€” the half-duplex side thinks collisions are occurring while the full-duplex side keeps transmitting.",
+        "incorrect": "Connectivity still exists but is degraded. Err-disable = BPDU Guard/port security violation. VLAN blocking = STP or access VLAN misconfiguration.",
+        "examTip": "Duplex mismatch symptoms: slow transfer speeds, late collisions in interface counters, high error rates. Fix: set both sides to auto-negotiate or force identical settings.",
+        "relatedTopics": [
+          "duplex-mismatch",
+          "interface-errors",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting physical issues",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-054",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A user can ping the default gateway but cannot resolve domain names. What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The default gateway is down",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "DNS server is unreachable or misconfigured",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The user's IP address is incorrect",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The network cable is faulty",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Successful gateway ping proves Layer 3 connectivity is working. DNS failure means the DNS server is unreachable, down, or the host has an incorrect DNS server configured.",
+        "incorrect": "Gateway is confirmed up. Incorrect IP would cause inability to reach even the gateway. Faulty cable would prevent the gateway ping.",
+        "examTip": "Troubleshoot DNS: ping by IP first (if that works, it's DNS). Use nslookup to test DNS resolution. Check DNS server IP in ipconfig /all.",
+        "relatedTopics": [
+          "DNS",
+          "troubleshooting",
+          "name-resolution"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting connectivity",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-055",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which tool is used to test the integrity and performance of copper network cables?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Optical power meter",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Cable tester / certifier",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Wi-Fi analyser",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Tone generator and probe",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A cable tester checks for continuity, wiring faults (opens, shorts, crossed pairs), and certifiers test against standards (Cat5e, Cat6) by measuring attenuation, NEXT, return loss, etc.",
+        "incorrect": "Optical power meter tests fibre. Wi-Fi analyser tests wireless. Tone generator traces cable paths (not test performance).",
+        "examTip": "Cable testing tools: Toner/probe (trace cable), Cable tester (basic continuity), Certifier (full performance testing). Use certifier for Cat6a installations.",
+        "relatedTopics": [
+          "cable-testing",
+          "troubleshooting-tools",
+          "copper-cable"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-056",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does it mean when a switch port LED is showing a solid amber/orange colour?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The port is operating normally at 100 Mbps",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The port is blocked by STP or is in an error state",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The port has PoE enabled",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The port is in half-duplex mode",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A solid amber/orange LED on a switch port typically indicates the port is blocked by Spanning Tree Protocol (STP) or is in an error/disabled state.",
+        "incorrect": "Normal operation = green. PoE state has its own indicator on some switches. Duplex mode is not indicated by colour.",
+        "examTip": "Switch port LEDs: Green = active/forwarding. Amber = STP blocked or err-disabled. Off = no link. Flashing green = activity.",
+        "relatedTopics": [
+          "STP",
+          "switch-LEDs",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting physical issues",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-057",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the function of BGP in internet routing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To route packets within a single enterprise LAN",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To exchange routing information between autonomous systems on the internet",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To provide redundancy for the default gateway",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To assign IP addresses to hosts automatically",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "BGP (Border Gateway Protocol) is the routing protocol of the internet, exchanging routing information between different autonomous systems (ISPs, large organisations).",
+        "incorrect": "OSPF/EIGRP = interior routing within an AS. HSRP/VRRP = gateway redundancy. DHCP = IP assignment.",
+        "examTip": "BGP = exterior gateway protocol (between ASes). OSPF/EIGRP = interior gateway protocols (within an AS). BGP uses TCP port 179.",
+        "relatedTopics": [
+          "BGP",
+          "routing-protocols",
+          "autonomous-system"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Routing protocols",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-058",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which first-hop redundancy protocol is a Cisco-proprietary protocol that provides gateway redundancy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "VRRP",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "HSRP",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "GLBP",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "CARP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "HSRP (Hot Standby Router Protocol) is a Cisco-proprietary FHRP that provides a virtual IP gateway shared between an active and standby router, ensuring gateway availability if the active router fails.",
+        "incorrect": "VRRP = open standard equivalent to HSRP. GLBP = Cisco's load-balancing FHRP. CARP = BSD/pfSense equivalent.",
+        "examTip": "FHRPs: HSRP (Cisco), VRRP (open standard), GLBP (Cisco, load balancing). All provide a virtual gateway IP shared between multiple routers.",
+        "relatedTopics": [
+          "HSRP",
+          "FHRP",
+          "gateway-redundancy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Routing",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-059",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of QoS (Quality of Service) in a network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To encrypt all network traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To prioritise specific types of traffic to ensure acceptable performance for time-sensitive applications",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To increase the total available bandwidth on a link",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To filter malicious traffic entering the network",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "QoS marks, classifies, and prioritises traffic so time-sensitive applications (VoIP, video conferencing) get sufficient bandwidth and low latency even when the network is congested.",
+        "incorrect": "QoS doesn't encrypt, increase physical bandwidth, or filter malware.",
+        "examTip": "QoS for VoIP: mark voice traffic as DSCP EF (Expedited Forwarding). Guarantee bandwidth, limit jitter and latency. VoIP needs <150ms latency and <30ms jitter.",
+        "relatedTopics": [
+          "QoS",
+          "traffic-prioritisation",
+          "VoIP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Network services",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-060",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which network topology provides the highest fault tolerance by connecting every device to every other device?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Star topology",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Bus topology",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Ring topology",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Full mesh topology",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "A full mesh topology connects every node to every other node, providing maximum redundancy â€” multiple paths exist between any two nodes so a single link failure doesn't break connectivity.",
+        "incorrect": "Star = central hub/switch (single point of failure). Bus = single shared cable (single point of failure). Ring = each node connected to two others.",
+        "examTip": "Full mesh = n*(n-1)/2 links needed. Very expensive but maximum redundancy. Partial mesh = compromise between cost and redundancy.",
+        "relatedTopics": [
+          "network-topology",
+          "full-mesh",
+          "fault-tolerance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Network topologies",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-061",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What type of address is ff:ff:ff:ff:ff:ff?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A multicast MAC address",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A broadcast MAC address sent to all devices on the local segment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A loopback MAC address",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An unassigned MAC address",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ff:ff:ff:ff:ff:ff is the Layer 2 broadcast address â€” all devices on the local network segment receive and process frames sent to this address.",
+        "incorrect": "Multicast MAC addresses start with 01:00:5e (IPv4) or 33:33 (IPv6). No loopback MAC exists. Unassigned MACs are not ff:ff:ff:ff:ff:ff.",
+        "examTip": "Layer 2 broadcast = ff:ff:ff:ff:ff:ff. Layer 3 broadcast = 255.255.255.255 or subnet broadcast. Both are confined to the local network/subnet.",
+        "relatedTopics": [
+          "MAC-address",
+          "broadcast",
+          "Layer-2"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 MAC addressing",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-062",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the maximum distance for a Cat6 UTP cable segment running at 1 Gbps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "50 metres",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "100 metres",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "150 metres",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "300 metres",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "All copper Ethernet standards (Cat5e, Cat6, Cat6a) are limited to 100 metres (328 feet) for a single cable segment at standard speeds.",
+        "incorrect": "50m is too short. 150m and 300m exceed the copper limit. Note: Cat6a supports 10 Gbps up to 100m.",
+        "examTip": "100m rule applies to ALL copper Ethernet. Extend with a switch or repeater. Fibre is needed for distances beyond 100m.",
+        "relatedTopics": [
+          "Cat6",
+          "cable-distance",
+          "copper-Ethernet"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Cable types",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-063",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between a straight-through cable and a crossover cable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Straight-through connects like devices; crossover connects unlike devices",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Straight-through connects unlike devices (PC to switch); crossover connects like devices (switch to switch)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They are identical in modern networks with auto-MDI/MDIX",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Crossover cables support higher speeds than straight-through",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Straight-through = unlike devices (PC to switch, switch to router). Crossover = like devices (PC to PC, switch to switch). However, modern devices support auto-MDI/MDIX which automatically detects and adjusts.",
+        "incorrect": "The device type rule is the traditional answer. Auto-MDI/MDIX makes crossover cables largely obsolete in modern networks.",
+        "examTip": "Modern Gigabit switches use auto-MDI/MDIX â€” either cable type works. On older networks: straight-through for unlike, crossover for like devices.",
+        "relatedTopics": [
+          "cable-types",
+          "straight-through",
+          "crossover"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Cable types",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-064",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What wireless frequency band typically offers better range but more interference?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5 GHz",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "6 GHz",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "2.4 GHz",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "60 GHz",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "2.4 GHz has better range and wall penetration than 5 GHz due to lower frequency, but has only 3 non-overlapping channels (1, 6, 11) and faces more interference from microwaves and Bluetooth.",
+        "incorrect": "5 GHz = more channels, less interference, shorter range. 6 GHz = Wi-Fi 6E/7, least interference. 60 GHz = WiGig, very short range.",
+        "examTip": "2.4 GHz: 3 non-overlapping channels (1,6,11), longer range, more interference. 5 GHz: 23+ non-overlapping channels, shorter range, less interference.",
+        "relatedTopics": [
+          "wireless-bands",
+          "2.4GHz",
+          "5GHz"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Wireless",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-065",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company is deploying a wireless network for a large office with many users in close proximity. Signal overlap between APs is causing co-channel interference.",
+      "questionText": "What is the BEST solution to reduce co-channel interference on 2.4 GHz?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increase the transmit power of all APs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Assign non-overlapping channels (1, 6, 11) to adjacent APs and consider migrating to 5 GHz",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Use WPA2 encryption on all APs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Enable SSID broadcast on all APs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Co-channel interference is reduced by assigning non-overlapping 2.4 GHz channels (1, 6, 11) to adjacent APs. Migrating to 5 GHz provides 23+ non-overlapping channels, greatly reducing interference.",
+        "incorrect": "Increasing power worsens interference. WPA2 = security, not interference. SSID broadcast is for discoverability, not interference.",
+        "examTip": "2.4 GHz only has 3 usable non-overlapping channels (1, 6, 11). High-density environments should use 5 GHz or 6 GHz (Wi-Fi 6E).",
+        "relatedTopics": [
+          "co-channel-interference",
+          "wireless-channels",
+          "2.4GHz"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Wireless",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-066",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of an OTDR (Optical Time Domain Reflectometer)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To test copper cable continuity and wiring faults",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To locate faults and measure the length of fibre optic cables",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To measure wireless signal strength and channel utilisation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To capture and analyse network packets",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An OTDR sends a light pulse into a fibre and measures reflections to locate splices, breaks, connectors, and bends, and calculate their distance from the test point.",
+        "incorrect": "Copper cable testing = cable tester. Wireless analysis = Wi-Fi analyser. Packet capture = Wireshark.",
+        "examTip": "OTDR = fibre fault finding. Optical power meter = fibre signal strength testing. Both are essential fibre troubleshooting tools.",
+        "relatedTopics": [
+          "OTDR",
+          "fibre-optic",
+          "troubleshooting-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-067",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a network baseline and why is it important?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A minimum speed requirement for network hardware",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A documented record of normal network performance used to identify deviations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The default configuration of a router after factory reset",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The minimum security requirements for a network device",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A network baseline documents normal operating metrics (bandwidth utilisation, latency, error rates) so that deviations from normal â€” indicating problems â€” can be quickly identified.",
+        "incorrect": "Speed requirements = SLA. Factory default = out-of-box config. Security requirements = security baseline.",
+        "examTip": "Without a baseline, you don't know what 'normal' looks like. Establish baselines during quiet periods and update them as the network evolves.",
+        "relatedTopics": [
+          "network-baseline",
+          "performance-monitoring",
+          "capacity-planning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Network monitoring",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-068",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command on a Windows host displays the local routing table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ipconfig /all",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "netstat -r or route print",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "arp -a",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "nslookup",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "netstat -r or route print displays the IP routing table on a Windows host, showing all routes including the default route (0.0.0.0), subnet routes, and host routes.",
+        "incorrect": "ipconfig /all = IP configuration. arp -a = ARP cache. nslookup = DNS lookup.",
+        "examTip": "route print on Windows = ip route on Linux/Cisco. Look for the 0.0.0.0 entry to find the default gateway route.",
+        "relatedTopics": [
+          "routing-table",
+          "route-print",
+          "Windows-networking"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-069",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of port security on a switch?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To block all traffic on a port until it is manually enabled",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To limit the number of MAC addresses allowed on a port and take action on violations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt traffic between the switch and connected devices",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To prevent STP topology changes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Port security restricts the number of MAC addresses allowed per switch port, preventing MAC flooding attacks and unauthorised devices from connecting.",
+        "incorrect": "Admin shutdown = different from port security. Switch doesn't encrypt traffic. BPDU Guard/Root Guard prevent STP attacks.",
+        "examTip": "Port security violation modes: protect (drop frames, no alert), restrict (drop + alert), shutdown (err-disable port). Use sticky MAC to auto-learn allowed MACs.",
+        "relatedTopics": [
+          "port-security",
+          "MAC-flooding",
+          "switch-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Switch security",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-070",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which attack involves an attacker sending a large volume of SYN packets without completing the TCP three-way handshake?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Smurf attack",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SYN flood",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Ping of Death",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Teardrop attack",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A SYN flood sends massive numbers of TCP SYN packets without completing the handshake, filling the server's connection queue (half-open connections) and preventing legitimate connections.",
+        "incorrect": "Smurf = ICMP amplification using broadcast. Ping of Death = oversized ping packets. Teardrop = malformed fragmented packets.",
+        "examTip": "SYN flood defense: SYN cookies (server doesn't allocate resources until handshake complete), rate limiting, firewall connection limits.",
+        "relatedTopics": [
+          "SYN-flood",
+          "DoS",
+          "TCP-attacks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Network attacks",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-071",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a honeypot in the context of network security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A device that speeds up network performance by caching data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A decoy system designed to attract and detect attackers",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A type of VPN used for remote access",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A network device that filters spam emails",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A honeypot is a decoy system that mimics a real target to attract attackers, allowing security teams to observe attack techniques and gather threat intelligence without risk to production systems.",
+        "incorrect": "Caching = proxy/CDN. VPN = encrypted tunnel. Email filtering = spam filter/mail gateway.",
+        "examTip": "Honeypot = decoy server. Honeynet = network of honeypots. Any interaction with a honeypot is suspicious by definition.",
+        "relatedTopics": [
+          "honeypot",
+          "deception-technology",
+          "threat-intelligence"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Security concepts",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-072",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which protocol provides encrypted management access to network devices, replacing Telnet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SNMP",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Telnet",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "SSH",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "HTTP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SSH (Secure Shell) provides encrypted terminal access to network devices, replacing Telnet which transmits all data including passwords in cleartext.",
+        "incorrect": "SNMP = network management protocol. Telnet = insecure cleartext. HTTP = unencrypted web.",
+        "examTip": "Always use SSH v2 (never v1 or Telnet). SSH uses TCP port 22. Also use for secure file transfer (SFTP/SCP).",
+        "relatedTopics": [
+          "SSH",
+          "secure-management",
+          "Telnet-replacement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Secure protocols",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-073",
+      "type": "yes-no-statements",
+      "topicId": "network-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes network security concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A VLAN on its own provides strong security isolation equivalent to a physical firewall.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Disabling unused switch ports reduces the attack surface of a network.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "MAC address filtering alone provides strong wireless security.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Changing the default SNMP community string 'public' is an important hardening step.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "VLANs provide logical separation but are vulnerable to VLAN hopping attacks. Disabling unused ports prevents physical access. Default SNMP community strings must be changed. MAC filtering is easily bypassed by MAC spoofing.",
+        "incorrect": "VLANs and MAC filtering alone are insufficient security controls.",
+        "examTip": "Network hardening checklist: disable unused ports, change default credentials, use SNMPv3, enable port security, use 802.1X, segment with firewalls + VLANs.",
+        "relatedTopics": [
+          "network-hardening",
+          "VLAN-security",
+          "SNMP-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Security hardening",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-074",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between a public cloud, private cloud, and hybrid cloud?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Public = on-premises; Private = third-party; Hybrid = both",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Public = shared infrastructure managed by provider; Private = dedicated for one org; Hybrid = combination of both",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Private cloud means no internet connectivity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Public cloud is always more secure than private cloud",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Public cloud = shared multi-tenant infrastructure managed by a CSP (AWS, Azure, GCP). Private cloud = dedicated single-tenant, on-premises or hosted. Hybrid = combination with workloads spanning both.",
+        "incorrect": "Cloud deployment is about tenancy and management, not just location. Private cloud can have internet access. Security depends on configuration.",
+        "examTip": "Cloud models: Public (shared/CSP-managed), Private (dedicated/org-managed), Hybrid (both), Community (shared by similar orgs). IaaS/PaaS/SaaS are service models.",
+        "relatedTopics": [
+          "cloud-models",
+          "public-cloud",
+          "private-cloud"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Cloud concepts",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-075",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a software-defined network (SDN)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A network that uses only wireless connections",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A network architecture that separates the control plane from the data plane, enabling centralised programmatic control",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A virtual network created within a physical network using VLANs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A network managed entirely through command-line interfaces",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SDN separates the network control plane (decision-making) from the data plane (packet forwarding), allowing centralised software control of network behaviour through APIs.",
+        "incorrect": "SDN isn't about wireless, VLANs only, or CLI management â€” it's about architectural separation and programmability.",
+        "examTip": "SDN layers: Application (apps/APIs), Control (SDN controller), Infrastructure (switches/routers). Enables network automation and programmability.",
+        "relatedTopics": [
+          "SDN",
+          "control-plane",
+          "data-plane"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 SDN",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-076",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a wireless site survey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To determine the number of users who will connect wirelessly",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To assess RF coverage, interference sources, and optimal AP placement before deployment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To configure SSID and security settings on access points",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To test internet bandwidth from wireless clients",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A wireless site survey assesses the physical environment, measures signal strength, identifies interference sources (other Wi-Fi, microwave ovens, Bluetooth), and determines optimal AP placement for complete coverage.",
+        "incorrect": "User count planning = capacity planning. SSID config = AP configuration. Bandwidth testing = speed test.",
+        "examTip": "Active survey = deploy APs and measure signal. Passive survey = scan existing signals. Heat maps visualise coverage. Always survey before installing permanent APs.",
+        "relatedTopics": [
+          "wireless-site-survey",
+          "RF-planning",
+          "AP-placement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Wireless deployment",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-077",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between disaster recovery (DR) and high availability (HA)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are the same concept",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "HA keeps systems running continuously; DR restores systems after an outage or disaster",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "DR is proactive; HA is reactive",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "HA requires offsite backup; DR does not",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "HA (High Availability) uses redundant components to prevent downtime (e.g., clustering, RAID, redundant links). DR focuses on restoring operations after a failure or disaster has already occurred.",
+        "incorrect": "They're different. HA is proactive (prevent failure). DR is reactive (recover after failure). HA uses redundancy; DR uses backups and recovery procedures.",
+        "examTip": "HA = prevent downtime (uptime SLAs, redundant hardware). DR = recover from disasters (RTO, RPO, backups, hot/warm/cold sites).",
+        "relatedTopics": [
+          "high-availability",
+          "disaster-recovery",
+          "RTO-RPO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 High availability",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-078",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A network admin needs to verify that a DNS change has propagated globally and that the new A record is being returned by external resolvers.",
+      "questionText": "Which tool is MOST appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ping",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "nslookup or dig",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "traceroute",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "netstat",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "nslookup (Windows/cross-platform) and dig (Linux/macOS) query specific DNS servers to check what records are being returned, allowing verification of DNS propagation.",
+        "incorrect": "Ping resolves the name but doesn't show DNS details. Traceroute shows path. Netstat shows connections.",
+        "examTip": "dig @8.8.8.8 example.com A = query Google DNS for the A record. nslookup example.com 8.8.8.8 = equivalent on Windows.",
+        "relatedTopics": [
+          "nslookup",
+          "dig",
+          "DNS-troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-079",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "After a power outage, a switch reboots and a port that was previously forwarding is now stuck in a blocking state even though it is the only uplink.",
+      "questionText": "What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The port's VLAN has been removed from the switch",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "STP has placed the port in blocking state due to a topology change",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The cable connecting to this port is faulty",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The port security violation mode is set to shutdown",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "After a reboot, STP recalculates the topology. If the port is not a designated or root port, STP may place it in blocking state. On single-uplink access switches, ensure PortFast or RSTP is configured to prevent this.",
+        "incorrect": "VLAN removal would cause all VLAN traffic to stop. A faulty cable wouldn't cause a blocking state (the link light would be off). Port security violation requires a MAC address trigger.",
+        "examTip": "Single uplink switch = enable PortFast on the uplink. Or use RSTP (802.1w) which converges in seconds vs 30-50 for classic STP.",
+        "relatedTopics": [
+          "STP",
+          "blocking-state",
+          "PortFast"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting switching issues",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-080",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does a high number of CRC errors on a switch interface typically indicate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High network utilisation",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Physical layer issues such as a faulty cable, bad connector, or duplex mismatch",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A routing loop in the network",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "VLAN misconfiguration",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "CRC (Cyclic Redundancy Check) errors indicate frames arrived with data corruption. This is typically caused by physical layer issues: bad cable, damaged connector, EMI interference, or duplex mismatch.",
+        "incorrect": "High utilisation causes drops/congestion, not CRC errors. Routing loops affect Layer 3. VLAN issues cause no traffic or wrong traffic.",
+        "examTip": "Interface error counters: CRC = physical/electrical problem. Late collisions = duplex mismatch. Input drops = buffer overflow (congestion).",
+        "relatedTopics": [
+          "CRC-errors",
+          "physical-layer",
+          "interface-statistics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting physical issues",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-081",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A user reports they can access websites by IP address but not by domain name.",
+      "questionText": "What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The user's firewall is blocking web traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "DNS resolution is failing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The default gateway is misconfigured",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The user's network cable is faulty",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Access by IP works (network routing is fine) but by name fails â€” this isolates the problem to DNS. Either the DNS server is unreachable, has wrong records, or is misconfigured on the client.",
+        "incorrect": "If the firewall blocked web traffic, IP access would also fail. Default gateway = both would fail. Faulty cable = nothing would work.",
+        "examTip": "Classic Network+ question: works by IP, fails by name = DNS problem. Use nslookup to verify. Check DNS server IP in ipconfig /all.",
+        "relatedTopics": [
+          "DNS",
+          "name-resolution",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting connectivity",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-082",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a loopback address (127.0.0.1)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To identify the default gateway",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To test the local TCP/IP stack without sending traffic on the network",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To identify all hosts on the local subnet",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To represent an unassigned IP address",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The loopback address (127.0.0.1 or ::1 for IPv6) sends packets back to the local host's network stack, testing whether TCP/IP is installed and functioning correctly without physical network involvement.",
+        "incorrect": "Default gateway = router interface address. Subnet broadcast identifies all hosts. Unassigned = 0.0.0.0.",
+        "examTip": "ping 127.0.0.1 = test local TCP/IP stack. If this fails, reinstall network drivers. If this works but ping to gateway fails = physical/Layer 2 issue.",
+        "relatedTopics": [
+          "loopback",
+          "127.0.0.1",
+          "TCP-IP-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 Special IP addresses",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-083",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A company has the network 172.16.0.0/16. An admin wants to create subnets that each support at least 500 hosts. What is the minimum prefix length they should use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "/22",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "/23",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "/24",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "/25",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "/23 has 9 host bits: 2^9 - 2 = 510 usable hosts. This is the minimum prefix that supports 500+ hosts.",
+        "incorrect": "/24 = 254 usable (too few). /22 = 1022 usable (more than needed). /25 = 126 usable (too few). /23 is the tightest fit.",
+        "examTip": "Need hosts â†’ find host bits: >500 needs at least 9 bits (512-2=510). Prefix = 32-9 = /23.",
+        "relatedTopics": [
+          "subnetting",
+          "host-calculation",
+          "CIDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 Subnetting",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-084",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a proxy ARP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To block ARP requests on a network segment",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To allow a router to respond to ARP requests on behalf of hosts on a different subnet",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt ARP traffic between switches",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To cache ARP responses on a dedicated server",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Proxy ARP allows a router to respond to ARP requests for IP addresses on different subnets. The router responds with its own MAC address, enabling hosts that don't know about subnets to reach remote hosts.",
+        "incorrect": "Proxy ARP enables, not blocks ARP. It's not about encryption or dedicated caching servers.",
+        "examTip": "Proxy ARP is usually disabled in modern networks â€” it can hide subnet misconfiguration. Ensure hosts have correct default gateways instead.",
+        "relatedTopics": [
+          "proxy-ARP",
+          "routing",
+          "ARP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 ARP",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-085",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A security admin wants to prevent users from connecting unauthorised devices (like personal laptops) to the corporate network.",
+      "questionText": "Which technology is MOST effective at enforcing this policy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "MAC address filtering on the switches",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "802.1X port-based Network Access Control",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Disabling DHCP",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Changing the SSID broadcast setting",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "802.1X requires devices to authenticate (via certificates or credentials) before the switch grants network access. Unauthorised devices without valid credentials are blocked at the port level.",
+        "incorrect": "MAC filtering is easily bypassed by MAC spoofing. Disabling DHCP still allows static IP assignment. SSID settings are wireless-only and don't prevent wired connections.",
+        "examTip": "802.1X with certificate-based authentication (EAP-TLS) is the strongest NAC option â€” only domain-joined devices with valid certs can connect.",
+        "relatedTopics": [
+          "802.1X",
+          "NAC",
+          "unauthorised-devices"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Network access control",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-086",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of an out-of-band management network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To carry user data traffic on a separate VLAN",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To provide management access to devices even when the primary network is down",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To provide wireless access for network administrators",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To load balance traffic between multiple WAN connections",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An out-of-band (OOB) management network uses a separate dedicated channel (serial console, dedicated management port, cellular) to access and manage devices even when the production network is unavailable.",
+        "incorrect": "OOB management is separate from user data VLANs. It's not wireless access or load balancing.",
+        "examTip": "OOB examples: serial console server, IPMI/iDRAC/iLO (server management), dedicated management VLAN + separate switch. Critical for managing devices after network failures.",
+        "relatedTopics": [
+          "out-of-band-management",
+          "console-access",
+          "network-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Network management",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-087",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the function of a wireless access point (AP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To assign IP addresses to wireless clients",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To bridge wireless clients onto a wired network",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To route traffic between different IP subnets wirelessly",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To filter malicious traffic from wireless networks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A wireless AP bridges (Layer 2) wireless client traffic onto the wired LAN infrastructure, acting as a hub between wireless and wired segments.",
+        "incorrect": "IP assignment = DHCP server. Layer 3 routing = router. Traffic filtering = firewall/IPS.",
+        "examTip": "AP = Layer 2 bridge (wireless to wired). In lightweight AP mode, the WLC (Wireless LAN Controller) handles all management. Autonomous AP = self-managed.",
+        "relatedTopics": [
+          "wireless-AP",
+          "bridging",
+          "wireless-infrastructure"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.4 Wireless",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-088",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which WAN technology uses labels to make forwarding decisions, allowing traffic engineering and QoS across service provider networks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Frame Relay",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "MPLS",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ATM",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DSL",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "MPLS (Multiprotocol Label Switching) uses short labels rather than long IP lookups to forward packets, enabling traffic engineering, QoS, and VPN services across service provider networks.",
+        "incorrect": "Frame Relay and ATM are legacy WAN technologies. DSL = broadband access technology.",
+        "examTip": "MPLS is common in enterprise WAN services. Labels added at ingress LSR, switched by LSRs, removed at egress LSR. Enables Layer 3 VPNs for enterprises.",
+        "relatedTopics": [
+          "MPLS",
+          "WAN",
+          "label-switching"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 WAN technologies",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-089",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a change management process in network operations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To monitor network performance in real time",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To ensure network changes are planned, reviewed, approved, and documented to minimise risk",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To automatically apply firmware updates to network devices",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To configure IP addresses on new devices",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Change management ensures all network changes go through a formal process: request, impact assessment, approval, implementation window, rollback plan, and documentation â€” preventing unplanned outages.",
+        "incorrect": "Real-time monitoring = SNMP/SIEM. Auto-patching = patch management. IP configuration = DHCP/static assignment.",
+        "examTip": "Change management prevents the #1 cause of network outages â€” unplanned changes. Always have a rollback plan before making any changes.",
+        "relatedTopics": [
+          "change-management",
+          "ITIL",
+          "network-operations"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Organisational processes",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-090",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does CGNAT (Carrier-Grade NAT) do in the context of IPv4 address exhaustion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It converts IPv6 addresses to IPv4 addresses",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It allows multiple ISP customers to share a single public IP address using double NAT",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It provides direct global IPv4 addresses to all end users",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It encrypts all traffic between the customer and the ISP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "CGNAT (Large-Scale NAT) performs a second layer of NAT at the ISP level, allowing multiple subscribers to share the same public IPv4 address, extending the life of IPv4 addresses.",
+        "incorrect": "CGNAT is not IPv4-to-IPv6 translation. It actually reduces the number of public IPs per customer. It doesn't encrypt traffic.",
+        "examTip": "CGNAT means your 'public' IP is actually shared with many other customers. This can break some protocols (P2P, gaming, port forwarding). IPv6 deployment is the long-term solution.",
+        "relatedTopics": [
+          "CGNAT",
+          "IPv4-exhaustion",
+          "NAT"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 IPv4 addressing",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-091",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "Two hosts in the same VLAN cannot communicate with each other. Both show correct IP addresses on the same subnet. The switch shows both ports as active and forwarding.",
+      "questionText": "What should the admin check NEXT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Check the routing table on the router",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Verify both ports are in the same VLAN on the switch",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Check if the DHCP server is running",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Replace the network cables on both hosts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Same subnet, ports forwarding, but can't communicate â€” the most likely cause is that the ports are actually in different VLANs on the switch, even though the IPs appear correct. Check 'show vlan brief' on the switch.",
+        "incorrect": "Routing is Layer 3 (same subnet = no routing needed). DHCP is already assigned (IPs are correct). Cables would cause link failures, not shown.",
+        "examTip": "Same subnet, no comms, ports up = VLAN mismatch. Check switch VLAN assignments first. 'show vlan brief' on Cisco shows which ports are in which VLAN.",
+        "relatedTopics": [
+          "VLAN",
+          "troubleshooting",
+          "Layer-2"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting switching",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-092",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a content filter in a network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To increase the speed of internet access",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To inspect and block access to websites or content based on categories or keywords",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To encrypt web traffic between users and websites",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To cache web content to reduce bandwidth usage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Content filters inspect web traffic and block access to prohibited categories (adult content, gambling, malware sites) based on policies â€” commonly deployed as a web proxy or DNS filtering service.",
+        "incorrect": "Speed acceleration = QoS/CDN. Encryption = TLS/VPN. Caching = web proxy (caching function specifically).",
+        "examTip": "Content filtering can be URL-based, DNS-based (e.g., Cisco Umbrella), or deep packet inspection. Also helps block malware download sites.",
+        "relatedTopics": [
+          "content-filter",
+          "web-filtering",
+          "network-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Security devices",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-093",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does the acronym FQDN stand for and what is it used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fully Qualified Domain Name â€” the complete hostname including all domain labels",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Fast Queue Data Network â€” a QoS mechanism for prioritising traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Federated Query Distribution Node â€” a load balancing technique",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Full Quality Distribution Network â€” a CDN architecture",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An FQDN (Fully Qualified Domain Name) is the complete domain name including all labels (e.g., mail.example.com.) â€” used to unambiguously identify a host on the internet.",
+        "incorrect": "The other options are fictitious.",
+        "examTip": "FQDN = hostname.domain.tld. (e.g., www.comptia.org). The trailing dot represents the DNS root. Used in certificates, DNS records, and service configurations.",
+        "relatedTopics": [
+          "FQDN",
+          "DNS",
+          "hostname"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 DNS",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-094",
+      "type": "single-choice",
+      "topicId": "network-implementation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the native VLAN on an 802.1Q trunk and why is it a security concern?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The VLAN assigned to the switch management interface; it's a concern because management traffic is unencrypted",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The VLAN whose frames are sent untagged on a trunk; it's a concern because double-tagging attacks target the native VLAN",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The first VLAN created on a switch; it must match on all switches",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The VLAN used for voice traffic; it has priority in QoS queues",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The native VLAN carries untagged frames on a trunk. Attackers use VLAN hopping via double-tagging to send frames into any VLAN that matches the native VLAN on the trunk.",
+        "incorrect": "Native VLAN is not the same as the management VLAN (though they're often misconfigured to be the same). It's not necessarily the first VLAN or the voice VLAN.",
+        "examTip": "Security best practice: set native VLAN to an unused VLAN ID (not VLAN 1). Some configs explicitly tag the native VLAN to prevent double-tagging attacks.",
+        "relatedTopics": [
+          "native-VLAN",
+          "VLAN-hopping",
+          "trunk-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 VLANs",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-095",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of network documentation such as logical and physical diagrams?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To meet regulatory requirements only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To provide reference information for troubleshooting, planning, and change management",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To configure devices automatically using templates",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To monitor real-time network performance",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Network diagrams and documentation enable faster troubleshooting (understand the network quickly), capacity planning, change management (know what will be affected), and onboarding of new staff.",
+        "incorrect": "Documentation alone doesn't meet compliance, automate configs, or monitor performance.",
+        "examTip": "Physical diagram = physical connections, device locations, cable runs. Logical diagram = IP addressing, VLANs, routing, services. Both are essential.",
+        "relatedTopics": [
+          "network-documentation",
+          "diagrams",
+          "change-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Documentation",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-096",
+      "type": "single-choice",
+      "topicId": "network-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does AAA stand for in network security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Authentication, Authorisation, Accounting",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Access, Administration, Auditing",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Availability, Accuracy, Accountability",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Authorisation, Accessibility, Archiving",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "AAA = Authentication (verify identity), Authorisation (determine access rights), Accounting (log what was done). Implemented by RADIUS or TACACS+ servers.",
+        "incorrect": "The other options are not the correct AAA definition.",
+        "examTip": "RADIUS = AAA for network access (UDP 1812/1813). TACACS+ = AAA for device management (TCP 49, Cisco). Both provide centralised authentication.",
+        "relatedTopics": [
+          "AAA",
+          "RADIUS",
+          "TACACS+"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 AAA",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-097",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A wireless client shows full signal bars but cannot connect to the network or obtain an IP address. Other wireless clients nearby connect successfully.",
+      "questionText": "What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The AP is overloaded with too many clients",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The client's wireless NIC driver or settings are misconfigured",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The SSID is hidden",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The AP is too far away",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Full signal but no connection on one device when others work indicates a client-side issue â€” NIC driver, security settings mismatch (wrong password/certificate), or adapter configuration issue.",
+        "incorrect": "AP overload would affect all clients. Hidden SSID would prevent connection attempt entirely. Distance = weak signal, not full bars.",
+        "examTip": "Wireless troubleshooting: Check if signal is strong (AP issue ruled out). Then check client credentials, drivers, IP configuration, and whether the device connects to other networks.",
+        "relatedTopics": [
+          "wireless-troubleshooting",
+          "DHCP",
+          "client-connectivity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting wireless",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-098",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A network admin runs traceroute and sees that packets reach a certain hop and then all subsequent hops show '* * *'. What does this indicate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The destination host is offline",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A routing loop exists in the network",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A device is blocking ICMP TTL-exceeded messages, or traffic is being dropped beyond that point",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "The network is congested beyond that hop",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Asterisks in traceroute output mean no ICMP TTL-exceeded reply was received. This can mean a firewall is blocking ICMP, the router is not responding to ICMP, or packets are being dropped beyond that point.",
+        "incorrect": "Offline destination would show the last hop before the destination as * * *. A loop would show repeated hops. Congestion shows high latency, not silence.",
+        "examTip": "* * * in traceroute = ICMP blocked or dropped. Try traceroute with TCP (tcptraceroute) to bypass ICMP filtering. Check if the last responding hop is a firewall.",
+        "relatedTopics": [
+          "traceroute",
+          "ICMP-filtering",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-099",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of an SLA (Service Level Agreement) in networking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To define technical configuration standards for network devices",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To formally define expected performance levels, uptime guarantees, and remedies between a provider and customer",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To document the network topology and IP addressing scheme",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To outline the security policies applied to the network",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An SLA is a contract between a service provider and customer that defines measurable service metrics (uptime %, latency, packet loss, support response times) and remedies if targets are missed.",
+        "incorrect": "Technical config = standards/procedures. Topology = network documentation. Security policies = security policy documents.",
+        "examTip": "Common SLA metrics: uptime (99.9% = 8.7hrs downtime/year, 99.99% = 52min/year), MTTR (repair time), latency, packet loss, jitter.",
+        "relatedTopics": [
+          "SLA",
+          "uptime",
+          "network-services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Agreements",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-100",
+      "type": "single-choice",
+      "topicId": "network-troubleshooting",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A help desk ticket states: 'I can browse the internet fine, but I cannot connect to our company's internal file server by hostname. I CAN connect to it using its IP address directly.'",
+      "questionText": "What is the MOST precise diagnosis and recommended fix?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The file server is offline; restart it",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Internal DNS is not resolving the file server's hostname; check the internal DNS A record and DNS server configuration",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The user's default gateway is incorrect; update it",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The file server's firewall is blocking ICMP; disable it",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Internet works (external DNS and routing OK). IP access works (network path OK). Hostname fails = internal DNS problem. The internal DNS server may be missing or have an incorrect A record for the file server.",
+        "incorrect": "Server is online (accessible by IP). Default gateway is fine (internet works). ICMP/firewall is irrelevant since IP access works.",
+        "examTip": "Works by IP, fails by name = DNS. For internal resources: check internal DNS server A records. Use nslookup server-name to test. Verify client has correct DNS server IP.",
+        "relatedTopics": [
+          "DNS",
+          "internal-DNS",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Troubleshooting connectivity",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ],
+  "certificationId": "comptia-network-plus",
+  "version": "2024-01"
+}

@@ -86,6 +86,14 @@ export function DashboardPage() {
     examsTaken,
   };
 
+  // SM-2 due count for active cert
+  const activeCertProgress = progress.certifications[activeCertId];
+  const dueCount = activeCertProgress
+    ? Object.values(activeCertProgress.sm2 ?? {}).filter(
+      (s) => s && s.dueDate <= new Date().toISOString().split('T')[0],
+    ).length
+    : 0;
+
   // ── Cert progress cards — active cert only ────────────────────────────────
   const colorMap: Record<string, string> = {
     'az-900': '#0078D4',
@@ -156,6 +164,7 @@ export function DashboardPage() {
       activeTrack={activeTrack}
       nextCert={nextCert}
       nextCertId={nextCertId}
+      dueCount={dueCount}
     />
   );
 }

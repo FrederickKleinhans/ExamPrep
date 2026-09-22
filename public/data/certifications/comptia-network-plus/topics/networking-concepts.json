@@ -1,0 +1,1367 @@
+{
+  "certificationId": "comptia-network-plus",
+  "topicId": "networking-concepts",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "netplus-001",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which OSI model layer is responsible for logical addressing and routing packets between networks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Layer 2 â€“ Data Link",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Layer 3 â€“ Network",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Layer 4 â€“ Transport",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Layer 5 â€“ Session",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Layer 3 (Network) handles logical IP addressing and routing of packets between different networks. Routers operate at this layer.",
+        "incorrect": "Layer 2 handles MAC addressing and local frame delivery. Layer 4 handles end-to-end transport. Layer 5 manages sessions.",
+        "examTip": "OSI layers 1-7: Physical, Data Link, Network, Transport, Session, Presentation, Application. Mnemonic: 'Please Do Not Throw Sausage Pizza Away'.",
+        "relatedTopics": [
+          "OSI-model",
+          "routing",
+          "IP-addressing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 OSI model",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-002",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary difference between TCP and UDP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "TCP is faster; UDP is slower",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "TCP provides reliable connection-oriented delivery; UDP is connectionless with no guaranteed delivery",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "UDP encrypts data; TCP does not",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "TCP is used for DNS; UDP is used for HTTP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "TCP establishes a connection via 3-way handshake, guarantees delivery, orders packets, and handles retransmission. UDP sends datagrams with no handshake, ordering, or retransmission.",
+        "incorrect": "UDP is faster due to lower overhead. Neither encrypts by default. DNS uses UDP 53. HTTP uses TCP 80.",
+        "examTip": "TCP = reliable (web, email, file transfer). UDP = fast (DNS, DHCP, VoIP, streaming, gaming).",
+        "relatedTopics": [
+          "TCP",
+          "UDP",
+          "transport-layer"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Protocols",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-003",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A host has the IP address 192.168.10.55 with a subnet mask of 255.255.255.0. What is the network address?",
+      "options": [
+        {
+          "id": "A",
+          "text": "192.168.10.0",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "192.168.10.55",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "192.168.10.255",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "192.168.0.0",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "With a /24 mask (255.255.255.0), the first three octets are the network portion. Network address = 192.168.10.0 (all host bits set to zero).",
+        "incorrect": "192.168.10.55 is the host address. 192.168.10.255 is the broadcast. 192.168.0.0 is a /16 network address.",
+        "examTip": "Network address = IP AND subnet mask. Host bits all 0s = network. Host bits all 1s = broadcast.",
+        "relatedTopics": [
+          "subnetting",
+          "IPv4",
+          "subnet-mask"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 IPv4 addressing",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-004",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "How many usable host addresses are available in a /28 subnet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "14",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "16",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "30",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "254",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A /28 has 4 host bits. Total = 2^4 = 16 addresses. Usable = 16 - 2 = 14 (subtract network and broadcast).",
+        "incorrect": "16 is total addresses. /27 gives 30 usable. /24 gives 254 usable.",
+        "examTip": "Usable hosts = 2^(host bits) - 2. /28=14, /27=30, /26=62, /25=126, /24=254.",
+        "relatedTopics": [
+          "subnetting",
+          "CIDR",
+          "IPv4"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 Subnetting",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-005",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which of the following is an APIPA address that a host assigns itself when no DHCP server is reachable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "192.168.1.100",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "10.0.0.1",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "169.254.45.100",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "172.16.0.1",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "APIPA (Automatic Private IP Addressing) uses the 169.254.0.0/16 range. A host assigns itself an APIPA address when DHCP is unavailable, allowing local communication only.",
+        "incorrect": "192.168.x.x and 10.x.x.x are RFC 1918 private ranges. 172.16.x.x is also private. APIPA is specifically 169.254.x.x.",
+        "examTip": "Seeing a 169.254.x.x address means the host can't reach a DHCP server. Check DHCP server, cable, and switch port.",
+        "relatedTopics": [
+          "APIPA",
+          "DHCP",
+          "IPv4"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 IPv4 addressing",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-006",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which IPv6 address type is automatically configured on every IPv6 interface and is only valid for communication on the local link?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Global unicast (2000::/3)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Unique local (fc00::/7)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Link-local (fe80::/10)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Multicast (ff00::/8)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Link-local addresses (fe80::/10) are automatically assigned to every IPv6 interface and are only usable within the local network segment â€” they are never routed.",
+        "incorrect": "Global unicast = public IPv6 (routable). Unique local = private IPv6 (organisation-wide). Multicast = one-to-many delivery.",
+        "examTip": "fe80:: = link-local (auto-assigned, non-routable). fd00:: = unique local (private). 2001:: = global unicast (public). ::1 = loopback.",
+        "relatedTopics": [
+          "IPv6",
+          "link-local",
+          "addressing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 IPv6 addressing",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-007",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What protocol automatically assigns IP addresses, subnet masks, gateways, and DNS to network hosts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DNS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "DHCP",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ARP",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ICMP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DHCP (Dynamic Host Configuration Protocol) automatically provides complete IP configuration to hosts using the DORA process: Discover, Offer, Request, Acknowledge.",
+        "incorrect": "DNS resolves names to IPs. ARP resolves IPs to MAC addresses. ICMP is for diagnostics (ping).",
+        "examTip": "DHCP uses UDP ports 67 (server) and 68 (client). DORA: Discover (broadcast) â†’ Offer â†’ Request â†’ Acknowledge.",
+        "relatedTopics": [
+          "DHCP",
+          "DORA",
+          "IP-configuration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 DHCP",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-008",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which DNS record type maps a hostname to an IPv4 address?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AAAA",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "MX",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "CNAME",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An A record maps a hostname to an IPv4 address (e.g., www.example.com â†’ 93.184.216.34).",
+        "incorrect": "AAAA = IPv6 address. MX = mail server. CNAME = alias to another hostname.",
+        "examTip": "DNS records: A(IPv4), AAAA(IPv6), CNAME(alias), MX(mail), NS(name server), PTR(reverse), SOA(zone authority), TXT(text/SPF/DKIM/DMARC).",
+        "relatedTopics": [
+          "DNS",
+          "A-record",
+          "name-resolution"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 DNS",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-009",
+      "type": "yes-no-statements",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes network protocols and ports.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "HTTP uses TCP port 80.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "HTTPS uses UDP port 443.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "SSH uses TCP port 22.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "DNS uses only TCP port 53.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "HTTP=TCP 80. SSH=TCP 22. HTTPS uses TCP 443 not UDP. DNS uses UDP 53 primarily but also TCP 53 for large responses and zone transfers.",
+        "incorrect": "HTTPS is TCP only. DNS uses both UDP and TCP on 53.",
+        "examTip": "Key ports to memorise: FTP(21), SSH(22), Telnet(23), SMTP(25), DNS(53), DHCP(67/68), HTTP(80), HTTPS(443), SMB(445), RDP(3389), SNMP(161/162).",
+        "relatedTopics": [
+          "ports",
+          "protocols",
+          "TCP-UDP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Ports and protocols",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-010",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of NAT (Network Address Translation)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To encrypt traffic between internal and external networks",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To translate private IP addresses to a public IP for internet communication",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To assign IP addresses automatically to hosts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To resolve hostnames to IP addresses",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "NAT translates RFC 1918 private IP addresses to one or more public IPs, allowing multiple internal hosts to share a single public IP for internet access.",
+        "incorrect": "Encryption = VPN/TLS. IP assignment = DHCP. Name resolution = DNS.",
+        "examTip": "PAT (Port Address Translation) = many-to-one NAT using unique port numbers. Used by most home/office routers. Static NAT = one-to-one mapping.",
+        "relatedTopics": [
+          "NAT",
+          "PAT",
+          "private-addressing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 NAT",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-011",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A network admin needs to divide the 192.168.1.0/24 network into 4 equal subnets.",
+      "questionText": "What subnet mask should be used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "255.255.255.192 (/26)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "255.255.255.224 (/27)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "255.255.255.128 (/25)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "255.255.255.240 (/28)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "To create 4 subnets, borrow 2 bits (2^2=4). /24 + 2 = /26 (255.255.255.192). Each subnet has 62 usable hosts.",
+        "incorrect": "/27=8 subnets, /25=2 subnets, /28=16 subnets.",
+        "examTip": "Subnets needed â†’ bits borrowed: 2=1bit, 4=2bits, 8=3bits, 16=4bits. Add borrowed bits to prefix.",
+        "relatedTopics": [
+          "subnetting",
+          "CIDR",
+          "subnet-mask"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 Subnetting",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-012",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which protocol resolves IP addresses to MAC addresses on a local network segment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "RARP",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ICMP",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "ARP",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "IGMP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ARP (Address Resolution Protocol) broadcasts a request asking 'who has IP x.x.x.x?' and the owner replies with its MAC address.",
+        "incorrect": "RARP = MAC to IP (legacy, replaced by DHCP). ICMP = diagnostics. IGMP = multicast group membership.",
+        "examTip": "ARP cache stores recent IP-to-MAC mappings. 'arp -a' shows the cache. ARP spoofing/poisoning is a Layer 2 attack.",
+        "relatedTopics": [
+          "ARP",
+          "MAC-address",
+          "Layer-2"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 ARP",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-013",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a default gateway?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The DNS server used by the host",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The router interface that forwards traffic destined for other networks",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The switch port a host is connected to",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The DHCP server on the local subnet",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The default gateway is the router interface on the local subnet. Hosts send all traffic destined for remote networks to the default gateway for forwarding.",
+        "incorrect": "DNS resolves names. The switch port is a physical connection. The DHCP server assigns IPs.",
+        "examTip": "Default gateway must be in the same subnet as the host. If a host has no default gateway, it can only communicate locally.",
+        "relatedTopics": [
+          "default-gateway",
+          "routing",
+          "subnet"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Routing concepts",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-014",
+      "type": "dropdown-select",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each protocol to its correct well-known port number.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "RDP (Remote Desktop Protocol)",
+          "options": [
+            "22",
+            "23",
+            "443",
+            "3389"
+          ],
+          "correctAnswer": "3389"
+        },
+        {
+          "id": "d2",
+          "prompt": "SMTP (Simple Mail Transfer Protocol)",
+          "options": [
+            "25",
+            "110",
+            "143",
+            "465"
+          ],
+          "correctAnswer": "25"
+        },
+        {
+          "id": "d3",
+          "prompt": "SNMP (Simple Network Management Protocol)",
+          "options": [
+            "161",
+            "162",
+            "514",
+            "69"
+          ],
+          "correctAnswer": "161"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "RDP=3389, SMTP=25 (secure submission=587/465), SNMP queries=161 (traps=162).",
+        "incorrect": "SSH=22, Telnet=23, HTTPS=443, POP3=110, IMAP=143, Syslog=514, TFTP=69.",
+        "examTip": "Full port list: FTP(20/21), SSH(22), Telnet(23), SMTP(25), DNS(53), HTTP(80), HTTPS(443), SMB(445), RDP(3389), SNMP(161/162).",
+        "relatedTopics": [
+          "ports",
+          "protocols",
+          "well-known-ports"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Ports and protocols",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-015",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which routing protocol is a link-state protocol that builds a complete topology map using Dijkstra's algorithm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "RIPv2",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "EIGRP",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "OSPF",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "BGP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "OSPF (Open Shortest Path First) is a link-state protocol that floods LSAs to all routers, building a complete topology map and using Dijkstra's SPF algorithm to compute best paths.",
+        "incorrect": "RIP = distance-vector (hop count). EIGRP = Cisco hybrid. BGP = path-vector used between autonomous systems on the internet.",
+        "examTip": "Link-state = OSPF, IS-IS. Distance-vector = RIP. OSPF metric = cost (inversely proportional to bandwidth).",
+        "relatedTopics": [
+          "OSPF",
+          "routing-protocols",
+          "link-state"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Routing protocols",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-057",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the function of BGP in internet routing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To route packets within a single enterprise LAN",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To exchange routing information between autonomous systems on the internet",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To provide redundancy for the default gateway",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To assign IP addresses to hosts automatically",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "BGP (Border Gateway Protocol) is the routing protocol of the internet, exchanging routing information between different autonomous systems (ISPs, large organisations).",
+        "incorrect": "OSPF/EIGRP = interior routing within an AS. HSRP/VRRP = gateway redundancy. DHCP = IP assignment.",
+        "examTip": "BGP = exterior gateway protocol (between ASes). OSPF/EIGRP = interior gateway protocols (within an AS). BGP uses TCP port 179.",
+        "relatedTopics": [
+          "BGP",
+          "routing-protocols",
+          "autonomous-system"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Routing protocols",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-058",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which first-hop redundancy protocol is a Cisco-proprietary protocol that provides gateway redundancy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "VRRP",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "HSRP",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "GLBP",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "CARP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "HSRP (Hot Standby Router Protocol) is a Cisco-proprietary FHRP that provides a virtual IP gateway shared between an active and standby router, ensuring gateway availability if the active router fails.",
+        "incorrect": "VRRP = open standard equivalent to HSRP. GLBP = Cisco's load-balancing FHRP. CARP = BSD/pfSense equivalent.",
+        "examTip": "FHRPs: HSRP (Cisco), VRRP (open standard), GLBP (Cisco, load balancing). All provide a virtual gateway IP shared between multiple routers.",
+        "relatedTopics": [
+          "HSRP",
+          "FHRP",
+          "gateway-redundancy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Routing",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-059",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of QoS (Quality of Service) in a network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To encrypt all network traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To prioritise specific types of traffic to ensure acceptable performance for time-sensitive applications",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To increase the total available bandwidth on a link",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To filter malicious traffic entering the network",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "QoS marks, classifies, and prioritises traffic so time-sensitive applications (VoIP, video conferencing) get sufficient bandwidth and low latency even when the network is congested.",
+        "incorrect": "QoS doesn't encrypt, increase physical bandwidth, or filter malware.",
+        "examTip": "QoS for VoIP: mark voice traffic as DSCP EF (Expedited Forwarding). Guarantee bandwidth, limit jitter and latency. VoIP needs <150ms latency and <30ms jitter.",
+        "relatedTopics": [
+          "QoS",
+          "traffic-prioritisation",
+          "VoIP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Network services",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-060",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which network topology provides the highest fault tolerance by connecting every device to every other device?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Star topology",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Bus topology",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Ring topology",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Full mesh topology",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "A full mesh topology connects every node to every other node, providing maximum redundancy â€” multiple paths exist between any two nodes so a single link failure doesn't break connectivity.",
+        "incorrect": "Star = central hub/switch (single point of failure). Bus = single shared cable (single point of failure). Ring = each node connected to two others.",
+        "examTip": "Full mesh = n*(n-1)/2 links needed. Very expensive but maximum redundancy. Partial mesh = compromise between cost and redundancy.",
+        "relatedTopics": [
+          "network-topology",
+          "full-mesh",
+          "fault-tolerance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Network topologies",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-061",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What type of address is ff:ff:ff:ff:ff:ff?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A multicast MAC address",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A broadcast MAC address sent to all devices on the local segment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A loopback MAC address",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An unassigned MAC address",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ff:ff:ff:ff:ff:ff is the Layer 2 broadcast address â€” all devices on the local network segment receive and process frames sent to this address.",
+        "incorrect": "Multicast MAC addresses start with 01:00:5e (IPv4) or 33:33 (IPv6). No loopback MAC exists. Unassigned MACs are not ff:ff:ff:ff:ff:ff.",
+        "examTip": "Layer 2 broadcast = ff:ff:ff:ff:ff:ff. Layer 3 broadcast = 255.255.255.255 or subnet broadcast. Both are confined to the local network/subnet.",
+        "relatedTopics": [
+          "MAC-address",
+          "broadcast",
+          "Layer-2"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 MAC addressing",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-074",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between a public cloud, private cloud, and hybrid cloud?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Public = on-premises; Private = third-party; Hybrid = both",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Public = shared infrastructure managed by provider; Private = dedicated for one org; Hybrid = combination of both",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Private cloud means no internet connectivity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Public cloud is always more secure than private cloud",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Public cloud = shared multi-tenant infrastructure managed by a CSP (AWS, Azure, GCP). Private cloud = dedicated single-tenant, on-premises or hosted. Hybrid = combination with workloads spanning both.",
+        "incorrect": "Cloud deployment is about tenancy and management, not just location. Private cloud can have internet access. Security depends on configuration.",
+        "examTip": "Cloud models: Public (shared/CSP-managed), Private (dedicated/org-managed), Hybrid (both), Community (shared by similar orgs). IaaS/PaaS/SaaS are service models.",
+        "relatedTopics": [
+          "cloud-models",
+          "public-cloud",
+          "private-cloud"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Cloud concepts",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-075",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a software-defined network (SDN)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A network that uses only wireless connections",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A network architecture that separates the control plane from the data plane, enabling centralised programmatic control",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A virtual network created within a physical network using VLANs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A network managed entirely through command-line interfaces",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SDN separates the network control plane (decision-making) from the data plane (packet forwarding), allowing centralised software control of network behaviour through APIs.",
+        "incorrect": "SDN isn't about wireless, VLANs only, or CLI management â€” it's about architectural separation and programmability.",
+        "examTip": "SDN layers: Application (apps/APIs), Control (SDN controller), Infrastructure (switches/routers). Enables network automation and programmability.",
+        "relatedTopics": [
+          "SDN",
+          "control-plane",
+          "data-plane"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 SDN",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-082",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a loopback address (127.0.0.1)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To identify the default gateway",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To test the local TCP/IP stack without sending traffic on the network",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To identify all hosts on the local subnet",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To represent an unassigned IP address",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The loopback address (127.0.0.1 or ::1 for IPv6) sends packets back to the local host's network stack, testing whether TCP/IP is installed and functioning correctly without physical network involvement.",
+        "incorrect": "Default gateway = router interface address. Subnet broadcast identifies all hosts. Unassigned = 0.0.0.0.",
+        "examTip": "ping 127.0.0.1 = test local TCP/IP stack. If this fails, reinstall network drivers. If this works but ping to gateway fails = physical/Layer 2 issue.",
+        "relatedTopics": [
+          "loopback",
+          "127.0.0.1",
+          "TCP-IP-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 Special IP addresses",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-083",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A company has the network 172.16.0.0/16. An admin wants to create subnets that each support at least 500 hosts. What is the minimum prefix length they should use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "/22",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "/23",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "/24",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "/25",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "/23 has 9 host bits: 2^9 - 2 = 510 usable hosts. This is the minimum prefix that supports 500+ hosts.",
+        "incorrect": "/24 = 254 usable (too few). /22 = 1022 usable (more than needed). /25 = 126 usable (too few). /23 is the tightest fit.",
+        "examTip": "Need hosts â†’ find host bits: >500 needs at least 9 bits (512-2=510). Prefix = 32-9 = /23.",
+        "relatedTopics": [
+          "subnetting",
+          "host-calculation",
+          "CIDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 Subnetting",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-088",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which WAN technology uses labels to make forwarding decisions, allowing traffic engineering and QoS across service provider networks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Frame Relay",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "MPLS",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ATM",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DSL",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "MPLS (Multiprotocol Label Switching) uses short labels rather than long IP lookups to forward packets, enabling traffic engineering, QoS, and VPN services across service provider networks.",
+        "incorrect": "Frame Relay and ATM are legacy WAN technologies. DSL = broadband access technology.",
+        "examTip": "MPLS is common in enterprise WAN services. Labels added at ingress LSR, switched by LSRs, removed at egress LSR. Enables Layer 3 VPNs for enterprises.",
+        "relatedTopics": [
+          "MPLS",
+          "WAN",
+          "label-switching"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 WAN technologies",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-090",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does CGNAT (Carrier-Grade NAT) do in the context of IPv4 address exhaustion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It converts IPv6 addresses to IPv4 addresses",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It allows multiple ISP customers to share a single public IP address using double NAT",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It provides direct global IPv4 addresses to all end users",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It encrypts all traffic between the customer and the ISP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "CGNAT (Large-Scale NAT) performs a second layer of NAT at the ISP level, allowing multiple subscribers to share the same public IPv4 address, extending the life of IPv4 addresses.",
+        "incorrect": "CGNAT is not IPv4-to-IPv6 translation. It actually reduces the number of public IPs per customer. It doesn't encrypt traffic.",
+        "examTip": "CGNAT means your 'public' IP is actually shared with many other customers. This can break some protocols (P2P, gaming, port forwarding). IPv6 deployment is the long-term solution.",
+        "relatedTopics": [
+          "CGNAT",
+          "IPv4-exhaustion",
+          "NAT"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.4 IPv4 addressing",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-093",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does the acronym FQDN stand for and what is it used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fully Qualified Domain Name â€” the complete hostname including all domain labels",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Fast Queue Data Network â€” a QoS mechanism for prioritising traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Federated Query Distribution Node â€” a load balancing technique",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Full Quality Distribution Network â€” a CDN architecture",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An FQDN (Fully Qualified Domain Name) is the complete domain name including all labels (e.g., mail.example.com.) â€” used to unambiguously identify a host on the internet.",
+        "incorrect": "The other options are fictitious.",
+        "examTip": "FQDN = hostname.domain.tld. (e.g., www.comptia.org). The trailing dot represents the DNS root. Used in certificates, DNS records, and service configurations.",
+        "relatedTopics": [
+          "FQDN",
+          "DNS",
+          "hostname"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 DNS",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-099",
+      "type": "single-choice",
+      "topicId": "networking-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of an SLA (Service Level Agreement) in networking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To define technical configuration standards for network devices",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To formally define expected performance levels, uptime guarantees, and remedies between a provider and customer",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To document the network topology and IP addressing scheme",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To outline the security policies applied to the network",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An SLA is a contract between a service provider and customer that defines measurable service metrics (uptime %, latency, packet loss, support response times) and remedies if targets are missed.",
+        "incorrect": "Technical config = standards/procedures. Topology = network documentation. Security policies = security policy documents.",
+        "examTip": "Common SLA metrics: uptime (99.9% = 8.7hrs downtime/year, 99.99% = 52min/year), MTTR (repair time), latency, packet loss, jitter.",
+        "relatedTopics": [
+          "SLA",
+          "uptime",
+          "network-services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Agreements",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

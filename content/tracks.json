@@ -3,7 +3,7 @@
     "id": "cloud-engineer",
     "name": "Cloud engineer",
     "description": "Design, deploy, and manage cloud infrastructure across Azure, AWS, and Google Cloud.",
-    "icon": "\u2601\ufe0f",
+    "icon": "☁️",
     "color": "#58a6ff",
     "bg": "rgba(88,166,255,0.1)",
     "levels": [
@@ -40,7 +40,7 @@
             "prerequisites": [
               "az-900"
             ],
-            "note": "Azure administrator \u2014 manage identities, storage, compute, networking"
+            "note": "Azure administrator — manage identities, storage, compute, networking"
           },
           {
             "certId": "aws-saa",
@@ -48,7 +48,7 @@
             "prerequisites": [
               "aws-cp"
             ],
-            "note": "AWS solutions architect \u2014 design resilient, cost-optimized architectures"
+            "note": "AWS solutions architect — design resilient, cost-optimized architectures"
           }
         ]
       },
@@ -72,7 +72,7 @@
               "az-104",
               "az-204"
             ],
-            "note": "Azure DevOps engineer \u2014 CI/CD, infrastructure as code"
+            "note": "Azure DevOps engineer — CI/CD, infrastructure as code"
           }
         ]
       }
@@ -88,7 +88,7 @@
     "id": "security-specialist",
     "name": "Security specialist",
     "description": "Protect organizations from threats, manage compliance, and respond to incidents.",
-    "icon": "\ud83d\udee1\ufe0f",
+    "icon": "🛡️",
     "color": "#f85149",
     "bg": "rgba(248,81,73,0.1)",
     "levels": [
@@ -110,14 +110,14 @@
           {
             "certId": "isc2-cc",
             "required": false,
-            "note": "(ISC)\u00b2 entry-level alternative to Security+"
+            "note": "(ISC)² entry-level alternative to Security+"
           }
         ]
       },
       {
         "stage": "associate",
         "label": "Associate",
-        "description": "Operational security \u2014 threat detection, incident response, SIEM.",
+        "description": "Operational security — threat detection, incident response, SIEM.",
         "certs": [
           {
             "certId": "sc-200",
@@ -125,7 +125,7 @@
             "prerequisites": [
               "sc-900"
             ],
-            "note": "Microsoft security operations analyst \u2014 Sentinel, Defender XDR"
+            "note": "Microsoft security operations analyst — Sentinel, Defender XDR"
           }
         ]
       },
@@ -140,7 +140,7 @@
             "prerequisites": [
               "5 years experience"
             ],
-            "note": "The gold standard \u2014 security architecture and management"
+            "note": "The gold standard — security architecture and management"
           },
           {
             "certId": "oscp",
@@ -149,7 +149,7 @@
               "comptia-security-plus",
               "comptia-network-plus"
             ],
-            "note": "Hands-on penetration testing \u2014 24-hour practical exam"
+            "note": "Hands-on penetration testing — 24-hour practical exam"
           }
         ]
       }
@@ -164,7 +164,7 @@
     "id": "devops-engineer",
     "name": "DevOps engineer",
     "description": "Bridge development and operations with automation, containers, and CI/CD pipelines.",
-    "icon": "\u2699\ufe0f",
+    "icon": "⚙️",
     "color": "#3fb950",
     "bg": "rgba(63,185,80,0.1)",
     "levels": [
@@ -176,7 +176,7 @@
           {
             "certId": "linux-essentials",
             "required": true,
-            "note": "Command line, filesystems, permissions \u2014 essential for any DevOps role"
+            "note": "Command line, filesystems, permissions — essential for any DevOps role"
           },
           {
             "certId": "az-900",
@@ -214,7 +214,7 @@
             "prerequisites": [
               "linux-essentials"
             ],
-            "note": "Kubernetes administration \u2014 the backbone of modern DevOps"
+            "note": "Kubernetes administration — the backbone of modern DevOps"
           }
         ]
       },
@@ -256,7 +256,7 @@
     "id": "network-engineer",
     "name": "Network engineer",
     "description": "Design, build, and maintain the networks that connect the world.",
-    "icon": "\ud83d\udd0c",
+    "icon": "🔌",
     "color": "#a371f7",
     "bg": "rgba(163,113,247,0.1)",
     "levels": [
@@ -268,7 +268,7 @@
           {
             "certId": "comptia-a-plus",
             "required": false,
-            "note": "Broad IT foundation \u2014 hardware, OS, troubleshooting"
+            "note": "Broad IT foundation — hardware, OS, troubleshooting"
           },
           {
             "certId": "comptia-network-plus",
@@ -285,7 +285,7 @@
           {
             "certId": "ccna",
             "required": true,
-            "note": "Cisco's entry cert \u2014 routing, switching, security basics"
+            "note": "Cisco's entry cert — routing, switching, security basics"
           }
         ]
       },
@@ -300,7 +300,7 @@
             "prerequisites": [
               "ccna"
             ],
-            "note": "CCNP enterprise core \u2014 architecture, virtualization, automation"
+            "note": "CCNP enterprise core — architecture, virtualization, automation"
           }
         ]
       }
@@ -315,7 +315,7 @@
     "id": "software-developer",
     "name": "Software developer",
     "description": "Build cloud-native applications and deploy them at scale.",
-    "icon": "\ud83d\udcbb",
+    "icon": "💻",
     "color": "#d29922",
     "bg": "rgba(210,153,34,0.1)",
     "levels": [
@@ -342,20 +342,12 @@
         "description": "Develop and deploy on your chosen cloud platform.",
         "certs": [
           {
-            "certId": "az-204",
-            "required": false,
-            "prerequisites": [
-              "az-900"
-            ],
-            "note": "Azure developer \u2014 compute, storage, security, monitoring"
-          },
-          {
             "certId": "aws-developer",
             "required": false,
             "prerequisites": [
               "aws-cp"
             ],
-            "note": "AWS developer \u2014 deployment, security, troubleshooting"
+            "note": "AWS developer — deployment, security, troubleshooting"
           },
           {
             "certId": "ckad",
@@ -363,7 +355,7 @@
             "prerequisites": [
               "cka"
             ],
-            "note": "Kubernetes application developer \u2014 cloud-native apps"
+            "note": "Kubernetes application developer — cloud-native apps"
           }
         ]
       }
@@ -378,7 +370,7 @@
     "id": "data-ai-engineer",
     "name": "Data & AI engineer",
     "description": "Build data pipelines, analytics platforms, and AI-powered solutions.",
-    "icon": "\ud83d\udcca",
+    "icon": "📊",
     "color": "#f778ba",
     "bg": "rgba(247,120,186,0.1)",
     "levels": [
@@ -390,7 +382,7 @@
           {
             "certId": "az-900",
             "required": true,
-            "note": "Azure fundamentals \u2014 prerequisite for all Azure data certs"
+            "note": "Azure fundamentals — prerequisite for all Azure data certs"
           },
           {
             "certId": "dp-900",
@@ -398,7 +390,7 @@
             "prerequisites": [
               "az-900"
             ],
-            "note": "Azure data fundamentals \u2014 relational, non-relational, analytics"
+            "note": "Azure data fundamentals — relational, non-relational, analytics"
           }
         ]
       },
@@ -408,20 +400,12 @@
         "description": "Data engineering and AI fundamentals.",
         "certs": [
           {
-            "certId": "dp-203",
-            "required": false,
-            "prerequisites": [
-              "dp-900"
-            ],
-            "note": "Azure data engineer \u2014 storage, processing, security"
-          },
-          {
             "certId": "ai-900",
             "required": false,
             "prerequisites": [
               "az-900"
             ],
-            "note": "Azure AI fundamentals \u2014 ML, computer vision, NLP, generative AI"
+            "note": "Azure AI fundamentals — ML, computer vision, NLP, generative AI"
           }
         ]
       },
@@ -431,12 +415,12 @@
         "description": "Enterprise AI solutions and advanced data platforms.",
         "certs": [
           {
-            "certId": "ai-102",
+            "certId": "ai-103",
             "required": false,
             "prerequisites": [
               "ai-900"
             ],
-            "note": "Azure AI engineer \u2014 Cognitive Services, Bot Service, Applied AI"
+            "note": "Azure AI engineer — Cognitive Services, Bot Service, Applied AI"
           }
         ]
       }
@@ -451,7 +435,7 @@
     "id": "qa-test-engineer",
     "name": "QA & test engineer",
     "description": "Ensure software quality through systematic testing and automation.",
-    "icon": "\ud83e\uddea",
+    "icon": "🧪",
     "color": "#79c0ff",
     "bg": "rgba(121,192,255,0.1)",
     "levels": [
@@ -478,7 +462,7 @@
             "prerequisites": [
               "istqb-foundation"
             ],
-            "note": "Testing in Agile environments \u2014 TDD, BDD, continuous testing"
+            "note": "Testing in Agile environments — TDD, BDD, continuous testing"
           }
         ]
       },
@@ -494,7 +478,7 @@
               "aws-saa",
               "aws-developer"
             ],
-            "note": "DevOps professional \u2014 includes test automation in CI/CD pipelines"
+            "note": "DevOps professional — includes test automation in CI/CD pipelines"
           }
         ]
       }
@@ -507,8 +491,8 @@
   {
     "id": "systems-administrator",
     "name": "Systems administrator",
-    "description": "Keep IT infrastructure running \u2014 servers, operating systems, and user support.",
-    "icon": "\ud83d\udda5\ufe0f",
+    "description": "Keep IT infrastructure running — servers, operating systems, and user support.",
+    "icon": "🖥️",
     "color": "#8b949e",
     "bg": "rgba(139,148,158,0.1)",
     "levels": [
@@ -540,7 +524,7 @@
             "prerequisites": [
               "linux-essentials"
             ],
-            "note": "Red Hat Certified System Administrator \u2014 hands-on Linux"
+            "note": "Red Hat Certified System Administrator — hands-on Linux"
           }
         ]
       },
@@ -555,7 +539,7 @@
             "prerequisites": [
               "az-900"
             ],
-            "note": "Azure administrator \u2014 cloud sysadmin path"
+            "note": "Azure administrator — cloud sysadmin path"
           }
         ]
       }
@@ -570,7 +554,7 @@
     "id": "project-manager",
     "name": "Project manager",
     "description": "Lead teams, deliver projects on time, and align technology with business goals.",
-    "icon": "\ud83d\udccb",
+    "icon": "📋",
     "color": "#ff7b72",
     "bg": "rgba(255,123,114,0.1)",
     "levels": [
@@ -582,12 +566,12 @@
           {
             "certId": "itil-4-foundation",
             "required": false,
-            "note": "IT service management framework \u2014 widely used in enterprise"
+            "note": "IT service management framework — widely used in enterprise"
           },
           {
             "certId": "scrum-master",
             "required": false,
-            "note": "Scrum framework \u2014 essential for Agile project management"
+            "note": "Scrum framework — essential for Agile project management"
           }
         ]
       },

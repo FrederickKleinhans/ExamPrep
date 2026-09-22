@@ -1,0 +1,875 @@
+{
+  "certificationId": "network-plus",
+  "topicId": "network-operations",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "netplus-026",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command-line tool tests basic IP connectivity using ICMP Echo Requests?",
+      "options": [
+        {
+          "id": "A",
+          "text": "tracert / traceroute",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ping",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "nslookup",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "netstat",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Ping sends ICMP Echo Requests and listens for Echo Replies to test reachability and measure round-trip time.",
+        "incorrect": "tracert/traceroute shows path and hop latency. nslookup tests DNS. netstat shows active connections and listening ports.",
+        "examTip": "Ping success = Layer 3 connectivity OK. Ping failure could be: no route, host down, or firewall blocking ICMP. Always test ping first.",
+        "relatedTopics": [
+          "ping",
+          "ICMP",
+          "troubleshooting-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-027",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does SNMP use to receive unsolicited alerts from managed devices when a significant event occurs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SNMP GET requests",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SNMP traps (UDP 162)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SNMP SET commands",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Syslog messages",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SNMP traps are unsolicited notifications sent by managed devices to the NMS (UDP port 162) when important events occur, such as an interface going down or high CPU usage.",
+        "incorrect": "GET = NMS polls a device for data. SET = NMS configures a device. Syslog is a separate logging protocol on UDP 514.",
+        "examTip": "SNMP: GET(poll), SET(config), TRAP(alert from device). Ports: 161=queries, 162=traps. Use SNMPv3 for security.",
+        "relatedTopics": [
+          "SNMP",
+          "traps",
+          "network-monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Network monitoring",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-028",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Why is accurate time synchronisation critical in network environments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It increases network throughput",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It ensures log timestamps are accurate for troubleshooting and security investigations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It assigns IP addresses faster",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It improves wireless signal strength",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Accurate time (via NTP) ensures log timestamps are consistent across all devices, which is essential for correlating events during troubleshooting and security investigations.",
+        "incorrect": "NTP doesn't affect throughput, IP assignment speed, or wireless signal.",
+        "examTip": "NTP = UDP port 123. Kerberos authentication requires clocks within 5 minutes. Inconsistent time makes log correlation impossible.",
+        "relatedTopics": [
+          "NTP",
+          "time-synchronisation",
+          "logging"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 NTP",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-029",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does a protocol analyser (such as Wireshark) capture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Traffic flow metadata such as source/destination IPs and byte counts",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Full packet contents including headers and payload data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SNMP MIB data from managed devices",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "CPU and memory utilisation of network devices",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A packet analyser/sniffer like Wireshark captures raw packets including full headers and payload, enabling deep protocol inspection and troubleshooting.",
+        "incorrect": "Flow metadata only = NetFlow/sFlow. SNMP MIB = SNMP manager. Device health = SNMP/monitoring tools.",
+        "examTip": "Wireshark tip: use a SPAN/mirror port on a switch to capture traffic from other ports. Apply display filters (e.g., ip.addr==192.168.1.1) to focus.",
+        "relatedTopics": [
+          "Wireshark",
+          "packet-capture",
+          "protocol-analyser"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Network tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-030",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a syslog server?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To provide DHCP services to network clients",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To centrally collect and store log messages from network devices",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To monitor real-time bandwidth on WAN links",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To back up device configurations automatically",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A syslog server centralises log messages from routers, switches, firewalls, and servers, making it easier to analyse events and troubleshoot across the network.",
+        "incorrect": "DHCP = IP assignment. Bandwidth = NetFlow/SNMP. Config backup = TFTP/config management.",
+        "examTip": "Syslog uses UDP 514. Severity 0-7: Emergency, Alert, Critical, Error, Warning, Notice, Informational, Debug. Lower = more severe.",
+        "relatedTopics": [
+          "syslog",
+          "logging",
+          "centralised-monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Logging",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-031",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A network admin needs to capture traffic from a specific switch port belonging to a suspicious host without disrupting the existing connection.",
+      "questionText": "Which switch feature enables this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Port mirroring (SPAN)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "PortFast",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "VLAN trunking",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Port security",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SPAN (Switched Port Analyser) copies all traffic from a source port to a destination port where a packet sniffer is connected, without disrupting normal traffic flow.",
+        "incorrect": "PortFast = STP bypass. VLAN trunking = multi-VLAN link. Port security = MAC address limits per port.",
+        "examTip": "SPAN = local mirror. RSPAN = mirror across multiple switches. ERSPAN = mirror to remote IP via GRE. All are non-disruptive.",
+        "relatedTopics": [
+          "SPAN",
+          "port-mirroring",
+          "monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Network tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-032",
+      "type": "yes-no-statements",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes network management concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "NetFlow collects metadata about traffic flows without capturing full packet payloads.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "SNMP traps are sent proactively by managed devices to alert the NMS of significant events.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A bandwidth monitor can detect when a WAN link is congested.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Syslog uses TCP port 514 by default.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "NetFlow = flow metadata only. SNMP traps = proactive alerts. Bandwidth monitors detect congestion. Syslog uses UDP 514 by default (not TCP).",
+        "incorrect": "Syslog is UDP 514 by default. Reliable syslog over TLS uses TCP 6514.",
+        "examTip": "NetFlow = flow analytics (who talked to whom). Syslog = event logs. SNMP = device health polling + traps.",
+        "relatedTopics": [
+          "NetFlow",
+          "SNMP",
+          "syslog",
+          "monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Monitoring",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-033",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does the traceroute (tracert on Windows) command show?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The MAC address of each hop between source and destination",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The path packets take and the round-trip time at each hop",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "All open ports on the destination host",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The DNS records associated with the destination hostname",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Traceroute uses ICMP TTL-exceeded messages to map each router hop between source and destination, showing IP addresses and round-trip times for each hop.",
+        "incorrect": "MAC addresses are not visible beyond Layer 2. Open ports = port scanner (nmap). DNS records = nslookup/dig.",
+        "examTip": "Traceroute uses TTL=1, 2, 3... incrementing each probe. When TTL reaches 0, the router sends back ICMP TTL-exceeded, revealing its IP.",
+        "relatedTopics": [
+          "traceroute",
+          "ICMP",
+          "path-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-034",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the function of the ipconfig /release and ipconfig /renew commands on Windows?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To flush the DNS resolver cache",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To release the current DHCP lease and request a new IP configuration",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To reset the network adapter driver",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To display the routing table",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ipconfig /release sends a DHCP Release message, and ipconfig /renew sends a new DHCP Discover to obtain fresh IP configuration from a DHCP server.",
+        "incorrect": "DNS flush = ipconfig /flushdns. Driver reset = Device Manager. Routing table = route print or netstat -r.",
+        "examTip": "DHCP troubleshooting sequence: ipconfig /release â†’ /renew. If you get 169.254.x.x, the DHCP server is unreachable.",
+        "relatedTopics": [
+          "DHCP",
+          "ipconfig",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-035",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command displays the current IP configuration, MAC address, and default gateway on a Windows host?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ipconfig",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ipconfig /all",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "arp -a",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "netstat -r",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ipconfig /all shows complete IP configuration including IP address, subnet mask, default gateway, DNS servers, DHCP server, MAC address, and lease details.",
+        "incorrect": "ipconfig alone shows basic IP info. arp -a shows the ARP cache. netstat -r shows the routing table.",
+        "examTip": "ipconfig = basic IP. ipconfig /all = full details including MAC, DHCP server, DNS. Use this first in any Windows network troubleshoot.",
+        "relatedTopics": [
+          "ipconfig",
+          "Windows-networking",
+          "troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-066",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of an OTDR (Optical Time Domain Reflectometer)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To test copper cable continuity and wiring faults",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To locate faults and measure the length of fibre optic cables",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To measure wireless signal strength and channel utilisation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To capture and analyse network packets",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An OTDR sends a light pulse into a fibre and measures reflections to locate splices, breaks, connectors, and bends, and calculate their distance from the test point.",
+        "incorrect": "Copper cable testing = cable tester. Wireless analysis = Wi-Fi analyser. Packet capture = Wireshark.",
+        "examTip": "OTDR = fibre fault finding. Optical power meter = fibre signal strength testing. Both are essential fibre troubleshooting tools.",
+        "relatedTopics": [
+          "OTDR",
+          "fibre-optic",
+          "troubleshooting-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-067",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a network baseline and why is it important?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A minimum speed requirement for network hardware",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A documented record of normal network performance used to identify deviations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The default configuration of a router after factory reset",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The minimum security requirements for a network device",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A network baseline documents normal operating metrics (bandwidth utilisation, latency, error rates) so that deviations from normal â€” indicating problems â€” can be quickly identified.",
+        "incorrect": "Speed requirements = SLA. Factory default = out-of-box config. Security requirements = security baseline.",
+        "examTip": "Without a baseline, you don't know what 'normal' looks like. Establish baselines during quiet periods and update them as the network evolves.",
+        "relatedTopics": [
+          "network-baseline",
+          "performance-monitoring",
+          "capacity-planning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Network monitoring",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-068",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command on a Windows host displays the local routing table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ipconfig /all",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "netstat -r or route print",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "arp -a",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "nslookup",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "netstat -r or route print displays the IP routing table on a Windows host, showing all routes including the default route (0.0.0.0), subnet routes, and host routes.",
+        "incorrect": "ipconfig /all = IP configuration. arp -a = ARP cache. nslookup = DNS lookup.",
+        "examTip": "route print on Windows = ip route on Linux/Cisco. Look for the 0.0.0.0 entry to find the default gateway route.",
+        "relatedTopics": [
+          "routing-table",
+          "route-print",
+          "Windows-networking"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-077",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between disaster recovery (DR) and high availability (HA)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are the same concept",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "HA keeps systems running continuously; DR restores systems after an outage or disaster",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "DR is proactive; HA is reactive",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "HA requires offsite backup; DR does not",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "HA (High Availability) uses redundant components to prevent downtime (e.g., clustering, RAID, redundant links). DR focuses on restoring operations after a failure or disaster has already occurred.",
+        "incorrect": "They're different. HA is proactive (prevent failure). DR is reactive (recover after failure). HA uses redundancy; DR uses backups and recovery procedures.",
+        "examTip": "HA = prevent downtime (uptime SLAs, redundant hardware). DR = recover from disasters (RTO, RPO, backups, hot/warm/cold sites).",
+        "relatedTopics": [
+          "high-availability",
+          "disaster-recovery",
+          "RTO-RPO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 High availability",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-078",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A network admin needs to verify that a DNS change has propagated globally and that the new A record is being returned by external resolvers.",
+      "questionText": "Which tool is MOST appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ping",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "nslookup or dig",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "traceroute",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "netstat",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "nslookup (Windows/cross-platform) and dig (Linux/macOS) query specific DNS servers to check what records are being returned, allowing verification of DNS propagation.",
+        "incorrect": "Ping resolves the name but doesn't show DNS details. Traceroute shows path. Netstat shows connections.",
+        "examTip": "dig @8.8.8.8 example.com A = query Google DNS for the A record. nslookup example.com 8.8.8.8 = equivalent on Windows.",
+        "relatedTopics": [
+          "nslookup",
+          "dig",
+          "DNS-troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Troubleshooting tools",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-086",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of an out-of-band management network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To carry user data traffic on a separate VLAN",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To provide management access to devices even when the primary network is down",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To provide wireless access for network administrators",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To load balance traffic between multiple WAN connections",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An out-of-band (OOB) management network uses a separate dedicated channel (serial console, dedicated management port, cellular) to access and manage devices even when the production network is unavailable.",
+        "incorrect": "OOB management is separate from user data VLANs. It's not wireless access or load balancing.",
+        "examTip": "OOB examples: serial console server, IPMI/iDRAC/iLO (server management), dedicated management VLAN + separate switch. Critical for managing devices after network failures.",
+        "relatedTopics": [
+          "out-of-band-management",
+          "console-access",
+          "network-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Network management",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-089",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a change management process in network operations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To monitor network performance in real time",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To ensure network changes are planned, reviewed, approved, and documented to minimise risk",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To automatically apply firmware updates to network devices",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To configure IP addresses on new devices",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Change management ensures all network changes go through a formal process: request, impact assessment, approval, implementation window, rollback plan, and documentation â€” preventing unplanned outages.",
+        "incorrect": "Real-time monitoring = SNMP/SIEM. Auto-patching = patch management. IP configuration = DHCP/static assignment.",
+        "examTip": "Change management prevents the #1 cause of network outages â€” unplanned changes. Always have a rollback plan before making any changes.",
+        "relatedTopics": [
+          "change-management",
+          "ITIL",
+          "network-operations"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Organisational processes",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "netplus-095",
+      "type": "single-choice",
+      "topicId": "network-operations",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of network documentation such as logical and physical diagrams?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To meet regulatory requirements only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To provide reference information for troubleshooting, planning, and change management",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To configure devices automatically using templates",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To monitor real-time network performance",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Network diagrams and documentation enable faster troubleshooting (understand the network quickly), capacity planning, change management (know what will be affected), and onboarding of new staff.",
+        "incorrect": "Documentation alone doesn't meet compliance, automate configs, or monitor performance.",
+        "examTip": "Physical diagram = physical connections, device locations, cable runs. Logical diagram = IP addressing, VLANs, routing, services. Both are essential.",
+        "relatedTopics": [
+          "network-documentation",
+          "diagrams",
+          "change-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Documentation",
+        "references": [
+          "https://www.comptia.org/certifications/network"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

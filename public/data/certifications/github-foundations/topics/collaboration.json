@@ -1,0 +1,868 @@
+{
+  "certificationId": "github-foundations",
+  "topicId": "collaboration",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "github-021",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a Pull Request (PR) on GitHub?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A request to download files from a remote repository",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A proposal to merge changes from one branch into another, enabling code review and discussion",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A notification sent to team members about new commits",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A request to add a new collaborator to a repository",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A Pull Request is a GitHub feature that lets you notify team members about changes you've pushed to a branch. It enables code review, discussion, and approval before merging into the target branch.",
+        "incorrect": "Downloading = `git pull`. Notifications = watching/mentions. Adding collaborators is in repository settings.",
+        "examTip": "PR workflow: create branch â†’ push changes â†’ open PR â†’ code review â†’ address feedback â†’ approval â†’ merge. PRs are GitHub-specific (GitLab = Merge Request).",
+        "relatedTopics": [
+          "pull-request",
+          "code-review",
+          "collaboration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe pull requests",
+        "references": [
+          "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-022",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a draft pull request on GitHub?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A PR that has been rejected and needs to be rewritten",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A PR that signals the work is in progress and not ready for review or merging yet",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A PR that only the repository owner can see",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A PR template that can be reused for future changes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Draft PRs allow developers to open a PR for work-in-progress code to get early feedback or signal intent, without it being ready for formal review or accidental merging.",
+        "incorrect": "Draft PRs are open and visible to collaborators. They are not rejected PRs or templates.",
+        "examTip": "Draft PRs: show work in progress, invite early feedback, prevent premature merge. Convert to ready when complete. Reviewers can comment but won't be formally requested.",
+        "relatedTopics": [
+          "draft-PR",
+          "pull-request",
+          "work-in-progress"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe pull request features",
+        "references": [
+          "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-023",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are the three merge strategies available when merging a pull request on GitHub?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fast-forward, recursive, and octopus",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Merge commit, squash and merge, and rebase and merge",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Auto-merge, manual merge, and scheduled merge",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Commit, push, and deploy",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub offers three PR merge strategies: Merge commit (all commits + merge commit), Squash and merge (all commits combined into one), Rebase and merge (commits replayed linearly without merge commit).",
+        "incorrect": "Fast-forward, recursive, octopus are Git internal strategies. Auto/manual/scheduled are not standard GitHub merge types.",
+        "examTip": "Merge commit = full history. Squash = clean single commit per feature. Rebase = linear history. Teams choose one strategy for consistency.",
+        "relatedTopics": [
+          "merge-strategies",
+          "pull-request",
+          "git-history"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe pull request merging",
+        "references": [
+          "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-024",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a GitHub Issue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A bug report sent directly to the repository owner's email",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A way to track tasks, enhancements, bugs, and discussions related to a project",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A notification that a pull request has conflicts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An error that prevents a repository from being cloned",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Issues are used to track work items â€” bugs, feature requests, tasks, and questions. They support labels, milestones, assignees, and can be linked to pull requests.",
+        "incorrect": "Issues are visible on GitHub, not email. They're not conflict notifications or clone errors.",
+        "examTip": "Issues can be closed with PR keywords: 'Fixes #123', 'Closes #123', 'Resolves #123'. When the PR merges, the issue closes automatically.",
+        "relatedTopics": [
+          "issues",
+          "bug-tracking",
+          "project-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Issues",
+        "references": [
+          "https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-025",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are GitHub labels used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Identifying which team members are assigned to a repository",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Categorising and filtering issues and pull requests by type, priority, or status",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Marking commits as approved or rejected",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Defining which branches are protected from direct pushes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Labels are coloured tags applied to issues and pull requests to categorise them â€” e.g., `bug`, `enhancement`, `good first issue`, `priority: high`, `status: in progress`.",
+        "incorrect": "Team assignment = assignees. Commit approval = PR reviews. Branch protection = branch protection rules.",
+        "examTip": "Default labels: bug, documentation, duplicate, enhancement, good first issue, help wanted, invalid, question, wontfix. Create custom labels to fit your workflow.",
+        "relatedTopics": [
+          "labels",
+          "issues",
+          "pull-request"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub issues management",
+        "references": [
+          "https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-026",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a GitHub milestone?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A notification sent when a repository reaches a certain number of stars",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A way to group issues and pull requests toward a specific goal or deadline",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A checkpoint in a GitHub Actions workflow",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A read-only snapshot of a repository at a specific point in time",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Milestones group related issues and PRs together toward a shared goal (e.g., 'v2.0 Release', 'Q1 Sprint'). They track progress and optionally have a due date.",
+        "incorrect": "Stars notifications are separate. Actions checkpoints are jobs/steps. Snapshots = tags or releases.",
+        "examTip": "Milestone progress = (closed issues / total issues) Ã— 100%. Use milestones for sprint planning, release tracking, or quarterly goals.",
+        "relatedTopics": [
+          "milestones",
+          "project-management",
+          "issues"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe milestones",
+        "references": [
+          "https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-027",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is GitHub Discussions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A chat feature for real-time communication within a repository",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A forum-style feature for open-ended conversations, Q&A, and community engagement separate from issues",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A code review tool for leaving inline comments on pull requests",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A meeting scheduler integrated with GitHub calendars",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Discussions is a community forum embedded in repositories for conversations that don't fit the issue tracker â€” announcements, Q&A, ideas, polls, and general discussion.",
+        "incorrect": "Real-time chat = Slack/Teams. Inline comments = PR reviews. Meeting scheduling is external.",
+        "examTip": "Discussions vs Issues: Issues = actionable work items (bugs, features). Discussions = open-ended conversations, announcements, Q&A. Discussions can be converted to Issues.",
+        "relatedTopics": [
+          "Discussions",
+          "community",
+          "Q&A"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Discussions",
+        "references": [
+          "https://docs.github.com/en/discussions"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-028",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a CODEOWNERS file used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lists all contributors to a repository for attribution purposes",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Defines individuals or teams that are automatically requested for review when changes are made to specific files or directories",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Sets permissions for who can commit directly to protected branches",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Specifies which files are owned by which programming language",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A CODEOWNERS file maps file patterns to GitHub users or teams who are automatically added as required reviewers when a PR modifies those files.",
+        "incorrect": "CONTRIBUTORS or AUTHORS files list contributors. Branch protection controls direct commits. CODEOWNERS is specifically for auto-review assignment.",
+        "examTip": "CODEOWNERS location: root, docs/, or .github/ directory. Example: `*.js @frontend-team` means any JS file change requires frontend-team review.",
+        "relatedTopics": [
+          "CODEOWNERS",
+          "code-review",
+          "pull-request"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe collaboration features",
+        "references": [
+          "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-029",
+      "type": "yes-no-statements",
+      "topicId": "collaboration",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes GitHub collaboration features.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Pull request reviews can have three states: approve, request changes, or comment.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Closing an issue with a commit message requires using keywords like 'Fixes #123'.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Assignees on an issue receive notifications and are responsible for resolving it.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "A pull request can only target the default branch (main).",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "PR review states: Approve, Request Changes, Comment. Issue closing keywords: Fixes, Closes, Resolves. Assignees are notified and responsible. PRs can target any branch.",
+        "incorrect": "PRs can target any branch â€” feature branches, release branches, etc. Not just main.",
+        "examTip": "PR review states: Approve = LGTM. Request Changes = must fix before merge. Comment = feedback only, doesn't block.",
+        "relatedTopics": [
+          "code-review",
+          "issues",
+          "pull-request"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub collaboration",
+        "references": [
+          "https://docs.github.com/en/pull-requests"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-030",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A team wants to ensure that all changes to the `main` branch must have at least two approving reviews and all CI checks must pass before merging.",
+      "questionText": "Which GitHub feature enforces this policy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GitHub Actions workflow conditions",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Branch protection rules",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "CODEOWNERS file requirements",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Repository visibility settings",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Branch protection rules enforce policies on specific branches â€” requiring PR reviews, passing status checks, linear history, signed commits, and preventing force pushes or deletions.",
+        "incorrect": "Actions define CI/CD workflows but don't enforce PR policies. CODEOWNERS auto-assigns reviewers. Visibility = public/private.",
+        "examTip": "Branch protection rules: required approvals, required status checks (CI), dismiss stale reviews, require linear history, restrict who can push. Set on Settings â†’ Branches.",
+        "relatedTopics": [
+          "branch-protection",
+          "code-review",
+          "CI-CD"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe branch protection",
+        "references": [
+          "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-054",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What happens when you 'watch' a GitHub repository?",
+      "options": [
+        {
+          "id": "A",
+          "text": "You are added as a collaborator with read access",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "You receive notifications about activity such as new issues, PRs, and comments",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The repository appears starred in your profile",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "You monitor the repository for security vulnerabilities",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Watching subscribes you to notifications for all activity â€” new issues, PRs, comments, releases. You can customise watch levels.",
+        "incorrect": "Watching doesn't grant access. Starring bookmarks. Security monitoring = Dependabot.",
+        "examTip": "Watch levels: All activity, Releases only, Participating and @mentions (default), Ignore. Reduce noise by adjusting settings.",
+        "relatedTopics": [
+          "watching",
+          "notifications"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub notifications",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-055",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is an issue template in GitHub?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A pre-filled issue automatically created each sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A form guiding contributors to provide structured information when opening a new issue",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A template for writing pull request descriptions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An issue that serves as parent to other linked issues",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Issue templates pre-populate the issue creation form with structured prompts â€” reproduction steps, expected vs actual behaviour, environment details.",
+        "incorrect": "Templates don't auto-create issues. PR templates are separate. Parent issues are tracked differently.",
+        "examTip": "Issue forms (.yml) vs templates (.md): Forms have structured fields. Both stored in .github/ISSUE_TEMPLATE/.",
+        "relatedTopics": [
+          "issue-templates",
+          "contribution-standards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub Issues",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-056",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A developer forked an open source repository 3 months ago. The original repository has received many updates and the fork is out of date.",
+      "questionText": "What is the correct way to sync the fork with the upstream repository?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Delete and re-fork the repository",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Add upstream as a remote, fetch from upstream, then merge or rebase upstream changes into the fork",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Open a pull request from upstream to the fork",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Use `git clone` to download the upstream changes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sync a fork: 1) `git remote add upstream <url>` 2) `git fetch upstream` 3) `git merge upstream/main`. GitHub also provides a 'Sync fork' button.",
+        "incorrect": "Re-forking loses your changes. Clone downloads a copy but doesn't update existing fork.",
+        "examTip": "Keep fork current: add upstream remote â†’ fetch â†’ merge. Use GitHub 'Sync fork' button for convenience.",
+        "relatedTopics": [
+          "fork-sync",
+          "upstream"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe fork workflow",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-067",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 'auto-merge' on a pull request do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automatically creates a PR when a branch is pushed",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Automatically merges a PR once all required checks pass and reviews are approved",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Merges all pending PRs simultaneously at a scheduled time",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Automatically resolves merge conflicts using AI",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Auto-merge enables a PR to merge automatically once all branch protection conditions are satisfied â€” reviews approved and status checks passing.",
+        "incorrect": "Auto-merge is triggered by meeting conditions on a specific PR, not pushing branches or batch merging.",
+        "examTip": "Enable auto-merge per PR. Great for Dependabot PRs that just need CI to pass. Requires branch protection rules.",
+        "relatedTopics": [
+          "auto-merge",
+          "pull-request"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe pull request features",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-075",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of required status checks in branch protection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To require a specific number of code review approvals",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To ensure CI/CD checks (tests, linting, security scans) pass before a PR can be merged",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To verify the PR author signed the contributor licence agreement",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To check the PR branch is up to date with the target branch",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Required status checks ensure specified GitHub Actions workflows must pass before merging â€” preventing broken code from reaching the main branch.",
+        "incorrect": "Required reviews = separate branch protection setting. CLA = separate GitHub App. Branch up-to-date = another branch protection option.",
+        "examTip": "Status checks + required reviews = strong quality gates. Both must pass before merging is allowed.",
+        "relatedTopics": [
+          "status-checks",
+          "branch-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe branch protection",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-079",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A team wants to ensure every PR includes a summary, motivation, and testing details enforced for all contributors.",
+      "questionText": "What is the BEST way to implement this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Add it to the README and ask contributors to follow it",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Create a `.github/PULL_REQUEST_TEMPLATE.md` with the required sections",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Use branch protection rules to reject PRs without descriptions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Configure an Action to comment on PRs missing information",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A PR template automatically pre-populates the PR description with structured sections. Contributors fill in the template when opening a PR.",
+        "incorrect": "README guidelines are easy to miss. Branch protection can't enforce description content.",
+        "examTip": "PR template: `.github/PULL_REQUEST_TEMPLATE.md`. Pre-populates the PR description editor for all contributors.",
+        "relatedTopics": [
+          "PR-template",
+          "collaboration-standards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe GitHub collaboration features",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-084",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 'resolve a conversation' on a pull request mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Closing the pull request without merging",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Marking a review comment thread as addressed so it collapses and no longer needs attention",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Automatically accepting all suggested changes in a review",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Removing comments from the PR",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Resolving a conversation collapses the comment thread to indicate feedback was addressed. Helps track outstanding review items.",
+        "incorrect": "Resolving is comment management, not closing the PR, accepting suggestions, or deleting comments.",
+        "examTip": "PR review workflow: comment â†’ address â†’ resolve â†’ re-review â†’ approve. PR shows 0 unresolved conversations when ready to merge.",
+        "relatedTopics": [
+          "PR-review",
+          "code-review"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe pull request reviews",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "github-094",
+      "type": "single-choice",
+      "topicId": "collaboration",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company has 50 developers across 20 repositories and wants to enforce Dependabot and secret scanning across all repositories at once.",
+      "questionText": "Which GitHub feature enables enforcing this across all repositories simultaneously?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Repository branch protection rules",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "GitHub Organisation security policies and settings",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "CODEOWNERS files in each repository",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "GitHub Actions workflows in each repository",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Organisation-level security settings allow owners to enable Dependabot, secret scanning, and other features across all repositories simultaneously.",
+        "incorrect": "Branch protection rules = specific branches. CODEOWNERS = review assignment. Actions = automation, not security policy.",
+        "examTip": "Org security settings: enable Dependabot, secret scanning, code scanning, 2FA requirement for all members across all repos at once.",
+        "relatedTopics": [
+          "organisation-security",
+          "policy-enforcement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe organisation security",
+        "references": [
+          "https://docs.github.com"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

@@ -2,6 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import { Clock, Lock, ChevronDown, CheckCircle2, Zap } from 'lucide-react';
 import { DataLoader } from '../services/DataLoader';
 import { useStore } from '../store/useStore';
+import { useAuth } from '../store/useAuth';
+import { requiresAuthForCert } from '../lib/guestGuard';
+import { AuthModal } from '../components/AuthModal';
+import { SupportAccessModal } from '../components/SupportAccessModal';
+import { hasSupportUnlock } from '../lib/certAccess';
 import { CareerTrack, CatalogCert, TrackLevel } from '../types';
 
 const LEVEL_ORDER = ['foundation', 'associate', 'professional'];
@@ -14,8 +19,12 @@ export function TracksPage() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const progress = useStore((s) => s.progress);
+  const manifest = useStore((s) => s.manifest);
   const selectCertification = useStore((s) => s.selectCertification);
   const selectTrack = useStore((s) => s.selectTrack);
+  const { user } = useAuth();
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [supportCertId, setSupportCertId] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -43,12 +52,37 @@ export function TracksPage() {
     const foundationCerts = track.levels
       .find((l) => l.stage === 'foundation')?.certs ?? track.levels[0]?.certs ?? [];
     const firstFree = foundationCerts.find(({ certId }) => catalog.get(certId)?.accessTier === 'free');
+    const firstCertId = firstFree?.certId ?? foundationCerts[0]?.certId;
+
+    if (firstCertId && requiresAuthForCert(!!user, firstCertId, progress)) {
+      setShowAuthModal(true);
+      return;
+    }
+    if (firstCertId && firstCertId !== progress.selectedCertification && !hasSupportUnlock(firstCertId)) {
+      setSupportCertId(firstCertId);
+      return;
+    }
 
     await selectTrack(track.id);
     if (firstFree) {
       await selectCertification(firstFree.certId);
     }
     setExpandedId(null);
+  }
+
+  async function handleSelectCertification(trackId: string, certId: string) {
+    if (!manifest?.certifications.some((cert) => cert.id === certId)) return;
+    if (requiresAuthForCert(!!user, certId, progress)) {
+      setShowAuthModal(true);
+      return;
+    }
+    if (certId !== progress.selectedCertification && !hasSupportUnlock(certId)) {
+      setSupportCertId(certId);
+      return;
+    }
+
+    await selectTrack(trackId);
+    await selectCertification(certId);
   }
 
   if (isLoading) {
@@ -93,9 +127,11 @@ export function TracksPage() {
             catalog={catalog}
             isActive={track.id === activeTrackId}
             activeCertId={activeCertId}
+            availableCertIds={new Set(manifest?.certifications.map((cert) => cert.id) ?? [])}
             isExpanded={expandedId === track.id}
             onToggle={() => setExpandedId(expandedId === track.id ? null : track.id)}
             onActivate={() => handleActivate(track)}
+            onSelectCertification={(certId) => handleSelectCertification(track.id, certId)}
           />
         ))}
       </div>
@@ -103,6 +139,21 @@ export function TracksPage() {
       <p style={{ marginTop: 32, textAlign: 'center', fontSize: 12, color: '#8ea2c2' }}>
         More paths coming as the content library grows.
       </p>
+      {showAuthModal && <AuthModal onClose={() => setShowAuthModal(false)} />}
+      {supportCertId && (
+        <SupportAccessModal
+          certId={supportCertId}
+          certName={catalog.get(supportCertId)?.name ?? supportCertId}
+          onClose={() => setSupportCertId(null)}
+          onUnlocked={() => {
+            setSupportCertId(null);
+            const target = tracks
+              .flatMap((track) => track.levels.flatMap((level) => level.certs.map((cert) => ({ trackId: track.id, certId: cert.certId }))))
+              .find((entry) => entry.certId === supportCertId);
+            if (target) void handleSelectCertification(target.trackId, target.certId);
+          }}
+        />
+      )}
     </div>
   );
 }
@@ -114,17 +165,21 @@ function TrackCard({
   catalog,
   isActive,
   activeCertId,
+  availableCertIds,
   isExpanded,
   onToggle,
   onActivate,
+  onSelectCertification,
 }: {
   track: CareerTrack;
   catalog: globalThis.Map<string, CatalogCert>;
   isActive: boolean;
   activeCertId: string;
+  availableCertIds: Set<string>;
   isExpanded: boolean;
   onToggle: () => void;
   onActivate: () => void;
+  onSelectCertification: (certId: string) => void;
 }) {
   const detailRef = useRef<HTMLDivElement>(null);
 
@@ -231,8 +286,10 @@ function TrackCard({
         aria-labelledby={buttonId}
         aria-hidden={!isExpanded}
         style={{
-          maxHeight: isExpanded ? 1000 : 0,
-          overflow: 'hidden',
+          maxHeight: isExpanded ? 'min(1000px, calc(100dvh - 180px))' : 0,
+          overflowX: 'hidden',
+          overflowY: isExpanded ? 'auto' : 'hidden',
+          overscrollBehavior: 'contain',
           transition: 'max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
         }}
       >
@@ -246,8 +303,10 @@ function TrackCard({
                 levelIndex={li}
                 catalog={catalog}
                 activeCertId={activeCertId}
+                availableCertIds={availableCertIds}
                 trackColor={track.color}
                 isExpanded={isExpanded}
+                onSelectCertification={onSelectCertification}
               />
             ))}
           </div>
@@ -291,14 +350,18 @@ function LevelSection({
   levelIndex,
   catalog,
   activeCertId,
+  availableCertIds,
   trackColor,
+  onSelectCertification,
 }: {
   level: TrackLevel;
   levelIndex: number;
   catalog: globalThis.Map<string, CatalogCert>;
   activeCertId: string;
+  availableCertIds: Set<string>;
   trackColor: string;
   isExpanded?: boolean;
+  onSelectCertification: (certId: string) => void;
 }) {
   return (
     <div>
@@ -320,6 +383,7 @@ function LevelSection({
           const cert = catalog.get(certId);
           const isFree = cert?.accessTier === 'free';
           const isActiveCert = certId === activeCertId;
+          const hasContent = availableCertIds.has(certId);
 
           return (
             <div
@@ -362,6 +426,20 @@ function LevelSection({
               </div>
               {note && (
                 <p style={{ margin: 0, fontSize: 11, color: '#8ea2c2', lineHeight: 1.5 }}>{note}</p>
+              )}
+              {hasContent && !isActiveCert && (
+                <button
+                  type="button"
+                  onClick={() => onSelectCertification(certId)}
+                  style={{ marginTop: 9, minHeight: 36, padding: '6px 10px', borderRadius: 8, border: '1px solid var(--accent)', background: 'transparent', color: 'var(--accent)', fontSize: 11, fontWeight: 700, cursor: 'pointer' }}
+                >
+                  Set active
+                </button>
+              )}
+              {!hasContent && (
+                <span style={{ display: 'block', marginTop: 8, fontSize: 10, color: '#8ea2c2' }}>
+                  Content coming soon
+                </span>
               )}
             </div>
           );

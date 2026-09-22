@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { NavLink, Outlet, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react'; import { NavLink, Outlet, Link } from 'react-router-dom';
 import {
   LayoutDashboard,
   Map as MapIcon,
@@ -9,14 +8,16 @@ import {
   Bookmark,
   Settings,
   Flame,
-  Sun,
-  Moon,
   ChevronRight,
+  LogIn,
+  LogOut,
 } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { useTheme } from '../store/useTheme';
+import { useAuth, getUserDisplayName, getUserAvatar } from '../store/useAuth';
 import { DataLoader } from '../services/DataLoader';
 import { CareerTrack, CatalogCert } from '../types';
+import { AuthModal } from './AuthModal';
 
 const navItems = [
   { to: '/', icon: LayoutDashboard, label: 'Dashboard' },
@@ -39,7 +40,9 @@ const mobileTabItems = [
 export function Layout() {
   const progress = useStore((s) => s.progress);
   const manifest = useStore((s) => s.manifest);
-  const { theme, toggle } = useTheme();
+  const { theme } = useTheme();
+  const { user, signOut } = useAuth();
+  const [showAuthModal, setShowAuthModal] = useState(false);
 
   const [tracks, setTracks] = useState<CareerTrack[]>([]);
   const [catalog, setCatalog] = useState<globalThis.Map<string, CatalogCert>>(new globalThis.Map());
@@ -115,6 +118,8 @@ export function Layout() {
               padding: 16,
               display: 'flex',
               flexDirection: 'column',
+              overflowY: 'auto',
+              minHeight: 0,
             }}
           >
             {/* Brand */}
@@ -168,7 +173,7 @@ export function Layout() {
             </nav>
 
             {/* Active cert widget */}
-            <div className="sidebar-cert-widget" style={{ marginTop: 'auto' }}>
+            <div className="sidebar-cert-widget active-cert-widget" style={{ marginTop: 'auto', minWidth: 0 }}>
               {activeCert ? (
                 <Link
                   to={`/certifications/${activeCertId}`}
@@ -185,6 +190,8 @@ export function Layout() {
                     boxShadow: theme === 'light' ? '0 2px 8px rgba(59,110,248,0.08)' : 'none',
                     textDecoration: 'none',
                     display: 'block',
+                    minWidth: 0,
+                    overflow: 'hidden',
                   }}
                   aria-label={`Go to ${activeCert.name}`}
                 >
@@ -200,10 +207,10 @@ export function Layout() {
                       Current cert
                     </div>
                   )}
-                  <div style={{ fontSize: 20, fontWeight: 800, lineHeight: 1, color: (activeCert as CatalogCert).vendorColor ?? 'var(--accent)' }}>
+                  <div style={{ fontSize: 20, fontWeight: 800, lineHeight: 1, color: (activeCert as CatalogCert).vendorColor ?? 'var(--accent)', overflowWrap: 'anywhere' }}>
                     {(activeCert as CatalogCert).code ?? activeCertId.toUpperCase()}
                   </div>
-                  <div className="text-[var(--text-secondary)]" style={{ marginTop: 6, fontSize: 11, lineHeight: 1.4 }}>
+                  <div className="text-[var(--text-secondary)]" style={{ marginTop: 6, fontSize: 11, lineHeight: 1.4, overflowWrap: 'anywhere' }}>
                     {activeCert.name}
                   </div>
                   {certPosition && (
@@ -225,22 +232,53 @@ export function Layout() {
               )}
             </div>
 
-            {/* Streak + theme toggle */}
-            <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 4px' }}>
+            {/* Auth widget */}
+            <div className="sidebar-auth-widget" style={{ marginTop: 10, minWidth: 0 }}>
+              {user ? (
+                <div className="sidebar-user-row" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 10px', borderRadius: 12, background: 'var(--bg-tertiary)', border: '1px solid var(--border)' }}>
+                  {getUserAvatar(user) ? (
+                    <img src={getUserAvatar(user)!} alt="" aria-hidden="true" style={{ width: 26, height: 26, borderRadius: '50%', flexShrink: 0 }} />
+                  ) : (
+                    <span style={{ width: 26, height: 26, borderRadius: '50%', background: 'var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <span style={{ color: '#fff', fontSize: 11, fontWeight: 800 }} aria-hidden="true">
+                        {getUserDisplayName(user).charAt(0).toUpperCase()}
+                      </span>
+                    </span>
+                  )}
+                  <span className="sidebar-label text-[var(--text-secondary)]" style={{ fontSize: 12, fontWeight: 600, flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    {getUserDisplayName(user)}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => void signOut()}
+                    aria-label="Sign out"
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)', display: 'flex', padding: 2, flexShrink: 0 }}
+                    title="Sign out"
+                  >
+                    <LogOut style={{ width: 14, height: 14 }} />
+                  </button>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setShowAuthModal(true)}
+                  aria-label="Sign in to CertArc"
+                  style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7, padding: '9px 12px', borderRadius: 12, border: '1px solid var(--border)', background: 'var(--bg-tertiary)', color: 'var(--accent)', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}
+                >
+                  <LogIn style={{ width: 14, height: 14 }} aria-hidden="true" />
+                  <span className="sidebar-label">Sign in</span>
+                </button>
+              )}
+            </div>
+
+            {/* Study streak */}
+            <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', justifyContent: 'flex-end', padding: '0 4px' }}>
               {progress.studyStreak.current > 0 && (
-                <div className="sidebar-label text-[var(--warning)]" style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 600 }}>
+                <div className="sidebar-label text-[var(--warning)]" style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 600, marginRight: 'auto' }}>
                   <Flame style={{ width: 14, height: 14 }} className="animate-pulse-flame" aria-hidden="true" />
                   <span>{progress.studyStreak.current}d streak</span>
                 </div>
               )}
-              <button
-                onClick={toggle}
-                aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-                className="ml-auto flex items-center justify-center border border-[var(--border)] bg-[var(--bg-tertiary)] text-[var(--text-secondary)] transition-all hover:border-[var(--accent)]/50 hover:text-[var(--accent)]"
-                style={{ width: 34, height: 34, borderRadius: 10 }}
-              >
-                {theme === 'dark' ? <Sun style={{ width: 14, height: 14 }} /> : <Moon style={{ width: 14, height: 14 }} />}
-              </button>
             </div>
           </div>
         </aside>
@@ -269,6 +307,9 @@ export function Layout() {
       >
         <span className="hidden md:block">Made by FredInTech</span>
       </footer>
+
+      {/* Auth modal */}
+      {showAuthModal && <AuthModal onClose={() => setShowAuthModal(false)} />}
 
       {/* ── Mobile bottom tab bar ── */}
       <nav
@@ -308,6 +349,40 @@ export function Layout() {
               )}
             </NavLink>
           ))}
+          {/* Auth button in mobile tab bar */}
+          {user ? (
+            <button
+              type="button"
+              onClick={() => void signOut()}
+              aria-label="Sign out"
+              className="flex flex-col items-center gap-0.5 px-2 py-1 rounded-xl text-[var(--text-secondary)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+              style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+            >
+              <span style={{ width: 36, height: 28, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {getUserAvatar(user) ? (
+                  <img src={getUserAvatar(user)!} alt="" aria-hidden="true" style={{ width: 22, height: 22, borderRadius: '50%' }} />
+                ) : (
+                  <span style={{ color: '#fff', fontSize: 11, fontWeight: 800 }} aria-hidden="true">
+                    {getUserDisplayName(user).charAt(0).toUpperCase()}
+                  </span>
+                )}
+              </span>
+              <span style={{ fontSize: 10, fontWeight: 600 }}>Account</span>
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setShowAuthModal(true)}
+              aria-label="Sign in"
+              className="flex flex-col items-center gap-0.5 px-2 py-1 rounded-xl text-[var(--accent)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+              style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+            >
+              <span style={{ width: 36, height: 28, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <LogIn style={{ width: 18, height: 18 }} aria-hidden="true" />
+              </span>
+              <span style={{ fontSize: 10, fontWeight: 600 }}>Sign in</span>
+            </button>
+          )}
         </div>
       </nav>
 
@@ -332,7 +407,29 @@ function ErrorBanner() {
   const error = useStore((s) => s.error);
   const retryLastLoad = useStore((s) => s.retryLastLoad);
   const dismissError = useStore((s) => s.dismissError);
-  if (!error) return null;
+  const [isOffline, setIsOffline] = useState(!navigator.onLine);
+
+  useEffect(() => {
+    const goOffline = () => setIsOffline(true);
+    const goOnline = () => {
+      setIsOffline(false);
+      // Auto-retry when connection is restored and there's a pending error
+      if (error) void retryLastLoad();
+    };
+    window.addEventListener('offline', goOffline);
+    window.addEventListener('online', goOnline);
+    return () => {
+      window.removeEventListener('offline', goOffline);
+      window.removeEventListener('online', goOnline);
+    };
+  }, [error, retryLastLoad]);
+
+  const displayMessage = isOffline
+    ? 'You appear to be offline. Check your connection.'
+    : error;
+
+  if (!displayMessage) return null;
+
   return (
     <div
       role="alert"
@@ -343,32 +440,38 @@ function ErrorBanner() {
         marginBottom: 16,
         padding: '11px 16px',
         borderRadius: 12,
-        background: 'rgba(255,107,107,0.08)',
-        border: '1px solid rgba(255,107,107,0.25)',
+        background: isOffline ? 'rgba(255,174,0,0.08)' : 'rgba(255,107,107,0.08)',
+        border: `1px solid ${isOffline ? 'rgba(255,174,0,0.25)' : 'rgba(255,107,107,0.25)'}`,
         fontSize: 13,
-        color: 'var(--error)',
+        color: isOffline ? 'var(--warning)' : 'var(--error)',
         lineHeight: 1.5,
       }}
     >
-      <span style={{ fontSize: 16, flexShrink: 0 }} aria-hidden="true">⚠️</span>
-      <span style={{ flex: 1 }}>{error}</span>
-      <button
-        type="button"
-        onClick={() => void retryLastLoad()}
-        aria-label="Retry loading"
-        className="btn-ghost"
-        style={{ borderRadius: 8, padding: '4px 10px', fontSize: 12, fontWeight: 700, color: 'var(--error)', cursor: 'pointer', flexShrink: 0 }}
-      >
-        Retry
-      </button>
-      <button
-        type="button"
-        onClick={dismissError}
-        aria-label="Dismiss error"
-        style={{ background: 'transparent', border: 'none', color: 'var(--error)', cursor: 'pointer', fontSize: 18, lineHeight: 1, padding: '0 4px', flexShrink: 0 }}
-      >
-        ×
-      </button>
+      <span style={{ fontSize: 16, flexShrink: 0 }} aria-hidden="true">
+        {isOffline ? '📶' : '⚠️'}
+      </span>
+      <span style={{ flex: 1 }}>{displayMessage}</span>
+      {!isOffline && error && (
+        <>
+          <button
+            type="button"
+            onClick={() => void retryLastLoad()}
+            aria-label="Retry loading"
+            className="btn-ghost"
+            style={{ borderRadius: 8, padding: '4px 10px', fontSize: 12, fontWeight: 700, color: 'var(--error)', cursor: 'pointer', flexShrink: 0 }}
+          >
+            Retry
+          </button>
+          <button
+            type="button"
+            onClick={dismissError}
+            aria-label="Dismiss error"
+            style={{ background: 'transparent', border: 'none', color: 'var(--error)', cursor: 'pointer', fontSize: 18, lineHeight: 1, padding: '0 4px', flexShrink: 0 }}
+          >
+            ×
+          </button>
+        </>
+      )}
     </div>
   );
 }

@@ -1,0 +1,1318 @@
+{
+  "certificationId": "ai-900",
+  "topicId": "machine-learning",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "ai900-008",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is supervised machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Training a model on unlabelled data to discover patterns",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Training a model on labelled data where the correct answers are provided",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Training a model through trial and error using rewards and penalties",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Training a model by having humans supervise the process at each step",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Supervised learning uses labelled training data â€” each example has input features and a known correct output (label). The model learns to map inputs to outputs.",
+        "incorrect": "Unlabelled data = unsupervised learning. Rewards/penalties = reinforcement learning. Human supervision of each step is not the definition.",
+        "examTip": "Supervised = labelled data (you know the answers). Unsupervised = unlabelled data (discover patterns). Reinforcement = learn by rewards.",
+        "relatedTopics": [
+          "supervised-learning",
+          "machine-learning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-009",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which machine learning technique trains a model by having it interact with an environment, receiving rewards for correct actions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Supervised learning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Unsupervised learning",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Reinforcement learning",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Transfer learning",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Reinforcement learning trains an agent to make decisions by rewarding correct actions and penalising incorrect ones â€” used in game playing, robotics, and autonomous systems.",
+        "incorrect": "Supervised = labelled data. Unsupervised = finding patterns. Transfer = using a pre-trained model on a new task.",
+        "examTip": "Reinforcement learning examples: game-playing AI (chess, Go), robot navigation, recommendation systems optimisation.",
+        "relatedTopics": [
+          "reinforcement-learning",
+          "machine-learning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML techniques",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-010",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a training dataset in machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To evaluate the final performance of a trained model on unseen data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To teach the model by exposing it to examples so it can learn patterns",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To fine-tune hyperparameters during model development",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To monitor model performance after deployment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The training dataset is used to teach the model â€” it's exposed to many examples so it learns the patterns and relationships between inputs and outputs.",
+        "incorrect": "Evaluating final performance = test dataset. Hyperparameter tuning = validation dataset. Post-deployment monitoring = separate process.",
+        "examTip": "Data splits: Training (teach the model) â†’ Validation (tune hyperparameters) â†’ Test (evaluate final performance). Never use test data during training.",
+        "relatedTopics": [
+          "training-data",
+          "ML-process",
+          "data-splits"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-011",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 'overfitting' mean in machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The model performs poorly on both training and test data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The model learns the training data too well, including noise, and performs poorly on new data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The model is too simple to capture the patterns in the data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The training process takes too long due to excessive data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Overfitting occurs when a model memorises the training data (including noise) rather than learning general patterns, resulting in high training accuracy but poor performance on new unseen data.",
+        "incorrect": "Poor on both = underfitting. Too simple = underfitting. Training time is not overfitting.",
+        "examTip": "Overfitting = high train accuracy, low test accuracy (too complex). Underfitting = low train and test accuracy (too simple). Goal = balance (generalisation).",
+        "relatedTopics": [
+          "overfitting",
+          "underfitting",
+          "model-evaluation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-012",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Azure Machine Learning used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing Azure virtual machines and cloud infrastructure",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Building, training, deploying, and managing machine learning models at scale",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Storing and querying large datasets in the cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Creating and managing Azure Active Directory users",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure Machine Learning is a cloud platform for the full ML lifecycle â€” data preparation, model training, hyperparameter tuning, deployment as web services, and monitoring.",
+        "incorrect": "VM management = Azure Resource Manager. Data storage = Azure Storage/SQL. Identity = Entra ID.",
+        "examTip": "Azure ML key features: designer (no-code), automated ML (AutoML), notebooks, pipelines, model registry, managed endpoints.",
+        "relatedTopics": [
+          "Azure-Machine-Learning",
+          "ML-platform"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML capabilities",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-013",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Automated ML (AutoML) in Azure Machine Learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A feature that automatically deploys models to production without human review",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A feature that automatically tries multiple algorithms and hyperparameters to find the best model for a dataset",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An automated process for collecting and labelling training data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A tool that automatically writes Python code for machine learning",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "AutoML automates the model selection and hyperparameter tuning process â€” it iterates through many algorithm/parameter combinations and returns the best performing model, reducing the need for deep ML expertise.",
+        "incorrect": "AutoML finds the best model, it doesn't auto-deploy, label data, or write code.",
+        "examTip": "AutoML is ideal for non-ML experts who want to quickly build models. It handles algorithm selection, feature engineering, and hyperparameter tuning automatically.",
+        "relatedTopics": [
+          "AutoML",
+          "Azure-ML",
+          "hyperparameter-tuning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-014",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which model evaluation metric measures the percentage of correct predictions out of all predictions made?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Precision",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Recall",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Accuracy",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "AUC",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Accuracy = (correct predictions) / (total predictions). It measures overall correctness across all classes.",
+        "incorrect": "Precision = correct positive predictions / all positive predictions. Recall = correct positives / all actual positives. AUC = area under ROC curve.",
+        "examTip": "Accuracy is misleading with imbalanced data. If 95% of emails are not spam, a model that predicts 'not spam' always achieves 95% accuracy but is useless.",
+        "relatedTopics": [
+          "accuracy",
+          "model-evaluation",
+          "classification-metrics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML model evaluation",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-015",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A medical AI model is used to screen patients for a serious disease. The model has high accuracy but frequently misses positive cases (people who have the disease).",
+      "questionText": "Which metric should be prioritised to reduce missed positive cases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accuracy",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Precision",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Recall (Sensitivity)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Specificity",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Recall (sensitivity) measures how many actual positive cases the model correctly identifies. In disease screening, missing a positive case (false negative) is dangerous â€” high recall minimises missed diagnoses.",
+        "incorrect": "Accuracy is misleading with imbalanced medical data. Precision measures false positives, not misses. Specificity measures true negatives.",
+        "examTip": "Medical screening = maximise Recall (catch all sick people). Spam filter = maximise Precision (don't block legitimate emails). High-stakes = recall. False alarms acceptable = recall. Wrong positives costly = precision.",
+        "relatedTopics": [
+          "recall",
+          "precision",
+          "model-evaluation",
+          "healthcare-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe model evaluation metrics",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-016",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does the Azure Machine Learning Designer provide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A command-line interface for training models in Azure",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A visual drag-and-drop interface for building ML pipelines without writing code",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A pre-built model library for common business scenarios",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An automated tool for deploying models to edge devices",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure ML Designer is a visual canvas where you connect dataset and module components to build, train, and deploy ML pipelines â€” no code required, ideal for non-developers.",
+        "incorrect": "CLI = Azure ML CLI. Pre-built models = Azure AI Services. Edge deployment = Azure IoT Edge/ONNX.",
+        "examTip": "Azure ML Designer = visual/drag-drop (no code). Azure ML notebooks = code-based (Python). AutoML = automated algorithm selection.",
+        "relatedTopics": [
+          "Azure-ML-Designer",
+          "no-code-ML",
+          "Azure-ML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML tools",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-017",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a feature in the context of machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The final output prediction made by the model",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An individual measurable input variable used to train a model",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A new capability added to an AI product",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The accuracy score of a trained model",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A feature is an individual measurable input variable (attribute) used by the model for training and prediction. For a house price model, features might be: square footage, number of bedrooms, location.",
+        "incorrect": "Output = label. Product capability = product feature (different context). Accuracy = evaluation metric.",
+        "examTip": "Features = inputs (X). Labels = outputs (Y). Feature engineering = creating better features from raw data to improve model performance.",
+        "relatedTopics": [
+          "features",
+          "labels",
+          "ML-concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-018",
+      "type": "yes-no-statements",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Azure Machine Learning concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "An Azure ML workspace is the top-level resource that contains all ML assets including experiments, models, and datasets.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Azure ML compute clusters can only run on a single virtual machine.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A model endpoint in Azure ML allows applications to send data and receive predictions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "AutoML requires users to specify which algorithm to use before training begins.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Workspace = top-level container for all ML resources. Endpoints = inference APIs. Compute clusters = multi-node scalable compute. AutoML = automatically selects algorithms, no user specification needed.",
+        "incorrect": "Compute clusters can scale across many nodes. AutoML's whole purpose is to try many algorithms automatically.",
+        "examTip": "Azure ML workspace contains: datasets, experiments, models, endpoints, compute, environments, pipelines.",
+        "relatedTopics": [
+          "Azure-ML-workspace",
+          "endpoints",
+          "AutoML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-044",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Azure Machine Learning's model registry do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It automatically trains models on a schedule",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It provides a centralised store to version, track, and manage trained ML models",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It registers Azure subscription quotas for ML compute",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It stores training datasets for reuse across experiments",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The model registry stores trained model files with version numbers, metadata, performance metrics, and lineage information â€” enabling teams to track, compare, and promote models through environments (dev â†’ staging â†’ production).",
+        "incorrect": "Scheduled training = ML pipelines. Quotas = Azure subscription management. Datasets are stored in data assets, not the model registry.",
+        "examTip": "Model registry = central store for model versions. Track: version, metrics, training run, dataset used. Promote winning models to deployment.",
+        "relatedTopics": [
+          "model-registry",
+          "MLOps",
+          "Azure-ML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-047",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a confusion matrix used for in machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To visualise the structure of a neural network",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To evaluate a classification model by showing counts of correct and incorrect predictions for each class",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To compare training and validation loss during model training",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To display the importance of each feature in a model",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A confusion matrix shows the counts of True Positives, True Negatives, False Positives, and False Negatives for a classifier â€” revealing exactly which classes the model confuses with others.",
+        "incorrect": "Network visualisation = different tools. Training/validation curves = loss plots. Feature importance = separate chart.",
+        "examTip": "Confusion matrix: TP (correct positive), TN (correct negative), FP (false alarm), FN (missed positive). From it you calculate accuracy, precision, recall, F1.",
+        "relatedTopics": [
+          "confusion-matrix",
+          "model-evaluation",
+          "classification"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe model evaluation",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-048",
+      "type": "ordering",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the steps of a typical machine learning workflow in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Define the problem and gather data",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Prepare and clean the data (feature engineering)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Train the model on training data",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Evaluate the model on test data",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Deploy the model as a service",
+          "correctPosition": 5
+        },
+        {
+          "id": "o6",
+          "text": "Monitor and retrain as needed",
+          "correctPosition": 6
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "ML lifecycle: Define problem â†’ Prepare data â†’ Train â†’ Evaluate â†’ Deploy â†’ Monitor. This mirrors CRISP-DM and Azure ML's process.",
+        "incorrect": "Data must be prepared before training. Evaluation comes after training. Deployment follows evaluation. Monitoring is ongoing after deployment.",
+        "examTip": "This ML lifecycle is a recurring exam topic. Azure ML supports all these steps in one platform.",
+        "relatedTopics": [
+          "ML-lifecycle",
+          "CRISP-DM",
+          "Azure-ML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML process",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-053",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of cross-validation in machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To validate that the model code has no syntax errors",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To get a more reliable estimate of model performance by training and evaluating on multiple data splits",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To check that training and test data come from the same distribution",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To validate that all features are normalised before training",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Cross-validation (e.g., k-fold) splits data into k subsets, trains on k-1, tests on 1, rotates through all combinations, and averages results â€” giving a more reliable performance estimate than a single train/test split.",
+        "incorrect": "Cross-validation is about model evaluation reliability, not code validation, distribution checks, or data preprocessing.",
+        "examTip": "k-fold cross-validation: split into k folds, train k times (each time using a different fold as test), average results. Reduces evaluation variance.",
+        "relatedTopics": [
+          "cross-validation",
+          "model-evaluation",
+          "ML-concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML model evaluation",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-054",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is transfer learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Moving a trained model from one Azure region to another",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Reusing a model trained on a large dataset as the starting point for training on a smaller related task",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Transferring training data between different ML frameworks",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Copying model weights between different team members",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Transfer learning takes a model pre-trained on a large general dataset (e.g., ImageNet for images, GPT for text) and fine-tunes it on a smaller domain-specific dataset â€” saving time and compute while achieving good results.",
+        "incorrect": "Transfer learning is an AI technique, not a data migration, framework conversion, or file sharing process.",
+        "examTip": "Transfer learning enables: training custom image classifiers with few examples (Custom Vision), fine-tuning LLMs on domain data. Pre-trained â†’ fine-tuned on your data.",
+        "relatedTopics": [
+          "transfer-learning",
+          "fine-tuning",
+          "pre-trained-models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML techniques",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-061",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of normalisation/scaling in machine learning data preparation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To remove duplicate records from the training dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To bring features onto a similar scale so no single feature dominates model training",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To convert categorical features into text labels",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To split the dataset into training and test sets",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Normalisation (0-1 range) or standardisation (mean 0, std 1) ensures features with large scales (e.g., salary: 50,000) don't dominate over features with small scales (e.g., age: 35) during model training.",
+        "incorrect": "Deduplication removes duplicates. One-hot encoding = categorical to numerical. Train/test split = data partitioning.",
+        "examTip": "Feature scaling matters for: gradient descent-based models, k-NN, SVMs, neural networks. Tree-based models (Random Forest, XGBoost) don't require scaling.",
+        "relatedTopics": [
+          "normalisation",
+          "feature-scaling",
+          "data-preparation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML data preparation",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-064",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A data scientist trains a model that achieves 99% accuracy on training data but only 62% accuracy on the test set.",
+      "questionText": "What is MOST likely happening and what should be done?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The model is underfitting â€” more training data is needed",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The model is overfitting â€” regularisation, more data, or a simpler model should be tried",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The model is performing well â€” 62% test accuracy is acceptable",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The test data is corrupted and should be replaced",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "High train accuracy (99%) with low test accuracy (62%) is a classic overfitting signature â€” the model memorised the training data. Solutions: add regularisation (L1/L2, dropout), get more training data, simplify the model, or use early stopping.",
+        "incorrect": "Underfitting = low accuracy on both train AND test. 62% test accuracy with 99% train is clearly overfitting. Test data corruption is unlikely to cause this specific pattern.",
+        "examTip": "Overfitting fix: more data, regularisation, dropout (neural nets), pruning (trees), simpler model, data augmentation, cross-validation.",
+        "relatedTopics": [
+          "overfitting",
+          "regularisation",
+          "model-evaluation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML model issues",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-069",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data labelling in the context of supervised machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adding column headers to a CSV dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Annotating training examples with the correct output (class, value, or bounding box) for the model to learn from",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Assigning version numbers to trained models",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Tagging Azure resources for cost management",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data labelling (annotation) is the process of adding correct output labels to training data â€” e.g., marking images as 'cat' or 'dog', drawing bounding boxes around objects, or tagging text with sentiment.",
+        "incorrect": "CSV headers = data schema. Model versioning = MLOps. Resource tags = Azure cost management.",
+        "examTip": "Azure ML Data Labelling is a service for crowdsourcing and managing labelling projects. Quality and quantity of labels directly impacts model performance.",
+        "relatedTopics": [
+          "data-labelling",
+          "annotation",
+          "supervised-learning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-072",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of the Azure Machine Learning model monitoring feature after deployment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To retrain the model automatically when accuracy drops",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To detect data drift and performance degradation in production, alerting when the model needs retraining",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To monitor Azure infrastructure costs for the ML workload",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To provide audit trails for regulatory compliance",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Model monitoring tracks data drift (input distribution change), concept drift (relationship between inputs and outputs changes), and performance metrics â€” alerting teams when the deployed model needs retraining.",
+        "incorrect": "Auto-retraining is a separate pipeline. Cost monitoring = Azure Cost Management. Compliance auditing = separate tools.",
+        "examTip": "Data drift: training data distribution â‰  production data distribution over time. Causes model degradation. Monitor â†’ detect drift â†’ retrain cycle.",
+        "relatedTopics": [
+          "model-monitoring",
+          "data-drift",
+          "MLOps"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML operations",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-075",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the difference between batch inferencing and real-time inferencing in Azure Machine Learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Batch runs faster than real-time",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Batch processes large volumes of data asynchronously; real-time returns instant predictions for individual requests",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Real-time only works with tabular data; batch works with images",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are the same but run in different Azure regions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Batch inferencing processes large datasets in bulk (e.g., score all customers overnight). Real-time inferencing responds immediately to individual requests (e.g., fraud check at point of payment).",
+        "incorrect": "Real-time is faster per request but batch has higher throughput. Both support various data types. They serve different use cases.",
+        "examTip": "Batch = high volume, latency tolerable (reports, recommendations). Real-time = immediate response needed (fraud, recommendations at click-time, medical alerts).",
+        "relatedTopics": [
+          "batch-inferencing",
+          "real-time-inferencing",
+          "model-deployment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML deployment",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-078",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary benefit of using Azure Machine Learning pipelines?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They automatically select the best ML algorithm for a dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "They orchestrate reusable, automated workflows for data preparation, training, evaluation, and deployment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They provide a visual interface for data scientists to explore datasets",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They manage cost allocation for ML compute resources",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure ML pipelines automate the end-to-end ML workflow as a series of steps â€” data preprocessing, training, evaluation, registration â€” that can be scheduled, reused, and versioned for reproducibility.",
+        "incorrect": "Algorithm selection = AutoML. Visual exploration = Azure ML Designer/notebooks. Cost management = Azure Cost Management.",
+        "examTip": "ML pipelines = automation + reproducibility + reusability. Each step can be run independently. Re-run only changed steps for efficiency.",
+        "relatedTopics": [
+          "Azure-ML-pipelines",
+          "MLOps",
+          "automation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-081",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is MLOps and why is it important?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A machine learning technique for optimising model hyperparameters",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The practice of applying DevOps principles to ML to automate and manage the ML lifecycle reliably and at scale",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A cloud service for deploying ML models to edge devices",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A method for labelling large datasets using crowdsourcing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "MLOps (ML + DevOps) applies CI/CD principles to machine learning â€” automating training pipelines, model versioning, testing, deployment, and monitoring to make ML production-ready and maintainable.",
+        "incorrect": "Hyperparameter tuning = AutoML/grid search. Edge deployment = Azure IoT Edge/ONNX. Data labelling = annotation tools.",
+        "examTip": "MLOps lifecycle: Data versioning â†’ Experiment tracking â†’ Model registry â†’ CI/CD pipelines â†’ Model monitoring â†’ Feedback loop. Azure ML supports all stages.",
+        "relatedTopics": [
+          "MLOps",
+          "CI-CD",
+          "model-deployment",
+          "Azure-ML"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure ML operations",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-085",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the purpose of splitting a dataset into training and test sets?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To make the dataset smaller and faster to process",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To train the model on one portion and evaluate its performance on unseen data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To train two different models and compare them",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To separate numeric features from categorical features",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The training set teaches the model. The test set evaluates how well the model performs on data it has never seen â€” simulating real-world performance and checking for overfitting.",
+        "incorrect": "Splits don't reduce data size by default. Training two models is a different concept. Feature separation is preprocessing.",
+        "examTip": "Typical splits: 80/20 or 70/30 (train/test). With validation: 60/20/20. Never use test data during training â€” it would give falsely optimistic results.",
+        "relatedTopics": [
+          "train-test-split",
+          "model-evaluation",
+          "ML-concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML data concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-090",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a neural network in the context of deep learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A biological network of neurons in the human brain",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A computational model inspired by the brain, consisting of interconnected layers of nodes that learn representations from data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A network of Azure AI services connected together",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A decision tree with multiple branches",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "An artificial neural network has an input layer, one or more hidden layers, and an output layer. Each node applies a weighted function and activation. Deep learning = many hidden layers enabling automatic feature learning.",
+        "incorrect": "This is artificial/computational, not biological. It's not an Azure architecture diagram or a decision tree.",
+        "examTip": "Neural network layers: Input â†’ Hidden (1+ layers) â†’ Output. Deep = many hidden layers. Enables: image recognition, NLP, speech. Requires large data and compute.",
+        "relatedTopics": [
+          "neural-network",
+          "deep-learning",
+          "machine-learning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe deep learning concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-095",
+      "type": "single-choice",
+      "topicId": "machine-learning",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is responsible AI impact assessment and why should it be done before deploying an AI system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A financial cost analysis to determine if AI is cost-effective",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A systematic evaluation of potential harms, biases, and ethical risks an AI system could cause to individuals and society",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A technical performance benchmark comparing different models",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A user satisfaction survey conducted after deployment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A responsible AI impact assessment identifies potential harms (discrimination, privacy violations, safety risks, misuse) before deployment â€” enabling teams to mitigate risks proactively rather than reactively after harm has occurred.",
+        "incorrect": "Not about costs, benchmarks, or post-deployment feedback. Impact assessment is pre-deployment risk analysis.",
+        "examTip": "Microsoft responsible AI tooling: AI Fairness assessment (Fairlearn), model explainability (InterpretML), data profiling, impact assessment templates. All available in Azure ML.",
+        "relatedTopics": [
+          "responsible-AI",
+          "impact-assessment",
+          "AI-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-098",
+      "type": "yes-no-statements",
+      "topicId": "machine-learning",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes machine learning concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Unsupervised learning requires labelled training data.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "A regression model predicts a continuous numeric value.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Feature engineering can significantly improve model performance.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "A model with very high training accuracy always performs well in production.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Unsupervised learning uses unlabelled data. Regression predicts numbers (price, temperature). Feature engineering improves models significantly. High training accuracy can mean overfitting â€” poor production performance.",
+        "incorrect": "Unsupervised = no labels needed. High training accuracy without good test accuracy = overfitting.",
+        "examTip": "Never judge a model by training accuracy alone. Always check test/validation performance. Real-world performance depends on both.",
+        "relatedTopics": [
+          "unsupervised-learning",
+          "regression",
+          "feature-engineering",
+          "overfitting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe ML concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

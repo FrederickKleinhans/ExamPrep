@@ -1,0 +1,2088 @@
+{
+  "certificationId": "istqb-agile",
+  "topicId": "testing-agile",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "istqb-agile-013",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the Agile Testing Quadrants model used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To define the roles of testers in an Agile team",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To categorise tests by their purpose (supporting the team vs. critiquing the product) and their nature (business-facing vs. technology-facing)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To prioritise test cases in the regression suite",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To define the four phases of Agile testing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Agile Testing Quadrants (Brian Marick) organise tests into 4 quadrants: Q1 (technology-facing, support team â€” unit/component tests), Q2 (business-facing, support team â€” functional/story tests), Q3 (business-facing, critique product â€” exploratory/usability), Q4 (technology-facing, critique product â€” performance/security).",
+        "incorrect": "Quadrants are about test categories and purpose, not roles, regression prioritisation, or phases.",
+        "examTip": "Q1=unit tests (automated), Q2=functional/story tests (automated+manual), Q3=exploratory/usability (manual), Q4=performance/security (tools). All quadrants needed.",
+        "relatedTopics": [
+          "Agile-Testing-Quadrants",
+          "test-categories",
+          "Brian-Marick"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Agile testing methods",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-014",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 'shift left' mean in the context of Agile testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Moving testers to sit on the left side of the development team",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Performing testing activities earlier in the development lifecycle to find defects sooner",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Reducing the number of test cases in the regression suite",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Prioritising left-side quadrant tests over right-side quadrant tests",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Shift left means moving testing earlier in the SDLC â€” involving testers in requirements, writing tests before code (TDD), and running automated tests as part of development rather than waiting for a dedicated test phase.",
+        "incorrect": "Shift left is a metaphor â€” the 'left' refers to earlier in the project timeline, not physical positioning or quadrant selection.",
+        "examTip": "Shift left benefits: cheaper defect fixing, earlier feedback, better quality. Enables: TDD, BDD, continuous integration, early test design.",
+        "relatedTopics": [
+          "shift-left",
+          "early-testing",
+          "TDD"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Testing in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-015",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In an Agile project, who is responsible for testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the dedicated QA testers on the team",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The entire cross-functional team, including developers, testers, and the business",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The Scrum Master, as they are responsible for quality",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An external QA team that operates independently from the development team",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In Agile, quality and testing are a shared responsibility of the whole team â€” developers write unit tests, testers design and execute tests, and the business provides acceptance criteria and validates stories.",
+        "incorrect": "Testing is not the sole responsibility of QA, the Scrum Master, or an external team. The whole team owns quality.",
+        "examTip": "Agile testing mindset: whole team approach. Developers test their code. Testers work with developers. Business defines acceptance criteria.",
+        "relatedTopics": [
+          "whole-team-testing",
+          "shared-responsibility",
+          "Agile-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Tester role in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-016",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A tester joins an Agile team mid-project. During sprint planning, the team is estimating user stories. The tester notices several stories have no acceptance criteria.",
+      "questionText": "What should the tester do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accept the stories as-is and write test cases based on their own interpretation",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Raise the concern and work with the team to define acceptance criteria before committing to the stories",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Reject all stories without acceptance criteria from the sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Ask the Scrum Master to write the acceptance criteria",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Testers add value by raising quality concerns early. Stories without acceptance criteria are ambiguous and untestable â€” the tester should collaboratively work with the team to define them before sprint commitment.",
+        "incorrect": "Working from assumptions risks building the wrong thing. Blanket rejection is too extreme. Writing criteria is a team activity, not the Scrum Master's job.",
+        "examTip": "Tester value in sprint planning: ask testability questions, identify missing acceptance criteria, estimate test effort, and flag ambiguous stories.",
+        "relatedTopics": [
+          "acceptance-criteria",
+          "sprint-planning",
+          "tester-role"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Testing activities in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-017",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the primary purpose of test automation in Agile development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To eliminate the need for manual testing entirely",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To provide fast, repeatable feedback on whether recent changes have broken existing functionality",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To replace exploratory testing with scripted test execution",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To reduce the size of the development team",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Test automation in Agile primarily supports continuous integration by providing rapid feedback on regression â€” every code commit triggers automated tests that quickly identify if something is broken.",
+        "incorrect": "Automation complements manual testing, doesn't replace it. Exploratory testing is still essential. Automation doesn't reduce headcount.",
+        "examTip": "Automation in Agile: regression safety net, fast CI/CD feedback, enables frequent releases. Manual testing still needed for: exploratory, usability, new feature testing.",
+        "relatedTopics": [
+          "test-automation",
+          "CI-CD",
+          "regression-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Test automation",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-018",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a test pyramid and why is it important in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A model showing that more UI tests should be written than unit tests",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A model that guides teams to write more low-level fast tests (unit) and fewer slow high-level tests (UI/E2E) for an efficient test suite",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A hierarchy of who should write tests in an Agile team",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A risk-based prioritisation model for test cases",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The test pyramid (Mike Cohn) shows: many fast unit tests at the base, fewer integration tests in the middle, and few slow UI/E2E tests at the top. This keeps the test suite fast and maintainable.",
+        "incorrect": "The pyramid specifically advises FEWER UI tests, not more. It's about test distribution, not team hierarchy or risk prioritisation.",
+        "examTip": "Test pyramid: Unit (many, fast, cheap) â†’ Integration (fewer) â†’ UI/E2E (few, slow, expensive). Avoid the 'ice cream cone' anti-pattern (inverted pyramid).",
+        "relatedTopics": [
+          "test-pyramid",
+          "unit-tests",
+          "test-strategy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Test levels in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-019",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is exploratory testing and when is it particularly valuable in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing performed without any documentation to reduce overhead",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Simultaneous test design, execution, and learning â€” particularly valuable for discovering unexpected defects in new features",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Automated testing that explores all possible code paths",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Testing performed only at the end of a sprint to validate new features",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Exploratory testing uses the tester's skill, curiosity, and knowledge simultaneously to design and execute tests. In Agile, it's valuable for investigating new features, edge cases, and areas automated tests miss.",
+        "incorrect": "Exploratory testing is not undocumented â€” session-based notes are taken. It's not automated, and it's not restricted to end of sprint.",
+        "examTip": "Exploratory testing: session-based, time-boxed, charter-driven. Complements scripted testing. Best for: new features, complex flows, usability issues.",
+        "relatedTopics": [
+          "exploratory-testing",
+          "Agile-testing",
+          "session-based-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Testing techniques in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-020",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is continuous integration (CI) and why does it benefit testing in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A practice of integrating all team members into a single open-plan office",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A practice of frequently merging code changes into a shared repository and running automated tests to detect integration issues early",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A process of integrating testing tools with development environments",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A release process that integrates final testing with deployment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "CI involves developers frequently committing code to a shared repository, triggering automated builds and test suites. This catches integration defects early, provides rapid feedback, and keeps the codebase always releasable.",
+        "incorrect": "CI is an engineering practice about code integration and automated testing, not office layout, tool integration, or the release process.",
+        "examTip": "CI pipeline: commit â†’ build â†’ automated tests (unit, integration) â†’ report. Failing build = immediate fix required. Enables rapid feedback.",
+        "relatedTopics": [
+          "continuous-integration",
+          "CI-CD",
+          "automated-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 CI/CD in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-021",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "How should testers handle regression testing in Agile when new functionality is added every sprint?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Perform full manual regression testing at the end of every sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Automate regression tests to run in the CI pipeline, supplemented by risk-based manual regression",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Only test new functionality, as regression testing slows down the team",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Outsource regression testing to a separate offshore QA team",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In Agile, automated regression tests integrated into CI provide fast, continuous regression coverage. Risk-based selection of manual regression tests ensures critical areas are covered without slowing delivery.",
+        "incorrect": "Full manual regression each sprint is unsustainable. Skipping regression risks breaking existing functionality. Outsourcing breaks the whole-team principle.",
+        "examTip": "Growing regression suite + short sprints = automation is essential. Automate stable tests. Use risk-based selection for manual regression. Refactor tests regularly.",
+        "relatedTopics": [
+          "regression-testing",
+          "test-automation",
+          "risk-based-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Regression testing in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-022",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "At the end of sprint 5, the team has accumulated 47 defects that were found but not fixed because they were deemed low priority. The Product Owner wants to focus only on new features in upcoming sprints.",
+      "questionText": "What risk does this situation represent and what should the team do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No risk â€” low priority defects can always be fixed later before release",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Technical debt risk â€” the team should allocate capacity to address defects alongside new features to prevent quality degradation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The Scrum Master should close all low-priority defects without fixing them",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The team should stop all new feature development until defects are resolved",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Accumulating unfixed defects is technical debt that compounds over time â€” making future changes harder and increasing the risk of cascading failures. The team should regularly allocate sprint capacity to address defect debt.",
+        "incorrect": "Deferring all defects is risky. Closing without fixing masks the problem. Stopping all features is too extreme. Balance is needed.",
+        "examTip": "Technical debt in testing: unresolved defects, missing test coverage, manual processes that should be automated. Address continuously, not in a big-bang cleanup.",
+        "relatedTopics": [
+          "technical-debt",
+          "defect-management",
+          "Agile-quality"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Quality risks in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-023",
+      "type": "yes-no-statements",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes testing in Agile projects.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "In Agile, testers should be involved from the first day of a sprint, including planning and refinement.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A Definition of Done that includes testing criteria helps ensure quality is built in rather than inspected in.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "In Agile, test documentation is not required because the team relies on communication instead.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Pairing a tester with a developer during story implementation reduces defect injection.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Testers should be involved from day 1 (sprint planning, refinement). DoD with test criteria ensures quality is built in. Tester-developer pairing reduces defects. Agile still requires lightweight but sufficient test documentation.",
+        "incorrect": "Agile doesn't eliminate documentation â€” it eliminates unnecessary documentation. Test plans, results, and defect records are still needed.",
+        "examTip": "Agile documentation: lightweight but sufficient. Test charters, session notes, defect logs, and automated test results are all valid Agile test artifacts.",
+        "relatedTopics": [
+          "Agile-testing",
+          "DoD",
+          "documentation",
+          "pairing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Agile testing activities",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-024",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the main challenge for testers when requirements change frequently in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testers cannot write any tests until requirements are finalised",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Automated tests and test documentation must be updated to reflect requirement changes, risking test maintenance overhead",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Frequent requirement changes eliminate the need for regression testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Testers should refuse to test stories with changing requirements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Frequent changes mean tests must be continuously maintained. Automated tests that are not updated become misleading (false passes/fails). Managing this test maintenance overhead is a key Agile tester challenge.",
+        "incorrect": "Waiting for stable requirements is waterfall thinking. Changes increase regression testing need. Refusing to test is not a valid option.",
+        "examTip": "Agile tester challenges: changing requirements, technical debt in tests, insufficient time for non-functional testing, team collaboration skills needed.",
+        "relatedTopics": [
+          "test-maintenance",
+          "changing-requirements",
+          "Agile-challenges"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Challenges in Agile testing",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-025",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a sprint demo (Sprint Review) from a testing perspective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To perform final acceptance testing of all sprint stories",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To obtain stakeholder feedback on completed functionality, which can inform future testing priorities",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To assign defects found by stakeholders to developers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To evaluate the team's testing process and identify improvements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Sprint Review gives stakeholders visibility into working software, and their feedback helps the team understand if the product meets expectations â€” informing backlog priorities and future test focus areas.",
+        "incorrect": "Acceptance testing should happen within the sprint, not at the review. The review is not a defect assignment session. Process improvement is the Retrospective's purpose.",
+        "examTip": "Sprint Review = stakeholder feedback on WHAT was built. Sprint Retrospective = team reflection on HOW they worked. Both valuable for testers.",
+        "relatedTopics": [
+          "Sprint-Review",
+          "stakeholder-feedback",
+          "testing-priorities"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Agile testing activities",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-037",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a test charter in the context of session-based exploratory testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A legal document authorising the tester to access the system under test",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A brief description of the mission, target area, and testing approach for a time-boxed exploratory testing session",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A formal test plan signed off by the project manager",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A list of all test cases to be executed in the sprint",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A test charter guides an exploratory testing session by defining: what area to explore, what to look for, and what approach to use â€” providing focus without scripting every step.",
+        "incorrect": "Charters are lightweight, not legal documents or formal plans. They guide sessions, not replace scripted test lists.",
+        "examTip": "Session-based testing: Charter (mission) + Time-box (60-90 min) + Session notes. Charters: 'Explore X using Y to discover Z.'",
+        "relatedTopics": [
+          "test-charter",
+          "exploratory-testing",
+          "session-based-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Exploratory testing",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-038",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "How does Agile handle non-functional testing (performance, security, usability)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Non-functional testing is postponed to a final hardening sprint before release",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Non-functional requirements should be defined as acceptance criteria and tested incrementally throughout the project",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Non-functional testing is the responsibility of a separate specialist team",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Non-functional testing is not required in Agile projects as the focus is on working software",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In Agile, non-functional requirements (performance thresholds, security standards, accessibility) should be included in acceptance criteria and Definition of Done, and tested incrementally â€” not deferred to the end.",
+        "incorrect": "Deferring all non-functional testing to the end is a common anti-pattern that leads to late discovery of fundamental architectural issues.",
+        "examTip": "Non-functional requirements in Agile: include in DoD, define acceptance thresholds, test each sprint. Performance baseline early â€” regressions compound over time.",
+        "relatedTopics": [
+          "non-functional-testing",
+          "performance-testing",
+          "security-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Non-functional testing in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-041",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the tester's role during backlog refinement in Scrum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testers do not participate in backlog refinement",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Testers help clarify acceptance criteria, identify testability issues, and estimate testing effort for backlog items",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Testers are only responsible for re-ordering the backlog by risk",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Testers write all the acceptance criteria for each backlog item",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "During refinement, testers add value by asking clarifying questions, identifying ambiguous or untestable requirements, flagging missing acceptance criteria, and contributing to effort estimates for testing activities.",
+        "incorrect": "Testers absolutely participate in refinement. They're not solely responsible for acceptance criteria (that's collaborative) or backlog ordering.",
+        "examTip": "Tester questions during refinement: How will this be tested? What are the edge cases? What does done look like? Are there non-functional requirements?",
+        "relatedTopics": [
+          "backlog-refinement",
+          "tester-role",
+          "acceptance-criteria"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Tester activities in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-042",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A tester estimates that a user story will require 3 days of testing work, but the team has only given 1 day of testing in the sprint. The developer says 'It's a small change, it won't need much testing.'",
+      "questionText": "What should the tester do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accept the estimate and complete what testing is possible in 1 day",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Explain the testing scope and risks to the team and negotiate the estimate or story scope during sprint planning",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Skip the story in this sprint and ask for it to be moved to the next sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Complete the story and mark it done regardless of testing coverage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The tester must advocate for adequate testing time by clearly explaining what testing is required, what risks exist if it's reduced, and either negotiating the estimate or reducing the story scope to fit.",
+        "incorrect": "Silently accepting insufficient time, skipping the story, or marking it done without proper testing are all quality risks the tester must flag.",
+        "examTip": "Tester as quality advocate: speak up when testing is underestimated. Use risk language: 'If we only test for 1 day, we risk missing X, Y, Z edge cases.'",
+        "relatedTopics": [
+          "test-estimation",
+          "sprint-planning",
+          "quality-advocacy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Tester role in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-044",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the benefit of testers and developers sitting together (co-location) in an Agile team?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It ensures that testers can monitor developers to prevent defects being introduced",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It enables faster communication, immediate defect discussion, and shared understanding of requirements",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It allows the team to share a single computer",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It makes it easier for the manager to observe the team's progress",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Co-location improves collaboration â€” testers can immediately raise questions with developers, defects can be fixed in minutes rather than days, and shared understanding prevents misinterpretation of requirements.",
+        "incorrect": "Co-location is about collaboration and communication, not monitoring, equipment sharing, or management visibility.",
+        "examTip": "Agile Manifesto: 'The most efficient and effective method of conveying information is face-to-face conversation.' Co-location or good collaboration tools support this.",
+        "relatedTopics": [
+          "co-location",
+          "collaboration",
+          "communication"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Agile team collaboration",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-046",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between functional and non-functional testing in the context of Agile user stories?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Functional testing verifies the user story acceptance criteria; non-functional testing verifies quality attributes like performance, security, and usability",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Functional testing is automated; non-functional testing is always manual",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Non-functional testing replaces functional testing in Agile",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Functional testing is done by the team; non-functional testing is done by external specialists only",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Functional tests verify WHAT the system does (business requirements, acceptance criteria). Non-functional tests verify HOW WELL it does it (performance thresholds, security compliance, usability standards).",
+        "incorrect": "Both can be automated or manual. Non-functional complements functional. Both are the team's responsibility.",
+        "examTip": "Include non-functional acceptance criteria in user stories: 'The page must load in under 2 seconds' or 'The login must pass OWASP Top 10 checks'.",
+        "relatedTopics": [
+          "functional-testing",
+          "non-functional-testing",
+          "acceptance-criteria"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Testing types in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-048",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A tester notices that the automated test suite takes 45 minutes to run, which blocks the CI pipeline and discourages developers from committing frequently.",
+      "questionText": "What strategy should the team adopt?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Remove all slow tests to reduce the suite to under 5 minutes",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Implement a test pipeline with fast tests running first (unit/integration) and slow tests running in a separate stage or off the critical path",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Accept the 45-minute build time as it ensures thorough testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Move all tests to run nightly instead of on every commit",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A staged test pipeline runs fast tests (unit, fast integration) immediately on commit for rapid feedback, and slower tests (E2E, performance) in later stages â€” balancing speed with thoroughness.",
+        "incorrect": "Removing slow tests loses coverage. 45 minutes blocks CI effectiveness. Nightly builds mean defects sit for hours before detection.",
+        "examTip": "CI pipeline stages: commit stage (unit tests, < 5 min) â†’ acceptance stage (integration, E2E) â†’ exploratory/performance. Fast feedback on most common failures.",
+        "relatedTopics": [
+          "CI-pipeline",
+          "test-optimisation",
+          "fast-feedback"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Test automation in CI",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-050",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 'done' mean for a user story according to the Definition of Done?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The developer has merged the code to the main branch",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "All DoD criteria are met â€” code complete, unit tested, reviewed, integration tested, acceptance criteria passed, and documentation updated",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The story has been demonstrated to the Product Owner in the sprint review",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The story has been deployed to production",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Done means ALL criteria in the Definition of Done are satisfied â€” this typically includes: code written and reviewed, unit tests passing, integration tests passing, acceptance criteria verified, DoD checklist complete.",
+        "incorrect": "Code merge alone is not done. Sprint review demo is after done. Not all stories need to go to production at end of every sprint (though the increment should be releasable).",
+        "examTip": "DoD creates a consistent quality bar. If a team has different DoDs per story, quality becomes inconsistent. DoD applies to every story.",
+        "relatedTopics": [
+          "Definition-of-Done",
+          "quality",
+          "story-completion"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Definition of Done",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-052",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "How does risk-based testing apply in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Risk assessment is done once at the start of the project and never revisited",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Risks are assessed at the start of each sprint to prioritise testing effort on the most critical and risky areas",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Risk-based testing only applies to performance testing in Agile",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Testers avoid risky areas to prevent finding too many defects",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In Agile, risk assessment is lightweight and iterative â€” done at sprint planning to focus testing effort where risk is highest. Risks change as the product evolves, so assessment is repeated each sprint.",
+        "incorrect": "One-time risk assessment is waterfall thinking. Risk applies to all testing types. Testers should focus MORE on risky areas, not avoid them.",
+        "examTip": "Agile risk-based testing: identify product risks per sprint, allocate more testing effort to high-risk stories, and adjust as new risks emerge.",
+        "relatedTopics": [
+          "risk-based-testing",
+          "sprint-planning",
+          "test-prioritisation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Risk in Agile testing",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-055",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the concept of 'built-in quality' in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Quality assurance is performed by a dedicated QA team at the end of development",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Quality is incorporated throughout development through practices like TDD, code reviews, pairing, and continuous integration",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The system is built with high-quality hardware components",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Quality standards are built into the project contract",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Built-in quality means preventing defects rather than detecting them later â€” using practices like TDD, pair programming, code reviews, and CI to catch issues at the point of creation.",
+        "incorrect": "Built-in quality is the opposite of end-stage QA. It's about process and engineering practices, not hardware or contracts.",
+        "examTip": "Built-in quality: TDD + pair programming + code review + CI = fewer defects reaching testing. Prevention > Detection > Correction.",
+        "relatedTopics": [
+          "built-in-quality",
+          "prevention",
+          "TDD",
+          "code-review"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Quality in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-057",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An Agile team has been delivering sprints for 6 months. A business stakeholder complains that while individual features work, the system as a whole is unreliable â€” components that worked before break when new features are added.",
+      "questionText": "What is the most likely root cause and how should the team address it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The team is delivering too many features per sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Insufficient regression test coverage and integration testing between components",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The Product Owner is prioritising the wrong stories",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The Development Team needs to work longer hours to improve quality",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "When new features break existing functionality, it signals inadequate regression coverage and integration testing. The team should invest in automated regression tests and integration testing to catch cross-component breakage.",
+        "incorrect": "Feature volume, story prioritisation, or working hours are not the root cause. The systemic issue is a gap in the regression safety net.",
+        "examTip": "Symptoms of poor regression coverage: 'works on my machine', passing unit tests but broken integrated system, increasing production defects over time.",
+        "relatedTopics": [
+          "regression-testing",
+          "integration-testing",
+          "test-coverage"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Testing challenges in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-061",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is pair testing and what are its benefits?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Two testers independently testing the same feature and comparing results",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A tester and developer working together at one workstation to test and debug simultaneously",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Testers testing in pairs to reduce fatigue during long test sessions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Pairing a manual tester with an automation engineer to write test scripts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Pair testing has a tester and developer collaborating at one workstation â€” the developer understands the code, the tester brings test design skills. Together they find defects faster and build shared quality understanding.",
+        "incorrect": "Pair testing is collaborative, not independent parallel testing, fatigue management, or scripting partnership.",
+        "examTip": "Pair testing benefits: immediate defect discussion, shared understanding, developer learns testing mindset, tester learns system internals. Reduces defect escape rate.",
+        "relatedTopics": [
+          "pair-testing",
+          "developer-tester-collaboration",
+          "Agile-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Agile team practices",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-063",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the test strategy in an Agile project and how does it differ from traditional projects?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Agile projects do not have a test strategy â€” testing is ad-hoc",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Agile test strategy is lightweight, evolves iteratively, and focuses on how the team will achieve quality goals rather than being a large upfront document",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The test strategy is a fixed contract agreed with the customer before development starts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "In Agile, the test strategy replaces the need for test cases",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Agile test strategy is typically a concise, living document defining testing approaches, tools, automation strategy, and quality goals â€” created early but updated as the project evolves. It's not eliminated, just lightened.",
+        "incorrect": "Agile has test strategy but it's lighter than waterfall's comprehensive plans. It's not fixed upfront or a replacement for test cases.",
+        "examTip": "Agile test strategy covers: test levels, techniques, tools, automation approach, environments, entry/exit criteria. Keep it concise and update each sprint.",
+        "relatedTopics": [
+          "test-strategy",
+          "Agile-testing",
+          "test-planning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Test planning in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-065",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A tester is working on a feature that integrates with a third-party payment API. The API is not yet available in the test environment, blocking testing.",
+      "questionText": "What technique should the tester use to unblock testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wait until the API is available before writing any tests",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Use a test double (mock or stub) to simulate the API responses and continue testing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Mark the story as done and test the API integration in the next sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Remove the story from the sprint as it cannot be tested",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Test doubles (mocks, stubs, fakes) simulate external dependencies, allowing testing to proceed without the actual API. The mock can simulate both success and error responses to test all paths.",
+        "incorrect": "Waiting, deferring, or removing the story are all avoidable if test doubles are used. This is a standard Agile testing technique for handling external dependencies.",
+        "examTip": "Test doubles: Mock (verifies interactions), Stub (provides canned responses), Fake (lightweight working implementation), Spy (records calls). Use for external dependencies.",
+        "relatedTopics": [
+          "test-doubles",
+          "mocks",
+          "stubs",
+          "dependency-isolation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Test techniques in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-068",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the 'testing debt' concept in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The cost of buying testing tools and infrastructure",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The accumulated backlog of testing work that was skipped or deferred â€” including missing tests, unautomated regression tests, and unresolved defects",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The time owed to testers for overtime worked during sprints",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The technical debt created by poor-quality test code",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Testing debt is the accumulated shortfall in testing â€” skipped tests, manual regression that should be automated, and deferred defects. Like technical debt, it compounds and increases risk over time.",
+        "incorrect": "Testing debt is about missing testing coverage and deferred testing work, not costs, overtime, or code quality (that's technical debt in tests).",
+        "examTip": "Address testing debt incrementally each sprint â€” don't let it accumulate. Common items: automate a set of manual regression tests, fix flaky tests, address deferred defects.",
+        "relatedTopics": [
+          "testing-debt",
+          "technical-debt",
+          "test-backlog"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Quality risks in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-070",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A tester joins a mature Agile team as the first dedicated tester. The team currently has no automated tests and relies on manual testing at the end of each sprint, which often results in carryover stories.",
+      "questionText": "What should the tester prioritise in the first few sprints?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Write 100% automated test coverage for all existing features immediately",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Establish a test automation foundation starting with the most critical user journeys, while coaching developers on writing unit tests",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Reject all sprint stories until proper test documentation is in place",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Focus only on manual testing and report defects without changing team practices",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Building automation from the ground up requires prioritisation. Start with high-value, high-risk user journeys for E2E tests, encourage developers to add unit tests for new code, and build incrementally rather than trying to automate everything at once.",
+        "incorrect": "100% coverage immediately is unrealistic. Rejecting stories is too disruptive. Maintaining the status quo doesn't improve quality.",
+        "examTip": "Introducing testing to a team: start with the most critical paths, build automation incrementally, coach developers, and make quality improvements visible to the team.",
+        "relatedTopics": [
+          "test-automation-adoption",
+          "coaching",
+          "incremental-improvement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Tester role in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-073",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a test environment in Agile and what challenges can arise with it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The physical location where testers sit in an Agile team",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The configured infrastructure (hardware, software, data, configuration) required to run tests, which in Agile must be available frequently and reflect production closely",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The online tool used to manage test cases and defects",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The team agreement on how testing will be performed",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Test environments must be stable, available, and production-like for reliable test results. Agile challenges: shared environments causing conflicts, environment unavailability blocking testing, configuration drift from production.",
+        "incorrect": "Test environments are infrastructure, not seating arrangements, tools, or agreements.",
+        "examTip": "Agile environment challenges: environment availability, environment stability, test data management, configuration management. Solutions: dedicated environments, containerisation, IaC.",
+        "relatedTopics": [
+          "test-environments",
+          "environment-management",
+          "testing-infrastructure"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Test environments in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-075",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A team consistently delivers working software each sprint but the business stakeholders say the product doesn't meet their needs. Stories are technically passing acceptance criteria but users find the product confusing.",
+      "questionText": "What type of testing is the team most likely neglecting?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unit testing",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Usability and user experience testing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Performance testing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Security testing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "If acceptance criteria pass but users find the product confusing, the team is missing usability/UX testing â€” verifying not just that it works, but that it's easy and intuitive to use. This lives in Agile Testing Quadrant Q3.",
+        "incorrect": "Unit, performance, and security tests wouldn't address user confusion. Usability testing validates the user experience, which technical acceptance criteria often don't capture.",
+        "examTip": "Q3 testing (business-facing, critique product): exploratory testing, usability testing, user acceptance testing. Often neglected in technical teams.",
+        "relatedTopics": [
+          "usability-testing",
+          "UX-testing",
+          "Agile-Testing-Quadrants"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Agile Testing Quadrants",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-078",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Why is it important for testers in Agile to have good communication and collaboration skills?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because testers need to present defect reports to management",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Because Agile testing is deeply integrated with development â€” testers must work closely with developers, PO, and business to ensure quality is everyone's responsibility",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Because testers need to negotiate longer testing phases with project managers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Because communication skills are needed to write test case documentation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In Agile, testers are embedded in the team and must continuously communicate with developers (defects, test findings), the PO (acceptance criteria, story questions), and business stakeholders â€” making communication skills as important as technical testing skills.",
+        "incorrect": "Agile testers communicate with the whole team continuously, not just in formal reports or negotiations.",
+        "examTip": "Agile tester mindset: collaborative, curious, communicative, technically skilled. Soft skills are as important as technical skills in Agile testing.",
+        "relatedTopics": [
+          "communication-skills",
+          "collaboration",
+          "Agile-testing-mindset"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Agile testing mindset",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-080",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of acceptance testing in an Agile sprint?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A formal phase after development where a separate QA team verifies the whole system",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To verify that each user story meets its defined acceptance criteria within the sprint, confirming it delivers the expected business value",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A contractual milestone where the customer formally accepts the software",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The final test phase that occurs once per release before going to production",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In Agile, acceptance testing happens within each sprint for each story â€” verifying the story meets its acceptance criteria and delivering value to the PO. It's continuous, not a final phase.",
+        "incorrect": "Acceptance testing in Agile is not a phase, formal contract milestone, or separate team activity â€” it's integrated into every sprint.",
+        "examTip": "Agile acceptance testing: per story, within sprint, against acceptance criteria defined with the PO. Often automated using ATDD/BDD frameworks.",
+        "relatedTopics": [
+          "acceptance-testing",
+          "acceptance-criteria",
+          "sprint-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Testing activities in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-082",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the role of testers in Agile sprint retrospectives?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testers present a list of all defects found in the sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Testers participate equally in reflecting on what went well, what could improve, and proposing testing process improvements",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Testers observe but do not speak in retrospectives",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Testers only attend if there were quality issues in the sprint",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Retrospectives are a whole-team event. Testers participate equally â€” raising testing-specific observations (e.g., test environment problems, insufficient testing time) and contributing to overall team improvement discussions.",
+        "incorrect": "Retrospectives are not defect reviews. All team members participate equally. Attendance is not conditional.",
+        "examTip": "Tester retrospective contributions: testing bottlenecks, automation gaps, environment issues, collaboration improvements, definition of done quality.",
+        "relatedTopics": [
+          "retrospective",
+          "continuous-improvement",
+          "tester-role"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Tester activities",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-084",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of Agile test metrics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To measure individual tester performance for appraisals",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To provide the team with information to make informed decisions about quality risks and test process effectiveness",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To report testing progress to management for control purposes",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To compare team performance against industry benchmarks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Agile test metrics inform the team â€” defect escape rate, test coverage, automation coverage, test pass rate â€” helping the team understand risk and make informed decisions about what to test and where to improve.",
+        "incorrect": "Metrics in Agile are for team improvement, not performance management, management control, or benchmarking.",
+        "examTip": "Useful Agile test metrics: defect detection rate, escaped defects, test automation coverage, build stability, mean time to detect. Use to improve, not to judge.",
+        "relatedTopics": [
+          "test-metrics",
+          "quality-indicators",
+          "team-improvement"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Agile test metrics",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-086",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A team is working on a financial application and the tester identifies that while functional tests pass, there are concerns about the application's performance under peak load (1000 concurrent users).",
+      "questionText": "What should the tester do to address this risk within the Agile framework?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Defer performance testing until after the full product is built to get accurate results",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Create a performance testing story, define performance acceptance criteria with the PO, and add it to the backlog for prioritisation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Raise a defect for the performance concern and assign it to a developer to fix",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Perform performance testing independently without team involvement",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Performance testing is a non-functional requirement that should be managed through the backlog. Creating a story with clear acceptance criteria (e.g., '1000 concurrent users with < 2s response time') allows the PO to prioritise it appropriately.",
+        "incorrect": "Deferring performance testing is risky â€” performance issues are expensive to fix late. It's not a code defect. Team involvement ensures acceptance criteria are defined.",
+        "examTip": "Non-functional testing in Agile: create stories with measurable acceptance criteria, prioritise in backlog, test incrementally. Don't defer to end of project.",
+        "relatedTopics": [
+          "performance-testing",
+          "non-functional-testing",
+          "backlog-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Non-functional testing in Agile",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-088",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "How should testers communicate defects found during a sprint in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Log all defects in the defect tracking system and wait for the developer to pick them up",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Immediately discuss defects with the developer who wrote the code and collaborate on a fix, using defect tools to track unresolved issues",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Report all defects to the Scrum Master for delegation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Save defects for the end-of-sprint defect review meeting",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Agile encourages immediate, direct communication. Testers should discuss defects directly with developers for fast resolution. Defect tools track items that aren't immediately fixable. This avoids the 'wall of defects' anti-pattern.",
+        "incorrect": "Logging and waiting is slow. Routing through Scrum Master adds unnecessary overhead. Saving defects for end-of-sprint creates a bottleneck.",
+        "examTip": "Agile defect management: fix immediately within sprint. If not fixable immediately, log with context for tracking. Aim for zero carryover defects.",
+        "relatedTopics": [
+          "defect-management",
+          "communication",
+          "developer-tester-collaboration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Collaboration in Agile testing",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-089",
+      "type": "yes-no-statements",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes testing challenges in Agile projects.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Time pressure in sprints can lead to insufficient testing if the team doesn't protect testing time.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "In Agile, testers should only test stories assigned to them â€” not assist with stories assigned to other team members.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Lack of a stable test environment is a common Agile testing impediment.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Growing regression suites automatically remain fast without ongoing maintenance.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Sprint time pressure is real â€” testers must advocate for adequate testing time. Agile testers should help wherever needed (whole-team approach). Environment instability is a common impediment. Regression suites slow down over time and need active maintenance.",
+        "incorrect": "Testers in Agile are not restricted to assigned stories â€” they help wherever the team needs quality support. Automation suites need maintenance to stay fast and reliable.",
+        "examTip": "Agile testing challenges: time pressure, environment instability, changing requirements, growing regression suites, insufficient automation. All require proactive management.",
+        "relatedTopics": [
+          "Agile-testing-challenges",
+          "time-management",
+          "test-maintenance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Challenges in Agile testing",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-091",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the 'last responsible moment' principle in Agile and how does it apply to testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing should be deferred as long as possible to allow requirements to stabilise",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Decisions (including test design decisions) should be made when enough information is available, but not so late that valuable options are closed off",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Test automation should be built last, after all manual testing is complete",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The last tester on the team is responsible for all testing decisions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The last responsible moment means delaying decisions until you have enough information to make good ones, without waiting so long that the delay causes problems. For testing: don't finalise test cases too early (requirements may change), but don't wait until it's too late.",
+        "incorrect": "This principle is about optimal timing of decisions, not about deferring testing or automation sequencing.",
+        "examTip": "Last responsible moment: balance early testing (shift left) with deferring decisions until you have enough information. Avoid both too-early commitment and too-late decisions.",
+        "relatedTopics": [
+          "last-responsible-moment",
+          "Lean",
+          "decision-making"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Lean and Agile principles",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-094",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A cross-functional Agile team has one tester for 5 developers. Near the end of the sprint, stories are completing development faster than the tester can test them, creating a testing bottleneck.",
+      "questionText": "What are the BEST approaches to address this imbalance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The tester should work overtime to catch up",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Developers should help with testing, the team should invest in test automation, and the bottleneck should be raised in the retrospective",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Accept the bottleneck as normal and carry stories over to the next sprint",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The Product Owner should reduce the sprint scope to match testing capacity",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Addressing a testing bottleneck requires multiple approaches: developers testing their own work (unit tests, exploratory), automation reducing manual regression burden, and team reflection to prevent recurrence.",
+        "incorrect": "Overtime is unsustainable. Accepting carryover is an anti-pattern. Reducing scope every sprint is a symptom treatment, not a cure.",
+        "examTip": "Testing bottleneck solutions: developers write unit tests + help with exploratory, automate regression, limit WIP (Kanban style), cross-train team members on testing.",
+        "relatedTopics": [
+          "testing-bottleneck",
+          "team-balance",
+          "whole-team-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Agile testing challenges",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-096",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary goal of quality assistance (vs quality assurance) in Agile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To assure stakeholders that all defects have been found and fixed",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To help the whole team understand and improve quality practices rather than being the sole quality gatekeeper",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To assist developers in writing code with fewer bugs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To provide quality metrics to management for assurance",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Quality assistance means testers act as coaches and enablers â€” helping developers understand testing techniques, improving team practices, and making quality a shared responsibility, rather than being the last defence.",
+        "incorrect": "Quality assistance is a mindset shift from gatekeeper to enabler. It's broader than just helping developers code.",
+        "examTip": "Modern Agile tester: quality coach, not gatekeeper. Enable developers to test, improve team practices, shift left, build quality in. Move from QA to QE (Quality Engineering).",
+        "relatedTopics": [
+          "quality-assistance",
+          "coaching",
+          "whole-team-quality"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Agile testing mindset",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-098",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A new Agile team is forming. The Scrum Master asks the tester to help establish testing practices for the team from scratch.",
+      "questionText": "Which activities should the tester prioritise in the first sprint?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Create a comprehensive test plan covering all potential scenarios for the entire product",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Agree on a Definition of Done with testing criteria, set up CI with automated unit tests, and establish a lightweight test strategy with the team",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Hire additional testers before any testing can begin",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Wait until the first sprint is complete before establishing any testing processes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The highest-value testing setup activities for sprint 1: establishing DoD (ensures quality from day 1), basic CI with automated tests (catch defects early), and a lightweight strategy (aligns the team on approach).",
+        "incorrect": "Comprehensive upfront planning is waterfall. More testers may not be needed initially. Waiting to establish quality practices leads to technical debt.",
+        "examTip": "Agile testing setup priorities: DoD first (immediate quality standard), CI + unit tests (fast feedback), lightweight strategy (shared direction). All done collaboratively.",
+        "relatedTopics": [
+          "testing-setup",
+          "DoD",
+          "CI",
+          "test-strategy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Agile test planning",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "istqb-agile-100",
+      "type": "single-choice",
+      "topicId": "testing-agile",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the key difference between verification and validation in Agile testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Verification and validation are identical processes in Agile",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Verification checks that the product is built correctly (meets specifications); validation checks that the right product was built (meets user needs)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Verification is performed by testers; validation is performed by developers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Validation occurs before verification in the Agile lifecycle",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Verification = 'Are we building it right?' (are we meeting the specified requirements?). Validation = 'Are we building the right thing?' (does it meet the actual user needs?). Both are important in Agile.",
+        "incorrect": "They are distinct. Both can be done by testers. Verification typically happens first.",
+        "examTip": "Verification: meets specs (unit tests, code review, acceptance criteria). Validation: meets user needs (usability testing, sprint review, user feedback). Agile's short cycles enable both continuously.",
+        "relatedTopics": [
+          "verification",
+          "validation",
+          "quality"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Testing concepts",
+        "references": [
+          "https://www.istqb.org/certifications/agile-tester"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

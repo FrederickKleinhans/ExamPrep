@@ -1,0 +1,1175 @@
+{
+  "certificationId": "ai-900",
+  "topicId": "generative-ai",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "ai900-033",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is generative AI?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AI that only classifies existing data into categories",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AI that can create new original content such as text, images, audio, and code based on training data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "AI that generates reports from structured databases",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AI that automates repetitive business processes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Generative AI models learn patterns from training data and can generate new, original content â€” writing essays, creating images, composing music, writing code, and more.",
+        "incorrect": "Classification = discriminative AI. Report generation from structured data is not generative AI. Process automation = RPA.",
+        "examTip": "Generative AI examples: GPT (text), DALL-E (images), Codex (code), Stable Diffusion (images), Whisper (speech). All create new content.",
+        "relatedTopics": [
+          "generative-AI",
+          "LLM",
+          "content-generation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-034",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a Large Language Model (LLM)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A very large library of pre-written text documents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A deep learning model trained on vast amounts of text data that can understand and generate human-like text",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A model that can only answer yes/no questions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A database that stores language translations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "LLMs are transformer-based deep learning models trained on massive text datasets, giving them the ability to understand context, answer questions, generate text, summarise, translate, and more.",
+        "incorrect": "LLMs are AI models, not document libraries, simple classifiers, or databases.",
+        "examTip": "LLMs (GPT-3, GPT-4, Llama, Claude, Gemini) power chatbots, copilots, and text generation. Azure OpenAI Service provides access to GPT models in Azure.",
+        "relatedTopics": [
+          "LLM",
+          "transformers",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe LLMs",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-035",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure OpenAI Service?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A free version of ChatGPT built into Azure",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An Azure service that provides access to OpenAI's models (GPT-4, DALL-E, Codex) with Azure's security, compliance, and enterprise features",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A tool for training custom language models from scratch on Azure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An open-source AI framework for building chatbots",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure OpenAI Service gives enterprise customers access to OpenAI's GPT-4, DALL-E, Embeddings, and Whisper models through Azure APIs, with Azure's enterprise security, compliance, private networking, and responsible AI features.",
+        "incorrect": "It's not free, not for training from scratch, and not an open-source framework.",
+        "examTip": "Azure OpenAI = OpenAI models + Azure enterprise security. Accessed via REST API or Azure AI Studio. Requires approved access.",
+        "relatedTopics": [
+          "Azure-OpenAI",
+          "GPT-4",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure OpenAI Service",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-036",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is prompt engineering?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The process of training a new language model from scratch",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The practice of crafting effective input instructions to guide an LLM towards producing desired outputs",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A software engineering discipline for building AI infrastructure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A method for compressing large AI models to run on smaller devices",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Prompt engineering involves designing input text (prompts) that effectively communicate intent to an LLM â€” including context, instructions, examples, and constraints to get the best output.",
+        "incorrect": "Training from scratch = model development. AI infrastructure = MLOps. Model compression = quantisation/distillation.",
+        "examTip": "Prompt techniques: zero-shot (no examples), few-shot (a few examples), chain-of-thought (step-by-step reasoning), system prompts (set context/persona).",
+        "relatedTopics": [
+          "prompt-engineering",
+          "LLM",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-037",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a 'hallucination' in the context of generative AI?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When an AI model crashes due to insufficient memory",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "When a generative AI model produces confident but factually incorrect or fabricated information",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "When an AI generates images that appear blurry",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "When an AI misinterprets the user's prompt",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Hallucination refers to when an LLM generates plausible-sounding but factually incorrect, fabricated, or nonsensical information â€” presenting it as if it were true. This is a key limitation of LLMs.",
+        "incorrect": "Hallucinations are about factual accuracy, not memory errors, image quality, or prompt misinterpretation.",
+        "examTip": "Hallucination mitigation: RAG (Retrieval-Augmented Generation), grounding with factual sources, human review, confidence scores. Always verify AI-generated facts.",
+        "relatedTopics": [
+          "hallucination",
+          "LLM-limitations",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI limitations",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-038",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is Retrieval-Augmented Generation (RAG)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A technique for training LLMs on proprietary company data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A technique that combines an LLM with a retrieval system to ground responses in relevant, up-to-date information from a knowledge base",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A method for generating synthetic training data for ML models",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A compression technique that reduces LLM size for deployment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RAG retrieves relevant documents from a knowledge base (vector database), provides them as context to the LLM, and the LLM generates an answer grounded in those retrieved facts â€” reducing hallucinations and enabling up-to-date responses.",
+        "incorrect": "Training on proprietary data = fine-tuning. Synthetic data = data augmentation. Model compression = quantisation.",
+        "examTip": "RAG pattern: user query â†’ retrieve relevant docs from vector DB â†’ add docs to LLM prompt â†’ LLM generates grounded answer. Azure AI Search enables RAG.",
+        "relatedTopics": [
+          "RAG",
+          "grounding",
+          "vector-search",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI techniques",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-039",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft Copilot?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A flight simulation software for pilot training",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An AI assistant powered by LLMs that is integrated into Microsoft products to help users with tasks using natural language",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A code testing tool that automatically finds bugs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A cloud cost management tool for Azure subscriptions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft Copilot is an AI assistant powered by GPT-4 and other LLMs, integrated into Microsoft 365 (Word, Excel, Teams, Outlook), GitHub, Azure, and Windows to help users with tasks using natural language.",
+        "incorrect": "Copilot is an AI assistant, not flight simulation, a bug finder, or a cost tool.",
+        "examTip": "Microsoft Copilot family: M365 Copilot (Office apps), GitHub Copilot (code), Azure Copilot (infrastructure), Bing Chat/Copilot (web search). All powered by Azure OpenAI.",
+        "relatedTopics": [
+          "Microsoft-Copilot",
+          "generative-AI",
+          "LLM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft Copilot",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-040",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure AI Studio used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creating and editing video content using AI tools",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A unified platform for exploring, building, testing, and deploying generative AI applications and models",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Managing Azure virtual machines and cloud infrastructure",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Designing user interfaces for Azure applications",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Studio is the central platform for working with generative AI on Azure â€” explore foundation models, deploy them, build RAG apps, test with a playground, and manage AI safety with Azure AI Content Safety.",
+        "incorrect": "AI Studio is for AI model development, not video editing, infrastructure management, or UI design.",
+        "examTip": "Azure AI Studio features: Model Catalog (browse foundation models), Playground (test models), Prompt Flow (orchestrate AI workflows), Evaluation, Azure AI Content Safety.",
+        "relatedTopics": [
+          "Azure-AI-Studio",
+          "generative-AI",
+          "foundation-models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Studio",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-041",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company wants to use a large language model to answer employee questions based on their internal HR policy documents. The documents are updated monthly and the LLM should always use the latest content.",
+      "questionText": "Which approach BEST addresses this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fine-tune the LLM on the HR documents every month",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Implement RAG using Azure AI Search to index the documents, allowing the LLM to retrieve current content at query time",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Prompt the LLM with the entire policy document in every conversation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Train a new LLM from scratch each month with the updated documents",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RAG with Azure AI Search indexes the documents and retrieves the most relevant, current content at query time â€” no retraining needed when documents are updated, and responses are grounded in factual current content.",
+        "incorrect": "Monthly fine-tuning is expensive and slow. Sending full documents in every prompt would exceed context limits. Training from scratch monthly is impractical.",
+        "examTip": "RAG is the go-to pattern for enterprise knowledge bases that change frequently. Azure AI Search + Azure OpenAI = RAG solution on Azure.",
+        "relatedTopics": [
+          "RAG",
+          "Azure-AI-Search",
+          "knowledge-base",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI use cases",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-042",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure AI Content Safety?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A firewall that blocks malicious traffic to Azure AI services",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A service that detects and filters harmful content (hate speech, violence, sexual content, self-harm) in text and images",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An encryption service that protects AI model weights",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A compliance tool that checks AI models against regulatory requirements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Content Safety detects harmful content in user inputs and AI outputs â€” screening for hate speech, violence, sexual content, and self-harm across text and image content, returning severity scores.",
+        "incorrect": "It's content moderation, not a network firewall, encryption service, or compliance checker.",
+        "examTip": "Content Safety is key for responsible generative AI deployment. Integrate it as a layer around your LLM to filter both inputs (user prompts) and outputs (model responses).",
+        "relatedTopics": [
+          "Azure-AI-Content-Safety",
+          "responsible-AI",
+          "content-moderation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Content Safety",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-043",
+      "type": "yes-no-statements",
+      "topicId": "generative-ai",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes generative AI concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Fine-tuning an LLM adapts a pre-trained model to a specific domain using additional training data.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Tokens in LLMs always correspond to exactly one word.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Embeddings represent words or concepts as numerical vectors to capture semantic meaning.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Increasing the temperature parameter of an LLM makes its outputs more deterministic.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Fine-tuning = adapt pre-trained model. Embeddings = numerical vector representations of meaning. Tokens â‰  one word (a word can be multiple tokens). Higher temperature = more random/creative, not more deterministic.",
+        "incorrect": "Tokens are sub-word units â€” 'running' might be one token, 'antidisestablishmentarianism' several. Temperature 0 = deterministic, temperature 1+ = creative/random.",
+        "examTip": "Temperature: 0 = same answer every time (deterministic). 1 = creative/varied. Use low temp for factual tasks, higher for creative writing.",
+        "relatedTopics": [
+          "fine-tuning",
+          "tokens",
+          "embeddings",
+          "temperature"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-051",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the primary purpose of Azure AI Search in a generative AI solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To train foundation models on proprietary data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To index and retrieve relevant documents to ground LLM responses in factual content",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To translate user queries between languages before sending to the LLM",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To monitor LLM performance in production",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Azure AI Search provides vector search and semantic search capabilities that retrieve relevant documents from a knowledge base â€” used as the retrieval component in RAG architectures to ground LLM responses in factual data.",
+        "incorrect": "Training = Azure ML / fine-tuning. Translation = Azure AI Translator. Monitoring = Azure Monitor / Azure ML monitoring.",
+        "examTip": "Azure AI Search in RAG: index documents â†’ convert to embeddings â†’ store in vector index â†’ at query time retrieve top-k relevant chunks â†’ send to LLM as context.",
+        "relatedTopics": [
+          "Azure-AI-Search",
+          "RAG",
+          "vector-search"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure generative AI tools",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-052",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Azure OpenAI model is specifically designed for generating images from text descriptions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GPT-4",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "DALL-E",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Whisper",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Embeddings (Ada)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DALL-E is OpenAI's image generation model â€” it creates realistic images from text prompts. Available through Azure OpenAI Service.",
+        "incorrect": "GPT-4 = text generation and reasoning. Whisper = speech recognition. Ada/Embeddings = converting text to vector representations.",
+        "examTip": "Azure OpenAI models: GPT-4/GPT-3.5 (text), DALL-E (images), Whisper (speech-to-text), Ada/text-embedding (embeddings). Each serves a different purpose.",
+        "relatedTopics": [
+          "DALL-E",
+          "image-generation",
+          "Azure-OpenAI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure OpenAI models",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-063",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is 'grounding' in the context of generative AI?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The process of connecting the AI model to electrical earth for safety",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Providing an LLM with relevant factual context to anchor its responses to verified information",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Training the LLM on a foundational dataset before fine-tuning",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Setting the base parameters of the model before deployment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Grounding means providing the LLM with specific, verified factual context (retrieved documents, structured data) so its responses are anchored in real information rather than relying solely on training data â€” reducing hallucinations.",
+        "incorrect": "Grounding is a technique for factual accuracy, not electrical safety, pre-training, or parameter configuration.",
+        "examTip": "Grounding = anchoring LLM responses to facts. RAG is the primary grounding technique. System prompts can also provide grounding context.",
+        "relatedTopics": [
+          "grounding",
+          "RAG",
+          "hallucination-prevention"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-068",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the system message (system prompt) in Azure OpenAI Service used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To send the user's question to the model",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To set the context, persona, instructions, and constraints for how the model should behave throughout the conversation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To specify the maximum number of tokens the model can generate",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To authenticate the API request to Azure OpenAI",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The system message appears before user messages in a chat conversation and instructs the model how to behave â€” setting its persona, tone, language, restrictions, and domain focus.",
+        "incorrect": "User message = what the user asks. Token limit = max_tokens parameter. Authentication = API key/Entra ID.",
+        "examTip": "System prompt example: 'You are a helpful customer service agent for Contoso. Only answer questions about our products. Always be polite.' Sets guardrails for the conversation.",
+        "relatedTopics": [
+          "system-message",
+          "prompt-engineering",
+          "Azure-OpenAI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure OpenAI features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-071",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are embeddings in the context of generative AI and NLP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Images embedded within text documents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Numerical vector representations of words, sentences, or documents that capture semantic meaning",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Model weights embedded in a deployment container",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Code snippets embedded in the LLM training data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Embeddings convert text into dense numerical vectors in a high-dimensional space where semantically similar items are close together. Used for semantic search, RAG vector databases, and similarity comparisons.",
+        "incorrect": "Embeddings are mathematical vector representations, not visual elements, model weights, or code.",
+        "examTip": "Embeddings enable semantic search: 'car' and 'automobile' have similar vectors even though they're different words. Azure OpenAI's text-embedding-ada-002 creates embeddings for RAG.",
+        "relatedTopics": [
+          "embeddings",
+          "vector-search",
+          "semantic-search",
+          "RAG"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-076",
+      "type": "yes-no-statements",
+      "topicId": "generative-ai",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Azure generative AI services and concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Azure AI Studio allows you to test and compare different foundation models in a playground before deployment.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Microsoft Copilot for Microsoft 365 can only be used in Word and Excel.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Azure OpenAI Assistants API allows building AI assistants that can use tools like code interpreter and file search.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "All Azure OpenAI models are available to all Azure customers immediately upon subscription.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "AI Studio has a model playground. Copilot for M365 works in Word, Excel, PowerPoint, Outlook, Teams, and more. Assistants API supports tools. Azure OpenAI requires approved access (limited access programme).",
+        "incorrect": "Copilot for M365 works across the entire Microsoft 365 suite. Azure OpenAI requires an approved application for access.",
+        "examTip": "Azure OpenAI = requires approved access (responsible AI gate). Not available to all by default. Apply at https://aka.ms/oai/access.",
+        "relatedTopics": [
+          "Azure-AI-Studio",
+          "Microsoft-Copilot",
+          "Azure-OpenAI-access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI services",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-080",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Azure AI Foundry (formerly Azure AI Studio) Model Catalog?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A library of pre-built code samples for AI development",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A collection of foundation models from Microsoft, OpenAI, Meta, Hugging Face and others that can be deployed and fine-tuned on Azure",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A catalogue of Azure AI service pricing plans",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A data catalogue for managing ML training datasets",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Model Catalog in Azure AI Foundry provides access to hundreds of foundation models â€” GPT-4, Llama, Mistral, Phi, Stable Diffusion, and more â€” that can be tested in the playground, deployed, or fine-tuned.",
+        "incorrect": "Model Catalog = models, not code samples, pricing, or datasets.",
+        "examTip": "Model Catalog providers: OpenAI (GPT-4), Meta (Llama), Mistral, Cohere, Hugging Face, Microsoft (Phi). Compare models side-by-side before choosing.",
+        "relatedTopics": [
+          "Model-Catalog",
+          "Azure-AI-Foundry",
+          "foundation-models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Studio",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-084",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A developer is building a customer support chatbot using Azure OpenAI. Users are attempting to bypass safety guidelines by crafting clever prompts (jailbreaking). The chatbot is generating responses that violate company policy.",
+      "questionText": "What is the BEST way to mitigate this risk?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Switch to a different LLM provider",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Implement Azure AI Content Safety to filter inputs and outputs, and use a strong system prompt with clear constraints",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Remove the chatbot from production until jailbreaking is impossible",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Increase the model temperature to make responses less predictable",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Combining Azure AI Content Safety (blocks harmful content in I/O) with a strong system prompt (sets guardrails) provides layered protection against prompt injection and jailbreaking attempts.",
+        "incorrect": "Switching providers doesn't solve the problem. Waiting for perfect safety is impractical. Higher temperature increases randomness but not safety.",
+        "examTip": "Jailbreak mitigation: strong system prompt + Azure AI Content Safety + input/output validation + monitoring. No single control is sufficient â€” use layered defences.",
+        "relatedTopics": [
+          "jailbreaking",
+          "prompt-injection",
+          "Azure-AI-Content-Safety",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe responsible generative AI",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-088",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between fine-tuning an LLM and using RAG?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are identical approaches with different names",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fine-tuning modifies model weights with additional training; RAG retrieves external documents at query time without changing the model",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Fine-tuning is cheaper and faster than RAG",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "RAG requires retraining the model for each new document added",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fine-tuning permanently updates model weights through additional training on domain data â€” expensive and requires retraining when data changes. RAG retrieves documents at query time without changing the model â€” cheaper and easily updated by adding documents.",
+        "incorrect": "They are fundamentally different. Fine-tuning is typically slower and more expensive. RAG doesn't retrain the model when documents are added.",
+        "examTip": "When to fine-tune: teach the model a new style, format, or domain vocabulary. When to use RAG: provide up-to-date facts and reduce hallucinations. RAG is usually the first choice.",
+        "relatedTopics": [
+          "fine-tuning",
+          "RAG",
+          "LLM-customisation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-091",
+      "type": "ordering",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the steps of a RAG (Retrieval-Augmented Generation) workflow in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "User submits a natural language query",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Query is converted to an embedding vector",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Vector search retrieves relevant document chunks from the knowledge base",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Retrieved chunks and user query are combined into a prompt",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "LLM generates a grounded response based on the prompt",
+          "correctPosition": 5
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "RAG flow: query â†’ embed query â†’ vector search â†’ retrieve chunks â†’ augmented prompt â†’ LLM response. The retrieved documents ground the LLM in factual content.",
+        "incorrect": "The embedding step must happen before vector search. Retrieval must happen before prompt construction. LLM generates last.",
+        "examTip": "RAG components: Azure OpenAI (embeddings + generation), Azure AI Search (indexing + vector search), your documents (knowledge base). All three needed.",
+        "relatedTopics": [
+          "RAG-workflow",
+          "vector-search",
+          "embeddings",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe RAG",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-094",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is GitHub Copilot and how does it relate to generative AI?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A GitHub tool for managing code repositories and pull requests",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An AI-powered coding assistant that uses LLMs to suggest code completions, generate functions, and explain code within IDEs",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A CI/CD tool for automating software deployment pipelines",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A security scanner that detects vulnerabilities in code",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GitHub Copilot is a generative AI coding assistant powered by OpenAI Codex/GPT-4. It suggests code completions, generates entire functions from comments, explains code, and helps debug â€” integrated into VS Code, Visual Studio, and other IDEs.",
+        "incorrect": "Repository management = GitHub core. CI/CD = GitHub Actions. Security scanning = GitHub Advanced Security/CodeQL.",
+        "examTip": "GitHub Copilot is a Microsoft Copilot product. Uses Azure OpenAI (GPT-4 Codex). Boost developer productivity. Available as GitHub Copilot Individual, Business, Enterprise.",
+        "relatedTopics": [
+          "GitHub-Copilot",
+          "code-generation",
+          "generative-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft Copilot",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-097",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Prompt Flow in Azure AI Foundry?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A tool for managing API rate limits for Azure OpenAI",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A visual development tool for building, testing, and deploying LLM-based applications as orchestrated workflows",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A feature for creating prompt templates and storing them in a library",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A tool for monitoring LLM token usage and costs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Prompt Flow is a visual development environment in Azure AI Foundry for building LLM applications as executable flows â€” connecting LLM calls, Python functions, data retrieval, and tools into a coherent application pipeline.",
+        "incorrect": "Rate limiting = Azure API Management. Template libraries = different. Token monitoring = Azure OpenAI quotas dashboard.",
+        "examTip": "Prompt Flow: visual orchestration of LLM apps. Supports evaluation (test with datasets), variants (compare prompts), deployment as endpoint. Key for RAG app development.",
+        "relatedTopics": [
+          "Prompt-Flow",
+          "Azure-AI-Foundry",
+          "LLM-orchestration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Azure AI Foundry tools",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ai900-100",
+      "type": "single-choice",
+      "topicId": "generative-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of evaluating a generative AI application before deploying it to production?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To estimate the monthly Azure cost of running the application",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To assess the quality, safety, and reliability of model outputs against defined metrics before users interact with it",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To train the model on a final validation dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To check that the application meets accessibility requirements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Generative AI evaluation tests model outputs for quality (groundedness, coherence, relevance), safety (harmful content), and performance â€” catching issues before real users are affected.",
+        "incorrect": "Cost estimation = Azure pricing calculator. Final training = separate process. Accessibility = UX testing. Evaluation = quality and safety gate.",
+        "examTip": "Azure AI Foundry evaluation metrics: Groundedness (is it based on sources?), Relevance, Coherence, Fluency, Similarity. Run evaluations before each deployment.",
+        "relatedTopics": [
+          "generative-AI-evaluation",
+          "quality-assessment",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe generative AI evaluation",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

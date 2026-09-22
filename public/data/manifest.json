@@ -166,6 +166,175 @@
       }
     },
     {
+      "id": "comptia-network-plus",
+      "name": "CompTIA Network+",
+      "provider": "CompTIA",
+      "examCode": "N10-009",
+      "version": "2024-01",
+      "questionCount": 100,
+      "passingScore": 72,
+      "timeLimitMinutes": 90,
+      "topics": [
+        {
+          "id": "networking-concepts",
+          "name": "Networking Concepts",
+          "weight": 23
+        },
+        {
+          "id": "network-implementation",
+          "name": "Network Implementation",
+          "weight": 20
+        },
+        {
+          "id": "network-operations",
+          "name": "Network Operations",
+          "weight": 19
+        },
+        {
+          "id": "network-security",
+          "name": "Network Security",
+          "weight": 14
+        },
+        {
+          "id": "network-troubleshooting",
+          "name": "Network Troubleshooting",
+          "weight": 24
+        }
+      ],
+      "resources": [
+        {
+          "title": "CompTIA Network+ Certification Overview",
+          "url": "https://www.comptia.org/certifications/network"
+        }
+      ],
+      "vendor": "CompTIA",
+      "vendorColor": "#C8202F",
+      "level": "beginner",
+      "accessTier": "free",
+      "description": "Validates the technical skills needed to securely establish, maintain and troubleshoot the essential networks that businesses rely on.",
+      "examDetails": {
+        "durationMinutes": 90,
+        "questionCount": 90,
+        "passingScore": 72,
+        "priceUSD": 369
+      }
+    },
+    {
+      "id": "github-foundations",
+      "name": "GitHub Foundations",
+      "provider": "GitHub",
+      "examCode": "GitHub-Foundations",
+      "version": "2024-01",
+      "questionCount": 100,
+      "passingScore": 70,
+      "timeLimitMinutes": 120,
+      "topics": [
+        {
+          "id": "git-github-basics",
+          "name": "Introduction to Git and GitHub",
+          "weight": 22
+        },
+        {
+          "id": "repositories",
+          "name": "Working with GitHub Repositories",
+          "weight": 20
+        },
+        {
+          "id": "collaboration",
+          "name": "Collaboration Features",
+          "weight": 20
+        },
+        {
+          "id": "github-features",
+          "name": "Modern GitHub Features",
+          "weight": 18
+        },
+        {
+          "id": "project-management",
+          "name": "Project Management & Security",
+          "weight": 20
+        }
+      ],
+      "resources": [
+        {
+          "title": "GitHub Foundations Certification",
+          "url": "https://resources.github.com/learn/certifications/"
+        },
+        {
+          "title": "GitHub Docs",
+          "url": "https://docs.github.com"
+        }
+      ]
+    },
+    {
+      "id": "cissp",
+      "name": "CISSP",
+      "provider": "(ISC)²",
+      "examCode": "CISSP",
+      "version": "2024-01",
+      "questionCount": 100,
+      "passingScore": 70,
+      "timeLimitMinutes": 180,
+      "topics": [
+        {
+          "id": "security-governance",
+          "name": "Security & Risk Governance",
+          "weight": 22
+        },
+        {
+          "id": "asset-security",
+          "name": "Asset Security",
+          "weight": 13
+        },
+        {
+          "id": "security-architecture",
+          "name": "Security Architecture & Engineering",
+          "weight": 13
+        },
+        {
+          "id": "communication-security",
+          "name": "Communication & Network Security",
+          "weight": 14
+        },
+        {
+          "id": "identity-access",
+          "name": "Identity & Access Management",
+          "weight": 13
+        },
+        {
+          "id": "security-ops",
+          "name": "Security Assessment & Testing",
+          "weight": 12
+        },
+        {
+          "id": "software-security",
+          "name": "Software Development Security",
+          "weight": 13
+        }
+      ],
+      "resources": [
+        {
+          "title": "CISSP Certification Overview",
+          "url": "https://www.isc2.org/certifications/cissp"
+        },
+        {
+          "title": "CISSP Exam Outline",
+          "url": "https://www.isc2.org/-/media/isc2/files/exam-outlines/cissp-exam-outline.ashx"
+        }
+      ],
+      "vendor": "(ISC)²",
+      "vendorColor": "#005A9C",
+      "level": "expert",
+      "accessTier": "premium",
+      "description": "The gold standard in cybersecurity certification. Validates deep technical and managerial competence to design, engineer, and manage an organization's security posture.",
+      "examDetails": {
+        "durationMinutes": 180,
+        "questionCount": 125,
+        "passingScore": 70,
+        "priceUSD": 749
+      }
+    },
+    {
       "id": "isc2-cc",
       "name": "(ISC)² Certified in Cybersecurity",
       "provider": "(ISC)²",
@@ -221,6 +390,50 @@
         "questionCount": 100,
         "passingScore": 70,
         "priceUSD": 199
+      }
+    },
+    {
+      "id": "istqb-agile",
+      "name": "ISTQB Agile Tester",
+      "provider": "ISTQB",
+      "examCode": "CTFL-AT",
+      "version": "2024-01",
+      "questionCount": 100,
+      "passingScore": 65,
+      "timeLimitMinutes": 60,
+      "topics": [
+        {
+          "id": "agile-fundamentals",
+          "name": "Agile Software Development",
+          "weight": 25
+        },
+        {
+          "id": "testing-agile",
+          "name": "Testing in Agile Projects",
+          "weight": 35
+        },
+        {
+          "id": "agile-testing-methods",
+          "name": "Agile Testing Methods, Techniques & Tools",
+          "weight": 40
+        }
+      ],
+      "resources": [
+        {
+          "title": "ISTQB Agile Tester Extension Syllabus",
+          "url": "https://www.istqb.org/certifications/agile-tester"
+        }
+      ],
+      "vendor": "ISTQB",
+      "vendorColor": "#003366",
+      "level": "intermediate",
+      "accessTier": "premium",
+      "description": "Testing practices in Agile projects, including test-driven development, behavior-driven development, and continuous testing.",
+      "examDetails": {
+        "durationMinutes": 60,
+        "questionCount": 40,
+        "passingScore": 65,
+        "priceUSD": 250
       }
     },
     {
@@ -346,6 +559,60 @@
       }
     },
     {
+      "id": "ai-900",
+      "name": "AI-900",
+      "provider": "Microsoft",
+      "examCode": "AI-900",
+      "version": "2024-01",
+      "questionCount": 100,
+      "passingScore": 70,
+      "timeLimitMinutes": 60,
+      "topics": [
+        {
+          "id": "ai-workloads",
+          "name": "AI Workloads & Considerations",
+          "weight": 20
+        },
+        {
+          "id": "machine-learning",
+          "name": "Machine Learning on Azure",
+          "weight": 30
+        },
+        {
+          "id": "computer-vision",
+          "name": "Computer Vision Workloads",
+          "weight": 15
+        },
+        {
+          "id": "nlp",
+          "name": "Natural Language Processing",
+          "weight": 15
+        },
+        {
+          "id": "generative-ai",
+          "name": "Generative AI Workloads",
+          "weight": 20
+        }
+      ],
+      "resources": [
+        {
+          "title": "AI-900 Exam Overview",
+          "url": "https://learn.microsoft.com/en-us/certifications/exams/ai-900"
+        }
+      ],
+      "vendor": "Microsoft",
+      "vendorColor": "#0078D4",
+      "level": "beginner",
+      "accessTier": "free",
+      "description": "Foundational knowledge of machine learning and AI concepts and related Microsoft Azure services.",
+      "examDetails": {
+        "durationMinutes": 60,
+        "questionCount": 40,
+        "passingScore": 70,
+        "priceUSD": 99
+      }
+    },
+    {
       "id": "az-104",
       "name": "Azure Administrator",
       "provider": "Microsoft",
@@ -396,65 +663,6 @@
       "level": "intermediate",
       "accessTier": "premium",
       "description": "Manage Azure identities, governance, storage, compute, and virtual networks in a cloud environment.",
-      "examDetails": {
-        "durationMinutes": 120,
-        "questionCount": 40,
-        "passingScore": 70,
-        "priceUSD": 165
-      }
-    },
-    {
-      "id": "az-204",
-      "name": "Azure Developer Associate",
-      "provider": "Microsoft",
-      "examCode": "AZ-204",
-      "version": "2024-01",
-      "questionCount": 100,
-      "passingScore": 70,
-      "timeLimitMinutes": 150,
-      "topics": [
-        {
-          "id": "azure-compute",
-          "name": "Develop Azure Compute Solutions",
-          "weight": 25
-        },
-        {
-          "id": "azure-storage",
-          "name": "Develop for Azure Storage",
-          "weight": 15
-        },
-        {
-          "id": "azure-security",
-          "name": "Implement Azure Security",
-          "weight": 20
-        },
-        {
-          "id": "monitoring",
-          "name": "Monitor, Troubleshoot, and Optimize Azure Solutions",
-          "weight": 15
-        },
-        {
-          "id": "azure-services",
-          "name": "Connect to and Consume Azure Services and Third-Party Services",
-          "weight": 25
-        }
-      ],
-      "icon": "/icons/azure.svg",
-      "resources": [
-        {
-          "title": "Microsoft Learn — AZ-204 Learning Path",
-          "url": "https://learn.microsoft.com/en-us/training/paths/develop-solutions-azure/"
-        },
-        {
-          "title": "AZ-204 Study Guide (Official)",
-          "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-204"
-        }
-      ],
-      "vendor": "Microsoft",
-      "vendorColor": "#0078D4",
-      "level": "intermediate",
-      "accessTier": "premium",
-      "description": "Develop Azure compute solutions, storage, implement security, monitor, troubleshoot, and optimize Azure solutions.",
       "examDetails": {
         "durationMinutes": 120,
         "questionCount": 40,
@@ -569,6 +777,92 @@
         "passingScore": 70,
         "priceUSD": 99
       }
+    },
+    {
+      "id": "sc-900",
+      "name": "SC-900",
+      "provider": "Microsoft",
+      "examCode": "SC-900",
+      "version": "2024-01",
+      "questionCount": 100,
+      "passingScore": 70,
+      "timeLimitMinutes": 60,
+      "topics": [
+        {
+          "id": "security-concepts",
+          "name": "Security, Compliance & Identity Concepts",
+          "weight": 25
+        },
+        {
+          "id": "azure-ad",
+          "name": "Microsoft Entra ID & Identity",
+          "weight": 25
+        },
+        {
+          "id": "security-solutions",
+          "name": "Microsoft Security Solutions",
+          "weight": 30
+        },
+        {
+          "id": "compliance-solutions",
+          "name": "Microsoft Compliance Solutions",
+          "weight": 20
+        }
+      ],
+      "resources": [
+        {
+          "title": "SC-900 Exam Overview",
+          "url": "https://learn.microsoft.com/en-us/certifications/exams/sc-900"
+        }
+      ],
+      "vendor": "Microsoft",
+      "vendorColor": "#0078D4",
+      "level": "beginner",
+      "accessTier": "free",
+      "description": "Demonstrate foundational knowledge of security, compliance, and identity concepts across cloud-based and related Microsoft services.",
+      "examDetails": {
+        "durationMinutes": 60,
+        "questionCount": 40,
+        "passingScore": 70,
+        "priceUSD": 99
+      }
+    },
+    {
+      "id": "psm-i",
+      "name": "PSM I",
+      "provider": "Scrum.org",
+      "examCode": "PSM I",
+      "version": "2024-01",
+      "questionCount": 100,
+      "passingScore": 85,
+      "timeLimitMinutes": 60,
+      "topics": [
+        {
+          "id": "scrum-theory",
+          "name": "Scrum Theory & Principles",
+          "weight": 16
+        },
+        {
+          "id": "scrum-framework",
+          "name": "Scrum Framework",
+          "weight": 56
+        },
+        {
+          "id": "scrum-events",
+          "name": "Scrum Events",
+          "weight": 28
+        }
+      ],
+      "resources": [
+        {
+          "title": "Professional Scrum Master I Certification",
+          "url": "https://www.scrum.org/professional-scrum-master-certifications"
+        },
+        {
+          "title": "The Scrum Guide",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,593 @@
+{
+  "certificationId": "cissp",
+  "topicId": "communication-security",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "cissp-020",
+      "type": "single-choice",
+      "topicId": "communication-security",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "At which OSI layer does IPSec operate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Layer 2 (Data Link)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Layer 3 (Network)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Layer 4 (Transport)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Layer 7 (Application)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IPSec operates at Layer 3 (Network layer) of the OSI model, providing IP-level security including authentication and encryption.",
+        "incorrect": "Layer 2 protocols include WPA2. TLS/SSL operates at Layer 4-5. Application layer protocols include HTTPS.",
+        "examTip": "IPSec = Layer 3. TLS = Layer 4/5. SSH = Layer 7. WPA2 = Layer 2.",
+        "relatedTopics": [
+          "IPSec",
+          "OSI-model",
+          "VPN",
+          "network-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Communication and Network Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-021",
+      "type": "single-choice",
+      "topicId": "communication-security",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A security engineer is configuring a VPN between two offices. The VPN must encrypt the entire IP packet, including the header, and add a new IP header for routing.",
+      "questionText": "Which IPSec mode should be used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transport mode",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Tunnel mode",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Bridge mode",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Passthrough mode",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IPSec Tunnel mode encapsulates the entire original IP packet (header + data) and adds a new IP header, making it suitable for site-to-site VPNs.",
+        "incorrect": "Transport mode only encrypts the payload, not the original IP header â€” used for end-to-end communication between hosts. Bridge and passthrough are not IPSec modes.",
+        "examTip": "Tunnel mode = site-to-site VPN (encrypts whole packet). Transport mode = host-to-host (encrypts payload only).",
+        "relatedTopics": [
+          "IPSec",
+          "VPN",
+          "tunnel-mode",
+          "transport-mode"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Communication and Network Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-022",
+      "type": "single-choice",
+      "topicId": "communication-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which firewall type maintains state information about active connections and makes filtering decisions based on connection context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Packet filtering firewall",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Stateful inspection firewall",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Application-layer gateway",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Circuit-level gateway",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Stateful inspection firewalls track the state of active connections and use this context to make more intelligent filtering decisions than simple packet filters.",
+        "incorrect": "Packet filters only check individual packet headers. Application-layer gateways inspect application-layer data. Circuit-level gateways monitor TCP handshakes but not content.",
+        "examTip": "Packet filter = Layer 3/4 only. Stateful = tracks connections. App-layer gateway = deepest inspection. Circuit-level = monitors handshakes.",
+        "relatedTopics": [
+          "firewall",
+          "stateful-inspection",
+          "network-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Communication and Network Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-023",
+      "type": "single-choice",
+      "topicId": "communication-security",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A network administrator notices unusual traffic patterns on the network. An IDS alert indicates that a system is sending a high volume of SYN packets to multiple external hosts without completing the TCP handshake.",
+      "questionText": "What type of attack is MOST likely occurring?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SYN flood (DDoS)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SYN scanning (port scan)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The system is participating in a DDoS botnet sending SYN flood attacks",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "DNS poisoning",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "When an internal system sends high volumes of SYN packets to multiple external hosts without completing handshakes, it is likely compromised and participating in a distributed SYN flood attack as part of a botnet.",
+        "incorrect": "A SYN flood targeting the organization would come from outside. Port scanning would target specific ports on one or a few hosts. DNS poisoning involves corrupting DNS cache.",
+        "examTip": "Internal system sending high volume SYNs outbound = compromised botnet node. Inbound SYNs = you're being attacked.",
+        "relatedTopics": [
+          "DDoS",
+          "botnet",
+          "SYN-flood",
+          "IDS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Communication and Network Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-024",
+      "type": "yes-no-statements",
+      "topicId": "communication-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes network security concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A DMZ hosts publicly accessible services while protecting the internal network.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "NAT provides security by encrypting all traffic between internal and external networks.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "VLAN segmentation can help contain the spread of malware within a network.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "A proxy server always increases network performance.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "DMZs isolate public-facing services. VLANs segment networks reducing lateral movement. NAT hides internal IPs but does not encrypt traffic. Proxy servers can improve or degrade performance depending on configuration and load.",
+        "incorrect": "NAT provides obscurity through IP hiding, not encryption. Proxy performance depends on caching, load, and configuration.",
+        "examTip": "DMZ = buffer zone. VLAN = logical segmentation. NAT = IP hiding. Proxy = intermediary for traffic.",
+        "relatedTopics": [
+          "DMZ",
+          "NAT",
+          "VLAN",
+          "proxy-server"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Communication and Network Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-025",
+      "type": "single-choice",
+      "topicId": "communication-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which protocol provides secure remote access by encrypting the entire session at the application layer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Telnet",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "FTP",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "SSH",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "HTTP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SSH (Secure Shell) provides encrypted remote access at the application layer, replacing insecure protocols like Telnet and rsh.",
+        "incorrect": "Telnet transmits in cleartext. FTP transmits credentials in cleartext. HTTP is unencrypted web traffic.",
+        "examTip": "Secure replacements: Telnet â†’ SSH. FTP â†’ SFTP or FTPS. HTTP â†’ HTTPS. SNMP v1/v2 â†’ SNMP v3.",
+        "relatedTopics": [
+          "SSH",
+          "remote-access",
+          "secure-protocols"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Communication and Network Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-049",
+      "type": "single-choice",
+      "topicId": "communication-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which wireless security protocol is considered MOST secure for enterprise Wi-Fi deployments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "WEP",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "WPA (TKIP)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "WPA2-Enterprise (802.1X)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "WPA3-Enterprise",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "WPA3-Enterprise with 192-bit security mode provides the strongest protection with AES-256 encryption, protected management frames (PMF), and improved authentication.",
+        "incorrect": "WEP is broken. WPA/TKIP is deprecated. WPA2-Enterprise is solid but WPA3-Enterprise is the current strongest standard.",
+        "examTip": "Security order: WPA3 > WPA2 > WPA > WEP (broken). Enterprise (802.1X) > Personal (PSK) for business environments.",
+        "relatedTopics": [
+          "wireless-security",
+          "WPA3",
+          "802.1X",
+          "enterprise-Wi-Fi"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Communication and Network Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-061",
+      "type": "single-choice",
+      "topicId": "communication-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which protocol is used to provide AAA (Authentication, Authorization, and Accounting) for network access?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SSH",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "RADIUS",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "LDAP",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Kerberos",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RADIUS (Remote Authentication Dial-In User Service) provides centralized AAA for network access, commonly used with VPNs, Wi-Fi (802.1X), and dial-up connections.",
+        "incorrect": "SSH provides secure remote access. LDAP is a directory protocol. Kerberos provides authentication but not full AAA for network access.",
+        "examTip": "RADIUS = AAA for network access. TACACS+ = AAA for device management (Cisco). Diameter = next-gen RADIUS for mobile networks.",
+        "relatedTopics": [
+          "RADIUS",
+          "AAA",
+          "network-access-control"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Communication and Network Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-068",
+      "type": "single-choice",
+      "topicId": "communication-security",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which type of DNS attack involves poisoning the DNS cache to redirect users to malicious websites?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DNS tunneling",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "DNS amplification",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "DNS cache poisoning",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "DNS hijacking via ISP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DNS cache poisoning (Kaminsky attack) inserts forged DNS records into a resolver's cache, redirecting users to attacker-controlled IP addresses instead of legitimate sites.",
+        "incorrect": "DNS tunneling exfiltrates data via DNS. DNS amplification is a DDoS technique. ISP hijacking is a different attack vector.",
+        "examTip": "DNSSEC prevents cache poisoning by digitally signing DNS records. Implement DNSSEC to protect against this attack.",
+        "relatedTopics": [
+          "DNS-security",
+          "cache-poisoning",
+          "DNSSEC"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Communication and Network Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-076",
+      "type": "single-choice",
+      "topicId": "communication-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which network segmentation technique creates isolated broadcast domains at Layer 2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Subnetting",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "VLAN",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "NAT",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ACL",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "VLANs (Virtual Local Area Networks) create logical broadcast domains at Layer 2, isolating traffic between groups even if they share physical infrastructure.",
+        "incorrect": "Subnetting creates Layer 3 network segments. NAT translates IP addresses. ACLs filter traffic based on rules.",
+        "examTip": "VLAN = Layer 2 isolation. Subnet = Layer 3 isolation. Both used together for defense in depth.",
+        "relatedTopics": [
+          "VLAN",
+          "network-segmentation",
+          "Layer-2"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Communication and Network Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-085",
+      "type": "single-choice",
+      "topicId": "communication-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which layer of the OSI model is responsible for end-to-end reliable data delivery, error recovery, and flow control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Layer 2 â€“ Data Link",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Layer 3 â€“ Network",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Layer 4 â€“ Transport",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Layer 5 â€“ Session",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Layer 4 (Transport) handles end-to-end communication, segmentation, flow control, and error recovery. TCP and UDP operate at this layer.",
+        "incorrect": "Layer 2 handles local frame delivery. Layer 3 handles logical addressing and routing. Layer 5 manages sessions.",
+        "examTip": "OSI Layer 4 = TCP/UDP. TCP = reliable, connection-oriented. UDP = unreliable, connectionless.",
+        "relatedTopics": [
+          "OSI-model",
+          "transport-layer",
+          "TCP",
+          "UDP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Communication and Network Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "cissp-095",
+      "type": "single-choice",
+      "topicId": "communication-security",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of 802.1X in a network environment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To encrypt wireless traffic",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "To provide port-based network access control â€” authenticate devices before granting LAN access",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "To manage VLAN assignments",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "To prevent ARP spoofing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "802.1X is an IEEE standard for port-based Network Access Control (NAC). It requires devices to authenticate (typically via RADIUS) before being granted access to the network.",
+        "incorrect": "Encryption is provided by WPA2/WPA3. VLAN management is separate. ARP spoofing protection is provided by Dynamic ARP Inspection (DAI).",
+        "examTip": "802.1X = NAC framework. Uses supplicant (device), authenticator (switch/AP), and authentication server (RADIUS). Blocks unauthorized devices.",
+        "relatedTopics": [
+          "802.1X",
+          "NAC",
+          "RADIUS",
+          "network-access-control"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Communication and Network Security",
+        "references": [
+          "https://www.isc2.org/certifications/cissp"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}
