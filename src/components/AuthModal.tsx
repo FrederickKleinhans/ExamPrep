@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { X, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../store/useAuth';
+import { isSupabaseConfigured } from '../lib/supabase';
 
 function GitHubIcon() {
   return (
@@ -68,6 +69,11 @@ export function AuthModal({ onClose }: Props) {
     setLocalError(null);
     setSuccessMsg(null);
 
+    if (!isSupabaseConfigured) {
+      setLocalError('Sign-in is temporarily unavailable. Please try again later.');
+      return;
+    }
+
     if (!email || !password) {
       setLocalError('Please enter your email and password.');
       return;
@@ -92,8 +98,12 @@ export function AuthModal({ onClose }: Props) {
 
   const handleProvider = async (provider: 'google' | 'github') => {
     setLocalError(null);
+    if (!isSupabaseConfigured) {
+      setLocalError('Sign-in is temporarily unavailable. Please try again later.');
+      return;
+    }
     await signInWithProvider(provider);
-    // Page will redirect for OAuth — no need to close modal
+    // Page redirects for OAuth when the provider is configured.
   };
 
   const displayError = localError || error;
