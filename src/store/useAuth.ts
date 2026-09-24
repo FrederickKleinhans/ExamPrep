@@ -66,7 +66,13 @@ export const useAuth = create<AuthState>((set) => ({
   signUpWithEmail: async (email, password) => {
     if (!isSupabaseConfigured || !supabase) return null;
     set({ isLoading: true, error: null });
-    const { error } = await supabase.auth.signUp({ email, password });
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        emailRedirectTo: `${window.location.origin}/`,
+      },
+    });
     set({ isLoading: false, error: error?.message ?? null });
     return error;
   },
