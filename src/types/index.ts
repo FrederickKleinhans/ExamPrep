@@ -186,6 +186,15 @@ export interface CertificationProgress {
   studyStreak: StudyStreak;
   /** SM-2 schedule per question. Keyed by question ID. */
   sm2: Record<string, Sm2Schedule>;
+  /** Flashcard review schedule, kept separate from quiz question statistics. */
+  flashcards?: Record<string, FlashcardSchedule>;
+}
+
+export interface FlashcardSchedule {
+  repetitions: number;
+  intervalDays: number;
+  dueDate: string;
+  lastReviewed: string;
 }
 
 // --- SM-2 Scheduling ---

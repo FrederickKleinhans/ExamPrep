@@ -342,3 +342,4 @@ public/data/                          ← generated; never hand-edit
 | 2026-09-22 | Synchronized career-path selection when activating certifications from Tracks or Settings |
 | 2026-09-22 | Added sign-in plus one-switch support unlock flow for certification selection |
 | 2026-09-22 | Added live Buy Me a Coffee support link; Google AdSense/Ad Manager application submitted |
+| 2026-09-26 | Implemented the AZ-900 flashcards pilot with separate per-card scheduling, due review, local persistence, and signed-in sync |

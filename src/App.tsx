@@ -9,6 +9,7 @@ import { StudyPage } from './pages/StudyPage';
 import { ExamPage } from './pages/ExamPage';
 import { AnalyticsPage } from './pages/AnalyticsPage';
 import { BookmarksPage } from './pages/BookmarksPage';
+import { FlashcardsPage } from './pages/FlashcardsPage';
 import { SettingsPage } from './pages/SettingsPage';
 import { usePreferences } from './store/usePreferences';
 import { useAuth } from './store/useAuth';
@@ -89,6 +90,7 @@ function App() {
             <Route path="/exam" element={<ExamPage />} />
             <Route path="/analytics" element={<AnalyticsPage />} />
             <Route path="/bookmarks" element={<BookmarksPage />} />
+            <Route path="/flashcards" element={<FlashcardsPage />} />
             <Route path="/settings" element={<SettingsPage />} />
           </Route>
         </Routes>

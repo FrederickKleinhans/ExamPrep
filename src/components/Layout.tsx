@@ -6,6 +6,7 @@ import {
   ClipboardCheck,
   BarChart3,
   Bookmark,
+  Layers,
   Settings,
   Flame,
   ChevronRight,
@@ -23,6 +24,7 @@ const navItems = [
   { to: '/', icon: LayoutDashboard, label: 'Dashboard' },
   { to: '/tracks', icon: MapIcon, label: 'Tracks' },
   { to: '/study', icon: BookOpen, label: 'Practice' },
+  { to: '/flashcards', icon: Layers, label: 'Flashcards' },
   { to: '/exam', icon: ClipboardCheck, label: 'Exam' },
   { to: '/analytics', icon: BarChart3, label: 'Analytics' },
   { to: '/bookmarks', icon: Bookmark, label: 'Bookmarks' },
@@ -33,6 +35,7 @@ const mobileTabItems = [
   { to: '/', icon: LayoutDashboard, label: 'Home' },
   { to: '/tracks', icon: MapIcon, label: 'Tracks' },
   { to: '/study', icon: BookOpen, label: 'Study' },
+  { to: '/flashcards', icon: Layers, label: 'Cards' },
   { to: '/exam', icon: ClipboardCheck, label: 'Exam' },
   { to: '/settings', icon: Settings, label: 'Settings' },
 ];

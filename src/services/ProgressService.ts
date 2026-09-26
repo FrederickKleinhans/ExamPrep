@@ -343,6 +343,29 @@ export class ProgressService {
     this.saveProgress(progress);
   }
 
+  static rateFlashcard(certificationId: string, cardId: string, rating: 'again' | 'hard' | 'good' | 'easy', now: Date = new Date()): void {
+    const progress = this.getProgress();
+    const cert = this.ensureCertificationProgress(progress, certificationId);
+    if (!cert.flashcards) cert.flashcards = {};
+    const previous = cert.flashcards[cardId];
+    const intervals: Record<typeof rating, number> = {
+      again: 1,
+      hard: Math.max(1, Math.round((previous?.intervalDays ?? 1) * 1.2)),
+      good: previous ? Math.max(1, Math.round(previous.intervalDays * 2.5)) : 1,
+      easy: previous ? Math.max(2, Math.round(previous.intervalDays * 3.5)) : 4,
+    };
+    const intervalDays = intervals[rating];
+    const due = new Date(now);
+    due.setDate(due.getDate() + intervalDays);
+    cert.flashcards[cardId] = {
+      repetitions: rating === 'again' ? 0 : (previous?.repetitions ?? 0) + 1,
+      intervalDays,
+      dueDate: due.toISOString().split('T')[0],
+      lastReviewed: now.toISOString().split('T')[0],
+    };
+    this.saveProgress(progress);
+  }
+
   static saveExamResult(result: ExamResult): void {
     const progress = this.getProgress();
     this.ensureCertificationProgress(progress, result.certificationId).examHistory.push(result);

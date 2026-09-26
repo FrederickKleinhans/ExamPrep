@@ -157,6 +157,13 @@ export function mergeProgress(
       new Set([...(r.bookmarks ?? []), ...(l.bookmarks ?? [])]),
     );
 
+    // Merge flashcard schedules independently from question schedules.
+    const flashcards = { ...(r.flashcards ?? {}) };
+    for (const [cardId, localCard] of Object.entries(l.flashcards ?? {})) {
+      const remoteCard = flashcards[cardId];
+      if (!remoteCard || localCard.lastReviewed > remoteCard.lastReviewed) flashcards[cardId] = localCard;
+    }
+
     // Use higher streak
     const studyStreak = (l.studyStreak?.current ?? 0) >= (r.studyStreak?.current ?? 0)
       ? l.studyStreak
@@ -168,6 +175,7 @@ export function mergeProgress(
       examHistory: Array.from(examMap.values()),
       sm2: mergedSm2,
       bookmarks,
+      flashcards,
       studyStreak: studyStreak ?? r.studyStreak,
     };
   }
