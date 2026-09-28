@@ -134,6 +134,7 @@ function createCertificationProgress(): CertificationProgress {
     studyGroupIndex: 0,
     studyStreak: createStreak(),
     sm2: {},
+    flashcards: {},
   };
 }
 
@@ -159,7 +160,9 @@ function isV2Progress(value: unknown): value is UserProgress {
       return typeof value.questionStats === 'object' && value.questionStats !== null &&
         Array.isArray(value.examHistory) && Array.isArray(value.weakTopics) &&
         Array.isArray(value.bookmarks) && typeof value.studyGroupIndex === 'number' &&
-        typeof value.studyStreak === 'object' && value.studyStreak !== null;
+        typeof value.studyStreak === 'object' && value.studyStreak !== null &&
+        (value.flashcards === undefined ||
+          (typeof value.flashcards === 'object' && value.flashcards !== null && !Array.isArray(value.flashcards)));
     });
 }
 
@@ -191,6 +194,7 @@ function migrateLegacyProgress(legacy: LegacyProgress): UserProgress {
         studyGroupIndex: legacy.studyGroupIndex?.[certificationId] ?? 0,
         studyStreak: legacyStreak,
         sm2: {},
+        flashcards: {},
       },
     },
   };
@@ -347,22 +351,13 @@ export class ProgressService {
     const progress = this.getProgress();
     const cert = this.ensureCertificationProgress(progress, certificationId);
     if (!cert.flashcards) cert.flashcards = {};
+
     const previous = cert.flashcards[cardId];
-    const intervals: Record<typeof rating, number> = {
-      again: 1,
-      hard: Math.max(1, Math.round((previous?.intervalDays ?? 1) * 1.2)),
-      good: previous ? Math.max(1, Math.round(previous.intervalDays * 2.5)) : 1,
-      easy: previous ? Math.max(2, Math.round(previous.intervalDays * 3.5)) : 4,
-    };
-    const intervalDays = intervals[rating];
-    const due = new Date(now);
-    due.setDate(due.getDate() + intervalDays);
-    cert.flashcards[cardId] = {
-      repetitions: rating === 'again' ? 0 : (previous?.repetitions ?? 0) + 1,
-      intervalDays,
-      dueDate: due.toISOString().split('T')[0],
-      lastReviewed: now.toISOString().split('T')[0],
-    };
+    const current: Sm2Schedule | null = previous
+      ? { ...previous, easeFactor: previous.easeFactor ?? SM2_INITIAL_EASE }
+      : null;
+    const quality = { again: 0, hard: 3, good: 4, easy: 5 }[rating];
+    cert.flashcards[cardId] = computeNextSm2(current, quality, now);
     this.saveProgress(progress);
   }
 

@@ -704,13 +704,12 @@ body {
 
 .flashcard-scene {
   width: 100%;
-  min-height: clamp(13rem, 38vh, 24rem);
   perspective: 1100px;
   animation: flashcard-arrive 260ms cubic-bezier(.2,.75,.25,1) both;
 }
 
 .flashcard-flipper {
-  position: relative;
+  display: grid;
   min-height: clamp(13rem, 38vh, 24rem);
   transform-style: preserve-3d;
   transition: transform 560ms cubic-bezier(.2,.72,.18,1);
@@ -721,8 +720,9 @@ body {
 }
 
 .flashcard-face {
-  position: absolute;
-  inset: 0;
+  grid-area: 1 / 1;
+  min-width: 0;
+  min-height: clamp(13rem, 38vh, 24rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -755,11 +755,19 @@ body {
   margin: 0;
   font-size: clamp(21px, 3.4vw, 30px);
   line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.flashcard-answer-copy {
+  width: 100%;
+  white-space: pre-line;
+  font-size: clamp(16px, 2.4vw, 22px);
 }
 
 .flashcard-source {
   margin: 16px 0 0;
   font-size: 11px;
+  overflow-wrap: anywhere;
 }
 
 .flashcard-reveal {
@@ -813,12 +821,14 @@ body {
 }
 
 @media (max-width: 767px) {
-  .flashcards-page { padding: 14px 8px 28px; }
+  .flashcards-page { padding: 14px 8px calc(88px + env(safe-area-inset-bottom)); }
   .flashcards-header { gap: 10px; }
   .flashcards-header > div:first-child { min-width: 0; }
   .flashcard-review { min-height: max(22rem, 54svh); gap: 12px; padding: 14px; }
-  .flashcard-scene, .flashcard-flipper { min-height: clamp(13rem, 31svh, 19rem); }
+  .flashcard-flipper, .flashcard-face { min-height: clamp(13rem, 31svh, 19rem); }
   .flashcard-face { padding: 20px clamp(12px, 4vw, 24px); }
+  .flashcard-copy { font-size: clamp(18px, 5vw, 24px); }
+  .flashcard-answer-copy { font-size: clamp(15px, 4vw, 19px); }
   .flashcard-progress { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
   .flashcard-ratings { gap: 6px; }
 }
@@ -835,5 +845,5 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
   .flashcards-page { padding-inline: 6px; }
   .flashcard-review { min-height: clamp(22rem, 58vh, 34rem); }
-  .flashcard-scene, .flashcard-flipper { min-height: clamp(13rem, 34vh, 20rem); }
+  .flashcard-flipper, .flashcard-face { min-height: clamp(13rem, 34vh, 20rem); }
 }

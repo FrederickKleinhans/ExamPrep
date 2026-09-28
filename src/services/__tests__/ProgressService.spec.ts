@@ -104,6 +104,61 @@ describe('ProgressService', () => {
     expect(ProgressService.getCertificationProgress(progress, 'az-900').questionStats).toEqual({});
   });
 
+  it('schedules flashcards separately and advances due dates from the latest rating', () => {
+    const initial = new Date('2026-09-27T12:00:00Z');
+    ProgressService.rateFlashcard('az-900', 'cloud-benefits', 'good', initial);
+    const progressAfterFirstReview = ProgressService.getProgress();
+    const first = ProgressService.getCertificationProgress(progressAfterFirstReview, 'az-900').flashcards?.['cloud-benefits'];
+
+    expect(first).toMatchObject({ repetitions: 1, easeFactor: 2.5, intervalDays: 1 });
+    expect(first?.dueDate).toBe('2026-09-28');
+    expect(ProgressService.getCertificationProgress(progressAfterFirstReview, 'az-900').questionStats).toEqual({});
+    expect(ProgressService.getCertificationProgress(progressAfterFirstReview, 'az-900').examHistory).toEqual([]);
+
+    const revisit = new Date('2026-09-28T12:00:00Z');
+    ProgressService.rateFlashcard('az-900', 'cloud-benefits', 'easy', revisit);
+    const second = ProgressService.getCertificationProgress(ProgressService.getProgress(), 'az-900').flashcards?.['cloud-benefits'];
+
+    expect(second).toMatchObject({ repetitions: 2, easeFactor: 2.6, intervalDays: 6 });
+    expect(second?.dueDate).toBe('2026-10-04');
+
+    ProgressService.rateFlashcard('az-900', 'cloud-benefits', 'again', new Date('2026-10-04T12:00:00Z'));
+    const reset = ProgressService.getCertificationProgress(ProgressService.getProgress(), 'az-900').flashcards?.['cloud-benefits'];
+
+    expect(reset).toMatchObject({ repetitions: 0, easeFactor: 2.4, intervalDays: 1 });
+    expect(reset?.dueDate).toBe('2026-10-05');
+  });
+
+  it('maps a hard flashcard rating to the SM-2 quality for correct low-confidence recall', () => {
+    ProgressService.rateFlashcard('az-900', 'capex-opex', 'hard', new Date('2026-09-27T12:00:00Z'));
+    const schedule = ProgressService.getCertificationProgress(ProgressService.getProgress(), 'az-900').flashcards?.['capex-opex'];
+
+    expect(schedule).toMatchObject({ repetitions: 1, easeFactor: 2.36, intervalDays: 1 });
+    expect(schedule?.dueDate).toBe('2026-09-28');
+  });
+
+  it('upgrades existing flashcard schedules without discarding their review history', () => {
+    const progress = ProgressService.getProgress();
+    progress.certifications['az-900'] = {
+      ...ProgressService.getCertificationProgress(progress, 'az-900'),
+      flashcards: {
+        'cloud-benefits': {
+          repetitions: 2,
+          intervalDays: 6,
+          dueDate: '2026-09-27',
+          lastReviewed: '2026-09-21',
+        },
+      },
+    };
+    ProgressService.saveProgress(progress);
+
+    ProgressService.rateFlashcard('az-900', 'cloud-benefits', 'good', new Date('2026-09-27T12:00:00Z'));
+    const schedule = ProgressService.getCertificationProgress(ProgressService.getProgress(), 'az-900').flashcards?.['cloud-benefits'];
+
+    expect(schedule).toMatchObject({ repetitions: 3, easeFactor: 2.5, intervalDays: 15 });
+    expect(schedule?.dueDate).toBe('2026-10-12');
+  });
+
   it('mergeProgress handles missing certification maps without throwing', () => {
     const local = {
       version: 2,
@@ -119,6 +174,7 @@ describe('ProgressService', () => {
           studyGroupIndex: 0,
           studyStreak: { current: 2, lastStudyDate: '2026-09-20', longest: 4 },
           sm2: {},
+          flashcards: {},
         },
       },
     } as any;
@@ -137,6 +193,7 @@ describe('ProgressService', () => {
           studyGroupIndex: 0,
           studyStreak: { current: 5, lastStudyDate: '2026-09-21', longest: 7 },
           sm2: {},
+          flashcards: {},
         },
       },
     } as any;
