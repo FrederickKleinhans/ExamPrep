@@ -54,6 +54,7 @@ export function validateCertification(certification, questions, sourcePath = 'co
   }
 
   const topicIds = new Set((certification.topics ?? []).map((t) => t.id));
+  const topicCounts = new Map((certification.topics ?? []).map((topic) => [topic.id, 0]));
   const questionIds = new Set();
 
   for (const question of questions.questions ?? []) {
@@ -69,6 +70,8 @@ export function validateCertification(certification, questions, sourcePath = 'co
     // Topic reference
     if (question.id && !topicIds.has(question.topicId)) {
       errors.push(`question ${question.id} references unknown topic "${question.topicId}"`);
+    } else if (topicCounts.has(question.topicId)) {
+      topicCounts.set(question.topicId, topicCounts.get(question.topicId) + 1);
     }
 
     // Type
@@ -114,6 +117,22 @@ export function validateCertification(certification, questions, sourcePath = 'co
     }
     if (question.type === 'drag-drop' && (!Array.isArray(question.dragCategories) || !Array.isArray(question.dragItems) || question.dragCategories.length === 0 || question.dragItems.length === 0)) {
       errors.push(`question ${question.id} needs drag-drop items and categories`);
+    }
+  }
+
+  const totalQuestions = questions.questions?.length ?? 0;
+  for (const topic of certification.topics ?? []) {
+    const count = topicCounts.get(topic.id) ?? 0;
+    if (count === 0) {
+      errors.push(`topic "${topic.id}" has no questions`);
+    } else if (totalQuestions >= 20) {
+      const expected = totalQuestions * topic.weight / 100;
+      if (count < expected / 2 || count > expected * 2) {
+        console.warn(
+          `${sourcePath}: topic "${topic.id}" has ${count} questions; ` +
+          `${expected.toFixed(1)} expected from its ${topic.weight}% exam weight`,
+        );
+      }
     }
   }
 

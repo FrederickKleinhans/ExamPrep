@@ -7,7 +7,8 @@ import {
   StudyStreak,
   UserProgress,
 } from '../types';
-import { pushProgress } from './SyncService';
+import { scheduleProgressPush, broadcastProgressChanged } from './SyncService';
+import { toLocalDateString } from '../lib/date';
 
 // ── Sync helpers ───────────────────────────────────────────────────────────
 
@@ -29,9 +30,9 @@ function saveAndSync(progress: UserProgress): void {
   } catch (error) {
     console.error('Failed to save progress to localStorage:', error);
   }
+  broadcastProgressChanged();
   if (_syncUserId) {
-    // Fire-and-forget — UI never waits for this
-    void pushProgress(_syncUserId, progress);
+    scheduleProgressPush(_syncUserId, progress);
   }
 }
 
@@ -62,7 +63,7 @@ export function computeNextSm2(
   quality: number,
   now: Date = new Date(),
 ): Sm2Schedule {
-  const todayStr = now.toISOString().split('T')[0];
+  const todayStr = toLocalDateString(now);
 
   if (quality < 3) {
     // Incorrect answer — reset repetitions, shrink ease factor slightly
@@ -75,7 +76,7 @@ export function computeNextSm2(
       repetitions: 0,
       easeFactor,
       intervalDays: 1,
-      dueDate: dueDate.toISOString().split('T')[0],
+      dueDate: toLocalDateString(dueDate),
       lastReviewed: todayStr,
     };
   }
@@ -104,7 +105,7 @@ export function computeNextSm2(
     repetitions,
     easeFactor,
     intervalDays,
-    dueDate: dueDate.toISOString().split('T')[0],
+    dueDate: toLocalDateString(dueDate),
     lastReviewed: todayStr,
   };
 }
@@ -201,10 +202,13 @@ function migrateLegacyProgress(legacy: LegacyProgress): UserProgress {
 }
 
 function updateStreak(streak: StudyStreak): void {
-  const today = new Date().toISOString().split('T')[0];
+  const todayDate = new Date();
+  const today = toLocalDateString(todayDate);
   if (streak.lastStudyDate === today) return;
 
-  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+  const yesterdayDate = new Date(todayDate);
+  yesterdayDate.setDate(yesterdayDate.getDate() - 1);
+  const yesterday = toLocalDateString(yesterdayDate);
   streak.current = streak.lastStudyDate === yesterday ? streak.current + 1 : 1;
   streak.lastStudyDate = today;
   streak.longest = Math.max(streak.longest, streak.current);

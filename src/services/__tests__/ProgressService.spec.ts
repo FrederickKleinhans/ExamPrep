@@ -2,6 +2,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { ProgressService } from '../ProgressService';
 import { mergeProgress } from '../SyncService';
+import { toLocalDateString } from '../../lib/date';
 
 describe('ProgressService', () => {
   beforeEach(() => {
@@ -127,6 +128,58 @@ describe('ProgressService', () => {
 
     expect(reset).toMatchObject({ repetitions: 0, easeFactor: 2.4, intervalDays: 1 });
     expect(reset?.dueDate).toBe('2026-10-05');
+  });
+
+  it('formats study dates using the local calendar date', () => {
+    const localLateEvening = new Date(2026, 8, 30, 23, 30);
+    expect(toLocalDateString(localLateEvening)).toBe('2026-09-30');
+  });
+
+  it('merges question statistics field-by-field across devices', () => {
+    const local = ProgressService.getProgress();
+    const remote = ProgressService.getProgress();
+    local.certifications['az-900'] = {
+      ...ProgressService.getCertificationProgress(local, 'az-900'),
+      questionStats: {
+        q1: {
+          attempts: 3,
+          correct: 2,
+          incorrect: 1,
+          lastAttempted: '2026-09-30T10:00:00.000Z',
+          averageTimeMs: 600,
+          confidence: 'medium',
+          pointsEarned: 4,
+          pointsTotal: 5,
+        },
+      },
+    };
+    remote.certifications['az-900'] = {
+      ...ProgressService.getCertificationProgress(remote, 'az-900'),
+      questionStats: {
+        q1: {
+          attempts: 2,
+          correct: 1,
+          incorrect: 1,
+          lastAttempted: '2026-09-30T11:00:00.000Z',
+          averageTimeMs: 300,
+          confidence: 'high',
+          pointsEarned: 1,
+          pointsTotal: 2,
+        },
+      },
+    };
+
+    const stat = mergeProgress(local, remote).certifications['az-900'].questionStats.q1;
+    expect(stat).toMatchObject({
+      attempts: 5,
+      correct: 3,
+      incorrect: 2,
+      averageTimeMs: 480,
+      lastAttempted: '2026-09-30T11:00:00.000Z',
+      confidence: 'high',
+      pointsEarned: 5,
+      pointsTotal: 7,
+    });
   });
 
   it('maps a hard flashcard rating to the SM-2 quality for correct low-confidence recall', () => {

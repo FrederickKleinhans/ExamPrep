@@ -15,6 +15,60 @@ import { AdaptiveEngine, qualityScore } from '../services/AdaptiveEngine';
 import { ExamService } from '../services/ExamService';
 import { TrackingService } from '../services/TrackingService';
 
+const EXAM_SESSION_STORAGE_KEY = 'certready_exam_session';
+
+function isExamSession(value: unknown): value is ExamSession {
+  if (!value || typeof value !== 'object') return false;
+  const session = value as Partial<ExamSession>;
+  return typeof session.id === 'string' &&
+    typeof session.certificationId === 'string' &&
+    Array.isArray(session.questions) &&
+    typeof session.currentIndex === 'number' &&
+    Number.isInteger(session.currentIndex) &&
+    session.currentIndex >= 0 &&
+    session.currentIndex < session.questions.length &&
+    typeof session.answers === 'object' && session.answers !== null &&
+    Array.isArray(session.flagged) &&
+    typeof session.startTime === 'number' &&
+    typeof session.timeLimit === 'number' &&
+    typeof session.isCompleted === 'boolean';
+}
+
+function restoreExamSession(certificationId: string): ExamSession | null {
+  try {
+    const stored = sessionStorage.getItem(EXAM_SESSION_STORAGE_KEY);
+    if (!stored) return null;
+    const parsed: unknown = JSON.parse(stored);
+    if (isExamSession(parsed) && !parsed.isCompleted && parsed.certificationId === certificationId) {
+      return parsed;
+    }
+  } catch (error) {
+    console.warn('Failed to restore exam session from sessionStorage:', error);
+  }
+  clearStoredExamSession();
+  return null;
+}
+
+function clearStoredExamSession(): void {
+  try {
+    sessionStorage.removeItem(EXAM_SESSION_STORAGE_KEY);
+  } catch (error) {
+    console.error('Failed to clear the stored exam session:', error);
+  }
+}
+
+function persistExamSession(session: ExamSession | null): void {
+  try {
+    if (session && !session.isCompleted) {
+      sessionStorage.setItem(EXAM_SESSION_STORAGE_KEY, JSON.stringify(session));
+    } else {
+      clearStoredExamSession();
+    }
+  } catch (error) {
+    console.error('Failed to persist exam session to sessionStorage:', error);
+  }
+}
+
 interface Store {
   // Data
   manifest: CertificationManifest | null;
@@ -68,10 +122,12 @@ interface Store {
   toggleBookmark: (questionId: string) => void;
 }
 
+const initialProgress = ProgressService.getProgress();
+
 export const useStore = create<Store>((set, get) => ({
   manifest: null,
   questionBank: null,
-  progress: ProgressService.getProgress(),
+  progress: initialProgress,
   isLoading: false,
   error: null,
 
@@ -87,7 +143,7 @@ export const useStore = create<Store>((set, get) => ({
   isAnswerCorrect: null,
   questionStartTime: Date.now(),
 
-  examSession: null,
+  examSession: restoreExamSession(initialProgress.selectedCertification),
 
   hasActiveSession: () => {
     const s = get();
@@ -121,10 +177,7 @@ export const useStore = create<Store>((set, get) => ({
       const questionBank = certification && initialChunk
         ? { certificationId: certification.id, version: certification.version, questions: initialChunk.questions }
         : null;
-      let studyGroup = 0;
-      if (certId) {
-        studyGroup = ProgressService.incrementStudyGroupIndex(certId);
-      }
+      const studyGroup = certId ? progress.certifications[certId]?.studyGroupIndex ?? 0 : 0;
       set({ manifest, questionBank, progress, studyFilter: initialTopicId, isLoading: false, studyGroup, isStudyExhausted: false });
     } catch (e) {
       set({ error: (e as Error).message, isLoading: false });
@@ -146,6 +199,7 @@ export const useStore = create<Store>((set, get) => ({
         questionBank,
         progress,
         isLoading: false,
+        studyGroup: progress.certifications[certId]?.studyGroupIndex ?? 0,
         // Clear any stale exam session tied to the previous cert —
         // switching certs mid-exam must not leave an orphaned session
         // that points at a question bank we just replaced.
@@ -159,6 +213,7 @@ export const useStore = create<Store>((set, get) => ({
         selectedAnswer: null,
         isAnswerCorrect: null,
       });
+      persistExamSession(null);
     } catch (e) {
       set({ error: (e as Error).message, isLoading: false });
     }
@@ -357,24 +412,31 @@ export const useStore = create<Store>((set, get) => ({
       ExamService.DEFAULT_QUESTION_COUNT
     );
     set({ examSession: session });
+    persistExamSession(session);
   },
 
   submitExamAnswer: (questionId: string, answer: string | string[]) => {
     const { examSession } = get();
     if (!examSession) return;
-    set({ examSession: ExamService.submitAnswer(examSession, questionId, answer) });
+    const updatedSession = ExamService.submitAnswer(examSession, questionId, answer);
+    set({ examSession: updatedSession });
+    persistExamSession(updatedSession);
   },
 
   toggleExamFlag: (questionId: string) => {
     const { examSession } = get();
     if (!examSession) return;
-    set({ examSession: ExamService.toggleFlag(examSession, questionId) });
+    const updatedSession = ExamService.toggleFlag(examSession, questionId);
+    set({ examSession: updatedSession });
+    persistExamSession(updatedSession);
   },
 
   navigateExam: (index: number) => {
     const { examSession } = get();
     if (!examSession) return;
-    set({ examSession: ExamService.navigateTo(examSession, index) });
+    const updatedSession = ExamService.navigateTo(examSession, index);
+    set({ examSession: updatedSession });
+    persistExamSession(updatedSession);
   },
 
   finishExam: () => {
@@ -399,12 +461,14 @@ export const useStore = create<Store>((set, get) => ({
       examSession: { ...examSession, isCompleted: true },
       progress: ProgressService.getProgress(),
     });
+    persistExamSession(null);
 
     return result;
   },
 
   clearExam: () => {
     set({ examSession: null });
+    persistExamSession(null);
   },
 
   toggleBookmark: (questionId: string) => {

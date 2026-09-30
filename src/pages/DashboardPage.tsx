@@ -4,6 +4,7 @@ import { useStore } from '../store/useStore';
 import { AdaptiveEngine } from '../services/AdaptiveEngine';
 import { DataLoader } from '../services/DataLoader';
 import { CareerTrack, CatalogCert } from '../types';
+import { toLocalDateString } from '../lib/date';
 
 export function DashboardPage() {
   const progress = useStore((s) => s.progress);
@@ -79,7 +80,7 @@ export function DashboardPage() {
   const activeCertProgress = progress.certifications[activeCertId];
   const dueCount = activeCertProgress
     ? Object.values(activeCertProgress.sm2 ?? {}).filter(
-      (s) => s && s.dueDate <= new Date().toISOString().split('T')[0],
+      (s) => s && s.dueDate <= toLocalDateString(new Date()),
     ).length
     : 0;
 

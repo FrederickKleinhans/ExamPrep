@@ -2,7 +2,7 @@
 import { readFile } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { validateCertification } from '../validate-content.mjs';
 
 const dir = dirname(fileURLToPath(import.meta.url));
@@ -49,6 +49,36 @@ describe('validateCertification — topic weight validation', () => {
     const questions = await loadFixture('valid', 'questions.json');
     const badCert = { ...cert, topics: [{ id: 'topic-a', name: 'A', weight: 50 }, { id: 'topic-b', name: 'B', weight: 30 }] };
     expect(() => validateCertification(badCert, questions, 'test')).toThrow(/sum to 100/);
+  });
+
+  describe('validateCertification — topic coverage', () => {
+    it('throws when a certification topic has no questions', async () => {
+      const cert = await loadFixture('valid', 'certification.json');
+      const questions = await loadFixture('valid', 'questions.json');
+      const badQuestions = {
+        ...questions,
+        questions: questions.questions.filter((question) => question.topicId !== 'topic-b'),
+      };
+      expect(() => validateCertification(cert, badQuestions, 'test')).toThrow(/topic "topic-b" has no questions/);
+    });
+
+    it('warns when a large bank is heavily unbalanced against topic weights', async () => {
+      const cert = await loadFixture('valid', 'certification.json');
+      const questions = await loadFixture('valid', 'questions.json');
+      const bank = {
+        ...questions,
+        questions: Array.from({ length: 40 }, (_, index) => ({
+          ...questions.questions[0],
+          id: `question-${index}`,
+          topicId: index === 0 ? 'topic-b' : 'topic-a',
+        })),
+      };
+      const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+      expect(() => validateCertification({ ...cert, questionCount: 40 }, bank, 'test')).not.toThrow();
+      expect(warn).toHaveBeenCalledWith(expect.stringContaining('topic "topic-b" has 1 questions'));
+      warn.mockRestore();
+    });
   });
 
   it('throws when a topic has a zero weight', async () => {

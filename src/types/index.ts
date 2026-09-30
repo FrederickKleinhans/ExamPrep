@@ -171,6 +171,7 @@ export interface UserProgress {
   userId: string;
   selectedCertification: string;
   selectedTrackId?: string;
+  syncUpdatedAt?: string;
   /** Product-wide study streak across all certifications. */
   studyStreak: StudyStreak;
   certifications: Record<string, CertificationProgress>;

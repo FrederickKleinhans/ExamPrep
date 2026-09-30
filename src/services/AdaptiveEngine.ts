@@ -1,4 +1,5 @@
 import { Confidence, Question, QuestionStat, Sm2Schedule, Topic } from '../types';
+import { toLocalDateString } from '../lib/date';
 
 // ── Quality score mapping ──────────────────────────────────────────────────
 //
@@ -26,7 +27,7 @@ export function qualityScore(isCorrect: boolean, confidence: Confidence): number
 // ── Due date helpers ───────────────────────────────────────────────────────
 
 function todayStr(now: Date = new Date()): string {
-  return now.toISOString().split('T')[0];
+  return toLocalDateString(now);
 }
 
 function isDue(schedule: Sm2Schedule | undefined, now: Date = new Date()): boolean {

@@ -29,6 +29,21 @@ export function ExamPage() {
 
   useEffect(() => { if (!manifest) initialize(); }, [manifest, initialize]);
 
+  useEffect(() => {
+    if (!examSession || examSession.isCompleted) return;
+    const remaining = ExamService.getRemainingTime(examSession);
+    if (remaining <= 0) {
+      const result = finishExam();
+      if (result) {
+        setExamResult(result);
+        setPhase('results');
+      }
+      return;
+    }
+    setRemainingTime(remaining);
+    setPhase('session');
+  }, [examSession, finishExam, manifest]);
+
   const handleStartExam = async () => {
     setIsStartingExam(true);
     setStartExamError(null);

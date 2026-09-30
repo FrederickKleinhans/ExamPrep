@@ -11,17 +11,29 @@ import { AnalyticsPage } from './pages/AnalyticsPage';
 import { BookmarksPage } from './pages/BookmarksPage';
 import { FlashcardsPage } from './pages/FlashcardsPage';
 import { SettingsPage } from './pages/SettingsPage';
+import { TrackDetailPage } from './pages/TrackDetailPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 import { usePreferences } from './store/usePreferences';
 import { useAuth } from './store/useAuth';
 import { useStore } from './store/useStore';
 import { ProgressService, setSyncUserId } from './services/ProgressService';
-import { pullProgress, mergeProgress, pushProgress } from './services/SyncService';
+import { pullProgress, mergeProgress, subscribeToProgressChanges } from './services/SyncService';
 
 function App() {
   const analyticsEnabled = usePreferences((state) => state.analyticsEnabled);
   const { initialise: initialiseAuth, session } = useAuth();
   const initialize = useStore((s) => s.initialize);
   const refreshProgress = useStore((s) => s.refreshProgress);
+
+  useEffect(() => subscribeToProgressChanges(refreshProgress), [refreshProgress]);
+
+  useEffect(() => {
+    const handleStorage = (event: StorageEvent) => {
+      if (event.key === 'certready_progress') refreshProgress();
+    };
+    window.addEventListener('storage', handleStorage);
+    return () => window.removeEventListener('storage', handleStorage);
+  }, [refreshProgress]);
 
   // 1. Initialise Supabase auth once on mount
   useEffect(() => {
@@ -42,11 +54,13 @@ function App() {
 
         if (remote) {
           const local = ProgressService.getProgress();
-          const merged = mergeProgress(local, remote);
+          if (local.syncUpdatedAt && remote.updatedAt < local.syncUpdatedAt) return;
+          const merged = mergeProgress(local, remote.progress);
           if (cancelled) return;
 
           // Update userId to the auth ID so future saves use the right key
           merged.userId = userId;
+          merged.syncUpdatedAt = remote.updatedAt;
           ProgressService.saveProgress(merged);
           refreshProgress();
         } else {
@@ -54,7 +68,6 @@ function App() {
           const local = ProgressService.getProgress();
           local.userId = userId;
           ProgressService.saveProgress(local);
-          void pushProgress(userId, local);
           refreshProgress();
         }
       })();
@@ -85,6 +98,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<DashboardPage />} />
             <Route path="/tracks" element={<TracksPage />} />
+            <Route path="/tracks/:trackId" element={<TrackDetailPage />} />
             <Route path="/certifications/:certId" element={<CertificationPage />} />
             <Route path="/study" element={<StudyPage />} />
             <Route path="/exam" element={<ExamPage />} />
@@ -92,6 +106,7 @@ function App() {
             <Route path="/bookmarks" element={<BookmarksPage />} />
             <Route path="/flashcards" element={<FlashcardsPage />} />
             <Route path="/settings" element={<SettingsPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

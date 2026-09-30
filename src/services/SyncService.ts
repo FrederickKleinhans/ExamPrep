@@ -4,8 +4,8 @@
  * Design principles:
  * - localStorage is always the source of truth for the UI (fast, offline-capable)
  * - Supabase writes are fire-and-forget; failures are logged but never surface to the user
- * - On sign-in, remote progress is merged into local (remote wins on conflicts for
- *   exam history and question stats, local wins for in-flight session state)
+ * - On sign-in, remote progress is merged into local while preserving per-question
+ *   activity from both devices
  * - Guest users (no session) are completely unaffected
  */
 
@@ -13,6 +13,10 @@ import { supabase, isSupabaseConfigured } from '../lib/supabase';
 import { UserProgress } from '../types';
 
 const TABLE = 'user_progress';
+const PUSH_DEBOUNCE_MS = 2500;
+const pendingPushes = new Map<string, { timeout: ReturnType<typeof setTimeout>; progress: UserProgress }>();
+const progressListeners = new Set<() => void>();
+let progressChannel: BroadcastChannel | null = null;
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -20,6 +24,48 @@ interface ProgressRow {
   user_id: string;
   progress: UserProgress;
   updated_at: string;
+}
+
+export interface PulledProgress {
+  progress: UserProgress;
+  updatedAt: string;
+}
+
+function getProgressChannel(): BroadcastChannel | null {
+  if (typeof BroadcastChannel === 'undefined') return null;
+  if (!progressChannel) {
+    progressChannel = new BroadcastChannel('certready-progress');
+    progressChannel.addEventListener('message', () => {
+      for (const listener of progressListeners) listener();
+    });
+  }
+  return progressChannel;
+}
+
+export function subscribeToProgressChanges(listener: () => void): () => void {
+  progressListeners.add(listener);
+  getProgressChannel();
+  return () => {
+    progressListeners.delete(listener);
+  };
+}
+
+export function broadcastProgressChanged(): void {
+  progressChannel?.postMessage('changed');
+}
+
+/** Queues only the newest snapshot, reducing redundant writes while studying. */
+export function scheduleProgressPush(userId: string, progress: UserProgress): void {
+  const pending = pendingPushes.get(userId);
+  if (pending) clearTimeout(pending.timeout);
+
+  const timeout = setTimeout(() => {
+    const latest = pendingPushes.get(userId);
+    pendingPushes.delete(userId);
+    if (latest) void pushProgress(userId, latest.progress);
+  }, PUSH_DEBOUNCE_MS);
+
+  pendingPushes.set(userId, { timeout, progress });
 }
 
 // ── Push ───────────────────────────────────────────────────────────────────
@@ -56,15 +102,15 @@ export async function pushProgress(
  * Fetches the user's progress from Supabase.
  * Returns null if not found, not configured, or on error.
  */
-export async function pullProgress(userId: string): Promise<UserProgress | null> {
+export async function pullProgress(userId: string): Promise<PulledProgress | null> {
   if (!isSupabaseConfigured || !supabase) return null;
 
   try {
     const { data, error } = await supabase
       .from(TABLE)
-      .select('progress')
+      .select('progress, updated_at')
       .eq('user_id', userId)
-      .single<Pick<ProgressRow, 'progress'>>();
+      .single<ProgressRow>();
 
     if (error) {
       if (error.code !== 'PGRST116') {
@@ -74,7 +120,7 @@ export async function pullProgress(userId: string): Promise<UserProgress | null>
       return null;
     }
 
-    return data?.progress ?? null;
+    return data ? { progress: data.progress, updatedAt: data.updated_at } : null;
   } catch (e) {
     console.warn('[SyncService] Pull error:', e);
     return null;
@@ -88,7 +134,7 @@ export async function pullProgress(userId: string): Promise<UserProgress | null>
  *
  * Strategy:
  * - If only one side exists, use that.
- * - For each certification: merge questionStats (most attempts wins per question),
+ * - For each certification: merge questionStats field by field,
  *   combine examHistory (deduplicated by exam ID), merge bookmarks, take highest SM-2 repetitions.
  * - Global streak and selectedCertification come from whichever has more study activity.
  */
@@ -112,6 +158,10 @@ export function mergeProgress(
     // Use remote cert selection if local has none
     selectedCertification: local?.selectedCertification || remote?.selectedCertification || '',
     selectedTrackId: local?.selectedTrackId ?? remote?.selectedTrackId,
+    syncUpdatedAt: [local?.syncUpdatedAt, remote?.syncUpdatedAt]
+      .filter((updatedAt): updatedAt is string => Boolean(updatedAt))
+      .sort()
+      .at(-1),
     certifications: { ...remoteCertifications },
   };
 
@@ -128,12 +178,34 @@ export function mergeProgress(
     if (!l) { merged.certifications[certId] = r; continue; }
     if (!r) { merged.certifications[certId] = l; continue; }
 
-    // Merge question stats — take the entry with more attempts
+    // Preserve activity from both devices instead of replacing a whole stat row.
     const mergedStats = { ...r.questionStats };
     for (const [qId, lStat] of Object.entries(l.questionStats)) {
       const rStat = r.questionStats[qId];
-      if (!rStat || lStat.attempts > rStat.attempts) {
+      if (!rStat) {
         mergedStats[qId] = lStat;
+      } else {
+        const attempts = lStat.attempts + rStat.attempts;
+        const localIsLatest = lStat.lastAttempted >= rStat.lastAttempted;
+        const pointsEarned = lStat.pointsEarned === undefined && rStat.pointsEarned === undefined
+          ? undefined
+          : (lStat.pointsEarned ?? 0) + (rStat.pointsEarned ?? 0);
+        const pointsTotal = lStat.pointsTotal === undefined && rStat.pointsTotal === undefined
+          ? undefined
+          : (lStat.pointsTotal ?? 0) + (rStat.pointsTotal ?? 0);
+
+        mergedStats[qId] = {
+          attempts,
+          correct: lStat.correct + rStat.correct,
+          incorrect: lStat.incorrect + rStat.incorrect,
+          averageTimeMs: Math.round(
+            (lStat.averageTimeMs * lStat.attempts + rStat.averageTimeMs * rStat.attempts) / attempts,
+          ),
+          lastAttempted: localIsLatest ? lStat.lastAttempted : rStat.lastAttempted,
+          confidence: localIsLatest ? lStat.confidence : rStat.confidence,
+          ...(pointsEarned === undefined ? {} : { pointsEarned }),
+          ...(pointsTotal === undefined ? {} : { pointsTotal }),
+        };
       }
     }
 

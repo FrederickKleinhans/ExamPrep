@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { DataLoader } from '../services/DataLoader';
 import { useStore } from '../store/useStore';
+import { toLocalDateString } from '../lib/date';
 import { useAuth } from '../store/useAuth';
 import { requiresAuthForCert } from '../lib/guestGuard';
 import { AuthModal } from '../components/AuthModal';
@@ -168,7 +169,7 @@ export function CertificationPage() {
   // SM-2 due questions count
   const dueCount = certProgress
     ? Object.values(certProgress.sm2 ?? {}).filter(
-      (s) => s && s.dueDate <= new Date().toISOString().split('T')[0],
+      (s) => s && s.dueDate <= toLocalDateString(new Date()),
     ).length
     : 0;
 
