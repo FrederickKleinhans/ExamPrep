@@ -1,0 +1,967 @@
+{
+  "certificationId": "ms-900",
+  "topicId": "pricing-support",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "ms900-041",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "How is Microsoft 365 typically licensed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A one-time purchase with no ongoing costs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A per-user monthly or annual subscription",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A per-device licence regardless of how many users",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A company-wide flat fee regardless of user count",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft 365 uses a subscription model â€” organisations pay per user per month (or annually for a discount). Each user can install apps on multiple devices (up to 5 for most plans).",
+        "incorrect": "Microsoft 365 is subscription-based, not a one-time purchase. Pricing is per user, not per device or flat fee.",
+        "examTip": "M365 pricing: per user/month. Annual commitment = ~15% cheaper than monthly. Enterprise Agreement = 3-year commitment for large orgs. CSP = via partner.",
+        "relatedTopics": [
+          "M365-licensing",
+          "subscription",
+          "pricing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 pricing",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-042",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is included in Microsoft 365 Business Basic?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Desktop versions of Office apps plus all cloud services",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Web and mobile versions of Office apps, Teams, Exchange Online, SharePoint, and OneDrive â€” no desktop apps",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Advanced security features plus all Office apps",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Only email and calendar services",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft 365 Business Basic is the entry-level business plan â€” includes cloud services (Teams, Exchange, SharePoint, OneDrive) and web/mobile Office apps, but does NOT include desktop app installations.",
+        "incorrect": "Business Basic is the cheapest plan â€” no desktop Office apps. Business Standard adds desktop apps. Business Premium adds advanced security.",
+        "examTip": "Business plan progression: Basic (web apps + cloud services) â†’ Standard (adds desktop apps) â†’ Premium (adds advanced security + Intune). All cap at 300 users.",
+        "relatedTopics": [
+          "M365-Business-Basic",
+          "licensing",
+          "pricing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 plans",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-043",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between Microsoft 365 E3 and E5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "E3 is for small businesses; E5 is for enterprises",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "E5 adds advanced security (Defender XDR), advanced compliance, analytics, and voice capabilities on top of E3",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "E5 provides 5 times more storage than E3",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "E3 is monthly billing; E5 is annual billing only",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "E3 includes core productivity + security. E5 adds: Microsoft Defender XDR (advanced threat protection), Power BI Pro, Teams Phone, advanced eDiscovery, advanced compliance, and audio conferencing.",
+        "incorrect": "Both E3 and E5 are enterprise plans. The difference is features, not user size, storage multipliers, or billing terms.",
+        "examTip": "E3 = productivity + core security. E5 = E3 + advanced security + advanced compliance + Power BI Pro + Teams Phone. E5 is ~2x the price of E3.",
+        "relatedTopics": [
+          "M365-E3",
+          "M365-E5",
+          "enterprise-licensing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 enterprise plans",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-044",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft FastTrack for Microsoft 365?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A premium paid support plan for faster response times",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A free benefit for eligible subscriptions providing onboarding guidance and adoption resources from Microsoft engineers",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An accelerated development programme for Microsoft 365 partners",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An express checkout option for purchasing Microsoft 365 licences",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft FastTrack provides free deployment guidance for customers with 150+ licences â€” Microsoft engineers help plan, onboard, and drive adoption of Microsoft 365 services at no extra cost.",
+        "incorrect": "FastTrack is free, not a paid support tier. It's for customers, not just partners. It's not a purchase accelerator.",
+        "examTip": "FastTrack eligibility: 150+ seats of eligible Microsoft 365 plan. Covers: deployment planning, migration assistance, technical guidance, adoption resources.",
+        "relatedTopics": [
+          "FastTrack",
+          "deployment-support",
+          "M365"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 support",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-045",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does the Microsoft 365 Service Health Dashboard show?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The security health score for a Microsoft 365 tenant",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The current operational status of all Microsoft 365 services and any active incidents or advisories",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The health and productivity metrics for individual users",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The status of Microsoft data centres around the world",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Service Health Dashboard (in Microsoft 365 Admin Center) shows real-time operational status of all M365 services (Exchange, Teams, SharePoint, etc.) including active incidents, advisories, and history.",
+        "incorrect": "Security score = Secure Score dashboard. User productivity = Viva Insights/Productivity Score. Data centre status = different from service health.",
+        "examTip": "Service Health Dashboard: check before calling support â€” if Teams is down globally, a support ticket won't help. Shows: status, incident details, estimated resolution, and history.",
+        "relatedTopics": [
+          "Service-Health-Dashboard",
+          "M365-admin",
+          "uptime"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 support",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-046",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a Service Level Agreement (SLA) for Microsoft 365?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A contract defining the maximum number of users per subscription",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft's commitment to a minimum uptime percentage, with service credits if the target is not met",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A legal agreement that Microsoft will never have downtime",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A support response time guarantee for technical issues",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft 365's SLA guarantees 99.9% uptime (financially backed). If Microsoft falls below this, eligible customers can claim service credits as compensation.",
+        "incorrect": "SLA is about uptime guarantees with financial backing â€” not user limits, zero downtime promises, or support response times.",
+        "examTip": "M365 SLA: 99.9% uptime = max ~8.7 hours downtime per year. Service credits issued for verified outages. Check Service Trust Portal for current SLA terms.",
+        "relatedTopics": [
+          "SLA",
+          "uptime",
+          "service-credits"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 SLA",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-047",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the Microsoft 365 Adoption Score?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A score showing how many Microsoft 365 licences a company has adopted",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Insights into how employees use Microsoft 365 services to help organisations maximise their investment",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A score assigned to employees based on their Teams meeting attendance",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft's internal score measuring adoption of new Microsoft 365 features",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft 365 Adoption Score provides organisational-level insights across communication, meetings, content collaboration, teamwork, and mobility â€” helping organisations identify where they can get more value from M365.",
+        "incorrect": "Adoption Score is org-level insights, not individual employee monitoring or a licence count metric.",
+        "examTip": "Adoption Score: org-level only (not individual tracking). Shows: how the org uses communication, meetings, content tools vs industry benchmarks. Used by IT to plan training/rollout.",
+        "relatedTopics": [
+          "Adoption-Score",
+          "M365-analytics",
+          "ROI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 analytics",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-048",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company with 500 users wants Microsoft 365 services with the full desktop Office apps but doesn't need advanced security features like Defender or Intune.",
+      "questionText": "Which Microsoft 365 plan is the MOST cost-effective choice?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft 365 Business Basic",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft 365 E3",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft 365 Business Premium",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft 365 E5",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "With 500 users they exceed the 300-user Business plan cap, so they need an Enterprise plan. E3 includes desktop apps + core services + basic security â€” E5 would add unnecessary advanced security cost.",
+        "incorrect": "Business plans cap at 300 users. Business Premium adds security they don't need. E5 adds advanced security at higher cost.",
+        "examTip": "Plan selection: â‰¤300 users â†’ Business plans. >300 users â†’ Enterprise (F1/F3 for frontline, E3 for general, E5 for advanced security). Match features to needs.",
+        "relatedTopics": [
+          "M365-E3",
+          "enterprise-licensing",
+          "plan-selection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 pricing",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-049",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the Microsoft 365 Frontline Worker (F1/F3) plan designed for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Knowledge workers with desktop computers who need full Office productivity",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Workers who primarily use mobile devices and don't need full desktop Office apps â€” retail, healthcare, manufacturing staff",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Developers and IT professionals who work at the front of the IT helpdesk",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Employees in their first year of work who get a discounted entry plan",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft 365 F1/F3 (Frontline Worker) plans are cost-effective for workers who primarily use mobile devices â€” retail associates, nurses, factory workers â€” providing Teams, SharePoint, and limited services without desktop app licences.",
+        "incorrect": "Frontline plans are for mobile/non-desk workers, not office workers, IT professionals, or new employees.",
+        "examTip": "F1 = free (web/mobile only, limited). F3 = paid (web/mobile + some desktop features). Significant cost savings vs E3 for workers who don't need full desktop productivity.",
+        "relatedTopics": [
+          "M365-Frontline",
+          "F1-F3",
+          "deskless-workers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 plans",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-050",
+      "type": "yes-no-statements",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Microsoft 365 support and pricing.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Microsoft 365 includes a 99.9% uptime SLA backed by financial credits.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "All Microsoft 365 plans include Microsoft Intune for device management.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Microsoft provides 24/7 technical support for Microsoft 365 business subscribers.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Microsoft 365 licences can only be purchased directly from Microsoft.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "M365 has a 99.9% SLA. 24/7 technical support is included for business plans. Intune is only in Business Premium and E3/E5 plans. M365 can be purchased directly, through CSP partners, or volume licensing.",
+        "incorrect": "Intune is not in all plans â€” Basic and Standard don't include it. Licences available through multiple channels including partners.",
+        "examTip": "M365 purchase channels: Direct (Microsoft.com), CSP (Cloud Solution Provider/partner), Volume Licensing (Enterprise Agreement), Marketplace (Azure). Partners often provide better pricing and support.",
+        "relatedTopics": [
+          "M365-support",
+          "SLA",
+          "licensing-channels"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 support options",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-061",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft 365 add-on licensing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Extra storage purchased separately from the base subscription",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Additional feature licences purchased on top of a base Microsoft 365 plan to extend capabilities for specific users",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A way to add more users to a Microsoft 365 subscription",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Partner commissions added to Microsoft 365 invoices",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Add-on licences extend specific capabilities for specific users without upgrading the entire organisation's plan â€” e.g., Teams Phone, Microsoft 365 Copilot, Power BI Pro, Advanced Compliance, or Audio Conferencing.",
+        "incorrect": "Add-ons are feature extensions for specific users, not storage purchases, user additions, or partner fees.",
+        "examTip": "Common M365 add-ons: Teams Phone (PSTN calling), Audio Conferencing, M365 Copilot, Power BI Pro, Defender for Endpoint P2, Microsoft Entra ID P2.",
+        "relatedTopics": [
+          "add-on-licensing",
+          "M365-licensing",
+          "Teams-Phone"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 licensing options",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-068",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the Microsoft 365 Message Center?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The inbox in Exchange Online for Microsoft 365 subscription emails",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An admin portal section showing upcoming Microsoft 365 feature updates, changes, and action items for administrators",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A customer support messaging system for raising technical tickets",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A broadcast messaging tool for sending company-wide emails",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Message Center (in Microsoft 365 Admin Center) is where Microsoft communicates upcoming service changes, new features, and required administrative actions to IT administrators â€” keeping them informed before changes roll out.",
+        "incorrect": "Message Center is an admin communication hub, not email inbox, support tickets, or company broadcast tool.",
+        "examTip": "Message Center: check regularly for feature rollouts, service changes, and required actions. Filter by service, tag favourites, and set email digests to stay informed.",
+        "relatedTopics": [
+          "Message-Center",
+          "M365-admin",
+          "change-management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 administration",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-073",
+      "type": "ordering",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the Microsoft 365 Business plans in order from LEAST to MOST features/capabilities.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Microsoft 365 Business Basic (web apps + cloud services only)",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Microsoft 365 Business Standard (adds desktop Office apps)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Microsoft 365 Business Premium (adds advanced security + Intune)",
+          "correctPosition": 3
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Business plans: Basic (cheapest, web apps + cloud services) â†’ Standard (adds desktop apps + Bookings, webinars) â†’ Premium (adds advanced security, Intune, Defender). All cap at 300 users.",
+        "incorrect": "Each step up adds features. Premium is the most complete business plan before moving to Enterprise.",
+        "examTip": "Business plan memory: Basic (bare bones + cloud), Standard (+ desktop apps), Premium (+ security). Match to org needs.",
+        "relatedTopics": [
+          "M365-Business-plans",
+          "licensing",
+          "plan-comparison"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 plans",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-077",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the Microsoft 365 roadmap?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A map showing Microsoft's global data centre locations",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A public website showing upcoming, in development, and recently launched Microsoft 365 features",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An internal Microsoft planning document for service development",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A customer's migration plan from on-premises to Microsoft 365",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Microsoft 365 Roadmap (microsoft.com/en-us/microsoft-365/roadmap) is a public-facing website showing features in development, rolling out, or recently launched across all M365 services.",
+        "incorrect": "The roadmap is public transparency about upcoming features, not a data centre map, internal document, or customer migration plan.",
+        "examTip": "Use the M365 Roadmap to: plan for upcoming changes, track feature availability by plan/region, filter by product (Teams, SharePoint, etc.). IT admins check this regularly.",
+        "relatedTopics": [
+          "M365-roadmap",
+          "feature-preview",
+          "planning"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 features",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-080",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What Microsoft 365 support plans are available to organisations beyond the standard support included in subscriptions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft 365 has no additional support plans â€” all support is included",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft offers Unified Support (formerly Premier) providing dedicated support engineers and proactive services for enterprise customers",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Additional support requires purchasing Azure subscriptions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Enhanced support is only available through Microsoft Partners",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Beyond standard technical support (included with subscriptions), Microsoft offers Unified Support â€” providing faster response times, designated technical account managers, proactive health reviews, and training for enterprise customers.",
+        "incorrect": "Additional support plans exist beyond the standard included support. Not tied to Azure or partners only.",
+        "examTip": "Support levels: Standard (included), Developer (for dev/test), Professional Direct (faster SLAs), Unified (enterprise-grade with TAM). Higher tiers = faster response, dedicated contacts.",
+        "relatedTopics": [
+          "M365-support-plans",
+          "Unified-Support",
+          "enterprise-support"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 support",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-088",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a Microsoft Cloud Solution Provider (CSP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A Microsoft employee who manages cloud infrastructure",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A Microsoft authorised partner that resells Microsoft 365 and Azure services, often with additional support and customisation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A cloud service provider competing with Microsoft",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A compliance certification for cloud service providers",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft CSP partners resell Microsoft 365, Azure, and other cloud services â€” often bundled with their own managed services, support, and customisations. Many businesses buy M365 through a CSP rather than directly from Microsoft.",
+        "incorrect": "CSPs are independent Microsoft partners, not Microsoft employees, competitors, or certifications.",
+        "examTip": "CSP benefits for customers: consolidated billing, partner-provided support, customisation, migration assistance. Partners often provide better service than buying direct.",
+        "relatedTopics": [
+          "CSP",
+          "partner-channel",
+          "licensing-channels"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 purchasing options",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-091",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A non-profit organisation with 80 staff wants to adopt Microsoft 365. They are concerned about cost.",
+      "questionText": "What Microsoft offering should they explore first?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft 365 E3 â€” the most complete plan",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft 365 for Nonprofits â€” donated or discounted plans available for qualifying organisations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft 365 Business Basic â€” the cheapest plan",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft 365 Education â€” designed for schools",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft offers Microsoft 365 for Nonprofits â€” qualifying organisations can receive donated Microsoft 365 Business Basic (free) and deeply discounted plans for Business Premium and E3. Significant savings for eligible non-profits.",
+        "incorrect": "E3 is expensive. Business Basic is cheapest but ignores nonprofit discounts. Education plans are for schools, not non-profits.",
+        "examTip": "Microsoft nonprofit program: register at microsoft.com/nonprofits. Free Business Basic for up to 300 users + discounted premium plans. Must be registered charity.",
+        "relatedTopics": [
+          "M365-nonprofits",
+          "nonprofit-licensing",
+          "discounts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 plans",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-095",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the Microsoft 365 Productivity Score?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A score measuring individual employee productivity for performance reviews",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Organisation-level insights showing how technology and collaboration experiences contribute to workforce productivity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A measure of how quickly an organisation adopted Microsoft 365",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft's internal score for its own employee productivity",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Productivity Score (in M365 Admin Center) provides insights at the organisational level â€” showing how employees use communication, meetings, content collaboration, and mobility tools, with benchmarks against similar organisations.",
+        "incorrect": "Productivity Score is org-level insights, not individual employee tracking, adoption speed, or Microsoft's internal metrics.",
+        "examTip": "Productivity Score is anonymised at individual level. Shows: communication patterns, meeting habits, content sharing, mobility, endpoint analytics. Used to guide IT and training decisions.",
+        "relatedTopics": [
+          "Productivity-Score",
+          "M365-analytics",
+          "workplace-analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 analytics",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-098",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Microsoft 365 for Education?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A training programme for Microsoft 365 administrators",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Specially priced Microsoft 365 plans for schools, universities, and educational institutions with features for classroom learning",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft's internal training programme for new employees",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A certification for IT professionals in educational institutions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft 365 for Education provides specially priced or free plans for qualified educational institutions â€” including Microsoft Teams for Education, assignment management, OneNote Class Notebooks, and collaboration tools for students and faculty.",
+        "incorrect": "M365 for Education is for schools, not admin training, employee onboarding, or certifications.",
+        "examTip": "M365 Education plans: A1 (free for qualified schools, web apps only), A3 (discounted, desktop apps), A5 (advanced security). Requires .edu domain verification.",
+        "relatedTopics": [
+          "M365-Education",
+          "Teams-Education",
+          "educational-licensing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 plans",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-100",
+      "type": "single-choice",
+      "topicId": "pricing-support",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company currently uses Google Workspace and wants to migrate to Microsoft 365. Their IT team wants Microsoft's help with the migration.",
+      "questionText": "Which Microsoft service provides free migration assistance for eligible organisations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Microsoft Premier Support",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Microsoft FastTrack",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Microsoft Consulting Services",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Microsoft Tech Community",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Microsoft FastTrack provides free migration guidance and technical assistance for organisations with 150+ eligible licences â€” including migration from Google Workspace, Exchange on-premises, and other platforms.",
+        "incorrect": "Premier/Unified Support is paid. Consulting Services is paid. Tech Community is a user forum. FastTrack is the free included migration benefit.",
+        "examTip": "FastTrack: free for 150+ seats. Covers: migration (email, files, Teams), deployment guidance, adoption resources. FastTrack specialists are Microsoft employees working at no extra cost.",
+        "relatedTopics": [
+          "FastTrack",
+          "migration",
+          "Google-Workspace"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe Microsoft 365 support",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

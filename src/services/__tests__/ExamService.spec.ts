@@ -29,6 +29,24 @@ describe('ExamService.createSession', () => {
     expect(questions.map((question) => question.id)).toEqual(originalOrder);
   });
 
+  it('selects a different question sample when a new exam is started', () => {
+    const questions = Array.from({ length: 150 }, (_, index) => makeQuestion(`q${index + 1}`));
+    const random = vi.spyOn(Math, 'random');
+    try {
+      random.mockReturnValueOnce(0);
+      const firstSession = ExamService.createSession('az-900', questions, 60, 30);
+
+      random.mockReturnValue(0.999999);
+      const secondSession = ExamService.createSession('az-900', questions, 60, 30);
+
+      const firstQuestionIds = firstSession.questions.map((question) => question.id).sort();
+      const secondQuestionIds = secondSession.questions.map((question) => question.id).sort();
+      expect(secondQuestionIds).not.toEqual(firstQuestionIds);
+    } finally {
+      vi.restoreAllMocks();
+    }
+  });
+
   it('uses Fisher–Yates swaps for a predictable seeded shuffle', () => {
     const randomValues = [0, 0, 0, 0];
     vi.spyOn(Math, 'random').mockImplementation(() => randomValues.shift() ?? 0);

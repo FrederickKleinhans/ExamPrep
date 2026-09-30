@@ -484,12 +484,12 @@ function NoCertPrompt({ navigate }: { navigate: (path: string) => void }) {
     <div className="card-surface" style={{ padding: '40px 32px', textAlign: 'center' }}>
       <div style={{ fontSize: 40, marginBottom: 12 }}>📊</div>
       <h2 className="text-heading" style={{ margin: '0 0 8px', fontSize: 18, fontWeight: 700 }}>No active certification</h2>
-      <p className="text-muted" style={{ margin: '0 0 20px', fontSize: 13 }}>Set an active cert in Settings to see your analytics.</p>
+      <p className="text-muted" style={{ margin: '0 0 20px', fontSize: 13 }}>Choose a certification from a career path to see your analytics.</p>
       <button
-        onClick={() => navigate('/settings')}
+        onClick={() => navigate('/tracks')}
         style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', border: 'none', borderRadius: 12, padding: '11px 24px', color: '#fff', fontWeight: 700, fontSize: 13, cursor: 'pointer' }}
       >
-        Go to Settings
+        Browse career paths
       </button>
     </div>
   );

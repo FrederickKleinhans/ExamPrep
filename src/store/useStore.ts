@@ -57,7 +57,7 @@ interface Store {
   resetStudySession: () => void;
 
   // Exam actions
-  startExam: () => void;
+  startExam: () => Promise<void>;
   submitExamAnswer: (questionId: string, answer: string | string[]) => void;
   toggleExamFlag: (questionId: string) => void;
   navigateExam: (index: number) => void;
@@ -336,7 +336,7 @@ export const useStore = create<Store>((set, get) => ({
     });
   },
 
-  startExam: () => {
+  startExam: async () => {
     const { questionBank, manifest, progress } = get();
     if (!questionBank || !manifest) return;
 
@@ -345,11 +345,16 @@ export const useStore = create<Store>((set, get) => ({
     );
     if (!cert) return;
 
+    const fullQuestionBank = await DataLoader.loadQuestionBank(cert.id);
+    if (fullQuestionBank.questions.length === 0) {
+      throw new Error(`No exam questions are available for ${cert.name}.`);
+    }
+
     const session = ExamService.createSession(
       cert.id,
-      questionBank.questions,
+      fullQuestionBank.questions,
       cert.timeLimitMinutes,
-      cert.questionCount
+      ExamService.DEFAULT_QUESTION_COUNT
     );
     set({ examSession: session });
   },

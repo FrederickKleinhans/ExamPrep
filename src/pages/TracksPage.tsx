@@ -184,8 +184,10 @@ function TrackCard({
   const detailRef = useRef<HTMLDivElement>(null);
 
   const foundationCerts = (track.levels.find((l) => l.stage === 'foundation')?.certs ?? []).slice(0, 4);
-  const totalCerts = track.levels.reduce((n, l) => n + l.certs.length, 0);
-  const freeCerts = track.levels.flatMap((l) => l.certs).filter(({ certId }) => catalog.get(certId)?.accessTier === 'free').length;
+  const trackCerts = track.levels.flatMap((l) => l.certs);
+  const totalCerts = trackCerts.length;
+  const freeCerts = trackCerts.filter(({ certId }) => catalog.get(certId)?.accessTier === 'free').length;
+  const contentCerts = trackCerts.filter(({ certId }) => availableCertIds.has(certId)).length;
   const sortedLevels = [...track.levels].sort((a, b) => LEVEL_ORDER.indexOf(a.stage) - LEVEL_ORDER.indexOf(b.stage));
 
   const panelId = `track-panel-${track.id}`;
@@ -272,6 +274,7 @@ function TrackCard({
               ~{track.estimatedHoursToComplete}h
             </span>
             <span>
+              <span style={{ color: 'var(--success)', fontWeight: 700 }}>{contentCerts}</span> with content ·{' '}
               <span style={{ color: 'var(--success)', fontWeight: 700 }}>{freeCerts}</span> free / {totalCerts} certs
             </span>
           </div>

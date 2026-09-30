@@ -1,0 +1,979 @@
+{
+  "certificationId": "aws-ai-practitioner",
+  "topicId": "foundation-models",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "aws-ai-026",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Retrieval-Augmented Generation (RAG)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A technique for training LLMs on retrieval tasks",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A technique that combines retrieval of relevant documents with generation, grounding LLM responses in factual knowledge bases",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A method for augmenting training datasets with synthetic data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A technique for reducing the size of generative models",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RAG retrieves relevant documents from a knowledge base (vector database) at query time, adds them to the prompt as context, and lets the LLM generate a response grounded in those facts â€” reducing hallucinations.",
+        "incorrect": "RAG is an inference technique, not a training technique, data augmentation method, or compression technique.",
+        "examTip": "RAG with Bedrock: Bedrock Knowledge Bases â†’ index documents in S3 â†’ OpenSearch vector store â†’ RAG retrieval â†’ Bedrock FM generates grounded response.",
+        "relatedTopics": [
+          "RAG",
+          "Bedrock-Knowledge-Bases",
+          "vector-search"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: RAG",
+        "references": [
+          "https://aws.amazon.com/bedrock/knowledge-bases/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-027",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Amazon Bedrock Knowledge Bases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A documentation system for AWS services",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A fully managed RAG capability that connects Bedrock FMs to your documents stored in S3",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A feature for storing pre-written prompts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS's enterprise wiki system",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Bedrock Knowledge Bases automates the RAG pipeline â€” ingesting documents from S3, converting them to embeddings, storing in a vector store (OpenSearch, Pinecone, Redis, etc.), and retrieving relevant chunks at query time.",
+        "incorrect": "Knowledge Bases is a RAG feature for Bedrock, not AWS documentation, prompt storage, or a wiki.",
+        "examTip": "Knowledge Bases workflow: S3 docs â†’ chunk â†’ embed (Titan Embeddings) â†’ vector store (OpenSearch Serverless) â†’ query â†’ retrieve â†’ augment prompt â†’ FM responds.",
+        "relatedTopics": [
+          "Bedrock-Knowledge-Bases",
+          "RAG",
+          "vector-store"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: RAG implementation",
+        "references": [
+          "https://aws.amazon.com/bedrock/knowledge-bases/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-028",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the difference between fine-tuning and RAG for customising foundation model behaviour?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are the same technique with different names",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fine-tuning updates model weights with additional training; RAG retrieves external context at inference time without changing model weights",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "RAG is more expensive than fine-tuning",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Fine-tuning works without any training data; RAG requires labelled examples",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Fine-tuning permanently modifies model weights through additional training â€” improves style, tone, domain vocabulary. RAG provides real-time factual context at inference â€” reduces hallucinations, keeps knowledge current.",
+        "incorrect": "They are fundamentally different approaches. RAG is generally cheaper. Fine-tuning requires training examples, not RAG.",
+        "examTip": "When to use each: RAG = keep knowledge current, reduce hallucinations, company-specific data. Fine-tuning = teach style, tone, domain terminology, or specialised tasks.",
+        "relatedTopics": [
+          "fine-tuning",
+          "RAG",
+          "FM-customisation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: FM customisation",
+        "references": [
+          "https://aws.amazon.com/bedrock/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-029",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A financial services company wants to deploy a customer-facing chatbot using Amazon Bedrock. The chatbot must only answer questions about the company's financial products and must never discuss competitor products or provide investment advice.",
+      "questionText": "Which Bedrock feature BEST enforces these content restrictions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fine-tuning the model on company-approved topics",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Amazon Bedrock Guardrails with denied topics and content filters",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "IAM policies restricting which models can be called",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Reducing the model temperature to 0 for more controlled outputs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Bedrock Guardrails allows you to define denied topics (competitor products, investment advice), content filters, and word filters â€” enforced on every input and output regardless of what the model might otherwise generate.",
+        "incorrect": "Fine-tuning reduces but doesn't guarantee content restrictions. IAM controls access, not content. Temperature = 0 makes responses deterministic but doesn't restrict topics.",
+        "examTip": "Guardrails = content policy enforcement layer. Complements fine-tuning and RAG. Should be used together for production enterprise deployments.",
+        "relatedTopics": [
+          "Bedrock-Guardrails",
+          "content-policy",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: FM applications",
+        "references": [
+          "https://aws.amazon.com/bedrock/guardrails/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-030",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are Amazon Bedrock Agents?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Human agents who monitor Bedrock model outputs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Fully managed agents that use FMs to orchestrate multi-step tasks by calling APIs, querying knowledge bases, and taking actions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "AWS Support agents who help with Bedrock configuration",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Software agents that monitor Bedrock API usage and costs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Bedrock Agents enable multi-step autonomous task execution â€” an agent can understand a request, break it into steps, call external APIs (Lambda functions), query Knowledge Bases, and complete complex tasks.",
+        "incorrect": "Bedrock Agents are fully automated AI agents, not human workers, support staff, or monitoring tools.",
+        "examTip": "Bedrock Agents: define action groups (APIs the agent can call via Lambda), connect to Knowledge Bases, orchestrate multi-step workflows. Example: book a flight by searching flights, checking availability, making reservations.",
+        "relatedTopics": [
+          "Bedrock-Agents",
+          "agentic-AI",
+          "multi-step-automation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: FM applications",
+        "references": [
+          "https://aws.amazon.com/bedrock/agents/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-031",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is embeddings in the context of generative AI and vector search?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Images embedded within text documents",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Numerical vector representations of text that capture semantic meaning, used for similarity search",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Compressed versions of foundation models for edge deployment",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "API keys embedded in model prompts",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Embeddings convert text into dense vectors in a high-dimensional space where semantically similar content is close together. They enable semantic search, clustering, and RAG retrieval.",
+        "incorrect": "Embeddings are mathematical vector representations, not images, compressed models, or credentials.",
+        "examTip": "Amazon Titan Embeddings generates vectors in Bedrock. Used in RAG pipelines â€” convert documents â†’ store vectors â†’ convert query â†’ find similar vectors â†’ retrieve relevant chunks.",
+        "relatedTopics": [
+          "embeddings",
+          "vector-search",
+          "semantic-similarity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: FM technical concepts",
+        "references": [
+          "https://aws.amazon.com/bedrock/titan/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-032",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Amazon OpenSearch Service's role in a generative AI architecture on AWS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It runs the foundation models for text generation",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It serves as a vector store for storing and searching embeddings in a RAG pipeline",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "It provides full-text search for Amazon Bedrock prompts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It stores the fine-tuning training data for Bedrock models",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Amazon OpenSearch Service (with vector search capability) stores embedding vectors and performs approximate nearest-neighbour search to retrieve the most relevant documents in a RAG pipeline.",
+        "incorrect": "FMs run in Bedrock. OpenSearch is a search/vector store, not a model runner. Fine-tuning data is stored in S3.",
+        "examTip": "Vector stores for Bedrock Knowledge Bases: Amazon OpenSearch Serverless (recommended), Pinecone, Redis Enterprise Cloud, MongoDB Atlas. All support vector similarity search.",
+        "relatedTopics": [
+          "OpenSearch",
+          "vector-store",
+          "RAG"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: RAG architecture",
+        "references": [
+          "https://aws.amazon.com/opensearch-service/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-033",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Amazon SageMaker JumpStart?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A quick-start guide for new AWS customers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A hub of pre-trained models, solution templates, and algorithms that can be deployed with one click",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An automated feature engineering tool in SageMaker",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A tool for migrating ML models from other cloud providers to AWS",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SageMaker JumpStart provides a model hub with pre-trained models from Hugging Face, PyTorch Hub, and AWS â€” including LLMs like Llama, Mistral, and Falcon â€” that can be deployed with one click.",
+        "incorrect": "JumpStart is for ML models and solutions, not AWS onboarding, feature engineering, or cloud migration.",
+        "examTip": "JumpStart vs Bedrock: JumpStart = deploy open-source models on your own SageMaker infrastructure. Bedrock = serverless managed API access to FMs. Different deployment models.",
+        "relatedTopics": [
+          "SageMaker-JumpStart",
+          "pre-trained-models",
+          "model-hub"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: FM deployment",
+        "references": [
+          "https://aws.amazon.com/sagemaker/jumpstart/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-034",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company wants to build a customer service chatbot that can answer questions about their internal product documentation. The documentation is updated weekly and the chatbot must always use the latest information.",
+      "questionText": "Which architecture BEST meets this requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fine-tune a Bedrock FM on the documentation monthly",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Use Bedrock Knowledge Bases to index documentation in S3 with RAG for real-time retrieval",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Store the documentation in the prompt system message for every conversation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Train a new foundation model from scratch on the documentation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Bedrock Knowledge Bases with RAG automatically ingests and re-indexes documents from S3 when updated. The FM always retrieves current content at query time â€” no retraining needed.",
+        "incorrect": "Monthly fine-tuning can't keep up with weekly updates. Including full docs in prompts exceeds context limits. Training from scratch is impractical for weekly updates.",
+        "examTip": "RAG = ideal for frequently updated knowledge bases. Updates = just update S3 documents and trigger re-sync. No model retraining required.",
+        "relatedTopics": [
+          "Bedrock-Knowledge-Bases",
+          "RAG",
+          "document-Q-and-A"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: FM applications",
+        "references": [
+          "https://aws.amazon.com/bedrock/knowledge-bases/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-035",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the context window in a large language model?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The user interface window that displays model outputs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The maximum amount of text (in tokens) the model can consider at one time for both input and output",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The time window during which a model's API is available",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The maximum number of concurrent API requests",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The context window is the maximum number of tokens (input + output combined) an LLM can process in a single interaction. Larger context windows allow longer conversations, more document context, and more complex reasoning.",
+        "incorrect": "Context window is a technical model parameter, not a UI window, availability window, or API concurrency limit.",
+        "examTip": "Context window sizes vary by model: Claude 3 (200K tokens), GPT-4 (128K), Llama 2 (4K-32K). Bedrock's Knowledge Bases handles documents exceeding context window via chunking and retrieval.",
+        "relatedTopics": [
+          "context-window",
+          "tokens",
+          "LLM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: LLM fundamentals",
+        "references": [
+          "https://aws.amazon.com/bedrock/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-053",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is continued pre-training in the context of Amazon Bedrock?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Continuing to use a model after its initial deployment",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Training a foundation model on domain-specific unlabelled data to improve its knowledge in that domain",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Training a model on new labelled examples to improve task performance",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Re-running a training job that was interrupted",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Continued pre-training (also called domain adaptation pre-training) exposes a foundation model to large amounts of domain-specific unlabelled text (e.g., medical literature, legal documents) to improve its domain knowledge.",
+        "incorrect": "Continued pre-training uses unlabelled data for domain knowledge. Fine-tuning uses labelled examples for task performance. These are distinct customisation approaches.",
+        "examTip": "Customisation options in Bedrock: Continued pre-training (unlabelled, domain knowledge) â†’ Fine-tuning (labelled, task performance) â†’ RAG (real-time knowledge). Progressive levels of customisation.",
+        "relatedTopics": [
+          "continued-pre-training",
+          "fine-tuning",
+          "FM-customisation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: FM customisation",
+        "references": [
+          "https://aws.amazon.com/bedrock/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-061",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Amazon Bedrock Studio?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A music production tool powered by generative AI",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A collaborative workspace for teams to build, test, and share generative AI applications using Bedrock",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A video editing platform using Bedrock AI models",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An IDE plugin for writing Bedrock API code",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Amazon Bedrock Studio is a collaborative workspace where teams can quickly build, test, share, and iterate on generative AI applications â€” experimenting with prompts, knowledge bases, and agents in a team environment.",
+        "incorrect": "Bedrock Studio is for generative AI application development, not music, video, or code editing.",
+        "examTip": "Bedrock Studio: create projects, share with team members, build and test chatbots and RAG apps quickly. Designed for business users and developers collaborating on GenAI apps.",
+        "relatedTopics": [
+          "Bedrock-Studio",
+          "generative-AI",
+          "collaboration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: FM applications",
+        "references": [
+          "https://aws.amazon.com/bedrock/studio/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-062",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is chunking in the context of Amazon Bedrock Knowledge Bases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Splitting API requests into smaller batches for rate limiting",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Dividing large documents into smaller segments that fit within the model's context window for embedding and retrieval",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Compressing vector embeddings to reduce storage costs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Breaking model responses into smaller parts for streaming output",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Chunking divides large documents into smaller segments (chunks) before converting them to embeddings. This allows retrieval of only the relevant portion of a document rather than the entire file, staying within context limits.",
+        "incorrect": "Chunking is a document preparation technique for RAG, not API batching, vector compression, or response streaming.",
+        "examTip": "Bedrock Knowledge Bases chunking strategies: Default (300 tokens), Fixed size, Hierarchical, Semantic. Chunk size affects retrieval precision vs recall tradeoff.",
+        "relatedTopics": [
+          "chunking",
+          "RAG",
+          "Bedrock-Knowledge-Bases"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: RAG architecture",
+        "references": [
+          "https://aws.amazon.com/bedrock/knowledge-bases/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-072",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A developer is building a generative AI app using Bedrock. Users report that the model sometimes generates toxic or harmful content. The developer needs a solution that works across multiple foundation models without changing model-specific code.",
+      "questionText": "What is the BEST approach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Switch to a model with stronger built-in safety training",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Configure Amazon Bedrock Guardrails to filter harmful content and apply it to all model invocations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Add explicit instructions not to generate harmful content in every user prompt",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Set temperature to 0 to eliminate randomness in outputs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Bedrock Guardrails applies the same content filters across ALL foundation models without model-specific code changes â€” a single policy that intercepts and filters inputs/outputs regardless of which model is used.",
+        "incorrect": "Switching models doesn't guarantee safety. Prompt instructions can be bypassed. Temperature 0 doesn't prevent harmful content.",
+        "examTip": "Guardrails advantage: model-agnostic. Same safety policy applies whether you use Claude, Titan, Llama, or any other Bedrock model. Centralise safety policies.",
+        "relatedTopics": [
+          "Bedrock-Guardrails",
+          "content-safety",
+          "model-agnostic"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: FM deployment",
+        "references": [
+          "https://aws.amazon.com/bedrock/guardrails/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-077",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Amazon Kendra Intelligent Ranking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A system for ranking Amazon product reviews",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An ML-powered feature that semantically re-ranks search results from existing search engines for more relevant results",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A tool for ranking the relevance of Bedrock foundation models",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A scoring system for evaluating ML model quality",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Kendra Intelligent Ranking uses deep learning to semantically re-rank results from existing search systems (like Elasticsearch or OpenSearch) without replacing them â€” improving relevance through semantic understanding.",
+        "incorrect": "Kendra is enterprise search. Intelligent Ranking specifically enhances existing search with semantic capabilities.",
+        "examTip": "Amazon Kendra: ML-powered enterprise search that understands natural language queries. Intelligent Ranking: upgrade existing search results with semantic ML re-ranking. Both complement RAG approaches.",
+        "relatedTopics": [
+          "Amazon-Kendra",
+          "intelligent-search",
+          "semantic-search"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Search and retrieval",
+        "references": [
+          "https://aws.amazon.com/kendra/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-081",
+      "type": "ordering",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the steps for building a RAG application with Amazon Bedrock Knowledge Bases in the correct order.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Store source documents in Amazon S3",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Create a Knowledge Base and sync documents (chunk, embed, store in vector store)",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "User submits a query to the application",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Knowledge Base retrieves relevant document chunks",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Bedrock FM generates a grounded response using retrieved context",
+          "correctPosition": 5
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "RAG pipeline: S3 documents â†’ Knowledge Base sync (chunk + embed + vector store) â†’ user query â†’ retrieve relevant chunks â†’ FM generates grounded response.",
+        "incorrect": "Documents must be indexed before queries. Retrieval happens before generation. Storage is the first step.",
+        "examTip": "Bedrock Knowledge Bases handles steps 1-2 automatically. At query time (steps 3-5), it retrieves and augments the prompt with retrieved context transparently.",
+        "relatedTopics": [
+          "RAG",
+          "Bedrock-Knowledge-Bases",
+          "vector-search"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: RAG architecture",
+        "references": [
+          "https://aws.amazon.com/bedrock/knowledge-bases/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-086",
+      "type": "yes-no-statements",
+      "topicId": "foundation-models",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes Amazon Bedrock features.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Bedrock supports serverless inference â€” you pay per token, not for persistent infrastructure.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Provisioned throughput in Bedrock guarantees consistent performance for latency-sensitive applications.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Fine-tuned models in Bedrock can be accessed by all customers in the same AWS region.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Bedrock Guardrails can block specific words or phrases from appearing in model responses.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Bedrock on-demand = pay per token (serverless). Provisioned throughput = consistent rate for production. Guardrails word filters block specific content. Fine-tuned models are private to your account.",
+        "incorrect": "Fine-tuned models are strictly isolated to the customer's account â€” never shared with other customers.",
+        "examTip": "Bedrock pricing models: On-demand (pay per token, variable capacity), Provisioned throughput (reserved capacity, consistent performance, better pricing at scale). Choose based on usage pattern.",
+        "relatedTopics": [
+          "Bedrock-pricing",
+          "provisioned-throughput",
+          "model-isolation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: FM deployment",
+        "references": [
+          "https://aws.amazon.com/bedrock/pricing/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-091",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Amazon Bedrock's Converse API?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An API for converting between different data formats in Bedrock",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A unified API that provides a consistent conversational interface across all supported Bedrock foundation models",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A feature for converting Bedrock outputs to different languages",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A tool for converting fine-tuned models to serverless endpoints",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Converse API provides a consistent, standardised conversational interface across all Bedrock models â€” so you can switch between Claude, Titan, Llama, etc. without rewriting your application code.",
+        "incorrect": "The Converse API is about unified model interface, not data format conversion, translation, or deployment conversion.",
+        "examTip": "Converse API benefit: write once, switch models easily. No model-specific code changes needed. Supports multi-turn conversations, system prompts, tool use, and streaming across all models.",
+        "relatedTopics": [
+          "Bedrock-Converse-API",
+          "model-abstraction",
+          "foundation-models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: FM development",
+        "references": [
+          "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-097",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between Amazon Bedrock and Amazon SageMaker JumpStart for deploying foundation models?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are identical â€” both provide the same deployment options",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Bedrock = serverless managed API access; JumpStart = deploy open models on your own SageMaker infrastructure with full control",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Bedrock is only for custom models; JumpStart is only for AWS models",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "JumpStart is faster to deploy; Bedrock provides more model choices",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Bedrock is fully serverless â€” AWS manages the infrastructure, you pay per token. JumpStart deploys models on dedicated SageMaker endpoints (ml.g5 instances, etc.) that you manage and pay for by the hour.",
+        "incorrect": "They have fundamentally different deployment models. Bedrock has proprietary (Titan) and third-party models. JumpStart has open-source models.",
+        "examTip": "Choose Bedrock when: need managed service, want multiple model options, serverless scaling. Choose JumpStart when: need full infrastructure control, specific open-source model, cost optimisation at scale with consistent load.",
+        "relatedTopics": [
+          "Amazon-Bedrock",
+          "SageMaker-JumpStart",
+          "FM-deployment"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: FM deployment options",
+        "references": [
+          "https://aws.amazon.com/bedrock/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-100",
+      "type": "single-choice",
+      "topicId": "foundation-models",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company wants to deploy a generative AI application on AWS. They have three requirements: (1) use Claude 3 as the model, (2) ground responses in their proprietary knowledge base, (3) allow the AI to make bookings by calling their reservation API.",
+      "questionText": "Which Amazon Bedrock features BEST address all three requirements together?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bedrock Fine-tuning + SageMaker endpoints + Lambda",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Bedrock Model Access (Claude 3) + Knowledge Bases (RAG) + Agents (API actions)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Amazon Lex + Amazon Kendra + Amazon Q",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SageMaker JumpStart + OpenSearch + API Gateway",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "All three requirements map directly to Bedrock features: Claude 3 = Bedrock model access, proprietary knowledge base = Bedrock Knowledge Bases (RAG), reservation API = Bedrock Agents (calls Lambda/APIs). All within the Bedrock platform.",
+        "incorrect": "Fine-tuning doesn't provide real-time knowledge. Lex/Kendra/Q are separate services without the same integrated capabilities. JumpStart requires managing infrastructure.",
+        "examTip": "Bedrock feature mapping: Need a specific FM â†’ Model Access. Need company knowledge â†’ Knowledge Bases. Need to take actions â†’ Agents. Need safety â†’ Guardrails. Often use all together.",
+        "relatedTopics": [
+          "Amazon-Bedrock",
+          "Bedrock-Knowledge-Bases",
+          "Bedrock-Agents",
+          "FM-applications"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: FM applications",
+        "references": [
+          "https://aws.amazon.com/bedrock/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

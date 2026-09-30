@@ -1,0 +1,1033 @@
+{
+  "certificationId": "comptia-data-plus",
+  "topicId": "visualisation",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "data-plus-031",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which chart type is BEST for showing trends over time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pie chart",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Line chart",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Scatter plot",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Histogram",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Line charts excel at showing how values change over time — the continuous line visually communicates trends, rates of change, and patterns over a time axis.",
+        "incorrect": "Pie = part-to-whole proportions. Scatter = relationship between two variables. Histogram = distribution of a single variable.",
+        "examTip": "Chart selection: Line (trends over time), Bar (comparisons between categories), Pie (part-to-whole, max 5-6 slices), Scatter (correlation), Histogram (distribution), Box plot (distribution + outliers).",
+        "relatedTopics": [
+          "line-chart",
+          "data-visualisation",
+          "chart-selection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-032",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "When is a bar chart MOST appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Showing the distribution of a continuous numerical variable",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Comparing values across discrete categories",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Showing how a whole is divided into parts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Displaying the relationship between two continuous variables",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Bar charts compare discrete categories side by side — revenue by region, sales by product, count by department. Horizontal bars work well for long category names.",
+        "incorrect": "Distribution = histogram. Part-to-whole = pie/stacked bar. Two continuous variables = scatter plot.",
+        "examTip": "Bar chart tips: start y-axis at zero to avoid misleading comparisons. Sort bars by value for easier reading. Use horizontal bars when category labels are long.",
+        "relatedTopics": [
+          "bar-chart",
+          "categorical-data",
+          "comparison"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-033",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does a scatter plot show?",
+      "options": [
+        {
+          "id": "A",
+          "text": "How a single variable changes over time",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The relationship or correlation between two continuous variables",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The proportion of each category within a total",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The distribution of values within a single variable",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A scatter plot plots individual data points as dots using two axes (X and Y), revealing patterns, correlations, and clusters between two continuous variables.",
+        "incorrect": "Time trend = line chart. Proportions = pie chart. Single variable distribution = histogram.",
+        "examTip": "Scatter plot patterns: upward trend = positive correlation, downward = negative, random scatter = no correlation. Add a trend line (regression line) to quantify the relationship.",
+        "relatedTopics": [
+          "scatter-plot",
+          "correlation",
+          "bivariate-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-034",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a histogram used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Comparing values between different categories",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Showing the frequency distribution of a continuous numerical variable",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Displaying trends over time",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Showing historical stock market data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A histogram divides a continuous variable into equal-width bins and counts how many values fall in each bin — revealing the distribution shape (normal, skewed, bimodal, etc.).",
+        "incorrect": "Category comparison = bar chart. Trends = line chart. Histogram ≠ stock history chart (despite the similar look).",
+        "examTip": "Histogram vs bar chart: Histogram = continuous data with bins (no gaps between bars). Bar chart = discrete categories (gaps between bars). They look similar but represent different data types.",
+        "relatedTopics": [
+          "histogram",
+          "distribution",
+          "frequency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-035",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does a heat map visualise?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Temperature data from weather sensors only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The magnitude of values across two dimensions using colour intensity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Network traffic heat on a server topology diagram",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The 'hot' (high priority) items in a project management backlog",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Heat maps use colour gradients to represent value magnitude across a matrix or geographic area — darker/warmer colours = higher values. Common uses: website click maps, correlation matrices, geographic data.",
+        "incorrect": "Heat maps have broad applications beyond temperature. They're for any 2D magnitude data.",
+        "examTip": "Heat map uses: correlation matrix (show which variables correlate), website heatmaps (where users click), geographic heat maps (density of events by location), time-day matrices.",
+        "relatedTopics": [
+          "heat-map",
+          "colour-encoding",
+          "matrix-visualisation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-036",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What information does a box plot (box and whisker plot) provide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A single bar representing the average value for each category",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A five-number summary showing minimum, Q1, median, Q3, maximum and highlighting outliers",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A box representing the percentage of data in each category",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The frequency of each value plotted as a box",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A box plot shows: minimum, lower quartile (Q1), median (Q2), upper quartile (Q3), maximum — plus outliers plotted as individual dots. Great for comparing distributions across groups.",
+        "incorrect": "Box plots show distribution statistics, not averages, percentages, or frequency histograms.",
+        "examTip": "Box plot anatomy: box = IQR (Q1 to Q3), line in box = median, whiskers = min/max (within 1.5×IQR), dots outside whiskers = outliers. Compare multiple groups side by side.",
+        "relatedTopics": [
+          "box-plot",
+          "quartiles",
+          "IQR",
+          "outliers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-037",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a waterfall chart used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Showing cumulative rainfall over a period",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Showing how an initial value increases and decreases through a series of positive and negative contributions to reach a final value",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Displaying a sequential process flow like a waterfall methodology",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A bar chart where bars cascade from highest to lowest",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Waterfall charts show how a starting value is affected by a series of intermediate positive and negative changes — ideal for financial analysis (budget vs actuals, profit/loss breakdown, revenue bridge).",
+        "incorrect": "Waterfall charts are financial/business analytics tools, not rainfall, process flows, or sorted bar charts.",
+        "examTip": "Waterfall chart use cases: P&L analysis (revenue → expenses → net profit), budget variance (planned vs actual), inventory changes (starting inventory → adds → removals → ending).",
+        "relatedTopics": [
+          "waterfall-chart",
+          "financial-analysis",
+          "bridge-chart"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-038",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of data storytelling?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creating fictional narratives using data as inspiration",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Communicating insights from data in a compelling narrative that drives understanding and action",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Documenting the technical story of how data was collected",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A data quality technique using storytelling to identify anomalies",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data storytelling combines data, visualisations, and narrative to communicate insights in a way that is engaging, understandable, and actionable for the audience — especially non-technical stakeholders.",
+        "incorrect": "Data storytelling is about communicating insights effectively, not fiction writing, technical documentation, or quality checking.",
+        "examTip": "Data storytelling elements: data (what the numbers say), visuals (make it easy to understand), narrative (context, significance, recommended action). Answer: so what? and now what?",
+        "relatedTopics": [
+          "data-storytelling",
+          "communication",
+          "data-presentation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Communicating with data",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-039",
+      "type": "yes-no-statements",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it represents a visualisation best practice.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Using too many colours in a chart can make it harder to interpret.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A pie chart with 15 slices is an effective way to show proportions.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Truncating the y-axis at a non-zero value can make differences appear more dramatic than they are.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Adding gridlines always improves chart readability.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Too many colours = visual noise. 15-slice pie = impossible to interpret (max ~5-6). Non-zero y-axis = visual distortion of magnitude. Excessive gridlines = clutter (use sparingly).",
+        "incorrect": "Pie charts should be limited to 5-6 slices max. Gridlines help when values matter but can clutter simple categorical charts.",
+        "examTip": "Visualisation pitfalls: too many colours, truncated axes, misleading scales, 3D effects (distort proportions), too much data in one chart. Less is more.",
+        "relatedTopics": [
+          "visualisation-best-practices",
+          "chart-design",
+          "misleading-charts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Visualisation design",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-040",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An analyst needs to present sales performance by region AND by product category simultaneously to identify which region-product combinations are performing best.",
+      "questionText": "Which chart type is MOST appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A single bar chart showing total sales by region",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A grouped bar chart or heat map showing region × product category combinations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A pie chart for each region showing product breakdown",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A line chart showing sales trends for each region",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A grouped bar chart shows multiple categories (products) for each group (region) side by side. A heat map is even more effective for identifying patterns across a region × product matrix.",
+        "incorrect": "Single bar = loses product dimension. Multiple pies = hard to compare across charts. Line chart = time dimension not requested.",
+        "examTip": "Two categorical dimensions + one measure = grouped/stacked bar chart OR heat map. Heat maps work especially well when there are many rows and columns.",
+        "relatedTopics": [
+          "grouped-bar-chart",
+          "heat-map",
+          "multidimensional-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Choosing visualisations",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-041",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a KPI (Key Performance Indicator)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A specific type of database index for fast queries",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A measurable value that demonstrates how effectively an organisation is achieving key business objectives",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A keyboard shortcut for performing analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A data privacy indicator measuring compliance",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "KPIs are quantifiable measures tied to specific business objectives — e.g., monthly revenue, customer churn rate, Net Promoter Score, average resolution time. They appear prominently on dashboards.",
+        "incorrect": "KPI is a business performance measurement concept, not a database term, keyboard shortcut, or privacy metric.",
+        "examTip": "Good KPIs are: SMART (Specific, Measurable, Achievable, Relevant, Time-bound). Dashboards should focus on 5-7 critical KPIs rather than overwhelming with 50 metrics.",
+        "relatedTopics": [
+          "KPI",
+          "business-metrics",
+          "dashboard"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Dashboard design",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-042",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between a dashboard and a report?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dashboards are interactive; reports are always printed",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Dashboards provide a real-time overview of key metrics; reports provide detailed static analysis of a specific topic",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Reports are created by analysts; dashboards are created by data engineers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are the same — just different names in different tools",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Dashboards: real-time or near-real-time KPI overview, high-level, interactive, updated continuously (operational). Reports: detailed analysis of a specific question/period, static snapshot, distributed on a schedule.",
+        "incorrect": "Both can be digital or printed. Either can be created by analysts or engineers. They serve different purposes.",
+        "examTip": "Dashboard = at-a-glance operational monitoring (think car dashboard). Report = deep dive into specific questions (think monthly financial report). Both are essential in a data-driven org.",
+        "relatedTopics": [
+          "dashboard",
+          "report",
+          "BI-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Dashboard vs report",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-056",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a treemap used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mapping the physical location of data trees (file system structures)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Displaying hierarchical data as nested rectangles where size represents quantity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A diagram showing the decision tree in a machine learning model",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A map showing which business units have data access",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Treemaps show hierarchical data using nested rectangles — each rectangle's size is proportional to its value. Useful for showing part-to-whole across multiple levels (e.g., revenue by region → country → product).",
+        "incorrect": "Treemaps are data visualisations for hierarchical proportions, not file systems, ML models, or access maps.",
+        "examTip": "Treemap use cases: disk space usage (folder structure), portfolio allocation (asset classes → assets), company revenue (division → department → product). Good alternative to nested pie charts.",
+        "relatedTopics": [
+          "treemap",
+          "hierarchical-data",
+          "part-to-whole"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-057",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a gauge chart (speedometer chart) typically used for on dashboards?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Showing trends in production volumes over time",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Displaying a single KPI value relative to a target or threshold",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Comparing multiple metrics across different time periods",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Gauging customer sentiment from survey data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Gauge charts display a single metric value on a dial (like a speedometer), showing whether the value is in a low (red), moderate (yellow), or target (green) zone — ideal for high-level KPI status.",
+        "incorrect": "Gauge charts are for single-value KPI status, not trends, comparisons, or sentiment analysis.",
+        "examTip": "Gauge charts are often criticised for being 'chartjunk' — they use a lot of space to show one number. A simple metric card with conditional formatting is often more efficient.",
+        "relatedTopics": [
+          "gauge-chart",
+          "KPI",
+          "dashboard"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-065",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a Pareto chart?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A chart named after the data analyst Pareto showing project timelines",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A combined bar and line chart showing categories by frequency (descending) plus cumulative percentage, based on the 80/20 rule",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A chart showing the parallel paths in a project plan",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A scatter plot variant for quality control analysis",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A Pareto chart combines a descending bar chart with a cumulative line chart, illustrating the Pareto principle (80/20 rule) — showing that ~80% of problems come from ~20% of causes.",
+        "incorrect": "The Pareto chart is named after Vilfredo Pareto (Italian economist who observed the 80/20 principle). It's a quality management tool, not a timeline or scatter plot.",
+        "examTip": "Pareto chart in quality control: identify the 20% of defect types causing 80% of problems. Focus improvement efforts where they'll have the most impact.",
+        "relatedTopics": [
+          "Pareto-chart",
+          "80-20-rule",
+          "quality-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Specialised charts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-071",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a sparkline?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A bright highlight applied to important cells in a spreadsheet",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A miniature chart embedded within a cell or table to show trends without taking up chart space",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A line chart with animated sparkling effects for presentations",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A type of electrical spark chart used in manufacturing data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sparklines are tiny, word-sized charts embedded inline in text or tables — showing trends at a glance without requiring a full chart. Common in Excel and BI dashboards.",
+        "incorrect": "Sparklines are miniature charts, not cell formatting, animations, or manufacturing charts.",
+        "examTip": "Sparklines in Excel: Insert → Sparklines → Line/Column/Win-Loss. Great for showing 12 months of trends in a table alongside text data.",
+        "relatedTopics": [
+          "sparklines",
+          "miniature-charts",
+          "dashboard"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-079",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A data analyst is presenting monthly sales data for 5 years to the executive team. They want to show both the overall trend AND how each month's sales compare to the same month in previous years.",
+      "questionText": "Which visualisation approach is MOST effective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A single pie chart showing the average monthly breakdown",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A line chart with each year as a separate line, allowing trend and year-over-year comparison simultaneously",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A bar chart with all 60 months shown on the x-axis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Five separate single-year line charts displayed side by side",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Multiple-line chart with one line per year (Y1, Y2, Y3, Y4, Y5) plotted over months (Jan-Dec): shows seasonal patterns clearly, enables year-over-year comparison, and reveals overall trend from comparing line positions.",
+        "incorrect": "Pie can't show trend or time. 60 bars on x-axis is unreadable. Separate charts make comparison difficult.",
+        "examTip": "Year-over-year comparison: overlay lines by month (all years on 12-month x-axis). This is sometimes called a 'seasonal sub-series plot' and is very effective for seasonality analysis.",
+        "relatedTopics": [
+          "year-over-year",
+          "line-chart",
+          "seasonal-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Choosing effective visualisations",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-084",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a bubble chart?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A chart that shows speech bubbles representing customer feedback",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A scatter plot where a third variable is represented by the size of the data point bubbles",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A network diagram showing data flow between systems",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A chart with rounded bars used for aesthetics in presentations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A bubble chart extends a scatter plot by adding a third dimension — the size of each bubble represents a third variable (e.g., X=revenue, Y=growth rate, bubble size=market share).",
+        "incorrect": "Bubble charts are a three-variable extension of scatter plots — not speech visualisations, network diagrams, or aesthetic modifications.",
+        "examTip": "Bubble chart: X axis, Y axis, bubble size = three variables simultaneously. Classic example: Hans Rosling's gapminder visualisation (X=income, Y=life expectancy, bubble size=population).",
+        "relatedTopics": [
+          "bubble-chart",
+          "three-variable",
+          "scatter-plot"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-090",
+      "type": "dropdown-select",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each scenario to the BEST chart type.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Show what percentage each product category contributes to total revenue",
+          "options": [
+            "Pie chart",
+            "Line chart",
+            "Scatter plot",
+            "Histogram"
+          ],
+          "correctAnswer": "Pie chart"
+        },
+        {
+          "id": "d2",
+          "prompt": "Show the frequency distribution of customer ages",
+          "options": [
+            "Pie chart",
+            "Line chart",
+            "Scatter plot",
+            "Histogram"
+          ],
+          "correctAnswer": "Histogram"
+        },
+        {
+          "id": "d3",
+          "prompt": "Show whether advertising spend correlates with sales revenue",
+          "options": [
+            "Pie chart",
+            "Line chart",
+            "Scatter plot",
+            "Histogram"
+          ],
+          "correctAnswer": "Scatter plot"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Part-to-whole = pie chart (ideal for ≤6 categories). Distribution of continuous variable = histogram. Relationship between two continuous variables = scatter plot.",
+        "incorrect": "Each chart type serves a specific data relationship. Mismatching chart to data type obscures the insight.",
+        "examTip": "Chart selection cheat sheet: Comparison → bar. Trend over time → line. Part-to-whole → pie/stacked. Distribution → histogram/box. Relationship → scatter. Hierarchy → treemap.",
+        "relatedTopics": [
+          "chart-selection",
+          "visualisation-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Chart selection",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-096",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of conditional formatting in data visualisation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Formatting that only applies when data analysis conditions are met",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Automatically changing the appearance of cells or data points based on their values to highlight patterns",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A conditional branch in the data pipeline that changes format based on data type",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Formatting applied only when a user has conditional access permissions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Conditional formatting automatically highlights data based on rules — red for values below target, green for above; heat map colour scales; data bars; icon sets — enabling pattern recognition at a glance.",
+        "incorrect": "Conditional formatting is a visualisation technique for dynamic highlighting, not pipeline logic, access control, or analysis prerequisites.",
+        "examTip": "Excel conditional formatting: colour scales (gradient), data bars, icon sets (arrows/traffic lights), highlight cell rules. Power BI/Tableau: background colour rules, font colour by value.",
+        "relatedTopics": [
+          "conditional-formatting",
+          "data-highlighting",
+          "visualisation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Formatting for insight",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-099",
+      "type": "yes-no-statements",
+      "topicId": "visualisation",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it represents good data visualisation practice.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A dashboard should show only the KPIs most relevant to the audience's decisions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Using 3D charts always makes data easier to understand.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Including the data source and date on charts improves transparency and trust.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Using dual-axis charts always misleads the audience.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Relevant KPIs only = focused, actionable. Source/date = transparency. 3D charts = distort proportions, harder to read (bad practice). Dual-axis charts = can be appropriate when clearly labelled (not always misleading).",
+        "incorrect": "3D charts almost always make interpretation harder. Dual-axis charts are useful when two metrics have different scales — just label them clearly.",
+        "examTip": "Visualisation best practices: purpose-driven (what decision does this support?), minimal clutter, clear labels, appropriate chart type, start axes at zero for bar charts, include data source.",
+        "relatedTopics": [
+          "dashboard-design",
+          "chart-best-practices",
+          "data-transparency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Visualisation best practices",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

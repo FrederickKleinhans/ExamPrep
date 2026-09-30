@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { RotateCcw, CheckCircle, XCircle, Zap } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { QuestionCard } from '../components/QuestionCard';
@@ -54,15 +55,12 @@ export function StudyPage() {
           <div style={{ fontSize: 40, marginBottom: 14 }}>📚</div>
           <h2 className="text-heading" style={{ margin: '0 0 8px', fontSize: 20, fontWeight: 800 }}>No active certification</h2>
           <p className="text-muted" style={{ margin: '0 0 24px', fontSize: 13, maxWidth: 320, marginLeft: 'auto', marginRight: 'auto', lineHeight: 1.6 }}>
-            Go to Settings to set your active cert, then come back to start studying.
+            Choose a certification from a career path to start studying.
           </p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="/settings" style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', border: 'none', borderRadius: 12, padding: '11px 24px', color: '#fff', fontWeight: 700, fontSize: 13, textDecoration: 'none' }}>
-              Go to Settings
-            </a>
-            <a href="/tracks" className="btn-ghost" style={{ borderRadius: 12, padding: '11px 24px', fontSize: 13, textDecoration: 'none', display: 'inline-block' }}>
-              Browse tracks
-            </a>
+            <Link to="/tracks" style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', border: 'none', borderRadius: 12, padding: '11px 24px', color: '#fff', fontWeight: 700, fontSize: 13, textDecoration: 'none' }}>
+              Browse career paths
+            </Link>
           </div>
         </div>
       </div>

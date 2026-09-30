@@ -1,0 +1,4757 @@
+{
+  "certificationId": "comptia-data-plus",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "data-plus-001",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the difference between structured and unstructured data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Structured data is stored in the cloud; unstructured data is stored on-premises",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Structured data is organised in a defined schema (rows/columns); unstructured data lacks a predefined format",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Structured data is always numerical; unstructured data is always text",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are identical but named differently by different vendors",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Structured data fits into a defined schema — rows and columns in a relational database. Unstructured data has no predefined format — emails, images, social media posts, audio, video.",
+        "incorrect": "Storage location doesn't define structure. Both types can include numbers or text. They are genuinely different data types.",
+        "examTip": "Structured = databases/spreadsheets. Semi-structured = XML/JSON (some organisation). Unstructured = emails/images/video (no schema).",
+        "relatedTopics": [
+          "structured-data",
+          "unstructured-data",
+          "data-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Identify data types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-002",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a relational database?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A database that stores data in key-value pairs without any structure",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A database that organises data into tables with rows and columns, linked by defined relationships",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A database designed exclusively for big data workloads",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A database that only stores relationships between people in a social network",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A relational database stores data in tables (relations) with rows and columns. Tables are linked via foreign keys, enabling complex queries using SQL.",
+        "incorrect": "Key-value = NoSQL. Big data = data lakes/Hadoop. Social networks = graph databases.",
+        "examTip": "RDBMS examples: MySQL, PostgreSQL, SQL Server, Oracle. Use SQL to query. ACID-compliant. Tables linked by primary/foreign keys.",
+        "relatedTopics": [
+          "relational-database",
+          "RDBMS",
+          "SQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Database concepts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-003",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between a data warehouse and a data lake?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are the same thing with different names",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A data warehouse stores structured, processed data for BI reporting; a data lake stores raw data in any format at scale",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A data lake is smaller and faster; a data warehouse is larger and slower",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data warehouses are cloud-only; data lakes are on-premises only",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data warehouse = structured, cleaned, schema-on-write, optimised for BI/SQL queries (e.g., Snowflake, Redshift, BigQuery). Data lake = raw, any format, schema-on-read, stores everything (e.g., S3, Azure Data Lake).",
+        "incorrect": "They serve different purposes. Size and speed aren't the key differences. Both can be cloud or on-premises.",
+        "examTip": "Warehouse = ready to query, clean data. Lake = store everything cheaply, process later. Lakehouse (Delta Lake, Databricks) = combines both.",
+        "relatedTopics": [
+          "data-warehouse",
+          "data-lake",
+          "data-architecture"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Data storage types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-004",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is ETL in the context of data pipelines?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Extract, Transfer, Load — moving data between servers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Extract, Transform, Load — a process to pull data from sources, clean/transform it, and load into a target system",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Evaluate, Test, Launch — a software deployment process",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encrypt, Tokenise, Link — a data security process",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "ETL: Extract (pull from source systems), Transform (clean, filter, aggregate, apply business rules), Load (write to target — data warehouse, database, BI tool).",
+        "incorrect": "ETL is Extract, Transform, Load — not Transfer, Evaluate, or Encrypt.",
+        "examTip": "ETL vs ELT: ETL = transform before loading (traditional DW). ELT = load raw then transform in the target (cloud DW like BigQuery/Snowflake). ELT is now more common in cloud.",
+        "relatedTopics": [
+          "ETL",
+          "ELT",
+          "data-pipeline"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Data pipeline concepts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-005",
+      "type": "yes-no-statements",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes data concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A primary key uniquely identifies each row in a database table.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A data mart is a subset of a data warehouse focused on a specific business area.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "NoSQL databases always use SQL for querying.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Metadata is data that describes other data.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Primary key = unique row identifier. Data mart = focused subset of DW (e.g., Sales mart, Finance mart). Metadata = data about data (file size, creation date, author). NoSQL uses its own query languages (MongoDB uses MQL, etc.).",
+        "incorrect": "NoSQL stands for 'Not Only SQL' — most NoSQL databases don't use SQL at all.",
+        "examTip": "NoSQL types: key-value (Redis), document (MongoDB), column-family (Cassandra), graph (Neo4j). Each has its own query mechanism.",
+        "relatedTopics": [
+          "primary-key",
+          "data-mart",
+          "NoSQL",
+          "metadata"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Data concepts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-006",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between quantitative and qualitative data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Quantitative is collected first; qualitative is collected second",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Quantitative data is numerical and measurable; qualitative data is descriptive and categorical",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Quantitative data requires surveys; qualitative data requires databases",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are the same type of data described differently",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Quantitative = numbers you can measure and calculate (age: 25, revenue: $50,000, temperature: 98.6°F). Qualitative = descriptive categories (colour: red, satisfaction: high, gender: female).",
+        "incorrect": "The difference is in data type and how it's analysed, not collection order, method, or storage.",
+        "examTip": "Quantitative: discrete (whole numbers: 5 employees) vs continuous (any value: 3.14). Qualitative: nominal (no order: colours) vs ordinal (ordered: small/medium/large).",
+        "relatedTopics": [
+          "quantitative-data",
+          "qualitative-data",
+          "data-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Data types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-007",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company receives data from IoT sensors every millisecond, clickstream data from its website, and batch sales reports nightly.",
+      "questionText": "Which describes the correct data processing approach for each source?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All three should use batch processing nightly",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "IoT and clickstream = streaming/real-time processing; sales reports = batch processing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "All three should use real-time streaming",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "IoT = batch; clickstream = real-time; sales = streaming",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Streaming/real-time processing handles continuous high-velocity data (IoT sensors, clickstreams). Batch processing handles large volumes at scheduled intervals (nightly sales reports).",
+        "incorrect": "Nightly batch for real-time IoT would mean hours of delay. Real-time for all adds unnecessary complexity for static nightly reports.",
+        "examTip": "Streaming: Apache Kafka, Apache Flink, Azure Stream Analytics. Batch: Apache Spark, Hadoop MapReduce, SQL jobs. Many modern pipelines use both (lambda architecture).",
+        "relatedTopics": [
+          "streaming",
+          "batch-processing",
+          "data-pipeline"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.3 Data processing types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-008",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does SELECT, FROM, and WHERE do in a SQL query?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SELECT = create table; FROM = insert data; WHERE = delete rows",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SELECT = choose columns; FROM = specify the table; WHERE = filter rows",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SELECT = count rows; FROM = define the database; WHERE = sort results",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are all equivalent SQL clauses that can be used interchangeably",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SELECT specifies which columns to return, FROM specifies which table to query, WHERE filters which rows to include based on a condition.",
+        "incorrect": "These are the three most fundamental SQL clauses — each serves a distinct purpose.",
+        "examTip": "Basic SQL: SELECT col1, col2 FROM table WHERE condition ORDER BY col1 GROUP BY col2 HAVING aggregate_condition. Know the order of clauses.",
+        "relatedTopics": [
+          "SQL",
+          "SELECT",
+          "WHERE",
+          "data-querying"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL basics",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-009",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between GROUP BY and ORDER BY in SQL?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GROUP BY sorts results; ORDER BY aggregates results",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "GROUP BY aggregates rows by a column value; ORDER BY sorts the result set",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They perform the same function with different syntax",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "GROUP BY is for numbers; ORDER BY is for text columns",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GROUP BY combines rows with the same value into summary rows (used with aggregate functions like COUNT, SUM, AVG). ORDER BY sorts the final result set ascending or descending.",
+        "incorrect": "Their functions are distinct — aggregation vs sorting. Both work on any data type.",
+        "examTip": "GROUP BY example: SELECT department, COUNT(*) FROM employees GROUP BY department. ORDER BY example: ORDER BY salary DESC. HAVING filters groups (like WHERE but for grouped data).",
+        "relatedTopics": [
+          "GROUP-BY",
+          "ORDER-BY",
+          "SQL-aggregation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL concepts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-010",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a JOIN in SQL and when would you use an INNER JOIN vs LEFT JOIN?",
+      "options": [
+        {
+          "id": "A",
+          "text": "JOINs merge two tables permanently; INNER keeps more rows, LEFT keeps fewer",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "INNER JOIN returns only rows with matching values in both tables; LEFT JOIN returns all rows from the left table plus matches from the right",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "INNER JOIN is faster; LEFT JOIN is used only for large tables",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are the same — both return all rows from both tables",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "INNER JOIN = only rows where the join condition matches in BOTH tables (intersection). LEFT JOIN = all rows from the left table, NULLs for non-matching right rows (preserves all left rows).",
+        "incorrect": "JOINs are query operations, not permanent merges. LEFT JOIN preserves more rows (all from left), not fewer.",
+        "examTip": "JOIN types: INNER (matches only), LEFT (all left + matches), RIGHT (all right + matches), FULL OUTER (all from both). INNER most common.",
+        "relatedTopics": [
+          "SQL-JOIN",
+          "INNER-JOIN",
+          "LEFT-JOIN"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL joins",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-011",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are SQL aggregate functions used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aggregating multiple SQL queries into one statement",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Performing calculations on a set of values and returning a single summary value",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Joining multiple tables into one aggregated table",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Filtering data before it is stored in the database",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Aggregate functions compute a single result from multiple rows: COUNT (number of rows), SUM (total), AVG (average), MIN (minimum), MAX (maximum).",
+        "incorrect": "Aggregate functions operate on columns of data, not queries or tables.",
+        "examTip": "Common aggregates: COUNT(*) = all rows, COUNT(col) = non-NULL values, SUM, AVG, MIN, MAX. Always used with GROUP BY when breaking down by category.",
+        "relatedTopics": [
+          "SQL-aggregates",
+          "COUNT",
+          "SUM",
+          "AVG"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL functions",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-012",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data profiling?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creating user profiles from data for personalisation",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Examining a dataset to understand its structure, content, quality, and relationships before analysis",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Optimising SQL query performance using execution profiles",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Profiling data scientists' performance metrics",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data profiling analyses a dataset to understand: column data types, null counts, unique values, min/max values, distributions, and patterns — essential before cleaning or analysis.",
+        "incorrect": "Data profiling is about understanding dataset characteristics, not user profiles, query optimisation, or performance metrics.",
+        "examTip": "Data profiling answers: How many nulls? Are values in expected ranges? Are there duplicates? What are the distributions? Critical first step before any data project.",
+        "relatedTopics": [
+          "data-profiling",
+          "data-quality",
+          "data-exploration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data profiling",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-013",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data cleansing (data scrubbing)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Encrypting data to make it unreadable for security",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The process of identifying and correcting errors, inconsistencies, and inaccuracies in a dataset",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Compressing data to reduce storage usage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Archiving old data to a cold storage tier",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data cleansing fixes problems like: missing values (nulls), duplicate records, incorrect formats, inconsistent capitalisation, outliers, and invalid values — improving data quality for analysis.",
+        "incorrect": "Cleansing improves data quality; it's not encryption, compression, or archiving.",
+        "examTip": "Common cleansing tasks: remove duplicates, fill/flag nulls, standardise formats (dates, phone numbers), fix typos, validate against reference data. Essential before analysis.",
+        "relatedTopics": [
+          "data-cleansing",
+          "data-quality",
+          "missing-values"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Data cleansing",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-014",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data sampling?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Collecting a subset of data that represents the full population for analysis",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Testing a database to see if sample queries return correct results",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A technique for encrypting a sample of sensitive records",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Creating sample reports from a BI tool",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sampling selects a representative subset of the full dataset for analysis — used when the full dataset is too large to analyse, to test data quality, or to build ML models.",
+        "incorrect": "Data sampling is a statistical technique for working with representative subsets, not query testing, encryption, or reporting.",
+        "examTip": "Sampling methods: random (equal chance for all), stratified (proportional from subgroups), systematic (every nth record), cluster (sample entire groups). Avoid bias in sampling.",
+        "relatedTopics": [
+          "data-sampling",
+          "statistical-sampling",
+          "data-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data sampling",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-015",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An analyst receives a customer dataset with 50,000 rows. The 'phone_number' column has 12,000 NULL values and 3,000 entries in inconsistent formats (some with dashes, some without).",
+      "questionText": "What should the analyst do FIRST?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Delete all rows with NULL phone numbers immediately",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Profile the data to understand the extent of the problem, then decide on a cleansing strategy",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Fill all NULLs with '000-000-0000'",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Proceed with analysis ignoring the phone number column",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Profiling first reveals the full picture — are the NULLs random or systematic? Are the format issues fixable? Only after profiling can you decide whether to impute, flag, standardise, or drop the column.",
+        "incorrect": "Deleting 24% of records (12,000/50,000) would significantly bias the dataset. Filling with dummy values creates false data. Ignoring without investigation is irresponsible.",
+        "examTip": "Data quality workflow: Profile → Assess impact → Define rules → Cleanse → Validate → Document. Never delete data without understanding WHY it's missing.",
+        "relatedTopics": [
+          "data-profiling",
+          "data-cleansing",
+          "NULL-handling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data preparation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-016",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data normalisation in the context of databases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scaling numerical values to a 0-1 range for machine learning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Organising a database to reduce redundancy and improve data integrity by dividing data into related tables",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Converting all text to a standard format (lowercase, trim spaces)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Backing up a database to ensure normal operations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Database normalisation (1NF, 2NF, 3NF) eliminates redundant data by organising it into separate related tables — reducing update anomalies and improving integrity.",
+        "incorrect": "ML scaling = feature normalisation (different concept). Text standardisation = data cleansing. Backup = separate process.",
+        "examTip": "Normalisation vs denormalisation: Normalise = less storage, more joins (OLTP). Denormalise = more storage, fewer joins (OLAP/data warehouses). Trade-off between write and read performance.",
+        "relatedTopics": [
+          "database-normalisation",
+          "data-redundancy",
+          "OLTP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Database design",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-017",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a regular expression (regex) used for in data work?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Expressing SQL queries in a more readable format",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Defining patterns to search, match, extract, or validate text data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Creating regular (recurring) data extraction jobs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A standard expression language for all database vendors",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Regex defines patterns to match text — e.g., `\\d{3}-\\d{3}-\\d{4}` matches phone numbers, `^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$` matches email addresses. Used for validation and extraction.",
+        "incorrect": "Regex is a pattern matching language, not a SQL format, scheduling system, or database standard.",
+        "examTip": "Regex use cases: validate email addresses, extract dates from text, find phone numbers, clean inconsistent strings. Supported in Python (re module), SQL (REGEXP), Excel (limited).",
+        "relatedTopics": [
+          "regex",
+          "pattern-matching",
+          "text-processing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data manipulation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-018",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is descriptive statistics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Statistics that describe how data should be collected",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Statistical measures that summarise and describe the characteristics of a dataset",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Statistics used to make predictions about future events",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A description of the data collection methodology",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Descriptive statistics summarise a dataset: central tendency (mean, median, mode), spread (range, variance, standard deviation), and distribution (skewness, kurtosis).",
+        "incorrect": "Predictive statistics = inferential statistics. Collection methodology = study design.",
+        "examTip": "Descriptive vs inferential: Descriptive = describe WHAT the data shows (historical). Inferential = draw conclusions ABOUT a population from a sample (predictions/tests).",
+        "relatedTopics": [
+          "descriptive-statistics",
+          "mean",
+          "median",
+          "standard-deviation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Statistical concepts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-019",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the difference between mean, median, and mode?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mean = middle value; median = average; mode = most frequent",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Mean = average of all values; median = middle value when sorted; mode = most frequently occurring value",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They are three names for the same calculation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Mean is for numbers; median is for text; mode is for dates",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Mean = sum / count. Median = middle value in sorted list (or average of two middle values). Mode = value that appears most often. Each is a different measure of central tendency.",
+        "incorrect": "These are three distinct calculations. All are typically used with numerical data.",
+        "examTip": "When to use each: Mean = normally distributed data. Median = skewed data or outliers present (e.g., median house price). Mode = categorical data or most common value.",
+        "relatedTopics": [
+          "mean",
+          "median",
+          "mode",
+          "central-tendency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Measures of central tendency",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-020",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does standard deviation measure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The difference between the highest and lowest values in a dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The average distance of data points from the mean, indicating spread or variability",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The standard error in data collection",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The most common deviation from expected values",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Standard deviation measures how spread out the values are around the mean. Low SD = values clustered near mean. High SD = values spread widely.",
+        "incorrect": "Range = max minus min. Standard deviation is about variability around the mean, not collection errors or frequency.",
+        "examTip": "SD: small = consistent data (test scores all near 75). Large = variable data (scores from 30 to 100). Variance = SD². Know both for the exam.",
+        "relatedTopics": [
+          "standard-deviation",
+          "variance",
+          "spread"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Measures of spread",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-021",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is correlation and how does it differ from causation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Correlation proves that one variable causes another to change",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Correlation shows a statistical relationship between two variables; causation means one variable directly causes a change in another",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They are the same concept — if two things correlate, one causes the other",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Causation is a stronger form of correlation that applies to numerical data only",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Correlation = statistical association between two variables (as X increases, Y tends to increase/decrease). Causation = X directly causes Y to change. Classic example: ice cream sales and drowning correlate (both increase in summer) but ice cream doesn't cause drowning.",
+        "incorrect": "Correlation NEVER implies causation without additional evidence (controlled experiments, temporal sequence, mechanism).",
+        "examTip": "'Correlation does not imply causation' is one of the most important principles in data analysis. Confounding variables often explain correlations.",
+        "relatedTopics": [
+          "correlation",
+          "causation",
+          "statistical-relationships"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Statistical analysis",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-022",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is regression analysis used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Going back to a previous version of data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Modelling the relationship between a dependent variable and one or more independent variables to make predictions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Reducing the number of rows in a dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Comparing data across different time periods",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Regression analysis finds the mathematical relationship between variables to predict outcomes. Linear regression: Y = a + bX. Used for forecasting (predict sales from ad spend, predict temperature from season).",
+        "incorrect": "Regression is a statistical/ML technique for prediction, not version control, data reduction, or time comparison.",
+        "examTip": "Linear regression: predict continuous value. Logistic regression: predict probability/category. Both are foundational ML algorithms. R-squared measures model fit quality.",
+        "relatedTopics": [
+          "regression",
+          "linear-regression",
+          "prediction"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Predictive analysis",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-023",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is an outlier in a dataset and why does it matter?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data stored outside the main database",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A data point that differs significantly from other observations, potentially affecting analysis accuracy",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A data column that is outside the query scope",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data that has exited the data pipeline before processing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Outliers are extreme values that deviate significantly from the rest of the data. They can skew means, affect model training, and represent data errors OR genuinely important anomalies (fraud, equipment failure).",
+        "incorrect": "Outliers are extreme data VALUES, not storage locations, column scopes, or pipeline failures.",
+        "examTip": "Outlier detection: z-score (>3 SD from mean), IQR method (below Q1-1.5×IQR or above Q3+1.5×IQR), box plots visualise outliers. Investigate before removing.",
+        "relatedTopics": [
+          "outliers",
+          "anomaly-detection",
+          "data-quality"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Data analysis",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-024",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is A/B testing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Comparing version A (old) and version B (new) of a database schema",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A controlled experiment comparing two versions of something to determine which performs better based on a measurable outcome",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Testing data quality using two different validation rules",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A backup strategy using two separate storage systems",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A/B testing randomly splits users into two groups — group A gets the control (current), group B gets the variant (new) — and measures which produces a better outcome (clicks, conversions, revenue).",
+        "incorrect": "A/B testing is a statistical experiment methodology, not schema comparison, validation, or backup.",
+        "examTip": "A/B testing requires: random assignment, sufficient sample size, defined success metric, and statistical significance (p-value < 0.05). Common in web UX, marketing, and product development.",
+        "relatedTopics": [
+          "A-B-testing",
+          "controlled-experiments",
+          "hypothesis-testing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Analysis methods",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-025",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is trend analysis in data analytics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Analysing which social media trends are relevant to a business",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Examining data over time to identify patterns, directions, and changes in performance metrics",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A statistical test for measuring correlation between variables",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Tracking the most popular data analysis tools over time",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Trend analysis looks at how metrics change over time — upward trends, downward trends, seasonal patterns, cyclical patterns — helping organisations understand past performance and forecast the future.",
+        "incorrect": "Trend analysis is about time-based patterns in business metrics, not social media, correlation tests, or tool popularity.",
+        "examTip": "Trend analysis visualisations: line charts (best for showing trends over time), moving averages (smooth out noise), year-over-year comparisons. Look for: slope, seasonality, inflection points.",
+        "relatedTopics": [
+          "trend-analysis",
+          "time-series",
+          "business-analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Analysis types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-026",
+      "type": "yes-no-statements",
+      "topicId": "data-analysis",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes statistical analysis concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A p-value less than 0.05 typically indicates statistical significance in hypothesis testing.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The median is always more useful than the mean for describing a dataset.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "A confidence interval of 95% means there is a 95% probability the true population parameter falls within the interval.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "A positive correlation coefficient of 0.9 indicates a stronger relationship than 0.5.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "p < 0.05 = reject null hypothesis (significant). 95% CI = 95% of similarly constructed intervals contain the true parameter. Correlation 0.9 > 0.5 (stronger linear relationship).",
+        "incorrect": "Median vs mean: median is better for skewed data, mean is fine for symmetric distributions. Neither is always better — it depends on the data.",
+        "examTip": "Correlation coefficient (r): 0 = no relationship, ±0.5 = moderate, ±0.7 = strong, ±0.9+ = very strong. Sign indicates direction.",
+        "relatedTopics": [
+          "p-value",
+          "confidence-interval",
+          "correlation-coefficient"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Statistical inference",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-027",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data blending?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mixing clean and dirty data to test data quality tools",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Combining data from multiple sources into a single view for analysis, even when the sources have different structures",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A method for anonymising data by mixing records",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Blending SQL and NoSQL databases for unified storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data blending combines data from different sources (databases, spreadsheets, APIs) into a unified view for analysis — often used in BI tools like Tableau or Looker when a full data warehouse join isn't possible.",
+        "incorrect": "Data blending is an analysis integration technique, not a data quality test, anonymisation method, or storage approach.",
+        "examTip": "Data blending is common in BI tools. Tableau calls it 'Data Blending' (secondary data source linked to primary). Different from a SQL JOIN — it's a left join equivalent at the aggregated level.",
+        "relatedTopics": [
+          "data-blending",
+          "data-integration",
+          "BI-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Data integration",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-028",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company's sales have been declining for the past 6 months. The data analyst is asked to find out why. They have sales data, marketing spend data, website traffic data, and customer support ticket data.",
+      "questionText": "What analytical approach should the analyst take?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Look only at sales data and report the decline without investigating causes",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Use diagnostic analytics — blend all data sources, look for correlations, and identify which factors changed when sales declined",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Use predictive analytics to forecast when sales will recover",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Survey all customers directly without using existing data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Diagnostic analytics answers 'Why did this happen?' by drilling into multiple data sources to find root causes — looking for changes in correlated variables (traffic dropped? marketing spend cut? support tickets spiked?) aligned with the sales decline.",
+        "incorrect": "Describing the decline = descriptive. Forecasting recovery = predictive. Surveys without data = ignoring valuable existing information.",
+        "examTip": "Analytics types: Descriptive (what happened?), Diagnostic (why did it happen?), Predictive (what will happen?), Prescriptive (what should we do?). The exam tests knowing when to use each.",
+        "relatedTopics": [
+          "diagnostic-analytics",
+          "root-cause-analysis",
+          "data-blending"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Analytics types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-029",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is segmentation analysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dividing a database into separate physical segments for performance",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Dividing a population into distinct groups based on shared characteristics for targeted analysis",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Segmenting a large dataset into smaller files for processing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A network segmentation analysis for cybersecurity",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Segmentation divides customers, users, or data into groups with similar characteristics (demographics, behaviour, value) to understand differences between groups and tailor strategies for each.",
+        "incorrect": "Segmentation analysis is a business analytics technique, not database partitioning, file splitting, or cybersecurity.",
+        "examTip": "Customer segmentation examples: RFM analysis (Recency, Frequency, Monetary), demographic segmentation, behavioural segmentation. Used in marketing, product, and customer success.",
+        "relatedTopics": [
+          "segmentation",
+          "customer-analysis",
+          "clustering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Analysis methods",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-030",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a pivot table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A table that automatically pivots (rotates) the database schema",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An interactive tool that summarises, groups, and reorganises data to reveal patterns and trends",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A security feature that pivots access permissions between users",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A chart that shows pivot points in stock price movements",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Pivot tables allow users to dynamically rearrange and summarise data — choosing rows, columns, values, and filters to quickly explore data from different angles without writing SQL.",
+        "incorrect": "Pivot tables are data analysis tools in spreadsheets and BI tools, not database rotation, security, or financial charts.",
+        "examTip": "Pivot table in Excel: drag fields to rows, columns, values, filters. Change SUM to COUNT/AVERAGE instantly. Great for quick cross-tabulation analysis.",
+        "relatedTopics": [
+          "pivot-table",
+          "data-summarisation",
+          "cross-tabulation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Data manipulation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-031",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which chart type is BEST for showing trends over time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pie chart",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Line chart",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Scatter plot",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Histogram",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Line charts excel at showing how values change over time — the continuous line visually communicates trends, rates of change, and patterns over a time axis.",
+        "incorrect": "Pie = part-to-whole proportions. Scatter = relationship between two variables. Histogram = distribution of a single variable.",
+        "examTip": "Chart selection: Line (trends over time), Bar (comparisons between categories), Pie (part-to-whole, max 5-6 slices), Scatter (correlation), Histogram (distribution), Box plot (distribution + outliers).",
+        "relatedTopics": [
+          "line-chart",
+          "data-visualisation",
+          "chart-selection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-032",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "When is a bar chart MOST appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Showing the distribution of a continuous numerical variable",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Comparing values across discrete categories",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Showing how a whole is divided into parts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Displaying the relationship between two continuous variables",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Bar charts compare discrete categories side by side — revenue by region, sales by product, count by department. Horizontal bars work well for long category names.",
+        "incorrect": "Distribution = histogram. Part-to-whole = pie/stacked bar. Two continuous variables = scatter plot.",
+        "examTip": "Bar chart tips: start y-axis at zero to avoid misleading comparisons. Sort bars by value for easier reading. Use horizontal bars when category labels are long.",
+        "relatedTopics": [
+          "bar-chart",
+          "categorical-data",
+          "comparison"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-033",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does a scatter plot show?",
+      "options": [
+        {
+          "id": "A",
+          "text": "How a single variable changes over time",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The relationship or correlation between two continuous variables",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The proportion of each category within a total",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The distribution of values within a single variable",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A scatter plot plots individual data points as dots using two axes (X and Y), revealing patterns, correlations, and clusters between two continuous variables.",
+        "incorrect": "Time trend = line chart. Proportions = pie chart. Single variable distribution = histogram.",
+        "examTip": "Scatter plot patterns: upward trend = positive correlation, downward = negative, random scatter = no correlation. Add a trend line (regression line) to quantify the relationship.",
+        "relatedTopics": [
+          "scatter-plot",
+          "correlation",
+          "bivariate-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-034",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a histogram used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Comparing values between different categories",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Showing the frequency distribution of a continuous numerical variable",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Displaying trends over time",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Showing historical stock market data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A histogram divides a continuous variable into equal-width bins and counts how many values fall in each bin — revealing the distribution shape (normal, skewed, bimodal, etc.).",
+        "incorrect": "Category comparison = bar chart. Trends = line chart. Histogram ≠ stock history chart (despite the similar look).",
+        "examTip": "Histogram vs bar chart: Histogram = continuous data with bins (no gaps between bars). Bar chart = discrete categories (gaps between bars). They look similar but represent different data types.",
+        "relatedTopics": [
+          "histogram",
+          "distribution",
+          "frequency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-035",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does a heat map visualise?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Temperature data from weather sensors only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The magnitude of values across two dimensions using colour intensity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Network traffic heat on a server topology diagram",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The 'hot' (high priority) items in a project management backlog",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Heat maps use colour gradients to represent value magnitude across a matrix or geographic area — darker/warmer colours = higher values. Common uses: website click maps, correlation matrices, geographic data.",
+        "incorrect": "Heat maps have broad applications beyond temperature. They're for any 2D magnitude data.",
+        "examTip": "Heat map uses: correlation matrix (show which variables correlate), website heatmaps (where users click), geographic heat maps (density of events by location), time-day matrices.",
+        "relatedTopics": [
+          "heat-map",
+          "colour-encoding",
+          "matrix-visualisation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-036",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What information does a box plot (box and whisker plot) provide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A single bar representing the average value for each category",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A five-number summary showing minimum, Q1, median, Q3, maximum and highlighting outliers",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A box representing the percentage of data in each category",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The frequency of each value plotted as a box",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A box plot shows: minimum, lower quartile (Q1), median (Q2), upper quartile (Q3), maximum — plus outliers plotted as individual dots. Great for comparing distributions across groups.",
+        "incorrect": "Box plots show distribution statistics, not averages, percentages, or frequency histograms.",
+        "examTip": "Box plot anatomy: box = IQR (Q1 to Q3), line in box = median, whiskers = min/max (within 1.5×IQR), dots outside whiskers = outliers. Compare multiple groups side by side.",
+        "relatedTopics": [
+          "box-plot",
+          "quartiles",
+          "IQR",
+          "outliers"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-037",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a waterfall chart used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Showing cumulative rainfall over a period",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Showing how an initial value increases and decreases through a series of positive and negative contributions to reach a final value",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Displaying a sequential process flow like a waterfall methodology",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A bar chart where bars cascade from highest to lowest",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Waterfall charts show how a starting value is affected by a series of intermediate positive and negative changes — ideal for financial analysis (budget vs actuals, profit/loss breakdown, revenue bridge).",
+        "incorrect": "Waterfall charts are financial/business analytics tools, not rainfall, process flows, or sorted bar charts.",
+        "examTip": "Waterfall chart use cases: P&L analysis (revenue → expenses → net profit), budget variance (planned vs actual), inventory changes (starting inventory → adds → removals → ending).",
+        "relatedTopics": [
+          "waterfall-chart",
+          "financial-analysis",
+          "bridge-chart"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-038",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of data storytelling?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creating fictional narratives using data as inspiration",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Communicating insights from data in a compelling narrative that drives understanding and action",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Documenting the technical story of how data was collected",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A data quality technique using storytelling to identify anomalies",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data storytelling combines data, visualisations, and narrative to communicate insights in a way that is engaging, understandable, and actionable for the audience — especially non-technical stakeholders.",
+        "incorrect": "Data storytelling is about communicating insights effectively, not fiction writing, technical documentation, or quality checking.",
+        "examTip": "Data storytelling elements: data (what the numbers say), visuals (make it easy to understand), narrative (context, significance, recommended action). Answer: so what? and now what?",
+        "relatedTopics": [
+          "data-storytelling",
+          "communication",
+          "data-presentation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Communicating with data",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-039",
+      "type": "yes-no-statements",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it represents a visualisation best practice.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Using too many colours in a chart can make it harder to interpret.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A pie chart with 15 slices is an effective way to show proportions.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Truncating the y-axis at a non-zero value can make differences appear more dramatic than they are.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Adding gridlines always improves chart readability.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Too many colours = visual noise. 15-slice pie = impossible to interpret (max ~5-6). Non-zero y-axis = visual distortion of magnitude. Excessive gridlines = clutter (use sparingly).",
+        "incorrect": "Pie charts should be limited to 5-6 slices max. Gridlines help when values matter but can clutter simple categorical charts.",
+        "examTip": "Visualisation pitfalls: too many colours, truncated axes, misleading scales, 3D effects (distort proportions), too much data in one chart. Less is more.",
+        "relatedTopics": [
+          "visualisation-best-practices",
+          "chart-design",
+          "misleading-charts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Visualisation design",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-040",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An analyst needs to present sales performance by region AND by product category simultaneously to identify which region-product combinations are performing best.",
+      "questionText": "Which chart type is MOST appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A single bar chart showing total sales by region",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A grouped bar chart or heat map showing region × product category combinations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A pie chart for each region showing product breakdown",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A line chart showing sales trends for each region",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A grouped bar chart shows multiple categories (products) for each group (region) side by side. A heat map is even more effective for identifying patterns across a region × product matrix.",
+        "incorrect": "Single bar = loses product dimension. Multiple pies = hard to compare across charts. Line chart = time dimension not requested.",
+        "examTip": "Two categorical dimensions + one measure = grouped/stacked bar chart OR heat map. Heat maps work especially well when there are many rows and columns.",
+        "relatedTopics": [
+          "grouped-bar-chart",
+          "heat-map",
+          "multidimensional-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Choosing visualisations",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-041",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a KPI (Key Performance Indicator)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A specific type of database index for fast queries",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A measurable value that demonstrates how effectively an organisation is achieving key business objectives",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A keyboard shortcut for performing analysis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A data privacy indicator measuring compliance",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "KPIs are quantifiable measures tied to specific business objectives — e.g., monthly revenue, customer churn rate, Net Promoter Score, average resolution time. They appear prominently on dashboards.",
+        "incorrect": "KPI is a business performance measurement concept, not a database term, keyboard shortcut, or privacy metric.",
+        "examTip": "Good KPIs are: SMART (Specific, Measurable, Achievable, Relevant, Time-bound). Dashboards should focus on 5-7 critical KPIs rather than overwhelming with 50 metrics.",
+        "relatedTopics": [
+          "KPI",
+          "business-metrics",
+          "dashboard"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Dashboard design",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-042",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between a dashboard and a report?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dashboards are interactive; reports are always printed",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Dashboards provide a real-time overview of key metrics; reports provide detailed static analysis of a specific topic",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Reports are created by analysts; dashboards are created by data engineers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are the same — just different names in different tools",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Dashboards: real-time or near-real-time KPI overview, high-level, interactive, updated continuously (operational). Reports: detailed analysis of a specific question/period, static snapshot, distributed on a schedule.",
+        "incorrect": "Both can be digital or printed. Either can be created by analysts or engineers. They serve different purposes.",
+        "examTip": "Dashboard = at-a-glance operational monitoring (think car dashboard). Report = deep dive into specific questions (think monthly financial report). Both are essential in a data-driven org.",
+        "relatedTopics": [
+          "dashboard",
+          "report",
+          "BI-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Dashboard vs report",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-043",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is data governance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Government regulations about data collection",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The framework of policies, processes, and standards that ensure data is managed, used, and protected appropriately across an organisation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A government-run data storage service",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The technical tools used to enforce database access controls",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data governance defines who can access data, how it is classified, how quality is maintained, what policies govern its use, and how it is protected — ensuring data is a trusted, managed asset.",
+        "incorrect": "Data governance is an organisational framework, not a government body, storage service, or specific tool.",
+        "examTip": "Data governance components: data catalogue, data dictionary, data quality rules, access policies, data lineage, stewardship roles (data owner, steward, custodian).",
+        "relatedTopics": [
+          "data-governance",
+          "data-management",
+          "data-policy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Data governance concepts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-044",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a data dictionary?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A reference book of data science and analytics terminology",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A centralised document defining the meaning, format, source, and business rules for each data element",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A database that translates data between different systems",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A lookup table used to decode abbreviations in data fields",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A data dictionary documents each data element — its name, definition, data type, allowed values, source system, owner, and business rules — ensuring everyone uses and understands data consistently.",
+        "incorrect": "A data dictionary is internal documentation for data assets, not a general terminology book, translation system, or simple lookup table.",
+        "examTip": "Data dictionary vs data catalogue: dictionary = technical metadata (column-level: data type, length). Catalogue = higher-level asset inventory (datasets, reports, owners, lineage).",
+        "relatedTopics": [
+          "data-dictionary",
+          "metadata",
+          "data-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Data governance artifacts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-045",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are the five dimensions of data quality?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fast, big, cheap, accurate, secure",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Accuracy, completeness, consistency, timeliness, and uniqueness",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Structured, unstructured, semi-structured, real-time, historical",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Collect, store, process, analyse, visualise",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data quality dimensions: Accuracy (correct values), Completeness (no missing values), Consistency (same values across systems), Timeliness (data is current), Uniqueness (no duplicates).",
+        "incorrect": "These are data quality measurement dimensions, not speed metrics, data types, or pipeline stages.",
+        "examTip": "Data quality dimensions: Accuracy (is it correct?), Completeness (is it all there?), Consistency (does it agree across sources?), Timeliness (is it current?), Uniqueness (no duplicates?). Also: Validity (does it conform to rules?).",
+        "relatedTopics": [
+          "data-quality",
+          "accuracy",
+          "completeness",
+          "consistency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Data quality",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-046",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data lineage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The ancestry and family history stored in genealogy databases",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The documentation of where data came from, how it was transformed, and where it is used",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A chronological list of all changes made to a database",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The direct line of data ownership from source to analyst",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data lineage tracks the complete journey of data: source system → ETL transformations → data warehouse → reports. Enables impact analysis (if source changes, what breaks?) and auditing.",
+        "incorrect": "Data lineage is about data flow and transformation tracking, not genealogy, change logs, or ownership hierarchy.",
+        "examTip": "Data lineage use cases: regulatory compliance (GDPR, BCBS 239), debugging data issues (where did that wrong number come from?), impact analysis (if I change X, what reports will be affected?).",
+        "relatedTopics": [
+          "data-lineage",
+          "data-traceability",
+          "data-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Data governance",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-047",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is personally identifiable information (PII) in the context of data governance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data that identifies a product or service in a database",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Any data that could be used alone or in combination to identify a specific individual",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Personal preferences stored in user profiles",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An identification number assigned to database records",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "PII includes: name, SSN, date of birth, address, phone number, email, IP address, biometric data — any data that can identify an individual. Subject to GDPR, CCPA, HIPAA, and other privacy laws.",
+        "incorrect": "PII specifically refers to personal information about PEOPLE, not products, preferences, or database IDs.",
+        "examTip": "PII protection: collect minimum necessary, encrypt at rest and in transit, restrict access, anonymise/pseudonymise when possible, have a data breach response plan.",
+        "relatedTopics": [
+          "PII",
+          "data-privacy",
+          "GDPR",
+          "data-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Data privacy",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-048",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is master data management (MDM)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A backup strategy for managing master copies of databases",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A discipline for creating a single trusted version of key business data (customers, products, employees) across all systems",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A tool for managing database administrator (master) accounts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The process of mastering data analysis skills",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "MDM creates a 'golden record' — a single, authoritative, trusted version of critical business entities (customer, product, supplier, location) that all systems reference, eliminating inconsistencies.",
+        "incorrect": "MDM is about data consistency for business entities across systems, not backups, admin accounts, or training.",
+        "examTip": "MDM problem it solves: Customer '123' in CRM has different name/address than in billing system. MDM creates one golden record that both systems use as the source of truth.",
+        "relatedTopics": [
+          "MDM",
+          "golden-record",
+          "data-consistency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Data management",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-049",
+      "type": "yes-no-statements",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes data governance concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A data steward is responsible for defining and enforcing data quality standards for a specific data domain.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Data anonymisation and data pseudonymisation are the same technique.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Role-based access control (RBAC) restricts data access based on job function.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "A data catalogue is used only for cataloguing physical file storage locations.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Data stewards enforce data quality for their domain. RBAC = access by role. Data catalogue = metadata about data assets (not just file locations). Anonymisation vs pseudonymisation: anonymised cannot be re-identified (irreversible), pseudonymised can be reversed with a key.",
+        "incorrect": "Anonymisation = permanent (no re-identification possible). Pseudonymisation = reversible with the key (still considered personal data under GDPR).",
+        "examTip": "GDPR distinction: anonymised data = not personal data (outside scope). Pseudonymised data = still personal data (within GDPR scope but lower risk).",
+        "relatedTopics": [
+          "data-steward",
+          "anonymisation",
+          "RBAC",
+          "data-catalogue"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Data governance roles",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-050",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An analyst discovers that the same customer appears 47 times in the CRM database with slightly different name spellings, different email addresses, and different account numbers. This is causing inflated customer count metrics.",
+      "questionText": "What data quality issue is this and how should it be addressed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data accuracy issue — correct the spelling errors only",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Data uniqueness/duplication issue — implement deduplication logic and MDM to create a golden customer record",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Data completeness issue — the missing fields need to be filled in",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data timeliness issue — the records need to be refreshed from the source",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "This is a classic data uniqueness/duplicate issue. Deduplication matching algorithms (fuzzy matching on name/email/address) identify duplicates, and MDM creates a single golden record for the customer, merging the 47 records into one.",
+        "incorrect": "Spelling errors are a symptom but the core issue is duplicate records. Missing fields = completeness. Stale data = timeliness. This is uniqueness/deduplication.",
+        "examTip": "Deduplication tools: fuzzy matching, deterministic matching (exact match on key), probabilistic matching (weighted score). MDM prevents future duplicates at the source system level.",
+        "relatedTopics": [
+          "deduplication",
+          "data-uniqueness",
+          "MDM",
+          "data-quality"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Data quality issues",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-051",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of the SQL HAVING clause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A synonym for WHERE — both filter rows before grouping",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Filters grouped data after GROUP BY, allowing conditions on aggregate results",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Specifies which columns to include in the GROUP BY",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Controls which columns are visible in the SELECT output",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "HAVING filters the results after GROUP BY — e.g., `HAVING COUNT(*) > 5` keeps only groups with more than 5 rows. WHERE filters individual rows BEFORE grouping.",
+        "incorrect": "WHERE and HAVING serve different purposes at different stages of query execution.",
+        "examTip": "SQL execution order: FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY. WHERE filters rows, HAVING filters groups. Both are needed in different scenarios.",
+        "relatedTopics": [
+          "HAVING",
+          "GROUP-BY",
+          "SQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-052",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data deduplication in data processing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creating backup copies of important data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The process of identifying and removing duplicate records from a dataset",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Splitting a large file into duplicate smaller files for processing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Compressing data by removing duplicate storage blocks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data deduplication finds and removes exact or near-duplicate records — preventing double counting and ensuring each entity appears only once in the dataset.",
+        "incorrect": "Deduplication removes duplicates, not creates backups, splits files, or compresses storage.",
+        "examTip": "Dedup methods: exact match (identical rows), fuzzy match (similar but not identical — handles typos, variations). Tools: SQL DISTINCT, pandas drop_duplicates(), MDM platforms.",
+        "relatedTopics": [
+          "deduplication",
+          "data-quality",
+          "data-cleansing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Data preparation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-053",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is cohort analysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Analysing data quality within a cohort (team) of data engineers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Analysing groups of users/customers who share a common characteristic or experience within a defined time period",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A statistical test comparing multiple groups simultaneously",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Comparing similar datasets from different organisations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Cohort analysis groups users by a shared event/characteristic (e.g., users who signed up in January 2024) and tracks their behaviour over time — revealing retention, churn, and lifecycle patterns.",
+        "incorrect": "Cohort analysis is a customer/user analytics technique, not a team activity, statistical test, or cross-org comparison.",
+        "examTip": "Classic cohort analysis: retention chart showing % of users from each signup month still active over time. Useful for: SaaS churn, e-commerce repeat purchases, product engagement.",
+        "relatedTopics": [
+          "cohort-analysis",
+          "retention",
+          "user-behaviour"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Analysis methods",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-054",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between descriptive, diagnostic, predictive, and prescriptive analytics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are the same — just different names used by different vendors",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Descriptive (what happened), Diagnostic (why it happened), Predictive (what will happen), Prescriptive (what should we do)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Prescriptive is the simplest; descriptive is the most complex",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Only descriptive uses historical data; the others use real-time data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The four analytics types form a maturity spectrum: Descriptive → Diagnostic → Predictive → Prescriptive. Each builds on the previous, increasing complexity and business value.",
+        "incorrect": "They are distinctly different types. Prescriptive is the most advanced. All use historical data in different ways.",
+        "examTip": "Analytics maturity: Descriptive (rearview mirror), Diagnostic (root cause), Predictive (forecast), Prescriptive (decision recommendation/automation). Most orgs are in descriptive/diagnostic.",
+        "relatedTopics": [
+          "analytics-types",
+          "descriptive",
+          "predictive",
+          "prescriptive"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Analytics spectrum",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-055",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data concatenation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Splitting a data field into multiple separate columns",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Combining two or more strings or datasets into a single value or dataset",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Concatenating multiple SQL queries into a single execution plan",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Compressing data by removing concatenated redundant values",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Concatenation joins values together — string concatenation merges 'John' + ' ' + 'Smith' = 'John Smith'. Dataset concatenation stacks rows from multiple tables into one.",
+        "incorrect": "Splitting = parsing/splitting. SQL execution plan = different concept. Compression = different technique.",
+        "examTip": "SQL CONCAT('First Name', ' ', 'Last Name'). Python: f'{first} {last}' or f-string. SQL UNION ALL concatenates datasets (stacks rows). Key for combining name parts, full addresses, etc.",
+        "relatedTopics": [
+          "concatenation",
+          "string-manipulation",
+          "data-transformation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data manipulation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-056",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a treemap used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mapping the physical location of data trees (file system structures)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Displaying hierarchical data as nested rectangles where size represents quantity",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A diagram showing the decision tree in a machine learning model",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A map showing which business units have data access",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Treemaps show hierarchical data using nested rectangles — each rectangle's size is proportional to its value. Useful for showing part-to-whole across multiple levels (e.g., revenue by region → country → product).",
+        "incorrect": "Treemaps are data visualisations for hierarchical proportions, not file systems, ML models, or access maps.",
+        "examTip": "Treemap use cases: disk space usage (folder structure), portfolio allocation (asset classes → assets), company revenue (division → department → product). Good alternative to nested pie charts.",
+        "relatedTopics": [
+          "treemap",
+          "hierarchical-data",
+          "part-to-whole"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-057",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a gauge chart (speedometer chart) typically used for on dashboards?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Showing trends in production volumes over time",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Displaying a single KPI value relative to a target or threshold",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Comparing multiple metrics across different time periods",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Gauging customer sentiment from survey data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Gauge charts display a single metric value on a dial (like a speedometer), showing whether the value is in a low (red), moderate (yellow), or target (green) zone — ideal for high-level KPI status.",
+        "incorrect": "Gauge charts are for single-value KPI status, not trends, comparisons, or sentiment analysis.",
+        "examTip": "Gauge charts are often criticised for being 'chartjunk' — they use a lot of space to show one number. A simple metric card with conditional formatting is often more efficient.",
+        "relatedTopics": [
+          "gauge-chart",
+          "KPI",
+          "dashboard"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-058",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is the interquartile range (IQR) and why is it useful?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The range between the highest and lowest values",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The range of the middle 50% of data (Q3 - Q1), less sensitive to outliers than range",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A quarterly metric used to measure business performance",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The average of all values within each quartile",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IQR = Q3 - Q1, measuring the spread of the middle 50% of data. Because it excludes the extreme 25% on each end, it's robust to outliers — much more reliable than simple range for describing spread.",
+        "incorrect": "Range = max - min (affected by outliers). IQR is a statistical measure, not quarterly business metric.",
+        "examTip": "IQR in outlier detection: outlier if < Q1 - 1.5×IQR or > Q3 + 1.5×IQR. Used in box plots. Five-number summary: Min, Q1, Median, Q3, Max.",
+        "relatedTopics": [
+          "IQR",
+          "quartiles",
+          "outlier-detection",
+          "spread"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Statistical measures",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-059",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data masking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hiding data visualisations behind a login screen",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Obscuring sensitive data by replacing it with fictitious but realistic-looking values for non-production use",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Applying a filter mask to query results in SQL",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A firewall technique for masking data packets",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data masking replaces sensitive data (SSNs, credit card numbers) with realistic-looking but fake data — so developers and testers can use realistic datasets without accessing real personal information.",
+        "incorrect": "Data masking is a privacy protection technique for non-production environments, not a UI restriction, SQL filter, or network security tool.",
+        "examTip": "Masking types: static masking (permanent replacement), dynamic masking (real-time substitution based on user role). Used in: dev/test environments, analytics on anonymised data.",
+        "relatedTopics": [
+          "data-masking",
+          "data-anonymisation",
+          "privacy"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Data privacy techniques",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-060",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between OLTP and OLAP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "OLTP is for analysis; OLAP is for transactions",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "OLTP handles day-to-day transactional operations; OLAP handles complex analytical queries over historical data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They are two names for the same database type",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "OLTP is cloud-based; OLAP is always on-premises",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "OLTP (Online Transaction Processing) = operational databases handling INSERT/UPDATE/DELETE (e.g., orders, payments). OLAP (Online Analytical Processing) = data warehouses handling complex SELECT queries for BI.",
+        "incorrect": "OLTP and OLAP serve opposite purposes — one for operations, one for analysis. Both can be cloud or on-premises.",
+        "examTip": "OLTP: many small transactions, normalised, current data. OLAP: few large queries, denormalised, historical data. Don't run heavy BI queries on OLTP — it impacts operations.",
+        "relatedTopics": [
+          "OLTP",
+          "OLAP",
+          "data-warehouse",
+          "database-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Database systems",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-061",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does the SQL DISTINCT keyword do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Identifies distinct (unusual) values that may be outliers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Returns only unique values, removing duplicate rows from the result set",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Marks specific columns as distinct from others for security purposes",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Compares two columns to find distinct differences between them",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SELECT DISTINCT returns only unique rows — if the same value appears multiple times, it appears only once in the result. Useful for finding unique values or deduplicating outputs.",
+        "incorrect": "DISTINCT removes duplicate rows from results — it's not an outlier detector, security marker, or comparison operator.",
+        "examTip": "SELECT DISTINCT country FROM customers — returns each country once regardless of how many customers are from that country. COUNT(DISTINCT col) counts unique values.",
+        "relatedTopics": [
+          "SQL-DISTINCT",
+          "deduplication",
+          "SQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-062",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a data-driven decision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A decision made by a data engineer rather than a business user",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A decision based on the analysis of relevant data rather than intuition or assumption alone",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A decision that only considers quantitative data, not qualitative inputs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A decision made automatically by a machine learning model",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data-driven decisions use evidence from data analysis to guide choices — reducing bias, improving accuracy, and providing measurable outcomes to evaluate success.",
+        "incorrect": "Data-driven decisions are made by humans (or automated systems) based on evidence, and can incorporate both quantitative and qualitative data.",
+        "examTip": "Data-driven culture requires: accessible data, trusted data quality, analytical skills, and leadership that values evidence over opinion. Data informs decisions; it rarely makes them entirely.",
+        "relatedTopics": [
+          "data-driven-decisions",
+          "business-analytics",
+          "evidence-based"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Business analytics",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-063",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a data retention policy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A policy for retaining (keeping) the best data analysts in the organisation",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A policy defining how long different types of data must be kept and when they should be deleted or archived",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A setting that determines how long database connections are maintained",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An SLA for how quickly data must be retrieved from storage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data retention policies specify minimum and maximum storage durations for different data types — driven by legal requirements (GDPR, HIPAA), business needs, and storage cost management.",
+        "incorrect": "Data retention is about how long to keep data, not staff retention, connection timeouts, or retrieval speed.",
+        "examTip": "Retention examples: financial records = 7 years (tax law), employee records = employment + several years, email = varies by policy/regulation, backup data = 30/90/365 days. Purge after retention period.",
+        "relatedTopics": [
+          "data-retention",
+          "data-lifecycle",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Data governance policies",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-064",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An analyst wants to find all customers from New York who made a purchase greater than $500 in the last 30 days.",
+      "questionText": "Which SQL query correctly retrieves this data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SELECT * FROM customers WHERE state = 'NY' OR amount > 500 OR date > DATEADD(day, -30, GETDATE())",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SELECT * FROM orders JOIN customers ON orders.customer_id = customers.id WHERE customers.state = 'NY' AND orders.amount > 500 AND orders.date >= DATEADD(day, -30, GETDATE())",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SELECT * FROM customers HAVING state = 'NY' AND amount > 500",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SELECT state, amount FROM customers GROUP BY state HAVING state = 'NY' AND amount > 500",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The correct query JOINs orders and customers tables, uses AND (not OR) to combine all three conditions, and uses a date function to filter the last 30 days.",
+        "incorrect": "OR would return customers from NY OR with amount > 500 — too broad. HAVING is for post-aggregation filtering, not row-level filtering. GROUP BY without aggregation is incorrect.",
+        "examTip": "Multiple filter conditions: use AND (all conditions must be true) vs OR (any condition is true). JOIN multiple tables when data is spread across tables. Date functions vary by SQL dialect.",
+        "relatedTopics": [
+          "SQL-AND-OR",
+          "SQL-JOIN",
+          "date-filtering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL queries",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-065",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a Pareto chart?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A chart named after the data analyst Pareto showing project timelines",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A combined bar and line chart showing categories by frequency (descending) plus cumulative percentage, based on the 80/20 rule",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A chart showing the parallel paths in a project plan",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A scatter plot variant for quality control analysis",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A Pareto chart combines a descending bar chart with a cumulative line chart, illustrating the Pareto principle (80/20 rule) — showing that ~80% of problems come from ~20% of causes.",
+        "incorrect": "The Pareto chart is named after Vilfredo Pareto (Italian economist who observed the 80/20 principle). It's a quality management tool, not a timeline or scatter plot.",
+        "examTip": "Pareto chart in quality control: identify the 20% of defect types causing 80% of problems. Focus improvement efforts where they'll have the most impact.",
+        "relatedTopics": [
+          "Pareto-chart",
+          "80-20-rule",
+          "quality-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Specialised charts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-066",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is forecasting in the context of data analytics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reporting historical data in a forward-facing (future-focused) format",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Using historical data patterns and statistical/ML models to estimate future values",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Creating weather forecast-style probability ranges for business metrics",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The process of formatting data for future use",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Forecasting uses historical patterns to predict future values — time series forecasting (ARIMA, exponential smoothing), regression-based forecasting, or ML models (XGBoost, neural networks).",
+        "incorrect": "Forecasting is quantitative prediction of future values, not historical reporting, weather analogies, or data formatting.",
+        "examTip": "Forecasting components: trend (long-term direction), seasonality (regular patterns), cyclicality (longer economic cycles), irregular (random noise). Remove seasonality before trend analysis.",
+        "relatedTopics": [
+          "forecasting",
+          "time-series",
+          "predictive-analytics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Predictive analysis",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-067",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between data classification and data categorisation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are the same concept with different names",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Data classification assigns sensitivity levels (public, confidential); data categorisation groups data by type or subject matter (financial, HR, marketing)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Classification is for structured data; categorisation is for unstructured data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Categorisation is more secure than classification",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Classification = sensitivity/security levels (Public, Internal, Confidential, Restricted). Categorisation = subject matter grouping (Financial Data, HR Data, Customer Data). Both are needed for complete data governance.",
+        "incorrect": "These are distinct but complementary concepts. Both apply to structured and unstructured data.",
+        "examTip": "Classification drives security controls (who can access). Categorisation drives data management (where it's stored, retention rules, who owns it). Apply both to every data asset.",
+        "relatedTopics": [
+          "data-classification",
+          "data-categorisation",
+          "data-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Data governance",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-068",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data parsing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dividing a dataset into training and test sets for machine learning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Extracting and interpreting specific pieces of information from raw data based on rules or patterns",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A billing process for calculating the cost of cloud data storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Compressing data files to reduce their size",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Parsing extracts meaningful components from raw data — e.g., parsing a full address string into street, city, state, zip; parsing a JSON response to extract specific fields; parsing dates from text.",
+        "incorrect": "Parsing is data extraction/interpretation, not ML splitting, billing, or compression.",
+        "examTip": "Parsing examples: parse CSV rows into columns, parse HTML to extract text, parse JSON to extract values, parse log lines to extract timestamps and error codes. Essential data prep skill.",
+        "relatedTopics": [
+          "data-parsing",
+          "data-extraction",
+          "data-transformation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data manipulation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-069",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a data schema?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A diagram showing physical data centre architecture",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The structure that defines how data is organised — tables, columns, data types, and relationships",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A security scheme for protecting database access",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A plan for migrating data between systems",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A schema defines the blueprint of a database — what tables exist, what columns each table has, their data types, constraints (NOT NULL, UNIQUE), and relationships (foreign keys). Schema-on-write = defined before data entry (RDBMS). Schema-on-read = applied when data is read (data lake).",
+        "incorrect": "Schema is the data structure definition, not physical architecture, security, or migration plan.",
+        "examTip": "Star schema (data warehouse): central fact table surrounded by dimension tables. Snowflake schema: normalised dimensions. Both are common data warehouse designs.",
+        "relatedTopics": [
+          "data-schema",
+          "schema-on-write",
+          "schema-on-read"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Data structures",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-070",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An e-commerce company's data shows that customers who visited 3+ pages convert at a 12% rate, while those visiting 1-2 pages convert at 2%. The marketing team concludes that forcing users to visit more pages will increase conversions.",
+      "questionText": "What is wrong with this conclusion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The sample size is too small to draw conclusions",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The team is confusing correlation with causation — interested users naturally visit more pages AND convert more, but forcing page visits won't cause more conversions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The conversion rates are too different to be statistically significant",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The analysis is correct — more page visits directly cause higher conversions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "This is a classic correlation-causation fallacy. Intent/interest is the confounding variable — genuinely interested customers both visit more pages AND convert more. Artificially adding page steps (friction) would likely REDUCE conversions.",
+        "incorrect": "The issue is causal reasoning, not sample size or statistical significance. The data shows correlation, not causation.",
+        "examTip": "Correlation ≠ causation. Always ask: is there a confounding variable? Could the relationship be reversed? This is one of the most tested concepts on Data+ and in data analytics generally.",
+        "relatedTopics": [
+          "correlation-causation",
+          "confounding-variables",
+          "analytical-thinking"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.2 Statistical interpretation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-071",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a sparkline?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A bright highlight applied to important cells in a spreadsheet",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A miniature chart embedded within a cell or table to show trends without taking up chart space",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A line chart with animated sparkling effects for presentations",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A type of electrical spark chart used in manufacturing data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sparklines are tiny, word-sized charts embedded inline in text or tables — showing trends at a glance without requiring a full chart. Common in Excel and BI dashboards.",
+        "incorrect": "Sparklines are miniature charts, not cell formatting, animations, or manufacturing charts.",
+        "examTip": "Sparklines in Excel: Insert → Sparklines → Line/Column/Win-Loss. Great for showing 12 months of trends in a table alongside text data.",
+        "relatedTopics": [
+          "sparklines",
+          "miniature-charts",
+          "dashboard"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-072",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the role of a data steward?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A technical role responsible for building ETL pipelines",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A business role responsible for ensuring data quality, defining standards, and managing data for a specific domain",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A security role responsible for encrypting all company data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A legal role responsible for data privacy compliance",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A data steward is a business-focused role (not purely technical) — they define and enforce data quality standards, manage data definitions in the data dictionary, and act as the subject matter expert for their data domain.",
+        "incorrect": "Data stewards are business representatives for data quality and governance, not ETL engineers, security specialists, or legal counsel.",
+        "examTip": "Data governance roles: Data Owner (accountable, senior business owner), Data Steward (day-to-day quality management), Data Custodian (technical storage/security), Data Consumer (uses data).",
+        "relatedTopics": [
+          "data-steward",
+          "data-governance-roles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Data governance roles",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-073",
+      "type": "ordering",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the data preparation steps in the correct order for a typical data analysis project.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Profile the data to understand its structure and quality",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Clean the data — handle nulls, duplicates, and format inconsistencies",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Transform and enrich the data — create calculated fields, join tables",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Validate the cleaned data against expected outcomes",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Load the prepared data into the analysis tool or warehouse",
+          "correctPosition": 5
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Data prep order: Profile → Clean → Transform → Validate → Load. Profiling first reveals what needs cleaning. Cleaning before transformation avoids compounding errors. Validation before loading prevents bad data in the target.",
+        "incorrect": "Cleaning before profiling = fixing without knowing the scope. Loading before validating = introducing data quality issues into production.",
+        "examTip": "Data preparation is typically 60-80% of a data analyst's time. Never skip profiling and validation steps.",
+        "relatedTopics": [
+          "data-preparation",
+          "data-pipeline",
+          "ETL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data preparation workflow",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-074",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a moving average used for in time series analysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Calculating the average of the entire dataset as data moves through a pipeline",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Smoothing out short-term fluctuations to reveal underlying trends in time series data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An average that moves between different calculation methods automatically",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Moving the average baseline to match seasonal patterns",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A moving average (rolling average) calculates the average of a sliding window of data points (e.g., 7-day or 30-day), smoothing out daily noise to reveal the underlying trend direction.",
+        "incorrect": "Moving averages are a time series smoothing technique, not pipeline calculations, method switching, or seasonal adjustment.",
+        "examTip": "7-day moving average: average of today + last 6 days. Common in: stock prices, COVID-19 daily case data, website traffic. Longer window = smoother but more lagged.",
+        "relatedTopics": [
+          "moving-average",
+          "time-series",
+          "trend-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Time series analysis",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-075",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company discovers that their customer age field contains values ranging from 0 to 150, including several entries of 999. Their sales amounts include negative values and some entries are NULL.",
+      "questionText": "What combination of data quality issues are present?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only accuracy issues — the values are wrong",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Accuracy (999 age, negative sales), completeness (NULL sales), and validity (age 150, age 0) issues",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Only completeness issues — the NULLs need to be filled in",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Consistency issues — the format needs to be standardised",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Multiple issues: Accuracy (999 = clearly wrong value), Validity (0 and 150 = outside realistic age range), Completeness (NULL sales = missing data), Accuracy (negative sales = wrong values for a positive-only field).",
+        "incorrect": "Multiple quality dimensions are violated simultaneously. Each issue maps to a different data quality dimension.",
+        "examTip": "Data quality assessment: check each dimension separately. Accuracy = wrong values. Validity = outside allowed range. Completeness = missing. Consistency = conflicting across systems. Uniqueness = duplicates.",
+        "relatedTopics": [
+          "data-quality-dimensions",
+          "accuracy",
+          "validity",
+          "completeness"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Data quality assessment",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-076",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a foreign key in a relational database?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A key used to encrypt foreign (external) data sources",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A column in one table that refers to the primary key in another table, establishing a relationship",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A backup primary key used when the main key fails",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A key from a foreign (third-party) database system",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A foreign key in table B references the primary key in table A, establishing a referential relationship. For example, Orders.customer_id is a foreign key referencing Customers.id.",
+        "incorrect": "Foreign keys are relational database concepts for table relationships, not encryption, backup keys, or third-party references.",
+        "examTip": "Foreign key enforces referential integrity: you can't insert a customer_id in Orders that doesn't exist in Customers table. Enables JOINs between related tables.",
+        "relatedTopics": [
+          "foreign-key",
+          "primary-key",
+          "referential-integrity"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Database concepts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-077",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is variance analysis in business analytics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Calculating statistical variance (SD²) for a data column",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Comparing actual results against planned/budgeted figures to identify and explain the differences",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Analysing why data quality varies between different systems",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A technique for reducing variance in ML model predictions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Variance analysis (in finance/business) compares actual performance to budget/plan — identifying favourable variances (better than planned) and unfavourable variances (worse than planned) and investigating root causes.",
+        "incorrect": "In this business context, variance = deviation from plan, not statistical variance. Different from ML bias-variance tradeoff.",
+        "examTip": "Budget variance analysis: Actual Revenue $95K vs Budget $100K = $5K unfavourable variance. Drill down: was it volume (fewer units sold) or price (lower selling price)?",
+        "relatedTopics": [
+          "variance-analysis",
+          "budget-analysis",
+          "business-performance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Business analytics",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-078",
+      "type": "yes-no-statements",
+      "topicId": "data-mining",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes SQL and data manipulation concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A NULL value in SQL is equivalent to zero or an empty string.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "The SQL UNION operator combines results from two SELECT queries and removes duplicates.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A subquery in SQL is a query nested inside another query.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "The SQL UPDATE statement can modify multiple rows simultaneously.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "NULL = unknown/missing (NOT zero or empty string). UNION removes duplicates (UNION ALL keeps all). Subqueries nest queries. UPDATE can modify multiple rows matching the WHERE clause.",
+        "incorrect": "NULL is distinct from zero and empty string. NULL comparisons require IS NULL / IS NOT NULL syntax, not = NULL.",
+        "examTip": "NULL rules: SELECT * WHERE col = NULL returns nothing — use WHERE col IS NULL. Arithmetic with NULL = NULL. COUNT(*) counts NULLs but COUNT(col) doesn't.",
+        "relatedTopics": [
+          "NULL",
+          "UNION",
+          "subquery",
+          "UPDATE"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL concepts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-079",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A data analyst is presenting monthly sales data for 5 years to the executive team. They want to show both the overall trend AND how each month's sales compare to the same month in previous years.",
+      "questionText": "Which visualisation approach is MOST effective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A single pie chart showing the average monthly breakdown",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A line chart with each year as a separate line, allowing trend and year-over-year comparison simultaneously",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A bar chart with all 60 months shown on the x-axis",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Five separate single-year line charts displayed side by side",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Multiple-line chart with one line per year (Y1, Y2, Y3, Y4, Y5) plotted over months (Jan-Dec): shows seasonal patterns clearly, enables year-over-year comparison, and reveals overall trend from comparing line positions.",
+        "incorrect": "Pie can't show trend or time. 60 bars on x-axis is unreadable. Separate charts make comparison difficult.",
+        "examTip": "Year-over-year comparison: overlay lines by month (all years on 12-month x-axis). This is sometimes called a 'seasonal sub-series plot' and is very effective for seasonality analysis.",
+        "relatedTopics": [
+          "year-over-year",
+          "line-chart",
+          "seasonal-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Choosing effective visualisations",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-080",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data sovereignty?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A company's right to own all data its customers generate",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The concept that data is subject to the laws and governance of the country where it is stored or collected",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The authority of a data owner to control all access to their data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A sovereignty agreement between cloud providers about data handling",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data sovereignty means data is governed by the laws of the country where it resides or was collected — e.g., EU data must comply with GDPR, Australian data with the Privacy Act. Relevant when using cloud services in different countries.",
+        "incorrect": "Data sovereignty is about national jurisdiction over data, not corporate ownership, individual access control, or vendor agreements.",
+        "examTip": "Data sovereignty concerns: storing EU customer data in US servers (GDPR issue), storing data in China (subject to Chinese cybersecurity laws). Critical for multi-national organisations choosing cloud regions.",
+        "relatedTopics": [
+          "data-sovereignty",
+          "data-residency",
+          "GDPR",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Data privacy and compliance",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-081",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data transposition in data preparation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Moving data from one server to another",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Converting rows to columns (or columns to rows) to reshape a dataset",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Translating data between different file formats",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Changing data types from text to numeric",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Transposing a dataset flips rows to columns — e.g., a table with months as rows becomes a table with months as columns (pivot). Common in Excel (Paste Special → Transpose) and SQL (PIVOT).",
+        "incorrect": "Transposition is about reshaping data orientation, not file movement, format conversion, or type casting.",
+        "examTip": "Pivot (wide format): one row per entity, multiple value columns. Unpivot (long/narrow format): one row per entity-attribute pair. Long format preferred for visualisation tools.",
+        "relatedTopics": [
+          "data-transposition",
+          "pivot",
+          "data-reshaping"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data transformation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-082",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is hypothesis testing used for in data analysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Testing whether hypothetical scenarios are technically possible",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Determining whether observed data provides sufficient evidence to support or reject a specific claim about a population",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Generating hypotheses about future data trends",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Testing data quality hypotheses about completeness and accuracy",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Hypothesis testing uses statistical methods to evaluate claims — e.g., 'does the new website design increase conversions?' Start with null hypothesis (no effect), test with data, calculate p-value, decide to reject or fail to reject.",
+        "incorrect": "Hypothesis testing is a statistical inference method for testing claims with evidence, not scenario planning, trend generation, or quality testing.",
+        "examTip": "Hypothesis testing steps: 1) State H₀ (null) and H₁ (alternative), 2) Collect data, 3) Calculate test statistic, 4) Calculate p-value, 5) Compare to significance level (α=0.05), 6) Reject or fail to reject H₀.",
+        "relatedTopics": [
+          "hypothesis-testing",
+          "p-value",
+          "null-hypothesis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Statistical inference",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-083",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a fact table in a data warehouse star schema?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A table containing only true/verified facts for quality assurance",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The central table in a star schema containing measurable events (transactions) and foreign keys to dimension tables",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A lookup table containing descriptive attributes",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A table that stores the metadata facts about other tables",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In a star schema, the fact table is at the centre — it stores the measures (revenue, quantity, clicks) and foreign keys linking to dimension tables (Date, Customer, Product, Store). Typically very large.",
+        "incorrect": "Fact tables store events/measures with numeric values and foreign keys. Lookup/descriptor tables = dimension tables.",
+        "examTip": "Star schema: Fact table (what happened: Sales_Amount, Units_Sold) + Dimension tables (context: Date, Customer, Product, Location). Optimised for aggregation queries.",
+        "relatedTopics": [
+          "fact-table",
+          "star-schema",
+          "data-warehouse"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Data warehouse design",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-084",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a bubble chart?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A chart that shows speech bubbles representing customer feedback",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A scatter plot where a third variable is represented by the size of the data point bubbles",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A network diagram showing data flow between systems",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A chart with rounded bars used for aesthetics in presentations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A bubble chart extends a scatter plot by adding a third dimension — the size of each bubble represents a third variable (e.g., X=revenue, Y=growth rate, bubble size=market share).",
+        "incorrect": "Bubble charts are a three-variable extension of scatter plots — not speech visualisations, network diagrams, or aesthetic modifications.",
+        "examTip": "Bubble chart: X axis, Y axis, bubble size = three variables simultaneously. Classic example: Hans Rosling's gapminder visualisation (X=income, Y=life expectancy, bubble size=population).",
+        "relatedTopics": [
+          "bubble-chart",
+          "three-variable",
+          "scatter-plot"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Visualisation types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-085",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a data access policy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A policy defining how quickly data must be accessible (access speed SLA)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A set of rules defining who can access which data, under what conditions, and for what purposes",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An internet access policy for employees using company data systems",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A policy for granting public access to open data datasets",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data access policies define which users or roles can access which datasets, under what conditions (location, device, purpose), and through what mechanisms — implemented through RBAC, ABAC, or data masking.",
+        "incorrect": "Access policies control WHO can access WHAT, not how fast, internet usage, or public open data.",
+        "examTip": "Data access controls: RBAC (role-based), ABAC (attribute-based), row-level security (filter rows per user), column-level security (hide sensitive columns). Combine for fine-grained control.",
+        "relatedTopics": [
+          "data-access-policy",
+          "RBAC",
+          "data-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Data access controls",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-086",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a normal distribution and why is it significant in statistics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The standard distribution used by all normal businesses",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A bell-shaped symmetrical distribution where data clusters around the mean; significant because many statistical tests assume normality",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The distribution you get when data is collected normally (without errors)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A uniform distribution where all values are equally likely",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Normal distribution (Gaussian) is bell-shaped with data symmetrically distributed around the mean. The 68-95-99.7 rule: 68% within 1 SD, 95% within 2 SD, 99.7% within 3 SD. Many natural phenomena follow it.",
+        "incorrect": "Normal distribution has a specific mathematical shape — it's not just any common or error-free distribution, and definitely not uniform.",
+        "examTip": "Normal distribution: mean = median = mode (perfectly symmetric). Real examples: heights, test scores, measurement errors. Z-scores standardise any normal distribution.",
+        "relatedTopics": [
+          "normal-distribution",
+          "bell-curve",
+          "standard-deviation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Statistical distributions",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-087",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a dimension table in a data warehouse?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A table that stores the 2D or 3D dimensions of physical products",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A table providing descriptive context (who, what, where, when) for the measures in a fact table",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A table that limits the maximum number of rows in the data warehouse",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A table storing only date and time dimension data",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Dimension tables provide the descriptive attributes used to filter, group, and label fact table data — examples: Date (year, month, day, quarter), Customer (name, region, segment), Product (category, brand, SKU).",
+        "incorrect": "Dimension tables provide analytical context for facts — any descriptive attribute, not just physical dimensions or dates.",
+        "examTip": "Common dimension tables: Date (always have one!), Customer, Product, Geography, Employee, Channel. Date dimension is critical — pre-populated with every date and attributes like IsWeekend, Quarter, Holiday.",
+        "relatedTopics": [
+          "dimension-table",
+          "star-schema",
+          "data-warehouse"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.2 Data warehouse design",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-088",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company stores customer purchase data in a data warehouse used by marketing, finance, and operations. Each department has defined their customer ID field differently: marketing uses email, finance uses account number, operations uses phone number.",
+      "questionText": "What governance solution addresses this root problem?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Build separate data warehouses for each department",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Implement a data dictionary and MDM program to establish a canonical customer identifier used consistently across all systems",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Use ETL to convert all customer IDs to email addresses before loading",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Train each department to use their own definition and accept the inconsistency",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "This is a classic MDM problem — inconsistent entity definitions across systems. The solution is a data dictionary defining the canonical customer identifier and an MDM program creating a golden customer record that all systems reference.",
+        "incorrect": "Separate DWs multiply the inconsistency. Forcing one format (email) as ID may not be unique or available. Accepting inconsistency = broken analytics.",
+        "examTip": "When different systems use different IDs for the same entity = MDM problem. Golden record = authoritative source everyone uses. Data dictionary = ensures consistent definitions.",
+        "relatedTopics": [
+          "MDM",
+          "data-dictionary",
+          "entity-resolution"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 MDM and data governance",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-089",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between a sample and a population in statistics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A sample is always larger than the population",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A population is the complete set of all relevant items; a sample is a subset selected from the population",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A population is studied using surveys; a sample uses databases",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are interchangeable terms in data analytics",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Population = every member of the group being studied (all customers, all transactions). Sample = a subset of the population. We use samples when analysing the full population is impractical.",
+        "incorrect": "Samples are always smaller than or equal to the population. The distinction isn't about data collection method or interchangeable.",
+        "examTip": "Population = census (complete). Sample = subset. Statistical inference uses sample data to draw conclusions about the population. Larger, random samples = more reliable conclusions.",
+        "relatedTopics": [
+          "population",
+          "sample",
+          "statistical-inference"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.1 Statistical concepts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-090",
+      "type": "dropdown-select",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each scenario to the BEST chart type.",
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Show what percentage each product category contributes to total revenue",
+          "options": [
+            "Pie chart",
+            "Line chart",
+            "Scatter plot",
+            "Histogram"
+          ],
+          "correctAnswer": "Pie chart"
+        },
+        {
+          "id": "d2",
+          "prompt": "Show the frequency distribution of customer ages",
+          "options": [
+            "Pie chart",
+            "Line chart",
+            "Scatter plot",
+            "Histogram"
+          ],
+          "correctAnswer": "Histogram"
+        },
+        {
+          "id": "d3",
+          "prompt": "Show whether advertising spend correlates with sales revenue",
+          "options": [
+            "Pie chart",
+            "Line chart",
+            "Scatter plot",
+            "Histogram"
+          ],
+          "correctAnswer": "Scatter plot"
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Part-to-whole = pie chart (ideal for ≤6 categories). Distribution of continuous variable = histogram. Relationship between two continuous variables = scatter plot.",
+        "incorrect": "Each chart type serves a specific data relationship. Mismatching chart to data type obscures the insight.",
+        "examTip": "Chart selection cheat sheet: Comparison → bar. Trend over time → line. Part-to-whole → pie/stacked. Distribution → histogram/box. Relationship → scatter. Hierarchy → treemap.",
+        "relatedTopics": [
+          "chart-selection",
+          "visualisation-types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.1 Chart selection",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-091",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is imputation in data preparation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Removing rows with missing values from the dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Filling in missing values with estimated or calculated replacement values",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Importing data from external sources to supplement the dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Computing aggregate values to add new derived columns",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Imputation replaces missing (NULL) values with substitutes — mean imputation (replace with column mean), median imputation, mode imputation, forward/backward fill (for time series), or ML-based prediction.",
+        "incorrect": "Imputation fills missing values — it's not deletion, import, or aggregation.",
+        "examTip": "Imputation methods: Mean (risk: reduces variance), Median (better for skewed data), Mode (categorical), KNN imputation (uses similar records), Multiple imputation (creates multiple versions for uncertainty). Choose based on data type and missingness pattern.",
+        "relatedTopics": [
+          "imputation",
+          "missing-values",
+          "data-cleansing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Handling missing data",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-092",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of a data audit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Auditing the performance of data analysts",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A systematic examination of data systems, processes, and quality to ensure compliance with policies and standards",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Calculating the financial cost of all company data",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Auditing database query logs for performance optimisation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A data audit examines data processes, quality, governance controls, and compliance — identifying gaps in data quality, access control violations, policy non-compliance, or risk areas.",
+        "incorrect": "Data audits are compliance and governance checks, not performance reviews, financial calculations, or query optimisation.",
+        "examTip": "Data audit types: quality audit (is data accurate?), access audit (who accessed what?), compliance audit (are we following regulations?), process audit (are ETL processes working correctly?).",
+        "relatedTopics": [
+          "data-audit",
+          "data-governance",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.2 Data quality management",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-093",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a KPI threshold or target?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A legal limit on how much data can be stored",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A predefined value that a KPI is measured against to determine if performance is on track, at risk, or failing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The maximum threshold for data storage costs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A filter applied to a KPI to remove outliers from the calculation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "KPI targets define success — e.g., Customer Satisfaction > 85% (green), 75-85% (yellow/at risk), < 75% (red/failing). Thresholds enable traffic-light dashboards and automated alerts.",
+        "incorrect": "KPI thresholds are performance benchmarks, not legal limits, storage costs, or data filters.",
+        "examTip": "Dashboard traffic lights: green (meeting target), yellow (approaching risk threshold), red (failing). Define targets during requirements gathering, not after seeing the data.",
+        "relatedTopics": [
+          "KPI-threshold",
+          "performance-target",
+          "dashboard"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.3 Dashboard design",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-094",
+      "type": "single-choice",
+      "topicId": "data-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the difference between discrete and continuous data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Discrete is digital; continuous is analogue",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Discrete data can only take specific, countable values; continuous data can take any value within a range",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Continuous data requires a database; discrete data can only be stored in spreadsheets",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Discrete data is collected continuously over time; continuous data is collected at intervals",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Discrete: specific countable values with no values in between (number of employees: 5, 10, 15 — never 5.3). Continuous: any value within a range (height: 5.67ft, temperature: 98.6°F).",
+        "incorrect": "Discrete vs continuous is about possible values, not storage medium, collection frequency, or digital/analogue.",
+        "examTip": "Discrete examples: number of orders, number of defects, employee headcount. Continuous examples: weight, height, temperature, time, revenue. Key: can you have a fractional value?",
+        "relatedTopics": [
+          "discrete-data",
+          "continuous-data",
+          "quantitative-data"
+        ]
+      },
+      "metadata": {
+        "examObjective": "1.1 Data types",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-095",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a calculated field in a BI tool or spreadsheet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A field that is calculated by the database before it is returned in a query",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A new column or measure derived from existing data using a formula or expression",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A field that calculates how much data storage is being used",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A numeric field that has been validated against a calculation rule",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Calculated fields create new measures or dimensions from existing data — e.g., Profit = Revenue - Cost, Profit_Margin = Profit / Revenue * 100, Age = DATEDIFF(BirthDate, TODAY()).",
+        "incorrect": "Calculated fields are user-defined derived metrics, not database computations, storage metrics, or validation rules.",
+        "examTip": "Calculated fields in Tableau: drag to columns/rows to use as if they were real data. In Power BI: DAX measures (dynamic aggregations) vs calculated columns (row-by-row). Know the difference.",
+        "relatedTopics": [
+          "calculated-field",
+          "derived-metrics",
+          "BI-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data transformation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-096",
+      "type": "single-choice",
+      "topicId": "visualisation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of conditional formatting in data visualisation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Formatting that only applies when data analysis conditions are met",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Automatically changing the appearance of cells or data points based on their values to highlight patterns",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A conditional branch in the data pipeline that changes format based on data type",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Formatting applied only when a user has conditional access permissions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Conditional formatting automatically highlights data based on rules — red for values below target, green for above; heat map colour scales; data bars; icon sets — enabling pattern recognition at a glance.",
+        "incorrect": "Conditional formatting is a visualisation technique for dynamic highlighting, not pipeline logic, access control, or analysis prerequisites.",
+        "examTip": "Excel conditional formatting: colour scales (gradient), data bars, icon sets (arrows/traffic lights), highlight cell rules. Power BI/Tableau: background colour rules, font colour by value.",
+        "relatedTopics": [
+          "conditional-formatting",
+          "data-highlighting",
+          "visualisation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Formatting for insight",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-097",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does GDPR stand for and who does it apply to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "General Data Privacy Regulation — applies only to EU government agencies",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "General Data Protection Regulation — applies to any organisation processing personal data of EU residents, regardless of where the organisation is located",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Global Data Protection Rules — applies only to multinational companies with revenue over €50 million",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "General Data Processing Requirements — a voluntary certification for EU-based companies",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GDPR (2018) is the EU's data protection regulation. It has extraterritorial reach — any organisation anywhere in the world that processes personal data of EU residents must comply. Fines up to 4% of global annual revenue.",
+        "incorrect": "GDPR applies broadly to any processor of EU residents' data, not just government, large companies, or EU-based organisations.",
+        "examTip": "GDPR key rights: access, rectification, erasure (right to be forgotten), portability, objection, restriction. Key obligations: lawful basis, consent, privacy by design, breach notification (72 hours).",
+        "relatedTopics": [
+          "GDPR",
+          "data-privacy",
+          "privacy-regulation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.3 Privacy regulations",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-098",
+      "type": "single-choice",
+      "topicId": "data-analysis",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is year-over-year (YoY) analysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Comparing data from the current month to the same month last year",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Comparing data from the current period (year, quarter, month) to the same period in the prior year to measure growth or decline",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Analysing data collected over multiple years in a single view",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A forecast that spans one full year",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "YoY compares the same time period across consecutive years — Q2 2024 vs Q2 2023, January 2024 vs January 2023 — removing seasonal effects to show true growth or decline.",
+        "incorrect": "YoY is specifically about same-period comparison year-to-year, not just monthly, multi-year view, or forecasting.",
+        "examTip": "YoY formula: (Current Period - Prior Year Same Period) / Prior Year Same Period × 100%. Better than comparing consecutive months which may have seasonal distortion.",
+        "relatedTopics": [
+          "YoY",
+          "year-over-year",
+          "period-comparison"
+        ]
+      },
+      "metadata": {
+        "examObjective": "3.3 Business analysis metrics",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-099",
+      "type": "yes-no-statements",
+      "topicId": "visualisation",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it represents good data visualisation practice.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A dashboard should show only the KPIs most relevant to the audience's decisions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Using 3D charts always makes data easier to understand.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Including the data source and date on charts improves transparency and trust.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Using dual-axis charts always misleads the audience.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Relevant KPIs only = focused, actionable. Source/date = transparency. 3D charts = distort proportions, harder to read (bad practice). Dual-axis charts = can be appropriate when clearly labelled (not always misleading).",
+        "incorrect": "3D charts almost always make interpretation harder. Dual-axis charts are useful when two metrics have different scales — just label them clearly.",
+        "examTip": "Visualisation best practices: purpose-driven (what decision does this support?), minimal clutter, clear labels, appropriate chart type, start axes at zero for bar charts, include data source.",
+        "relatedTopics": [
+          "dashboard-design",
+          "chart-best-practices",
+          "data-transparency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "4.2 Visualisation best practices",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "data-plus-100",
+      "type": "single-choice",
+      "topicId": "data-governance",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A data analyst notices that revenue figures in the CRM system show $5.2M for Q3, but the finance system shows $4.9M for the same period. Both numbers are being reported to executives from different departments.",
+      "questionText": "What is the root cause of this problem and what governance solution addresses it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data accuracy error — fix the numbers in the CRM",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Lack of a single source of truth and inconsistent metric definitions — implement data governance with a certified 'official' revenue metric and a data dictionary defining exactly how revenue is calculated",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A timeliness issue — the data in one system hasn't been updated",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A technical ETL bug — fix the pipeline extracting data from CRM to Finance",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "This is a classic 'single source of truth' problem. CRM may count booked revenue; Finance may count recognised revenue — different definitions. Governance solution: data dictionary defining the official revenue metric, designating the authoritative source, and certifying metrics that appear in reports.",
+        "incorrect": "Without knowing the definition difference, you can't say which is 'wrong'. It may not be a timeliness or ETL issue — it may be intentionally different metrics.",
+        "examTip": "Single source of truth (SSOT) issues are common when multiple systems independently track the same metric. Solution: define metrics in a data dictionary, certify official versions, and govern which source is authoritative.",
+        "relatedTopics": [
+          "single-source-of-truth",
+          "data-dictionary",
+          "metric-governance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "5.1 Data governance",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    }
+  ]
+}

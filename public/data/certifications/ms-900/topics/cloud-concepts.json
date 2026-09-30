@@ -1,0 +1,342 @@
+{
+  "certificationId": "ms-900",
+  "topicId": "cloud-concepts",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "ms900-001",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is cloud computing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Storing files on a USB drive",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Delivering computing services over the internet on a pay-as-you-go basis",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Running software only on local servers in your office",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A wireless networking standard",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Cloud computing delivers computing services (servers, storage, databases, networking, software) over the internet, enabling flexible resources and economies of scale on a pay-as-you-go model.",
+        "incorrect": "Cloud computing is internet-based on-demand services, not local hardware, USB storage, or wireless networking.",
+        "examTip": "Cloud benefits: cost savings, scalability, reliability, security, speed, global reach, productivity.",
+        "relatedTopics": [
+          "cloud-computing",
+          "cloud-benefits"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cloud concepts",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-002",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which cloud service model provides the MOST control over the underlying infrastructure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SaaS (Software as a Service)",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "PaaS (Platform as a Service)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "IaaS (Infrastructure as a Service)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "DaaS (Desktop as a Service)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IaaS provides the most customer control â€” you manage the OS, middleware, runtime, applications, and data. The provider manages hardware, networking, and virtualisation.",
+        "incorrect": "SaaS = least control (just the app). PaaS = middle (app + data). IaaS = most control.",
+        "examTip": "Control order: IaaS (most) â†’ PaaS â†’ SaaS (least). Microsoft 365 is SaaS. Azure VMs are IaaS. Azure App Service is PaaS.",
+        "relatedTopics": [
+          "IaaS",
+          "PaaS",
+          "SaaS",
+          "cloud-service-models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cloud service models",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-003",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the shared responsibility model in cloud computing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The cloud provider is responsible for everything, including customer data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Security responsibilities are divided between the cloud provider and the customer based on the service model",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The customer is responsible for all security in the cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Responsibility is shared equally 50/50 between provider and customer",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "In the shared responsibility model, the cloud provider secures the underlying infrastructure while the customer is responsible for their data, identities, and how they configure the services.",
+        "incorrect": "Responsibility shifts based on service model â€” in SaaS (like M365), the provider handles more; in IaaS, the customer handles more.",
+        "examTip": "Customer ALWAYS owns: identities, data, devices. Microsoft ALWAYS owns: physical datacenters, network, and core infrastructure.",
+        "relatedTopics": [
+          "shared-responsibility",
+          "cloud-security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe shared responsibility",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-004",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which cloud deployment model uses resources shared across multiple organisations managed by a third-party provider?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Private cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Hybrid cloud",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Public cloud",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Community cloud",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The public cloud uses shared infrastructure managed by a third-party provider (like Microsoft Azure) and accessible over the internet. Microsoft 365 is a public cloud SaaS offering.",
+        "incorrect": "Private = dedicated to one org. Hybrid = combination. Community = shared by similar orgs (e.g., government agencies).",
+        "examTip": "Microsoft 365 = public cloud SaaS. Azure public cloud + on-premises = hybrid cloud scenario.",
+        "relatedTopics": [
+          "public-cloud",
+          "cloud-deployment-models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cloud deployment models",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-005",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does scalability mean in the context of cloud computing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The ability to move data between different cloud providers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The ability to increase or decrease computing resources on demand to match workload needs",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The ability to run applications on multiple operating systems",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The security protocols used to protect cloud infrastructure",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Scalability allows organisations to increase (scale up/out) resources during peak demand and decrease (scale down/in) during low periods â€” paying only for what they use.",
+        "incorrect": "Scalability is about resource flexibility, not data portability, multi-OS support, or security protocols.",
+        "examTip": "Cloud benefits: scalability (resize), elasticity (auto-resize), agility (fast deployment), reliability (high availability), global reach.",
+        "relatedTopics": [
+          "scalability",
+          "elasticity",
+          "cloud-benefits"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cloud benefits",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-069",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is CapEx vs OpEx in the context of cloud adoption?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CapEx = cloud costs; OpEx = on-premises costs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "CapEx = upfront capital expenditure (buying hardware); OpEx = ongoing operational expenditure (cloud subscriptions)",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They are the same concept with different accounting names",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "CapEx applies to Microsoft 365; OpEx applies to Azure",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Traditional IT uses CapEx (large upfront hardware/software investments). Cloud (including Microsoft 365) shifts to OpEx (predictable monthly subscription costs) â€” improving cash flow and eliminating large upfront investments.",
+        "incorrect": "Cloud = OpEx model. On-premises = typically CapEx. Both M365 and Azure use OpEx subscription pricing.",
+        "examTip": "Cloud financial benefit: convert CapEx â†’ OpEx. Pay as you grow. No large upfront server purchases. Predictable monthly costs. Better cash flow for businesses.",
+        "relatedTopics": [
+          "CapEx",
+          "OpEx",
+          "cloud-economics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cloud financial benefits",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "ms900-086",
+      "type": "yes-no-statements",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes cloud computing concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "High availability in cloud computing means services are designed to remain operational even if individual components fail.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Elasticity means an organisation must pre-purchase resources for peak demand.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Geographic distribution of Microsoft 365 data centres provides disaster recovery and reduces latency.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "In a hybrid cloud model, an organisation uses only on-premises infrastructure.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "High availability = redundant design survives component failure. Geo-distribution = DR + performance. Elasticity = automatically scale with demand (no pre-purchase needed). Hybrid = combination of cloud + on-premises.",
+        "incorrect": "Elasticity eliminates the need to pre-purchase for peak. Hybrid explicitly combines cloud with on-premises.",
+        "examTip": "Cloud characteristics: on-demand, broad network access, resource pooling, rapid elasticity, measured service (NIST). These 5 define cloud computing.",
+        "relatedTopics": [
+          "high-availability",
+          "elasticity",
+          "hybrid-cloud"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Describe cloud characteristics",
+        "references": [
+          "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

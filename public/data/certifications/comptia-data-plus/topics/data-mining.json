@@ -1,0 +1,1027 @@
+{
+  "certificationId": "comptia-data-plus",
+  "topicId": "data-mining",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "data-plus-008",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does SELECT, FROM, and WHERE do in a SQL query?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SELECT = create table; FROM = insert data; WHERE = delete rows",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SELECT = choose columns; FROM = specify the table; WHERE = filter rows",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SELECT = count rows; FROM = define the database; WHERE = sort results",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are all equivalent SQL clauses that can be used interchangeably",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SELECT specifies which columns to return, FROM specifies which table to query, WHERE filters which rows to include based on a condition.",
+        "incorrect": "These are the three most fundamental SQL clauses — each serves a distinct purpose.",
+        "examTip": "Basic SQL: SELECT col1, col2 FROM table WHERE condition ORDER BY col1 GROUP BY col2 HAVING aggregate_condition. Know the order of clauses.",
+        "relatedTopics": [
+          "SQL",
+          "SELECT",
+          "WHERE",
+          "data-querying"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL basics",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-009",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between GROUP BY and ORDER BY in SQL?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GROUP BY sorts results; ORDER BY aggregates results",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "GROUP BY aggregates rows by a column value; ORDER BY sorts the result set",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "They perform the same function with different syntax",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "GROUP BY is for numbers; ORDER BY is for text columns",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GROUP BY combines rows with the same value into summary rows (used with aggregate functions like COUNT, SUM, AVG). ORDER BY sorts the final result set ascending or descending.",
+        "incorrect": "Their functions are distinct — aggregation vs sorting. Both work on any data type.",
+        "examTip": "GROUP BY example: SELECT department, COUNT(*) FROM employees GROUP BY department. ORDER BY example: ORDER BY salary DESC. HAVING filters groups (like WHERE but for grouped data).",
+        "relatedTopics": [
+          "GROUP-BY",
+          "ORDER-BY",
+          "SQL-aggregation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL concepts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-010",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a JOIN in SQL and when would you use an INNER JOIN vs LEFT JOIN?",
+      "options": [
+        {
+          "id": "A",
+          "text": "JOINs merge two tables permanently; INNER keeps more rows, LEFT keeps fewer",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "INNER JOIN returns only rows with matching values in both tables; LEFT JOIN returns all rows from the left table plus matches from the right",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "INNER JOIN is faster; LEFT JOIN is used only for large tables",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "They are the same — both return all rows from both tables",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "INNER JOIN = only rows where the join condition matches in BOTH tables (intersection). LEFT JOIN = all rows from the left table, NULLs for non-matching right rows (preserves all left rows).",
+        "incorrect": "JOINs are query operations, not permanent merges. LEFT JOIN preserves more rows (all from left), not fewer.",
+        "examTip": "JOIN types: INNER (matches only), LEFT (all left + matches), RIGHT (all right + matches), FULL OUTER (all from both). INNER most common.",
+        "relatedTopics": [
+          "SQL-JOIN",
+          "INNER-JOIN",
+          "LEFT-JOIN"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL joins",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-011",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are SQL aggregate functions used for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aggregating multiple SQL queries into one statement",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Performing calculations on a set of values and returning a single summary value",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Joining multiple tables into one aggregated table",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Filtering data before it is stored in the database",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Aggregate functions compute a single result from multiple rows: COUNT (number of rows), SUM (total), AVG (average), MIN (minimum), MAX (maximum).",
+        "incorrect": "Aggregate functions operate on columns of data, not queries or tables.",
+        "examTip": "Common aggregates: COUNT(*) = all rows, COUNT(col) = non-NULL values, SUM, AVG, MIN, MAX. Always used with GROUP BY when breaking down by category.",
+        "relatedTopics": [
+          "SQL-aggregates",
+          "COUNT",
+          "SUM",
+          "AVG"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL functions",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-012",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data profiling?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creating user profiles from data for personalisation",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Examining a dataset to understand its structure, content, quality, and relationships before analysis",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Optimising SQL query performance using execution profiles",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Profiling data scientists' performance metrics",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data profiling analyses a dataset to understand: column data types, null counts, unique values, min/max values, distributions, and patterns — essential before cleaning or analysis.",
+        "incorrect": "Data profiling is about understanding dataset characteristics, not user profiles, query optimisation, or performance metrics.",
+        "examTip": "Data profiling answers: How many nulls? Are values in expected ranges? Are there duplicates? What are the distributions? Critical first step before any data project.",
+        "relatedTopics": [
+          "data-profiling",
+          "data-quality",
+          "data-exploration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data profiling",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-013",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data cleansing (data scrubbing)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Encrypting data to make it unreadable for security",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The process of identifying and correcting errors, inconsistencies, and inaccuracies in a dataset",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Compressing data to reduce storage usage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Archiving old data to a cold storage tier",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data cleansing fixes problems like: missing values (nulls), duplicate records, incorrect formats, inconsistent capitalisation, outliers, and invalid values — improving data quality for analysis.",
+        "incorrect": "Cleansing improves data quality; it's not encryption, compression, or archiving.",
+        "examTip": "Common cleansing tasks: remove duplicates, fill/flag nulls, standardise formats (dates, phone numbers), fix typos, validate against reference data. Essential before analysis.",
+        "relatedTopics": [
+          "data-cleansing",
+          "data-quality",
+          "missing-values"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Data cleansing",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-014",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data sampling?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Collecting a subset of data that represents the full population for analysis",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Testing a database to see if sample queries return correct results",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "A technique for encrypting a sample of sensitive records",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Creating sample reports from a BI tool",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Sampling selects a representative subset of the full dataset for analysis — used when the full dataset is too large to analyse, to test data quality, or to build ML models.",
+        "incorrect": "Data sampling is a statistical technique for working with representative subsets, not query testing, encryption, or reporting.",
+        "examTip": "Sampling methods: random (equal chance for all), stratified (proportional from subgroups), systematic (every nth record), cluster (sample entire groups). Avoid bias in sampling.",
+        "relatedTopics": [
+          "data-sampling",
+          "statistical-sampling",
+          "data-analysis"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data sampling",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-015",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An analyst receives a customer dataset with 50,000 rows. The 'phone_number' column has 12,000 NULL values and 3,000 entries in inconsistent formats (some with dashes, some without).",
+      "questionText": "What should the analyst do FIRST?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Delete all rows with NULL phone numbers immediately",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Profile the data to understand the extent of the problem, then decide on a cleansing strategy",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Fill all NULLs with '000-000-0000'",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Proceed with analysis ignoring the phone number column",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Profiling first reveals the full picture — are the NULLs random or systematic? Are the format issues fixable? Only after profiling can you decide whether to impute, flag, standardise, or drop the column.",
+        "incorrect": "Deleting 24% of records (12,000/50,000) would significantly bias the dataset. Filling with dummy values creates false data. Ignoring without investigation is irresponsible.",
+        "examTip": "Data quality workflow: Profile → Assess impact → Define rules → Cleanse → Validate → Document. Never delete data without understanding WHY it's missing.",
+        "relatedTopics": [
+          "data-profiling",
+          "data-cleansing",
+          "NULL-handling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data preparation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-016",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data normalisation in the context of databases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scaling numerical values to a 0-1 range for machine learning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Organising a database to reduce redundancy and improve data integrity by dividing data into related tables",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Converting all text to a standard format (lowercase, trim spaces)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Backing up a database to ensure normal operations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Database normalisation (1NF, 2NF, 3NF) eliminates redundant data by organising it into separate related tables — reducing update anomalies and improving integrity.",
+        "incorrect": "ML scaling = feature normalisation (different concept). Text standardisation = data cleansing. Backup = separate process.",
+        "examTip": "Normalisation vs denormalisation: Normalise = less storage, more joins (OLTP). Denormalise = more storage, fewer joins (OLAP/data warehouses). Trade-off between write and read performance.",
+        "relatedTopics": [
+          "database-normalisation",
+          "data-redundancy",
+          "OLTP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 Database design",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-017",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a regular expression (regex) used for in data work?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Expressing SQL queries in a more readable format",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Defining patterns to search, match, extract, or validate text data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Creating regular (recurring) data extraction jobs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A standard expression language for all database vendors",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Regex defines patterns to match text — e.g., `\\d{3}-\\d{3}-\\d{4}` matches phone numbers, `^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$` matches email addresses. Used for validation and extraction.",
+        "incorrect": "Regex is a pattern matching language, not a SQL format, scheduling system, or database standard.",
+        "examTip": "Regex use cases: validate email addresses, extract dates from text, find phone numbers, clean inconsistent strings. Supported in Python (re module), SQL (REGEXP), Excel (limited).",
+        "relatedTopics": [
+          "regex",
+          "pattern-matching",
+          "text-processing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data manipulation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-051",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the purpose of the SQL HAVING clause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A synonym for WHERE — both filter rows before grouping",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Filters grouped data after GROUP BY, allowing conditions on aggregate results",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Specifies which columns to include in the GROUP BY",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Controls which columns are visible in the SELECT output",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "HAVING filters the results after GROUP BY — e.g., `HAVING COUNT(*) > 5` keeps only groups with more than 5 rows. WHERE filters individual rows BEFORE grouping.",
+        "incorrect": "WHERE and HAVING serve different purposes at different stages of query execution.",
+        "examTip": "SQL execution order: FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY. WHERE filters rows, HAVING filters groups. Both are needed in different scenarios.",
+        "relatedTopics": [
+          "HAVING",
+          "GROUP-BY",
+          "SQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-052",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data deduplication in data processing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creating backup copies of important data",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The process of identifying and removing duplicate records from a dataset",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Splitting a large file into duplicate smaller files for processing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Compressing data by removing duplicate storage blocks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data deduplication finds and removes exact or near-duplicate records — preventing double counting and ensuring each entity appears only once in the dataset.",
+        "incorrect": "Deduplication removes duplicates, not creates backups, splits files, or compresses storage.",
+        "examTip": "Dedup methods: exact match (identical rows), fuzzy match (similar but not identical — handles typos, variations). Tools: SQL DISTINCT, pandas drop_duplicates(), MDM platforms.",
+        "relatedTopics": [
+          "deduplication",
+          "data-quality",
+          "data-cleansing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Data preparation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-055",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data concatenation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Splitting a data field into multiple separate columns",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Combining two or more strings or datasets into a single value or dataset",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Concatenating multiple SQL queries into a single execution plan",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Compressing data by removing concatenated redundant values",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Concatenation joins values together — string concatenation merges 'John' + ' ' + 'Smith' = 'John Smith'. Dataset concatenation stacks rows from multiple tables into one.",
+        "incorrect": "Splitting = parsing/splitting. SQL execution plan = different concept. Compression = different technique.",
+        "examTip": "SQL CONCAT('First Name', ' ', 'Last Name'). Python: f'{first} {last}' or f-string. SQL UNION ALL concatenates datasets (stacks rows). Key for combining name parts, full addresses, etc.",
+        "relatedTopics": [
+          "concatenation",
+          "string-manipulation",
+          "data-transformation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data manipulation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-061",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does the SQL DISTINCT keyword do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Identifies distinct (unusual) values that may be outliers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Returns only unique values, removing duplicate rows from the result set",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Marks specific columns as distinct from others for security purposes",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Compares two columns to find distinct differences between them",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SELECT DISTINCT returns only unique rows — if the same value appears multiple times, it appears only once in the result. Useful for finding unique values or deduplicating outputs.",
+        "incorrect": "DISTINCT removes duplicate rows from results — it's not an outlier detector, security marker, or comparison operator.",
+        "examTip": "SELECT DISTINCT country FROM customers — returns each country once regardless of how many customers are from that country. COUNT(DISTINCT col) counts unique values.",
+        "relatedTopics": [
+          "SQL-DISTINCT",
+          "deduplication",
+          "SQL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-064",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An analyst wants to find all customers from New York who made a purchase greater than $500 in the last 30 days.",
+      "questionText": "Which SQL query correctly retrieves this data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SELECT * FROM customers WHERE state = 'NY' OR amount > 500 OR date > DATEADD(day, -30, GETDATE())",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SELECT * FROM orders JOIN customers ON orders.customer_id = customers.id WHERE customers.state = 'NY' AND orders.amount > 500 AND orders.date >= DATEADD(day, -30, GETDATE())",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SELECT * FROM customers HAVING state = 'NY' AND amount > 500",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SELECT state, amount FROM customers GROUP BY state HAVING state = 'NY' AND amount > 500",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The correct query JOINs orders and customers tables, uses AND (not OR) to combine all three conditions, and uses a date function to filter the last 30 days.",
+        "incorrect": "OR would return customers from NY OR with amount > 500 — too broad. HAVING is for post-aggregation filtering, not row-level filtering. GROUP BY without aggregation is incorrect.",
+        "examTip": "Multiple filter conditions: use AND (all conditions must be true) vs OR (any condition is true). JOIN multiple tables when data is spread across tables. Date functions vary by SQL dialect.",
+        "relatedTopics": [
+          "SQL-AND-OR",
+          "SQL-JOIN",
+          "date-filtering"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL queries",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-068",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data parsing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dividing a dataset into training and test sets for machine learning",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Extracting and interpreting specific pieces of information from raw data based on rules or patterns",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A billing process for calculating the cost of cloud data storage",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Compressing data files to reduce their size",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Parsing extracts meaningful components from raw data — e.g., parsing a full address string into street, city, state, zip; parsing a JSON response to extract specific fields; parsing dates from text.",
+        "incorrect": "Parsing is data extraction/interpretation, not ML splitting, billing, or compression.",
+        "examTip": "Parsing examples: parse CSV rows into columns, parse HTML to extract text, parse JSON to extract values, parse log lines to extract timestamps and error codes. Essential data prep skill.",
+        "relatedTopics": [
+          "data-parsing",
+          "data-extraction",
+          "data-transformation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data manipulation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-073",
+      "type": "ordering",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the data preparation steps in the correct order for a typical data analysis project.",
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Profile the data to understand its structure and quality",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Clean the data — handle nulls, duplicates, and format inconsistencies",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Transform and enrich the data — create calculated fields, join tables",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Validate the cleaned data against expected outcomes",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Load the prepared data into the analysis tool or warehouse",
+          "correctPosition": 5
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Data prep order: Profile → Clean → Transform → Validate → Load. Profiling first reveals what needs cleaning. Cleaning before transformation avoids compounding errors. Validation before loading prevents bad data in the target.",
+        "incorrect": "Cleaning before profiling = fixing without knowing the scope. Loading before validating = introducing data quality issues into production.",
+        "examTip": "Data preparation is typically 60-80% of a data analyst's time. Never skip profiling and validation steps.",
+        "relatedTopics": [
+          "data-preparation",
+          "data-pipeline",
+          "ETL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data preparation workflow",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-078",
+      "type": "yes-no-statements",
+      "topicId": "data-mining",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes SQL and data manipulation concepts.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A NULL value in SQL is equivalent to zero or an empty string.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "The SQL UNION operator combines results from two SELECT queries and removes duplicates.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A subquery in SQL is a query nested inside another query.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "The SQL UPDATE statement can modify multiple rows simultaneously.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "NULL = unknown/missing (NOT zero or empty string). UNION removes duplicates (UNION ALL keeps all). Subqueries nest queries. UPDATE can modify multiple rows matching the WHERE clause.",
+        "incorrect": "NULL is distinct from zero and empty string. NULL comparisons require IS NULL / IS NOT NULL syntax, not = NULL.",
+        "examTip": "NULL rules: SELECT * WHERE col = NULL returns nothing — use WHERE col IS NULL. Arithmetic with NULL = NULL. COUNT(*) counts NULLs but COUNT(col) doesn't.",
+        "relatedTopics": [
+          "NULL",
+          "UNION",
+          "subquery",
+          "UPDATE"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.1 SQL concepts",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-081",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data transposition in data preparation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Moving data from one server to another",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Converting rows to columns (or columns to rows) to reshape a dataset",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Translating data between different file formats",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Changing data types from text to numeric",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Transposing a dataset flips rows to columns — e.g., a table with months as rows becomes a table with months as columns (pivot). Common in Excel (Paste Special → Transpose) and SQL (PIVOT).",
+        "incorrect": "Transposition is about reshaping data orientation, not file movement, format conversion, or type casting.",
+        "examTip": "Pivot (wide format): one row per entity, multiple value columns. Unpivot (long/narrow format): one row per entity-attribute pair. Long format preferred for visualisation tools.",
+        "relatedTopics": [
+          "data-transposition",
+          "pivot",
+          "data-reshaping"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data transformation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-091",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is imputation in data preparation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Removing rows with missing values from the dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Filling in missing values with estimated or calculated replacement values",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Importing data from external sources to supplement the dataset",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Computing aggregate values to add new derived columns",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Imputation replaces missing (NULL) values with substitutes — mean imputation (replace with column mean), median imputation, mode imputation, forward/backward fill (for time series), or ML-based prediction.",
+        "incorrect": "Imputation fills missing values — it's not deletion, import, or aggregation.",
+        "examTip": "Imputation methods: Mean (risk: reduces variance), Median (better for skewed data), Mode (categorical), KNN imputation (uses similar records), Multiple imputation (creates multiple versions for uncertainty). Choose based on data type and missingness pattern.",
+        "relatedTopics": [
+          "imputation",
+          "missing-values",
+          "data-cleansing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.3 Handling missing data",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "data-plus-095",
+      "type": "single-choice",
+      "topicId": "data-mining",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a calculated field in a BI tool or spreadsheet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A field that is calculated by the database before it is returned in a query",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A new column or measure derived from existing data using a formula or expression",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A field that calculates how much data storage is being used",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A numeric field that has been validated against a calculation rule",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Calculated fields create new measures or dimensions from existing data — e.g., Profit = Revenue - Cost, Profit_Margin = Profit / Revenue * 100, Age = DATEDIFF(BirthDate, TODAY()).",
+        "incorrect": "Calculated fields are user-defined derived metrics, not database computations, storage metrics, or validation rules.",
+        "examTip": "Calculated fields in Tableau: drag to columns/rows to use as if they were real data. In Power BI: DAX measures (dynamic aggregations) vs calculated columns (row-by-row). Know the difference.",
+        "relatedTopics": [
+          "calculated-field",
+          "derived-metrics",
+          "BI-tools"
+        ]
+      },
+      "metadata": {
+        "examObjective": "2.2 Data transformation",
+        "references": [
+          "https://www.comptia.org/certifications/data"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

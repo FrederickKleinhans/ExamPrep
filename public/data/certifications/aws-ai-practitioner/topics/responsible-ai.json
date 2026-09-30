@@ -1,0 +1,732 @@
+{
+  "certificationId": "aws-ai-practitioner",
+  "topicId": "responsible-ai",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "aws-ai-036",
+      "type": "single-choice",
+      "topicId": "responsible-ai",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the AWS Responsible AI framework focused on?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximising AI model performance at any cost",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Developing AI that is fair, explainable, privacy-enhancing, robust, safe, transparent, and accountable",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Ensuring AWS AI services are always available with 99.99% uptime",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Reducing the carbon footprint of AI training workloads",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "AWS's Responsible AI dimensions: Fairness, Explainability, Privacy and Security, Robustness, Safety, Transparency, and Controllability â€” ensuring AI systems are trustworthy and beneficial.",
+        "incorrect": "Responsible AI is about ethics and trustworthiness, not performance maximisation, availability SLAs, or environmental impact specifically.",
+        "examTip": "AWS Responsible AI: Fairness (no bias), Explainability (understandable), Privacy (data protection), Robustness (handles adversarial inputs), Safety (no harm), Transparency (openly communicates), Controllability (human oversight).",
+        "relatedTopics": [
+          "responsible-AI",
+          "AWS-AI-principles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Responsible AI",
+        "references": [
+          "https://aws.amazon.com/machine-learning/responsible-machine-learning/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-037",
+      "type": "single-choice",
+      "topicId": "responsible-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Amazon SageMaker Clarify do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Converts complex ML code into simple explanations for business users",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Detects bias in training data and models, and provides explanations for model predictions",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Automatically fixes issues found in ML training pipelines",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Generates synthetic training data to improve model fairness",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SageMaker Clarify detects statistical bias in training data and ML models across different demographic groups, and uses SHAP values to explain individual predictions â€” supporting fairness and explainability.",
+        "incorrect": "Clarify doesn't auto-fix pipelines or generate synthetic data. It's an analysis and explanation tool.",
+        "examTip": "Clarify: bias detection (training data + model), explainability (SHAP feature importance), model cards (documentation). Integrates with Model Monitor for production bias drift detection.",
+        "relatedTopics": [
+          "SageMaker-Clarify",
+          "bias-detection",
+          "explainability"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Bias and fairness",
+        "references": [
+          "https://aws.amazon.com/sagemaker/clarify/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-038",
+      "type": "single-choice",
+      "topicId": "responsible-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is AI bias and how can it occur in machine learning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A technical error in the training algorithm",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Systematic errors in model outputs that unfairly favour or disadvantage certain groups, often stemming from biased training data",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A model's tendency to make predictions too quickly",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The difference between training accuracy and test accuracy",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "AI bias occurs when training data reflects historical inequalities or lacks representation for certain groups, causing models to produce systematically unfair outcomes â€” like facial recognition performing worse on darker skin tones.",
+        "incorrect": "AI bias is about fairness and discrimination, not algorithmic errors, speed, or train/test accuracy gaps.",
+        "examTip": "Bias sources: historical bias (past inequalities in data), representation bias (underrepresented groups), measurement bias (inconsistent data collection). Detect with SageMaker Clarify.",
+        "relatedTopics": [
+          "AI-bias",
+          "fairness",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Bias in AI",
+        "references": [
+          "https://aws.amazon.com/machine-learning/responsible-machine-learning/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-039",
+      "type": "single-choice",
+      "topicId": "responsible-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is model explainability and why is it important?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The ability to explain how to build a model in simple terms",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The ability to understand and interpret why a model made a specific prediction, important for trust, debugging, and compliance",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Documentation that explains what a model is designed to do",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A measure of how quickly a model can generate explanations",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Model explainability enables understanding of why a model made a prediction â€” which features influenced the decision and by how much. Critical for regulated industries (healthcare, finance, legal) and for detecting bias.",
+        "incorrect": "Explainability is about model decision transparency, not documentation, speed, or educational content.",
+        "examTip": "Explainability methods: SHAP (SHapley Additive exPlanations), LIME, feature importance. SageMaker Clarify uses SHAP. Required for GDPR's 'right to explanation'.",
+        "relatedTopics": [
+          "explainability",
+          "SHAP",
+          "model-interpretability"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Explainability",
+        "references": [
+          "https://aws.amazon.com/sagemaker/clarify/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-040",
+      "type": "single-choice",
+      "topicId": "responsible-ai",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A bank deploys an ML model to approve or reject loan applications. Regulators require the bank to explain why each application was approved or rejected.",
+      "questionText": "Which AWS tool BEST supports this explainability requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon SageMaker Autopilot",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Amazon SageMaker Clarify",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Amazon Bedrock Guardrails",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS Trusted Advisor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "SageMaker Clarify generates feature importance scores (SHAP values) for individual predictions, enabling the bank to explain which factors (credit score, income, debt ratio) most influenced each loan decision.",
+        "incorrect": "Autopilot builds models. Bedrock Guardrails is for content filtering in generative AI. Trusted Advisor is a cloud cost/security tool.",
+        "examTip": "Explainability for regulated industries: SageMaker Clarify provides per-prediction explanations. Store with model cards. Required for GDPR, CCPA, and financial regulations.",
+        "relatedTopics": [
+          "SageMaker-Clarify",
+          "explainability",
+          "regulatory-compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Responsible AI in practice",
+        "references": [
+          "https://aws.amazon.com/sagemaker/clarify/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-041",
+      "type": "single-choice",
+      "topicId": "responsible-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a model card in the context of responsible AI?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A credit card used to pay for ML training compute",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A structured document describing a model's intended use, performance, limitations, and ethical considerations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "An identification card required to access SageMaker",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A business card for AI researchers who built the model",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Model cards are structured documentation for ML models covering: intended use, evaluation results, performance across demographic groups, limitations, and ethical considerations â€” promoting transparency and responsible deployment.",
+        "incorrect": "Model cards are documentation artifacts, not payment methods, access credentials, or contact cards.",
+        "examTip": "SageMaker Model Cards: create, store, and share model documentation. Attach bias reports, evaluation metrics, intended use, out-of-scope uses, and training details.",
+        "relatedTopics": [
+          "model-cards",
+          "transparency",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Transparency",
+        "references": [
+          "https://aws.amazon.com/sagemaker/model-cards/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-042",
+      "type": "yes-no-statements",
+      "topicId": "responsible-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes responsible AI principles.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Human oversight of AI systems is a key principle of responsible AI.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A model with high overall accuracy is always fair to all demographic groups.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Privacy-preserving techniques like differential privacy can be used to protect sensitive data in ML training.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Once deployed, AI models never need to be monitored for bias drift.",
+          "isCorrectYes": false
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Human oversight is essential. Privacy techniques like differential privacy protect training data. Models need continuous bias monitoring. High overall accuracy can mask poor performance for minority subgroups.",
+        "incorrect": "High accuracy â‰  fairness. A model might be 95% accurate overall but systematically wrong for a specific group. Monitor bias continuously in production.",
+        "examTip": "Responsible AI is ongoing: deploy with human oversight, monitor for bias/drift, maintain model cards, re-evaluate as data changes.",
+        "relatedTopics": [
+          "human-oversight",
+          "fairness",
+          "privacy",
+          "bias-monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Responsible AI",
+        "references": [
+          "https://aws.amazon.com/machine-learning/responsible-machine-learning/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-065",
+      "type": "single-choice",
+      "topicId": "responsible-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the EU AI Act and why is it relevant to AWS AI practitioners?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An AWS compliance framework for European customers",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A regulation that classifies AI systems by risk level and imposes requirements for transparency, human oversight, and compliance",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A technical standard for AI model accuracy",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A certification programme for AI practitioners in Europe",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The EU AI Act categorises AI systems by risk (unacceptable, high, limited, minimal) and imposes requirements based on risk level â€” including transparency, human oversight, data governance, and accuracy standards. Relevant to anyone deploying AI in the EU.",
+        "incorrect": "The EU AI Act is a European Union regulation, not an AWS framework, technical standard, or certification programme.",
+        "examTip": "EU AI Act risk levels: Unacceptable (banned: social scoring), High (medical devices, hiring AI â€” strict requirements), Limited (chatbots â€” transparency required), Minimal (spam filters â€” few requirements).",
+        "relatedTopics": [
+          "EU-AI-Act",
+          "AI-regulation",
+          "compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: AI governance",
+        "references": [
+          "https://aws.amazon.com/certification/certified-ai-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-066",
+      "type": "single-choice",
+      "topicId": "responsible-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is human-in-the-loop (HITL) in AI systems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Requiring a human to manually review and approve all AI outputs before they are used",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A design approach where humans provide feedback, oversight, or intervention at critical decision points in an AI workflow",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Using human-generated data as the only source for AI training",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "A technique where humans and AI take turns completing tasks",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "HITL incorporates human judgment at key points â€” humans may review uncertain predictions, provide feedback for active learning, approve high-stakes decisions, or intervene when the AI has low confidence.",
+        "incorrect": "HITL is a design principle for appropriate human involvement, not a requirement to review every output or a turntaking approach.",
+        "examTip": "HITL on AWS: SageMaker Ground Truth (human labelling), Amazon Augmented AI (A2I) for custom human review workflows. Use for high-stakes decisions where AI errors are costly.",
+        "relatedTopics": [
+          "human-in-the-loop",
+          "Amazon-A2I",
+          "AI-oversight"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Responsible AI",
+        "references": [
+          "https://aws.amazon.com/augmented-ai/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-067",
+      "type": "single-choice",
+      "topicId": "responsible-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Amazon Augmented AI (A2I)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An augmented reality service for visualising AI model outputs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "A service that makes it easy to build human review workflows for ML predictions requiring human oversight",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A feature that automatically augments training datasets",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An AI assistant that augments the capabilities of human workers",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Amazon A2I enables human review of ML predictions when confidence is low or for random sampling. It integrates with Rekognition, Textract, and custom models to route uncertain predictions to human reviewers.",
+        "incorrect": "A2I is about human review workflows, not augmented reality, data augmentation, or AI assistants.",
+        "examTip": "A2I use cases: review low-confidence Rekognition predictions, audit a sample of Textract extractions, human review for medical AI predictions. Integrates with Amazon Mechanical Turk or private reviewers.",
+        "relatedTopics": [
+          "Amazon-A2I",
+          "human-review",
+          "human-in-the-loop"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Human oversight",
+        "references": [
+          "https://aws.amazon.com/augmented-ai/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-068",
+      "type": "yes-no-statements",
+      "topicId": "responsible-ai",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, indicate whether it correctly describes responsible AI practices on AWS.",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "SageMaker Clarify can detect pre-training bias in datasets before a model is trained.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A model that performs equally well across all demographic groups is considered fair.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Removing demographic features like age and gender from training data always eliminates bias.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "AWS recommends documenting AI system limitations in model cards before deployment.",
+          "isCorrectYes": true
+        }
+      ],
+      "options": [],
+      "explanation": {
+        "correct": "Clarify detects pre-training bias. Equal performance = fairness. Model cards should document limitations. Removing demographic features doesn't eliminate bias â€” proxies (zip code, name) can encode the same information.",
+        "incorrect": "Removing protected attributes is insufficient â€” proxy variables can still encode demographic information. This is known as 'fairness through unawareness' fallacy.",
+        "examTip": "Bias can persist even after removing demographic features through proxy variables. Need statistical fairness testing (Clarify) not just feature removal.",
+        "relatedTopics": [
+          "bias-detection",
+          "fairness",
+          "model-cards",
+          "proxy-variables"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Bias and fairness",
+        "references": [
+          "https://aws.amazon.com/sagemaker/clarify/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-080",
+      "type": "single-choice",
+      "topicId": "responsible-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is data minimisation in the context of responsible AI?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using the smallest possible training dataset to reduce compute costs",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Collecting and using only the data necessary for the specific AI purpose, reducing privacy risks",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Compressing data before storing in S3 for ML training",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Limiting model output to the minimum required information",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Data minimisation (a GDPR and privacy principle) means collecting only the data necessary for the stated purpose â€” reducing the privacy risk surface and limiting potential harm from data breaches or misuse.",
+        "incorrect": "Data minimisation is a privacy principle, not a cost optimisation, compression, or output limiting technique.",
+        "examTip": "Privacy principles for AI: data minimisation (collect only necessary), purpose limitation (use only for stated purpose), storage limitation (don't keep longer than needed), accuracy (keep data current).",
+        "relatedTopics": [
+          "data-minimisation",
+          "privacy",
+          "GDPR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Privacy",
+        "references": [
+          "https://aws.amazon.com/machine-learning/responsible-machine-learning/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-087",
+      "type": "single-choice",
+      "topicId": "responsible-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does it mean for AI to be 'robust'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The AI can process very large datasets quickly",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The AI performs reliably and consistently across diverse inputs and conditions, including adversarial inputs and edge cases",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The AI uses strong encryption to protect its model weights",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The AI has been tested for a minimum number of hours before deployment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Robustness means an AI system maintains consistent, reliable performance even with unexpected inputs, adversarial attacks (inputs designed to fool the model), noisy data, and edge cases â€” not just ideal conditions.",
+        "incorrect": "Robustness is about reliability and resilience of model behaviour, not processing speed, encryption, or testing duration.",
+        "examTip": "Robustness testing: evaluate model performance on diverse data distributions, adversarial examples, and edge cases. Use SageMaker Clarify and model monitoring for production robustness.",
+        "relatedTopics": [
+          "AI-robustness",
+          "adversarial-inputs",
+          "responsible-AI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Responsible AI dimensions",
+        "references": [
+          "https://aws.amazon.com/machine-learning/responsible-machine-learning/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-096",
+      "type": "single-choice",
+      "topicId": "responsible-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Amazon CodeWhisperer (now part of Amazon Q Developer) and its key responsible AI feature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A code optimisation tool that flags performance issues; it reports bugs to AWS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "An AI coding assistant that generates code and includes a reference tracker to identify potentially open source-inspired code with licence information",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "A security scanner that checks AWS IAM policies",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "An ML model that predicts code defects before deployment",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Q Developer (formerly CodeWhisperer) generates code and uniquely includes a reference tracker â€” if a suggestion resembles open source code, it shows the repository and licence, helping developers manage IP and licence obligations responsibly.",
+        "incorrect": "The reference tracker is a key responsible AI differentiator â€” not a bug reporter, IAM scanner, or defect predictor.",
+        "examTip": "Q Developer responsible AI feature: Reference Tracker flags code suggestions that may resemble open source projects, showing the source and licence. Helps avoid unintentional licence violations.",
+        "relatedTopics": [
+          "Amazon-Q-Developer",
+          "CodeWhisperer",
+          "responsible-AI",
+          "IP-protection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Responsible AI features",
+        "references": [
+          "https://aws.amazon.com/q/developer/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    },
+    {
+      "id": "aws-ai-099",
+      "type": "single-choice",
+      "topicId": "responsible-ai",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does 'AI transparency' mean from AWS's responsible AI perspective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Making all AI model source code publicly available",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Being open about how AI systems work, what data they use, how they make decisions, and their limitations",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Providing real-time visibility into AI system performance metrics",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Publishing the internal architecture of all AWS AI services",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "AI transparency means clearly communicating: what the system does, what data it was trained on, how it makes decisions, its limitations, and appropriate use cases â€” enabling informed trust and oversight.",
+        "incorrect": "Transparency is about openness of intent, capabilities, and limitations â€” not necessarily open-source code, performance dashboards, or internal architecture disclosure.",
+        "examTip": "AWS transparency mechanisms: AI Service Cards (intended use, limitations), Model Cards (performance documentation), Bedrock Guardrails (policy transparency), CloudTrail (action transparency).",
+        "relatedTopics": [
+          "AI-transparency",
+          "responsible-AI",
+          "AI-Service-Cards"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Transparency",
+        "references": [
+          "https://aws.amazon.com/machine-learning/responsible-machine-learning/"
+        ],
+        "lastUpdated": "2024-01-15",
+        "reviewStatus": "draft"
+      }
+    }
+  ]
+}

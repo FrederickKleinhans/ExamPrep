@@ -1,6 +1,53 @@
 {
   "certifications": [
     {
+      "id": "aws-ai-practitioner",
+      "name": "AWS AI Practitioner",
+      "provider": "AWS",
+      "examCode": "AIF-C01",
+      "version": "2024-01",
+      "questionCount": 100,
+      "passingScore": 70,
+      "timeLimitMinutes": 90,
+      "topics": [
+        {
+          "id": "ai-ml-fundamentals",
+          "name": "Fundamentals of AI and ML",
+          "weight": 20
+        },
+        {
+          "id": "generative-ai",
+          "name": "Fundamentals of Generative AI",
+          "weight": 24
+        },
+        {
+          "id": "foundation-models",
+          "name": "Applications of Foundation Models",
+          "weight": 28
+        },
+        {
+          "id": "responsible-ai",
+          "name": "Guidelines for Responsible AI",
+          "weight": 14
+        },
+        {
+          "id": "security-compliance",
+          "name": "Security, Compliance and Governance",
+          "weight": 14
+        }
+      ],
+      "resources": [
+        {
+          "title": "AWS Certified AI Practitioner Exam Guide",
+          "url": "https://aws.amazon.com/certification/certified-ai-practitioner/"
+        },
+        {
+          "title": "AWS AI/ML Services Documentation",
+          "url": "https://docs.aws.amazon.com/machine-learning/"
+        }
+      ]
+    },
+    {
       "id": "itil-4-foundation",
       "name": "ITIL 4 Foundation",
       "provider": "AXELOS / PeopleCert",
@@ -164,6 +211,49 @@
         "passingScore": 75,
         "priceUSD": 404
       }
+    },
+    {
+      "id": "comptia-data-plus",
+      "name": "CompTIA Data+",
+      "provider": "CompTIA",
+      "examCode": "DA0-001",
+      "version": "2024-01",
+      "questionCount": 100,
+      "passingScore": 72,
+      "timeLimitMinutes": 90,
+      "topics": [
+        {
+          "id": "data-concepts",
+          "name": "Data Concepts & Environments",
+          "weight": 15
+        },
+        {
+          "id": "data-mining",
+          "name": "Data Mining",
+          "weight": 25
+        },
+        {
+          "id": "data-analysis",
+          "name": "Data Analysis",
+          "weight": 23
+        },
+        {
+          "id": "visualisation",
+          "name": "Visualisation",
+          "weight": 22
+        },
+        {
+          "id": "data-governance",
+          "name": "Data Governance, Quality & Controls",
+          "weight": 15
+        }
+      ],
+      "resources": [
+        {
+          "title": "CompTIA Data+ Certification Overview",
+          "url": "https://www.comptia.org/certifications/data"
+        }
+      ]
     },
     {
       "id": "comptia-network-plus",
@@ -777,6 +867,44 @@
         "passingScore": 70,
         "priceUSD": 99
       }
+    },
+    {
+      "id": "ms-900",
+      "name": "MS-900",
+      "provider": "Microsoft",
+      "examCode": "MS-900",
+      "version": "2024-01",
+      "questionCount": 100,
+      "passingScore": 70,
+      "timeLimitMinutes": 60,
+      "topics": [
+        {
+          "id": "cloud-concepts",
+          "name": "Cloud Concepts",
+          "weight": 10
+        },
+        {
+          "id": "m365-productivity",
+          "name": "Microsoft 365 Apps & Services",
+          "weight": 45
+        },
+        {
+          "id": "security-compliance",
+          "name": "Security, Compliance, Privacy & Trust",
+          "weight": 25
+        },
+        {
+          "id": "pricing-support",
+          "name": "Microsoft 365 Pricing & Support",
+          "weight": 20
+        }
+      ],
+      "resources": [
+        {
+          "title": "MS-900 Exam Overview",
+          "url": "https://learn.microsoft.com/en-us/certifications/exams/ms-900"
+        }
+      ]
     },
     {
       "id": "sc-900",

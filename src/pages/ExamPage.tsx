@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Flag, ChevronLeft, ChevronRight, Trophy, XCircle, Eye, AlertTriangle } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { ExamService } from '../services/ExamService';
@@ -21,13 +21,32 @@ export function ExamPage() {
 
   const [phase, setPhase] = useState<ExamPhase>('setup');
   const [remainingTime, setRemainingTime] = useState<number>(0);
+  const [isStartingExam, setIsStartingExam] = useState(false);
+  const [startExamError, setStartExamError] = useState<string | null>(null);
   const [showConfirmSubmit, setShowConfirmSubmit] = useState(false);
   const [examResult, setExamResult] = useState<ExamResult | null>(null);
   const [reviewIndex, setReviewIndex] = useState(0);
 
   useEffect(() => { if (!manifest) initialize(); }, [manifest, initialize]);
 
-  const handleStartExam = () => { startExam(); setPhase('session'); };
+  const handleStartExam = async () => {
+    setIsStartingExam(true);
+    setStartExamError(null);
+    try {
+      await startExam();
+      const session = useStore.getState().examSession;
+      if (!session) {
+        setStartExamError('Could not start the exam. Please try again.');
+        return;
+      }
+      setRemainingTime(ExamService.getRemainingTime(session));
+      setPhase('session');
+    } catch (error) {
+      setStartExamError(error instanceof Error ? error.message : 'Could not load exam questions.');
+    } finally {
+      setIsStartingExam(false);
+    }
+  };
 
   const handleFinishExam = useCallback(() => {
     const result = finishExam();
@@ -67,15 +86,12 @@ export function ExamPage() {
           <div style={{ fontSize: 40, marginBottom: 14 }}>📋</div>
           <h2 className="text-heading" style={{ margin: '0 0 8px', fontSize: 20, fontWeight: 800 }}>No active certification</h2>
           <p className="text-muted" style={{ margin: '0 0 24px', fontSize: 13, maxWidth: 320, marginLeft: 'auto', marginRight: 'auto', lineHeight: 1.6 }}>
-            Go to Settings to set your active cert, then come back to take a mock exam.
+            Choose a certification from a career path before starting a mock exam.
           </p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="/settings" style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', border: 'none', borderRadius: 12, padding: '11px 24px', color: '#fff', fontWeight: 700, fontSize: 13, textDecoration: 'none' }}>
-              Go to Settings
-            </a>
-            <a href="/tracks" className="btn-ghost" style={{ borderRadius: 12, padding: '11px 24px', fontSize: 13, textDecoration: 'none', display: 'inline-block' }}>
-              Browse tracks
-            </a>
+            <Link to="/tracks" style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', border: 'none', borderRadius: 12, padding: '11px 24px', color: '#fff', fontWeight: 700, fontSize: 13, textDecoration: 'none' }}>
+              Browse career paths
+            </Link>
           </div>
         </div>
       </div>
@@ -100,9 +116,10 @@ export function ExamPage() {
             <h1 className="text-heading" style={{ margin: 0, fontSize: 28, fontWeight: 800, lineHeight: 1.2 }}>{cert.name}</h1>
             <p className="text-muted" style={{ margin: '8px 0 0', fontSize: 13 }}>{cert.examCode}</p>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10, marginTop: 20 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 10, marginTop: 20 }}>
               {[
-                { label: 'Questions', value: cert.questionCount },
+                { label: 'Questions per mock', value: ExamService.DEFAULT_QUESTION_COUNT },
+                { label: 'In question bank', value: cert.questionCount },
                 { label: 'Time limit', value: `${cert.timeLimitMinutes}m` },
                 { label: 'Pass score', value: `${cert.passingScore}%` },
               ].map((m) => (
@@ -140,11 +157,17 @@ export function ExamPage() {
             </ul>
           </div>
 
+          {startExamError && (
+            <p role="alert" style={{ margin: '0 0 12px', fontSize: 13, color: 'var(--error)' }}>
+              {startExamError}
+            </p>
+          )}
           <button
-            onClick={handleStartExam}
-            style={{ width: '100%', background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', border: 'none', borderRadius: 16, padding: '16px', color: '#fff', fontWeight: 800, fontSize: 15, cursor: 'pointer', letterSpacing: '0.02em' }}
+            onClick={() => void handleStartExam()}
+            disabled={isStartingExam}
+            style={{ width: '100%', background: isStartingExam ? 'var(--bg-tertiary)' : 'linear-gradient(135deg, var(--accent), var(--accent-hover))', border: 'none', borderRadius: 16, padding: '16px', color: isStartingExam ? 'var(--text-secondary)' : '#fff', fontWeight: 800, fontSize: 15, cursor: isStartingExam ? 'wait' : 'pointer', letterSpacing: '0.02em' }}
           >
-            Start exam
+            {isStartingExam ? 'Loading questions…' : 'Start exam'}
           </button>
         </div>
       </div>

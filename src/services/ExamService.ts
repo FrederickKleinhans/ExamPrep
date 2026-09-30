@@ -1,6 +1,8 @@
 import { Question, ExamSession, ExamResult } from '../types';
 
 export class ExamService {
+  static readonly DEFAULT_QUESTION_COUNT = 30;
+
   /**
    * Returns a uniformly shuffled copy using the Fisher–Yates algorithm.
    * The input array is never mutated.

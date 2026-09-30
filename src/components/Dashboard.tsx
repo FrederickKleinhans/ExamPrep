@@ -8,6 +8,8 @@ export interface DashboardMetrics {
   avgScore: number;
   streak: number;
   examsTaken: number;
+  hasStudyActivity: boolean;
+  hasExamActivity: boolean;
 }
 
 export interface DashboardCertTrack {
@@ -52,9 +54,10 @@ export function Dashboard({
 }: DashboardProps) {
   const navigate = useNavigate();
   const { theme, toggle } = useTheme();
+  const hasActiveCertification = Boolean(activeCertId);
 
   const shareDashboard = async () => {
-    const shareUrl = 'https://exam-prep-lemon-pi.vercel.app/';
+    const shareUrl = 'https://certarc-one.vercel.app/';
     const shareData = {
       title: 'CertArc',
       text: 'Track your certification progress with CertArc.',
@@ -65,10 +68,30 @@ export function Dashboard({
   };
 
   const metricCards = [
-    { label: 'Completion', value: formatPercent(metrics.completion), helper: 'Overall progress', accent: 'var(--accent)' },
-    { label: 'Avg Score', value: formatPercent(metrics.avgScore), helper: 'Across attempts', accent: '#8bd3ff' },
-    { label: 'Streak', value: `${metrics.streak}d`, helper: 'Current streak', accent: 'var(--warning)' },
-    { label: 'Exams', value: `${metrics.examsTaken}`, helper: 'Practice exams', accent: 'var(--success)' },
+    {
+      label: 'Completion',
+      value: metrics.hasStudyActivity ? formatPercent(metrics.completion) : '—',
+      helper: metrics.hasStudyActivity ? 'Questions answered across all certs' : 'Start studying to track progress',
+      accent: 'var(--accent)',
+    },
+    {
+      label: 'Avg Score',
+      value: metrics.hasExamActivity ? formatPercent(metrics.avgScore) : '—',
+      helper: metrics.hasExamActivity ? `Across ${metrics.examsTaken} exam${metrics.examsTaken === 1 ? '' : 's'}` : 'Take a mock exam to see your score',
+      accent: '#8bd3ff',
+    },
+    {
+      label: 'Streak',
+      value: metrics.hasStudyActivity ? `${metrics.streak}d` : '—',
+      helper: metrics.hasStudyActivity ? 'Current study streak' : 'Study to start a streak',
+      accent: 'var(--warning)',
+    },
+    {
+      label: 'Exams',
+      value: metrics.hasExamActivity ? `${metrics.examsTaken}` : '—',
+      helper: metrics.hasExamActivity ? 'Practice exams completed' : 'Take a mock exam to log your first attempt',
+      accent: 'var(--success)',
+    },
   ];
 
   const vendorColor = activeCert?.vendorColor ?? 'var(--accent)';
@@ -103,10 +126,10 @@ export function Dashboard({
             </button>
             <button
               type="button"
-              onClick={() => navigate('/study')}
+              onClick={() => navigate(hasActiveCertification ? '/study' : '/tracks')}
               style={{ border: 'none', background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', color: '#fff', borderRadius: 999, padding: '10px 18px', fontWeight: 700, cursor: 'pointer', boxShadow: '0 8px 20px rgba(79,124,255,0.3)' }}
             >
-              Start study
+              {hasActiveCertification ? 'Start study' : 'Choose a certification'}
             </button>
           </div>
         </header>
@@ -309,19 +332,32 @@ export function Dashboard({
             <div className="card-surface" style={{ padding: 18 }}>
               <div className="text-muted" style={{ fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 8 }}>Focus areas</div>
               <h3 className="text-heading" style={{ margin: '0 0 14px', fontSize: 20, fontWeight: 700 }}>Weak areas</h3>
-              <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
-                {weakAreas.map((area) => (
-                  <li key={area.name}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6, fontWeight: 600 }}>
-                      <span className="text-heading" style={{ fontSize: 13 }}>{area.name}</span>
-                      <span className="text-muted" style={{ fontSize: 12 }}>{formatPercent(area.accuracy)}</span>
-                    </div>
-                    <div className="progress-track" style={{ width: '100%', height: 7, borderRadius: 999, overflow: 'hidden' }}>
-                      <div style={{ width: `${area.progress}%`, height: '100%', borderRadius: 999, background: 'linear-gradient(90deg, var(--accent), #ff8fab)' }} />
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              {weakAreas.length > 0 ? (
+                <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
+                  {weakAreas.map((area) => (
+                    <li key={area.name}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6, fontWeight: 600 }}>
+                        <span className="text-heading" style={{ fontSize: 13 }}>{area.name}</span>
+                        <span className="text-muted" style={{ fontSize: 12 }}>{formatPercent(area.accuracy)}</span>
+                      </div>
+                      <div className="progress-track" style={{ width: '100%', height: 7, borderRadius: 999, overflow: 'hidden' }}>
+                        <div style={{ width: `${area.progress}%`, height: '100%', borderRadius: 999, background: 'linear-gradient(90deg, var(--accent), #ff8fab)' }} />
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <div className="text-muted" style={{ fontSize: 13, lineHeight: 1.5 }}>
+                  Study some questions to discover which topics need more review.
+                  <button
+                    type="button"
+                    onClick={() => navigate('/study')}
+                    style={{ display: 'block', marginTop: 10, padding: 0, border: 'none', background: 'none', color: 'var(--accent)', fontWeight: 700, cursor: 'pointer' }}
+                  >
+                    Start studying →
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Quick access */}

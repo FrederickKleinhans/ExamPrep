@@ -57,33 +57,22 @@ export function DashboardPage() {
     0,
   );
 
-  const { totalCorrect, totalAttempts } = allCertProgress.reduce(
-    (acc, cp) => {
-      for (const stat of Object.values(cp.questionStats)) {
-        acc.totalCorrect += stat.correct;
-        acc.totalAttempts += stat.attempts;
-      }
-      return acc;
-    },
-    { totalCorrect: 0, totalAttempts: 0 },
-  );
-
-  const avgAccuracy = totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
   const totalAvailable = manifest?.certifications.reduce((s, c) => s + c.questionCount, 0) ?? 0;
   const completion = totalAvailable > 0 ? Math.round((totalAnswered / totalAvailable) * 100) : 0;
 
   const allExams = allCertProgress.flatMap((cp) => cp.examHistory);
   const examsTaken = allExams.length;
-  const avgScore =
-    allExams.length > 0
-      ? Math.round(allExams.reduce((sum, e) => sum + e.score, 0) / allExams.length)
-      : avgAccuracy;
+  const avgScore = examsTaken > 0
+    ? Math.round(allExams.reduce((sum, e) => sum + e.score, 0) / examsTaken)
+    : 0;
 
   const metrics = {
     completion,
     avgScore,
     streak: progress.studyStreak.current,
     examsTaken,
+    hasStudyActivity: totalAnswered > 0,
+    hasExamActivity: examsTaken > 0,
   };
 
   // SM-2 due count for active cert
@@ -148,10 +137,6 @@ export function DashboardPage() {
       const accuracy = acc && acc.total > 0 ? Math.round((acc.earned / acc.total) * 100) : 0;
       return { name: topic?.name ?? topicId, accuracy, progress: accuracy };
     });
-  }
-
-  if (weakAreas.length === 0 && totalAnswered === 0) {
-    weakAreas = [{ name: 'Start studying to see weak areas', accuracy: 0, progress: 0 }];
   }
 
   return (

@@ -18,7 +18,20 @@ Tracks (browse + expand + activate) → Dashboard → Study / Exam / Analytics
 
 ---
 
-## Current state (September 2026)
+## Current state (September 26, 2026)
+
+### Deployment and authentication
+
+- Production site: [CertArc — Exam Preparation](https://certarc-one.vercel.app/)
+- Vercel production deployment tracks `main`.
+- The former site uses the `old-site-redirect` branch and permanently redirects visitors to the matching path on the new site.
+- Production and local email/password sign-up, sign-in, and email confirmation have been verified.
+- Production and local builds use the current Supabase project through `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`.
+- Supabase email confirmation redirects to the origin where registration started:
+  - `https://certarc-one.vercel.app/`
+  - `http://localhost:5173/`
+- Supabase progress storage uses the RLS-protected `user_progress` table defined in `supabase/schema.sql`.
+- Google and GitHub OAuth buttons are present in the UI but still require provider configuration in Supabase before they can be used.
 
 ### Build and tests
 
@@ -27,10 +40,10 @@ Tracks (browse + expand + activate) → Dashboard → Study / Exam / Analytics
 | `npm run build` | ✅ Clean |
 | `npm run lint` | ✅ Exit 0, zero warnings |
 | `npx vitest run` | ✅ 59/59 passing |
-| Vercel config | ✅ `vercel.json` ready |
+| Vercel config | ✅ Production site deployed; old site redirects |
 | TypeScript | ✅ `npx tsc -b` passing |
 
-### Content — 16 certifications compiled
+### Content — 18 certifications compiled
 
 | Cert ID | Name | Questions | Tier |
 |---|---|---|---|
@@ -50,18 +63,22 @@ Tracks (browse + expand + activate) → Dashboard → Study / Exam / Analytics
 | `dp-900` | Azure Data Fundamentals | 103 | free |
 | `sc-900` | Microsoft Security, Compliance, and Identity Fundamentals | 100 | free |
 | `psm-i` | Professional Scrum Master I | 100 | free |
+| `aws-ai-practitioner` | AWS AI Practitioner | 100 | free |
+| `ms-900` | MS-900 | 100 | free |
 
-Full catalog: `content/catalog.json` — 33 certs defined, with 9 tracks in `content/tracks.json`. AWS AI Practitioner is currently catalog-only because its question bank is not yet present. The compiler skips catalog-only certification folders that do not yet contain `questions.json`, with a warning.
+Full catalog: `content/catalog.json` — 33 certs defined, with 9 tracks in `content/tracks.json`. Catalog-only certification folders without `questions.json` are skipped by the compiler with an explicit warning.
 
-### Test suite — 59 tests, 5 files
+### Test suite — 62 tests, 7 files
 
 | File | Tests |
 |---|---|
 | `scripts/__tests__/compile-content.spec.mjs` | 13 |
 | `src/services/__tests__/AdaptiveEngine.spec.ts` | 26 |
-| `src/services/__tests__/ExamService.spec.ts` | 9 |
+| `src/services/__tests__/ExamService.spec.ts` | 10 |
 | `src/services/__tests__/ProgressService.spec.ts` | 9 |
 | `src/services/__tests__/DataLoader.spec.ts` | 2 |
+| `src/store/__tests__/useStore.spec.ts` | 1 |
+| `src/components/__tests__/Dashboard.spec.ts` | 1 |
 
 ---
 
@@ -70,8 +87,10 @@ Full catalog: `content/catalog.json` — 33 certs defined, with 9 tracks in `con
 ### Core loop
 Browse tracks → activate → study (SM-2) → exam → results + review → analytics → bookmarks
 
-Exam question selection uses a non-mutating Fisher–Yates shuffle, so each session
-selects a unique, unbiased subset of the available question bank.
+Mock exams load the full certification question bank, then use a non-mutating
+Fisher–Yates shuffle to select up to 30 unique questions per attempt. Each new
+attempt shuffles independently, so the set can vary between exams; as with any
+random selection, questions or even a full set may occasionally repeat.
 
 ### SM-2 Adaptive engine
 - 5-tier priority: due → weak+unseen → weak+seen → unseen → general
@@ -114,7 +133,8 @@ selects a unique, unbiased subset of the available question bank.
 - Certification selection keeps the selected career path synchronized across Tracks and Settings
 
 ### Auth and progress sync
-- Optional Supabase email/password and Google/GitHub OAuth
+- Supabase email/password authentication is working locally and in production, including confirmation-email redirects
+- Google/GitHub OAuth is scaffolded in the UI but requires provider setup before use
 - Guest mode remains localStorage-only when Supabase is not configured
 - Authenticated progress syncs to the `user_progress` table
 - Guest progress is merged into remote progress on first sign-in
@@ -122,6 +142,7 @@ selects a unique, unbiased subset of the available question bank.
 - Stale in-flight sign-in pulls are cancelled after sign-out or session changes
 - Supabase RLS schema is defined in `supabase/schema.sql`
 - `.env.local` setup is documented in `.env.example`
+- Production requires the `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` variables to be available during the Vercel build
 - Guest policy: the first certification is available locally; switching to another certification requires sign-in
 - Signed-in users can unlock one additional certification switch through the support flow
 - Buy Me a Coffee support is live at `https://buymeacoffee.com/fredintech`; the current unlock uses an honor-system local flow
@@ -130,6 +151,49 @@ selects a unique, unbiased subset of the available question bank.
 ---
 
 ## What still needs to be done
+
+### Product-quality roadmap (before monetization)
+
+Build learning value and reliability first; defer payment implementation until the product has been tested with learners and its core study experience is strong.
+
+#### 1. Review the learner experience
+- Walk through the main learner journeys: choose a career track, activate a certification, study, take an exam, review results, revisit weak areas, and sign in to sync progress.
+- Check desktop and mobile behavior, empty/error/loading states, navigation clarity, accessibility, and whether progress is understandable and recoverable.
+- Record issues by impact on learning, frequency, and effort; fix the highest-impact usability and reliability problems before adding more features.
+- **Exit criteria:** a prioritized, actionable list of product gaps with the highest-impact blockers addressed and regression coverage for affected behavior.
+
+##### Review and final walkthrough — September 26, 2026
+
+Reviewed first-run dashboard, Tracks, and no-active-certification states on desktop and a narrow mobile viewport. Walked through certification activation, study, mock exam, results/review, analytics, and progress sync. Checked loading/error states and keyboard-accessible track expansion.
+
+| Priority | Finding | Status / next step |
+|---|---|---|
+| P1 | The dashboard's `Start study` action sent new learners to an empty Practice page even though they had no active certification. | Fixed: the dashboard now routes new learners to Tracks and labels the action `Choose a certification`. |
+| P1 | The no-active states on Practice, Exam, and Analytics directed learners to Settings, while the dashboard's onboarding flow directs them to career paths. | Fixed: each empty state now points to Browse career paths; Practice and Exam use client-side links. |
+| P1 | AZ-900's exam setup advertised 150 questions, but exam sessions used only the first loaded topic chunk (30 questions). | Fixed: exam start loads the complete question bank and samples 30 unique questions for a mock; setup distinguishes mock length from bank size. Regression tests verify full-bank sampling and that separate starts can select different question sets. |
+| P2 | The dashboard Share action still used the old Vercel address. | Fixed: it now shares the current CertArc production URL. |
+| P2 | Track cards summarized the full path, while study-content availability was only clear after opening a path; many listed certifications say `Content coming soon`. | Fixed: collapsed cards now show how many certifications have content, while expanded rows retain the per-cert `Content coming soon` notice. |
+| P2 | New learners saw zero-valued completion, score, streak, and exam metrics before starting a certification; study accuracy could also appear as average exam score. | Fixed: empty metrics show an em dash and next-step guidance; average score now reflects exam attempts only. Completion clarifies that it counts questions across all certifications. |
+| P2 | The dashboard showed a zero-percent “Start studying to see weak areas” row as if it were measured performance. | Fixed: when there is no weak-area data, the dashboard explains how to generate it and provides a Study action. Added a first-run dashboard regression test. |
+
+Completed a controlled local-profile walkthrough of certification activation, study answer/explanation, exam session, submission/results/review, and analytics. The first-run dashboard and collapsed Tracks cards were rechecked locally after the fixes. Mock exams sample 30 unique questions from the full available bank, with an independent random selection for each start. The intentionally unanswered test exam recorded 0% only in the isolated local test profile. The learner-experience audit is complete: the highest-impact navigation and exam-length issues are fixed, remaining content availability is clearly disclosed, and affected behavior has regression coverage. Latest validation: 62 tests across 7 files, lint, production build, and `git diff --check` passed. The remaining product work is the separate question-quality review and flashcards pilot; the catalog still has certifications without question content.
+
+#### 2. Improve question and explanation quality
+- Define a question-quality checklist covering accuracy, clarity, exam-objective alignment, plausible distractors, unambiguous answers, useful explanations, and original/authentic content.
+- Audit representative questions from the current certification banks against the checklist; log and correct factual errors, duplicates, ambiguity, and weak explanations.
+- Add or improve automated content checks where practical, while retaining subject-matter review for correctness and pedagogy.
+- **Exit criteria:** agreed quality standards, audited pilot banks, fixed high-severity content issues, and a repeatable review process for future question additions.
+
+#### 3. Build and validate a free flashcards pilot
+- Select one pilot certification after the experience and content reviews, favoring a bank with strong coverage and reviewed source material.
+- Create purpose-written concept cards rather than mechanically turning every multiple-choice question into a card.
+- Build a focused study loop with card reveal, learner rating, due-card review, and clear session progress.
+- Keep flashcard scheduling/progress separate from quiz and exam statistics. Support guest-local persistence first and signed-in sync without overwriting existing progress.
+- Test card scheduling, persistence, sign-in merge/sync, empty states, accessibility, and mobile interaction.
+- **Exit criteria:** learners can complete repeatable review sessions, see their card progress, and use flashcards without changing their question-answer or exam history.
+
+#### Sequence and decision gate
+Complete the experience review first, use its findings to guide content and interface work, then ship the flashcard pilot using reviewed material. Collect learner feedback and usage evidence before expanding decks or implementing payments. Payment and entitlement work remains deferred until these product-quality milestones are met.
 
 ### Content (main work)
 - Most of the 33 catalog certifications still have no questions yet
@@ -156,7 +220,7 @@ selects a unique, unbiased subset of the available question bank.
 
 ### What we've built that scales cleanly
 
-**Content pipeline** — the single biggest unlock. Adding a new cert requires zero application code changes. Drop two JSON files, run one command. The compiler validates every question, generates chunks, and emits all manifests. At 16 compiled certs it's fast; at 100 it'll still work.
+**Content pipeline** — the single biggest unlock. Adding a new cert requires zero application code changes. Drop two JSON files, run one command. The compiler validates every question, generates chunks, and emits all manifests. At 18 compiled certs it's fast; at 100 it'll still work.
 
 **Data model** — `certificationId` is the universal key. Progress, SM-2 schedules, exam history, bookmarks are all isolated per cert. A new cert never touches existing progress.
 
@@ -174,11 +238,11 @@ Currently each study session loads one topic chunk on demand (~30–50 questions
 
 **2. The Settings cert dropdown**
 
-At 16 compiled certs it's usable. At 30+ compiled certs the dropdown becomes unwieldy. Consider replacing with a searchable cert picker or routing cert activation through the Tracks page only.
+At 18 compiled certs it's usable. At 30+ compiled certs the dropdown becomes unwieldy. Consider replacing with a searchable cert picker or routing cert activation through the Tracks page only.
 
 **3. `content/catalog.json` as the source of truth**
 
-Currently 35 certs in one file. At 100+ certs this stays manageable — it's read once at compile time, never at runtime. If it grows unwieldy, split by domain: `content/catalog/cloud.json`, `content/catalog/security.json` etc. The compiler would need a small update to merge them.
+Currently 33 certs in one file. At 100+ certs this stays manageable — it's read once at compile time, never at runtime. If it grows unwieldy, split by domain: `content/catalog/cloud.json`, `content/catalog/security.json` etc. The compiler would need a small update to merge them.
 
 **4. `public/data/` committed to git**
 
@@ -222,7 +286,7 @@ Authenticated users now have optional Supabase sync:
 
 ```text
 content/
-  catalog.json                        ← 35 certs (vendor, accessTier, domains)
+  catalog.json                        ← 33 certs (vendor, accessTier, domains)
   tracks.json                         ← 9 career tracks
   certifications/
     axelos/itil-4-foundation/
@@ -344,3 +408,11 @@ public/data/                          ← generated; never hand-edit
 | 2026-09-22 | Added live Buy Me a Coffee support link; Google AdSense/Ad Manager application submitted |
 | 2026-09-26 | Implemented the AZ-900 flashcards pilot with separate per-card SM-2 scheduling (Again/Hard/Good/Easy map to qualities 0/3/4/5), due review, local persistence, and signed-in sync |
 | 2026-09-28 | Generalized flashcards to derive cards from the active certification question bank, including supported choice, statement, dropdown, ordering, matching, and drag/drop answers; schedules remain separate per certification |
+| 2026-09-25 | Published CertReady production deployment, redirected the former Vercel site, and updated the page title to CertArc — Exam Preparation |
+| 2026-09-25 | Recreated the Supabase project and verified local/production email sign-up, sign-in, confirmation redirects, and progress-sync configuration |
+| 2026-09-26 | Added a pre-monetization product roadmap for learner-experience review, content quality, and a free flashcards pilot |
+| 2026-09-26 | Audited first-run learner navigation; routed new learners to career paths and corrected the dashboard share URL |
+| 2026-09-26 | Set mock exams to sample 30 unique questions from the full certification bank and clarified exam setup counts |
+| 2026-09-26 | Documented that mock exams independently randomize their 30-question sample; added a regression test for varying samples |
+| 2026-09-26 | Completed learner-experience audit; clarified track content availability and made empty dashboard metrics actionable |
+| 2026-09-28 | Made question-bank flashcards responsive across viewport sizes and added selectable 5/10/15/20-card sessions |
