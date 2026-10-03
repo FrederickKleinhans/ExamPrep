@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { BookOpen, ClipboardCheck, ArrowRight, Sun, Moon, Bell } from 'lucide-react';
 import { CareerTrack, CatalogCert } from '../types';
 import { useTheme } from '../store/useTheme';
+import { ReadinessEstimate } from '../services/ReadinessService';
 
 export interface DashboardMetrics {
   completion: number;
@@ -37,6 +38,7 @@ export interface DashboardProps {
   nextCert: CatalogCert | null;
   nextCertId: string | null;
   dueCount: number;
+  readiness: ReadinessEstimate | null;
 }
 
 const formatPercent = (value: number) => `${Math.round(value)}%`;
@@ -51,6 +53,7 @@ export function Dashboard({
   nextCert,
   nextCertId,
   dueCount,
+  readiness,
 }: DashboardProps) {
   const navigate = useNavigate();
   const { theme, toggle } = useTheme();
@@ -63,7 +66,10 @@ export function Dashboard({
       text: 'Track your certification progress with CertArc.',
       url: shareUrl,
     };
-    if (navigator.share) { await navigator.share(shareData); return; }
+    if (navigator.share) {
+      await navigator.share(shareData);
+      return;
+    }
     await navigator.clipboard?.writeText(shareUrl);
   };
 
@@ -71,13 +77,17 @@ export function Dashboard({
     {
       label: 'Completion',
       value: metrics.hasStudyActivity ? formatPercent(metrics.completion) : '—',
-      helper: metrics.hasStudyActivity ? 'Questions answered across all certs' : 'Start studying to track progress',
+      helper: metrics.hasStudyActivity
+        ? 'Questions answered across all certs'
+        : 'Start studying to track progress',
       accent: 'var(--accent)',
     },
     {
       label: 'Avg Score',
       value: metrics.hasExamActivity ? formatPercent(metrics.avgScore) : '—',
-      helper: metrics.hasExamActivity ? `Across ${metrics.examsTaken} exam${metrics.examsTaken === 1 ? '' : 's'}` : 'Take a mock exam to see your score',
+      helper: metrics.hasExamActivity
+        ? `Across ${metrics.examsTaken} exam${metrics.examsTaken === 1 ? '' : 's'}`
+        : 'Take a mock exam to see your score',
       accent: '#8bd3ff',
     },
     {
@@ -89,7 +99,9 @@ export function Dashboard({
     {
       label: 'Exams',
       value: metrics.hasExamActivity ? `${metrics.examsTaken}` : '—',
-      helper: metrics.hasExamActivity ? 'Practice exams completed' : 'Take a mock exam to log your first attempt',
+      helper: metrics.hasExamActivity
+        ? 'Practice exams completed'
+        : 'Take a mock exam to log your first attempt',
       accent: 'var(--success)',
     },
   ];
@@ -98,15 +110,47 @@ export function Dashboard({
 
   return (
     <div className="page-root" style={{ borderRadius: 24 }}>
-      <main className="dashboard-content" style={{ padding: '26px 28px', display: 'flex', flexDirection: 'column', gap: 20, minWidth: 0, maxWidth: '100%' }}>
-
+      <main
+        className="dashboard-content"
+        style={{
+          padding: '26px 28px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 20,
+          minWidth: 0,
+          maxWidth: '100%',
+        }}
+      >
         {/* ── Header ── */}
-        <header className="dashboard-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap', minWidth: 0 }}>
+        <header
+          className="dashboard-header"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: 16,
+            flexWrap: 'wrap',
+            minWidth: 0,
+          }}
+        >
           <div>
-            <div className="text-muted" style={{ fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 6 }}>Overview</div>
-            <h1 className="text-heading" style={{ margin: 0, fontSize: 40, lineHeight: 1.1, fontWeight: 800 }}>Dashboard</h1>
+            <div
+              className="text-muted"
+              style={{ fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 6 }}
+            >
+              Overview
+            </div>
+            <h1
+              className="text-heading"
+              style={{ margin: 0, fontSize: 40, lineHeight: 1.1, fontWeight: 800 }}
+            >
+              Dashboard
+            </h1>
           </div>
-          <div className="dashboard-header-actions" style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }}>
+          <div
+            className="dashboard-header-actions"
+            style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }}
+          >
             <button
               type="button"
               onClick={() => void shareDashboard()}
@@ -120,14 +164,35 @@ export function Dashboard({
               onClick={toggle}
               aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
               className="btn-ghost"
-              style={{ width: 40, height: 40, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 999, padding: 0 }}
+              style={{
+                width: 40,
+                height: 40,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: 999,
+                padding: 0,
+              }}
             >
-              {theme === 'dark' ? <Sun style={{ width: 16, height: 16 }} /> : <Moon style={{ width: 16, height: 16 }} />}
+              {theme === 'dark' ? (
+                <Sun style={{ width: 16, height: 16 }} />
+              ) : (
+                <Moon style={{ width: 16, height: 16 }} />
+              )}
             </button>
             <button
               type="button"
               onClick={() => navigate(hasActiveCertification ? '/study' : '/tracks')}
-              style={{ border: 'none', background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', color: '#fff', borderRadius: 999, padding: '10px 18px', fontWeight: 700, cursor: 'pointer', boxShadow: '0 8px 20px rgba(79,124,255,0.3)' }}
+              style={{
+                border: 'none',
+                background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))',
+                color: '#fff',
+                borderRadius: 999,
+                padding: '10px 18px',
+                fontWeight: 700,
+                cursor: 'pointer',
+                boxShadow: '0 8px 20px rgba(79,124,255,0.3)',
+              }}
             >
               {hasActiveCertification ? 'Start study' : 'Choose a certification'}
             </button>
@@ -152,7 +217,10 @@ export function Dashboard({
           <div style={{ flex: 1, minWidth: 0 }}>
             {!activeCert && !activeCertId ? (
               <div>
-                <div className="text-heading" style={{ fontSize: 22, fontWeight: 800, lineHeight: 1.2, marginBottom: 8 }}>
+                <div
+                  className="text-heading"
+                  style={{ fontSize: 22, fontWeight: 800, lineHeight: 1.2, marginBottom: 8 }}
+                >
                   No active certification
                 </div>
                 <p className="text-muted" style={{ margin: '0 0 16px', fontSize: 13 }}>
@@ -161,7 +229,16 @@ export function Dashboard({
                 <button
                   type="button"
                   onClick={() => navigate('/tracks')}
-                  style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', border: 'none', borderRadius: 12, padding: '10px 20px', color: '#fff', fontWeight: 700, fontSize: 13, cursor: 'pointer' }}
+                  style={{
+                    background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))',
+                    border: 'none',
+                    borderRadius: 12,
+                    padding: '10px 20px',
+                    color: '#fff',
+                    fontWeight: 700,
+                    fontSize: 13,
+                    cursor: 'pointer',
+                  }}
                 >
                   Browse career paths →
                 </button>
@@ -170,40 +247,106 @@ export function Dashboard({
               <>
                 {activeTrack ? (
                   <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
-                    <span style={{ fontSize: 14 }} aria-hidden="true">{activeTrack.icon}</span>
-                    <span className="text-muted" style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+                    <span style={{ fontSize: 14 }} aria-hidden="true">
+                      {activeTrack.icon}
+                    </span>
+                    <span
+                      className="text-muted"
+                      style={{
+                        fontSize: 11,
+                        fontWeight: 700,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.12em',
+                      }}
+                    >
                       {activeTrack.name}
                     </span>
-                    <span className="text-muted" style={{ fontSize: 11 }}>·</span>
-                    <button type="button" onClick={() => navigate('/tracks')} style={{ background: 'none', border: 'none', color: 'var(--accent)', fontSize: 11, fontWeight: 600, cursor: 'pointer', padding: 0 }}>
+                    <span className="text-muted" style={{ fontSize: 11 }}>
+                      ·
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => navigate('/tracks')}
+                      style={{
+                        background: 'none',
+                        border: 'none',
+                        color: 'var(--accent)',
+                        fontSize: 11,
+                        fontWeight: 600,
+                        cursor: 'pointer',
+                        padding: 0,
+                      }}
+                    >
                       Change path
                     </button>
                   </div>
                 ) : (
-                  <button type="button" onClick={() => navigate('/tracks')} style={{ background: 'none', border: 'none', color: 'var(--accent)', fontSize: 11, fontWeight: 600, cursor: 'pointer', padding: 0, marginBottom: 8, display: 'block', textAlign: 'left' }}>
+                  <button
+                    type="button"
+                    onClick={() => navigate('/tracks')}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      color: 'var(--accent)',
+                      fontSize: 11,
+                      fontWeight: 600,
+                      cursor: 'pointer',
+                      padding: 0,
+                      marginBottom: 8,
+                      display: 'block',
+                      textAlign: 'left',
+                    }}
+                  >
                     + Choose a career path
                   </button>
                 )}
                 <div className="text-heading" style={{ fontSize: 24, fontWeight: 800, lineHeight: 1.2 }}>
                   {activeCert?.name ?? activeCertId}
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 6, flexWrap: 'wrap' }}>
+                <div
+                  style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 6, flexWrap: 'wrap' }}
+                >
                   {activeCert?.code && (
-                    <span style={{ fontSize: 12, fontWeight: 700, color: vendorColor, background: `${vendorColor}18`, padding: '2px 8px', borderRadius: 999 }}>
+                    <span
+                      style={{
+                        fontSize: 12,
+                        fontWeight: 700,
+                        color: vendorColor,
+                        background: `${vendorColor}18`,
+                        padding: '2px 8px',
+                        borderRadius: 999,
+                      }}
+                    >
                       {activeCert.code}
                     </span>
                   )}
                   {activeCert?.level && (
-                    <span className="text-muted" style={{ fontSize: 11, textTransform: 'capitalize' }}>{activeCert.level}</span>
+                    <span className="text-muted" style={{ fontSize: 11, textTransform: 'capitalize' }}>
+                      {activeCert.level}
+                    </span>
                   )}
                   {activeCert?.vendor && (
-                    <span className="text-muted" style={{ fontSize: 11 }}>· {activeCert.vendor}</span>
+                    <span className="text-muted" style={{ fontSize: 11 }}>
+                      · {activeCert.vendor}
+                    </span>
                   )}
                   {dueCount > 0 && (
                     <button
                       type="button"
                       onClick={() => navigate('/study')}
-                      style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: 11, fontWeight: 700, color: 'var(--warning)', background: 'rgba(255,174,0,0.12)', border: '1px solid rgba(255,174,0,0.25)', borderRadius: 999, padding: '2px 8px', cursor: 'pointer' }}
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 4,
+                        fontSize: 11,
+                        fontWeight: 700,
+                        color: 'var(--warning)',
+                        background: 'rgba(255,174,0,0.12)',
+                        border: '1px solid rgba(255,174,0,0.25)',
+                        borderRadius: 999,
+                        padding: '2px 8px',
+                        cursor: 'pointer',
+                      }}
                       title="Start studying to review due questions"
                     >
                       <Bell style={{ width: 10, height: 10 }} aria-hidden="true" />
@@ -220,14 +363,38 @@ export function Dashboard({
               <button
                 type="button"
                 onClick={() => navigate('/study')}
-                style={{ display: 'flex', alignItems: 'center', gap: 6, borderRadius: 14, padding: '10px 16px', fontWeight: 700, background: `${vendorColor}18`, color: vendorColor, cursor: 'pointer', fontSize: 13, border: `1px solid ${vendorColor}35` }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  borderRadius: 14,
+                  padding: '10px 16px',
+                  fontWeight: 700,
+                  background: `${vendorColor}18`,
+                  color: vendorColor,
+                  cursor: 'pointer',
+                  fontSize: 13,
+                  border: `1px solid ${vendorColor}35`,
+                }}
               >
                 <BookOpen style={{ width: 15, height: 15 }} /> Study
               </button>
               <button
                 type="button"
                 onClick={() => navigate('/exam')}
-                style={{ display: 'flex', alignItems: 'center', gap: 6, border: '1px solid rgba(255,174,0,0.3)', borderRadius: 14, padding: '10px 16px', fontWeight: 700, background: 'rgba(255,174,0,0.1)', color: 'var(--warning)', cursor: 'pointer', fontSize: 13 }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  border: '1px solid rgba(255,174,0,0.3)',
+                  borderRadius: 14,
+                  padding: '10px 16px',
+                  fontWeight: 700,
+                  background: 'rgba(255,174,0,0.1)',
+                  color: 'var(--warning)',
+                  cursor: 'pointer',
+                  fontSize: 13,
+                }}
               >
                 <ClipboardCheck style={{ width: 15, height: 15 }} /> Exam
               </button>
@@ -236,38 +403,156 @@ export function Dashboard({
         </div>
 
         {/* ── Metric cards ── */}
-        <section className="dashboard-metrics" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(140px, 1fr))', gap: 14, minWidth: 0 }}>
+        <section
+          className="dashboard-metrics"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(4, minmax(140px, 1fr))',
+            gap: 14,
+            minWidth: 0,
+          }}
+        >
           {metricCards.map((card) => (
             <div key={card.label} className="card-surface" style={{ padding: 18 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
-                <span className="text-muted" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.08em' }}>{card.label}</span>
-                <span style={{ width: 8, height: 8, borderRadius: '50%', background: card.accent, display: 'inline-block' }} />
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  marginBottom: 14,
+                }}
+              >
+                <span
+                  className="text-muted"
+                  style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.08em' }}
+                >
+                  {card.label}
+                </span>
+                <span
+                  style={{
+                    width: 8,
+                    height: 8,
+                    borderRadius: '50%',
+                    background: card.accent,
+                    display: 'inline-block',
+                  }}
+                />
               </div>
-              <div style={{ fontSize: 34, fontWeight: 800, color: card.accent, lineHeight: 1, marginBottom: 6 }}>{card.value}</div>
-              <div className="text-muted" style={{ fontSize: 12 }}>{card.helper}</div>
+              <div
+                style={{ fontSize: 34, fontWeight: 800, color: card.accent, lineHeight: 1, marginBottom: 6 }}
+              >
+                {card.value}
+              </div>
+              <div className="text-muted" style={{ fontSize: 12 }}>
+                {card.helper}
+              </div>
             </div>
           ))}
         </section>
 
+        {readiness && (
+          <section
+            className="card-surface"
+            aria-label="Certification readiness estimate"
+            style={{ padding: 18 }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 16,
+                flexWrap: 'wrap',
+              }}
+            >
+              <div>
+                <div
+                  className="text-muted"
+                  style={{ fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase' }}
+                >
+                  Practice readiness estimate
+                </div>
+                <div className="text-heading" style={{ marginTop: 4, fontSize: 24, fontWeight: 800 }}>
+                  {readiness.score}%
+                </div>
+                <p className="text-muted" style={{ margin: '4px 0 0', fontSize: 12 }}>
+                  Heuristic, not a pass guarantee · {readiness.questionsAttempted} questions ·{' '}
+                  {readiness.examsCompleted} recent mock exams
+                </p>
+              </div>
+              <span className="text-muted" style={{ fontSize: 12, textTransform: 'capitalize' }}>
+                {readiness.confidence} evidence
+              </span>
+            </div>
+          </section>
+        )}
+
         {/* ── Bottom row ── */}
-        <section className="dashboard-bottom-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 0.95fr', gap: 14, minWidth: 0 }}>
+        <section
+          className="dashboard-bottom-grid"
+          style={{ display: 'grid', gridTemplateColumns: '1.5fr 0.95fr', gap: 14, minWidth: 0 }}
+        >
           {/* My progress */}
           <div className="card-surface" style={{ padding: 18 }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: 16,
+              }}
+            >
               <div>
-                <div className="text-muted" style={{ fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Certifications</div>
-                <h3 className="text-heading" style={{ margin: '4px 0 0', fontSize: 20, fontWeight: 700 }}>My progress</h3>
+                <div
+                  className="text-muted"
+                  style={{ fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase' }}
+                >
+                  Certifications
+                </div>
+                <h3 className="text-heading" style={{ margin: '4px 0 0', fontSize: 20, fontWeight: 700 }}>
+                  My progress
+                </h3>
               </div>
-              <button type="button" onClick={() => navigate('/tracks')} style={{ border: 'none', background: 'transparent', color: 'var(--accent)', fontWeight: 600, cursor: 'pointer', fontSize: 13 }}>
+              <button
+                type="button"
+                onClick={() => navigate('/tracks')}
+                style={{
+                  border: 'none',
+                  background: 'transparent',
+                  color: 'var(--accent)',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  fontSize: 13,
+                }}
+              >
                 All paths
               </button>
             </div>
 
-            <div className="dashboard-progress-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, minWidth: 0 }}>
+            <div
+              className="dashboard-progress-grid"
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+                gap: 12,
+                minWidth: 0,
+              }}
+            >
               {tracks.length === 0 ? (
                 <div className="text-muted" style={{ fontSize: 13, gridColumn: '1/-1' }}>
                   No certifications started yet.{' '}
-                  <button type="button" onClick={() => navigate('/tracks')} style={{ background: 'none', border: 'none', color: 'var(--accent)', cursor: 'pointer', fontWeight: 600, padding: 0 }}>
+                  <button
+                    type="button"
+                    onClick={() => navigate('/tracks')}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      color: 'var(--accent)',
+                      cursor: 'pointer',
+                      fontWeight: 600,
+                      padding: 0,
+                    }}
+                  >
                     Browse paths
                   </button>
                 </div>
@@ -278,18 +563,65 @@ export function Dashboard({
                     type="button"
                     onClick={() => navigate(`/certifications/${track.id}`)}
                     className="card-inset"
-                    style={{ textAlign: 'left', color: 'inherit', font: 'inherit', cursor: 'pointer', padding: 14, borderLeft: `3px solid ${track.color ?? 'var(--accent)'}` }}
+                    style={{
+                      textAlign: 'left',
+                      color: 'inherit',
+                      font: 'inherit',
+                      cursor: 'pointer',
+                      padding: 14,
+                      borderLeft: `3px solid ${track.color ?? 'var(--accent)'}`,
+                    }}
                   >
-                    <div className="text-heading" style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10, fontWeight: 600, fontSize: 13 }}>
-                      <span style={{ width: 8, height: 8, borderRadius: 999, background: track.color ?? 'var(--accent)', display: 'inline-block', flexShrink: 0 }} />
+                    <div
+                      className="text-heading"
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 8,
+                        marginBottom: 10,
+                        fontWeight: 600,
+                        fontSize: 13,
+                      }}
+                    >
+                      <span
+                        style={{
+                          width: 8,
+                          height: 8,
+                          borderRadius: 999,
+                          background: track.color ?? 'var(--accent)',
+                          display: 'inline-block',
+                          flexShrink: 0,
+                        }}
+                      />
                       {track.name}
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-                      <strong className="text-heading" style={{ fontSize: 22 }}>{track.completed}/{track.total}</strong>
-                      <span className="text-muted" style={{ fontSize: 12 }}>{formatPercent(track.progress)}</span>
+                    <div
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        marginBottom: 8,
+                      }}
+                    >
+                      <strong className="text-heading" style={{ fontSize: 22 }}>
+                        {track.completed}/{track.total}
+                      </strong>
+                      <span className="text-muted" style={{ fontSize: 12 }}>
+                        {formatPercent(track.progress)}
+                      </span>
                     </div>
-                    <div className="progress-track" style={{ width: '100%', height: 8, borderRadius: 999, overflow: 'hidden' }}>
-                      <div style={{ width: `${track.progress}%`, height: '100%', borderRadius: 999, background: `linear-gradient(90deg, ${track.color ?? 'var(--accent)'}, var(--success))` }} />
+                    <div
+                      className="progress-track"
+                      style={{ width: '100%', height: 8, borderRadius: 999, overflow: 'hidden' }}
+                    >
+                      <div
+                        style={{
+                          width: `${track.progress}%`,
+                          height: '100%',
+                          borderRadius: 999,
+                          background: `linear-gradient(90deg, ${track.color ?? 'var(--accent)'}, var(--success))`,
+                        }}
+                      />
                     </div>
                   </button>
                 ))
@@ -301,25 +633,68 @@ export function Dashboard({
                 type="button"
                 onClick={() => navigate(`/certifications/${nextCertId}`)}
                 className="hint-row"
-                style={{ marginTop: 14, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 14px', textAlign: 'left' }}
+                style={{
+                  marginTop: 14,
+                  width: '100%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '10px 14px',
+                  textAlign: 'left',
+                }}
               >
                 <div>
-                  <div className="text-muted" style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 2 }}>Next up</div>
-                  <div className="text-heading" style={{ fontSize: 13, fontWeight: 600 }}>{nextCert.name}</div>
+                  <div
+                    className="text-muted"
+                    style={{
+                      fontSize: 10,
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.1em',
+                      marginBottom: 2,
+                    }}
+                  >
+                    Next up
+                  </div>
+                  <div className="text-heading" style={{ fontSize: 13, fontWeight: 600 }}>
+                    {nextCert.name}
+                  </div>
                 </div>
-                <ArrowRight style={{ width: 15, height: 15, color: 'var(--text-secondary)', flexShrink: 0 }} />
+                <ArrowRight
+                  style={{ width: 15, height: 15, color: 'var(--text-secondary)', flexShrink: 0 }}
+                />
               </button>
             )}
             {/* Track complete celebration */}
             {!nextCert && tracks.length > 0 && tracks.every((t) => t.progress === 100) && (
-              <div style={{ marginTop: 14, padding: '14px 16px', borderRadius: 14, background: 'linear-gradient(135deg, rgba(45,212,191,0.1), rgba(79,124,255,0.08))', border: '1px solid rgba(45,212,191,0.3)', textAlign: 'center' }}>
+              <div
+                style={{
+                  marginTop: 14,
+                  padding: '14px 16px',
+                  borderRadius: 14,
+                  background: 'linear-gradient(135deg, rgba(45,212,191,0.1), rgba(79,124,255,0.08))',
+                  border: '1px solid rgba(45,212,191,0.3)',
+                  textAlign: 'center',
+                }}
+              >
                 <div style={{ fontSize: 24, marginBottom: 6 }}>🏆</div>
-                <div className="text-heading" style={{ fontSize: 14, fontWeight: 700, marginBottom: 4 }}>Track complete!</div>
-                <div className="text-muted" style={{ fontSize: 12 }}>You've passed all available certs on this path.</div>
+                <div className="text-heading" style={{ fontSize: 14, fontWeight: 700, marginBottom: 4 }}>
+                  Track complete!
+                </div>
+                <div className="text-muted" style={{ fontSize: 12 }}>
+                  You've passed all available certs on this path.
+                </div>
                 <button
                   type="button"
                   onClick={() => navigate('/tracks')}
-                  style={{ marginTop: 10, background: 'none', border: 'none', color: 'var(--accent)', fontSize: 12, fontWeight: 600, cursor: 'pointer' }}
+                  style={{
+                    marginTop: 10,
+                    background: 'none',
+                    border: 'none',
+                    color: 'var(--accent)',
+                    fontSize: 12,
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                  }}
                 >
                   Explore another path →
                 </button>
@@ -330,18 +705,56 @@ export function Dashboard({
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             {/* Weak areas */}
             <div className="card-surface" style={{ padding: 18 }}>
-              <div className="text-muted" style={{ fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 8 }}>Focus areas</div>
-              <h3 className="text-heading" style={{ margin: '0 0 14px', fontSize: 20, fontWeight: 700 }}>Weak areas</h3>
+              <div
+                className="text-muted"
+                style={{ fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 8 }}
+              >
+                Focus areas
+              </div>
+              <h3 className="text-heading" style={{ margin: '0 0 14px', fontSize: 20, fontWeight: 700 }}>
+                Weak areas
+              </h3>
               {weakAreas.length > 0 ? (
-                <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
+                <ul
+                  style={{
+                    listStyle: 'none',
+                    margin: 0,
+                    padding: 0,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 14,
+                  }}
+                >
                   {weakAreas.map((area) => (
                     <li key={area.name}>
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6, fontWeight: 600 }}>
-                        <span className="text-heading" style={{ fontSize: 13 }}>{area.name}</span>
-                        <span className="text-muted" style={{ fontSize: 12 }}>{formatPercent(area.accuracy)}</span>
+                      <div
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          marginBottom: 6,
+                          fontWeight: 600,
+                        }}
+                      >
+                        <span className="text-heading" style={{ fontSize: 13 }}>
+                          {area.name}
+                        </span>
+                        <span className="text-muted" style={{ fontSize: 12 }}>
+                          {formatPercent(area.accuracy)}
+                        </span>
                       </div>
-                      <div className="progress-track" style={{ width: '100%', height: 7, borderRadius: 999, overflow: 'hidden' }}>
-                        <div style={{ width: `${area.progress}%`, height: '100%', borderRadius: 999, background: 'linear-gradient(90deg, var(--accent), #ff8fab)' }} />
+                      <div
+                        className="progress-track"
+                        style={{ width: '100%', height: 7, borderRadius: 999, overflow: 'hidden' }}
+                      >
+                        <div
+                          style={{
+                            width: `${area.progress}%`,
+                            height: '100%',
+                            borderRadius: 999,
+                            background: 'linear-gradient(90deg, var(--accent), #ff8fab)',
+                          }}
+                        />
                       </div>
                     </li>
                   ))}
@@ -352,7 +765,16 @@ export function Dashboard({
                   <button
                     type="button"
                     onClick={() => navigate('/study')}
-                    style={{ display: 'block', marginTop: 10, padding: 0, border: 'none', background: 'none', color: 'var(--accent)', fontWeight: 700, cursor: 'pointer' }}
+                    style={{
+                      display: 'block',
+                      marginTop: 10,
+                      padding: 0,
+                      border: 'none',
+                      background: 'none',
+                      color: 'var(--accent)',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                    }}
                   >
                     Start studying →
                   </button>
@@ -362,12 +784,48 @@ export function Dashboard({
 
             {/* Quick access */}
             <div className="card-surface" style={{ padding: 18 }}>
-              <div className="text-muted" style={{ fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 8 }}>Actions</div>
-              <h3 className="text-heading" style={{ margin: '0 0 14px', fontSize: 20, fontWeight: 700 }}>Quick access</h3>
+              <div
+                className="text-muted"
+                style={{ fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 8 }}
+              >
+                Actions
+              </div>
+              <h3 className="text-heading" style={{ margin: '0 0 14px', fontSize: 20, fontWeight: 700 }}>
+                Quick access
+              </h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <button type="button" onClick={() => navigate('/study')} style={{ border: 'none', borderRadius: 12, padding: '11px 14px', fontWeight: 700, fontSize: 14, background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))', color: '#fff', cursor: 'pointer' }}>Quick study</button>
-                <button type="button" onClick={() => navigate('/exam')} className="btn-ghost" style={{ borderRadius: 12, padding: '11px 14px', fontWeight: 700, fontSize: 14 }}>Practice exam</button>
-                <button type="button" onClick={() => navigate('/bookmarks')} className="btn-ghost" style={{ borderRadius: 12, padding: '11px 14px', fontWeight: 700, fontSize: 14 }}>Review bookmarks</button>
+                <button
+                  type="button"
+                  onClick={() => navigate('/study')}
+                  style={{
+                    border: 'none',
+                    borderRadius: 12,
+                    padding: '11px 14px',
+                    fontWeight: 700,
+                    fontSize: 14,
+                    background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))',
+                    color: '#fff',
+                    cursor: 'pointer',
+                  }}
+                >
+                  Quick study
+                </button>
+                <button
+                  type="button"
+                  onClick={() => navigate('/exam')}
+                  className="btn-ghost"
+                  style={{ borderRadius: 12, padding: '11px 14px', fontWeight: 700, fontSize: 14 }}
+                >
+                  Practice exam
+                </button>
+                <button
+                  type="button"
+                  onClick={() => navigate('/bookmarks')}
+                  className="btn-ghost"
+                  style={{ borderRadius: 12, padding: '11px 14px', fontWeight: 700, fontSize: 14 }}
+                >
+                  Review bookmarks
+                </button>
               </div>
             </div>
           </div>

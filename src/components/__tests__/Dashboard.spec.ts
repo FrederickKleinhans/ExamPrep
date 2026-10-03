@@ -20,6 +20,7 @@ function renderDashboard(metrics: DashboardMetrics): string {
         nextCert: null,
         nextCertId: null,
         dueCount: 0,
+        readiness: null,
       }),
     ),
   );

@@ -5,6 +5,7 @@ import { AdaptiveEngine } from '../services/AdaptiveEngine';
 import { DataLoader } from '../services/DataLoader';
 import { CareerTrack, CatalogCert } from '../types';
 import { toLocalDateString } from '../lib/date';
+import { estimateReadiness } from '../services/ReadinessService';
 
 export function DashboardPage() {
   const progress = useStore((s) => s.progress);
@@ -35,37 +36,35 @@ export function DashboardPage() {
       }
     }
     void load();
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // ── Active cert + track context ────────────────────────────────────────────
   const activeCertId = progress.selectedCertification;
   const activeTrackId = progress.selectedTrackId;
   const activeCatalogCert = catalog.get(activeCertId) ?? null;
-  const activeTrack = activeTrackId ? tracks.find((t) => t.id === activeTrackId) ?? null : null;
+  const activeTrack = activeTrackId ? (tracks.find((t) => t.id === activeTrackId) ?? null) : null;
 
   // Next cert in the track after the active one
   const trackCertIds = activeTrack?.levels.flatMap((l) => l.certs.map((c) => c.certId)) ?? [];
   const activeCertIndex = trackCertIds.indexOf(activeCertId);
   const nextCertId = activeCertIndex >= 0 ? trackCertIds[activeCertIndex + 1] : null;
-  const nextCert = nextCertId ? catalog.get(nextCertId) ?? null : null;
+  const nextCert = nextCertId ? (catalog.get(nextCertId) ?? null) : null;
 
   // ── Metrics ────────────────────────────────────────────────────────────────
   const allCertProgress = Object.values(progress.certifications);
 
-  const totalAnswered = allCertProgress.reduce(
-    (sum, cp) => sum + Object.keys(cp.questionStats).length,
-    0,
-  );
+  const totalAnswered = allCertProgress.reduce((sum, cp) => sum + Object.keys(cp.questionStats).length, 0);
 
   const totalAvailable = manifest?.certifications.reduce((s, c) => s + c.questionCount, 0) ?? 0;
   const completion = totalAvailable > 0 ? Math.round((totalAnswered / totalAvailable) * 100) : 0;
 
   const allExams = allCertProgress.flatMap((cp) => cp.examHistory);
   const examsTaken = allExams.length;
-  const avgScore = examsTaken > 0
-    ? Math.round(allExams.reduce((sum, e) => sum + e.score, 0) / examsTaken)
-    : 0;
+  const avgScore =
+    examsTaken > 0 ? Math.round(allExams.reduce((sum, e) => sum + e.score, 0) / examsTaken) : 0;
 
   const metrics = {
     completion,
@@ -80,10 +79,9 @@ export function DashboardPage() {
   const activeCertProgress = progress.certifications[activeCertId];
   const dueCount = activeCertProgress
     ? Object.values(activeCertProgress.sm2 ?? {}).filter(
-      (s) => s && s.dueDate <= toLocalDateString(new Date()),
-    ).length
+        (s) => s && s.dueDate <= toLocalDateString(new Date()),
+      ).length
     : 0;
-
   // ── Cert progress cards — active cert only ────────────────────────────────
   const colorMap: Record<string, string> = {
     'az-900': '#0078D4',
@@ -114,6 +112,13 @@ export function DashboardPage() {
   // ── Weak areas ─────────────────────────────────────────────────────────────
   const selectedCert = manifest?.certifications.find((c) => c.id === activeCertId);
   const selectedCertProgress = progress.certifications[activeCertId];
+  const readiness = selectedCert
+    ? estimateReadiness(
+        selectedCertProgress?.questionStats ?? {},
+        selectedCert.questionCount,
+        selectedCertProgress?.examHistory ?? [],
+      )
+    : null;
 
   let weakAreas: { name: string; accuracy: number; progress: number }[] = [];
 
@@ -151,6 +156,7 @@ export function DashboardPage() {
       nextCert={nextCert}
       nextCertId={nextCertId}
       dueCount={dueCount}
+      readiness={readiness}
     />
   );
 }

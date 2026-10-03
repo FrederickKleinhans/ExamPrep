@@ -49,3 +49,30 @@ create policy "Users can update their own progress"
 create policy "Users can delete their own progress"
   on public.user_progress for delete
   using (auth.uid() = user_id);
+
+-- ── Question feedback ──────────────────────────────────────────────────────
+-- Question reports are insert-only from the app; review them in the dashboard.
+
+create table if not exists public.question_feedback (
+  id                uuid primary key default gen_random_uuid(),
+  user_id           uuid references auth.users(id) on delete set null,
+  certification_id  text not null check (char_length(certification_id) between 1 and 100),
+  question_id       text not null check (char_length(question_id) between 1 and 200),
+  category          text not null check (category in ('incorrect', 'unclear', 'outdated', 'other')),
+  details           text check (details is null or char_length(details) <= 2000),
+  created_at        timestamptz not null default now()
+);
+
+create index if not exists question_feedback_created_at_idx
+  on public.question_feedback(created_at desc);
+
+alter table public.question_feedback enable row level security;
+
+create policy "Users can submit question feedback"
+  on public.question_feedback for insert
+  with check (
+    (auth.uid() is null and user_id is null)
+    or auth.uid() = user_id
+  );
+
+grant insert on public.question_feedback to anon, authenticated;

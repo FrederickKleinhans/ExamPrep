@@ -7,13 +7,20 @@ CertArc is a certification exam-preparation app for building knowledge through f
 - Practice questions organized by certification and exam topic
 - Adaptive study sessions with spaced-repetition review
 - Timed mock exams with answer review
+- Custom exams filtered by topic and question count
+- Study-session and exam recovery after a refresh in the same tab
+- Retry sessions built from previously missed questions
+- A practice-readiness estimate based on question and mock-exam history
+- Official references and keyboard shortcuts while answering questions
+- Installable PWA with offline access to the generated question banks
+- In-app question reports (requires the Supabase schema)
 - Bookmarks, flashcards, progress analytics, and certification tracks
 - Optional Supabase sign-in and cross-device progress sync
 - Guest mode for studying without an account
 
 ## Requirements
 
-- Node.js 22 or newer
+- Node.js 22.12 or newer
 - npm
 
 The repository pins the expected major version in [.nvmrc](./.nvmrc) and declares the supported range in [package.json](./package.json).
@@ -57,18 +64,19 @@ The validator fails on invalid content and topics with no questions; it warns wh
 
 ```sh
 npm run lint
-npx tsc -b
-npx vitest run --environment jsdom
+npm run format
+npm run test -- --run
 ```
 
-GitHub Actions runs the content build and these checks for pushes to `main` and pull requests.
+The production build runs the TypeScript project check. Prettier is available through `npm run format` to apply the repository formatting rules.
+
+GitHub Actions runs the content build, type-check, lint, and tests on pushes to `main` and pull requests.
 
 ## Roadmap
 
 - Expand and review question coverage across every certification topic
-- Improve offline study and installability
-- Make due reviews and missed-question practice easier to discover
-- Continue improving exam readiness insights and study-session recovery
+- Add due-review reminders and make daily practice easier to discover
+- Continue refining exam-readiness insights and content-quality workflows
 
 ## License
 
