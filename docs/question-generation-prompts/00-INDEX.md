@@ -12,7 +12,7 @@
 | 4 | DP-900 Azure Data Fundamentals | `dp-900` | Foundation |
 | 5 | SC-900 Security, Compliance & Identity | `sc-900` | Foundation |
 | 6 | AI-900 Azure AI Fundamentals | `ai-900` | Foundation |
-| 7 | CompTIA A+ | `comptia-a-plus` | Foundation |
+| 7 | CompTIA A+ | `comptia-a-plus` | Foundation *(✅)* |
 | 8 | CompTIA Security+ | `comptia-security-plus` | Associate |
 | 9 | CompTIA Network+ | `network-plus` | Foundation |
 | 10 | Linux Essentials 010-160 | `linux-essentials` | Foundation |

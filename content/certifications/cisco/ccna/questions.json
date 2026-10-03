@@ -1,0 +1,6403 @@
+{
+  "certificationId": "ccna",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "ccna-001",
+      "type": "single-choice",
+      "topicId": "network-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which OSI layer is responsible for segmentation and end-to-end delivery using TCP and UDP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Layer 4 (Transport)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Layer 2 (Data Link)",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Layer 3 (Network)",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Layer 5 (Session)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The Transport layer segments data and provides end-to-end delivery through TCP (reliable) or UDP (best effort).",
+        "incorrect": "Layer 2 handles frames and MAC addressing, Layer 3 handles IP addressing and routing, and Layer 5 manages sessions.",
+        "examTip": "Transport = ports, TCP, UDP.",
+        "relatedTopics": [
+          "OSI model",
+          "TCP",
+          "UDP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.5 Compare TCP to UDP",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-002",
+      "type": "single-choice",
+      "topicId": "network-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TCP/IP model layer corresponds to OSI Layers 5, 6, and 7?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transport",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Application",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Internet",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Network Access",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The TCP/IP Application layer combines the OSI Session, Presentation, and Application layers.",
+        "incorrect": "Transport maps to OSI Layer 4, Internet to Layer 3, and Network Access to Layers 1 and 2.",
+        "examTip": "TCP/IP has four layers: Application, Transport, Internet, Network Access.",
+        "relatedTopics": [
+          "TCP/IP model",
+          "OSI model"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.1 Explain the role and function of network components",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-003",
+      "type": "single-choice",
+      "topicId": "network-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "How many usable host addresses are available in the 10.1.1.0/27 network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "32",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "62",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "30",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "28",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A /27 leaves 5 host bits, giving 2^5 = 32 addresses; subtracting the network and broadcast addresses leaves 30 usable hosts.",
+        "incorrect": "32 is the total including network and broadcast, 62 would be a /26, and 28 is not a power-of-two result.",
+        "examTip": "Usable hosts = 2^h - 2.",
+        "relatedTopics": [
+          "Subnetting",
+          "CIDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.6 Configure and verify IPv4 addressing and subnetting",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-004",
+      "type": "single-choice",
+      "topicId": "network-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A host is configured with the IP address 192.168.10.77/26.",
+      "questionText": "What is the network address of the host?",
+      "options": [
+        {
+          "id": "A",
+          "text": "192.168.10.72",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "192.168.10.96",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "192.168.10.64",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "192.168.10.0",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A /26 mask creates blocks of 64 addresses (0, 64, 128, 192); 77 falls in the 64 block, so the network address is 192.168.10.64.",
+        "incorrect": "192.168.10.0 is the block below, and .72 and .96 are not /26 boundaries.",
+        "examTip": "Find the block size (256 minus the mask octet) and round down to a multiple.",
+        "relatedTopics": [
+          "Subnetting",
+          "Network address"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.6 Configure and verify IPv4 addressing and subnetting",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-005",
+      "type": "single-choice",
+      "topicId": "network-fundamentals",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A host is configured with the IP address 172.16.35.130/21.",
+      "questionText": "What is the broadcast address of the subnet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "172.16.35.255",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "172.16.47.255",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "172.16.39.255",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "172.16.32.255",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A /21 uses 255.255.248.0, so the third-octet block size is 8. The host's subnet is 172.16.32.0 to 172.16.39.255, and the broadcast address is 172.16.39.255.",
+        "incorrect": "172.16.35.255 and 172.16.32.255 are not the last address of the block, and 172.16.47.255 belongs to the next block.",
+        "examTip": "For non-/24 prefixes, work in the interesting octet.",
+        "relatedTopics": [
+          "Subnetting",
+          "Broadcast address",
+          "CIDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.6 Configure and verify IPv4 addressing and subnetting",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-006",
+      "type": "single-choice",
+      "topicId": "network-fundamentals",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A network engineer must use 192.168.1.0/24 for subnets that need 100, 50, 25, and 10 hosts. The 100-host subnet has already been assigned 192.168.1.0/25.",
+      "questionText": "Which network should be assigned to the 50-host subnet to conserve address space and avoid overlap?",
+      "options": [
+        {
+          "id": "A",
+          "text": "192.168.1.128/26",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "192.168.1.64/26",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "192.168.1.100/26",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "192.168.1.128/25",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The 100-host subnet needs a /25 and uses 192.168.1.0/25 (0-127). The 50-host subnet needs a /26 (62 hosts), and the next free boundary is 192.168.1.128/26.",
+        "incorrect": "192.168.1.64/26 overlaps the /25, a /25 wastes space for 50 hosts, and 192.168.1.100/26 is not on a /26 boundary.",
+        "examTip": "VLSM: allocate largest subnets first.",
+        "relatedTopics": [
+          "VLSM",
+          "Subnetting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.6 Configure and verify IPv4 addressing and subnetting",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-007",
+      "type": "single-choice",
+      "topicId": "network-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the EUI-64 interface ID created from a MAC address of 0050.56AA.BBCC?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0250:56AA:BBCC:FFFE",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "0050:56FF:FEAA:BBCC",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "0250:56FF:FEAA:BBCC",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "0050:56AA:BBCC:0000",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "EUI-64 splits the MAC, inserts FFFE in the middle, and flips the 7th bit of the first byte (00 becomes 02).",
+        "incorrect": "Skipping the bit flip or placing FFFE at the end produces an incorrect interface ID.",
+        "examTip": "EUI-64: split, insert FFFE, flip the 7th bit.",
+        "relatedTopics": [
+          "EUI-64",
+          "IPv6 addressing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.8 Configure and verify IPv6 addressing and prefix",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-008",
+      "type": "single-choice",
+      "topicId": "network-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which IPv6 prefix is used for link-local unicast addresses?",
+      "options": [
+        {
+          "id": "A",
+          "text": "FC00::/7",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "FF00::/8",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "2000::/3",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "FE80::/10",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Link-local addresses are in FE80::/10 and are valid only on the local link.",
+        "incorrect": "FC00::/7 is unique local, FF00::/8 is multicast, and 2000::/3 is global unicast.",
+        "examTip": "Link-local = FE80.",
+        "relatedTopics": [
+          "IPv6 address types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.9 Compare IPv6 address types",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-009",
+      "type": "single-choice",
+      "topicId": "network-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An IPv6 host must learn the MAC address of another host on the same link before sending a frame.",
+      "questionText": "Which NDP message does the host use to discover that neighbor's Layer 2 address?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Router Advertisement",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Neighbor Solicitation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Router Solicitation",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ICMPv6 Echo Request",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Neighbor Solicitation and Neighbor Advertisement messages replace ARP in IPv6 for resolving Layer 2 addresses.",
+        "incorrect": "Router messages are used to discover routers and prefixes, and Echo Request tests reachability.",
+        "examTip": "NDP replaces ARP in IPv6.",
+        "relatedTopics": [
+          "NDP",
+          "IPv6",
+          "ARP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.9 Compare IPv6 address types",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-010",
+      "type": "multiple-choice",
+      "topicId": "network-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select ALL valid host addresses in the 192.168.1.64/27 subnet.",
+      "options": [
+        {
+          "id": "A",
+          "text": "192.168.1.64",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "192.168.1.65",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "192.168.1.95",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "192.168.1.80",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "192.168.1.94",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "The /27 subnet runs from 192.168.1.64 to 192.168.1.95; hosts are .65 through .94.",
+        "incorrect": "192.168.1.64 is the network address and 192.168.1.95 is the broadcast address.",
+        "examTip": "First and last addresses are not usable hosts.",
+        "relatedTopics": [
+          "Subnetting",
+          "Valid hosts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.6 Configure and verify IPv4 addressing and subnetting",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-011",
+      "type": "multiple-choice",
+      "topicId": "network-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Select ALL address types that exist in IPv6.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Multicast",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Broadcast",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Unicast",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Anycast",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Multi-unicast",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IPv6 uses unicast, multicast, and anycast addresses.",
+        "incorrect": "IPv6 has no broadcast; multicast replaces it.",
+        "examTip": "No broadcast in IPv6.",
+        "relatedTopics": [
+          "IPv6 address types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.9 Compare IPv6 address types",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-012",
+      "type": "multiple-choice",
+      "topicId": "network-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select ALL valid shortened forms of 2001:0DB8:0000:0000:0000:0000:0000:0001.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2001::DB8::1",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "2001:DB8::1",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "2001:DB8:::1",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "2001:DB8:0:0:0:0:0:1",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "2001:DB8::1::",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Leading zeros may be dropped and one run of consecutive zero groups may be replaced by a double colon.",
+        "incorrect": "The double colon can be used only once, and three colons are never valid.",
+        "examTip": "Only one :: per address.",
+        "relatedTopics": [
+          "IPv6 notation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.8 Configure and verify IPv6 addressing and prefix",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-013",
+      "type": "multiple-choice",
+      "topicId": "network-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the TWO characteristics of single-mode fiber compared with multimode fiber.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Is limited to about 100 meters",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Typically uses a laser light source",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Has a larger core diameter",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Typically uses LED light sources",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "Supports longer distances",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Single-mode fiber has a very small core, uses lasers, and supports much longer distances.",
+        "incorrect": "Multimode fiber has the larger core and commonly uses LEDs, and 100 meters is the limit for UTP copper.",
+        "examTip": "Single-mode = long distance, laser.",
+        "relatedTopics": [
+          "Fiber",
+          "Cabling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.3 Compare physical interface and cabling types",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-014",
+      "type": "yes-no-statements",
+      "topicId": "network-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "TCP uses a three-way handshake to establish a connection.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "UDP provides sequencing and retransmission of lost segments.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "DNS queries typically use UDP port 53.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "TFTP uses TCP.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "TCP is connection-oriented with a three-way handshake, DNS queries typically use UDP 53, and TFTP uses UDP.",
+        "incorrect": "UDP is connectionless and does not provide sequencing or retransmission.",
+        "examTip": "TCP = reliable; UDP = low overhead.",
+        "relatedTopics": [
+          "TCP",
+          "UDP",
+          "Ports"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.5 Compare TCP to UDP",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-015",
+      "type": "yes-no-statements",
+      "topicId": "network-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A collapsed core design combines the core and distribution layers.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The access layer connects end-user devices to the network.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A three-tier design is required for every network regardless of size.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "The core layer is the main place to apply user-level security policies.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Small campuses often use a two-tier collapsed core, and the access layer connects endpoints.",
+        "incorrect": "Three-tier is used for larger networks, and policy is primarily applied at the distribution and access layers.",
+        "examTip": "Collapsed core = two tiers.",
+        "relatedTopics": [
+          "Campus design",
+          "Two-tier",
+          "Three-tier"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.2 Describe characteristics of network topology architectures",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-016",
+      "type": "yes-no-statements",
+      "topicId": "network-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A /31 prefix can be used on point-to-point links.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The IPv6 address :: represents the unspecified address.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "FF02::1 is the all-nodes multicast address.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "An IPv6 router forwards packets with link-local destination addresses to other links.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "RFC 3021 allows /31 on point-to-point links, :: is unspecified, and FF02::1 is all-nodes. Link-local packets are not forwarded off the link.",
+        "incorrect": "Link-local scope means routers will not route them.",
+        "examTip": "Link-local never leaves the link.",
+        "relatedTopics": [
+          "IPv6",
+          "Multicast",
+          "/31"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.9 Compare IPv6 address types",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-017",
+      "type": "yes-no-statements",
+      "topicId": "network-fundamentals",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "192.168.5.31/27 is a valid host address.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "192.168.5.32/27 is a network address.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "172.16.31.255 is within 172.16.16.0/20.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "10.1.1.64/26 and 10.1.1.100/26 are in the same subnet.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "In a /27 the block 0-31 ends with the broadcast .31, .32 starts a new subnet, a /20 starting at 16 covers 16-31, and 10.1.1.64/26 covers .64-.127.",
+        "incorrect": "192.168.5.31 is the broadcast address of its /27.",
+        "examTip": "Find the block boundaries first.",
+        "relatedTopics": [
+          "Subnetting",
+          "CIDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.6 Configure and verify IPv4 addressing and subnetting",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-018",
+      "type": "dropdown-select",
+      "topicId": "network-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Select the default port number for each protocol.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "SSH",
+          "options": [
+            "22",
+            "23",
+            "53",
+            "67",
+            "443"
+          ],
+          "correctAnswer": "22"
+        },
+        {
+          "id": "d2",
+          "prompt": "Telnet",
+          "options": [
+            "22",
+            "23",
+            "53",
+            "67",
+            "443"
+          ],
+          "correctAnswer": "23"
+        },
+        {
+          "id": "d3",
+          "prompt": "DNS",
+          "options": [
+            "22",
+            "23",
+            "53",
+            "67",
+            "443"
+          ],
+          "correctAnswer": "53"
+        },
+        {
+          "id": "d4",
+          "prompt": "DHCP server",
+          "options": [
+            "22",
+            "23",
+            "53",
+            "67",
+            "443"
+          ],
+          "correctAnswer": "67"
+        }
+      ],
+      "explanation": {
+        "correct": "SSH uses 22, Telnet uses 23, DNS uses 53, and a DHCP server listens on UDP 67.",
+        "incorrect": "Port 443 is HTTPS and is not used by any of these protocols.",
+        "examTip": "Memorize 20/21, 22, 23, 25, 53, 67/68, 80, 123, 161/162, 443.",
+        "relatedTopics": [
+          "Ports",
+          "Protocols"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.5 Compare TCP to UDP",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-019",
+      "type": "dropdown-select",
+      "topicId": "network-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct value for each subnetting question.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Subnet mask for /20",
+          "options": [
+            "255.255.240.0",
+            "255.255.248.0",
+            "255.255.252.0"
+          ],
+          "correctAnswer": "255.255.240.0"
+        },
+        {
+          "id": "d2",
+          "prompt": "Subnet mask for /27",
+          "options": [
+            "255.255.255.192",
+            "255.255.255.224",
+            "255.255.255.240"
+          ],
+          "correctAnswer": "255.255.255.224"
+        },
+        {
+          "id": "d3",
+          "prompt": "Subnet mask for /22",
+          "options": [
+            "255.255.248.0",
+            "255.255.252.0",
+            "255.255.254.0"
+          ],
+          "correctAnswer": "255.255.252.0"
+        },
+        {
+          "id": "d4",
+          "prompt": "Usable hosts in a /29",
+          "options": [
+            "4",
+            "6",
+            "8"
+          ],
+          "correctAnswer": "6"
+        }
+      ],
+      "explanation": {
+        "correct": "/20 = 255.255.240.0, /27 = 255.255.255.224, /22 = 255.255.252.0, and a /29 has 8 addresses with 6 usable.",
+        "incorrect": "Adjacent masks differ by one prefix bit and are easy to confuse.",
+        "examTip": "Memorize the interesting octet values: 128, 192, 224, 240, 248, 252, 254, 255.",
+        "relatedTopics": [
+          "Subnet masks",
+          "CIDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.6 Configure and verify IPv4 addressing and subnetting",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-020",
+      "type": "dropdown-select",
+      "topicId": "network-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct Ethernet cable type for each connection.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Switch to PC (standard ports)",
+          "options": [
+            "Straight-through",
+            "Crossover",
+            "Rollover"
+          ],
+          "correctAnswer": "Straight-through"
+        },
+        {
+          "id": "d2",
+          "prompt": "Switch to switch without Auto-MDIX",
+          "options": [
+            "Straight-through",
+            "Crossover",
+            "Rollover"
+          ],
+          "correctAnswer": "Crossover"
+        },
+        {
+          "id": "d3",
+          "prompt": "Router to PC directly",
+          "options": [
+            "Straight-through",
+            "Crossover",
+            "Rollover"
+          ],
+          "correctAnswer": "Crossover"
+        },
+        {
+          "id": "d4",
+          "prompt": "PC to console port",
+          "options": [
+            "Straight-through",
+            "Crossover",
+            "Rollover"
+          ],
+          "correctAnswer": "Rollover"
+        }
+      ],
+      "explanation": {
+        "correct": "Like devices (switch to switch, router to PC) use crossover without Auto-MDIX, unlike devices use straight-through, and console connections use rollover.",
+        "incorrect": "Rollover cables are only for console connections.",
+        "examTip": "Auto-MDIX removes most crossover requirements.",
+        "relatedTopics": [
+          "Cabling",
+          "Auto-MDIX"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.3 Compare physical interface and cabling types",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-021",
+      "type": "ordering",
+      "topicId": "network-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Place the PDU names in order as data is encapsulated from the Application layer down to the Physical layer.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o2",
+          "text": "Segment",
+          "correctPosition": 2
+        },
+        {
+          "id": "o5",
+          "text": "Bits",
+          "correctPosition": 5
+        },
+        {
+          "id": "o3",
+          "text": "Packet",
+          "correctPosition": 3
+        },
+        {
+          "id": "o1",
+          "text": "Data",
+          "correctPosition": 1
+        },
+        {
+          "id": "o4",
+          "text": "Frame",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Data becomes a segment at the Transport layer, a packet at the Network layer, a frame at the Data Link layer, and bits at the Physical layer.",
+        "incorrect": "Frames carry packets, not the other way around.",
+        "examTip": "Data, Segment, Packet, Frame, Bits.",
+        "relatedTopics": [
+          "Encapsulation",
+          "PDU"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.1 Explain the role and function of network components",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-022",
+      "type": "ordering",
+      "topicId": "network-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the VLSM subnet allocation steps in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o4",
+          "text": "Assign the next available block to the next largest requirement",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Verify there is no overlap between subnets",
+          "correctPosition": 5
+        },
+        {
+          "id": "o2",
+          "text": "Sort the requirements from largest to smallest",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Assign the first address block to the largest requirement",
+          "correctPosition": 3
+        },
+        {
+          "id": "o1",
+          "text": "List the host requirements for each subnet",
+          "correctPosition": 1
+        }
+      ],
+      "explanation": {
+        "correct": "VLSM assigns the largest subnets first so that blocks remain aligned and smaller subnets fit into the remaining space.",
+        "incorrect": "Assigning small subnets first causes fragmentation and overlaps.",
+        "examTip": "VLSM = largest first.",
+        "relatedTopics": [
+          "VLSM",
+          "Subnetting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.6 Configure and verify IPv4 addressing and subnetting",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-023",
+      "type": "drag-drop",
+      "topicId": "network-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each IPv6 address to its address type.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Global unicast",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Link-local",
+          "acceptsItemIds": [
+            "item2",
+            "item3"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Unique local",
+          "acceptsItemIds": [
+            "item4",
+            "item5"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "Multicast",
+          "acceptsItemIds": [
+            "item6",
+            "item7"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "2001:DB8:1:1::1"
+        },
+        {
+          "id": "item6",
+          "text": "FF02::1"
+        },
+        {
+          "id": "item4",
+          "text": "FD12:3456::1"
+        },
+        {
+          "id": "item2",
+          "text": "FE80::1"
+        },
+        {
+          "id": "item7",
+          "text": "FF02::2"
+        },
+        {
+          "id": "item3",
+          "text": "FE80::A8BB:CCFF:FE00:1"
+        },
+        {
+          "id": "item5",
+          "text": "FC00::10"
+        }
+      ],
+      "explanation": {
+        "correct": "2000::/3 is global unicast, FE80::/10 is link-local, FC00::/7 is unique local, and FF00::/8 is multicast.",
+        "incorrect": "FD and FC prefixes are unique local, not global.",
+        "examTip": "Know the first hex digits: 2/3, FE80, FC/FD, FF.",
+        "relatedTopics": [
+          "IPv6 address types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.9 Compare IPv6 address types",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-024",
+      "type": "drag-drop",
+      "topicId": "network-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Drag each protocol to the TCP/IP model layer where it operates.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Application",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Transport",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Internet",
+          "acceptsItemIds": [
+            "item5",
+            "item6"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "Network Access",
+          "acceptsItemIds": [
+            "item7",
+            "item8"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "HTTP"
+        },
+        {
+          "id": "item3",
+          "text": "TCP"
+        },
+        {
+          "id": "item4",
+          "text": "UDP"
+        },
+        {
+          "id": "item7",
+          "text": "Ethernet"
+        },
+        {
+          "id": "item8",
+          "text": "802.11"
+        },
+        {
+          "id": "item2",
+          "text": "DNS"
+        },
+        {
+          "id": "item6",
+          "text": "ICMP"
+        },
+        {
+          "id": "item5",
+          "text": "IP"
+        }
+      ],
+      "explanation": {
+        "correct": "HTTP and DNS are application protocols, TCP and UDP are transport protocols, IP and ICMP belong to the Internet layer, and Ethernet and 802.11 are Network Access technologies.",
+        "incorrect": "ICMP is carried in IP packets and belongs to the Internet layer.",
+        "examTip": "TCP/IP: Application, Transport, Internet, Network Access.",
+        "relatedTopics": [
+          "TCP/IP model",
+          "Protocols"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.1 Explain the role and function of network components",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-025",
+      "type": "single-choice",
+      "topicId": "network-access",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the default VLAN on a Cisco switch to which all ports initially belong?",
+      "options": [
+        {
+          "id": "A",
+          "text": "VLAN 99",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "VLAN 1002",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "VLAN 1",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "VLAN 0",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "All Cisco switch ports are members of VLAN 1 by default.",
+        "incorrect": "VLAN 0 is reserved, VLAN 99 is a common management or native VLAN by convention only, and VLAN 1002 is a legacy reserved VLAN.",
+        "examTip": "Default VLAN = 1 and it cannot be deleted.",
+        "relatedTopics": [
+          "VLANs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.1 Configure and verify VLANs (normal range) spanning multiple switches",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-026",
+      "type": "single-choice",
+      "topicId": "network-access",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which IEEE standard defines VLAN trunking tags?",
+      "options": [
+        {
+          "id": "A",
+          "text": "802.1X",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "802.3ad",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "802.1D",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "802.1Q",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "IEEE 802.1Q inserts a 4-byte tag into Ethernet frames to identify the VLAN.",
+        "incorrect": "802.1X is port-based authentication, 802.3ad is link aggregation, and 802.1D is the original spanning tree.",
+        "examTip": "802.1Q = VLAN tag.",
+        "relatedTopics": [
+          "Trunking",
+          "802.1Q"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.2 Configure and verify interswitch connectivity",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-027",
+      "type": "single-choice",
+      "topicId": "network-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which command assigns an access port to VLAN 20?",
+      "options": [
+        {
+          "id": "A",
+          "text": "vlan 20 access",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "switchport mode vlan 20",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "switchport trunk native vlan 20",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "switchport access vlan 20",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "The interface command 'switchport access vlan 20' places an access port in VLAN 20.",
+        "incorrect": "The trunk native VLAN command applies to trunk ports, and the other commands are not valid IOS syntax.",
+        "examTip": "Configure 'switchport mode access' first.",
+        "relatedTopics": [
+          "VLANs",
+          "IOS CLI",
+          "Access ports"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.1 Configure and verify VLANs (normal range) spanning multiple switches",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-028",
+      "type": "single-choice",
+      "topicId": "network-access",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "Logs on two switches show CDP-4-NATIVE_VLAN_MISMATCH messages on the trunk between them.",
+      "questionText": "What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The native VLAN is configured differently on each end of the trunk",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The trunk uses 802.1Q on both ends",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The root bridge priority is too high",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The VTP domain name is missing",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "CDP reports a native VLAN mismatch when the two ends of a trunk have different native VLANs.",
+        "incorrect": "Using 802.1Q on both ends is correct, and VTP or STP priority do not generate native VLAN mismatch messages.",
+        "examTip": "Native VLAN must match on both trunk ends.",
+        "relatedTopics": [
+          "Trunking",
+          "Native VLAN",
+          "CDP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.2 Configure and verify interswitch connectivity",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-029",
+      "type": "single-choice",
+      "topicId": "network-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In RSTP, which port role provides an alternate path to the root bridge and stays in the discarding state?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Disabled port",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Designated port",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Root port",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Alternate port",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "An alternate port offers a backup path to the root bridge through a different switch and is blocked until needed.",
+        "incorrect": "Designated ports forward toward segments, root ports forward toward the root, and disabled ports are administratively down.",
+        "examTip": "Alternate = backup path to root; Backup = redundant path to same segment.",
+        "relatedTopics": [
+          "RSTP",
+          "Port roles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.5 Describe the need for and basic operations of Rapid PVST+ Spanning Tree Protocol",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-030",
+      "type": "single-choice",
+      "topicId": "network-access",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "Three switches have these bridge priority and MAC values: SW1 32769 / 0000.0C11.1111, SW2 32769 / 0000.0C22.2222, SW3 40961 / 0000.0C00.0001.",
+      "questionText": "Which switch becomes the root bridge?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The switch with the highest MAC address",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "SW1",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "SW2",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SW3",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The root bridge has the lowest bridge ID, which is priority first and MAC address second. SW1 and SW2 tie on priority, and SW1 has the lower MAC address.",
+        "incorrect": "SW3 has a lower MAC but a higher priority value, so it loses, and the highest MAC never wins.",
+        "examTip": "Priority first, then MAC.",
+        "relatedTopics": [
+          "STP",
+          "Bridge ID",
+          "Root bridge"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.5 Describe the need for and basic operations of Rapid PVST+ Spanning Tree Protocol",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-031",
+      "type": "single-choice",
+      "topicId": "network-access",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An engineer is configuring an EtherChannel between two switches using LACP.",
+      "questionText": "Which pair of channel-group modes will form an EtherChannel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Desirable on one switch and active on the other",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Active on one switch and passive on the other",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Passive on both switches",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "On on one switch and active on the other",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "LACP forms a channel when at least one side is active, and active/passive works.",
+        "incorrect": "Two passive sides never initiate negotiation, 'on' does not negotiate and cannot pair with LACP, and desirable is PAgP.",
+        "examTip": "LACP: active/active or active/passive. PAgP: desirable/desirable or desirable/auto.",
+        "relatedTopics": [
+          "EtherChannel",
+          "LACP",
+          "PAgP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.4 Configure and verify (Layer 2/Layer 3) EtherChannel",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-032",
+      "type": "single-choice",
+      "topicId": "network-access",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which 802.11 standard operates in both the 2.4 GHz and 5 GHz bands?",
+      "options": [
+        {
+          "id": "A",
+          "text": "802.11ac",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "802.11n",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "802.11a",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "802.11b",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "802.11n can operate in both 2.4 GHz and 5 GHz.",
+        "incorrect": "802.11a and 802.11ac are 5 GHz only, and 802.11b is 2.4 GHz only.",
+        "examTip": "n = dual band; ax = 2.4, 5, and 6 GHz (Wi-Fi 6E).",
+        "relatedTopics": [
+          "802.11",
+          "Wireless"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.11 Describe wireless principles",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-033",
+      "type": "single-choice",
+      "topicId": "network-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which protocol does a lightweight access point use to communicate with a wireless LAN controller?",
+      "options": [
+        {
+          "id": "A",
+          "text": "IPsec",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "CAPWAP",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "GRE",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "VXLAN",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Lightweight APs build CAPWAP tunnels to the WLC for control and data traffic.",
+        "incorrect": "GRE, VXLAN, and IPsec are tunneling or overlay technologies not used for AP-to-WLC communication.",
+        "examTip": "CAPWAP uses UDP 5246 and 5247.",
+        "relatedTopics": [
+          "CAPWAP",
+          "WLC",
+          "Lightweight AP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.6 Compare Cisco Wireless Architectures and AP modes",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-034",
+      "type": "multiple-choice",
+      "topicId": "network-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select ALL RSTP port states.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Listening",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Discarding",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Forwarding",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Learning",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Blocking",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "RSTP has three states: discarding, learning, and forwarding.",
+        "incorrect": "Blocking and listening are original STP states combined into discarding in RSTP.",
+        "examTip": "RSTP: discarding, learning, forwarding.",
+        "relatedTopics": [
+          "RSTP",
+          "Port states"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.5 Describe the need for and basic operations of Rapid PVST+ Spanning Tree Protocol",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-035",
+      "type": "multiple-choice",
+      "topicId": "network-access",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Select the TWO benefits of using VLANs.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Logical grouping of users regardless of physical location",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Encryption of traffic between VLANs",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Elimination of the need for a Layer 3 device between VLANs",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Smaller broadcast domains",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Longer maximum cable lengths",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "VLANs segment broadcast domains and allow logical groupings independent of physical location.",
+        "incorrect": "Inter-VLAN traffic still needs routing, VLANs do not change cable limits, and they do not encrypt traffic.",
+        "examTip": "VLAN = broadcast domain.",
+        "relatedTopics": [
+          "VLANs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.1 Configure and verify VLANs (normal range) spanning multiple switches",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-036",
+      "type": "multiple-choice",
+      "topicId": "network-access",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Select ALL settings that must match on member ports for an EtherChannel to form.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Interface description",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Device hostname",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Allowed VLANs and native VLAN",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Speed and duplex",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Switchport mode (access or trunk)",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Member interfaces must have consistent speed, duplex, switchport mode, and VLAN settings.",
+        "incorrect": "Descriptions and hostnames have no effect on bundling.",
+        "examTip": "Mismatches cause ports to be suspended.",
+        "relatedTopics": [
+          "EtherChannel",
+          "Configuration"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.4 Configure and verify (Layer 2/Layer 3) EtherChannel",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-037",
+      "type": "multiple-choice",
+      "topicId": "network-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select ALL statements that are true about WPA3.",
+      "options": [
+        {
+          "id": "A",
+          "text": "WPA3-Personal uses SAE instead of the PSK handshake",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "WPA3 uses TKIP",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "WPA3-Enterprise offers a 192-bit security mode",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "WPA3 requires Protected Management Frames (PMF)",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "WPA3 is based on WEP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "WPA3 improves security with SAE, mandatory PMF, and a 192-bit mode for enterprise.",
+        "incorrect": "TKIP belongs to WPA, and WEP is obsolete.",
+        "examTip": "WPA3 = SAE + PMF.",
+        "relatedTopics": [
+          "WPA3",
+          "Wireless security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.9 Describe wireless security protocols (WPA, WPA2, and WPA3)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-038",
+      "type": "yes-no-statements",
+      "topicId": "network-access",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A trunk port can carry traffic for multiple VLANs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "An access port carries traffic for multiple tagged VLANs.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "802.1Q adds a 4-byte tag to the frame.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Native VLAN traffic is tagged by default.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Trunks carry multiple VLANs with 802.1Q tags. Access ports belong to one VLAN, and native VLAN traffic is untagged by default.",
+        "incorrect": "Access ports do not tag frames.",
+        "examTip": "Native VLAN = untagged.",
+        "relatedTopics": [
+          "Trunking",
+          "802.1Q"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.2 Configure and verify interswitch connectivity",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-039",
+      "type": "yes-no-statements",
+      "topicId": "network-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "All ports on the root bridge are designated ports.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A lower bridge priority makes a switch more likely to become the root bridge.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "STP forwards on all redundant links at the same time within a VLAN.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "PortFast is recommended on switch-to-switch trunk links.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "The root bridge has designated ports only, and lower priority wins root election. STP blocks redundant links to prevent loops, and PortFast is for edge ports.",
+        "incorrect": "PortFast on switch uplinks can create temporary loops.",
+        "examTip": "PortFast = edge ports only.",
+        "relatedTopics": [
+          "STP",
+          "PortFast"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.5 Describe the need for and basic operations of Rapid PVST+ Spanning Tree Protocol",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-040",
+      "type": "yes-no-statements",
+      "topicId": "network-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Autonomous APs are configured individually.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Lightweight APs use CAPWAP tunnels to a controller.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Cloud-based AP management requires an on-premises WLC.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Split-MAC architecture divides functions between the AP and the controller.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Autonomous APs are standalone, lightweight APs depend on a WLC using CAPWAP, and split-MAC divides real-time and management functions. Cloud-based management does not need a local WLC.",
+        "incorrect": "Cloud-managed APs are controlled through a cloud dashboard.",
+        "examTip": "Autonomous, controller-based (split-MAC), and cloud-based are the three models.",
+        "relatedTopics": [
+          "WLC",
+          "Autonomous AP",
+          "Cloud-based"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.6 Compare Cisco Wireless Architectures and AP modes",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-041",
+      "type": "yes-no-statements",
+      "topicId": "network-access",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "LACP is an open standard.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "PAgP is Cisco proprietary.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "One end can use LACP and the other end can use PAgP.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "An EtherChannel can combine ports of different speeds.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "LACP is IEEE standard and PAgP is Cisco proprietary; they cannot negotiate with each other, and bundle members must run at the same speed.",
+        "incorrect": "Mixing protocols or speeds prevents the channel from forming.",
+        "examTip": "LACP = standard; PAgP = Cisco.",
+        "relatedTopics": [
+          "EtherChannel",
+          "LACP",
+          "PAgP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.4 Configure and verify (Layer 2/Layer 3) EtherChannel",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-042",
+      "type": "dropdown-select",
+      "topicId": "network-access",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Select the show command that displays each item.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "VLANs and their member ports",
+          "options": [
+            "show vlan brief",
+            "show interfaces trunk",
+            "show spanning-tree",
+            "show etherchannel summary"
+          ],
+          "correctAnswer": "show vlan brief"
+        },
+        {
+          "id": "d2",
+          "prompt": "Trunk interfaces and allowed VLANs",
+          "options": [
+            "show vlan brief",
+            "show interfaces trunk",
+            "show spanning-tree",
+            "show etherchannel summary"
+          ],
+          "correctAnswer": "show interfaces trunk"
+        },
+        {
+          "id": "d3",
+          "prompt": "Root bridge and port roles",
+          "options": [
+            "show vlan brief",
+            "show interfaces trunk",
+            "show spanning-tree",
+            "show etherchannel summary"
+          ],
+          "correctAnswer": "show spanning-tree"
+        },
+        {
+          "id": "d4",
+          "prompt": "EtherChannel bundle status",
+          "options": [
+            "show vlan brief",
+            "show interfaces trunk",
+            "show spanning-tree",
+            "show etherchannel summary"
+          ],
+          "correctAnswer": "show etherchannel summary"
+        }
+      ],
+      "explanation": {
+        "correct": "Each show command displays a specific Layer 2 feature.",
+        "incorrect": "The other commands show different information.",
+        "examTip": "Memorize the Layer 2 show commands.",
+        "relatedTopics": [
+          "IOS CLI",
+          "show commands"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.1 Configure and verify VLANs (normal range) spanning multiple switches",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-043",
+      "type": "dropdown-select",
+      "topicId": "network-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the STP/RSTP port role that matches each description.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Every port on the root bridge",
+          "options": [
+            "Root",
+            "Designated",
+            "Alternate"
+          ],
+          "correctAnswer": "Designated"
+        },
+        {
+          "id": "d2",
+          "prompt": "Port on a non-root switch with the best path to the root",
+          "options": [
+            "Root",
+            "Designated",
+            "Alternate"
+          ],
+          "correctAnswer": "Root"
+        },
+        {
+          "id": "d3",
+          "prompt": "RSTP port that is a discarding backup path to the root",
+          "options": [
+            "Root",
+            "Designated",
+            "Alternate"
+          ],
+          "correctAnswer": "Alternate"
+        }
+      ],
+      "explanation": {
+        "correct": "Root bridge ports are designated, each non-root switch has one root port, and alternate ports are backup paths.",
+        "incorrect": "Each role has a specific purpose in loop prevention.",
+        "examTip": "Every non-root switch has exactly one root port.",
+        "relatedTopics": [
+          "STP",
+          "RSTP",
+          "Port roles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.5 Describe the need for and basic operations of Rapid PVST+ Spanning Tree Protocol",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-044",
+      "type": "dropdown-select",
+      "topicId": "network-access",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Select the wireless architecture that matches each description.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "APs are configured and managed individually",
+          "options": [
+            "Autonomous",
+            "Controller-based",
+            "Cloud-based"
+          ],
+          "correctAnswer": "Autonomous"
+        },
+        {
+          "id": "d2",
+          "prompt": "APs build CAPWAP tunnels to a WLC",
+          "options": [
+            "Autonomous",
+            "Controller-based",
+            "Cloud-based"
+          ],
+          "correctAnswer": "Controller-based"
+        },
+        {
+          "id": "d3",
+          "prompt": "APs are managed from a vendor-hosted dashboard",
+          "options": [
+            "Autonomous",
+            "Controller-based",
+            "Cloud-based"
+          ],
+          "correctAnswer": "Cloud-based"
+        }
+      ],
+      "explanation": {
+        "correct": "Autonomous APs are standalone, controller-based APs use CAPWAP, and cloud-based APs are managed from the cloud.",
+        "incorrect": "The architectures differ by where management is performed.",
+        "examTip": "Know the three wireless architectures.",
+        "relatedTopics": [
+          "Wireless architecture",
+          "CAPWAP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.6 Compare Cisco Wireless Architectures and AP modes",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-045",
+      "type": "ordering",
+      "topicId": "network-access",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Place the commands in the correct order to configure an access port in VLAN 20.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o5",
+          "text": "switchport access vlan 20",
+          "correctPosition": 5
+        },
+        {
+          "id": "o1",
+          "text": "enable",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "configure terminal",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "interface gigabitethernet0/1",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "switchport mode access",
+          "correctPosition": 4
+        }
+      ],
+      "explanation": {
+        "correct": "Privileged EXEC is entered first, then global configuration, then the interface, and then the port mode and VLAN.",
+        "incorrect": "Interface commands cannot be entered before selecting the interface.",
+        "examTip": "enable, configure terminal, interface, commands.",
+        "relatedTopics": [
+          "IOS CLI",
+          "VLANs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.1 Configure and verify VLANs (normal range) spanning multiple switches",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-046",
+      "type": "ordering",
+      "topicId": "network-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the STP tiebreakers for choosing a root port in the order they are evaluated.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o2",
+          "text": "Lowest sender bridge ID",
+          "correctPosition": 2
+        },
+        {
+          "id": "o1",
+          "text": "Lowest root path cost",
+          "correctPosition": 1
+        },
+        {
+          "id": "o4",
+          "text": "Lowest sender port ID",
+          "correctPosition": 4
+        },
+        {
+          "id": "o3",
+          "text": "Lowest sender port priority",
+          "correctPosition": 3
+        }
+      ],
+      "explanation": {
+        "correct": "A switch selects the root port by lowest root path cost, then lowest sender bridge ID, then lowest sender port priority, then lowest sender port ID.",
+        "incorrect": "These are checked sequentially, only moving on when the previous value ties.",
+        "examTip": "Cost, bridge ID, port priority, port ID.",
+        "relatedTopics": [
+          "STP",
+          "Root port selection"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.5 Describe the need for and basic operations of Rapid PVST+ Spanning Tree Protocol",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-047",
+      "type": "drag-drop",
+      "topicId": "network-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each 802.11 standard to the frequency band it supports.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "2.4 GHz only",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "5 GHz only",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "2.4 GHz and 5 GHz",
+          "acceptsItemIds": [
+            "item5",
+            "item6"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item5",
+          "text": "802.11n"
+        },
+        {
+          "id": "item2",
+          "text": "802.11g"
+        },
+        {
+          "id": "item1",
+          "text": "802.11b"
+        },
+        {
+          "id": "item6",
+          "text": "802.11ax"
+        },
+        {
+          "id": "item3",
+          "text": "802.11a"
+        },
+        {
+          "id": "item4",
+          "text": "802.11ac"
+        }
+      ],
+      "explanation": {
+        "correct": "802.11b/g use 2.4 GHz, 802.11a/ac use 5 GHz, and 802.11n/ax support both bands.",
+        "incorrect": "802.11ac is 5 GHz only despite being newer than 802.11n.",
+        "examTip": "n and ax are dual-band.",
+        "relatedTopics": [
+          "802.11",
+          "Wireless bands"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.11 Describe wireless principles",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-048",
+      "type": "drag-drop",
+      "topicId": "network-access",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each IOS command to the feature it configures.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Access port",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Trunk port",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "EtherChannel",
+          "acceptsItemIds": [
+            "item5",
+            "item6"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item6",
+          "text": "interface port-channel 1"
+        },
+        {
+          "id": "item2",
+          "text": "switchport access vlan 10"
+        },
+        {
+          "id": "item3",
+          "text": "switchport mode trunk"
+        },
+        {
+          "id": "item5",
+          "text": "channel-group 1 mode active"
+        },
+        {
+          "id": "item1",
+          "text": "switchport mode access"
+        },
+        {
+          "id": "item4",
+          "text": "switchport trunk allowed vlan 10,20"
+        }
+      ],
+      "explanation": {
+        "correct": "Access commands set the mode and VLAN, trunk commands set mode and allowed VLANs, and EtherChannel uses channel-group and port-channel interfaces.",
+        "incorrect": "Allowed VLANs apply to trunks only.",
+        "examTip": "channel-group goes on member interfaces.",
+        "relatedTopics": [
+          "IOS CLI",
+          "VLANs",
+          "EtherChannel"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 2.1 Configure and verify VLANs (normal range) spanning multiple switches",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-049",
+      "type": "single-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which summary route most efficiently represents the four networks 192.168.0.0/24 through 192.168.3.0/24?",
+      "options": [
+        {
+          "id": "A",
+          "text": "192.168.0.0/23",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "192.168.0.0/22",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "192.168.0.0/24",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "192.168.0.0/21",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Four contiguous /24 networks (third octet 0-3) are covered by 192.168.0.0/22.",
+        "incorrect": "A /23 covers only two networks, and a /21 covers eight (including networks not needed).",
+        "examTip": "Summarize by finding the common bits.",
+        "relatedTopics": [
+          "Route summarization",
+          "Subnetting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.6 Configure and verify IPv4 addressing and subnetting",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-050",
+      "type": "single-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An administrator must divide 192.168.50.0/24 into equal subnets of 16 addresses each.",
+      "questionText": "How many subnets are created and how many usable hosts does each subnet provide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "32 subnets, 6 usable hosts each",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "8 subnets, 30 usable hosts each",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "16 subnets, 16 usable hosts each",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "16 subnets, 14 usable hosts each",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Each subnet has 16 addresses, so a /24 splits into 16 subnets (a /28) with 14 usable hosts after removing network and broadcast.",
+        "incorrect": "The other combinations correspond to a /27, a /29, or ignore the network and broadcast addresses.",
+        "examTip": "/28 = 16 subnets of 14 usable hosts from a /24.",
+        "relatedTopics": [
+          "Subnetting",
+          "CIDR"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 1.6 Configure and verify IPv4 addressing and subnetting",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-051",
+      "type": "single-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the default administrative distance of a static route configured with a next-hop IP address?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "110",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "90",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "0",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "A static route to a next-hop address has an administrative distance of 1.",
+        "incorrect": "0 is directly connected, 90 is EIGRP, and 110 is OSPF.",
+        "examTip": "Connected 0, static 1, eBGP 20, EIGRP 90, OSPF 110, RIP 120.",
+        "relatedTopics": [
+          "Administrative distance",
+          "Static routing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.1 Interpret the components of routing table",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-052",
+      "type": "single-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which command configures a static route to 10.2.0.0/16 using next hop 192.168.1.2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ip route 10.2.0.0 255.255.0.0 192.168.1.2",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ip route 10.2.0.0 0.0.255.255 192.168.1.2",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "ip route 192.168.1.2 255.255.255.0 10.2.0.0",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "route add 10.2.0.0 mask 255.255.0.0 192.168.1.2",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The syntax is ip route <network> <subnet mask> <next hop>.",
+        "incorrect": "The second option reverses the arguments, the third uses a wildcard mask, and the last is a host OS command.",
+        "examTip": "Static routes use subnet masks, not wildcard masks.",
+        "relatedTopics": [
+          "Static routing",
+          "IOS CLI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.3 Configure and verify IPv4 and IPv6 static routing",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-053",
+      "type": "single-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which command configures an IPv4 default route to the next hop 203.0.113.1?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ip route 203.0.113.1 0.0.0.0 0.0.0.0",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ip gateway 203.0.113.1",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "ip default-network 0.0.0.0 203.0.113.1",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ip route 0.0.0.0 0.0.0.0 203.0.113.1",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "A default route uses network 0.0.0.0 and mask 0.0.0.0 followed by the next hop.",
+        "incorrect": "The other commands use invalid syntax or reversed arguments.",
+        "examTip": "0.0.0.0/0 matches every destination.",
+        "relatedTopics": [
+          "Default route",
+          "IOS CLI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.3 Configure and verify IPv4 and IPv6 static routing",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-054",
+      "type": "single-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A router has Loopback0 1.1.1.1, GigabitEthernet0/0 10.0.0.2, and GigabitEthernet0/1 172.16.0.1. No router-id command is configured.",
+      "questionText": "Which value will the router use as its OSPF router ID?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.0.0.0",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "1.1.1.1",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "172.16.0.1",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "10.0.0.2",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Without a manually configured router ID, OSPF prefers the highest IP address on a loopback interface.",
+        "incorrect": "Physical interface addresses are only used if no loopback exists, and 0.0.0.0 is not valid.",
+        "examTip": "Order: manual router-id, highest loopback IP, highest active physical IP.",
+        "relatedTopics": [
+          "OSPF",
+          "Router ID"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.4 Configure and verify single area OSPFv2",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-055",
+      "type": "single-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A router has these routes: 10.0.0.0/8 static via R1; 10.1.0.0/16 OSPF via R2; 10.1.1.0/24 OSPF via R3; 10.1.1.0/24 RIP via R4. It receives a packet for 10.1.1.20.",
+      "questionText": "Which next hop does the router use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "R4",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "R1",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "R3",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "R2",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The /24 routes are the longest matches for 10.1.1.20. Between OSPF (AD 110) and RIP (AD 120) for the same prefix, the lower AD wins, so R3 is used.",
+        "incorrect": "R1 and R2 are less specific matches, and RIP via R4 loses to OSPF on administrative distance.",
+        "examTip": "Longest prefix first, then AD, then metric.",
+        "relatedTopics": [
+          "Routing decision",
+          "Longest prefix match",
+          "AD"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.2 Determine how a router makes a forwarding decision by default",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-056",
+      "type": "single-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "Two routers share the 10.0.12.0/24 link in area 0, but show ip ospf neighbor shows nothing. One router uses a hello interval of 10 seconds and the other 5 seconds.",
+      "questionText": "What is the MOST likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The interface descriptions are different",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The routers have different interface costs",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The hello and dead timers do not match",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "The OSPF process IDs are different",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "OSPF neighbors on a link must use matching hello/dead intervals, area, subnet, and authentication.",
+        "incorrect": "Process ID is locally significant, descriptions are cosmetic, and cost differences do not prevent adjacency.",
+        "examTip": "Remember: hello/dead, area, subnet/mask, authentication, stub flags.",
+        "relatedTopics": [
+          "OSPF",
+          "Neighbor adjacency",
+          "Troubleshooting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.4 Configure and verify single area OSPFv2",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-057",
+      "type": "single-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An engineer is configuring router-on-a-stick for VLAN 20 on a router subinterface.",
+      "questionText": "Which command associates subinterface GigabitEthernet0/0.20 with VLAN 20?",
+      "options": [
+        {
+          "id": "A",
+          "text": "vlan 20 dot1q",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ip dot1q 20",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "switchport trunk encapsulation dot1q 20",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "encapsulation dot1Q 20",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Router-on-a-stick subinterfaces use encapsulation dot1Q <vlan-id>.",
+        "incorrect": "switchport commands apply to switches, and the other commands are invalid.",
+        "examTip": "Subinterface needs encapsulation before assigning an IP address.",
+        "relatedTopics": [
+          "Inter-VLAN routing",
+          "IOS CLI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.3 Configure and verify IPv4 and IPv6 static routing",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-058",
+      "type": "single-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "Hosts in VLAN 20 cannot reach their default gateway configured on R1 subinterface Gi0/0.20. The subinterface configuration is correct, but the switch port connected to R1 is an access port in VLAN 1.",
+      "questionText": "What is the most likely problem?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The router needs OSPF enabled",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The switch port connected to R1 is not configured as a trunk",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "The router subinterface needs a routing protocol",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The VLAN 20 hosts need a default VLAN of 1",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Router-on-a-stick requires an 802.1Q trunk between the switch and router so tagged VLAN traffic reaches the subinterfaces.",
+        "incorrect": "A routing protocol is not needed for connected VLAN subnets, and OSPF is unrelated.",
+        "examTip": "Router-on-a-stick: trunk on switch, subinterface per VLAN.",
+        "relatedTopics": [
+          "Router-on-a-stick",
+          "Trunking"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.3 Configure and verify IPv4 and IPv6 static routing",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-059",
+      "type": "single-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A network team needs a vendor-neutral first hop redundancy protocol for multi-vendor routers.",
+      "questionText": "Which FHRP is an IETF open standard?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HSRP",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "STP",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "GLBP",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "VRRP",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Virtual Router Redundancy Protocol (VRRP) is an open standard FHRP.",
+        "incorrect": "HSRP and GLBP are Cisco proprietary, and STP is not an FHRP.",
+        "examTip": "HSRP/GLBP = Cisco; VRRP = open.",
+        "relatedTopics": [
+          "FHRP",
+          "VRRP",
+          "HSRP"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.5 Describe the purpose of first hop redundancy protocol",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-060",
+      "type": "multiple-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Select ALL settings that must match for two OSPF routers to become neighbors on an Ethernet link.",
+      "options": [
+        {
+          "id": "A",
+          "text": "IP subnet and mask on the link",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Interface cost",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Hello and dead timers",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Area ID",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "OSPF process ID",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Neighbors must agree on area, timers, subnet, authentication, and stub area flags.",
+        "incorrect": "The process ID is local and cost can differ per router.",
+        "examTip": "Different costs are fine; different timers are not.",
+        "relatedTopics": [
+          "OSPF",
+          "Neighbor adjacency"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.4 Configure and verify single area OSPFv2",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-061",
+      "type": "multiple-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select ALL correct default administrative distances.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Static route: 1",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Directly connected: 0",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "OSPF: 110",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "RIP: 90",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "eBGP: 200",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Connected is 0, static is 1, and OSPF is 110.",
+        "incorrect": "RIP is 120, and eBGP is 20.",
+        "examTip": "Lower AD = more trusted.",
+        "relatedTopics": [
+          "Administrative distance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.1 Interpret the components of routing table",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-062",
+      "type": "multiple-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the TWO configuration items needed to enable IPv6 routing and addressing on a router interface.",
+      "options": [
+        {
+          "id": "A",
+          "text": "ipv6 address 2001:DB8:1::1/64",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ipv6 default-gateway",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "ipv6 unicast-routing",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "ipv6 enable-routing",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "ip routing ipv6",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "IPv6 routing must be enabled globally with ipv6 unicast-routing, and the interface needs an IPv6 address.",
+        "incorrect": "The other commands are not valid IOS commands.",
+        "examTip": "ipv6 unicast-routing is not on by default.",
+        "relatedTopics": [
+          "IPv6 routing",
+          "IOS CLI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.3 Configure and verify IPv4 and IPv6 static routing",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-063",
+      "type": "multiple-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select ALL statements that are true about OSPF.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The default cost is based on interface bandwidth",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "OSPF is a distance-vector protocol",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "OSPF uses hop count as its metric",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "OSPF hello packets are sent to the multicast address 224.0.0.5",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "OSPF is a link-state routing protocol",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "OSPF is link-state, hellos use 224.0.0.5, and cost is bandwidth based.",
+        "incorrect": "Hop count and distance-vector characteristics belong to RIP.",
+        "examTip": "OSPF cost = reference bandwidth / interface bandwidth.",
+        "relatedTopics": [
+          "OSPF",
+          "Link-state"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.4 Configure and verify single area OSPFv2",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-064",
+      "type": "multiple-choice",
+      "topicId": "ip-connectivity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Select ALL components shown in a routing table entry.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Next-hop address",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "VLAN ID",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Source MAC address",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Administrative distance and metric",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Prefix and mask",
+          "isCorrect": true
+        },
+        {
+          "id": "F",
+          "text": "Outgoing interface",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Routing entries include the prefix, next hop, AD/metric, and exit interface.",
+        "incorrect": "VLAN IDs and MAC addresses are Layer 2 concepts not stored in routes.",
+        "examTip": "[110/20] = AD/metric.",
+        "relatedTopics": [
+          "Routing table"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.1 Interpret the components of routing table",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-065",
+      "type": "yes-no-statements",
+      "topicId": "ip-connectivity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A static route has an administrative distance of 1.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The default route is 0.0.0.0/0.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Dynamic routing protocols require manual route updates.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Directly connected routes have an administrative distance of 0.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Static routes have AD 1, the IPv4 default route is 0.0.0.0/0, and connected routes have AD 0. Dynamic protocols update automatically.",
+        "incorrect": "Manual updates are a characteristic of static routing.",
+        "examTip": "Know AD values.",
+        "relatedTopics": [
+          "Static routing",
+          "Administrative distance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.1 Interpret the components of routing table",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-066",
+      "type": "yes-no-statements",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Single-area OSPFv2 commonly uses area 0.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A DR is elected on point-to-point links.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "The default hello interval on Ethernet is 10 seconds.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "On a multiaccess segment, the router with the highest priority becomes the DR.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "OSPF commonly uses area 0, hello defaults to 10 seconds on Ethernet, and the highest priority wins DR election. No DR is elected on point-to-point links.",
+        "incorrect": "Point-to-point links do not need a DR.",
+        "examTip": "Highest priority then highest router ID.",
+        "relatedTopics": [
+          "OSPF",
+          "DR election"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.4 Configure and verify single area OSPFv2",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-067",
+      "type": "yes-no-statements",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Router-on-a-stick uses subinterfaces.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The switch port connected to a router-on-a-stick router should be a trunk.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A Layer 3 switch needs ip routing enabled to route between SVIs.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Each subinterface must use the same IP address.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Router-on-a-stick uses a trunk and subinterfaces, and Layer 3 switches require ip routing for SVI routing. Each subinterface needs an address in its own subnet.",
+        "incorrect": "The same IP on multiple subinterfaces would overlap subnets.",
+        "examTip": "One subinterface per VLAN, each with its own subnet.",
+        "relatedTopics": [
+          "Inter-VLAN routing",
+          "SVI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.3 Configure and verify IPv4 and IPv6 static routing",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-068",
+      "type": "yes-no-statements",
+      "topicId": "ip-connectivity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The longest prefix match is chosen before administrative distance.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "For the same prefix learned from different sources, the lower AD is preferred.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "The metric is compared across different routing protocols to select the best route.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "A /32 host route is preferred over a /24 route for that host.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Routers pick the longest prefix first, then lower AD among identical prefixes, then lower metric within the same protocol.",
+        "incorrect": "Metrics from different routing protocols are not comparable.",
+        "examTip": "Longest match, AD, metric.",
+        "relatedTopics": [
+          "Routing decision",
+          "Longest prefix"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.2 Determine how a router makes a forwarding decision by default",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-069",
+      "type": "yes-no-statements",
+      "topicId": "ip-connectivity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "ipv6 route 2001:DB8:2::/64 2001:DB8:1::2 is a valid IPv6 static route.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "::/0 is the IPv6 default route.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "ipv6 unicast-routing is enabled by default on Cisco routers.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "A static route using a link-local next hop must also specify the exit interface.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "IPv6 static routes follow the ipv6 route syntax, ::/0 is the default route, ipv6 unicast-routing must be enabled, and link-local next hops require an exit interface.",
+        "incorrect": "Link-local addresses are only unique per link, so the interface is needed.",
+        "examTip": "Enable ipv6 unicast-routing first.",
+        "relatedTopics": [
+          "IPv6 static routing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.3 Configure and verify IPv4 and IPv6 static routing",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-070",
+      "type": "dropdown-select",
+      "topicId": "ip-connectivity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Select the default administrative distance of each route source.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Directly connected",
+          "options": [
+            "0",
+            "1",
+            "90",
+            "110",
+            "120"
+          ],
+          "correctAnswer": "0"
+        },
+        {
+          "id": "d2",
+          "prompt": "Static route (next hop)",
+          "options": [
+            "0",
+            "1",
+            "90",
+            "110",
+            "120"
+          ],
+          "correctAnswer": "1"
+        },
+        {
+          "id": "d3",
+          "prompt": "OSPF",
+          "options": [
+            "0",
+            "1",
+            "90",
+            "110",
+            "120"
+          ],
+          "correctAnswer": "110"
+        },
+        {
+          "id": "d4",
+          "prompt": "RIP",
+          "options": [
+            "0",
+            "1",
+            "90",
+            "110",
+            "120"
+          ],
+          "correctAnswer": "120"
+        }
+      ],
+      "explanation": {
+        "correct": "Connected is 0, static is 1, OSPF is 110, and RIP is 120.",
+        "incorrect": "90 is the AD for EIGRP internal routes.",
+        "examTip": "Lower AD wins.",
+        "relatedTopics": [
+          "Administrative distance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.1 Interpret the components of routing table",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-071",
+      "type": "dropdown-select",
+      "topicId": "ip-connectivity",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Select the IOS prompt that matches each CLI mode.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Router>",
+          "options": [
+            "User EXEC",
+            "Privileged EXEC",
+            "Global configuration",
+            "Interface configuration"
+          ],
+          "correctAnswer": "User EXEC"
+        },
+        {
+          "id": "d2",
+          "prompt": "Router#",
+          "options": [
+            "User EXEC",
+            "Privileged EXEC",
+            "Global configuration",
+            "Interface configuration"
+          ],
+          "correctAnswer": "Privileged EXEC"
+        },
+        {
+          "id": "d3",
+          "prompt": "Router(config)#",
+          "options": [
+            "User EXEC",
+            "Privileged EXEC",
+            "Global configuration",
+            "Interface configuration"
+          ],
+          "correctAnswer": "Global configuration"
+        },
+        {
+          "id": "d4",
+          "prompt": "Router(config-if)#",
+          "options": [
+            "User EXEC",
+            "Privileged EXEC",
+            "Global configuration",
+            "Interface configuration"
+          ],
+          "correctAnswer": "Interface configuration"
+        }
+      ],
+      "explanation": {
+        "correct": "> is user EXEC, # is privileged EXEC, (config)# is global configuration, and (config-if)# is interface configuration.",
+        "incorrect": "The prompt suffix reveals the mode.",
+        "examTip": "enable moves to privileged EXEC; configure terminal to global config.",
+        "relatedTopics": [
+          "IOS CLI",
+          "CLI modes"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.3 Configure and verify IPv4 and IPv6 static routing",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-072",
+      "type": "dropdown-select",
+      "topicId": "ip-connectivity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Select the OSPF command that matches each task.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Enable OSPF process 1",
+          "options": [
+            "router ospf 1",
+            "network 10.1.1.0 0.0.0.255 area 0",
+            "router-id 1.1.1.1",
+            "passive-interface gigabitethernet0/1",
+            "ip ospf cost 10"
+          ],
+          "correctAnswer": "router ospf 1"
+        },
+        {
+          "id": "d2",
+          "prompt": "Advertise 10.1.1.0/24 in area 0",
+          "options": [
+            "router ospf 1",
+            "network 10.1.1.0 0.0.0.255 area 0",
+            "router-id 1.1.1.1",
+            "passive-interface gigabitethernet0/1",
+            "ip ospf cost 10"
+          ],
+          "correctAnswer": "network 10.1.1.0 0.0.0.255 area 0"
+        },
+        {
+          "id": "d3",
+          "prompt": "Manually set the router ID",
+          "options": [
+            "router ospf 1",
+            "network 10.1.1.0 0.0.0.255 area 0",
+            "router-id 1.1.1.1",
+            "passive-interface gigabitethernet0/1",
+            "ip ospf cost 10"
+          ],
+          "correctAnswer": "router-id 1.1.1.1"
+        },
+        {
+          "id": "d4",
+          "prompt": "Stop sending hellos out a LAN-facing interface",
+          "options": [
+            "router ospf 1",
+            "network 10.1.1.0 0.0.0.255 area 0",
+            "router-id 1.1.1.1",
+            "passive-interface gigabitethernet0/1",
+            "ip ospf cost 10"
+          ],
+          "correctAnswer": "passive-interface gigabitethernet0/1"
+        }
+      ],
+      "explanation": {
+        "correct": "These OSPF commands enable the process, advertise networks, set the router ID, and suppress hellos on LAN interfaces.",
+        "incorrect": "ip ospf cost modifies the metric rather than any of these tasks.",
+        "examTip": "The network command uses a wildcard mask.",
+        "relatedTopics": [
+          "OSPF",
+          "IOS CLI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.4 Configure and verify single area OSPFv2",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-073",
+      "type": "dropdown-select",
+      "topicId": "ip-connectivity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Select the wildcard mask for each prefix length.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "/24",
+          "options": [
+            "0.0.0.3",
+            "0.0.0.63",
+            "0.0.0.255",
+            "0.0.3.255"
+          ],
+          "correctAnswer": "0.0.0.255"
+        },
+        {
+          "id": "d2",
+          "prompt": "/26",
+          "options": [
+            "0.0.0.3",
+            "0.0.0.63",
+            "0.0.0.255",
+            "0.0.3.255"
+          ],
+          "correctAnswer": "0.0.0.63"
+        },
+        {
+          "id": "d3",
+          "prompt": "/30",
+          "options": [
+            "0.0.0.3",
+            "0.0.0.63",
+            "0.0.0.255",
+            "0.0.3.255"
+          ],
+          "correctAnswer": "0.0.0.3"
+        },
+        {
+          "id": "d4",
+          "prompt": "/22",
+          "options": [
+            "0.0.0.3",
+            "0.0.0.63",
+            "0.0.0.255",
+            "0.0.3.255"
+          ],
+          "correctAnswer": "0.0.3.255"
+        }
+      ],
+      "explanation": {
+        "correct": "A wildcard mask is the inverse of the subnet mask: /24 = 0.0.0.255, /26 = 0.0.0.63, /30 = 0.0.0.3, and /22 = 0.0.3.255.",
+        "incorrect": "Subtract each octet of the subnet mask from 255.",
+        "examTip": "Wildcard = 255.255.255.255 minus the mask.",
+        "relatedTopics": [
+          "Wildcard masks",
+          "Subnetting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.4 Configure and verify single area OSPFv2",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-074",
+      "type": "dropdown-select",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the meaning of each route code displayed in show ip route.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "C",
+          "options": [
+            "Connected",
+            "Local",
+            "OSPF",
+            "Static default candidate"
+          ],
+          "correctAnswer": "Connected"
+        },
+        {
+          "id": "d2",
+          "prompt": "L",
+          "options": [
+            "Connected",
+            "Local",
+            "OSPF",
+            "Static default candidate"
+          ],
+          "correctAnswer": "Local"
+        },
+        {
+          "id": "d3",
+          "prompt": "O",
+          "options": [
+            "Connected",
+            "Local",
+            "OSPF",
+            "Static default candidate"
+          ],
+          "correctAnswer": "OSPF"
+        },
+        {
+          "id": "d4",
+          "prompt": "S*",
+          "options": [
+            "Connected",
+            "Local",
+            "OSPF",
+            "Static default candidate"
+          ],
+          "correctAnswer": "Static default candidate"
+        }
+      ],
+      "explanation": {
+        "correct": "C is connected, L is local host route, O is OSPF, and S* is a static candidate default route.",
+        "incorrect": "The asterisk marks a candidate default route.",
+        "examTip": "Learn the legend at the top of show ip route.",
+        "relatedTopics": [
+          "show ip route",
+          "Routing table"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.1 Interpret the components of routing table",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-075",
+      "type": "ordering",
+      "topicId": "ip-connectivity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the OSPF neighbor states in the order they are reached.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o6",
+          "text": "Loading",
+          "correctPosition": 6
+        },
+        {
+          "id": "o2",
+          "text": "Init",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "2-Way",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "ExStart",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "Exchange",
+          "correctPosition": 5
+        },
+        {
+          "id": "o7",
+          "text": "Full",
+          "correctPosition": 7
+        },
+        {
+          "id": "o1",
+          "text": "Down",
+          "correctPosition": 1
+        }
+      ],
+      "explanation": {
+        "correct": "Neighbors progress from Down through Init, 2-Way, ExStart, Exchange, and Loading to Full.",
+        "incorrect": "Exchange occurs after ExStart and before Loading.",
+        "examTip": "Down, Init, 2-Way, ExStart, Exchange, Loading, Full.",
+        "relatedTopics": [
+          "OSPF",
+          "Neighbor states"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.4 Configure and verify single area OSPFv2",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-076",
+      "type": "ordering",
+      "topicId": "ip-connectivity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the commands in the correct order to configure router-on-a-stick for VLAN 20.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o5",
+          "text": "ip address 192.168.20.1 255.255.255.0",
+          "correctPosition": 5
+        },
+        {
+          "id": "o4",
+          "text": "encapsulation dot1q 20",
+          "correctPosition": 4
+        },
+        {
+          "id": "o2",
+          "text": "no shutdown",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "interface gigabitethernet0/0.20",
+          "correctPosition": 3
+        },
+        {
+          "id": "o1",
+          "text": "interface gigabitethernet0/0",
+          "correctPosition": 1
+        }
+      ],
+      "explanation": {
+        "correct": "The physical interface is enabled first, then the subinterface is created, VLAN encapsulation is set, and finally the IP address is assigned.",
+        "incorrect": "The encapsulation must be set before the subinterface accepts an IP address.",
+        "examTip": "encapsulation first, IP address second.",
+        "relatedTopics": [
+          "Router-on-a-stick",
+          "IOS CLI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.3 Configure and verify IPv4 and IPv6 static routing",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-077",
+      "type": "ordering",
+      "topicId": "ip-connectivity",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the steps a router uses to forward a packet in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o2",
+          "text": "De-encapsulate the frame to expose the IP packet",
+          "correctPosition": 2
+        },
+        {
+          "id": "o1",
+          "text": "Receive the frame and verify the destination MAC address",
+          "correctPosition": 1
+        },
+        {
+          "id": "o4",
+          "text": "Determine the next hop and exit interface",
+          "correctPosition": 4
+        },
+        {
+          "id": "o6",
+          "text": "Forward the frame out the exit interface",
+          "correctPosition": 6
+        },
+        {
+          "id": "o3",
+          "text": "Look up the destination IP in the routing table (longest prefix match)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o5",
+          "text": "Resolve the next-hop MAC address and build a new frame",
+          "correctPosition": 5
+        }
+      ],
+      "explanation": {
+        "correct": "A router removes the Layer 2 header, performs the routing lookup, determines the next hop, and re-encapsulates before transmitting.",
+        "incorrect": "A new frame cannot be built until the next hop is known.",
+        "examTip": "Layer 2 header changes at every hop; Layer 3 stays the same.",
+        "relatedTopics": [
+          "Packet forwarding",
+          "Routing table"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.2 Determine how a router makes a forwarding decision by default",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-078",
+      "type": "drag-drop",
+      "topicId": "ip-connectivity",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each IOS command to the feature it configures.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Static routing",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "OSPF",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Router-on-a-stick",
+          "acceptsItemIds": [
+            "item5",
+            "item6"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item1",
+          "text": "ip route 10.2.0.0 255.255.0.0 192.168.1.2"
+        },
+        {
+          "id": "item3",
+          "text": "router ospf 1"
+        },
+        {
+          "id": "item4",
+          "text": "network 10.0.0.0 0.255.255.255 area 0"
+        },
+        {
+          "id": "item6",
+          "text": "interface gigabitethernet0/0.10"
+        },
+        {
+          "id": "item2",
+          "text": "ip route 0.0.0.0 0.0.0.0 203.0.113.1"
+        },
+        {
+          "id": "item5",
+          "text": "encapsulation dot1q 10"
+        }
+      ],
+      "explanation": {
+        "correct": "Static routes use ip route, OSPF uses router ospf and network statements, and router-on-a-stick uses subinterfaces with dot1q encapsulation.",
+        "incorrect": "Each command set belongs to only one feature.",
+        "examTip": "Group commands by feature when studying.",
+        "relatedTopics": [
+          "IOS CLI",
+          "Routing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 3.3 Configure and verify IPv4 and IPv6 static routing",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-079",
+      "type": "single-choice",
+      "topicId": "ip-services",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which DHCP message does a server send in response to a client's DHCPDISCOVER?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DHCPOFFER",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "DHCPACK",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "DHCPREQUEST",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DHCPRELEASE",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The DHCP process is Discover, Offer, Request, Acknowledge, and the server answers a Discover with an Offer.",
+        "incorrect": "DHCPREQUEST is sent by the client, DHCPACK finalizes the lease, and DHCPRELEASE ends it.",
+        "examTip": "DORA: Discover, Offer, Request, Acknowledge.",
+        "relatedTopics": [
+          "DHCP",
+          "DORA"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.3 Explain the role of DHCP and DNS within the network",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-080",
+      "type": "single-choice",
+      "topicId": "ip-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which NAT type maps many private addresses to a single public address by using unique port numbers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "NAT64",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Static NAT",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Dynamic NAT with a pool",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "PAT (NAT overload)",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "PAT, also called NAT overload, translates multiple inside hosts to one public IP using different source ports.",
+        "incorrect": "Static NAT is one-to-one, dynamic NAT uses a pool of addresses, and NAT64 translates between IPv6 and IPv4.",
+        "examTip": "overload = PAT.",
+        "relatedTopics": [
+          "NAT",
+          "PAT"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.1 Configure and verify inside source NAT using static and pools",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-081",
+      "type": "single-choice",
+      "topicId": "ip-services",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "Clients in VLAN 20 are not receiving IP addresses. The DHCP server is located on a different subnet reached through a Layer 3 switch that routes VLAN 20.",
+      "questionText": "Which command should be configured on the VLAN 20 interface to resolve this problem?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ip dhcp snooping trust",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "ip dhcp pool VLAN20",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "ip address dhcp",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ip helper-address <DHCP server IP>",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Because DHCP discovers are broadcasts, a relay agent must forward them. ip helper-address makes the Layer 3 interface forward DHCP broadcasts to the server's unicast address.",
+        "incorrect": "Snooping trust is a Layer 2 security setting, ip address dhcp makes the interface a client, and a pool would make the router the server.",
+        "examTip": "DHCP server on another subnet = relay agent.",
+        "relatedTopics": [
+          "DHCP relay",
+          "ip helper-address"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.6 Configure and verify DHCP client and relay",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-082",
+      "type": "single-choice",
+      "topicId": "ip-services",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An administrator wants a router to synchronize its clock with an internal time server.",
+      "questionText": "Which command configures a Cisco router as an NTP client that synchronizes with the server 10.1.1.1?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ntp server 10.1.1.1",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ntp authenticate 10.1.1.1",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "clock set 10.1.1.1",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ntp master 10.1.1.1",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The ntp server command points the device to an upstream time source.",
+        "incorrect": "ntp master makes the device a time source itself, and the others are not valid ways to set a server.",
+        "examTip": "ntp server = client; ntp master = server.",
+        "relatedTopics": [
+          "NTP",
+          "IOS CLI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.2 Configure and verify NTP operating in a client and server mode",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-083",
+      "type": "single-choice",
+      "topicId": "ip-services",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A router is configured with the command logging trap errors.",
+      "questionText": "Which syslog messages are sent to the syslog server?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Severity levels 3 through 7",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Only severity level 3",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Severity levels 0 through 3",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Severity levels 0 through 4",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Logging trap errors sends the specified level and all more severe levels: emergencies, alerts, critical, and errors (0-3).",
+        "incorrect": "Levels 4 and above (warnings, notices, informational, debug) are not sent.",
+        "examTip": "Lower number = more severe; the trap level includes all lower numbers.",
+        "relatedTopics": [
+          "Syslog",
+          "Severity levels"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.5 Describe the use of syslog features including facilities and levels",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-084",
+      "type": "multiple-choice",
+      "topicId": "ip-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the TWO true statements about SNMP.",
+      "options": [
+        {
+          "id": "A",
+          "text": "SNMPv3 supports authentication and encryption",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "SNMP GET requests modify configuration",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "SNMPv2c encrypts community strings",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "SNMP traps are unsolicited notifications sent by managed devices",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "SNMPv3 adds security features, and traps are sent by agents without being polled.",
+        "incorrect": "SNMPv2c sends community strings in clear text, and GET only reads values.",
+        "examTip": "SET modifies; GET reads; trap notifies.",
+        "relatedTopics": [
+          "SNMP",
+          "Network monitoring"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.4 Explain the function of SNMP in network operations",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-085",
+      "type": "multiple-choice",
+      "topicId": "ip-services",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Select the TWO true statements about QoS tools.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Policing buffers traffic to delay it",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Shaping drops all excess traffic immediately",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Policing drops or re-marks traffic that exceeds a configured rate",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Shaping buffers excess traffic to smooth the rate",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Policing enforces a rate by dropping or re-marking, while shaping delays excess traffic using a buffer.",
+        "incorrect": "The incorrect options swap the behaviors of policing and shaping.",
+        "examTip": "Policing = drop/remark; shaping = delay.",
+        "relatedTopics": [
+          "QoS",
+          "Policing",
+          "Shaping"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.7 Explain the forwarding per-hop behavior (PHB) for QoS",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-086",
+      "type": "yes-no-statements",
+      "topicId": "ip-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A DHCP server listens on UDP port 67.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "DNS can use TCP for zone transfers.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "DNS maps MAC addresses to IP addresses.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "DHCP uses TCP port 68.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "DHCP servers listen on UDP 67, and DNS uses TCP for large responses and zone transfers. DNS maps names to IP addresses, and DHCP uses UDP.",
+        "incorrect": "ARP maps IP to MAC; DNS maps names to IP.",
+        "examTip": "DHCP server 67, client 68, both UDP.",
+        "relatedTopics": [
+          "DHCP",
+          "DNS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.3 Explain the role of DHCP and DNS within the network",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-087",
+      "type": "yes-no-statements",
+      "topicId": "ip-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "An inside local address is the private address of an internal host.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "An inside global address is the public address that represents an inside host.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "PAT uses port numbers to distinguish sessions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Static NAT maps many inside hosts to one public address.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "NAT terminology: inside local is private, inside global is public, PAT uses ports, and static NAT is one-to-one.",
+        "incorrect": "Many-to-one translation is PAT.",
+        "examTip": "Static = one-to-one.",
+        "relatedTopics": [
+          "NAT",
+          "PAT"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.1 Configure and verify inside source NAT using static and pools",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-088",
+      "type": "dropdown-select",
+      "topicId": "ip-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the NAT type that matches each description.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "One private address maps to one public address permanently",
+          "options": [
+            "Static NAT",
+            "Dynamic NAT",
+            "PAT"
+          ],
+          "correctAnswer": "Static NAT"
+        },
+        {
+          "id": "d2",
+          "prompt": "Private addresses map to public addresses from a pool as needed",
+          "options": [
+            "Static NAT",
+            "Dynamic NAT",
+            "PAT"
+          ],
+          "correctAnswer": "Dynamic NAT"
+        },
+        {
+          "id": "d3",
+          "prompt": "Many private hosts share one public address using ports",
+          "options": [
+            "Static NAT",
+            "Dynamic NAT",
+            "PAT"
+          ],
+          "correctAnswer": "PAT"
+        }
+      ],
+      "explanation": {
+        "correct": "Static NAT is permanent one-to-one, dynamic NAT uses a pool, and PAT shares one address using ports.",
+        "incorrect": "Each NAT type differs in how addresses are allocated.",
+        "examTip": "Overload = PAT.",
+        "relatedTopics": [
+          "NAT"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.1 Configure and verify inside source NAT using static and pools",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-089",
+      "type": "ordering",
+      "topicId": "ip-services",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the syslog severity levels in order from most severe (0) to least severe (7).",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o8",
+          "text": "Debug",
+          "correctPosition": 8
+        },
+        {
+          "id": "o5",
+          "text": "Warning",
+          "correctPosition": 5
+        },
+        {
+          "id": "o1",
+          "text": "Emergency",
+          "correctPosition": 1
+        },
+        {
+          "id": "o6",
+          "text": "Notice",
+          "correctPosition": 6
+        },
+        {
+          "id": "o2",
+          "text": "Alert",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Critical",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Error",
+          "correctPosition": 4
+        },
+        {
+          "id": "o7",
+          "text": "Informational",
+          "correctPosition": 7
+        }
+      ],
+      "explanation": {
+        "correct": "The levels from 0 to 7 are Emergency, Alert, Critical, Error, Warning, Notice, Informational, Debug.",
+        "incorrect": "Lower numbers are more severe.",
+        "examTip": "Mnemonic: Every Awesome Cisco Engineer Will Need Icecream Daily.",
+        "relatedTopics": [
+          "Syslog",
+          "Severity levels"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.5 Describe the use of syslog features including facilities and levels",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-090",
+      "type": "drag-drop",
+      "topicId": "ip-services",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each protocol to the IP service category that best describes it.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Device management",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Time and logging",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Address services",
+          "acceptsItemIds": [
+            "item5",
+            "item6"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item2",
+          "text": "SNMP"
+        },
+        {
+          "id": "item1",
+          "text": "SSH"
+        },
+        {
+          "id": "item4",
+          "text": "Syslog"
+        },
+        {
+          "id": "item6",
+          "text": "DNS"
+        },
+        {
+          "id": "item3",
+          "text": "NTP"
+        },
+        {
+          "id": "item5",
+          "text": "DHCP"
+        }
+      ],
+      "explanation": {
+        "correct": "SSH and SNMP are used to manage devices, NTP and syslog support time synchronization and logging, and DHCP and DNS provide address and name services.",
+        "incorrect": "Each protocol has one primary service category.",
+        "examTip": "Know the purpose of each protocol.",
+        "relatedTopics": [
+          "IP services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.3 Explain the role of DHCP and DNS within the network",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-091",
+      "type": "single-choice",
+      "topicId": "security-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which element of the CIA triad does encryption primarily support?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accountability",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Confidentiality",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Integrity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Availability",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Encryption keeps data private so only authorized parties can read it.",
+        "incorrect": "Integrity ensures data is not altered, availability ensures access, and accountability is not part of the triad.",
+        "examTip": "CIA = Confidentiality, Integrity, Availability.",
+        "relatedTopics": [
+          "CIA triad",
+          "Encryption"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.1 Define key security concepts (threats, vulnerabilities, exploits, and mitigation techniques)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-092",
+      "type": "single-choice",
+      "topicId": "security-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An administrator wants to disable Telnet access to a router while allowing remote management.",
+      "questionText": "Which command under line vty configuration restricts remote access to SSH only?",
+      "options": [
+        {
+          "id": "A",
+          "text": "transport output ssh",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "crypto key generate rsa",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "transport input ssh",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "login block-for 60 attempts 3 within 30",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "transport input ssh allows only SSH for incoming vty connections and blocks Telnet.",
+        "incorrect": "transport output controls outgoing sessions, login block-for is brute-force protection, and crypto key generate creates keys but does not restrict protocols.",
+        "examTip": "SSH needs hostname, domain name, RSA keys, and a local user.",
+        "relatedTopics": [
+          "SSH",
+          "vty lines",
+          "IOS CLI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.8 Configure network devices for remote access using SSH",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-093",
+      "type": "single-choice",
+      "topicId": "security-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A switch port is configured with switchport port-security maximum 1 and uses the default violation mode.",
+      "questionText": "What happens to the port when a second MAC address is learned?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The port enters the err-disabled state",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "The second device is allowed because the limit is ignored",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The port drops only the second device's frames and stays up",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The port converts to a trunk",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The default violation mode is shutdown, so the port goes err-disabled when the maximum number of MAC addresses is exceeded.",
+        "incorrect": "Dropping frames while staying up is protect or restrict mode, and the maximum is not ignored.",
+        "examTip": "Default violation mode = shutdown.",
+        "relatedTopics": [
+          "Port security",
+          "err-disabled"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.7 Configure and verify Layer 2 security features (DHCP snooping, DAI, port security)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-094",
+      "type": "single-choice",
+      "topicId": "security-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which command permits the 192.168.10.0/24 network in a standard numbered ACL 10?",
+      "options": [
+        {
+          "id": "A",
+          "text": "access-list 10 permit 192.168.10.0 0.0.0.255",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ip access-group 10 permit 192.168.10.0",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "access-list 10 permit 192.168.10.0 255.255.255.0",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "access-list 110 permit ip 192.168.10.0 255.255.255.0 any",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Standard ACLs use numbers 1-99 and wildcard masks.",
+        "incorrect": "110 is an extended ACL number, subnet masks are not used in ACL source matching, and ip access-group applies an ACL to an interface.",
+        "examTip": "Standard 1-99/1300-1999; extended 100-199/2000-2699.",
+        "relatedTopics": [
+          "ACL",
+          "Standard ACL",
+          "Wildcard masks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.6 Configure and verify access control lists",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-095",
+      "type": "single-choice",
+      "topicId": "security-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An administrator must block host 10.1.1.10 from reaching TCP port 80 on server 172.16.1.5 but allow all other traffic.",
+      "questionText": "Where should the ACL be placed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "As close to the destination as possible",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "On the web server interface only",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "As close to the source as possible",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "On the core switch only",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Extended ACLs filter by source, destination, and port, so they are placed close to the source to block unwanted traffic early.",
+        "incorrect": "Standard ACLs are placed close to the destination because they filter only by source address.",
+        "examTip": "Extended near source; standard near destination.",
+        "relatedTopics": [
+          "ACL placement",
+          "Extended ACL"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.6 Configure and verify access control lists",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-096",
+      "type": "single-choice",
+      "topicId": "security-fundamentals",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "ACL 10 contains: 1) permit 10.1.1.0 0.0.0.255, 2) deny host 10.1.1.10. The ACL is applied inbound.",
+      "questionText": "What happens to a packet from host 10.1.1.10?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is logged but forwarded",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "It is denied by entry 2",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "It is dropped by the implicit deny",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "It is permitted",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "ACLs are processed top-down and the first match is used, so entry 1 permits the entire subnet before entry 2 is evaluated.",
+        "incorrect": "Entry 2 is never reached for this host, and the implicit deny only applies if nothing matches.",
+        "examTip": "Order of ACL entries matters.",
+        "relatedTopics": [
+          "ACL processing",
+          "Top-down"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.6 Configure and verify access control lists",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-097",
+      "type": "single-choice",
+      "topicId": "security-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An access switch connects users to a distribution switch that leads to the corporate DHCP server. DHCP snooping is being enabled.",
+      "questionText": "Which ports should be configured as trusted?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the uplink toward the legitimate DHCP server",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Only ports with static IP devices",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "All user access ports",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Every port in the VLAN",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "DHCP snooping trusts only ports leading to authorized DHCP servers, such as uplinks.",
+        "incorrect": "User-facing ports are untrusted so rogue DHCP server messages are dropped.",
+        "examTip": "Trusted = toward the DHCP server.",
+        "relatedTopics": [
+          "DHCP snooping",
+          "Trusted ports"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.7 Configure and verify Layer 2 security features (DHCP snooping, DAI, port security)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-098",
+      "type": "multiple-choice",
+      "topicId": "security-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select ALL threats mitigated by DHCP snooping and Dynamic ARP Inspection (DAI).",
+      "options": [
+        {
+          "id": "A",
+          "text": "Brute-force SSH attacks",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Rogue DHCP servers",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Port scanning",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ARP spoofing",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "DHCP snooping blocks rogue DHCP servers, and DAI blocks forged ARP messages.",
+        "incorrect": "Port scans and brute-force attacks are not mitigated by those features.",
+        "examTip": "DAI uses the DHCP snooping binding table.",
+        "relatedTopics": [
+          "DHCP snooping",
+          "DAI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.7 Configure and verify Layer 2 security features (DHCP snooping, DAI, port security)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-099",
+      "type": "multiple-choice",
+      "topicId": "security-fundamentals",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Select ALL true statements about port security violation modes.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Protect puts the port into err-disabled state",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Restrict shuts down the port",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Protect drops offending frames without notification",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Restrict drops offending frames and generates logs and counters",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Shutdown places the port in err-disabled state",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Shutdown disables the port, restrict drops and logs, and protect silently drops frames.",
+        "incorrect": "Protect and restrict keep the port up.",
+        "examTip": "Shutdown is the default.",
+        "relatedTopics": [
+          "Port security",
+          "Violation modes"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.7 Configure and verify Layer 2 security features (DHCP snooping, DAI, port security)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-100",
+      "type": "multiple-choice",
+      "topicId": "security-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Select ALL components of AAA.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Authorization",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Authentication",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Availability",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Accounting",
+          "isCorrect": true
+        },
+        {
+          "id": "E",
+          "text": "Administration",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "AAA stands for Authentication, Authorization, and Accounting.",
+        "incorrect": "Availability belongs to the CIA triad, and administration is not part of AAA.",
+        "examTip": "Who are you, what can you do, what did you do.",
+        "relatedTopics": [
+          "AAA"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.8 Compare authentication, authorization, and accounting concepts",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-101",
+      "type": "yes-no-statements",
+      "topicId": "security-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Phishing is a social engineering technique.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "A denial-of-service attack targets availability.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A site-to-site VPN connects two networks.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "A remote-access VPN requires a dedicated VPN device at each user's home.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "Phishing is social engineering, DoS targets availability, and site-to-site VPNs connect networks. Remote-access VPNs usually use client software.",
+        "incorrect": "Remote users typically use VPN client software.",
+        "examTip": "Know common threat types.",
+        "relatedTopics": [
+          "Threats",
+          "VPN"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.1 Define key security concepts (threats, vulnerabilities, exploits, and mitigation techniques)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-102",
+      "type": "yes-no-statements",
+      "topicId": "security-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Standard ACLs filter based on source IP address only.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Every ACL has an implicit deny at the end.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Standard ACLs should be placed close to the source.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Extended ACLs can filter by protocol and port number.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "Standard ACLs filter by source only, extended ACLs add protocol and ports, and all ACLs end with an implicit deny.",
+        "incorrect": "Standard ACLs are placed close to the destination.",
+        "examTip": "Standard near destination.",
+        "relatedTopics": [
+          "ACLs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.6 Configure and verify access control lists",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-103",
+      "type": "yes-no-statements",
+      "topicId": "security-fundamentals",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "WPA2-Personal uses a pre-shared key.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "WPA3 requires Protected Management Frames.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "WPA2-Enterprise commonly uses 802.1X with a RADIUS server.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "TKIP is the encryption method for WPA3.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "WPA2-Personal uses PSK, WPA2-Enterprise uses 802.1X/RADIUS, and WPA3 requires PMF. WPA3 does not use TKIP.",
+        "incorrect": "WPA2 uses AES-CCMP and WPA3 builds on it; TKIP belongs to legacy WPA.",
+        "examTip": "Personal = PSK; Enterprise = 802.1X.",
+        "relatedTopics": [
+          "WPA2",
+          "WPA3",
+          "802.1X"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.9 Describe wireless security protocols (WPA, WPA2, and WPA3)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-104",
+      "type": "dropdown-select",
+      "topicId": "security-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the wildcard mask for each ACL match requirement.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Host 10.1.1.1",
+          "options": [
+            "0.0.0.0",
+            "0.0.0.31",
+            "0.0.0.255",
+            "0.0.255.255"
+          ],
+          "correctAnswer": "0.0.0.0"
+        },
+        {
+          "id": "d2",
+          "prompt": "Network 192.168.1.0/24",
+          "options": [
+            "0.0.0.0",
+            "0.0.0.31",
+            "0.0.0.255",
+            "0.0.255.255"
+          ],
+          "correctAnswer": "0.0.0.255"
+        },
+        {
+          "id": "d3",
+          "prompt": "Network 192.168.1.0/27",
+          "options": [
+            "0.0.0.0",
+            "0.0.0.31",
+            "0.0.0.255",
+            "0.0.255.255"
+          ],
+          "correctAnswer": "0.0.0.31"
+        },
+        {
+          "id": "d4",
+          "prompt": "Network 172.16.0.0/16",
+          "options": [
+            "0.0.0.0",
+            "0.0.0.31",
+            "0.0.0.255",
+            "0.0.255.255"
+          ],
+          "correctAnswer": "0.0.255.255"
+        }
+      ],
+      "explanation": {
+        "correct": "Wildcard masks are the inverse of subnet masks.",
+        "incorrect": "Mixing wildcard and subnet masks is a common mistake.",
+        "examTip": "host = 0.0.0.0.",
+        "relatedTopics": [
+          "ACLs",
+          "Wildcard masks"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.6 Configure and verify access control lists",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-105",
+      "type": "dropdown-select",
+      "topicId": "security-fundamentals",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Select the port security violation mode that matches each behavior.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Port is placed in err-disabled state",
+          "options": [
+            "shutdown",
+            "restrict",
+            "protect"
+          ],
+          "correctAnswer": "shutdown"
+        },
+        {
+          "id": "d2",
+          "prompt": "Violating frames are dropped and logged; the port stays up",
+          "options": [
+            "shutdown",
+            "restrict",
+            "protect"
+          ],
+          "correctAnswer": "restrict"
+        },
+        {
+          "id": "d3",
+          "prompt": "Violating frames are dropped silently; the port stays up",
+          "options": [
+            "shutdown",
+            "restrict",
+            "protect"
+          ],
+          "correctAnswer": "protect"
+        }
+      ],
+      "explanation": {
+        "correct": "Shutdown disables the port, restrict logs, and protect is silent.",
+        "incorrect": "Only shutdown err-disables the port.",
+        "examTip": "Violation modes: shutdown, restrict, protect.",
+        "relatedTopics": [
+          "Port security"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.7 Configure and verify Layer 2 security features (DHCP snooping, DAI, port security)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-106",
+      "type": "ordering",
+      "topicId": "security-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the steps for enabling SSH on a Cisco device in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Set the hostname",
+          "correctPosition": 1
+        },
+        {
+          "id": "o4",
+          "text": "Create a local user account",
+          "correctPosition": 4
+        },
+        {
+          "id": "o3",
+          "text": "Generate RSA keys (crypto key generate rsa)",
+          "correctPosition": 3
+        },
+        {
+          "id": "o5",
+          "text": "Configure vty lines with transport input ssh and login local",
+          "correctPosition": 5
+        },
+        {
+          "id": "o2",
+          "text": "Set the domain name (ip domain-name)",
+          "correctPosition": 2
+        }
+      ],
+      "explanation": {
+        "correct": "SSH requires a hostname and domain name before RSA keys can be generated, then local users and vty configuration.",
+        "incorrect": "Keys cannot be generated without a hostname and domain name.",
+        "examTip": "hostname, domain, keys, user, vty.",
+        "relatedTopics": [
+          "SSH",
+          "IOS CLI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 4.8 Configure network devices for remote access using SSH",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-107",
+      "type": "drag-drop",
+      "topicId": "security-fundamentals",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each mitigation to the threat it addresses.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Rogue DHCP server",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "ARP spoofing",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "MAC address flooding",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "Telnet eavesdropping",
+          "acceptsItemIds": [
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item2",
+          "text": "Dynamic ARP Inspection"
+        },
+        {
+          "id": "item1",
+          "text": "DHCP snooping"
+        },
+        {
+          "id": "item3",
+          "text": "Port security"
+        },
+        {
+          "id": "item4",
+          "text": "SSH"
+        }
+      ],
+      "explanation": {
+        "correct": "DHCP snooping, DAI, port security, and SSH each address a specific threat.",
+        "incorrect": "Each tool mitigates a different attack.",
+        "examTip": "Match the control to the attack.",
+        "relatedTopics": [
+          "Layer 2 security",
+          "SSH"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.7 Configure and verify Layer 2 security features (DHCP snooping, DAI, port security)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-108",
+      "type": "drag-drop",
+      "topicId": "security-fundamentals",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Drag each example to the security term it illustrates.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Vulnerability",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Threat",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Exploit",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        },
+        {
+          "id": "cat4",
+          "name": "Mitigation",
+          "acceptsItemIds": [
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item3",
+          "text": "Code that takes advantage of a flaw"
+        },
+        {
+          "id": "item1",
+          "text": "Unpatched software"
+        },
+        {
+          "id": "item4",
+          "text": "Applying a security patch"
+        },
+        {
+          "id": "item2",
+          "text": "Attacker attempting to steal data"
+        }
+      ],
+      "explanation": {
+        "correct": "A vulnerability is a weakness, a threat is a potential danger, an exploit takes advantage of a weakness, and mitigation reduces risk.",
+        "incorrect": "Each term describes a different role in security.",
+        "examTip": "Vulnerability, threat, exploit, mitigation.",
+        "relatedTopics": [
+          "Security concepts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 5.1 Define key security concepts (threats, vulnerabilities, exploits, and mitigation techniques)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-109",
+      "type": "single-choice",
+      "topicId": "automation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which HTTP method is used by a REST client to retrieve data from a server?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GET",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "PUT",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "POST",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "DELETE",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "GET reads data without changing it.",
+        "incorrect": "POST creates, PUT updates or replaces, and DELETE removes resources.",
+        "examTip": "CRUD: POST, GET, PUT/PATCH, DELETE.",
+        "relatedTopics": [
+          "REST",
+          "HTTP methods"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 6.5 Describe characteristics of REST-based APIs (CRUD, HTTP verbs, and data encoding)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-110",
+      "type": "single-choice",
+      "topicId": "automation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In this JSON data {\"interface\":\"Gi0/1\",\"vlans\":[10,20]}, what is the data type of the value for the key \"vlans\"?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Object",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Array",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "String",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Boolean",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "The square brackets indicate a JSON array containing two numbers.",
+        "incorrect": "Objects use braces, strings use quotes, and Booleans are true or false.",
+        "examTip": "{} object, [] array, quotes string.",
+        "relatedTopics": [
+          "JSON",
+          "Data types"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 6.7 Interpret JSON encoded data",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-111",
+      "type": "single-choice",
+      "topicId": "automation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In a controller-based architecture, which type of API do applications use to send requests to the controller?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Northbound API",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Eastbound API",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Serial API",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Southbound API",
+          "isCorrect": false
+        }
+      ],
+      "explanation": {
+        "correct": "Northbound APIs allow applications to communicate with the controller.",
+        "incorrect": "Southbound APIs allow the controller to communicate with network devices.",
+        "examTip": "North = applications; south = devices.",
+        "relatedTopics": [
+          "SDN",
+          "Northbound API"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 6.3 Describe controller-based and software defined architectures (overlay, underlay, and fabric)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-112",
+      "type": "single-choice",
+      "topicId": "automation",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A script sends a POST request to a REST API to create a VLAN and receives a 401 response.",
+      "questionText": "What does the HTTP 401 status code indicate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The server encountered an internal error",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "The resource was created successfully",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "The requested URI does not exist",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Authentication credentials are missing or invalid",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "401 Unauthorized means the request lacked valid authentication.",
+        "incorrect": "201 means created, 404 means not found, and 500 means server error.",
+        "examTip": "2xx success, 4xx client error, 5xx server error.",
+        "relatedTopics": [
+          "REST",
+          "HTTP status codes"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 6.5 Describe characteristics of REST-based APIs (CRUD, HTTP verbs, and data encoding)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-113",
+      "type": "multiple-choice",
+      "topicId": "automation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select ALL characteristics of REST APIs.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uses standard HTTP methods",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Requires stateful sessions",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Resources identified by URIs",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Uses SOAP envelopes",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "Stateless communication",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "REST is stateless, uses HTTP verbs, and uses URIs to identify resources.",
+        "incorrect": "SOAP and stateful sessions are not REST characteristics.",
+        "examTip": "REST = stateless.",
+        "relatedTopics": [
+          "REST",
+          "APIs"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 6.5 Describe characteristics of REST-based APIs (CRUD, HTTP verbs, and data encoding)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-114",
+      "type": "multiple-choice",
+      "topicId": "automation",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Select ALL true statements about configuration management tools.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chef uses recipes and cookbooks",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Ansible is agentless and uses YAML playbooks",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Puppet uses YAML playbooks",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Ansible requires an agent installed on every device",
+          "isCorrect": false
+        },
+        {
+          "id": "E",
+          "text": "Puppet typically uses agents that pull configuration from a master",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "correct": "Ansible is agentless with YAML playbooks, Puppet is agent-based with manifests, and Chef uses recipes in cookbooks.",
+        "incorrect": "The incorrect options mix the agent and file formats of the tools.",
+        "examTip": "Ansible = agentless; Puppet/Chef = agents.",
+        "relatedTopics": [
+          "Ansible",
+          "Puppet",
+          "Chef"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 6.6 Recognize the capabilities of configuration management mechanisms Puppet, Chef, and Ansible",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-115",
+      "type": "yes-no-statements",
+      "topicId": "automation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "In SDN, the control plane is centralized in a controller.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The data plane forwards traffic.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "The management plane includes protocols such as SSH and SNMP.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s4",
+          "text": "Traditional networks use a centralized control plane.",
+          "isCorrectYes": false
+        }
+      ],
+      "explanation": {
+        "correct": "SDN centralizes the control plane, the data plane forwards packets, and the management plane includes SSH and SNMP. Traditional networks distribute the control plane.",
+        "incorrect": "In traditional networking each device runs its own control plane.",
+        "examTip": "Control plane decides; data plane forwards.",
+        "relatedTopics": [
+          "SDN",
+          "Planes"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 6.2 Compare traditional networks with controller-based networking",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-116",
+      "type": "yes-no-statements",
+      "topicId": "automation",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Answer Yes if the statement is true, or No if it is false.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Cisco DNA Center supports intent-based networking.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Cisco DNA Center provides Assurance analytics.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Cisco DNA Center is only a per-device CLI tool.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s4",
+          "text": "Cisco SD-Access uses VXLAN in its fabric data plane.",
+          "isCorrectYes": true
+        }
+      ],
+      "explanation": {
+        "correct": "DNA Center is a controller supporting intent-based networking, Assurance, and SD-Access, which uses VXLAN.",
+        "incorrect": "DNA Center centralizes management rather than relying on device-by-device CLI.",
+        "examTip": "DNA Center = automation, assurance, SD-Access.",
+        "relatedTopics": [
+          "DNA Center",
+          "SD-Access"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 6.4 Compare traditional campus device management with Cisco DNA Center enabled device management",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-117",
+      "type": "dropdown-select",
+      "topicId": "automation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the HTTP method that matches each CRUD operation.",
+      "options": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Create",
+          "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+          ],
+          "correctAnswer": "POST"
+        },
+        {
+          "id": "d2",
+          "prompt": "Read",
+          "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+          ],
+          "correctAnswer": "GET"
+        },
+        {
+          "id": "d3",
+          "prompt": "Update",
+          "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+          ],
+          "correctAnswer": "PUT"
+        },
+        {
+          "id": "d4",
+          "prompt": "Delete",
+          "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+          ],
+          "correctAnswer": "DELETE"
+        }
+      ],
+      "explanation": {
+        "correct": "CRUD maps to POST, GET, PUT/PATCH, and DELETE.",
+        "incorrect": "Each verb performs a different action.",
+        "examTip": "CRUD to HTTP: C=POST, R=GET, U=PUT, D=DELETE.",
+        "relatedTopics": [
+          "REST",
+          "CRUD"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 6.5 Describe characteristics of REST-based APIs (CRUD, HTTP verbs, and data encoding)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-118",
+      "type": "ordering",
+      "topicId": "automation",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the steps of a REST API request workflow in the correct order.",
+      "options": [],
+      "orderItems": [
+        {
+          "id": "o4",
+          "text": "The server returns an HTTP status code and JSON body",
+          "correctPosition": 4
+        },
+        {
+          "id": "o5",
+          "text": "The client parses the response",
+          "correctPosition": 5
+        },
+        {
+          "id": "o1",
+          "text": "The client authenticates and obtains a token",
+          "correctPosition": 1
+        },
+        {
+          "id": "o3",
+          "text": "The server processes the request",
+          "correctPosition": 3
+        },
+        {
+          "id": "o2",
+          "text": "The client sends an HTTP request to a resource URI",
+          "correctPosition": 2
+        }
+      ],
+      "explanation": {
+        "correct": "A client authenticates, sends a request, the server processes it and responds, and the client parses the result.",
+        "incorrect": "The response cannot be parsed before the server returns it.",
+        "examTip": "Request then response.",
+        "relatedTopics": [
+          "REST",
+          "API workflow"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 6.5 Describe characteristics of REST-based APIs (CRUD, HTTP verbs, and data encoding)",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-119",
+      "type": "drag-drop",
+      "topicId": "automation",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each item to the network plane it belongs to.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Management plane",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Control plane",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Data plane",
+          "acceptsItemIds": [
+            "item5",
+            "item6"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item2",
+          "text": "Syslog"
+        },
+        {
+          "id": "item6",
+          "text": "IP packet forwarding using the routing table"
+        },
+        {
+          "id": "item4",
+          "text": "STP"
+        },
+        {
+          "id": "item1",
+          "text": "SSH"
+        },
+        {
+          "id": "item5",
+          "text": "Frame forwarding using the MAC table"
+        },
+        {
+          "id": "item3",
+          "text": "OSPF"
+        }
+      ],
+      "explanation": {
+        "correct": "The management plane handles administration, the control plane builds forwarding information, and the data plane forwards traffic.",
+        "incorrect": "OSPF and STP calculate paths and do not forward user traffic themselves.",
+        "examTip": "Control plane = decisions; data plane = forwarding.",
+        "relatedTopics": [
+          "Network planes"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 6.2 Compare traditional networks with controller-based networking",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "ccna-120",
+      "type": "drag-drop",
+      "topicId": "automation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each item to the category it belongs to.",
+      "options": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Configuration management tools",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Data formats",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Network management protocols",
+          "acceptsItemIds": [
+            "item5",
+            "item6"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item4",
+          "text": "XML"
+        },
+        {
+          "id": "item6",
+          "text": "RESTCONF"
+        },
+        {
+          "id": "item5",
+          "text": "NETCONF"
+        },
+        {
+          "id": "item1",
+          "text": "Ansible"
+        },
+        {
+          "id": "item3",
+          "text": "JSON"
+        },
+        {
+          "id": "item2",
+          "text": "Puppet"
+        }
+      ],
+      "explanation": {
+        "correct": "Ansible and Puppet automate configuration, JSON and XML encode data, and NETCONF and RESTCONF manage devices through APIs.",
+        "incorrect": "Data formats are not tools or protocols.",
+        "examTip": "Know which tools, formats, and protocols are used in automation.",
+        "relatedTopics": [
+          "Automation",
+          "NETCONF",
+          "RESTCONF"
+        ]
+      },
+      "metadata": {
+        "examObjective": "200-301 6.6 Recognize the capabilities of configuration management mechanisms Puppet, Chef, and Ansible",
+        "references": [
+          "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    }
+  ]
+}

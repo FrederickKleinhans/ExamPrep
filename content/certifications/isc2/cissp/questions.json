@@ -1,4 +1,4 @@
-{
+﻿{
     "questions":  [
                       {
                           "id":  "cissp-001",
@@ -248,7 +248,7 @@
                           "statements":  [
                                              {
                                                  "id":  "s1",
-                                                 "text":  "Threat Ã— Vulnerability Ã— Asset Value is the basic formula for risk.",
+                                                 "text":  "Threat Ãƒâ€” Vulnerability Ãƒâ€” Asset Value is the basic formula for risk.",
                                                  "isCorrectYes":  true
                                              },
                                              {
@@ -271,7 +271,7 @@
 
                                       ],
                           "explanation":  {
-                                              "correct":  "Risk = Threat Ã— Vulnerability Ã— Asset Value. Residual risk remains after controls. Risk avoidance means stopping the activity entirely. Risk acceptance means acknowledging and living with the risk without additional controls.",
+                                              "correct":  "Risk = Threat Ãƒâ€” Vulnerability Ãƒâ€” Asset Value. Residual risk remains after controls. Risk avoidance means stopping the activity entirely. Risk acceptance means acknowledging and living with the risk without additional controls.",
                                               "incorrect":  "Transferring risk (e.g., insurance) is risk transference, not avoidance. Acceptance requires no new controls by definition.",
                                               "examTip":  "Four risk responses: Accept, Avoid, Transfer (Mitigate), Reduce (Mitigate). Know each definition cold.",
                                               "relatedTopics":  [
@@ -384,7 +384,7 @@
 
                                       ],
                           "explanation":  {
-                                              "correct":  "NIST RMF steps: Prepare â†’ Categorize â†’ Select â†’ Implement â†’ Assess â†’ Authorize â†’ Monitor.",
+                                              "correct":  "NIST RMF steps: Prepare Ã¢â€ â€™ Categorize Ã¢â€ â€™ Select Ã¢â€ â€™ Implement Ã¢â€ â€™ Assess Ã¢â€ â€™ Authorize Ã¢â€ â€™ Monitor.",
                                               "incorrect":  "Each step feeds the next. Preparation sets organizational context before system-level categorization begins.",
                                               "examTip":  "Mnemonic: \u0027Please Can Sally Improve Any Awful Messes\u0027",
                                               "relatedTopics":  [
@@ -704,7 +704,7 @@
                                           },
                                           {
                                               "id":  "B",
-                                              "text":  "Never trust, always verify â€” regardless of network location",
+                                              "text":  "Never trust, always verify Ã¢â‚¬â€ regardless of network location",
                                               "isCorrect":  true
                                           },
                                           {
@@ -877,7 +877,7 @@
                                       ],
                           "explanation":  {
                                               "correct":  "Integrity = data unchanged (hashing). Non-repudiation = proof of origin (digital signatures). Confidentiality = data hidden from unauthorized parties (encryption).",
-                                              "incorrect":  "These are the CIA triad principles plus non-repudiation â€” fundamental concepts in cryptography.",
+                                              "incorrect":  "These are the CIA triad principles plus non-repudiation Ã¢â‚¬â€ fundamental concepts in cryptography.",
                                               "examTip":  "Digital signatures provide both integrity AND non-repudiation. Encryption provides confidentiality.",
                                               "relatedTopics":  [
                                                                     "CIA-triad",
@@ -1020,7 +1020,7 @@
                                       ],
                           "explanation":  {
                                               "correct":  "IPSec Tunnel mode encapsulates the entire original IP packet (header + data) and adds a new IP header, making it suitable for site-to-site VPNs.",
-                                              "incorrect":  "Transport mode only encrypts the payload, not the original IP header â€” used for end-to-end communication between hosts. Bridge and passthrough are not IPSec modes.",
+                                              "incorrect":  "Transport mode only encrypts the payload, not the original IP header Ã¢â‚¬â€ used for end-to-end communication between hosts. Bridge and passthrough are not IPSec modes.",
                                               "examTip":  "Tunnel mode = site-to-site VPN (encrypts whole packet). Transport mode = host-to-host (encrypts payload only).",
                                               "relatedTopics":  [
                                                                     "IPSec",
@@ -1216,7 +1216,7 @@
                           "explanation":  {
                                               "correct":  "SSH (Secure Shell) provides encrypted remote access at the application layer, replacing insecure protocols like Telnet and rsh.",
                                               "incorrect":  "Telnet transmits in cleartext. FTP transmits credentials in cleartext. HTTP is unencrypted web traffic.",
-                                              "examTip":  "Secure replacements: Telnet â†’ SSH. FTP â†’ SFTP or FTPS. HTTP â†’ HTTPS. SNMP v1/v2 â†’ SNMP v3.",
+                                              "examTip":  "Secure replacements: Telnet Ã¢â€ â€™ SSH. FTP Ã¢â€ â€™ SFTP or FTPS. HTTP Ã¢â€ â€™ HTTPS. SNMP v1/v2 Ã¢â€ â€™ SNMP v3.",
                                               "relatedTopics":  [
                                                                     "SSH",
                                                                     "remote-access",
@@ -1404,7 +1404,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "Biometric authentication (fingerprint, retina, face, voice) falls under \u0027something you are\u0027 â€” inherence factors.",
+                                              "correct":  "Biometric authentication (fingerprint, retina, face, voice) falls under \u0027something you are\u0027 Ã¢â‚¬â€ inherence factors.",
                                               "incorrect":  "Something you know = password/PIN. Something you have = token/smart card. Somewhere you are = geolocation.",
                                               "examTip":  "5 authentication factors: Know (password), Have (token), Are (biometric), Do (behavior), Where (location).",
                                               "relatedTopics":  [
@@ -1432,7 +1432,7 @@
                           "options":  [
                                           {
                                               "id":  "A",
-                                              "text":  "The point where FAR equals FRR â€” used to compare biometric system accuracy",
+                                              "text":  "The point where FAR equals FRR Ã¢â‚¬â€ used to compare biometric system accuracy",
                                               "isCorrect":  true
                                           },
                                           {
@@ -1648,7 +1648,7 @@
                           "explanation":  {
                                               "correct":  "Code coverage (test coverage) measures the percentage of source code that is executed when the test suite runs, helping identify untested code paths.",
                                               "incorrect":  "Code review is manual inspection. Cyclomatic complexity measures code complexity. MTBF is a reliability metric.",
-                                              "examTip":  "High code coverage doesn\u0027t guarantee security â€” you need quality tests that check for security conditions, not just execution paths.",
+                                              "examTip":  "High code coverage doesn\u0027t guarantee security Ã¢â‚¬â€ you need quality tests that check for security conditions, not just execution paths.",
                                               "relatedTopics":  [
                                                                     "code-coverage",
                                                                     "security-testing",
@@ -1695,7 +1695,7 @@
                           "explanation":  {
                                               "correct":  "Third-party audits are conducted by independent external auditors, providing the highest level of objectivity. Examples include SOC 2 Type II audits and ISO 27001 certification audits.",
                                               "incorrect":  "First-party = internal audit. Second-party = customer auditing a supplier. Third-party = independent external auditors.",
-                                              "examTip":  "SOC 2 Type II is a common third-party audit for cloud service providers â€” demonstrates security controls effectiveness over time.",
+                                              "examTip":  "SOC 2 Type II is a common third-party audit for cloud service providers Ã¢â‚¬â€ demonstrates security controls effectiveness over time.",
                                               "relatedTopics":  [
                                                                     "security-audit",
                                                                     "SOC2",
@@ -1741,7 +1741,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "When user input is reflected in the page response without sanitization, it creates a reflected XSS vulnerability â€” attackers can inject malicious scripts that execute in victims\u0027 browsers.",
+                                              "correct":  "When user input is reflected in the page response without sanitization, it creates a reflected XSS vulnerability Ã¢â‚¬â€ attackers can inject malicious scripts that execute in victims\u0027 browsers.",
                                               "incorrect":  "SQL injection targets database queries. CSRF tricks authenticated users into making unintended requests. Command injection targets OS commands.",
                                               "examTip":  "XSS = script injection into web pages. Stored XSS persists in DB. Reflected XSS is in the URL/response. DOM XSS manipulates the DOM.",
                                               "relatedTopics":  [
@@ -1789,7 +1789,7 @@
                                       ],
                           "explanation":  {
                                               "correct":  "Fixing security vulnerabilities during requirements and design is far cheaper than fixing them after deployment. The cost of remediation increases significantly at each later SDLC phase.",
-                                              "incorrect":  "Testing, deployment, and maintenance are progressively more expensive stages to fix vulnerabilities â€” the \u0027shift left\u0027 principle addresses this.",
+                                              "incorrect":  "Testing, deployment, and maintenance are progressively more expensive stages to fix vulnerabilities Ã¢â‚¬â€ the \u0027shift left\u0027 principle addresses this.",
                                               "examTip":  "Rule of 10: fixing a bug costs 10x more at each subsequent phase. Design fix = $1. Post-deployment fix = $1,000+.",
                                               "relatedTopics":  [
                                                                     "SDLC",
@@ -1835,7 +1835,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "SAST (Static Analysis) examines source code, bytecode, or binaries without executing the program â€” like a code review done by automated tools.",
+                                              "correct":  "SAST (Static Analysis) examines source code, bytecode, or binaries without executing the program Ã¢â‚¬â€ like a code review done by automated tools.",
                                               "incorrect":  "DAST tests running applications. Fuzzing sends malformed inputs to running programs. Penetration testing actively exploits vulnerabilities.",
                                               "examTip":  "SAST = static (code not running) = white-box. DAST = dynamic (app running) = black-box. IAST = instrumented (inside running app).",
                                               "relatedTopics":  [
@@ -1885,7 +1885,7 @@
                           "explanation":  {
                                               "correct":  "MD5 is cryptographically broken and computationally fast, making it susceptible to rainbow table attacks and GPU-accelerated brute-force. Password hashing requires slow, salted algorithms like bcrypt, scrypt, or Argon2.",
                                               "incorrect":  "MD5 is a hash function (one-way), not encryption. It\u0027s actually too FAST for passwords, not too slow. MD5 produces 128-bit (32 hex character) hashes which are short.",
-                                              "examTip":  "Password storage: use bcrypt, scrypt, or Argon2 â€” they are deliberately slow. Never use MD5, SHA-1, or plain SHA-256 for passwords.",
+                                              "examTip":  "Password storage: use bcrypt, scrypt, or Argon2 Ã¢â‚¬â€ they are deliberately slow. Never use MD5, SHA-1, or plain SHA-256 for passwords.",
                                               "relatedTopics":  [
                                                                     "password-hashing",
                                                                     "MD5",
@@ -2026,7 +2026,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "The NIST CSF provides a flexible, risk-based framework for managing cybersecurity with five core functions: Identify, Protect, Detect, Respond, Recover â€” directly applicable to ransomware recovery and prevention.",
+                                              "correct":  "The NIST CSF provides a flexible, risk-based framework for managing cybersecurity with five core functions: Identify, Protect, Detect, Respond, Recover Ã¢â‚¬â€ directly applicable to ransomware recovery and prevention.",
                                               "incorrect":  "ISO 27001 is a certification standard. PCI DSS is specific to payment card environments. COBIT is an IT governance framework.",
                                               "examTip":  "NIST CSF = Identify, Protect, Detect, Respond, Recover. Perfect for overall enterprise security program. CSF 2.0 adds \u0027Govern\u0027.",
                                               "relatedTopics":  [
@@ -2053,29 +2053,29 @@
                           "options":  [
                                           {
                                               "id":  "A",
-                                              "text":  "Identification â†’ Preparation â†’ Containment â†’ Eradication â†’ Recovery",
+                                              "text":  "Identification Ã¢â€ â€™ Preparation Ã¢â€ â€™ Containment Ã¢â€ â€™ Eradication Ã¢â€ â€™ Recovery",
                                               "isCorrect":  false
                                           },
                                           {
                                               "id":  "B",
-                                              "text":  "Preparation â†’ Identification â†’ Containment â†’ Eradication â†’ Recovery â†’ Lessons Learned",
+                                              "text":  "Preparation Ã¢â€ â€™ Identification Ã¢â€ â€™ Containment Ã¢â€ â€™ Eradication Ã¢â€ â€™ Recovery Ã¢â€ â€™ Lessons Learned",
                                               "isCorrect":  true
                                           },
                                           {
                                               "id":  "C",
-                                              "text":  "Containment â†’ Identification â†’ Eradication â†’ Preparation â†’ Recovery",
+                                              "text":  "Containment Ã¢â€ â€™ Identification Ã¢â€ â€™ Eradication Ã¢â€ â€™ Preparation Ã¢â€ â€™ Recovery",
                                               "isCorrect":  false
                                           },
                                           {
                                               "id":  "D",
-                                              "text":  "Preparation â†’ Containment â†’ Identification â†’ Recovery â†’ Lessons Learned",
+                                              "text":  "Preparation Ã¢â€ â€™ Containment Ã¢â€ â€™ Identification Ã¢â€ â€™ Recovery Ã¢â€ â€™ Lessons Learned",
                                               "isCorrect":  false
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "NIST SP 800-61 incident response lifecycle: Preparation â†’ Identification (Detection \u0026 Analysis) â†’ Containment â†’ Eradication â†’ Recovery â†’ Post-Incident (Lessons Learned).",
+                                              "correct":  "NIST SP 800-61 incident response lifecycle: Preparation Ã¢â€ â€™ Identification (Detection \u0026 Analysis) Ã¢â€ â€™ Containment Ã¢â€ â€™ Eradication Ã¢â€ â€™ Recovery Ã¢â€ â€™ Post-Incident (Lessons Learned).",
                                               "incorrect":  "Preparation must come first. You cannot contain before you identify.",
-                                              "examTip":  "IR order: PICERL â€” Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned.",
+                                              "examTip":  "IR order: PICERL Ã¢â‚¬â€ Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned.",
                                               "relatedTopics":  [
                                                                     "incident-response",
                                                                     "NIST-800-61",
@@ -2120,9 +2120,9 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "IaaS provides the most customer control â€” customers manage OS, middleware, runtime, applications, and data. The provider manages only hardware, networking, and virtualization.",
+                                              "correct":  "IaaS provides the most customer control Ã¢â‚¬â€ customers manage OS, middleware, runtime, applications, and data. The provider manages only hardware, networking, and virtualization.",
                                               "incorrect":  "PaaS gives control over applications and data. SaaS gives control only over application configuration. FaaS is serverless with minimal customer control.",
-                                              "examTip":  "Control spectrum: IaaS (most) â†’ PaaS â†’ SaaS (least). More control = more responsibility for security.",
+                                              "examTip":  "Control spectrum: IaaS (most) Ã¢â€ â€™ PaaS Ã¢â€ â€™ SaaS (least). More control = more responsibility for security.",
                                               "relatedTopics":  [
                                                                     "cloud-security",
                                                                     "IaaS",
@@ -2143,7 +2143,7 @@
                           "topicId":  "security-architecture",
                           "difficulty":  "medium",
                           "points":  1,
-                          "scenarioText":  "An organization is moving sensitive workloads to a cloud provider. The legal team is concerned about data sovereignty â€” ensuring customer data never leaves the country.",
+                          "scenarioText":  "An organization is moving sensitive workloads to a cloud provider. The legal team is concerned about data sovereignty Ã¢â‚¬â€ ensuring customer data never leaves the country.",
                           "questionText":  "Which cloud deployment model BEST addresses this concern?",
                           "options":  [
                                           {
@@ -2264,8 +2264,8 @@
                                       ],
                           "explanation":  {
                                               "correct":  "Volatile data (RAM, running processes, active network connections, ARP cache) is lost when the system is powered off. It must be captured first according to the order of volatility.",
-                                              "incorrect":  "Shutting down immediately destroys volatile evidence. Disk imaging can wait â€” disk data persists after shutdown. Interviews are important but not the first technical step.",
-                                              "examTip":  "Order of volatility: RAM â†’ CPU cache â†’ network connections â†’ running processes â†’ disk â†’ remote/archival storage. Capture most volatile first.",
+                                              "incorrect":  "Shutting down immediately destroys volatile evidence. Disk imaging can wait Ã¢â‚¬â€ disk data persists after shutdown. Interviews are important but not the first technical step.",
+                                              "examTip":  "Order of volatility: RAM Ã¢â€ â€™ CPU cache Ã¢â€ â€™ network connections Ã¢â€ â€™ running processes Ã¢â€ â€™ disk Ã¢â€ â€™ remote/archival storage. Capture most volatile first.",
                                               "relatedTopics":  [
                                                                     "digital-forensics",
                                                                     "order-of-volatility",
@@ -2310,7 +2310,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "A hot site is fully operational and can take over within minutes/hours. A warm site has hardware but requires data loading and configuration â€” can be operational within hours to days.",
+                                              "correct":  "A hot site is fully operational and can take over within minutes/hours. A warm site has hardware but requires data loading and configuration Ã¢â‚¬â€ can be operational within hours to days.",
                                               "incorrect":  "Hot sites are most expensive (full infrastructure + live data sync). Warm sites cost less but require more recovery time.",
                                               "examTip":  "Hot site = minutes to recover (most expensive). Warm site = hours to days (moderate cost). Cold site = days to weeks (cheapest, just the space).",
                                               "relatedTopics":  [
@@ -2552,7 +2552,7 @@
                                       ],
                           "explanation":  {
                                               "correct":  "IaaS customers own OS and above. In SaaS the provider manages infrastructure. CASBs are intermediaries that enforce policies. Multitenancy creates risks of cross-tenant data leakage through misconfigurations.",
-                                              "incorrect":  "SaaS providers handle infrastructure. Multitenancy requires careful isolation â€” misconfigurations can leak data.",
+                                              "incorrect":  "SaaS providers handle infrastructure. Multitenancy requires careful isolation Ã¢â‚¬â€ misconfigurations can leak data.",
                                               "examTip":  "CASB = cloud security broker. Shared responsibility shifts with service model. Multitenancy risk = noisy neighbor + data isolation failures.",
                                               "relatedTopics":  [
                                                                     "cloud-security",
@@ -2648,7 +2648,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "In ICS/OT (Operational Technology) environments, availability is the top priority. Downtime can halt production, cause physical damage, or endanger safety â€” unlike in IT environments where confidentiality often tops the list.",
+                                              "correct":  "In ICS/OT (Operational Technology) environments, availability is the top priority. Downtime can halt production, cause physical damage, or endanger safety Ã¢â‚¬â€ unlike in IT environments where confidentiality often tops the list.",
                                               "incorrect":  "In traditional IT, confidentiality is often the primary concern. ICS has a reversed priority: Availability \u003e Integrity \u003e Confidentiality.",
                                               "examTip":  "ICS/OT priority: Availability first! IT priority: Confidentiality first. Know this distinction for CISSP.",
                                               "relatedTopics":  [
@@ -2697,7 +2697,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "Parameterized queries (prepared statements) separate SQL code from data, making it impossible for user input to be interpreted as SQL commands â€” the primary and most effective defense against SQL injection.",
+                                              "correct":  "Parameterized queries (prepared statements) separate SQL code from data, making it impossible for user input to be interpreted as SQL commands Ã¢â‚¬â€ the primary and most effective defense against SQL injection.",
                                               "incorrect":  "Length validation doesn\u0027t stop SQL injection. Client-side filtering can be bypassed. Encrypting the database doesn\u0027t prevent injection at the application layer.",
                                               "examTip":  "SQL injection defense: #1 = parameterized queries. #2 = stored procedures. #3 = input validation. #4 = WAF as last resort.",
                                               "relatedTopics":  [
@@ -2843,7 +2843,7 @@
 
                                       ],
                           "explanation":  {
-                                              "correct":  "Forensics order: Identify/secure â†’ Collect/preserve (chain of custody) â†’ Examine/analyze â†’ Document/report.",
+                                              "correct":  "Forensics order: Identify/secure Ã¢â€ â€™ Collect/preserve (chain of custody) Ã¢â€ â€™ Examine/analyze Ã¢â€ â€™ Document/report.",
                                               "incorrect":  "Chain of custody must be established during collection, before analysis. Documentation comes last.",
                                               "examTip":  "Chain of custody = documented record of who had evidence and when. Breaks in chain can make evidence inadmissible.",
                                               "relatedTopics":  [
@@ -2893,7 +2893,7 @@
                           "explanation":  {
                                               "correct":  "A data retention policy specifies how long different types of data must be kept based on business needs, legal requirements, and regulatory obligations.",
                                               "incorrect":  "Data minimization limits collection. Classification assigns sensitivity labels. Masking obscures sensitive fields.",
-                                              "examTip":  "Data lifecycle: Create â†’ Store â†’ Use â†’ Share â†’ Archive â†’ Destroy. Retention policy governs the archive-to-destroy transition.",
+                                              "examTip":  "Data lifecycle: Create Ã¢â€ â€™ Store Ã¢â€ â€™ Use Ã¢â€ â€™ Share Ã¢â€ â€™ Archive Ã¢â€ â€™ Destroy. Retention policy governs the archive-to-destroy transition.",
                                               "relatedTopics":  [
                                                                     "data-retention",
                                                                     "data-lifecycle",
@@ -2987,7 +2987,7 @@
                           "explanation":  {
                                               "correct":  "Input validation ensures that all user-supplied data conforms to expected types, formats, and ranges before processing, preventing injection attacks and buffer overflows.",
                                               "incorrect":  "Performance optimization is separate. Encryption is a different control. Session management is handled by different mechanisms.",
-                                              "examTip":  "Validate on the server side â€” client-side validation can always be bypassed. Whitelist (allowlist) validation is stronger than blacklist.",
+                                              "examTip":  "Validate on the server side Ã¢â‚¬â€ client-side validation can always be bypassed. Whitelist (allowlist) validation is stronger than blacklist.",
                                               "relatedTopics":  [
                                                                     "input-validation",
                                                                     "application-security",
@@ -3225,8 +3225,8 @@
                                       ],
                           "explanation":  {
                                               "correct":  "Probability (or likelihood) is the estimated chance that a threat will exploit a specific vulnerability within a given period.",
-                                              "incorrect":  "Impact is the magnitude of harm. Exposure factor is the percentage of asset value lost in a single incident. ALE = SLE Ã— ARO.",
-                                              "examTip":  "Risk = Likelihood Ã— Impact. ALE = SLE Ã— ARO. Know both formulas for CISSP.",
+                                              "incorrect":  "Impact is the magnitude of harm. Exposure factor is the percentage of asset value lost in a single incident. ALE = SLE Ãƒâ€” ARO.",
+                                              "examTip":  "Risk = Likelihood Ãƒâ€” Impact. ALE = SLE Ãƒâ€” ARO. Know both formulas for CISSP.",
                                               "relatedTopics":  [
                                                                     "risk-analysis",
                                                                     "probability",
@@ -3319,7 +3319,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "Regular periodic communications at fixed intervals from a compromised host to an external IP is the hallmark of C2 beaconing â€” malware checking in with its command and control server.",
+                                              "correct":  "Regular periodic communications at fixed intervals from a compromised host to an external IP is the hallmark of C2 beaconing Ã¢â‚¬â€ malware checking in with its command and control server.",
                                               "incorrect":  "Port scanning is outbound probing of multiple ports/hosts. FTP exfiltration would show large data transfers. Brute force involves rapid authentication attempts.",
                                               "examTip":  "C2 beaconing = regular heartbeat to attacker\u0027s server. Look for: consistent timing, small payloads, outbound to unusual IPs.",
                                               "relatedTopics":  [
@@ -3415,7 +3415,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "Due Diligence is the practice of investigating, understanding, and evaluating risk and security obligations before making decisions â€” the planning and investigation phase.",
+                                              "correct":  "Due Diligence is the practice of investigating, understanding, and evaluating risk and security obligations before making decisions Ã¢â‚¬â€ the planning and investigation phase.",
                                               "incorrect":  "Due Care is actually implementing the security controls. Due Diligence is the research and understanding before doing so.",
                                               "examTip":  "Due Diligence = research/planning (know what to do). Due Care = actually doing it (implementing controls). Both needed to avoid negligence.",
                                               "relatedTopics":  [
@@ -3496,7 +3496,7 @@
                                           },
                                           {
                                               "id":  "B",
-                                              "text":  "Supply chain risk â€” vulnerabilities in components can propagate to all applications using them",
+                                              "text":  "Supply chain risk Ã¢â‚¬â€ vulnerabilities in components can propagate to all applications using them",
                                               "isCorrect":  true
                                           },
                                           {
@@ -3608,7 +3608,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "Security awareness training educates employees about security policies, their responsibilities, and how to recognize and respond to threats â€” making people the first line of defense.",
+                                              "correct":  "Security awareness training educates employees about security policies, their responsibilities, and how to recognize and respond to threats Ã¢â‚¬â€ making people the first line of defense.",
                                               "incorrect":  "Training complements technical controls, not replaces them. It doesn\u0027t certify employees or monitor behavior.",
                                               "examTip":  "People are the weakest link. Training reduces phishing susceptibility, social engineering success, and accidental policy violations.",
                                               "relatedTopics":  [
@@ -3754,7 +3754,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "A unified compliance program maps overlapping controls across frameworks, implementing the stricter requirement where they conflict, and covering unique requirements from each â€” reducing duplication and cost.",
+                                              "correct":  "A unified compliance program maps overlapping controls across frameworks, implementing the stricter requirement where they conflict, and covering unique requirements from each Ã¢â‚¬â€ reducing duplication and cost.",
                                               "incorrect":  "You cannot simply ignore one framework you\u0027re legally required to comply with. Exemptions are rare and difficult to obtain.",
                                               "examTip":  "Compliance mapping: identify overlaps between frameworks to reduce work. Where they conflict, implement the stricter control.",
                                               "relatedTopics":  [
@@ -3992,9 +3992,9 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "Fail secure (fail closed) means that when a system fails, it defaults to a secure state â€” denying access rather than allowing it. For example, a firewall that denies all traffic if it crashes.",
+                                              "correct":  "Fail secure (fail closed) means that when a system fails, it defaults to a secure state Ã¢â‚¬â€ denying access rather than allowing it. For example, a firewall that denies all traffic if it crashes.",
                                               "incorrect":  "Least privilege limits permissions. Defense in depth uses layers. SoD divides responsibilities.",
-                                              "examTip":  "Fail secure = deny by default on failure. Fail open = allow by default (dangerous â€” used when availability is critical). Safety vs security tradeoff.",
+                                              "examTip":  "Fail secure = deny by default on failure. Fail open = allow by default (dangerous Ã¢â‚¬â€ used when availability is critical). Safety vs security tradeoff.",
                                               "relatedTopics":  [
                                                                     "fail-secure",
                                                                     "fail-safe",
@@ -4066,22 +4066,22 @@
                           "options":  [
                                           {
                                               "id":  "A",
-                                              "text":  "Layer 2 â€“ Data Link",
+                                              "text":  "Layer 2 Ã¢â‚¬â€œ Data Link",
                                               "isCorrect":  false
                                           },
                                           {
                                               "id":  "B",
-                                              "text":  "Layer 3 â€“ Network",
+                                              "text":  "Layer 3 Ã¢â‚¬â€œ Network",
                                               "isCorrect":  false
                                           },
                                           {
                                               "id":  "C",
-                                              "text":  "Layer 4 â€“ Transport",
+                                              "text":  "Layer 4 Ã¢â‚¬â€œ Transport",
                                               "isCorrect":  true
                                           },
                                           {
                                               "id":  "D",
-                                              "text":  "Layer 5 â€“ Session",
+                                              "text":  "Layer 5 Ã¢â‚¬â€œ Session",
                                               "isCorrect":  false
                                           }
                                       ],
@@ -4182,7 +4182,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts without exposing passwords â€” used when apps request \u0027sign in with Google/Facebook\u0027.",
+                                              "correct":  "OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts without exposing passwords Ã¢â‚¬â€ used when apps request \u0027sign in with Google/Facebook\u0027.",
                                               "incorrect":  "SAML handles authentication and SSO. Kerberos is a ticket-based authentication protocol. LDAP is a directory protocol.",
                                               "examTip":  "OAuth = authorization delegation (what can app do). OpenID Connect = authentication on top of OAuth (who are you). SAML = authentication + authorization for enterprise SSO.",
                                               "relatedTopics":  [
@@ -4374,7 +4374,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "Pretexting involves creating a fabricated scenario (pretext) to manipulate the victim â€” e.g., impersonating IT support or a bank auditor to extract sensitive information.",
+                                              "correct":  "Pretexting involves creating a fabricated scenario (pretext) to manipulate the victim Ã¢â‚¬â€ e.g., impersonating IT support or a bank auditor to extract sensitive information.",
                                               "incorrect":  "Phishing uses deceptive emails. Vishing uses phone calls. Baiting leaves infected media (USB) for victims to find.",
                                               "examTip":  "Social engineering types: Phishing (email), Vishing (voice), Smishing (SMS), Pretexting (fake scenario), Baiting (physical media), Tailgating (physical access).",
                                               "relatedTopics":  [
@@ -4450,22 +4450,22 @@
                           "options":  [
                                           {
                                               "id":  "A",
-                                              "text":  "Multi-Factor Authentication â€” requires multiple passwords",
+                                              "text":  "Multi-Factor Authentication Ã¢â‚¬â€ requires multiple passwords",
                                               "isCorrect":  false
                                           },
                                           {
                                               "id":  "B",
-                                              "text":  "Multi-Factor Authentication â€” requires two or more different authentication factor categories",
+                                              "text":  "Multi-Factor Authentication Ã¢â‚¬â€ requires two or more different authentication factor categories",
                                               "isCorrect":  true
                                           },
                                           {
                                               "id":  "C",
-                                              "text":  "Managed Firewall Access â€” filters network traffic",
+                                              "text":  "Managed Firewall Access Ã¢â‚¬â€ filters network traffic",
                                               "isCorrect":  false
                                           },
                                           {
                                               "id":  "D",
-                                              "text":  "Multi-Function Authorization â€” grants multiple permissions at once",
+                                              "text":  "Multi-Function Authorization Ã¢â‚¬â€ grants multiple permissions at once",
                                               "isCorrect":  false
                                           }
                                       ],
@@ -4518,7 +4518,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "Authentication and access logs (from Active Directory, SIEM, or identity providers) record which systems a user authenticated to and when â€” directly answering the investigation question.",
+                                              "correct":  "Authentication and access logs (from Active Directory, SIEM, or identity providers) record which systems a user authenticated to and when Ã¢â‚¬â€ directly answering the investigation question.",
                                               "incorrect":  "Error logs show application failures. Performance logs track resource usage. Firewall drops show blocked traffic, not successful access.",
                                               "examTip":  "For user activity investigation: authentication logs first, then access logs, then application logs. SIEM correlation helps tie events together.",
                                               "relatedTopics":  [
@@ -4551,7 +4551,7 @@
                                           },
                                           {
                                               "id":  "B",
-                                              "text":  "To provide port-based network access control â€” authenticate devices before granting LAN access",
+                                              "text":  "To provide port-based network access control Ã¢â‚¬â€ authenticate devices before granting LAN access",
                                               "isCorrect":  true
                                           },
                                           {
@@ -4616,7 +4616,7 @@
                           "explanation":  {
                                               "correct":  "A Protection Profile (PP) is an implementation-independent document that specifies security requirements for a category of products (e.g., firewalls, smart cards). It\u0027s created by the user community.",
                                               "incorrect":  "EAL is the assurance level from EAL1-EAL7. Security Target is a vendor-specific document detailing how a product meets requirements. TOE is the product being evaluated.",
-                                              "examTip":  "Common Criteria: PP (what\u0027s needed) â†’ ST (how product meets it) â†’ TOE (the product) â†’ EAL (assurance depth 1-7).",
+                                              "examTip":  "Common Criteria: PP (what\u0027s needed) Ã¢â€ â€™ ST (how product meets it) Ã¢â€ â€™ TOE (the product) Ã¢â€ â€™ EAL (assurance depth 1-7).",
                                               "relatedTopics":  [
                                                                     "Common-Criteria",
                                                                     "Protection-Profile",
@@ -4661,9 +4661,9 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "A parallel test activates the alternate recovery site and verifies it can handle production workloads while the primary site continues operating â€” testing recovery capability without risking production.",
+                                              "correct":  "A parallel test activates the alternate recovery site and verifies it can handle production workloads while the primary site continues operating Ã¢â‚¬â€ testing recovery capability without risking production.",
                                               "incorrect":  "Tabletop = discussion only. Walk-through = reviewing the plan. Full interruption = actually switching to recovery (disruptive, tests everything but risks production).",
-                                              "examTip":  "DR test levels: Tabletop (cheapest, no tech) â†’ Walk-through â†’ Simulation â†’ Parallel (test recovery site) â†’ Full interruption (riskiest, most thorough).",
+                                              "examTip":  "DR test levels: Tabletop (cheapest, no tech) Ã¢â€ â€™ Walk-through Ã¢â€ â€™ Simulation Ã¢â€ â€™ Parallel (test recovery site) Ã¢â€ â€™ Full interruption (riskiest, most thorough).",
                                               "relatedTopics":  [
                                                                     "disaster-recovery",
                                                                     "BCP-testing",
@@ -4804,7 +4804,7 @@
                                           }
                                       ],
                           "explanation":  {
-                                              "correct":  "Risk appetite is the amount and type of risk an organization is willing to accept in pursuit of its objectives â€” a strategic, high-level statement set by the board.",
+                                              "correct":  "Risk appetite is the amount and type of risk an organization is willing to accept in pursuit of its objectives Ã¢â‚¬â€ a strategic, high-level statement set by the board.",
                                               "incorrect":  "Risk tolerance is the acceptable variation around risk appetite (more operational). Risk threshold is a trigger point. Residual risk is what remains after controls.",
                                               "examTip":  "Risk appetite = strategic (board sets it). Risk tolerance = operational (acceptable deviation from appetite). Both are different from residual risk.",
                                               "relatedTopics":  [
@@ -4816,6 +4816,265 @@
                                           },
                           "metadata":  {
                                            "examObjective":  "Security and Risk Management",
+                                           "references":  [
+                                                              "https://www.isc2.org/certifications/cissp"
+                                                          ],
+                                           "lastUpdated":  "2024-01-15"
+                                       }
+                      },
+                      {
+                          "id":  "cissp-101",
+                          "type":  "single-choice",
+                          "topicId":  "asset-security",
+                          "difficulty":  "medium",
+                          "points":  1,
+                          "questionText":  "Who is ultimately responsible for classifying data and determining the appropriate level of protection for an information asset?",
+                          "options":  [
+                                          {
+                                              "id":  "A",
+                                              "text":  "The data custodian",
+                                              "isCorrect":  false
+                                          },
+                                          {
+                                              "id":  "B",
+                                              "text":  "The data owner",
+                                              "isCorrect":  true
+                                          },
+                                          {
+                                              "id":  "C",
+                                              "text":  "The system administrator",
+                                              "isCorrect":  false
+                                          },
+                                          {
+                                              "id":  "D",
+                                              "text":  "The end user",
+                                              "isCorrect":  false
+                                          }
+                                      ],
+                          "explanation":  {
+                                              "correct":  "The data owner â€” typically a senior business manager or executive â€” is accountable for the data asset, determines its classification, and defines the protection requirements. They delegate day-to-day protective tasks to the data custodian.",
+                                              "incorrect":  "The data custodian implements the protections defined by the owner (backups, access controls, encryption); system administrators are custodians; end users consume data according to policies set by the owner.",
+                                              "examTip":  "Data owner = accountable, classifies data. Data custodian = responsible, implements protections. Data user = accesses per policy.",
+                                              "relatedTopics":  [
+                                                                    "Data ownership",
+                                                                    "Data classification",
+                                                                    "Asset security roles"
+                                                                ]
+                                          },
+                          "metadata":  {
+                                           "examObjective":  "Domain 2: Asset Security",
+                                           "references":  [
+                                                              "https://www.isc2.org/certifications/cissp"
+                                                          ],
+                                           "lastUpdated":  "2024-01-15"
+                                       }
+                      },
+                      {
+                          "id":  "cissp-102",
+                          "type":  "drag-drop",
+                          "topicId":  "asset-security",
+                          "difficulty":  "hard",
+                          "points":  1,
+                          "questionText":  "Drag each responsibility to the correct data security role.",
+                          "options":  [
+
+                                      ],
+                          "dragCategories":  [
+                                                 {
+                                                     "id":  "cat1",
+                                                     "name":  "Data Owner",
+                                                     "acceptsItemIds":  [
+                                                                            "item1",
+                                                                            "item2"
+                                                                        ]
+                                                 },
+                                                 {
+                                                     "id":  "cat2",
+                                                     "name":  "Data Custodian",
+                                                     "acceptsItemIds":  [
+                                                                            "item3",
+                                                                            "item4"
+                                                                        ]
+                                                 }
+                                             ],
+                          "dragItems":  [
+                                            {
+                                                "id":  "item1",
+                                                "text":  "Determining the classification level of a dataset"
+                                            },
+                                            {
+                                                "id":  "item2",
+                                                "text":  "Approving access rights to the data"
+                                            },
+                                            {
+                                                "id":  "item3",
+                                                "text":  "Performing daily backups of the database"
+                                            },
+                                            {
+                                                "id":  "item4",
+                                                "text":  "Applying encryption to data at rest as directed"
+                                            }
+                                        ],
+                          "explanation":  {
+                                              "correct":  "Data owners make governance decisions: classification and access approval. Data custodians implement the technical controls defined by the owner: backups, encryption, and access enforcement.",
+                                              "incorrect":  "Custodians do not decide classification or approve access â€” they execute the controls that owners mandate.",
+                                              "examTip":  "Owner = decides. Custodian = does. Easy CISSP question â€” know the distinction cold.",
+                                              "relatedTopics":  [
+                                                                    "Data owner",
+                                                                    "Data custodian",
+                                                                    "Asset security roles"
+                                                                ]
+                                          },
+                          "metadata":  {
+                                           "examObjective":  "Domain 2: Asset Security",
+                                           "references":  [
+                                                              "https://www.isc2.org/certifications/cissp"
+                                                          ],
+                                           "lastUpdated":  "2024-01-15"
+                                       }
+                      },
+                      {
+                          "id":  "cissp-103",
+                          "type":  "single-choice",
+                          "topicId":  "asset-security",
+                          "difficulty":  "medium",
+                          "points":  1,
+                          "scenarioText":  "An organisation is implementing a new data governance programme. The security team needs to ensure that every information asset has clearly assigned ownership, classification, and handling requirements documented before any new system goes live.",
+                          "questionText":  "Which foundational asset security activity does this BEST describe?",
+                          "options":  [
+                                          {
+                                              "id":  "A",
+                                              "text":  "Penetration testing",
+                                              "isCorrect":  false
+                                          },
+                                          {
+                                              "id":  "B",
+                                              "text":  "Asset inventory and classification",
+                                              "isCorrect":  true
+                                          },
+                                          {
+                                              "id":  "C",
+                                              "text":  "Disaster recovery planning",
+                                              "isCorrect":  false
+                                          },
+                                          {
+                                              "id":  "D",
+                                              "text":  "Security awareness training",
+                                              "isCorrect":  false
+                                          }
+                                      ],
+                          "explanation":  {
+                                              "correct":  "Asset inventory and classification is the foundational asset security activity â€” you cannot protect what you have not identified and labelled. Documenting ownership and handling requirements before go-live is textbook asset management.",
+                                              "incorrect":  "Penetration testing finds vulnerabilities in existing systems; disaster recovery planning addresses continuity; awareness training educates people â€” none of these establish ownership or classification.",
+                                              "examTip":  "Asset security starts with: identify assets â†’ assign ownership â†’ classify â†’ define handling requirements. You can\u0027t secure the unknown.",
+                                              "relatedTopics":  [
+                                                                    "Asset inventory",
+                                                                    "Data classification",
+                                                                    "Asset management"
+                                                                ]
+                                          },
+                          "metadata":  {
+                                           "examObjective":  "Domain 2: Asset Security",
+                                           "references":  [
+                                                              "https://www.isc2.org/certifications/cissp"
+                                                          ],
+                                           "lastUpdated":  "2024-01-15"
+                                       }
+                      },
+                      {
+                          "id":  "cissp-104",
+                          "type":  "yes-no-statements",
+                          "topicId":  "asset-security",
+                          "difficulty":  "medium",
+                          "points":  1,
+                          "questionText":  "Answer Yes if the statement about data handling and privacy is true, or No if it is false.",
+                          "options":  [
+
+                                      ],
+                          "statements":  [
+                                             {
+                                                 "id":  "s1",
+                                                 "text":  "Data handling requirements should be commensurate with the data\u0027s classification level.",
+                                                 "isCorrectYes":  true
+                                             },
+                                             {
+                                                 "id":  "s2",
+                                                 "text":  "Personally identifiable information (PII) always requires the same handling regardless of jurisdiction.",
+                                                 "isCorrectYes":  false
+                                             },
+                                             {
+                                                 "id":  "s3",
+                                                 "text":  "Scoping and tailoring allow an organisation to adjust baseline security controls to fit its specific environment.",
+                                                 "isCorrectYes":  true
+                                             },
+                                             {
+                                                 "id":  "s4",
+                                                 "text":  "Once data is classified, it never needs to be reclassified.",
+                                                 "isCorrectYes":  false
+                                             }
+                                         ],
+                          "explanation":  {
+                                              "correct":  "Handling requirements should scale with sensitivity; PII regulations vary significantly by jurisdiction (GDPR, CCPA, HIPAA); scoping/tailoring is a recognised NIST concept; data classification should be reviewed as business needs and regulatory requirements change.",
+                                              "incorrect":  "PII requirements differ between jurisdictions â€” what is required under GDPR may differ from CCPA; data should be reclassified when its sensitivity, regulatory context, or business value changes.",
+                                              "examTip":  "Classification is not permanent â€” data value and regulatory context change. Review classifications periodically.",
+                                              "relatedTopics":  [
+                                                                    "Data handling",
+                                                                    "PII",
+                                                                    "Scoping and tailoring",
+                                                                    "Data reclassification"
+                                                                ]
+                                          },
+                          "metadata":  {
+                                           "examObjective":  "Domain 2: Asset Security",
+                                           "references":  [
+                                                              "https://www.isc2.org/certifications/cissp"
+                                                          ],
+                                           "lastUpdated":  "2024-01-15"
+                                       }
+                      },
+                      {
+                          "id":  "cissp-105",
+                          "type":  "single-choice",
+                          "topicId":  "asset-security",
+                          "difficulty":  "hard",
+                          "points":  1,
+                          "scenarioText":  "A healthcare organisation stores patient records that must be retained for seven years under local regulations. After the retention period, the records must be destroyed in a manner that makes recovery impossible. The storage media will be donated to a charity school after the records are removed.",
+                          "questionText":  "Which combination of data lifecycle actions is MOST appropriate?",
+                          "options":  [
+                                          {
+                                              "id":  "A",
+                                              "text":  "Delete the files, then donate the media",
+                                              "isCorrect":  false
+                                          },
+                                          {
+                                              "id":  "B",
+                                              "text":  "Format the drives, then donate the media",
+                                              "isCorrect":  false
+                                          },
+                                          {
+                                              "id":  "C",
+                                              "text":  "Cryptographically erase or purge the media, verify destruction, then donate",
+                                              "isCorrect":  true
+                                          },
+                                          {
+                                              "id":  "D",
+                                              "text":  "Physically shred the drives, then donate the media",
+                                              "isCorrect":  false
+                                          }
+                                      ],
+                          "explanation":  {
+                                              "correct":  "Cryptographic erasure (destroying the encryption keys so data is unrecoverable) or purging (overwriting to NIST standards) renders patient data unrecoverable while preserving the physical media for reuse. Physical shredding destroys the media, making donation impossible.",
+                                              "incorrect":  "Deleting and formatting are insufficient â€” data remains recoverable with forensic tools. Physical shredding is thorough but destroys the media, contradicting the donation requirement.",
+                                              "examTip":  "When media must be reused: purge or cryptographic erase. When media is end-of-life: destroy physically. Match the method to the media\u0027s next use.",
+                                              "relatedTopics":  [
+                                                                    "Data lifecycle",
+                                                                    "Media sanitisation",
+                                                                    "Cryptographic erasure",
+                                                                    "Data retention"
+                                                                ]
+                                          },
+                          "metadata":  {
+                                           "examObjective":  "Domain 2: Asset Security",
                                            "references":  [
                                                               "https://www.isc2.org/certifications/cissp"
                                                           ],

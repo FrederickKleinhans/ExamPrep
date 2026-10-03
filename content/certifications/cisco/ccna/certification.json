@@ -1,0 +1,28 @@
+{
+  "id": "ccna",
+  "name": "Cisco Certified Network Associate",
+  "provider": "Cisco",
+  "examCode": "200-301",
+  "version": "2024-01",
+  "questionCount": 120,
+  "passingScore": 82,
+  "timeLimitMinutes": 120,
+  "topics": [
+    { "id": "network-fundamentals",  "name": "Network Fundamentals",           "weight": 20 },
+    { "id": "network-access",        "name": "Network Access",                  "weight": 20 },
+    { "id": "ip-connectivity",       "name": "IP Connectivity",                 "weight": 25 },
+    { "id": "ip-services",           "name": "IP Services",                     "weight": 10 },
+    { "id": "security-fundamentals", "name": "Security Fundamentals",           "weight": 15 },
+    { "id": "automation",            "name": "Automation and Programmability",  "weight": 10 }
+  ],
+  "resources": [
+    {
+      "title": "Cisco CCNA Certification Overview",
+      "url": "https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html"
+    },
+    {
+      "title": "CCNA 200-301 Exam Topics",
+      "url": "https://learningnetwork.cisco.com/s/ccna-exam-topics"
+    }
+  ]
+}
