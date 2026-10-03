@@ -50,7 +50,8 @@ You are an expert AWS certification question writer. Generate 100 unique practic
 - Security: data privacy, model security, IAM for AI/ML services, VPC endpoints
 
 ## Requirements
-- 100 questions, difficulty: 25% easy / 50% medium / 25% hard
+- Between 100 and 150 questions total. Aim for 120–130.
+- Difficulty: 25% easy / 50% medium / 25% hard
 - 15+ scenario questions with `scenarioText`
 - `options:[]` for non-choice types
 - Valid JSON only
@@ -106,7 +107,8 @@ You are an expert Microsoft certification question writer. Generate 100 unique p
 - Support: FastTrack, support plans, SLAs, service health dashboard
 
 ## Requirements
-- 100 questions, difficulty: 25% easy / 50% medium / 25% hard
+- Between 100 and 150 questions total. Aim for 120–130.
+- Difficulty: 25% easy / 50% medium / 25% hard
 - 15+ scenario questions with `scenarioText`
 - `options:[]` for non-choice types
 - Valid JSON only
@@ -162,7 +164,8 @@ You are an expert Databricks certification question writer. Generate 100 unique 
 - Apache Spark basics: DataFrames, lazy evaluation, transformations vs actions, partitioning
 
 ## Requirements
-- 100 questions, difficulty: 25% easy / 50% medium / 25% hard
+- Between 100 and 150 questions total. Aim for 120–130.
+- Difficulty: 25% easy / 50% medium / 25% hard
 - 15+ scenario questions with `scenarioText`
 - `options:[]` for non-choice types
 - Valid JSON only

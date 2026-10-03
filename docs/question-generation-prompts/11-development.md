@@ -53,7 +53,8 @@ You are an expert Python certification question writer. Generate 100 unique prac
 - Exceptions: try/except/else/finally, raise, common exceptions (ValueError, TypeError, ZeroDivisionError, IndexError, KeyError)
 
 ## Requirements
-- 100 questions, difficulty: 25% easy / 50% medium / 25% hard
+- Between 100 and 150 questions total. Aim for 120–130.
+- Difficulty: 25% easy / 50% medium / 25% hard
 - 20+ code snippet questions using `scenarioText` (show Python code, ask what it outputs or does)
 - Include at least 10 questions about what code outputs
 - `options:[]` for non-choice types
@@ -114,7 +115,8 @@ You are an expert JavaScript certification question writer. Generate 100 unique 
 - Error handling: try/catch/finally, Error types (TypeError, ReferenceError, SyntaxError), throw
 
 ## Requirements
-- 100 questions, difficulty: 25% easy / 50% medium / 25% hard
+- Between 100 and 150 questions total. Aim for 120–130.
+- Difficulty: 25% easy / 50% medium / 25% hard
 - 20+ code snippet questions using `scenarioText`
 - Include at least 10 questions about what code outputs or what value a variable holds
 - `options:[]` for non-choice types
@@ -177,7 +179,8 @@ You are an expert GitHub certification question writer. Generate 100 unique prac
 - GitHub Mobile, GitHub CLI (gh), GitHub Desktop
 
 ## Requirements
-- 100 questions, difficulty: 25% easy / 50% medium / 25% hard
+- Between 100 and 150 questions total. Aim for 120–130.
+- Difficulty: 25% easy / 50% medium / 25% hard
 - 15+ scenario questions with `scenarioText`
 - `options:[]` for non-choice types
 - Valid JSON only

@@ -54,7 +54,8 @@ You are an expert enterprise architecture certification question writer. Generat
 - Enterprise Continuum: Architecture Continuum + Solutions Continuum, Foundation → Common Systems → Industry → Organisation-Specific
 
 ## Requirements
-- 100 questions, difficulty: 20% easy / 55% medium / 25% hard
+- Between 100 and 150 questions total. Aim for 120–130.
+- Difficulty: 20% easy / 55% medium / 25% hard
 - 15+ scenario questions with `scenarioText`
 - 10+ questions on correct ADM phase sequencing
 - `options:[]` for non-choice types
@@ -115,7 +116,8 @@ You are an expert Salesforce certification question writer. Generate 100 unique 
 - Data management: data import wizard, data loader, sandbox environments, change sets
 
 ## Requirements
-- 100 questions, difficulty: 25% easy / 50% medium / 25% hard
+- Between 100 and 150 questions total. Aim for 120–130.
+- Difficulty: 25% easy / 50% medium / 25% hard
 - 15+ scenario questions with `scenarioText`
 - `options:[]` for non-choice types
 - Valid JSON only
@@ -167,7 +169,8 @@ You are an expert PMI certification question writer. Generate 100 unique practic
 - Business analysis: needs assessment, requirements elicitation techniques (interviews, workshops, observation, prototyping), requirements types (business, stakeholder, functional, non-functional, transition), traceability matrix, requirements validation, change management for requirements, product roadmap, backlog management
 
 ## Requirements
-- 100 questions, difficulty: 20% easy / 55% medium / 25% hard
+- Between 100 and 150 questions total. Aim for 120–130.
+- Difficulty: 20% easy / 55% medium / 25% hard
 - 15+ scenario questions with `scenarioText`
 - 10+ EVM calculation questions
 - `options:[]` for non-choice types
@@ -222,7 +225,8 @@ You are an expert AI business certification question writer. Generate 100 unique
 - AI project management: CRISP-DM methodology (Business Understanding → Data Understanding → Data Preparation → Modelling → Evaluation → Deployment), agile for AI, data quality requirements, model monitoring and drift, AI governance
 
 ## Requirements
-- 100 questions, difficulty: 25% easy / 50% medium / 25% hard
+- Between 100 and 150 questions total. Aim for 120–130.
+- Difficulty: 25% easy / 50% medium / 25% hard
 - 15+ scenario questions with `scenarioText`
 - `options:[]` for non-choice types
 - Valid JSON only
@@ -281,7 +285,8 @@ You are an expert ISACA certification question writer. Generate 100 unique pract
 - Business continuity: BCP, DRP, RTO, RPO, backup strategies
 
 ## Requirements
-- 100 questions, difficulty: 25% easy / 50% medium / 25% hard
+- Between 100 and 150 questions total. Aim for 120–130.
+- Difficulty: 25% easy / 50% medium / 25% hard
 - 15+ scenario questions with `scenarioText`
 - `options:[]` for non-choice types
 - Valid JSON only
@@ -338,7 +343,8 @@ You are an expert CompTIA certification question writer. Generate 100 unique pra
 - Data privacy: PII, GDPR basics, data anonymisation, data masking, access controls
 
 ## Requirements
-- 100 questions, difficulty: 25% easy / 50% medium / 25% hard
+- Between 100 and 150 questions total. Aim for 120–130.
+- Difficulty: 25% easy / 50% medium / 25% hard
 - 15+ scenario questions with `scenarioText`
 - 10+ questions involving interpreting charts or data scenarios
 - `options:[]` for non-choice types

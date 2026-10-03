@@ -53,7 +53,7 @@ Generate a JSON array of 100 unique CISSP practice questions.
 ---
 
 ## Requirements
-- 100 questions total
+- Between 100 and 150 questions total. Aim for 120–130.
 - Difficulty: 20% easy / 50% medium / 30% hard
 - Include 15+ scenario questions with `scenarioText`
 - 10+ questions on governance/risk
