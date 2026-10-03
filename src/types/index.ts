@@ -1,5 +1,5 @@
 // ============================================================
-// CertReady — TypeScript Interfaces
+// CertArc — TypeScript Interfaces
 // ============================================================
 
 // --- Manifest Types ---

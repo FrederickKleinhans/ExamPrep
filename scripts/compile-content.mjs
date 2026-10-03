@@ -7,7 +7,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const sourceRoot = join(root, 'content', 'certifications');
 const outputRoot = join(root, 'public', 'data');
 
-const readJson = async (file) => JSON.parse(await readFile(file, 'utf8'));
+const readJson = async (file) => JSON.parse((await readFile(file, 'utf8')).replace(/^\uFEFF/, ''));
 const writeJson = async (file, value) => {
   await mkdir(dirname(file), { recursive: true });
   await writeFile(file, `${JSON.stringify(value, null, 2)}\n`, 'utf8');
