@@ -1,0 +1,5173 @@
+{
+  "certificationId": "aws-cp",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "awscp-001",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which benefit of cloud computing describes the ability to provision resources in minutes instead of weeks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High durability",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Agility",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Data sovereignty",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Vertical partitioning",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Agility means you can quickly provision resources and experiment, which shortens time to market.",
+        "incorrect": "Durability protects against data loss, data sovereignty concerns legal data location, and vertical partitioning is a database design technique.",
+        "examTip": "Words like 'quickly', 'faster' and 'experiment' point to agility.",
+        "relatedTopics": [
+          "Agility",
+          "Benefits of cloud computing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.1 Define the benefits of the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-002",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which statement best describes the shift from capital expense (CapEx) to operating expense (OpEx) when moving to AWS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Paying upfront for servers that are depreciated over several years",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Signing a multi-year hardware lease with a fixed monthly fee",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Paying only for the resources consumed, as a variable expense",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Purchasing data center space and cooling equipment",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "With AWS you trade fixed upfront expense for variable expense and pay only for what you use.",
+        "incorrect": "The other options are all forms of upfront or fixed capital commitment.",
+        "examTip": "Cloud = variable (OpEx) expense; on-premises = capital (CapEx) expense.",
+        "relatedTopics": [
+          "CapEx vs OpEx",
+          "Pay-as-you-go pricing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.4 Understand concepts of cloud economics",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-003",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "scenarioText": "An online retailer's website traffic grows sharply every holiday season and drops sharply afterward. The company wants resources to be added and removed automatically to match demand.",
+      "questionText": "Which cloud characteristic does this describe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elasticity",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Durability",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Consolidated billing",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Data residency",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Elasticity is the ability to acquire resources as you need them and release them when you do not, often automatically.",
+        "incorrect": "Durability, consolidated billing and data residency do not describe automatic scaling to match demand.",
+        "examTip": "Elasticity = scale out AND in with demand.",
+        "relatedTopics": [
+          "Elasticity",
+          "Amazon EC2 Auto Scaling"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.1 Define the benefits of the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-004",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "How is AWS able to offer lower pay-as-you-go prices over time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By requiring customers to prepay for three years",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "By removing the free tier",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "By reducing the number of AWS Regions",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "By aggregating usage from a large number of customers to achieve economies of scale",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Because AWS aggregates usage from hundreds of thousands of customers, it achieves higher economies of scale and passes savings on as lower prices.",
+        "incorrect": "Prepaying, removing the free tier or reducing Regions do not lower prices through scale.",
+        "examTip": "'Massive economies of scale' is a classic cloud benefit phrase.",
+        "relatedTopics": [
+          "Economies of scale",
+          "Cloud economics"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.4 Understand concepts of cloud economics",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-005",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which cloud benefit allows a company to deploy an application in multiple countries within minutes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Going global in minutes",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Fixed capacity planning",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Hardware refresh cycles",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Colocation contracts",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS global infrastructure lets you deploy applications in multiple Regions around the world with a few clicks or API calls.",
+        "incorrect": "Capacity planning, hardware refreshes and colocation contracts are traditional on-premises concerns.",
+        "examTip": "'Go global in minutes' is one of the six advantages of cloud computing.",
+        "relatedTopics": [
+          "AWS Regions",
+          "Benefits of cloud computing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.1 Define the benefits of the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-006",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Well-Architected Framework pillar focuses on running workloads effectively, gaining insight into operations, and continually improving processes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reliability",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Security",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Operational Excellence",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Cost Optimization",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Operational Excellence covers running and monitoring systems and continually improving processes and procedures.",
+        "incorrect": "Reliability is recovery and availability, Security is protecting data and systems, and Cost Optimization is avoiding unnecessary cost.",
+        "examTip": "Match 'operations, monitoring, continual improvement' to Operational Excellence.",
+        "relatedTopics": [
+          "Well-Architected Framework",
+          "Operational Excellence"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.2 Identify design principles of the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-007",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Well-Architected Framework pillar focuses on minimizing the environmental impact of running cloud workloads?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sustainability",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Performance Efficiency",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Reliability",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Operational Excellence",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "The Sustainability pillar addresses the long-term environmental, economic and societal impact of your workloads.",
+        "incorrect": "The other pillars address efficiency, resilience and operations rather than environmental impact.",
+        "examTip": "Remember all six pillars: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization, Sustainability.",
+        "relatedTopics": [
+          "Well-Architected Framework",
+          "Sustainability pillar"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.2 Identify design principles of the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-008",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company wants to migrate an on-premises application to AWS as quickly as possible, with no code changes and no changes to the architecture.",
+      "questionText": "Which migration strategy should the company use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Refactor",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Replatform",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Rehost",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Retire",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Rehosting (lift and shift) moves applications to AWS as-is with no code or architecture changes, making it the fastest option.",
+        "incorrect": "Refactor changes the architecture and code, Replatform makes small optimizations, and Retire decommissions the application.",
+        "examTip": "'No changes, fastest' = Rehost.",
+        "relatedTopics": [
+          "Migration strategies (7 Rs)",
+          "AWS Application Migration Service"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.3 Understand the benefits of and strategies for migration to the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-009",
+      "type": "single-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which AWS Cloud Adoption Framework (AWS CAF) perspective focuses on organizational culture, training and workforce skills for cloud adoption?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Security",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Governance",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Platform",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "People",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "The People perspective bridges technology and business by addressing culture, skills, training and change management.",
+        "incorrect": "Security, Governance and Platform address risk controls, alignment and technical foundations rather than workforce skills.",
+        "examTip": "CAF perspectives: Business, People, Governance, Platform, Security, Operations.",
+        "relatedTopics": [
+          "AWS CAF",
+          "Cloud adoption"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.3 Understand the benefits of and strategies for migration to the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-010",
+      "type": "multiple-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO are benefits of cloud computing? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stop guessing capacity",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Spend money running and maintaining data centers",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Benefit from massive economies of scale",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Increase upfront capital investment",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Cloud computing lets you stop guessing capacity and benefit from massive economies of scale.",
+        "incorrect": "Running data centers and increasing upfront capital investment are what cloud computing helps you avoid.",
+        "examTip": "Cloud removes undifferentiated heavy lifting such as running data centers.",
+        "relatedTopics": [
+          "Benefits of cloud computing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.1 Define the benefits of the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-011",
+      "type": "multiple-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO are pillars of the AWS Well-Architected Framework? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scalability",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Reliability",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Elasticity",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Cost Optimization",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Reliability and Cost Optimization are two of the six Well-Architected pillars.",
+        "incorrect": "Scalability and elasticity are cloud characteristics, not pillars.",
+        "examTip": "Do not confuse cloud characteristics with the named pillars.",
+        "relatedTopics": [
+          "Well-Architected Framework"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.2 Identify design principles of the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-012",
+      "type": "multiple-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO are design principles for architecting in the AWS Cloud? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Implement loose coupling between components",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Rely on a single large server",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Design for failure and treat resources as disposable",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Perform operations manually for tighter control",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Loose coupling and designing for failure improve resilience and scalability in cloud architectures.",
+        "incorrect": "Single large servers and manual operations create single points of failure and reduce agility.",
+        "examTip": "AWS favors automation, loose coupling and designing for failure.",
+        "relatedTopics": [
+          "Well-Architected Framework",
+          "Design principles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.2 Identify design principles of the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-013",
+      "type": "multiple-choice",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A retailer is evaluating whether to move its on-premises workloads to AWS.",
+      "questionText": "Which TWO are benefits of migrating to the AWS Cloud? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increased staff productivity",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Elimination of all security responsibilities",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Improved operational resilience",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "A guaranteed fixed monthly cost",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Migration commonly increases staff productivity, operational resilience, business agility and reduces costs.",
+        "incorrect": "Customers still retain security responsibilities and cloud costs vary with usage.",
+        "examTip": "Beware of absolute words like 'all' and 'guaranteed'.",
+        "relatedTopics": [
+          "Migration benefits"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.3 Understand the benefits of and strategies for migration to the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-014",
+      "type": "yes-no-statements",
+      "topicId": "cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "You can trade fixed expense for variable expense by using the AWS Cloud.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "AWS requires a long-term contract for On-Demand compute capacity.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "You can deploy applications to multiple Regions around the world in minutes.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS offers variable pay-as-you-go pricing with no long-term contract for On-Demand usage and global reach in minutes.",
+        "incorrect": "On-Demand does not require long-term contracts.",
+        "examTip": "Pay-as-you-go means no long-term commitment.",
+        "relatedTopics": [
+          "Benefits of cloud computing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.1 Define the benefits of the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-015",
+      "type": "yes-no-statements",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The Reliability pillar addresses the ability to recover from disruptions.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The Security pillar only covers encryption at rest.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "The Cost Optimization pillar focuses on avoiding unnecessary costs.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Reliability covers recovery, Cost Optimization avoids unnecessary spend, and Security is much broader than encryption.",
+        "incorrect": "Security also covers identity, detection, infrastructure protection and incident response.",
+        "examTip": "Pillar names are broader than a single feature.",
+        "relatedTopics": [
+          "Well-Architected Framework"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.2 Identify design principles of the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-016",
+      "type": "yes-no-statements",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Rehosting involves rearchitecting an application to be cloud-native.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Retiring means decommissioning applications that are no longer needed.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "The AWS CAF provides guidance to help organizations with cloud adoption.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Retire decommissions unneeded apps, and AWS CAF guides cloud adoption; rehosting does not change the architecture.",
+        "incorrect": "Rearchitecting is refactoring, not rehosting.",
+        "examTip": "Rehost = lift and shift; Refactor = rearchitect.",
+        "relatedTopics": [
+          "Migration strategies",
+          "AWS CAF"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.3 Understand the benefits of and strategies for migration to the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-017",
+      "type": "yes-no-statements",
+      "topicId": "cloud-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A total cost of ownership (TCO) comparison should include power, cooling and staffing costs in addition to hardware.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Moving to AWS removes the need to pay for any infrastructure.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "AWS can lower prices over time because of economies of scale.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "TCO includes all costs of running on-premises infrastructure, and AWS passes economies of scale on as lower prices.",
+        "incorrect": "You still pay for the AWS resources you consume.",
+        "examTip": "Include all hidden on-premises costs in a TCO comparison.",
+        "relatedTopics": [
+          "Cloud economics",
+          "TCO"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.4 Understand concepts of cloud economics",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-018",
+      "type": "dropdown-select",
+      "topicId": "cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each sentence by selecting the correct option.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Buying servers in advance is a ___ expense.",
+          "options": [
+            "Capital",
+            "Variable",
+            "Operational"
+          ],
+          "correctAnswer": "Capital"
+        },
+        {
+          "id": "d2",
+          "prompt": "Paying for cloud resources as you use them is a ___ expense.",
+          "options": [
+            "Fixed",
+            "Capital",
+            "Variable"
+          ],
+          "correctAnswer": "Variable"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "On-premises purchases are capital expenses; pay-as-you-go cloud usage is a variable expense.",
+        "incorrect": "Fixed and operational labels do not match the capital vs variable distinction.",
+        "examTip": "CapEx vs variable expense is a common exam theme.",
+        "relatedTopics": [
+          "CapEx vs OpEx"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.4 Understand concepts of cloud economics",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-019",
+      "type": "dropdown-select",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Complete each sentence by selecting the correct Well-Architected pillar.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "The ___ pillar covers the ability of a workload to recover from disruptions.",
+          "options": [
+            "Security",
+            "Reliability",
+            "Performance Efficiency",
+            "Sustainability"
+          ],
+          "correctAnswer": "Reliability"
+        },
+        {
+          "id": "d2",
+          "prompt": "The ___ pillar covers using computing resources efficiently to meet requirements.",
+          "options": [
+            "Operational Excellence",
+            "Cost Optimization",
+            "Performance Efficiency",
+            "Security"
+          ],
+          "correctAnswer": "Performance Efficiency"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Reliability is about recovery and availability, while Performance Efficiency is about using resources efficiently as demand changes.",
+        "incorrect": "Other pillars cover protection, operations, cost and environmental impact.",
+        "examTip": "Learn a one-line definition for each pillar.",
+        "relatedTopics": [
+          "Well-Architected Framework"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.2 Identify design principles of the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-020",
+      "type": "dropdown-select",
+      "topicId": "cloud-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Complete each sentence by selecting the correct AWS CAF perspective.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Ensuring cloud services are delivered at a level that meets business needs belongs to the ___ perspective.",
+          "options": [
+            "Operations",
+            "Business",
+            "Platform",
+            "Governance"
+          ],
+          "correctAnswer": "Operations"
+        },
+        {
+          "id": "d2",
+          "prompt": "Cultural change and workforce training belong to the ___ perspective.",
+          "options": [
+            "Security",
+            "People",
+            "Governance",
+            "Platform"
+          ],
+          "correctAnswer": "People"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "The Operations perspective focuses on delivering and running services at agreed levels; People focuses on culture and skills.",
+        "incorrect": "Business, Platform, Governance and Security cover other aspects of adoption.",
+        "examTip": "Link each CAF perspective to its main stakeholder concern.",
+        "relatedTopics": [
+          "AWS CAF"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.3 Understand the benefits of and strategies for migration to the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-021",
+      "type": "ordering",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the AWS Cloud migration phases in the correct order.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o2",
+          "text": "Mobilize",
+          "correctPosition": 2
+        },
+        {
+          "id": "o1",
+          "text": "Assess",
+          "correctPosition": 1
+        },
+        {
+          "id": "o3",
+          "text": "Migrate and modernize",
+          "correctPosition": 3
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "The AWS migration journey starts with assessing readiness, then mobilizing to build the foundation, then migrating and modernizing workloads.",
+        "incorrect": "Migrating before assessing and mobilizing leads to unplanned risk.",
+        "examTip": "Assess, Mobilize, Migrate and modernize.",
+        "relatedTopics": [
+          "Migration phases"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.3 Understand the benefits of and strategies for migration to the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-022",
+      "type": "ordering",
+      "topicId": "cloud-concepts",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the steps of an elastic scaling event in the correct order.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o4",
+          "text": "The load balancer distributes traffic to the new instances",
+          "correctPosition": 4
+        },
+        {
+          "id": "o2",
+          "text": "A CloudWatch alarm is triggered",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Amazon EC2 Auto Scaling launches additional instances",
+          "correctPosition": 3
+        },
+        {
+          "id": "o1",
+          "text": "Application traffic increases",
+          "correctPosition": 1
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Rising traffic triggers an alarm, Auto Scaling adds capacity, and the load balancer spreads traffic across the larger fleet.",
+        "incorrect": "Capacity cannot be added before the scaling trigger fires.",
+        "examTip": "Elasticity = monitor, trigger, scale, distribute.",
+        "relatedTopics": [
+          "Elasticity",
+          "Auto Scaling",
+          "CloudWatch"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.1 Define the benefits of the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-023",
+      "type": "drag-drop",
+      "topicId": "cloud-concepts",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Drag each item to the correct expense type.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Capital expense",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Variable expense",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item4",
+          "text": "Paying monthly for Amazon S3 storage used"
+        },
+        {
+          "id": "item3",
+          "text": "Paying hourly for Amazon EC2 On-Demand instances"
+        },
+        {
+          "id": "item1",
+          "text": "Buying servers for a data center"
+        },
+        {
+          "id": "item2",
+          "text": "Purchasing network switches"
+        }
+      ],
+      "explanation": {
+        "correct": "Hardware purchases are capital expenses; usage-based AWS charges are variable expenses.",
+        "incorrect": "Usage-based services are never capital expenses.",
+        "examTip": "Upfront purchase = CapEx; usage-based = variable.",
+        "relatedTopics": [
+          "CapEx vs OpEx"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.4 Understand concepts of cloud economics",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-024",
+      "type": "drag-drop",
+      "topicId": "cloud-concepts",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each description to the correct migration strategy.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Rehost",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Retire",
+          "acceptsItemIds": [
+            "item3"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Retain",
+          "acceptsItemIds": [
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item2",
+          "text": "Use AWS Application Migration Service to copy servers unchanged"
+        },
+        {
+          "id": "item4",
+          "text": "Keep an application on premises for now because of compliance requirements"
+        },
+        {
+          "id": "item3",
+          "text": "Decommission an application no longer needed"
+        },
+        {
+          "id": "item1",
+          "text": "Move servers to Amazon EC2 as-is (lift and shift)"
+        }
+      ],
+      "explanation": {
+        "correct": "Rehost moves workloads unchanged, Retire decommissions, and Retain leaves workloads where they are.",
+        "incorrect": "Each description maps to only one strategy.",
+        "examTip": "Know the 7 Rs: Rehost, Replatform, Refactor, Repurchase, Retire, Retain, Relocate.",
+        "relatedTopics": [
+          "Migration strategies"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 1: Cloud Concepts - Task 1.3 Understand the benefits of and strategies for migration to the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-025",
+      "type": "single-choice",
+      "topicId": "security-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Under the AWS shared responsibility model, which task is the responsibility of AWS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Patching the guest operating system on Amazon EC2",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Physical security of AWS data centers",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Configuring security groups",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Encrypting customer data stored in Amazon S3",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS is responsible for security OF the cloud, including physical facilities, hardware and the global network.",
+        "incorrect": "Guest OS patching, security groups and data encryption choices are customer responsibilities.",
+        "examTip": "Physical = AWS; configuration and data = customer.",
+        "relatedTopics": [
+          "Shared responsibility model"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.1 Understand the AWS shared responsibility model",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-026",
+      "type": "single-choice",
+      "topicId": "security-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Who is responsible for managing IAM users and their permissions in an AWS account?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AWS Support",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "AWS Artifact",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "The customer",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Identity and access management configuration is the customer's responsibility (security IN the cloud).",
+        "incorrect": "AWS provides the IAM service but does not configure users or permissions on the customer's behalf.",
+        "examTip": "Access management is always a customer duty.",
+        "relatedTopics": [
+          "Shared responsibility model",
+          "IAM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.1 Understand the AWS shared responsibility model",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-027",
+      "type": "single-choice",
+      "topicId": "security-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which AWS service enables you to manage users and their permissions to AWS resources?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Identity and Access Management (IAM)",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Amazon Inspector",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "AWS Shield",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Amazon Macie",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "IAM lets you create users, groups, roles and policies to control access to AWS resources.",
+        "incorrect": "Inspector scans for vulnerabilities, Shield protects against DDoS, and Macie finds sensitive data.",
+        "examTip": "IAM = who can do what.",
+        "relatedTopics": [
+          "IAM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.3 Identify AWS access management capabilities",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-028",
+      "type": "single-choice",
+      "topicId": "security-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is an AWS best practice for the AWS account root user?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Share the root credentials with administrators",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Create access keys for the root user for daily tasks",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Enable MFA and avoid using the root user for everyday tasks",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Delete the root user after account creation",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Protect the root user with MFA and use it only for the few tasks that require it.",
+        "incorrect": "Sharing credentials or using access keys for daily work violates best practices, and the root user cannot be deleted.",
+        "examTip": "Lock away root credentials and enable MFA.",
+        "relatedTopics": [
+          "IAM best practices",
+          "MFA"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.3 Identify AWS access management capabilities",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-029",
+      "type": "single-choice",
+      "topicId": "security-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which service records API calls made in an AWS account for governance and auditing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon CloudWatch",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AWS Config",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "AWS CloudTrail",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "AWS Trusted Advisor",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "CloudTrail logs API activity and account events for auditing and governance.",
+        "incorrect": "CloudWatch monitors metrics, Config tracks resource configuration, and Trusted Advisor gives best-practice checks.",
+        "examTip": "Who did what, when = CloudTrail.",
+        "relatedTopics": [
+          "AWS CloudTrail"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.2 Understand AWS Cloud security, governance, and compliance concepts",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-030",
+      "type": "single-choice",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which service assesses resource configurations and compliance against desired configurations over time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Config",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "AWS CloudTrail",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Amazon GuardDuty",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS Artifact",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS Config records resource configuration changes and evaluates them against rules.",
+        "incorrect": "CloudTrail logs API calls, GuardDuty detects threats and Artifact provides compliance reports.",
+        "examTip": "Configuration history and compliance rules = AWS Config.",
+        "relatedTopics": [
+          "AWS Config"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.2 Understand AWS Cloud security, governance, and compliance concepts",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-031",
+      "type": "single-choice",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company runs a public web application and needs to protect it from SQL injection and cross-site scripting attacks.",
+      "questionText": "Which AWS service should the company use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Shield",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AWS WAF",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Amazon GuardDuty",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS KMS",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS WAF filters web requests and protects against common exploits such as SQL injection and cross-site scripting.",
+        "incorrect": "Shield mitigates DDoS, GuardDuty detects threats, and KMS manages encryption keys.",
+        "examTip": "Application-layer web attacks = AWS WAF.",
+        "relatedTopics": [
+          "AWS WAF"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.4 Identify components and resources for security",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-032",
+      "type": "single-choice",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which AWS service provides DDoS protection that is automatically enabled at no additional cost for all AWS customers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS WAF",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AWS Shield Standard",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Amazon Inspector",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS Firewall Manager",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS Shield Standard is automatically included for all customers and protects against common network and transport layer DDoS attacks.",
+        "incorrect": "WAF, Inspector and Firewall Manager are different services and are not free defaults.",
+        "examTip": "Shield Standard = free, automatic; Shield Advanced = paid.",
+        "relatedTopics": [
+          "AWS Shield"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.4 Identify components and resources for security",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-033",
+      "type": "single-choice",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which service uses machine learning to detect threats by analyzing AWS CloudTrail events, VPC Flow Logs and DNS logs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon Inspector",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Amazon Macie",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Amazon GuardDuty",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "AWS Artifact",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Amazon GuardDuty is an intelligent threat detection service that analyzes logs for malicious activity.",
+        "incorrect": "Inspector finds vulnerabilities, Macie discovers sensitive data and Artifact provides compliance reports.",
+        "examTip": "Threat detection from logs = GuardDuty.",
+        "relatedTopics": [
+          "Amazon GuardDuty"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.4 Identify components and resources for security",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-034",
+      "type": "single-choice",
+      "topicId": "security-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An external auditor asks a company to provide AWS's SOC reports and ISO certifications.",
+      "questionText": "Which AWS service should the company use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Config",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "AWS Audit Manager",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "AWS Security Hub",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS Artifact",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS Artifact provides on-demand access to AWS compliance reports such as SOC reports and ISO certifications.",
+        "incorrect": "Config and Audit Manager assess your own resources and Security Hub aggregates findings; none supply AWS's own reports.",
+        "examTip": "Need AWS's compliance documents = AWS Artifact.",
+        "relatedTopics": [
+          "AWS Artifact",
+          "Compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.2 Understand AWS Cloud security, governance, and compliance concepts",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-035",
+      "type": "single-choice",
+      "topicId": "security-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company uses many AWS accounts and security tools and wants a single place to view and prioritize security findings.",
+      "questionText": "Which AWS service should the company use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon GuardDuty",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AWS Security Hub",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Amazon Inspector",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS Shield",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS Security Hub aggregates and prioritizes security findings from AWS services and partner tools across accounts.",
+        "incorrect": "GuardDuty and Inspector generate findings but do not provide the central view, and Shield is DDoS protection.",
+        "examTip": "A single pane of glass for security findings = Security Hub.",
+        "relatedTopics": [
+          "AWS Security Hub"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.4 Identify components and resources for security",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-036",
+      "type": "multiple-choice",
+      "topicId": "security-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO are customer responsibilities for Amazon EC2 instances? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Patching the hypervisor",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Configuring security groups",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Maintaining physical data center hardware",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Patching the guest operating system",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Customers manage guest OS patching and security group configuration on EC2.",
+        "incorrect": "AWS manages the hypervisor and physical hardware.",
+        "examTip": "On EC2 you own everything from the guest OS up.",
+        "relatedTopics": [
+          "Shared responsibility model"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.1 Understand the AWS shared responsibility model",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-037",
+      "type": "multiple-choice",
+      "topicId": "security-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO are IAM best practices? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Share access keys among team members",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Grant least privilege",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Enable multi-factor authentication",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Use the root user for daily administration",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Least privilege and MFA are core IAM best practices.",
+        "incorrect": "Sharing keys and using the root user increase risk.",
+        "examTip": "Least privilege and MFA appear constantly on the exam.",
+        "relatedTopics": [
+          "IAM best practices"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.3 Identify AWS access management capabilities",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-038",
+      "type": "multiple-choice",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO are AWS responsibilities under the shared responsibility model? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Managing the virtualization layer",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Classifying customer data",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Maintaining facilities in AWS Regions",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Configuring network ACLs",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS secures the virtualization layer and the physical facilities of its infrastructure.",
+        "incorrect": "Data classification and network ACLs are customer responsibilities.",
+        "examTip": "AWS = security of the cloud.",
+        "relatedTopics": [
+          "Shared responsibility model"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.1 Understand the AWS shared responsibility model",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-039",
+      "type": "multiple-choice",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO services help detect vulnerabilities or threats in an AWS environment? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon Inspector",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "AWS Artifact",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Amazon GuardDuty",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "AWS Budgets",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Inspector scans for software vulnerabilities and GuardDuty detects suspicious activity.",
+        "incorrect": "Artifact provides compliance reports and Budgets tracks cost.",
+        "examTip": "Inspector = vulnerabilities; GuardDuty = threats.",
+        "relatedTopics": [
+          "Amazon Inspector",
+          "Amazon GuardDuty"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.4 Identify components and resources for security",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-040",
+      "type": "multiple-choice",
+      "topicId": "security-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO statements describe IAM roles? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "They provide temporary security credentials",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "They are permanently tied to one individual",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "They can be assumed by AWS services such as Amazon EC2",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "They always require a hardware MFA token",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Roles issue temporary credentials and can be assumed by users, applications or AWS services.",
+        "incorrect": "Roles are not tied to one person and do not always require MFA.",
+        "examTip": "Applications on AWS should use roles rather than long-term keys.",
+        "relatedTopics": [
+          "IAM roles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.3 Identify AWS access management capabilities",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-041",
+      "type": "yes-no-statements",
+      "topicId": "security-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "AWS is responsible for patching the guest operating system on Amazon EC2 instances.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Customers are responsible for configuring security groups.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "AWS is responsible for the physical security of its data centers.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS secures the facilities; customers manage guest OS patches and security groups.",
+        "incorrect": "Guest OS patching is customer work.",
+        "examTip": "Memorize the EC2 responsibility split.",
+        "relatedTopics": [
+          "Shared responsibility model"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.1 Understand the AWS shared responsibility model",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-042",
+      "type": "yes-no-statements",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "An IAM group can contain other IAM groups.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "IAM policies are written in JSON.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "IAM is a global service that is not tied to a single Region.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "IAM policies use JSON and IAM is global, but groups cannot be nested.",
+        "incorrect": "Groups contain users only.",
+        "examTip": "IAM = global, groups hold users.",
+        "relatedTopics": [
+          "IAM"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.3 Identify AWS access management capabilities",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-043",
+      "type": "yes-no-statements",
+      "topicId": "security-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Amazon S3 supports encryption at rest.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "AWS KMS lets you create and control encryption keys.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Encryption in transit is not available on AWS.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "S3 supports encryption at rest, KMS manages keys, and in-transit encryption (TLS) is supported widely.",
+        "incorrect": "In-transit encryption is available.",
+        "examTip": "Encryption at rest and in transit are both supported.",
+        "relatedTopics": [
+          "AWS KMS",
+          "Encryption"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.2 Understand AWS Cloud security, governance, and compliance concepts",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-044",
+      "type": "yes-no-statements",
+      "topicId": "security-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Amazon Macie discovers sensitive data in Amazon S3.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "AWS WAF operates at the application layer (Layer 7).",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Amazon Inspector monitors CloudTrail logs for malicious activity.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Macie finds sensitive data and WAF filters web requests at Layer 7; CloudTrail analysis for threats is GuardDuty.",
+        "incorrect": "Inspector scans for vulnerabilities, not log-based threats.",
+        "examTip": "Separate GuardDuty (threats) from Inspector (vulnerabilities).",
+        "relatedTopics": [
+          "Amazon Macie",
+          "AWS WAF",
+          "Amazon Inspector"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.4 Identify components and resources for security",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-045",
+      "type": "yes-no-statements",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "AWS Artifact provides on-demand access to AWS compliance reports.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "AWS compliance certifications make customer applications automatically compliant.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Customers can inherit AWS's physical security controls.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Artifact supplies reports and customers inherit physical controls, but compliance of their own workloads remains their responsibility.",
+        "incorrect": "Using a compliant platform does not make applications compliant.",
+        "examTip": "Inherited vs customer-owned controls.",
+        "relatedTopics": [
+          "AWS Artifact",
+          "Compliance"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.2 Understand AWS Cloud security, governance, and compliance concepts",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-046",
+      "type": "dropdown-select",
+      "topicId": "security-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each sentence by selecting the correct option.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "AWS is responsible for security ___ the cloud.",
+          "options": [
+            "of",
+            "in"
+          ],
+          "correctAnswer": "of"
+        },
+        {
+          "id": "d2",
+          "prompt": "Customers are responsible for security ___ the cloud.",
+          "options": [
+            "of",
+            "in"
+          ],
+          "correctAnswer": "in"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS secures the cloud infrastructure (of); customers secure what they put in it (in).",
+        "incorrect": "The two phrases are not interchangeable.",
+        "examTip": "OF = AWS; IN = customer.",
+        "relatedTopics": [
+          "Shared responsibility model"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.1 Understand the AWS shared responsibility model",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-047",
+      "type": "dropdown-select",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company must prove who changed resources and whether resources meet configuration standards.",
+      "questionText": "Select the correct service for each need.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To record API calls for auditing, use ___.",
+          "options": [
+            "AWS CloudTrail",
+            "Amazon CloudWatch",
+            "AWS Config",
+            "AWS Trusted Advisor"
+          ],
+          "correctAnswer": "AWS CloudTrail"
+        },
+        {
+          "id": "d2",
+          "prompt": "To check whether resources comply with configuration rules, use ___.",
+          "options": [
+            "AWS CloudTrail",
+            "Amazon GuardDuty",
+            "AWS Config",
+            "AWS Artifact"
+          ],
+          "correctAnswer": "AWS Config"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "CloudTrail records API activity and AWS Config evaluates resource configurations.",
+        "incorrect": "The other services have different purposes.",
+        "examTip": "CloudTrail = API activity; Config = configuration compliance.",
+        "relatedTopics": [
+          "CloudTrail",
+          "AWS Config"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.2 Understand AWS Cloud security, governance, and compliance concepts",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-048",
+      "type": "dropdown-select",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct service for each description.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Managed threat detection using machine learning.",
+          "options": [
+            "Amazon GuardDuty",
+            "Amazon Inspector",
+            "AWS WAF",
+            "AWS Shield"
+          ],
+          "correctAnswer": "Amazon GuardDuty"
+        },
+        {
+          "id": "d2",
+          "prompt": "Automated vulnerability scanning of EC2 instances and container images.",
+          "options": [
+            "Amazon GuardDuty",
+            "Amazon Inspector",
+            "Amazon Macie",
+            "AWS KMS"
+          ],
+          "correctAnswer": "Amazon Inspector"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "GuardDuty detects threats; Inspector scans workloads for vulnerabilities.",
+        "incorrect": "Macie finds sensitive data and KMS manages keys.",
+        "examTip": "Threats = GuardDuty; vulnerabilities = Inspector.",
+        "relatedTopics": [
+          "GuardDuty",
+          "Inspector"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.4 Identify components and resources for security",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-049",
+      "type": "dropdown-select",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A team needs permissions managed efficiently for people and for an application running on Amazon EC2.",
+      "questionText": "Complete each sentence with the correct IAM identity.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "To grant the same permissions to many users with similar job functions, attach policies to an IAM ___.",
+          "options": [
+            "role",
+            "group",
+            "root user"
+          ],
+          "correctAnswer": "group"
+        },
+        {
+          "id": "d2",
+          "prompt": "To give an application on Amazon EC2 access to Amazon S3 without hardcoded keys, assign an IAM ___.",
+          "options": [
+            "user",
+            "group",
+            "role"
+          ],
+          "correctAnswer": "role"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Groups simplify permissions for sets of users, and roles provide temporary credentials to AWS services.",
+        "incorrect": "Users and root credentials are not appropriate for these cases.",
+        "examTip": "Group = many users; role = AWS services or temporary access.",
+        "relatedTopics": [
+          "IAM groups",
+          "IAM roles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.3 Identify AWS access management capabilities",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-050",
+      "type": "ordering",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "An application on Amazon EC2 needs to read objects from Amazon S3 securely.",
+      "questionText": "Place the steps in the correct order.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o2",
+          "text": "Attach the role to the Amazon EC2 instance",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "The application retrieves temporary credentials automatically and accesses Amazon S3",
+          "correctPosition": 3
+        },
+        {
+          "id": "o1",
+          "text": "Create an IAM role with a policy that allows access to Amazon S3",
+          "correctPosition": 1
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Create the role, attach it to the instance, and the application then receives temporary credentials automatically.",
+        "incorrect": "The role must exist before it can be attached and used.",
+        "examTip": "Roles avoid long-term access keys.",
+        "relatedTopics": [
+          "IAM roles",
+          "Instance profiles"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.3 Identify AWS access management capabilities",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-051",
+      "type": "ordering",
+      "topicId": "security-compliance",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Place the steps to secure a new AWS account in the recommended order.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o2",
+          "text": "Enable MFA on the root user",
+          "correctPosition": 2
+        },
+        {
+          "id": "o3",
+          "text": "Create an IAM user with administrator permissions",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Use the IAM user for daily tasks",
+          "correctPosition": 4
+        },
+        {
+          "id": "o1",
+          "text": "Sign in as the root user",
+          "correctPosition": 1
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Secure the root user with MFA first, then create an IAM admin user and use it for everyday work.",
+        "incorrect": "Daily tasks should never use the root user.",
+        "examTip": "Protect root, then delegate.",
+        "relatedTopics": [
+          "IAM best practices",
+          "MFA"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.3 Identify AWS access management capabilities",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-052",
+      "type": "drag-drop",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each item to the party responsible under the shared responsibility model.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "AWS responsibility (security of the cloud)",
+          "acceptsItemIds": [
+            "item1",
+            "item2",
+            "item3"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Customer responsibility (security in the cloud)",
+          "acceptsItemIds": [
+            "item4",
+            "item5",
+            "item6"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item2",
+          "text": "Hardware and global network infrastructure"
+        },
+        {
+          "id": "item4",
+          "text": "Guest OS patching on Amazon EC2"
+        },
+        {
+          "id": "item3",
+          "text": "Virtualization layer (hypervisor)"
+        },
+        {
+          "id": "item1",
+          "text": "Physical security of data centers"
+        },
+        {
+          "id": "item6",
+          "text": "Security group rules"
+        },
+        {
+          "id": "item5",
+          "text": "IAM user permissions"
+        }
+      ],
+      "explanation": {
+        "correct": "AWS secures the infrastructure; customers secure their configurations, data and access.",
+        "incorrect": "Configuration items always belong to the customer.",
+        "examTip": "Infrastructure = AWS; configuration = customer.",
+        "relatedTopics": [
+          "Shared responsibility model"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.1 Understand the AWS shared responsibility model",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-053",
+      "type": "drag-drop",
+      "topicId": "security-compliance",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each service to the correct category.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Threat detection and protection",
+          "acceptsItemIds": [
+            "item1",
+            "item2",
+            "item3"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Audit and compliance",
+          "acceptsItemIds": [
+            "item4",
+            "item5",
+            "item6"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item3",
+          "text": "AWS WAF"
+        },
+        {
+          "id": "item2",
+          "text": "AWS Shield"
+        },
+        {
+          "id": "item1",
+          "text": "Amazon GuardDuty"
+        },
+        {
+          "id": "item4",
+          "text": "AWS CloudTrail"
+        },
+        {
+          "id": "item5",
+          "text": "AWS Artifact"
+        },
+        {
+          "id": "item6",
+          "text": "AWS Config"
+        }
+      ],
+      "explanation": {
+        "correct": "GuardDuty, Shield and WAF protect against threats; CloudTrail, Artifact and Config support auditing and compliance.",
+        "incorrect": "Services mapped to the wrong category confuse detection with audit.",
+        "examTip": "Group services by purpose.",
+        "relatedTopics": [
+          "Security services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.4 Identify components and resources for security",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-054",
+      "type": "drag-drop",
+      "topicId": "security-compliance",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each task for Amazon RDS to the party responsible.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "AWS responsibility",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Customer responsibility",
+          "acceptsItemIds": [
+            "item3",
+            "item4",
+            "item5"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item2",
+          "text": "Replacing failed physical hardware"
+        },
+        {
+          "id": "item4",
+          "text": "Managing database user accounts and data"
+        },
+        {
+          "id": "item1",
+          "text": "Patching the underlying host operating system"
+        },
+        {
+          "id": "item3",
+          "text": "Configuring security groups that control database access"
+        },
+        {
+          "id": "item5",
+          "text": "Choosing whether to enable encryption at rest"
+        }
+      ],
+      "explanation": {
+        "correct": "With a managed service AWS runs the infrastructure and host OS, while customers control access, data and configuration choices.",
+        "incorrect": "Access control and data decisions are not delegated to AWS.",
+        "examTip": "Managed services shift infrastructure duties but not access or data.",
+        "relatedTopics": [
+          "Shared responsibility model",
+          "Amazon RDS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 2: Security and Compliance - Task 2.1 Understand the AWS shared responsibility model",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-055",
+      "type": "single-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which AWS service provides resizable virtual servers in the cloud?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon EC2",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Amazon S3",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "AWS Lambda",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Amazon RDS",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Amazon EC2 provides resizable virtual machines.",
+        "incorrect": "S3 is object storage, Lambda is serverless compute and RDS is a managed relational database.",
+        "examTip": "EC2 = virtual servers.",
+        "relatedTopics": [
+          "Amazon EC2"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.3 Identify AWS compute services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-056",
+      "type": "single-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which AWS service provides scalable object storage for any amount of data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon EBS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Amazon S3",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Amazon EFS",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS Storage Gateway",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Amazon S3 is object storage built to store and retrieve any amount of data.",
+        "incorrect": "EBS is block storage, EFS is a file system and Storage Gateway is hybrid storage.",
+        "examTip": "Objects = S3.",
+        "relatedTopics": [
+          "Amazon S3"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.6 Identify AWS storage services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-057",
+      "type": "single-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which AWS service lets you run code without provisioning or managing servers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon EC2",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AWS Elastic Beanstalk",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Amazon Lightsail",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS Lambda",
+          "isCorrect": true
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS Lambda runs code in response to events without server management.",
+        "incorrect": "EC2 requires server management and Beanstalk and Lightsail still use underlying servers you can configure.",
+        "examTip": "Serverless compute = Lambda.",
+        "relatedTopics": [
+          "AWS Lambda",
+          "Serverless"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.3 Identify AWS compute services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-058",
+      "type": "single-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which AWS service is a managed relational database service?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon DynamoDB",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Amazon RDS",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Amazon ElastiCache",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Amazon S3",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Amazon RDS is a managed service for relational databases such as MySQL and PostgreSQL.",
+        "incorrect": "DynamoDB is NoSQL, ElastiCache is in-memory caching and S3 is object storage.",
+        "examTip": "Relational = RDS or Aurora.",
+        "relatedTopics": [
+          "Amazon RDS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.4 Identify AWS database services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-059",
+      "type": "single-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which AWS service provides a highly available and scalable DNS web service?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon Route 53",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Amazon CloudFront",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "AWS Direct Connect",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Elastic Load Balancing",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Amazon Route 53 is AWS's DNS service.",
+        "incorrect": "CloudFront is a CDN, Direct Connect is a dedicated link and Elastic Load Balancing distributes traffic.",
+        "examTip": "DNS = Route 53.",
+        "relatedTopics": [
+          "Amazon Route 53"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.5 Identify AWS network services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-060",
+      "type": "single-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which AWS service is a content delivery network (CDN) that delivers content with low latency?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Global Accelerator",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Amazon CloudFront",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Amazon Route 53",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS Direct Connect",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Amazon CloudFront caches content at edge locations close to users.",
+        "incorrect": "Global Accelerator improves routing, Route 53 handles DNS and Direct Connect is a private link.",
+        "examTip": "CDN = CloudFront.",
+        "relatedTopics": [
+          "Amazon CloudFront",
+          "Edge locations"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.5 Identify AWS network services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-061",
+      "type": "single-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company needs a fully managed NoSQL database with single-digit millisecond latency at any scale.",
+      "questionText": "Which AWS service should the company use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon RDS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Amazon DynamoDB",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Amazon Redshift",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Amazon Aurora",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "DynamoDB is a fully managed NoSQL database with single-digit millisecond performance at any scale.",
+        "incorrect": "RDS and Aurora are relational and Redshift is a data warehouse.",
+        "examTip": "NoSQL key-value = DynamoDB.",
+        "relatedTopics": [
+          "Amazon DynamoDB"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.4 Identify AWS database services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-062",
+      "type": "single-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which AWS service provides an isolated virtual network in which you can launch AWS resources?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon VPC",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "AWS Direct Connect",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Amazon Route 53",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS Transit Gateway",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Amazon VPC lets you define a logically isolated virtual network.",
+        "incorrect": "The other services connect or route networks but do not provide the isolated network itself.",
+        "examTip": "Virtual network = VPC.",
+        "relatedTopics": [
+          "Amazon VPC"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.5 Identify AWS network services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-063",
+      "type": "single-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A web application runs on several Amazon EC2 instances in multiple Availability Zones and must distribute incoming traffic across them.",
+      "questionText": "Which AWS service should the company use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elastic Load Balancing",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Amazon CloudFront",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Amazon Route 53",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS Direct Connect",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Elastic Load Balancing distributes incoming traffic across targets in multiple Availability Zones.",
+        "incorrect": "CloudFront caches content, Route 53 resolves DNS and Direct Connect is a private link.",
+        "examTip": "Distribute traffic across instances = load balancer.",
+        "relatedTopics": [
+          "Elastic Load Balancing",
+          "High availability"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.5 Identify AWS network services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-064",
+      "type": "single-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which AWS service lets you provision infrastructure using templates (infrastructure as code)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS CloudTrail",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AWS CloudFormation",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Amazon Inspector",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS Config",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "CloudFormation provisions and manages resources from JSON or YAML templates.",
+        "incorrect": "The others audit, scan or track configuration.",
+        "examTip": "Infrastructure as code = CloudFormation.",
+        "relatedTopics": [
+          "AWS CloudFormation"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.1 Define methods of deploying and operating in the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-065",
+      "type": "single-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which storage service provides a shared file system that multiple Linux Amazon EC2 instances can access at the same time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon EBS",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Amazon S3 Glacier",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Amazon EFS",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "EC2 instance store",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Amazon EFS is a managed, shared network file system for Linux workloads.",
+        "incorrect": "EBS volumes attach to a single instance, Glacier is archival and instance store is local temporary storage.",
+        "examTip": "Shared file system for many instances = EFS.",
+        "relatedTopics": [
+          "Amazon EFS",
+          "Amazon EBS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.6 Identify AWS storage services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-066",
+      "type": "single-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A team runs containerized applications and does not want to provision or manage servers or clusters.",
+      "questionText": "Which AWS service should the team use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon EC2 with Auto Scaling",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AWS Fargate",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "AWS Lambda layers",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Amazon Lightsail",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS Fargate is serverless compute for containers so you do not manage servers.",
+        "incorrect": "EC2 requires server management, Lambda layers are not a container platform and Lightsail targets simple virtual servers.",
+        "examTip": "Containers without servers = Fargate.",
+        "relatedTopics": [
+          "AWS Fargate",
+          "Amazon ECS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.3 Identify AWS compute services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-067",
+      "type": "multiple-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO are AWS compute services? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon EC2",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Amazon S3",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "AWS Lambda",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Amazon RDS",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "EC2 and Lambda are compute services.",
+        "incorrect": "S3 is storage and RDS is a database service.",
+        "examTip": "Know each service's category.",
+        "relatedTopics": [
+          "Compute services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.3 Identify AWS compute services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-068",
+      "type": "multiple-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO are AWS storage services? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon S3",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Amazon VPC",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Amazon EBS",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Amazon CloudFront",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "S3 and EBS are storage services.",
+        "incorrect": "VPC and CloudFront are networking services.",
+        "examTip": "Object = S3; block = EBS.",
+        "relatedTopics": [
+          "Storage services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.6 Identify AWS storage services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-069",
+      "type": "multiple-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO are benefits of deploying an application across multiple Availability Zones? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Improved fault tolerance and high availability",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Automatic encryption of all data",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Resilience to the failure of a single data center",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Lower cost per instance",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Multiple AZs improve availability and protect against data center failure.",
+        "incorrect": "They do not automatically encrypt data or lower per-instance cost.",
+        "examTip": "Multi-AZ = high availability.",
+        "relatedTopics": [
+          "Availability Zones"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.2 Define the AWS global infrastructure",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-070",
+      "type": "multiple-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO are AWS artificial intelligence and machine learning services? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon Rekognition",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Amazon Route 53",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Amazon Comprehend",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "AWS Direct Connect",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Rekognition analyzes images and video and Comprehend performs natural language processing.",
+        "incorrect": "Route 53 and Direct Connect are networking services.",
+        "examTip": "Rekognition = images; Comprehend = text.",
+        "relatedTopics": [
+          "AI/ML services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.7 Identify AWS AI/ML services and analytics services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-071",
+      "type": "multiple-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which TWO methods can be used to interact with AWS services? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Management Console",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "AWS Snowball",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "AWS Command Line Interface (AWS CLI)",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "AWS Organizations",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "The Management Console and CLI (and SDKs) are ways to access AWS services.",
+        "incorrect": "Snowball transfers data and Organizations manages accounts.",
+        "examTip": "Console, CLI, SDKs.",
+        "relatedTopics": [
+          "AWS CLI",
+          "Management Console"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.1 Define methods of deploying and operating in the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-072",
+      "type": "multiple-choice",
+      "topicId": "cloud-technology",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO services help build decoupled applications? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon SQS",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "Amazon EBS",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Amazon SNS",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "AWS Snowcone",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "SQS (queues) and SNS (notifications) decouple application components.",
+        "incorrect": "EBS is block storage and Snowcone is an edge data transfer device.",
+        "examTip": "Messaging services decouple components.",
+        "relatedTopics": [
+          "Amazon SQS",
+          "Amazon SNS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.8 Identify services from other in-scope AWS service categories",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-073",
+      "type": "yes-no-statements",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Amazon S3 is an object storage service.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "An Availability Zone is composed of one or more data centers.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Edge locations are used to host Amazon EC2 instances.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "S3 is object storage and AZs contain one or more data centers; edge locations cache content for CloudFront.",
+        "incorrect": "EC2 instances run in Regions and AZs.",
+        "examTip": "Edge locations = caching.",
+        "relatedTopics": [
+          "Global infrastructure"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.2 Define the AWS global infrastructure",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-074",
+      "type": "yes-no-statements",
+      "topicId": "cloud-technology",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "AWS Lambda requires you to provision servers.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Amazon S3 Glacier storage classes are designed for archival data.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Amazon EBS volumes are attached to Amazon EC2 instances.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Lambda is serverless, Glacier classes are for archives and EBS provides block storage attached to EC2.",
+        "incorrect": "Lambda needs no server provisioning.",
+        "examTip": "Serverless = no servers to manage.",
+        "relatedTopics": [
+          "AWS Lambda",
+          "Amazon EBS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.3 Identify AWS compute services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-075",
+      "type": "yes-no-statements",
+      "topicId": "cloud-technology",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Each AWS Region has multiple isolated Availability Zones.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Data stored in one Region is automatically replicated to other Regions.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Compliance, latency, pricing and service availability can influence the choice of Region.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Regions contain multiple AZs and Region selection depends on several factors; data does not leave a Region unless you configure it.",
+        "incorrect": "Cross-Region replication is optional.",
+        "examTip": "Data stays in the Region you choose.",
+        "relatedTopics": [
+          "Regions",
+          "Availability Zones"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.2 Define the AWS global infrastructure",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-076",
+      "type": "yes-no-statements",
+      "topicId": "cloud-technology",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "AWS Direct Connect uses the public internet.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s2",
+          "text": "Amazon VPC lets you define IP address ranges and subnets.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "A security group acts as a stateful firewall at the instance level.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Direct Connect is a private dedicated connection, and VPC and security groups provide network control.",
+        "incorrect": "Direct Connect bypasses the public internet.",
+        "examTip": "Direct Connect = private link.",
+        "relatedTopics": [
+          "AWS Direct Connect",
+          "Amazon VPC"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.5 Identify AWS network services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-077",
+      "type": "yes-no-statements",
+      "topicId": "cloud-technology",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Amazon Aurora is compatible with MySQL and PostgreSQL.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Amazon DynamoDB is a relational database.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "Amazon ElastiCache is an in-memory caching service.",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Aurora supports MySQL and PostgreSQL compatibility and ElastiCache provides in-memory caching; DynamoDB is NoSQL.",
+        "incorrect": "DynamoDB is not relational.",
+        "examTip": "Match each database to its type.",
+        "relatedTopics": [
+          "Amazon Aurora",
+          "Amazon DynamoDB",
+          "Amazon ElastiCache"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.4 Identify AWS database services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-078",
+      "type": "yes-no-statements",
+      "topicId": "cloud-technology",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "AWS Elastic Beanstalk automatically handles capacity provisioning and load balancing for deployed applications.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "AWS Outposts runs AWS infrastructure in a customer's own data center.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "AWS CloudFormation is used to monitor resource utilization.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Beanstalk handles deployment details and Outposts brings AWS infrastructure on premises; monitoring is done by CloudWatch.",
+        "incorrect": "CloudFormation provisions resources and does not monitor them.",
+        "examTip": "CloudFormation = provisioning.",
+        "relatedTopics": [
+          "Elastic Beanstalk",
+          "AWS Outposts"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.8 Identify services from other in-scope AWS service categories",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-079",
+      "type": "dropdown-select",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each sentence by selecting the correct option.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Amazon S3 is an ___ storage service.",
+          "options": [
+            "object",
+            "block",
+            "file"
+          ],
+          "correctAnswer": "object"
+        },
+        {
+          "id": "d2",
+          "prompt": "Amazon EBS provides ___ storage for Amazon EC2.",
+          "options": [
+            "object",
+            "block",
+            "archive"
+          ],
+          "correctAnswer": "block"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "S3 stores objects and EBS provides block volumes for EC2.",
+        "incorrect": "The other options do not describe these services.",
+        "examTip": "Object = S3; block = EBS; file = EFS.",
+        "relatedTopics": [
+          "Amazon S3",
+          "Amazon EBS"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.6 Identify AWS storage services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-080",
+      "type": "dropdown-select",
+      "topicId": "cloud-technology",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the correct term for each description.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A group of one or more discrete data centers with redundant power and networking.",
+          "options": [
+            "Region",
+            "Availability Zone",
+            "Edge location"
+          ],
+          "correctAnswer": "Availability Zone"
+        },
+        {
+          "id": "d2",
+          "prompt": "A site used by Amazon CloudFront to cache content close to users.",
+          "options": [
+            "Availability Zone",
+            "Region",
+            "Edge location"
+          ],
+          "correctAnswer": "Edge location"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AZs are groups of data centers within a Region; edge locations cache content near users.",
+        "incorrect": "Regions contain multiple AZs.",
+        "examTip": "Region > AZ > data center; edge locations are separate.",
+        "relatedTopics": [
+          "Global infrastructure"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.2 Define the AWS global infrastructure",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-081",
+      "type": "dropdown-select",
+      "topicId": "cloud-technology",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company has limited bandwidth and must move a petabyte of data to AWS, and also wants a dedicated private link for ongoing traffic.",
+      "questionText": "Select the correct AWS service for each need.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Transfer a petabyte of data offline to AWS.",
+          "options": [
+            "AWS Snowball",
+            "AWS Direct Connect",
+            "AWS Site-to-Site VPN"
+          ],
+          "correctAnswer": "AWS Snowball"
+        },
+        {
+          "id": "d2",
+          "prompt": "Establish a dedicated private connection from the data center to AWS.",
+          "options": [
+            "AWS Snowball",
+            "AWS Direct Connect",
+            "Amazon CloudFront"
+          ],
+          "correctAnswer": "AWS Direct Connect"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Snow Family devices move large data offline and Direct Connect provides a dedicated private network connection.",
+        "incorrect": "VPN and CloudFront do not meet these needs.",
+        "examTip": "Offline bulk transfer = Snow Family.",
+        "relatedTopics": [
+          "AWS Snow Family",
+          "AWS Direct Connect"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.5 Identify AWS network services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-082",
+      "type": "dropdown-select",
+      "topicId": "cloud-technology",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Select the correct AI/ML service for each description.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Convert text into lifelike speech.",
+          "options": [
+            "Amazon Polly",
+            "Amazon Transcribe",
+            "Amazon Lex",
+            "Amazon Rekognition"
+          ],
+          "correctAnswer": "Amazon Polly"
+        },
+        {
+          "id": "d2",
+          "prompt": "Analyze images and videos.",
+          "options": [
+            "Amazon Comprehend",
+            "Amazon Polly",
+            "Amazon Rekognition",
+            "Amazon SageMaker"
+          ],
+          "correctAnswer": "Amazon Rekognition"
+        },
+        {
+          "id": "d3",
+          "prompt": "Build, train and deploy machine learning models.",
+          "options": [
+            "Amazon SageMaker",
+            "Amazon Rekognition",
+            "Amazon Lex",
+            "Amazon Polly"
+          ],
+          "correctAnswer": "Amazon SageMaker"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Polly = text to speech, Rekognition = image/video analysis, SageMaker = build, train and deploy ML models.",
+        "incorrect": "The other services address different tasks.",
+        "examTip": "Learn one-line purposes for AI/ML services.",
+        "relatedTopics": [
+          "Amazon Polly",
+          "Amazon Rekognition",
+          "Amazon SageMaker"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.7 Identify AWS AI/ML services and analytics services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-083",
+      "type": "dropdown-select",
+      "topicId": "cloud-technology",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Select the correct deployment tool for each description.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "Provision infrastructure from templates.",
+          "options": [
+            "AWS CloudFormation",
+            "AWS Elastic Beanstalk",
+            "AWS CLI",
+            "AWS CloudTrail"
+          ],
+          "correctAnswer": "AWS CloudFormation"
+        },
+        {
+          "id": "d2",
+          "prompt": "Upload application code and let AWS handle capacity provisioning and load balancing.",
+          "options": [
+            "AWS CloudFormation",
+            "AWS Elastic Beanstalk",
+            "AWS CLI",
+            "AWS CloudTrail"
+          ],
+          "correctAnswer": "AWS Elastic Beanstalk"
+        },
+        {
+          "id": "d3",
+          "prompt": "Manage AWS services from a command line.",
+          "options": [
+            "AWS CloudFormation",
+            "AWS Elastic Beanstalk",
+            "AWS CLI",
+            "AWS CloudTrail"
+          ],
+          "correctAnswer": "AWS CLI"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "CloudFormation uses templates, Elastic Beanstalk simplifies app deployment and the CLI provides command-line access.",
+        "incorrect": "CloudTrail records API activity and does not deploy anything.",
+        "examTip": "Know the methods of deploying on AWS.",
+        "relatedTopics": [
+          "CloudFormation",
+          "Elastic Beanstalk",
+          "AWS CLI"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.1 Define methods of deploying and operating in the AWS Cloud",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-084",
+      "type": "ordering",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Place the AWS global infrastructure components in order from largest to smallest scope.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "AWS Region",
+          "correctPosition": 1
+        },
+        {
+          "id": "o3",
+          "text": "Data center",
+          "correctPosition": 3
+        },
+        {
+          "id": "o2",
+          "text": "Availability Zone",
+          "correctPosition": 2
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "A Region contains multiple Availability Zones and each AZ contains one or more data centers.",
+        "incorrect": "The hierarchy runs from Region to AZ to data center.",
+        "examTip": "Region > AZ > data center.",
+        "relatedTopics": [
+          "Global infrastructure"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.2 Define the AWS global infrastructure",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-085",
+      "type": "ordering",
+      "topicId": "cloud-technology",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Place the steps to host a static website on Amazon S3 in the correct order.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o3",
+          "text": "Enable static website hosting",
+          "correctPosition": 3
+        },
+        {
+          "id": "o4",
+          "text": "Add a bucket policy that allows public read access",
+          "correctPosition": 4
+        },
+        {
+          "id": "o1",
+          "text": "Create an S3 bucket",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Upload the website files",
+          "correctPosition": 2
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Create the bucket, upload content, enable website hosting and permit public reads.",
+        "incorrect": "The bucket must exist before objects can be uploaded.",
+        "examTip": "Bucket first, then content, then settings.",
+        "relatedTopics": [
+          "Amazon S3 static website hosting"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.6 Identify AWS storage services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-086",
+      "type": "ordering",
+      "topicId": "cloud-technology",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Place the steps of a request served through Amazon CloudFront in the correct order.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o3",
+          "text": "CloudFront checks its cache",
+          "correctPosition": 3
+        },
+        {
+          "id": "o2",
+          "text": "DNS routes the request to the nearest CloudFront edge location",
+          "correctPosition": 2
+        },
+        {
+          "id": "o4",
+          "text": "On a cache miss, CloudFront retrieves content from the origin and caches it",
+          "correctPosition": 4
+        },
+        {
+          "id": "o1",
+          "text": "A user requests content",
+          "correctPosition": 1
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "The request is routed to an edge location, the cache is checked, and on a miss the origin is queried and the content is cached.",
+        "incorrect": "The origin is only contacted if the content is not cached.",
+        "examTip": "Cache hit = served from edge; miss = origin fetch.",
+        "relatedTopics": [
+          "Amazon CloudFront",
+          "Amazon Route 53"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.5 Identify AWS network services",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-087",
+      "type": "drag-drop",
+      "topicId": "cloud-technology",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Drag each service to the correct category.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Compute",
+          "acceptsItemIds": [
+            "item1",
+            "item2"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Storage",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Database",
+          "acceptsItemIds": [
+            "item5",
+            "item6"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item6",
+          "text": "Amazon DynamoDB"
+        },
+        {
+          "id": "item2",
+          "text": "AWS Lambda"
+        },
+        {
+          "id": "item4",
+          "text": "Amazon EBS"
+        },
+        {
+          "id": "item5",
+          "text": "Amazon RDS"
+        },
+        {
+          "id": "item3",
+          "text": "Amazon S3"
+        },
+        {
+          "id": "item1",
+          "text": "Amazon EC2"
+        }
+      ],
+      "explanation": {
+        "correct": "EC2 and Lambda are compute; S3 and EBS are storage; RDS and DynamoDB are databases.",
+        "incorrect": "Each service belongs to a single category.",
+        "examTip": "Service categories are tested constantly.",
+        "relatedTopics": [
+          "Core services"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.8 Identify services from other in-scope AWS service categories",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-088",
+      "type": "drag-drop",
+      "topicId": "cloud-technology",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each service to the correct category.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Networking and content delivery",
+          "acceptsItemIds": [
+            "item1",
+            "item2",
+            "item3"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Management and governance",
+          "acceptsItemIds": [
+            "item4",
+            "item5",
+            "item6"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item3",
+          "text": "Amazon CloudFront"
+        },
+        {
+          "id": "item5",
+          "text": "AWS CloudTrail"
+        },
+        {
+          "id": "item2",
+          "text": "Amazon Route 53"
+        },
+        {
+          "id": "item6",
+          "text": "AWS CloudFormation"
+        },
+        {
+          "id": "item4",
+          "text": "Amazon CloudWatch"
+        },
+        {
+          "id": "item1",
+          "text": "Amazon VPC"
+        }
+      ],
+      "explanation": {
+        "correct": "VPC, Route 53 and CloudFront are networking services; CloudWatch, CloudTrail and CloudFormation are management and governance services.",
+        "incorrect": "The categories are not interchangeable.",
+        "examTip": "Group services by function.",
+        "relatedTopics": [
+          "Service categories"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 3: Cloud Technology and Services - Task 3.8 Identify services from other in-scope AWS service categories",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-089",
+      "type": "single-choice",
+      "topicId": "billing-pricing",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Amazon EC2 pricing model offers the largest discounts for fault-tolerant, interruptible workloads?",
+      "options": [
+        {
+          "id": "A",
+          "text": "On-Demand Instances",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Spot Instances",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Dedicated Hosts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Reserved Instances",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Spot Instances use spare capacity at up to roughly 90% off but can be interrupted.",
+        "incorrect": "On-Demand, Dedicated Hosts and Reserved Instances do not offer interruptible deep discounts.",
+        "examTip": "Interruptible = Spot.",
+        "relatedTopics": [
+          "EC2 pricing models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Billing, Pricing, and Support - Task 4.1 Compare AWS pricing models",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-090",
+      "type": "single-choice",
+      "topicId": "billing-pricing",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which AWS Support plan is the lowest-cost plan that includes the full set of AWS Trusted Advisor checks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Basic",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Developer",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "Business",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "All plans include them",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "The Business plan is the lowest-cost plan with the full Trusted Advisor check set.",
+        "incorrect": "Basic and Developer only include the core checks.",
+        "examTip": "Full Trusted Advisor starts at Business.",
+        "relatedTopics": [
+          "AWS Support plans",
+          "Trusted Advisor"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Billing, Pricing, and Support - Task 4.3 Identify AWS technical resources and AWS Support options",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-091",
+      "type": "single-choice",
+      "topicId": "billing-pricing",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which tool lets you estimate the cost of a planned architecture before you deploy it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Cost Explorer",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AWS Budgets",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "AWS Pricing Calculator",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "AWS Trusted Advisor",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "The AWS Pricing Calculator estimates costs for planned AWS usage.",
+        "incorrect": "Cost Explorer and Budgets work with existing usage and Trusted Advisor gives recommendations.",
+        "examTip": "Estimate future cost = Pricing Calculator.",
+        "relatedTopics": [
+          "AWS Pricing Calculator"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Billing, Pricing, and Support - Task 4.2 Understand resources for billing, budget, and cost management",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-092",
+      "type": "single-choice",
+      "topicId": "billing-pricing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company wants to set a monthly cost threshold and be notified when forecasted spend is expected to exceed it.",
+      "questionText": "Which AWS service should the company use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Cost Explorer",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "AWS Budgets",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "AWS Pricing Calculator",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS Cost and Usage Report",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "AWS Budgets lets you set custom cost and usage thresholds and receive alerts when actual or forecasted spend exceeds them.",
+        "incorrect": "Cost Explorer analyzes spend, the Calculator estimates and the report provides detail but none set threshold alerts.",
+        "examTip": "Alerts on thresholds = AWS Budgets.",
+        "relatedTopics": [
+          "AWS Budgets"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Billing, Pricing, and Support - Task 4.2 Understand resources for billing, budget, and cost management",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-093",
+      "type": "single-choice",
+      "topicId": "billing-pricing",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A company has several AWS accounts and wants a single bill and combined usage to qualify for volume pricing discounts.",
+      "questionText": "Which AWS Organizations feature should the company use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Service control policies",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Consolidated billing",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Tag policies",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "AWS Control Tower",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Consolidated billing gives a single bill and combines usage across accounts to qualify for volume discounts.",
+        "incorrect": "SCPs, tag policies and Control Tower manage permissions, tagging and governance rather than billing.",
+        "examTip": "One bill and combined discounts = consolidated billing.",
+        "relatedTopics": [
+          "AWS Organizations",
+          "Consolidated billing"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Billing, Pricing, and Support - Task 4.2 Understand resources for billing, budget, and cost management",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-094",
+      "type": "multiple-choice",
+      "topicId": "billing-pricing",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which TWO EC2 pricing options provide discounts in exchange for a usage commitment? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "On-Demand Instances",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "Reserved Instances",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Savings Plans",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "Spot Instances",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Reserved Instances and Savings Plans trade a 1- or 3-year commitment for discounts.",
+        "incorrect": "On-Demand has no commitment and Spot depends on spare capacity.",
+        "examTip": "Commitment = RI or Savings Plans.",
+        "relatedTopics": [
+          "Reserved Instances",
+          "Savings Plans"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Billing, Pricing, and Support - Task 4.1 Compare AWS pricing models",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-095",
+      "type": "multiple-choice",
+      "topicId": "billing-pricing",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Which TWO are types of AWS Free Tier offers? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Always free",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "12 months free for new accounts",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "Unlimited free usage for new accounts",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "Free forever for all EC2 instance sizes",
+          "isCorrect": false
+        }
+      ],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "The Free Tier includes always-free offers, 12-month free offers and short-term trials.",
+        "incorrect": "Unlimited and free-forever offers for all sizes do not exist.",
+        "examTip": "Free Tier has limits; watch usage.",
+        "relatedTopics": [
+          "AWS Free Tier"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Billing, Pricing, and Support - Task 4.1 Compare AWS pricing models",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-096",
+      "type": "yes-no-statements",
+      "topicId": "billing-pricing",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "The Basic Support plan is available to all customers at no additional cost.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "The Developer Support plan includes 24/7 phone support.",
+          "isCorrectYes": false
+        },
+        {
+          "id": "s3",
+          "text": "The Enterprise Support plan provides a designated Technical Account Manager (TAM).",
+          "isCorrectYes": true
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Basic is free and Enterprise includes a TAM; Developer offers business-hours email access, not 24/7 phone.",
+        "incorrect": "24/7 phone support starts at Business.",
+        "examTip": "Know what each plan adds.",
+        "relatedTopics": [
+          "AWS Support plans"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Billing, Pricing, and Support - Task 4.3 Identify AWS technical resources and AWS Support options",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-097",
+      "type": "yes-no-statements",
+      "topicId": "billing-pricing",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "For each statement, select Yes or No.",
+      "options": [],
+      "statements": [
+        {
+          "id": "s1",
+          "text": "AWS Cost Explorer lets you visualize and forecast costs and usage.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s2",
+          "text": "Data transfer into AWS from the internet is generally free.",
+          "isCorrectYes": true
+        },
+        {
+          "id": "s3",
+          "text": "Spot Instances are guaranteed to run until you terminate them.",
+          "isCorrectYes": false
+        }
+      ],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Cost Explorer visualizes and forecasts cost, and inbound transfer is generally free; Spot Instances can be reclaimed by AWS.",
+        "incorrect": "Spot capacity can be interrupted.",
+        "examTip": "Spot = cheap but interruptible.",
+        "relatedTopics": [
+          "Cost Explorer",
+          "Spot Instances"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Billing, Pricing, and Support - Task 4.2 Understand resources for billing, budget, and cost management",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-098",
+      "type": "dropdown-select",
+      "topicId": "billing-pricing",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company runs two workloads: a steady production database and a flexible batch analytics job.",
+      "questionText": "Select the most cost-effective pricing model for each workload.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [
+        {
+          "id": "d1",
+          "prompt": "A database that runs steadily 24/7 for three years.",
+          "options": [
+            "On-Demand",
+            "Reserved Instances",
+            "Spot Instances"
+          ],
+          "correctAnswer": "Reserved Instances"
+        },
+        {
+          "id": "d2",
+          "prompt": "A flexible batch job that can tolerate interruptions.",
+          "options": [
+            "On-Demand",
+            "Reserved Instances",
+            "Spot Instances"
+          ],
+          "correctAnswer": "Spot Instances"
+        }
+      ],
+      "orderItems": [],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Steady long-term usage suits Reserved Instances and interruptible batch work suits Spot.",
+        "incorrect": "On-Demand is the most expensive for these profiles.",
+        "examTip": "Match commitment and tolerance to the model.",
+        "relatedTopics": [
+          "EC2 pricing models"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Billing, Pricing, and Support - Task 4.1 Compare AWS pricing models",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-099",
+      "type": "ordering",
+      "topicId": "billing-pricing",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Place the AWS Support plans in order from lowest to highest cost.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [
+        {
+          "id": "o1",
+          "text": "Basic",
+          "correctPosition": 1
+        },
+        {
+          "id": "o2",
+          "text": "Developer",
+          "correctPosition": 2
+        },
+        {
+          "id": "o4",
+          "text": "Enterprise",
+          "correctPosition": 4
+        },
+        {
+          "id": "o3",
+          "text": "Business",
+          "correctPosition": 3
+        }
+      ],
+      "dragCategories": [],
+      "dragItems": [],
+      "explanation": {
+        "correct": "Support plans scale from Basic (free) to Developer, Business and Enterprise.",
+        "incorrect": "Higher tiers add faster response times and more features.",
+        "examTip": "Basic < Developer < Business < Enterprise.",
+        "relatedTopics": [
+          "AWS Support plans"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Billing, Pricing, and Support - Task 4.3 Identify AWS technical resources and AWS Support options",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    },
+    {
+      "id": "awscp-100",
+      "type": "drag-drop",
+      "topicId": "billing-pricing",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each AWS tool to the cost-management activity it supports.",
+      "options": [],
+      "statements": [],
+      "dropdowns": [],
+      "orderItems": [],
+      "dragCategories": [
+        {
+          "id": "cat1",
+          "name": "Plan and estimate",
+          "acceptsItemIds": [
+            "item1"
+          ]
+        },
+        {
+          "id": "cat2",
+          "name": "Monitor and alert",
+          "acceptsItemIds": [
+            "item2"
+          ]
+        },
+        {
+          "id": "cat3",
+          "name": "Analyze past spend",
+          "acceptsItemIds": [
+            "item3",
+            "item4"
+          ]
+        }
+      ],
+      "dragItems": [
+        {
+          "id": "item4",
+          "text": "AWS Cost and Usage Report"
+        },
+        {
+          "id": "item1",
+          "text": "AWS Pricing Calculator"
+        },
+        {
+          "id": "item3",
+          "text": "AWS Cost Explorer"
+        },
+        {
+          "id": "item2",
+          "text": "AWS Budgets"
+        }
+      ],
+      "explanation": {
+        "correct": "The Pricing Calculator estimates, Budgets alerts and Cost Explorer and the Cost and Usage Report analyze past spend.",
+        "incorrect": "The tools address different stages of cost management.",
+        "examTip": "Estimate, monitor, analyze.",
+        "relatedTopics": [
+          "Cost management"
+        ]
+      },
+      "metadata": {
+        "examObjective": "Domain 4: Billing, Pricing, and Support - Task 4.2 Understand resources for billing, budget, and cost management",
+        "references": [
+          "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        ],
+        "lastUpdated": "2024-01-15"
+      }
+    }
+  ]
+}
