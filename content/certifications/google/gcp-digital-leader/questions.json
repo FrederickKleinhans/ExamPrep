@@ -1,0 +1,1995 @@
+{
+  "certificationId": "gcp-digital-leader",
+  "version": "2024-01",
+  "questions": [
+    {
+      "id": "gcdl-001",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary difference between capital expenditure (CapEx) and operational expenditure (OpEx) in cloud computing?",
+      "options": [
+        {"id": "A", "text": "CapEx is pay-as-you-go spending; OpEx requires upfront investment.", "isCorrect": false},
+        {"id": "B", "text": "CapEx requires large upfront investment in hardware; OpEx is ongoing pay-as-you-go spending.", "isCorrect": true},
+        {"id": "C", "text": "CapEx applies only to software; OpEx applies only to hardware.", "isCorrect": false},
+        {"id": "D", "text": "There is no difference; the terms are interchangeable.", "isCorrect": false}
+      ],
+      "explanation": {"correct": "On-premises data centers require large upfront capital investment, while cloud converts costs to operational pay-as-you-go spending.", "incorrect": "OpEx, not CapEx, is the pay-as-you-go model.", "examTip": "Digital transformation pillar: cost efficiency shifts CapEx to OpEx.", "relatedTopics": ["FinOps", "Cloud economics"]},
+      "metadata": {"examObjective": "Explain cloud computing and its value to business transformation", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-002",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which cloud service model provides virtualized compute resources over the internet, where the customer manages the OS and applications?",
+      "options": [
+        {"id": "A", "text": "SaaS", "isCorrect": false},
+        {"id": "B", "text": "PaaS", "isCorrect": false},
+        {"id": "C", "text": "IaaS", "isCorrect": true},
+        {"id": "D", "text": "DaaS", "isCorrect": false}
+      ],
+      "explanation": {"correct": "IaaS provides fundamental compute, storage, and networking resources; customers manage everything above the virtualization layer.", "incorrect": "SaaS delivers complete applications; PaaS delivers a managed platform.", "examTip": "IaaS = maximum control, maximum management responsibility.", "relatedTopics": ["Compute Engine", "Service models"]},
+      "metadata": {"examObjective": "Differentiate IaaS, PaaS, and SaaS", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-003",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "A company wants to use a complete, ready-to-use application such as Gmail or Google Docs delivered over the internet. Which service model is this?",
+      "options": [
+        {"id": "A", "text": "IaaS", "isCorrect": false},
+        {"id": "B", "text": "PaaS", "isCorrect": false},
+        {"id": "C", "text": "SaaS", "isCorrect": true},
+        {"id": "D", "text": "FaaS", "isCorrect": false}
+      ],
+      "explanation": {"correct": "SaaS delivers fully managed applications over the internet; the provider manages everything.", "incorrect": "IaaS and PaaS require customers to build or manage more of the stack.", "examTip": "SaaS = software consumed directly by end users, zero management.", "relatedTopics": ["Service models", "Google Workspace"]},
+      "metadata": {"examObjective": "Differentiate IaaS, PaaS, and SaaS", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-004",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A retail startup wants to deploy its custom code without managing servers, operating systems, or runtime environments, and wants automatic scaling.",
+      "questionText": "Which service model best meets this startup's needs?",
+      "options": [
+        {"id": "A", "text": "IaaS — the team still manages OS patching", "isCorrect": false},
+        {"id": "B", "text": "PaaS — the provider manages the runtime and infrastructure", "isCorrect": true},
+        {"id": "C", "text": "On-premises virtualization", "isCorrect": false},
+        {"id": "D", "text": "Colocation", "isCorrect": false}
+      ],
+      "explanation": {"correct": "PaaS lets developers deploy code while the provider manages servers, OS, and scaling.", "incorrect": "IaaS still requires OS and runtime management.", "examTip": "PaaS maximizes developer velocity — code only.", "relatedTopics": ["App Engine", "Cloud Run", "Service models"]},
+      "metadata": {"examObjective": "Recommend the appropriate service model for a use case", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-005",
+      "type": "multiple-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are commonly cited pillars of digital transformation? (Select two.)",
+      "options": [
+        {"id": "A", "text": "Modernizing infrastructure and applications", "isCorrect": true},
+        {"id": "B", "text": "Eliminating all use of data", "isCorrect": false},
+        {"id": "C", "text": "Empowering teams with data and collaboration", "isCorrect": true},
+        {"id": "D", "text": "Increasing on-premises hardware purchases", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Digital transformation pillars include modernizing infrastructure, empowering teams with data, and reimagining how work gets done.", "incorrect": "Transformation embraces data and reduces reliance on owned hardware.", "examTip": "Remember: modernize, empower with data, reimagine work.", "relatedTopics": ["Digital transformation pillars", "Data-driven culture"]},
+      "metadata": {"examObjective": "Describe the pillars of digital transformation", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-006",
+      "type": "yes-no-statements",
+      "topicId": "digital-transformation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "For each statement about cloud computing, indicate whether it is correct (Yes) or incorrect (No).",
+      "statements": [
+        {"id": "s1", "text": "Cloud computing enables rapid elasticity — resources scale up and down on demand.", "isCorrectYes": true},
+        {"id": "s2", "text": "On-demand self-service means users must file tickets and wait days for resources.", "isCorrectYes": false},
+        {"id": "s3", "text": "Measured service means cloud usage is metered and billed per use.", "isCorrectYes": true}
+      ],
+      "options": [],
+      "explanation": {"correct": "Elasticity, self-service provisioning, and measured (metered) service are core NIST cloud characteristics.", "incorrect": "Self-service means provisioning without human intervention, not waiting for tickets.", "examTip": "NIST: on-demand self-service, elasticity, measured service, resource pooling, broad network access.", "relatedTopics": ["Cloud characteristics", "NIST definition"]},
+      "metadata": {"examObjective": "Explain key characteristics of cloud computing", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-007",
+      "type": "dropdown-select",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Match each characteristic with its correct description.",
+      "dropdowns": [
+        {"id": "d1", "prompt": "Resources are pooled to serve multiple customers:", "options": ["Resource pooling", "Measured service", "Broad network access"], "correctAnswer": "Resource pooling"},
+        {"id": "d2", "prompt": "Usage is monitored, metered, and billed:", "options": ["Resource pooling", "Measured service", "Broad network access"], "correctAnswer": "Measured service"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Resource pooling multi-tenancy enables economies of scale; measured service enables pay-per-use billing.", "incorrect": "Review the five NIST characteristics carefully.", "examTip": "Pooling = multi-tenant; measured = metering/billing.", "relatedTopics": ["Cloud characteristics"]},
+      "metadata": {"examObjective": "Explain key characteristics of cloud computing", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-008",
+      "type": "ordering",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the typical journey of an organization moving to the cloud, from first step to most advanced.",
+      "orderItems": [
+        {"id": "o1", "text": "Lift and shift existing workloads to VMs", "correctPosition": 2},
+        {"id": "o2", "text": "Assess current infrastructure and applications", "correctPosition": 1},
+        {"id": "o3", "text": "Optimize and modernize applications for cloud-native architectures", "correctPosition": 4},
+        {"id": "o4", "text": "Move workloads to managed services where possible", "correctPosition": 3}
+      ],
+      "options": [],
+      "explanation": {"correct": "Assess first, then migrate (lift-and-shift), then adopt managed services, then modernize/optimize.", "incorrect": "Assessment must precede migration; modernization is the final phase.", "examTip": "Assess → Migrate → Manage → Modernize.", "relatedTopics": ["Migration phases", "Cloud adoption"]},
+      "metadata": {"examObjective": "Describe phases of cloud adoption", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-009",
+      "type": "drag-drop",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each responsibility to the model where the CUSTOMER typically manages it.",
+      "dragCategories": [
+        {"id": "cat1", "name": "IaaS customer manages", "acceptsItemIds": ["item1", "item3"]},
+        {"id": "cat2", "name": "SaaS customer manages", "acceptsItemIds": ["item2"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Operating system and patches"},
+        {"id": "item2", "text": "User access and data configuration"},
+        {"id": "item3", "text": "Installed applications and runtimes"}
+      ],
+      "options": [],
+      "explanation": {"correct": "In IaaS the customer manages OS, middleware, and apps; in SaaS only data and user access configuration remain.", "incorrect": "In SaaS, the provider manages everything except data and access settings.", "examTip": "As you go IaaS→PaaS→SaaS, customer responsibility shrinks.", "relatedTopics": ["Shared responsibility", "Service models"]},
+      "metadata": {"examObjective": "Differentiate customer responsibility across service models", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-010",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Google Cloud concept describes running workloads in multiple zones within a region to survive zone failures?",
+      "options": [
+        {"id": "A", "text": "Preemptibility", "isCorrect": false},
+        {"id": "B", "text": "High availability", "isCorrect": true},
+        {"id": "C", "text": "Autoscaling", "isCorrect": false},
+        {"id": "D", "text": "Right-sizing", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Distributing workloads across zones in a region provides high availability against zone-level failures.", "incorrect": "Autoscaling adjusts capacity; it is not itself a failover strategy.", "examTip": "Zone = failure domain; multi-zone = high availability.", "relatedTopics": ["Regions and zones", "High availability"]},
+      "metadata": {"examObjective": "Explain Google Cloud global infrastructure concepts", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-011",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does 'elasticity' mean in cloud computing?",
+      "options": [
+        {"id": "A", "text": "Resources are permanently fixed once provisioned", "isCorrect": false},
+        {"id": "B", "text": "Resources automatically scale to match demand in real time", "isCorrect": true},
+        {"id": "C", "text": "Data is encrypted at rest", "isCorrect": false},
+        {"id": "D", "text": "Workloads run identically on any cloud", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Elasticity is the ability to scale resources up and down automatically as demand changes.", "incorrect": "Elasticity concerns capacity scaling, not encryption or portability.", "examTip": "Elasticity handles spiky demand — pay only for what you use.", "relatedTopics": ["Cloud characteristics", "Autoscaling"]},
+      "metadata": {"examObjective": "Explain key characteristics of cloud computing", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-012",
+      "type": "multiple-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are benefits of cloud computing for a business? (Select three.)",
+      "options": [
+        {"id": "A", "text": "Trade CapEx for OpEx", "isCorrect": true},
+        {"id": "B", "text": "Benefit from massive economies of scale", "isCorrect": true},
+        {"id": "C", "text": "Guaranteed elimination of all security risks", "isCorrect": false},
+        {"id": "D", "text": "Stop guessing capacity", "isCorrect": true}
+      ],
+      "explanation": {"correct": "Cloud benefits include cost model shift, economies of scale, and on-demand capacity.", "incorrect": "No provider can eliminate all security risks; the shared responsibility model still applies.", "examTip": "Cloud reduces but does not remove risk — remember the shared responsibility model.", "relatedTopics": ["Cloud value proposition", "Shared responsibility"]},
+      "metadata": {"examObjective": "Explain the value proposition of cloud computing", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-013",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A global media company needs its video streaming application to run closer to users in North America, Europe, and Asia to minimize latency, while meeting data-residency requirements in each geography.",
+      "questionText": "Which Google Cloud capability most directly addresses both latency and data-residency requirements?",
+      "options": [
+        {"id": "A", "text": "Deploying in multiple regions and serving users from the nearest region", "isCorrect": true},
+        {"id": "B", "text": "Using preemptible VMs for all workloads", "isCorrect": false},
+        {"id": "C", "text": "Storing all data in a single central region with CDN caching", "isCorrect": false},
+        {"id": "D", "text": "Running everything on bare metal in one data center", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Google's global network of regions lets you place workloads and data near users while respecting residency requirements.", "incorrect": "Preemptible VMs reduce cost but do not address latency or residency; a single region violates residency.", "examTip": "Global regions = low latency + data sovereignty.", "relatedTopics": ["Regions and zones", "Global network", "Data residency"]},
+      "metadata": {"examObjective": "Apply Google Cloud global infrastructure to business requirements", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-014",
+      "type": "yes-no-statements",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Indicate whether each statement about digital transformation is correct (Yes) or incorrect (No).",
+      "statements": [
+        {"id": "s1", "text": "Digital transformation is only about moving servers to the cloud.", "isCorrectYes": false},
+        {"id": "s2", "text": "A data-driven culture where decisions are backed by data is a key transformation goal.", "isCorrectYes": true},
+        {"id": "s3", "text": "Cloud technology alone guarantees successful transformation without changing processes or culture.", "isCorrectYes": false}
+      ],
+      "options": [],
+      "explanation": {"correct": "Transformation combines technology with culture, skills, and process change — technology alone is insufficient.", "incorrect": "Migration is one enabler, not the entirety of transformation.", "examTip": "Transformation = people + process + technology.", "relatedTopics": ["Digital transformation pillars"]},
+      "metadata": {"examObjective": "Describe the pillars of digital transformation", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-015",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the unit of deployment in Google Cloud that represents an independent geographic area containing data centers?",
+      "options": [
+        {"id": "A", "text": "Zone", "isCorrect": false},
+        {"id": "B", "text": "Region", "isCorrect": true},
+        {"id": "C", "text": "Edge point of presence", "isCorrect": false},
+        {"id": "D", "text": "Cluster", "isCorrect": false}
+      ],
+      "explanation": {"correct": "A region is an independent geographic area made up of zones (data centers).", "incorrect": "A zone is a single failure domain within a region.", "examTip": "Region = geography; zone = data center/failure domain.", "relatedTopics": ["Regions and zones"]},
+      "metadata": {"examObjective": "Explain Google Cloud global infrastructure concepts", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-016",
+      "type": "dropdown-select",
+      "topicId": "digital-transformation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Select the correct service model for each description.",
+      "dropdowns": [
+        {"id": "d1", "prompt": "Complete applications ready to use by end users:", "options": ["IaaS", "PaaS", "SaaS"], "correctAnswer": "SaaS"},
+        {"id": "d2", "prompt": "Virtual machines, storage, and networks you configure yourself:", "options": ["IaaS", "PaaS", "SaaS"], "correctAnswer": "IaaS"},
+        {"id": "d3", "prompt": "A managed platform where developers deploy code only:", "options": ["IaaS", "PaaS", "SaaS"], "correctAnswer": "PaaS"}
+      ],
+      "options": [],
+      "explanation": {"correct": "SaaS = full apps, IaaS = raw infrastructure, PaaS = managed deployment platform.", "incorrect": "Match control level: most control (IaaS) to least (SaaS).", "examTip": "More provider management = less customer control.", "relatedTopics": ["Service models"]},
+      "metadata": {"examObjective": "Differentiate IaaS, PaaS, and SaaS", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-017",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Google Cloud offering is a serverless, fully managed event-driven compute platform often used for lightweight, on-demand code execution?",
+      "options": [
+        {"id": "A", "text": "Cloud Functions", "isCorrect": true},
+        {"id": "B", "text": "Compute Engine", "isCorrect": false},
+        {"id": "C", "text": "Persistent Disk", "isCorrect": false},
+        {"id": "D", "text": "Cloud VPN", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud Functions runs code in response to events with no servers to manage.", "incorrect": "Compute Engine requires VM management; Persistent Disk is storage.", "examTip": "Functions = single-purpose event-driven code.", "relatedTopics": ["Serverless", "Service models"]},
+      "metadata": {"examObjective": "Identify core Google Cloud compute offerings", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-018",
+      "type": "drag-drop",
+      "topicId": "digital-transformation",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each business goal to the cloud characteristic that enables it.",
+      "dragCategories": [
+        {"id": "cat1", "name": "Handle Black Friday traffic spikes without over-provisioning", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "Launch a test environment in minutes without hardware purchase", "acceptsItemIds": ["item2", "item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Elasticity"},
+        {"id": "item2", "text": "On-demand self-service"},
+        {"id": "item3", "text": "Trade CapEx for OpEx"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Elasticity handles demand spikes; self-service and OpEx enable fast, capital-free provisioning.", "incorrect": "Match each characteristic to the goal it directly enables.", "examTip": "Map characteristics to business outcomes in scenarios.", "relatedTopics": ["Cloud characteristics", "Cloud economics"]},
+      "metadata": {"examObjective": "Map cloud characteristics to business outcomes", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-019",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does TCO stand for in the context of cloud business cases?",
+      "options": [
+        {"id": "A", "text": "Total Cost of Ownership", "isCorrect": true},
+        {"id": "B", "text": "Technical Control Objective", "isCorrect": false},
+        {"id": "C", "text": "Total Compute Output", "isCorrect": false},
+        {"id": "D", "text": "Transferable Cloud Operations", "isCorrect": false}
+      ],
+      "explanation": {"correct": "TCO is Total Cost of Ownership — the full cost of a solution including hardware, power, staffing, and operations.", "incorrect": "TCO measures full lifecycle cost, not a technical control.", "examTip": "Cloud TCO comparisons must include staffing and facility costs.", "relatedTopics": ["Cloud economics", "FinOps"]},
+      "metadata": {"examObjective": "Explain cost considerations of cloud adoption", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-020",
+      "type": "multiple-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A manufacturing firm wants to become more agile. Leadership has approved cloud adoption but teams still wait weeks for infrastructure, decisions rely on gut feel, and developers spend most time patching servers.",
+      "questionText": "Which actions address all three observed problems? (Select three.)",
+      "options": [
+        {"id": "A", "text": "Enable self-service provisioning of cloud resources", "isCorrect": true},
+        {"id": "B", "text": "Adopt managed services so developers focus on code, not patching", "isCorrect": true},
+        {"id": "C", "text": "Centralize all decisions with a single executive to speed them up", "isCorrect": false},
+        {"id": "D", "text": "Build a data platform so decisions are backed by analytics", "isCorrect": true}
+      ],
+      "explanation": {"correct": "Self-service, managed services, and data-driven decisions address speed, developer toil, and decision quality respectively.", "incorrect": "Centralizing decisions contradicts empowerment and agility goals.", "examTip": "Map each business pain to the transformation pillar that fixes it.", "relatedTopics": ["Digital transformation pillars", "Managed services"]},
+      "metadata": {"examObjective": "Apply digital transformation pillars to business scenarios", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-021",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which term describes an architecture where applications are designed as small, independent services that communicate over APIs?",
+      "options": [
+        {"id": "A", "text": "Monolithic architecture", "isCorrect": false},
+        {"id": "B", "text": "Microservices architecture", "isCorrect": true},
+        {"id": "C", "text": "Client-server computing", "isCorrect": false},
+        {"id": "D", "text": "Peer-to-peer networking", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Microservices decompose applications into independently deployable services, enabling agility and scaling.", "incorrect": "Monoliths are single, tightly coupled codebases.", "examTip": "Microservices enable independent teams, deployments, and scaling.", "relatedTopics": ["Application modernization", "Microservices"]},
+      "metadata": {"examObjective": "Describe modern application architecture approaches", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-022",
+      "type": "yes-no-statements",
+      "topicId": "digital-transformation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Indicate whether each statement about Google Cloud regions and zones is correct (Yes) or incorrect (No).",
+      "statements": [
+        {"id": "s1", "text": "A zone is an isolated location within a region.", "isCorrectYes": true},
+        {"id": "s2", "text": "Deploying across multiple zones protects against zone-level failure.", "isCorrectYes": true},
+        {"id": "s3", "text": "Zones in different regions are considered a single failure domain.", "isCorrectYes": false}
+      ],
+      "options": [],
+      "explanation": {"correct": "Zones are isolated failure domains inside regions; cross-zone deployment gives high availability.", "incorrect": "Regions are independent of each other, so they cannot be one failure domain.", "examTip": "Zone = smallest failure domain; region = independent geography.", "relatedTopics": ["Regions and zones"]},
+      "metadata": {"examObjective": "Explain Google Cloud global infrastructure concepts", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-023",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A business wants to burst workloads to the cloud while keeping sensitive data on-premises. Which approach fits best?",
+      "options": [
+        {"id": "A", "text": "All-in public cloud", "isCorrect": false},
+        {"id": "B", "text": "Hybrid cloud", "isCorrect": true},
+        {"id": "C", "text": "Full on-premises only", "isCorrect": false},
+        {"id": "D", "text": "Multi-cloud with no private infrastructure", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Hybrid cloud combines on-premises infrastructure with public cloud, ideal for burst capacity with data control.", "incorrect": "All-in cloud violates the data-residency requirement; on-premises only removes burst capability.", "examTip": "Hybrid = on-prem + cloud working together.", "relatedTopics": ["Hybrid cloud", "Anthos"]},
+      "metadata": {"examObjective": "Describe cloud deployment models", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-024",
+      "type": "dropdown-select",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Choose the best term for each deployment description.",
+      "dropdowns": [
+        {"id": "d1", "prompt": "Services from multiple public cloud providers used together:", "options": ["Hybrid cloud", "Multi-cloud", "Private cloud"], "correctAnswer": "Multi-cloud"},
+        {"id": "d2", "prompt": "On-premises infrastructure combined with public cloud:", "options": ["Hybrid cloud", "Multi-cloud", "Community cloud"], "correctAnswer": "Hybrid cloud"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Multi-cloud uses more than one public provider; hybrid mixes private/on-prem with public cloud.", "incorrect": "Hybrid refers to the on-prem + cloud combination, not multiple public providers.", "examTip": "Multi-cloud = many public providers; hybrid = private + public.", "relatedTopics": ["Deployment models"]},
+      "metadata": {"examObjective": "Describe cloud deployment models", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-025",
+      "type": "ordering",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order these cloud migration strategies from least change (most like rehosting) to most change (most like rebuilding).",
+      "orderItems": [
+        {"id": "o1", "text": "Rehost (lift and shift)", "correctPosition": 1},
+        {"id": "o2", "text": "Replatform (lift and optimize)", "correctPosition": 2},
+        {"id": "o3", "text": "Refactor / re-architect for cloud-native", "correctPosition": 4},
+        {"id": "o4", "text": "Repurchase (move to SaaS)", "correctPosition": 3}
+      ],
+      "options": [],
+      "explanation": {"correct": "Rehost < replatform < repurchase < refactor in terms of effort and transformation gained.", "incorrect": "Refactoring is the most invasive strategy, rehosting the least.", "examTip": "5 R's: Rehost, Replatform, Repurchase, Refactor, Retire.", "relatedTopics": ["Migration strategies"]},
+      "metadata": {"examObjective": "Describe cloud migration strategies", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-026",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a key advantage of Google's global private network for customers?",
+      "options": [
+        {"id": "A", "text": "Traffic between Google Cloud services stays on Google's private network rather than the public internet", "isCorrect": true},
+        {"id": "B", "text": "It guarantees zero latency worldwide", "isCorrect": false},
+        {"id": "C", "text": "It eliminates the need for encryption", "isCorrect": false},
+        {"id": "D", "text": "It is only available to premium support customers", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Google's private global fiber network improves performance and security by keeping traffic off the public internet.", "incorrect": "No network guarantees zero latency, and encryption is still required.", "examTip": "Private global network = performance + security differentiator.", "relatedTopics": ["Global network", "Network security"]},
+      "metadata": {"examObjective": "Explain the Google Cloud value proposition", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-027",
+      "type": "multiple-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which factors should an organization consider when choosing a Google Cloud region? (Select two.)",
+      "options": [
+        {"id": "A", "text": "Proximity to users (latency)", "isCorrect": true},
+        {"id": "B", "text": "The color of the region on the console map", "isCorrect": false},
+        {"id": "C", "text": "Data residency and compliance requirements", "isCorrect": true},
+        {"id": "D", "text": "Region naming conventions only", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Latency to users and legal/data-residency requirements drive region selection.", "incorrect": "Cosmetic or naming factors are irrelevant.", "examTip": "Region choice = latency + compliance + service availability + cost.", "relatedTopics": ["Regions and zones", "Data residency"]},
+      "metadata": {"examObjective": "Apply Google Cloud global infrastructure to business requirements", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-028",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An insurer's actuarial models run once per quarter and take 3 weeks on owned hardware. The CFO wants to cut costs and the CIO wants faster results, but usage is extremely spiky.",
+      "questionText": "Which cloud characteristic provides the MOST value for this workload?",
+      "options": [
+        {"id": "A", "text": "Elasticity — massive capacity for the quarterly run, released immediately after", "isCorrect": true},
+        {"id": "B", "text": "Resource pooling of a multi-tenant SaaS", "isCorrect": false},
+        {"id": "C", "text": "Measured service alone, without elasticity", "isCorrect": false},
+        {"id": "D", "text": "Broad network access for end users", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Elasticity lets the insurer rent massive compute for the burst and release it, paying only for the run duration.", "incorrect": "Pooling and metering alone don't deliver burst capacity on demand.", "examTip": "Spiky, batch-heavy workloads are the classic elasticity win.", "relatedTopics": ["Elasticity", "Cloud economics"]},
+      "metadata": {"examObjective": "Apply cloud characteristics to workload scenarios", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-029",
+      "type": "drag-drop",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each Google Cloud product to the business problem it best solves.",
+      "dragCategories": [
+        {"id": "cat1", "name": "Need collaborative email, docs, and video meetings for staff", "acceptsItemIds": ["item2"]},
+        {"id": "cat2", "name": "Need to assess migration readiness and plan a move to cloud", "acceptsItemIds": ["item1"]},
+        {"id": "cat3", "name": "Need a managed environment to run containerized applications", "acceptsItemIds": ["item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Migration Center"},
+        {"id": "item2", "text": "Google Workspace"},
+        {"id": "item3", "text": "Google Kubernetes Engine"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Workspace for collaboration, Migration Center for migration assessment, GKE for managed containers.", "incorrect": "Match products to their primary business purpose.", "examTip": "Knowing which product maps to which business need is heavily tested.", "relatedTopics": ["Google Cloud product portfolio"]},
+      "metadata": {"examObjective": "Match Google Cloud products to business use cases", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-030",
+      "type": "single-choice",
+      "topicId": "digital-transformation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is 'sustainability' as a Google Cloud value proposition?",
+      "options": [
+        {"id": "A", "text": "Google Cloud runs its data centers on 100% renewable energy and helps customers measure and reduce carbon footprint", "isCorrect": true},
+        {"id": "B", "text": "Google Cloud guarantees hardware never fails", "isCorrect": false},
+        {"id": "C", "text": "Google Cloud offsets carbon by planting trees only", "isCorrect": false},
+        {"id": "D", "text": "Sustainability refers only to financial cost savings", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Google has matched 100% of electricity use with renewable energy and offers carbon footprint reporting for workloads.", "incorrect": "Sustainability concerns environmental impact, not hardware reliability.", "examTip": "Carbon Footprint dashboard reports emissions of your cloud usage.", "relatedTopics": ["Sustainability", "Google Cloud value proposition"]},
+      "metadata": {"examObjective": "Explain the Google Cloud value proposition including sustainability", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-031",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is BigQuery?",
+      "options": [
+        {"id": "A", "text": "A serverless, highly scalable enterprise data warehouse for analytics", "isCorrect": true},
+        {"id": "B", "text": "A relational OLTP database for transactions", "isCorrect": false},
+        {"id": "C", "text": "A NoSQL document database", "isCorrect": false},
+        {"id": "D", "text": "A business intelligence dashboard tool only", "isCorrect": false}
+      ],
+      "explanation": {"correct": "BigQuery is Google Cloud's serverless petabyte-scale data warehouse for analytics (OLAP).", "incorrect": "OLTP transactions belong to Cloud SQL or Spanner, not BigQuery.", "examTip": "BigQuery = analytics queries over huge datasets, serverless.", "relatedTopics": ["BigQuery", "Data warehouse"]},
+      "metadata": {"examObjective": "Identify Google Cloud data analytics products", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-032",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does it mean that BigQuery is 'serverless'?",
+      "options": [
+        {"id": "A", "text": "Users do not provision or manage any infrastructure; they just run queries and pay for data scanned", "isCorrect": true},
+        {"id": "B", "text": "It runs without any servers at all", "isCorrect": false},
+        {"id": "C", "text": "It only works when no VMs are running in the project", "isCorrect": false},
+        {"id": "D", "text": "It requires users to install server software locally", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Serverless means no infrastructure management; BigQuery auto-scales resources per query with on-demand pricing per TiB scanned.", "incorrect": "Serverless still runs on servers — Google manages them.", "examTip": "Serverless = no infrastructure management, pay per use.", "relatedTopics": ["BigQuery", "Serverless"]},
+      "metadata": {"examObjective": "Explain serverless data analytics", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-033",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Google Cloud product provides business intelligence, dashboards, and embedded analytics with a semantic modeling layer?",
+      "options": [
+        {"id": "A", "text": "Looker", "isCorrect": true},
+        {"id": "B", "text": "Cloud Spanner", "isCorrect": false},
+        {"id": "C", "text": "Pub/Sub", "isCorrect": false},
+        {"id": "D", "text": "Dataflow", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Looker provides BI, dashboards, and governed data exploration with LookML semantic modeling.", "incorrect": "Spanner is a database; Pub/Sub is messaging; Dataflow is stream/batch processing.", "examTip": "Looker = modern BI and data visualization on top of BigQuery.", "relatedTopics": ["Looker", "Business intelligence"]},
+      "metadata": {"examObjective": "Identify Google Cloud BI and visualization products", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-034",
+      "type": "multiple-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which of the following are benefits of a cloud data warehouse like BigQuery? (Select two.)",
+      "options": [
+        {"id": "A", "text": "Separate storage and compute scaling", "isCorrect": true},
+        {"id": "B", "text": "Requires users to provision clusters before querying", "isCorrect": false},
+        {"id": "C", "text": "Ability to query terabytes to petabytes in seconds", "isCorrect": true},
+        {"id": "D", "text": "Can only store data up to 100 GB", "isCorrect": false}
+      ],
+      "explanation": {"correct": "BigQuery decouples storage and compute and analyzes massive datasets at interactive speed.", "incorrect": "No cluster provisioning is needed and capacity is effectively unlimited.", "examTip": "Serverless + decoupled storage/compute = elasticity without management.", "relatedTopics": ["BigQuery", "Data warehouse"]},
+      "metadata": {"examObjective": "Explain benefits of cloud data warehousing", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-035",
+      "type": "yes-no-statements",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Indicate whether each statement about data types and databases is correct (Yes) or incorrect (No).",
+      "statements": [
+        {"id": "s1", "text": "Structured data fits neatly into rows and columns, like relational tables.", "isCorrectYes": true},
+        {"id": "s2", "text": "Unstructured data includes images, video, and free-form text.", "isCorrectYes": true},
+        {"id": "s3", "text": "Relational databases are always the best choice for every workload.", "isCorrectYes": false}
+      ],
+      "options": [],
+      "explanation": {"correct": "Structured vs unstructured differ in schema; each workload needs the right database type.", "incorrect": "No single database type is best for all workloads — choose per access patterns.", "examTip": "Match data structure and access pattern to the database service.", "relatedTopics": ["Data types", "Database selection"]},
+      "metadata": {"examObjective": "Differentiate data types and database categories", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-036",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Which Google Cloud service is a fully managed relational database for MySQL, PostgreSQL, and SQL Server?",
+      "options": [
+        {"id": "A", "text": "Cloud SQL", "isCorrect": true},
+        {"id": "B", "text": "Cloud Storage", "isCorrect": false},
+        {"id": "C", "text": "Firestore", "isCorrect": false},
+        {"id": "D", "text": "Bigtable", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud SQL is the managed relational database supporting MySQL, PostgreSQL, and SQL Server.", "incorrect": "Cloud Storage is object storage; Firestore is NoSQL documents.", "examTip": "Cloud SQL = lift-and-shift friendly managed relational DB.", "relatedTopics": ["Cloud SQL", "Databases"]},
+      "metadata": {"examObjective": "Identify Google Cloud database services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-037",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Google Cloud database offers horizontal scalability with strong consistency and five-nines availability for mission-critical global applications?",
+      "options": [
+        {"id": "A", "text": "Cloud Spanner", "isCorrect": true},
+        {"id": "B", "text": "Cloud SQL", "isCorrect": false},
+        {"id": "C", "text": "Memorystore", "isCorrect": false},
+        {"id": "D", "text": "Cloud Bigtable", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Spanner is a globally distributed, strongly consistent relational database with 99.999% availability SLA.", "incorrect": "Cloud SQL scales vertically and is regional.", "examTip": "Spanner = relational + global scale + strong consistency.", "relatedTopics": ["Cloud Spanner", "Databases"]},
+      "metadata": {"examObjective": "Identify Google Cloud database services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-038",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Google Cloud database is a NoSQL document database designed for mobile and web apps with real-time sync and offline support?",
+      "options": [
+        {"id": "A", "text": "Firestore", "isCorrect": true},
+        {"id": "B", "text": "Cloud SQL", "isCorrect": false},
+        {"id": "C", "text": "BigQuery", "isCorrect": false},
+        {"id": "D", "text": "Spanner", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Firestore is a serverless NoSQL document database with live synchronization and offline data access for apps.", "incorrect": "Cloud SQL is relational; BigQuery is analytics.", "examTip": "Firestore = mobile/web apps with real-time data sync.", "relatedTopics": ["Firestore", "NoSQL"]},
+      "metadata": {"examObjective": "Identify Google Cloud database services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-039",
+      "type": "drag-drop",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each workload description to the best-fit Google Cloud database service.",
+      "dragCategories": [
+        {"id": "cat1", "name": "Lift-and-shift a MySQL application", "acceptsItemIds": ["item2"]},
+        {"id": "cat2", "name": "Global financial application needing strong consistency at planet scale", "acceptsItemIds": ["item3"]},
+        {"id": "cat3", "name": "Real-time chat app with offline mobile access", "acceptsItemIds": ["item1"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Firestore"},
+        {"id": "item2", "text": "Cloud SQL"},
+        {"id": "item3", "text": "Cloud Spanner"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Cloud SQL for MySQL migrations, Spanner for global strong consistency, Firestore for realtime mobile sync.", "incorrect": "Match workload requirements to each database's strengths.", "examTip": "This database-to-workload mapping is a guaranteed exam theme.", "relatedTopics": ["Database selection", "Cloud SQL", "Spanner", "Firestore"]},
+      "metadata": {"examObjective": "Match database services to workloads", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-040",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Google Cloud Storage best suited for?",
+      "options": [
+        {"id": "A", "text": "Storing unstructured data objects such as images, videos, backups, and archives", "isCorrect": true},
+        {"id": "B", "text": "Running transactional SQL queries", "isCorrect": false},
+        {"id": "C", "text": "Hosting Kubernetes clusters", "isCorrect": false},
+        {"id": "D", "text": "Managing user identities", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud Storage is object storage for any file type at any scale with multiple storage classes.", "incorrect": "It is not a database or compute platform.", "examTip": "Cloud Storage = object/blob storage, 11 nines durability.", "relatedTopics": ["Cloud Storage", "Storage classes"]},
+      "metadata": {"examObjective": "Identify Google Cloud storage services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-041",
+      "type": "dropdown-select",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the appropriate Cloud Storage class for each use case.",
+      "dropdowns": [
+        {"id": "d1", "prompt": "Frequently accessed website images served to users:", "options": ["Standard", "Nearline", "Coldline", "Archive"], "correctAnswer": "Standard"},
+        {"id": "d2", "prompt": "Backups accessed about once per month:", "options": ["Standard", "Nearline", "Coldline", "Archive"], "correctAnswer": "Nearline"},
+        {"id": "d3", "prompt": "Legal records retained for 7 years, rarely if ever read:", "options": ["Standard", "Nearline", "Coldline", "Archive"], "correctAnswer": "Archive"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Hot data in Standard; monthly access Nearline; rarely accessed long-term Archive (cheapest).", "incorrect": "Higher access frequency = higher class; colder = cheaper storage, higher retrieval.", "examTip": "Balance access frequency against storage cost per class.", "relatedTopics": ["Cloud Storage classes", "FinOps"]},
+      "metadata": {"examObjective": "Select storage classes based on access patterns", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-042",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Vertex AI?",
+      "options": [
+        {"id": "A", "text": "Google Cloud's unified platform for building, deploying, and scaling machine learning models", "isCorrect": true},
+        {"id": "B", "text": "A managed relational database", "isCorrect": false},
+        {"id": "C", "text": "A content delivery network", "isCorrect": false},
+        {"id": "D", "text": "A network firewall service", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Vertex AI is the unified ML platform covering the full model lifecycle from training to deployment and MLOps.", "incorrect": "It is an AI/ML platform, not infrastructure or security tooling.", "examTip": "Vertex AI = unified ML platform on Google Cloud.", "relatedTopics": ["Vertex AI", "Machine learning"]},
+      "metadata": {"examObjective": "Identify Google Cloud AI/ML products", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-043",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the difference between custom ML training and AutoML?",
+      "options": [
+        {"id": "A", "text": "AutoML lets users with limited ML expertise train quality models on their data via an easy interface; custom training gives experts full control over code, architecture, and hyperparameters", "isCorrect": true},
+        {"id": "B", "text": "AutoML requires writing TensorFlow code; custom training needs no code", "isCorrect": false},
+        {"id": "C", "text": "They are identical products with different names", "isCorrect": false},
+        {"id": "D", "text": "Custom training only works on images; AutoML only on text", "isCorrect": false}
+      ],
+      "explanation": {"correct": "AutoML automates model building for low-code users; custom training on Vertex AI provides full control for ML experts.", "incorrect": "AutoML is the no/low-code path; custom training requires ML expertise.", "examTip": "No ML expertise → AutoML; full control → custom training.", "relatedTopics": ["Vertex AI", "AutoML"]},
+      "metadata": {"examObjective": "Differentiate AI/ML approaches on Google Cloud", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-044",
+      "type": "multiple-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which scenarios are good candidates for AutoML? (Select two.)",
+      "options": [
+        {"id": "A", "text": "A marketing analyst with no ML background wants to classify customer support emails", "isCorrect": true},
+        {"id": "B", "text": "An ML research team needs to design a novel neural network architecture from scratch", "isCorrect": false},
+        {"id": "C", "text": "A retailer wants to build an image-classification product catalog model without hiring data scientists", "isCorrect": true},
+        {"id": "D", "text": "Engineers need to tune low-level GPU kernel code", "isCorrect": false}
+      ],
+      "explanation": {"correct": "AutoML suits business users needing quality models without ML expertise.", "incorrect": "Novel architecture research and kernel engineering require custom expert work.", "examTip": "AutoML democratizes ML for non-specialists.", "relatedTopics": ["AutoML", "Vertex AI"]},
+      "metadata": {"examObjective": "Apply AI/ML products to business scenarios", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-045",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Google Cloud's Pub/Sub used for?",
+      "options": [
+        {"id": "A", "text": "Asynchronous real-time messaging between independent applications (publish/subscribe)", "isCorrect": true},
+        {"id": "B", "text": "Running SQL analytics", "isCorrect": false},
+        {"id": "C", "text": "Storing VM disks", "isCorrect": false},
+        {"id": "D", "text": "Managing API keys", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Pub/Sub is an asynchronous messaging service decoupling event producers and consumers, ideal for streaming pipelines.", "incorrect": "It is messaging infrastructure, not storage or analytics.", "examTip": "Pub/Sub = ingest streaming events; Dataflow = process them.", "relatedTopics": ["Pub/Sub", "Streaming data"]},
+      "metadata": {"examObjective": "Identify Google Cloud data processing products", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-046",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which service is used for both batch and stream data processing (ETL/ELT) on Google Cloud?",
+      "options": [
+        {"id": "A", "text": "Dataflow", "isCorrect": true},
+        {"id": "B", "text": "Cloud DNS", "isCorrect": false},
+        {"id": "C", "text": "Cloud Armor", "isCorrect": false},
+        {"id": "D", "text": "Cloud IAM", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Dataflow is a fully managed service for stream and batch data processing using Apache Beam.", "incorrect": "The other options are networking/security services.", "examTip": "Pipeline flow: Pub/Sub → Dataflow → BigQuery.", "relatedTopics": ["Dataflow", "ETL"]},
+      "metadata": {"examObjective": "Identify Google Cloud data processing products", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-047",
+      "type": "ordering",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the typical data analytics pipeline for streaming IoT sensor data, from data arrival to consumption.",
+      "orderItems": [
+        {"id": "o1", "text": "Dataflow processes and transforms the events", "correctPosition": 2},
+        {"id": "o2", "text": "Pub/Sub ingests the sensor events", "correctPosition": 1},
+        {"id": "o3", "text": "Looker dashboards visualize insights to business users", "correctPosition": 4},
+        {"id": "o4", "text": "BigQuery stores and analyzes the processed data", "correctPosition": 3}
+      ],
+      "options": [],
+      "explanation": {"correct": "Pub/Sub ingests, Dataflow transforms, BigQuery analyzes, Looker visualizes.", "incorrect": "Ingestion must precede processing, and analysis precedes visualization.", "examTip": "Ingest → Process → Store/Analyze → Visualize.", "relatedTopics": ["Streaming pipelines", "Pub/Sub", "Dataflow", "BigQuery", "Looker"]},
+      "metadata": {"examObjective": "Design data pipelines using Google Cloud services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-048",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is 'data democratization' in a business context?",
+      "options": [
+        {"id": "A", "text": "Making data accessible and usable by non-technical employees so anyone can make data-informed decisions", "isCorrect": true},
+        {"id": "B", "text": "Restricting all data access to the IT department", "isCorrect": false},
+        {"id": "C", "text": "Deleting data that is no longer needed", "isCorrect": false},
+        {"id": "D", "text": "Moving all data to spreadsheets", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Democratization empowers broad access to governed data and self-service analytics tools like Looker and BigQuery.", "incorrect": "Restricting access is the opposite of democratization.", "examTip": "Self-service BI tools are the engine of data democratization.", "relatedTopics": ["Data culture", "Looker"]},
+      "metadata": {"examObjective": "Describe building a data-driven culture", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-049",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A grocery chain wants to forecast demand per store per day to optimize inventory. They have two years of historical sales data but no data scientists on staff.",
+      "questionText": "Which approach is the BEST fit?",
+      "options": [
+        {"id": "A", "text": "Use BigQuery to prepare the data and Vertex AI AutoML for time-series demand forecasting", "isCorrect": true},
+        {"id": "B", "text": "Hire a team to hand-write a custom neural network from scratch before analyzing any data", "isCorrect": false},
+        {"id": "C", "text": "Store data only in spreadsheets and rely on manager intuition", "isCorrect": false},
+        {"id": "D", "text": "Deploy the data on Compute Engine VMs and manually inspect logs daily", "isCorrect": false}
+      ],
+      "explanation": {"correct": "BigQuery prepares data and AutoML trains forecasting models without data scientists — fast and appropriate to the skills available.", "incorrect": "Manual inspection and intuition don't scale; custom nets are unnecessary for this need.", "examTip": "Match the ML approach to available skills: AutoML for no-ML-expertise teams.", "relatedTopics": ["BigQuery", "AutoML", "Vertex AI"]},
+      "metadata": {"examObjective": "Apply AI/ML products to business scenarios", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-050",
+      "type": "yes-no-statements",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Indicate whether each statement about ML on Google Cloud is correct (Yes) or incorrect (No).",
+      "statements": [
+        {"id": "s1", "text": "Pre-trained APIs like Vision AI let developers add ML capabilities without training models.", "isCorrectYes": true},
+        {"id": "s2", "text": "AutoML requires deep expertise in TensorFlow programming.", "isCorrectYes": false},
+        {"id": "s3", "text": "Vertex AI supports both AutoML and custom model training.", "isCorrectYes": true}
+      ],
+      "options": [],
+      "explanation": {"correct": "Pre-trained APIs need no training; AutoML needs no code; Vertex AI covers both paths.", "incorrect": "AutoML is explicitly the low-expertise path.", "examTip": "Three AI paths: pre-trained APIs, AutoML, custom training.", "relatedTopics": ["Vertex AI", "Pre-trained APIs", "AutoML"]},
+      "metadata": {"examObjective": "Differentiate AI/ML approaches on Google Cloud", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-051",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which Google Cloud AI product would a developer use to extract text from scanned documents without training a custom model?",
+      "options": [
+        {"id": "A", "text": "Document AI", "isCorrect": true},
+        {"id": "B", "text": "Cloud SQL", "isCorrect": false},
+        {"id": "C", "text": "Cloud CDN", "isCorrect": false},
+        {"id": "D", "text": "Cloud Interconnect", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Document AI is a pre-trained solution for extracting structured data from documents.", "incorrect": "The other options are database, networking, and content delivery services.", "examTip": "Pre-trained APIs: Vision, Natural Language, Speech, Translation, Document AI.", "relatedTopics": ["Document AI", "Pre-trained APIs"]},
+      "metadata": {"examObjective": "Identify Google Cloud AI/ML products", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-052",
+      "type": "multiple-choice",
+      "topicId": "data-innovation",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "A company is choosing between BigQuery and Cloud SQL for a new workload. Which factors favor BigQuery? (Select two.)",
+      "options": [
+        {"id": "A", "text": "Need to run ad-hoc analytical queries across billions of rows", "isCorrect": true},
+        {"id": "B", "text": "Need sub-millisecond transactions processing customer orders", "isCorrect": false},
+        {"id": "C", "text": "Want serverless analytics without managing database servers", "isCorrect": true},
+        {"id": "D", "text": "Need a drop-in replacement for a live PostgreSQL e-commerce checkout", "isCorrect": false}
+      ],
+      "explanation": {"correct": "BigQuery excels at large-scale OLAP analytics without infrastructure management.", "incorrect": "Transactional OLTP workloads belong to Cloud SQL or Spanner.", "examTip": "OLAP → BigQuery; OLTP → Cloud SQL/Spanner.", "relatedTopics": ["BigQuery", "Cloud SQL", "OLTP vs OLAP"]},
+      "metadata": {"examObjective": "Distinguish analytics from transactional workloads", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-053",
+      "type": "dropdown-select",
+      "topicId": "data-innovation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Complete each statement about data value stages by choosing the correct stage.",
+      "dropdowns": [
+        {"id": "d1", "prompt": "Raw facts collected from sources are called:", "options": ["Data", "Information", "Knowledge"], "correctAnswer": "Data"},
+        {"id": "d2", "prompt": "Data organized and given context to become meaningful is:", "options": ["Data", "Information", "Wisdom"], "correctAnswer": "Information"},
+        {"id": "d3", "prompt": "Applying information with experience to make good decisions is:", "options": ["Information", "Knowledge", "Noise"], "correctAnswer": "Knowledge"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Data → Information → Knowledge → Wisdom (DIKW) hierarchy.", "incorrect": "Context turns data into information; experience turns information into knowledge.", "examTip": "DIKW: data is raw; information is processed; knowledge is applied.", "relatedTopics": ["Data fundamentals"]},
+      "metadata": {"examObjective": "Explain how data creates business value", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-054",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Cloud Bigtable best suited for?",
+      "options": [
+        {"id": "A", "text": "Large-scale, low-latency NoSQL workloads such as time-series and IoT data", "isCorrect": true},
+        {"id": "B", "text": "Small relational databases for internal apps", "isCorrect": false},
+        {"id": "C", "text": "Building BI dashboards", "isCorrect": false},
+        {"id": "D", "text": "Email and document collaboration", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Bigtable is Google's NoSQL wide-column store for terabyte-to-petabyte workloads needing single-digit-millisecond latency.", "incorrect": "Relational apps and BI are not Bigtable use cases.", "examTip": "Bigtable = heavy write throughput + low-latency key lookups at scale.", "relatedTopics": ["Bigtable", "NoSQL"]},
+      "metadata": {"examObjective": "Identify Google Cloud database services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-055",
+      "type": "drag-drop",
+      "topicId": "data-innovation",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each analytics need to the Google Cloud product that fulfills it.",
+      "dragCategories": [
+        {"id": "cat1", "name": "Ad-hoc SQL analysis over petabytes without managing servers", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "Self-service governed dashboards for business teams", "acceptsItemIds": ["item2"]},
+        {"id": "cat3", "name": "Real-time ingestion of millions of events per second", "acceptsItemIds": ["item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "BigQuery"},
+        {"id": "item2", "text": "Looker"},
+        {"id": "item3", "text": "Pub/Sub"}
+      ],
+      "options": [],
+      "explanation": {"correct": "BigQuery for serverless analytics, Looker for governed BI, Pub/Sub for event ingestion.", "incorrect": "Each product has a distinct role in the analytics stack.", "examTip": "Memorize the roles of BigQuery, Looker, Pub/Sub, Dataflow.", "relatedTopics": ["Analytics stack", "Product mapping"]},
+      "metadata": {"examObjective": "Match analytics products to business needs", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-056",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A bank's risk team queries terabytes of transaction history each morning. Queries must finish in minutes, and the team has no database administrators to spare.",
+      "questionText": "Which solution best meets these requirements?",
+      "options": [
+        {"id": "A", "text": "BigQuery with on-demand pricing — serverless analytics at petabyte scale", "isCorrect": true},
+        {"id": "B", "text": "A self-managed MySQL cluster on Compute Engine", "isCorrect": false},
+        {"id": "C", "text": "Firestore with client-side aggregation", "isCorrect": false},
+        {"id": "D", "text": "Cloud Storage with manual file downloads", "isCorrect": false}
+      ],
+      "explanation": {"correct": "BigQuery runs massive SQL analytics serverlessly — no DBAs, no cluster management, fast queries.", "incorrect": "Self-managed databases need administration; Firestore is not an analytics warehouse.", "examTip": "No admin staff + big data + SQL = BigQuery.", "relatedTopics": ["BigQuery", "Serverless analytics"]},
+      "metadata": {"examObjective": "Apply data products to business scenarios", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-057",
+      "type": "yes-no-statements",
+      "topicId": "data-innovation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Indicate whether each statement about Cloud Storage is correct (Yes) or incorrect (No).",
+      "statements": [
+        {"id": "s1", "text": "Cloud Storage is object storage suited for unstructured data.", "isCorrectYes": true},
+        {"id": "s2", "text": "Cloud Storage offers 99.999999999% (11 nines) annual durability for objects.", "isCorrectYes": true},
+        {"id": "s3", "text": "Cloud Storage is a relational database service.", "isCorrectYes": false}
+      ],
+      "options": [],
+      "explanation": {"correct": "Cloud Storage is durable object storage for unstructured data with 11 nines durability.", "incorrect": "It is not a database — it stores objects, not queryable relational records.", "examTip": "11 nines durability comes from redundant encoding across zones.", "relatedTopics": ["Cloud Storage", "Durability"]},
+      "metadata": {"examObjective": "Identify Google Cloud storage services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-058",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "What is a key difference between ETL and ELT in modern cloud data architectures?",
+      "options": [
+        {"id": "A", "text": "ELT loads raw data into the warehouse first (e.g., BigQuery) and transforms it there using warehouse compute; ETL transforms before loading", "isCorrect": true},
+        {"id": "B", "text": "ETL and ELT are identical processes", "isCorrect": false},
+        {"id": "C", "text": "ELT requires on-premises hardware", "isCorrect": false},
+        {"id": "D", "text": "ETL is only for unstructured data", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud warehouses with separated compute/storage favor ELT: load first, transform in-warehouse at scale.", "incorrect": "The order of transform vs load is the whole distinction.", "examTip": "BigQuery's scalability makes ELT the modern default pattern.", "relatedTopics": ["ETL/ELT", "BigQuery", "Data pipelines"]},
+      "metadata": {"examObjective": "Describe modern data pipeline patterns", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-059",
+      "type": "multiple-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which practices help an organization build a data-driven culture? (Select two.)",
+      "options": [
+        {"id": "A", "text": "Provide self-service analytics tools with governed data access", "isCorrect": true},
+        {"id": "B", "text": "Restrict data access to a single team of specialists", "isCorrect": false},
+        {"id": "C", "text": "Encourage decisions to be backed by data rather than hierarchy alone", "isCorrect": true},
+        {"id": "D", "text": "Ban experimentation to avoid mistakes", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Self-service access plus data-backed decision making are the core of a data-driven culture.", "incorrect": "Restriction and banning experimentation stifle transformation.", "examTip": "Data-driven culture = access + governance + experimentation.", "relatedTopics": ["Data culture", "Governance"]},
+      "metadata": {"examObjective": "Describe building a data-driven culture", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-060",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is LookML in Looker?",
+      "options": [
+        {"id": "A", "text": "A modeling language that defines business metrics and data relationships in a governed semantic layer", "isCorrect": true},
+        {"id": "B", "text": "A programming language for writing operating systems", "isCorrect": false},
+        {"id": "C", "text": "A machine learning model format", "isCorrect": false},
+        {"id": "D", "text": "A network routing protocol", "isCorrect": false}
+      ],
+      "explanation": {"correct": "LookML creates a governed semantic layer so all users share consistent metric definitions.", "incorrect": "LookML defines metrics and relationships — it is not general-purpose programming.", "examTip": "Semantic layer = one version of the truth for business metrics.", "relatedTopics": ["Looker", "LookML"]},
+      "metadata": {"examObjective": "Identify Google Cloud BI products", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-061",
+      "type": "ordering",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the typical machine learning workflow steps from first to last.",
+      "orderItems": [
+        {"id": "o1", "text": "Evaluate model performance against test data", "correctPosition": 4},
+        {"id": "o2", "text": "Collect and prepare training data", "correctPosition": 1},
+        {"id": "o3", "text": "Deploy the model to serve predictions", "correctPosition": 5},
+        {"id": "o4", "text": "Choose features and split data into training/test sets", "correctPosition": 2},
+        {"id": "o5", "text": "Train the model on the training data", "correctPosition": 3}
+      ],
+      "options": [],
+      "explanation": {"correct": "Data → features/split → train → evaluate → deploy.", "incorrect": "Training precedes evaluation; deployment is always last.", "examTip": "Never deploy before evaluation.", "relatedTopics": ["ML workflow", "Vertex AI"]},
+      "metadata": {"examObjective": "Describe the machine learning workflow", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-062",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A data engineer needs to copy data from an on-premises Oracle database into BigQuery on a scheduled, managed basis. Which Google Cloud service is purpose-built for this?",
+      "options": [
+        {"id": "A", "text": "Data Fusion", "isCorrect": true},
+        {"id": "B", "text": "Cloud Armor", "isCorrect": false},
+        {"id": "C", "text": "Cloud CDN", "isCorrect": false},
+        {"id": "D", "text": "Cloud Load Balancing", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud Fusion is a fully managed data integration service (code-free ETL/ELT) for building pipelines into BigQuery.", "incorrect": "The other options are security and networking services.", "examTip": "Fusion = managed data integration UI; Dataflow = code-based processing.", "relatedTopics": ["Cloud Fusion", "Data integration"]},
+      "metadata": {"examObjective": "Identify Google Cloud data integration products", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-063",
+      "type": "drag-drop",
+      "topicId": "data-innovation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Drag each data description to its data type category.",
+      "dragCategories": [
+        {"id": "cat1", "name": "Structured", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "Unstructured", "acceptsItemIds": ["item2", "item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Customer records in a relational table with fixed columns"},
+        {"id": "item2", "text": "Product review videos"},
+        {"id": "item3", "text": "Free-form support chat transcripts"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Tabular rows/columns are structured; video and free text are unstructured.", "incorrect": "Anything without a predefined schema is unstructured.", "examTip": "Schema-on-write = structured; schema-on-read = semi/unstructured.", "relatedTopics": ["Data types"]},
+      "metadata": {"examObjective": "Differentiate structured and unstructured data", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-064",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "An e-commerce company wants real-time product recommendations and fraud detection during checkout. Latency budget is under 100ms, and models are retrained weekly.",
+      "questionText": "Which architecture best supports these requirements?",
+      "options": [
+        {"id": "A", "text": "Train on Vertex AI, deploy models to endpoints for low-latency online predictions, and retrain on schedule", "isCorrect": true},
+        {"id": "B", "text": "Run batch predictions nightly and email results to customers", "isCorrect": false},
+        {"id": "C", "text": "Store all events in Cloud Storage and query weekly", "isCorrect": false},
+        {"id": "D", "text": "Use BigQuery batch queries at checkout time", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Online prediction endpoints on Vertex AI serve sub-100ms inference with scheduled retraining.", "incorrect": "Batch-only pipelines cannot meet real-time checkout latency.", "examTip": "Real-time inference = online endpoints; reporting = batch predictions.", "relatedTopics": ["Vertex AI", "Online predictions", "MLOps"]},
+      "metadata": {"examObjective": "Design ML architectures for latency requirements", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-065",
+      "type": "yes-no-statements",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Indicate whether each statement about databases on Google Cloud is correct (Yes) or incorrect (No).",
+      "statements": [
+        {"id": "s1", "text": "Cloud SQL automates patches, backups, and replication for relational databases.", "isCorrectYes": true},
+        {"id": "s2", "text": "Firestore requires users to provision and manage database servers.", "isCorrectYes": false},
+        {"id": "s3", "text": "Cloud Spanner combines relational structure with global horizontal scale.", "isCorrectYes": true}
+      ],
+      "options": [],
+      "explanation": {"correct": "Cloud SQL and Firestore are fully managed; Spanner uniquely merges SQL with planet-scale distribution.", "incorrect": "Firestore is serverless — no server management at all.", "examTip": "'Managed' means Google handles patching, backups, replication, failover.", "relatedTopics": ["Cloud SQL", "Firestore", "Spanner"]},
+      "metadata": {"examObjective": "Identify Google Cloud database services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-066",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What business outcome does moving from batch to real-time analytics primarily enable?",
+      "options": [
+        {"id": "A", "text": "Decisions based on what is happening now rather than yesterday — live dashboards, instant fraud alerts, dynamic pricing", "isCorrect": true},
+        {"id": "B", "text": "Guaranteed lower storage costs", "isCorrect": false},
+        {"id": "C", "text": "Elimination of the need for data governance", "isCorrect": false},
+        {"id": "D", "text": "Permanent elimination of batch processing", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Real-time analytics shortens the time from event to insight, enabling operational decisions on live data.", "incorrect": "It doesn't guarantee cost savings or remove governance needs.", "examTip": "Pub/Sub + Dataflow + BigQuery streaming = real-time insights.", "relatedTopics": ["Real-time analytics", "Streaming"]},
+      "metadata": {"examObjective": "Explain value of real-time data analytics", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-067",
+      "type": "dropdown-select",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Choose the correct database service for each access pattern.",
+      "dropdowns": [
+        {"id": "d1", "prompt": "Key-value lookups on billions of rows with single-digit-millisecond latency:", "options": ["Bigtable", "Cloud SQL", "BigQuery"], "correctAnswer": "Bigtable"},
+        {"id": "d2", "prompt": "ACID transactions on relational schema, regional scale:", "options": ["Bigtable", "Cloud SQL", "Pub/Sub"], "correctAnswer": "Cloud SQL"},
+        {"id": "d3", "prompt": "Interactive SQL analytics over petabytes:", "options": ["Bigtable", "Cloud SQL", "BigQuery"], "correctAnswer": "BigQuery"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Bigtable for massive low-latency NoSQL keys, Cloud SQL for relational transactions, BigQuery for analytics.", "incorrect": "Match latency, consistency, and query model requirements.", "examTip": "Access pattern first, product second.", "relatedTopics": ["Database selection"]},
+      "metadata": {"examObjective": "Match database services to workloads", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-068",
+      "type": "multiple-choice",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which are characteristics of BigQuery pricing models? (Select two.)",
+      "options": [
+        {"id": "A", "text": "On-demand: pay per TiB of data scanned by queries", "isCorrect": true},
+        {"id": "B", "text": "Flat-rate/editions: committed capacity for predictable costs", "isCorrect": true},
+        {"id": "C", "text": "Charged per second of VM uptime only", "isCorrect": false},
+        {"id": "D", "text": "Storage and queries are always billed as one bundle", "isCorrect": false}
+      ],
+      "explanation": {"correct": "BigQuery charges storage separately from analysis; analysis is on-demand (per TiB) or capacity-based.", "incorrect": "There is no per-second VM charge — it is serverless.", "examTip": "Partitioning and clustering reduce bytes scanned = lower on-demand cost.", "relatedTopics": ["BigQuery pricing", "FinOps"]},
+      "metadata": {"examObjective": "Explain data analytics cost models", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-069",
+      "type": "single-choice",
+      "topicId": "data-innovation",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is the primary purpose of data governance?",
+      "options": [
+        {"id": "A", "text": "Ensuring data is accurate, available, secure, and usable under defined policies", "isCorrect": true},
+        {"id": "B", "text": "Making sure all data is deleted after 30 days", "isCorrect": false},
+        {"id": "C", "text": "Preventing anyone from accessing data", "isCorrect": false},
+        {"id": "D", "text": "Storing data exclusively on-premises", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Governance balances data accessibility with quality, security, and compliance controls.", "incorrect": "Governance enables safe use, not prohibition or deletion.", "examTip": "Governance = policies + quality + access control over data.", "relatedTopics": ["Data governance", "Dataplex"]},
+      "metadata": {"examObjective": "Describe data governance concepts", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-070",
+      "type": "drag-drop",
+      "topicId": "data-innovation",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each AI capability to the pre-trained Google Cloud API that provides it.",
+      "dragCategories": [
+        {"id": "cat1", "name": "Understand sentiment and entities in customer reviews", "acceptsItemIds": ["item2"]},
+        {"id": "cat2", "name": "Convert customer voice calls to text", "acceptsItemIds": ["item1"]},
+        {"id": "cat3", "name": "Label objects in uploaded photos", "acceptsItemIds": ["item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Speech-to-Text API"},
+        {"id": "item2", "text": "Natural Language API"},
+        {"id": "item3", "text": "Vision API"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Speech-to-Text for audio transcription, Natural Language for text understanding, Vision for image labeling.", "incorrect": "Each API maps to a specific data modality.", "examTip": "Pre-trained APIs = fast time-to-value for common AI tasks.", "relatedTopics": ["Pre-trained APIs"]},
+      "metadata": {"examObjective": "Match pre-trained AI APIs to use cases", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-071",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Compute Engine?",
+      "options": [
+        {"id": "A", "text": "Google Cloud's IaaS offering of virtual machines running on Google infrastructure", "isCorrect": true},
+        {"id": "B", "text": "A managed Kubernetes service", "isCorrect": false},
+        {"id": "C", "text": "A fully managed serverless application platform", "isCorrect": false},
+        {"id": "D", "text": "A relational database service", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Compute Engine provides VMs (IaaS) with full OS control, available as predefined, custom, or preemptible machine types.", "incorrect": "GKE is Kubernetes; App Engine/Cloud Run are PaaS/serverless.", "examTip": "Compute Engine = VMs = IaaS.", "relatedTopics": ["Compute Engine", "IaaS"]},
+      "metadata": {"examObjective": "Identify Google Cloud compute services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-072",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What are preemptible VMs (Spot VMs)?",
+      "options": [
+        {"id": "A", "text": "Low-cost VMs that Google can reclaim with short notice, ideal for fault-tolerant batch workloads", "isCorrect": true},
+        {"id": "B", "text": "VMs with guaranteed 10-year availability", "isCorrect": false},
+        {"id": "C", "text": "VMs that cannot run batch jobs", "isCorrect": false},
+        {"id": "D", "text": "VMs reserved only for premium support customers", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Spot/preemptible VMs cost up to ~90% less but can be terminated anytime — good for interruptible workloads.", "incorrect": "They are the cheapest option, not the most reliable.", "examTip": "Fault-tolerant batch = Spot VMs; stateful production = standard VMs.", "relatedTopics": ["Compute Engine", "Spot VMs", "Cost optimization"]},
+      "metadata": {"examObjective": "Explain Compute Engine machine types and pricing models", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-073",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Google Kubernetes Engine (GKE)?",
+      "options": [
+        {"id": "A", "text": "A fully managed Kubernetes service for running containerized applications with automated scaling, upgrades, and repair", "isCorrect": true},
+        {"id": "B", "text": "A virtual machine provisioning tool", "isCorrect": false},
+        {"id": "C", "text": "A managed relational database", "isCorrect": false},
+        {"id": "D", "text": "A CDN for static content", "isCorrect": false}
+      ],
+      "explanation": {"correct": "GKE runs Kubernetes clusters without managing the control plane, with autoscaling and auto-upgrade.", "incorrect": "GKE orchestrates containers, not VMs or databases.", "examTip": "GKE = containers + orchestration, managed Kubernetes.", "relatedTopics": ["GKE", "Kubernetes", "Containers"]},
+      "metadata": {"examObjective": "Identify Google Cloud container services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-074",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a container, and why is it valuable?",
+      "options": [
+        {"id": "A", "text": "A lightweight package of application code and dependencies that runs consistently across environments, enabling portability and efficient resource use", "isCorrect": true},
+        {"id": "B", "text": "A physical server dedicated to one customer", "isCorrect": false},
+        {"id": "C", "text": "A type of hard disk drive", "isCorrect": false},
+        {"id": "D", "text": "A firewall rule set", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Containers package code with dependencies for consistent, portable, efficient deployment — lighter than VMs.", "incorrect": "Containers are software packages, not hardware.", "examTip": "Containers = 'works on my machine' solved; VMs virtualize hardware, containers virtualize the OS.", "relatedTopics": ["Containers", "Docker", "Kubernetes"]},
+      "metadata": {"examObjective": "Explain container concepts and benefits", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-075",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Cloud Run?",
+      "options": [
+        {"id": "A", "text": "A fully managed serverless platform to run containerized applications that scale automatically, including to zero", "isCorrect": true},
+        {"id": "B", "text": "A bare-metal compute service", "isCorrect": false},
+        {"id": "C", "text": "A virtual private network product", "isCorrect": false},
+        {"id": "D", "text": "An on-premises server rack", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud Run runs stateless containers serverlessly with per-request billing and scale-to-zero.", "incorrect": "It requires no cluster management unlike GKE.", "examTip": "Cloud Run = containers without Kubernetes management.", "relatedTopics": ["Cloud Run", "Serverless", "Containers"]},
+      "metadata": {"examObjective": "Identify Google Cloud serverless compute services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-076",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is App Engine?",
+      "options": [
+        {"id": "A", "text": "A fully managed PaaS for deploying applications where Google manages the runtime, scaling, and infrastructure", "isCorrect": true},
+        {"id": "B", "text": "An IaaS VM service", "isCorrect": false},
+        {"id": "C", "text": "A data warehouse", "isCorrect": false},
+        {"id": "D", "text": "A network load balancer", "isCorrect": false}
+      ],
+      "explanation": {"correct": "App Engine is PaaS — deploy code and Google handles servers, runtimes, and autoscaling.", "incorrect": "Unlike IaaS, no OS management is required.", "examTip": "App Engine = original PaaS; Cloud Run = container-based serverless evolution.", "relatedTopics": ["App Engine", "PaaS"]},
+      "metadata": {"examObjective": "Identify Google Cloud application platforms", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-077",
+      "type": "drag-drop",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each compute service to the level of management the CUSTOMER retains.",
+      "dragCategories": [
+        {"id": "cat1", "name": "Most customer management (OS, runtime, code)", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "Customer manages containers only, no cluster administration", "acceptsItemIds": ["item2"]},
+        {"id": "cat3", "name": "Least management — customer deploys code/containers only", "acceptsItemIds": ["item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Compute Engine"},
+        {"id": "item2", "text": "GKE (managed Kubernetes)"},
+        {"id": "item3", "text": "Cloud Run"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Compute Engine (IaaS) > GKE > Cloud Run in terms of customer management responsibility.", "incorrect": "Serverless options remove the most management burden.", "examTip": "IaaS → CaaS → PaaS/serverless: decreasing customer responsibility.", "relatedTopics": ["Compute services", "Service models"]},
+      "metadata": {"examObjective": "Differentiate compute services by management model", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-078",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a Virtual Private Cloud (VPC)?",
+      "options": [
+        {"id": "A", "text": "A software-defined network that provides global, private connectivity for Google Cloud resources", "isCorrect": true},
+        {"id": "B", "text": "A physical data center cage", "isCorrect": false},
+        {"id": "C", "text": "A type of virtual machine", "isCorrect": false},
+        {"id": "D", "text": "A cloud billing account", "isCorrect": false}
+      ],
+      "explanation": {"correct": "VPC is a global software-defined network connecting GCP resources, with subnets, routes, and firewall rules.", "incorrect": "A VPC is networking abstraction, not hardware or billing.", "examTip": "GCP VPCs are global by default — unlike many other clouds.", "relatedTopics": ["VPC", "Networking"]},
+      "metadata": {"examObjective": "Identify Google Cloud networking services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-079",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Cloud Load Balancing?",
+      "options": [
+        {"id": "A", "text": "A fully managed service that distributes traffic across backends to improve availability and scale globally", "isCorrect": true},
+        {"id": "B", "text": "A manual process of assigning users to servers", "isCorrect": false},
+        {"id": "C", "text": "A database replication feature", "isCorrect": false},
+        {"id": "D", "text": "A backup scheduling tool", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud Load Balancing (global HTTP(S), TCP/UDP, internal) distributes traffic for high availability and autoscaling integration.", "incorrect": "It is fully managed and automatic, not manual.", "examTip": "Single global anycast IP for multi-region load balancing is a GCP differentiator.", "relatedTopics": ["Cloud Load Balancing", "High availability"]},
+      "metadata": {"examObjective": "Identify Google Cloud networking services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-080",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does a Content Delivery Network (CDN) such as Cloud CDN do?",
+      "options": [
+        {"id": "A", "text": "Caches content at edge locations close to users to reduce latency and origin load", "isCorrect": true},
+        {"id": "B", "text": "Encrypts all database traffic", "isCorrect": false},
+        {"id": "C", "text": "Manages virtual machine lifecycle", "isCorrect": false},
+        {"id": "D", "text": "Creates container images", "isCorrect": false}
+      ],
+      "explanation": {"correct": "CDN caches static content at global edge points of presence for faster delivery.", "incorrect": "Caching at the edge is the core function — not encryption or compute.", "examTip": "Cloud CDN = Google's edge network caching for lower latency.", "relatedTopics": ["Cloud CDN", "Edge computing"]},
+      "metadata": {"examObjective": "Identify Google Cloud networking and content delivery services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-081",
+      "type": "multiple-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "scenarioText": "A company's flagship web store runs on a monolithic application on two on-premises servers. Deployments are monthly, require hours of downtime, and one server failure takes the store offline.",
+      "questionText": "Which modernization actions address these pain points? (Select three.)",
+      "options": [
+        {"id": "A", "text": "Re-architect into microservices deployed on managed platforms like GKE or Cloud Run", "isCorrect": true},
+        {"id": "B", "text": "Deploy behind a global load balancer across multiple zones for high availability", "isCorrect": true},
+        {"id": "C", "text": "Keep the monolith but add a second monthly deployment window", "isCorrect": false},
+        {"id": "D", "text": "Adopt CI/CD for small, frequent, low-risk releases", "isCorrect": true}
+      ],
+      "explanation": {"correct": "Microservices, multi-zone load balancing, and CI/CD directly fix deployment risk and availability gaps.", "incorrect": "Doubling deployment windows doesn't fix architecture fragility.", "examTip": "Modernization = architecture + release process + availability design together.", "relatedTopics": ["Application modernization", "Microservices", "CI/CD"]},
+      "metadata": {"examObjective": "Apply modernization principles to scenarios", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-082",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Apigee?",
+      "options": [
+        {"id": "A", "text": "A full-lifecycle API management platform to design, secure, publish, analyze, and monetize APIs", "isCorrect": true},
+        {"id": "B", "text": "A virtual machine type", "isCorrect": false},
+        {"id": "C", "text": "An object storage service", "isCorrect": false},
+        {"id": "D", "text": "A machine learning training framework", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Apigee is Google Cloud's API management product handling proxies, quotas, security keys, and analytics.", "incorrect": "It manages APIs — it is not compute, storage, or ML tooling.", "examTip": "Apigee = API gateway + management + monetization.", "relatedTopics": ["Apigee", "API management"]},
+      "metadata": {"examObjective": "Identify Google Cloud application modernization products", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-083",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a monolithic application's key weakness in modern software delivery?",
+      "options": [
+        {"id": "A", "text": "All components are tightly coupled, so a change to one part requires rebuilding and redeploying the whole system", "isCorrect": true},
+        {"id": "B", "text": "It cannot handle any user traffic", "isCorrect": false},
+        {"id": "C", "text": "It only runs on mainframe computers", "isCorrect": false},
+        {"id": "D", "text": "It is too cheap to operate", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Tight coupling in monoliths slows releases, scales poorly per component, and increases blast radius of failures.", "incorrect": "Monoliths can handle traffic — the issue is agility and scaling granularity.", "examTip": "Coupling is the enemy of agility — microservices decouple.", "relatedTopics": ["Monoliths", "Microservices"]},
+      "metadata": {"examObjective": "Explain limitations of legacy architectures", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-084",
+      "type": "ordering",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the levels of compute abstraction from MOST customer management responsibility to LEAST.",
+      "orderItems": [
+        {"id": "o1", "text": "On-premises physical servers", "correctPosition": 1},
+        {"id": "o2", "text": "Compute Engine virtual machines (IaaS)", "correctPosition": 2},
+        {"id": "o3", "text": "Google Kubernetes Engine (managed containers)", "correctPosition": 3},
+        {"id": "o4", "text": "Cloud Run (serverless containers)", "correctPosition": 4}
+      ],
+      "options": [],
+      "explanation": {"correct": "On-prem > IaaS VMs > managed Kubernetes > serverless, in customer management burden.", "incorrect": "Serverless removes the most responsibility; on-prem has the most.", "examTip": "The more managed the service, the less you operate.", "relatedTopics": ["Compute abstraction", "Service models"]},
+      "metadata": {"examObjective": "Order compute services by management responsibility", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-085",
+      "type": "yes-no-statements",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Indicate whether each statement about containers and Kubernetes is correct (Yes) or incorrect (No).",
+      "statements": [
+        {"id": "s1", "text": "Kubernetes automates deployment, scaling, and management of containerized applications.", "isCorrectYes": true},
+        {"id": "s2", "text": "Containers include a full guest operating system like VMs do.", "isCorrectYes": false},
+        {"id": "s3", "text": "GKE eliminates the need to manage the Kubernetes control plane.", "isCorrectYes": true}
+      ],
+      "options": [],
+      "explanation": {"correct": "Kubernetes orchestrates containers; containers share the host OS kernel, unlike VMs; GKE manages the control plane.", "incorrect": "VMs virtualize hardware with guest OSes; containers virtualize the OS only.", "examTip": "Containers are lighter and faster to start than VMs.", "relatedTopics": ["Containers", "Kubernetes", "GKE"]},
+      "metadata": {"examObjective": "Explain container and orchestration concepts", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-086",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A team has containerized its application but lacks staff to manage Kubernetes clusters 24/7. Which option runs the containers with the least operational overhead?",
+      "options": [
+        {"id": "A", "text": "Cloud Run", "isCorrect": true},
+        {"id": "B", "text": "Self-managed Kubernetes on Compute Engine VMs", "isCorrect": false},
+        {"id": "C", "text": "Bare-metal servers on-premises", "isCorrect": false},
+        {"id": "D", "text": "Managed instance groups of custom VMs", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud Run runs containers serverlessly — no cluster, nodes, or control plane to manage, scales to zero.", "incorrect": "Self-managed Kubernetes or bare metal maximizes, not minimizes, operations burden.", "examTip": "No ops team + containers = Cloud Run.", "relatedTopics": ["Cloud Run", "Serverless"]},
+      "metadata": {"examObjective": "Select compute services based on operational constraints", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-087",
+      "type": "dropdown-select",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Select the best-fit compute option for each requirement.",
+      "dropdowns": [
+        {"id": "d1", "prompt": "Lift-and-shift a legacy Windows app needing full OS control:", "options": ["Compute Engine", "Cloud Run", "App Engine"], "correctAnswer": "Compute Engine"},
+        {"id": "d2", "prompt": "Stateless API that must scale to zero when idle:", "options": ["Compute Engine", "Cloud Run", "Cloud SQL"], "correctAnswer": "Cloud Run"},
+        {"id": "d3", "prompt": "Long-running background container orchestration with advanced rollout controls:", "options": ["GKE", "Cloud Functions", "Cloud Storage"], "correctAnswer": "GKE"}
+      ],
+      "options": [],
+      "explanation": {"correct": "OS control → Compute Engine; scale-to-zero stateless → Cloud Run; orchestrated containers → GKE.", "incorrect": "Match requirements (OS control, scale-to-zero, orchestration) to service strengths.", "examTip": "Requirement keywords map directly to the right compute service.", "relatedTopics": ["Compute Engine", "Cloud Run", "GKE"]},
+      "metadata": {"examObjective": "Match compute services to requirements", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-088",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A media company streams live events globally. During a championship final, traffic spikes 50x normal for two hours, then drops sharply. Cost matters during off-peak, but buffering during the event is unacceptable.",
+      "questionText": "Which architecture best meets these demands?",
+      "options": [
+        {"id": "A", "text": "Cloud CDN plus a globally load-balanced, autoscaled backend on managed compute with multi-zone redundancy", "isCorrect": true},
+        {"id": "B", "text": "Two fixed on-premises servers sized for average load", "isCorrect": false},
+        {"id": "C", "text": "A single large VM in one zone with maximum preemptible capacity", "isCorrect": false},
+        {"id": "D", "text": "Serve all video directly from Cloud SQL", "isCorrect": false}
+      ],
+      "explanation": {"correct": "CDN absorbs global demand at the edge while autoscaling managed compute handles the burst with zone redundancy.", "incorrect": "Fixed capacity fails at 50x spikes; a single zone creates a failure bottleneck.", "examTip": "CDN + global LB + autoscaling is the standard spiky-traffic answer.", "relatedTopics": ["Cloud CDN", "Load balancing", "Autoscaling"]},
+      "metadata": {"examObjective": "Design infrastructure for variable global traffic", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-089",
+      "type": "multiple-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which are benefits of managed instance groups (MIGs) on Compute Engine? (Select two.)",
+      "options": [
+        {"id": "A", "text": "Automated healing — unhealthy VMs are automatically recreated", "isCorrect": true},
+        {"id": "B", "text": "Manual-only scaling with no automation", "isCorrect": false},
+        {"id": "C", "text": "Autoscaling based on load metrics", "isCorrect": true},
+        {"id": "D", "text": "Guaranteed immunity to all zone outages with a single instance", "isCorrect": false}
+      ],
+      "explanation": {"correct": "MIGs provide autoscaling, autohealing, rolling updates, and multi-zone distribution.", "incorrect": "A single instance cannot survive zone outages regardless of tooling.", "examTip": "Regional MIG = VMs distributed across zones for HA.", "relatedTopics": ["MIGs", "Compute Engine", "High availability"]},
+      "metadata": {"examObjective": "Explain VM scalability and availability features", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-090",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is infrastructure as code (IaC)?",
+      "options": [
+        {"id": "A", "text": "Managing infrastructure through machine-readable definition files, enabling repeatable, automated provisioning", "isCorrect": true},
+        {"id": "B", "text": "Writing application source code", "isCorrect": false},
+        {"id": "C", "text": "Documenting network diagrams by hand", "isCorrect": false},
+        {"id": "D", "text": "Manually clicking through cloud consoles", "isCorrect": false}
+      ],
+      "explanation": {"correct": "IaC (e.g., Terraform, Google Cloud's Config Connector) codifies infrastructure for consistency, review, and automation.", "incorrect": "Manual console work is the opposite of IaC.", "examTip": "IaC = version-controlled, repeatable infrastructure.", "relatedTopics": ["IaC", "DevOps", "Terraform"]},
+      "metadata": {"examObjective": "Describe infrastructure modernization practices", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-091",
+      "type": "drag-drop",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each networking product to the function it performs.",
+      "dragCategories": [
+        {"id": "cat1", "name": "Connects on-premises network to VPC privately", "acceptsItemIds": ["item2"]},
+        {"id": "cat2", "name": "Distributes user traffic across multiple backends worldwide", "acceptsItemIds": ["item1"]},
+        {"id": "cat3", "name": "Caches content at edge locations near users", "acceptsItemIds": ["item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Cloud Load Balancing"},
+        {"id": "item2", "text": "Cloud Interconnect / VPN"},
+        {"id": "item3", "text": "Cloud CDN"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Interconnect/VPN for hybrid connectivity, Load Balancing for traffic distribution, CDN for edge caching.", "incorrect": "Each product has a distinct networking role.", "examTip": "Hybrid connectivity = Interconnect (dedicated) or VPN (encrypted over internet).", "relatedTopics": ["Networking", "Hybrid connectivity"]},
+      "metadata": {"examObjective": "Match networking products to functions", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-092",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What does CI/CD stand for?",
+      "options": [
+        {"id": "A", "text": "Continuous Integration / Continuous Delivery (or Deployment) — automating build, test, and release of software", "isCorrect": true},
+        {"id": "B", "text": "Central Inventory / Cloud Distribution", "isCorrect": false},
+        {"id": "C", "text": "Cloud Infrastructure / Capacity Design", "isCorrect": false},
+        {"id": "D", "text": "Compute Instance / Container Deployment", "isCorrect": false}
+      ],
+      "explanation": {"correct": "CI/CD automates integration, testing, and delivery, enabling frequent, reliable releases.", "incorrect": "It is a software delivery practice, not inventory or capacity planning.", "examTip": "Cloud Build is Google Cloud's CI/CD service.", "relatedTopics": ["CI/CD", "Cloud Build", "DevOps"]},
+      "metadata": {"examObjective": "Describe modern software delivery practices", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-093",
+      "type": "yes-no-statements",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Indicate whether each statement about application modernization is correct (Yes) or incorrect (No).",
+      "statements": [
+        {"id": "s1", "text": "Lift-and-shift (rehosting) is usually the fastest migration approach but yields the fewest cloud-native benefits.", "isCorrectYes": true},
+        {"id": "s2", "text": "Microservices guarantee that application failures can never occur.", "isCorrectYes": false},
+        {"id": "s3", "text": "Managed services reduce the operational burden on IT teams.", "isCorrectYes": true}
+      ],
+      "options": [],
+      "explanation": {"correct": "Rehosting is fast but low-benefit; microservices improve isolation, not immunity to failure; managed services cut ops toil.", "incorrect": "No architecture eliminates failures — microservices just contain them better.", "examTip": "Trade speed of migration against depth of transformation benefit.", "relatedTopics": ["Migration strategies", "Microservices"]},
+      "metadata": {"examObjective": "Apply application modernization concepts", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-094",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Cloud NAT used for?",
+      "options": [
+        {"id": "A", "text": "Allowing private instances without external IPs to access the internet for updates and patches", "isCorrect": true},
+        {"id": "B", "text": "Translating user interfaces into other languages", "isCorrect": false},
+        {"id": "C", "text": "Caching database queries", "isCorrect": false},
+        {"id": "D", "text": "Load balancing UDP traffic", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud NAT provides outbound internet access for private VM instances while keeping them unreachable from outside.", "incorrect": "It is network address translation, not localization or caching.", "examTip": "Egress-only internet for private resources = Cloud NAT.", "relatedTopics": ["Cloud NAT", "VPC", "Network security"]},
+      "metadata": {"examObjective": "Identify Google Cloud networking services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-095",
+      "type": "multiple-choice",
+      "topicId": "modern-infra",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A bank needs to expose account APIs to partner fintech apps. Requirements: rate limiting per partner, API key management, usage analytics, and potential future monetization of premium APIs.",
+      "questionText": "Which product and features directly address these needs? (Select two.)",
+      "options": [
+        {"id": "A", "text": "Apigee with API keys and OAuth for partner authentication", "isCorrect": true},
+        {"id": "B", "text": "Apigee quota policies for rate limiting per partner", "isCorrect": true},
+        {"id": "C", "text": "Cloud Storage signed URLs as the API gateway", "isCorrect": false},
+        {"id": "D", "text": "Firewall rules alone for partner monetization", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Apigee provides the full API management lifecycle: security, quotas, analytics, and monetization.", "incorrect": "Signed URLs and firewall rules cannot manage partner API lifecycles.", "examTip": "Any question mentioning API monetization or partner rate limits → Apigee.", "relatedTopics": ["Apigee", "API management"]},
+      "metadata": {"examObjective": "Apply API management to business scenarios", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-096",
+      "type": "ordering",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the stages of a CI/CD pipeline from first to last.",
+      "orderItems": [
+        {"id": "o1", "text": "Deploy to production", "correctPosition": 5},
+        {"id": "o2", "text": "Developer commits code", "correctPosition": 1},
+        {"id": "o3", "text": "Build the application", "correctPosition": 2},
+        {"id": "o4", "text": "Run automated tests", "correctPosition": 3},
+        {"id": "o5", "text": "Deploy to staging environment", "correctPosition": 4}
+      ],
+      "options": [],
+      "explanation": {"correct": "Commit → build → test → staging → production.", "incorrect": "Tests run before staging, and staging before production.", "examTip": "Production deployment is always the final gate.", "relatedTopics": ["CI/CD", "DevOps"]},
+      "metadata": {"examObjective": "Describe CI/CD pipeline stages", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-097",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A startup wants to run a stateless web API in containers with pay-per-use billing and no idle cost. Which service fits best?",
+      "options": [
+        {"id": "A", "text": "Cloud Run", "isCorrect": true},
+        {"id": "B", "text": "Compute Engine with always-on VMs", "isCorrect": false},
+        {"id": "C", "text": "Cloud SQL", "isCorrect": false},
+        {"id": "D", "text": "Cloud Interconnect", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud Run bills per request and scales to zero, so an idle API costs nothing.", "incorrect": "Always-on VMs incur cost even when idle.", "examTip": "'Scale to zero' and 'pay per request' = Cloud Run.", "relatedTopics": ["Cloud Run", "Serverless"]},
+      "metadata": {"examObjective": "Match compute services to cost requirements", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-098",
+      "type": "dropdown-select",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Choose the correct product for each developer workflow task.",
+      "dropdowns": [
+        {"id": "d1", "prompt": "Store, manage, and deploy container images:", "options": ["Artifact Registry", "Cloud Storage", "Cloud DNS"], "correctAnswer": "Artifact Registry"},
+        {"id": "d2", "prompt": "Managed CI/CD to build, test, and deploy code:", "options": ["Cloud Build", "Cloud CDN", "Cloud NAT"], "correctAnswer": "Cloud Build"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Artifact Registry stores container artifacts; Cloud Build executes CI/CD pipelines.", "incorrect": "Cloud Storage holds objects generically; CDN and NAT are network services.", "examTip": "Artifact Registry = Docker images; Cloud Build = pipelines.", "relatedTopics": ["Artifact Registry", "Cloud Build", "DevOps"]},
+      "metadata": {"examObjective": "Identify developer productivity services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-099",
+      "type": "drag-drop",
+      "topicId": "modern-infra",
+      "difficulty": "hard",
+      "points": 1,
+      "questionText": "Drag each modernization approach to the situation where it is most appropriate.",
+      "dragCategories": [
+        {"id": "cat1", "name": "App works fine but hardware is end-of-life; minimal code changes allowed", "acceptsItemIds": ["item1"]},
+        {"id": "cat2", "name": "Legacy app needs managed database swap with modest code change", "acceptsItemIds": ["item2"]},
+        {"id": "cat3", "name": "App must scale globally and release daily; full rebuild justified", "acceptsItemIds": ["item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Rehost (lift-and-shift)"},
+        {"id": "item2", "text": "Replatform (lift-and-optimize)"},
+        {"id": "item3", "text": "Refactor / re-architect"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Constraints on change and time determine the R strategy: rehost fastest, refactor most transformative.", "incorrect": "A full rebuild is justified only by strong business drivers.", "examTip": "Least change that meets the business goal wins.", "relatedTopics": ["Migration strategies"]},
+      "metadata": {"examObjective": "Select migration strategies for given constraints", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-100",
+      "type": "single-choice",
+      "topicId": "modern-infra",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is the main purpose of autoscaling?",
+      "options": [
+        {"id": "A", "text": "Automatically adjusting the number of instances or resources to match current demand, optimizing performance and cost", "isCorrect": true},
+        {"id": "B", "text": "Permanently fixing capacity at peak levels", "isCorrect": false},
+        {"id": "C", "text": "Manually approving each scaling event", "isCorrect": false},
+        {"id": "D", "text": "Encrypting traffic between zones", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Autoscaling adds capacity at peak and removes it when demand drops, balancing performance with cost.", "incorrect": "Fixed peak capacity wastes money; manual approval defeats the purpose.", "examTip": "Autoscaling pairs with load balancing for resilient elastic apps.", "relatedTopics": ["Autoscaling", "Elasticity"]},
+      "metadata": {"examObjective": "Explain scaling concepts", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-101",
+      "type": "yes-no-statements",
+      "topicId": "security-ops",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "Indicate whether each statement about the shared responsibility model is correct (Yes) or incorrect (No).",
+      "statements": [
+        {"id": "s1", "text": "Google secures the underlying cloud infrastructure; customers secure their data, identities, and configurations.", "isCorrectYes": true},
+        {"id": "s2", "text": "In the shared responsibility model, Google is responsible for customer data classification.", "isCorrectYes": false},
+        {"id": "s3", "text": "Responsibility shifts more to the customer for IaaS than for SaaS.", "isCorrectYes": true}
+      ],
+      "options": [],
+      "explanation": {"correct": "Google: hardware, network, hypervisor. Customer: data, IAM, configs — more of it with IaaS.", "incorrect": "Data classification is always the customer's responsibility.", "examTip": "Shared responsibility = Google secures the cloud; you secure what you put IN the cloud.", "relatedTopics": ["Shared responsibility model", "Security"]},
+      "metadata": {"examObjective": "Explain the shared responsibility model", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-102",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is Cloud IAM?",
+      "options": [
+        {"id": "A", "text": "Google Cloud's identity and access management service that controls WHO can do WHAT on WHICH resources", "isCorrect": true},
+        {"id": "B", "text": "A network load balancer", "isCorrect": false},
+        {"id": "C", "text": "A data warehouse service", "isCorrect": false},
+        {"id": "D", "text": "A container registry", "isCorrect": false}
+      ],
+      "explanation": {"correct": "IAM manages access via principals, roles (permissions collections), and allow policies on resources.", "incorrect": "IAM is an authorization framework, not compute or storage.", "examTip": "IAM = who × what × which resource; deny overrides allow.", "relatedTopics": ["Cloud IAM", "Access control"]},
+      "metadata": {"examObjective": "Identify Google Cloud security services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-103",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "In Cloud IAM, what is a role?",
+      "options": [
+        {"id": "A", "text": "A collection of permissions that can be granted to a principal", "isCorrect": true},
+        {"id": "B", "text": "A physical server in a data center", "isCorrect": false},
+        {"id": "C", "text": "A billing account type", "isCorrect": false},
+        {"id": "D", "text": "A type of firewall", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Roles bundle permissions (e.g., roles/storage.objectViewer) granted to users, groups, or service accounts.", "incorrect": "Roles are logical permission collections, not hardware.", "examTip": "Basic, predefined, and custom roles exist — least privilege applies.", "relatedTopics": ["IAM roles", "Least privilege"]},
+      "metadata": {"examObjective": "Explain IAM concepts", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-104",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is a service account?",
+      "options": [
+        {"id": "A", "text": "A special account used by applications or VMs to authenticate to Google Cloud APIs, rather than by human users", "isCorrect": true},
+        {"id": "B", "text": "A customer support account", "isCorrect": false},
+        {"id": "C", "text": "A billing-only account", "isCorrect": false},
+        {"id": "D", "text": "A shared human login for the ops team", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Service accounts represent non-human identities (VMs, apps, functions) for secure API authentication.", "incorrect": "They are machine identities — never shared human logins.", "examTip": "Apps and VMs use service accounts; humans use their own identities.", "relatedTopics": ["Service accounts", "IAM"]},
+      "metadata": {"examObjective": "Explain IAM concepts", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-105",
+      "type": "multiple-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which are core principles of a zero-trust security model like BeyondCorp? (Select two.)",
+      "options": [
+        {"id": "A", "text": "Never trust, always verify — every request is authenticated and authorized regardless of network location", "isCorrect": true},
+        {"id": "B", "text": "The internal corporate network is inherently trustworthy", "isCorrect": false},
+        {"id": "C", "text": "Access is granted based on device state, user identity, and context", "isCorrect": true},
+        {"id": "D", "text": "VPN access grants unlimited trust permanently", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Zero trust removes implicit network trust and evaluates identity + device + context per request.", "incorrect": "Perimeter-based trust is exactly what zero trust rejects.", "examTip": "BeyondCorp is Google's zero-trust implementation — context-aware access.", "relatedTopics": ["Zero trust", "BeyondCorp", "Cloud Identity"]},
+      "metadata": {"examObjective": "Describe zero-trust security concepts", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-106",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Cloud Identity?",
+      "options": [
+        {"id": "A", "text": "Google's identity-as-a-service for managing users, groups, and single sign-on across cloud and on-premises apps", "isCorrect": true},
+        {"id": "B", "text": "A virtual network", "isCorrect": false},
+        {"id": "C", "text": "A database backup tool", "isCorrect": false},
+        {"id": "D", "text": "A CDN edge cache", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud Identity provides unified user management, SSO, MFA, and endpoint management independent of Workspace.", "incorrect": "It is an IdP (identity provider), not networking or storage.", "examTip": "Cloud Identity = SSO + MFA + user lifecycle management.", "relatedTopics": ["Cloud Identity", "SSO", "MFA"]},
+      "metadata": {"examObjective": "Identify Google Cloud identity services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-107",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Cloud Armor?",
+      "options": [
+        {"id": "A", "text": "A network security service providing DDoS defense and web application firewall (WAF) policies for HTTP(S) workloads", "isCorrect": true},
+        {"id": "B", "text": "A data encryption key manager only", "isCorrect": false},
+        {"id": "C", "text": "An identity management console", "isCorrect": false},
+        {"id": "D", "text": "A log analysis dashboard", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud Armor protects applications at the edge: WAF rules, DDoS absorption, geo-based access control.", "incorrect": "While it integrates with load balancing, it is not encryption or IAM.", "examTip": "Cloud Armor = WAF + DDoS protection at Google's edge.", "relatedTopics": ["Cloud Armor", "DDoS protection", "WAF"]},
+      "metadata": {"examObjective": "Identify Google Cloud network security services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-108",
+      "type": "drag-drop",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Drag each security capability to the product that provides it.",
+      "dragCategories": [
+        {"id": "cat1", "name": "DDoS protection and WAF rules for web apps", "acceptsItemIds": ["item2"]},
+        {"id": "cat2", "name": "Centralized user and SSO management", "acceptsItemIds": ["item1"]},
+        {"id": "cat3", "name": "Who can do what on which cloud resources", "acceptsItemIds": ["item3"]}
+      ],
+      "dragItems": [
+        {"id": "item1", "text": "Cloud Identity"},
+        {"id": "item2", "text": "Cloud Armor"},
+        {"id": "item3", "text": "Cloud IAM"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Cloud Identity for users/SSO, Cloud Armor for app-layer defense, IAM for authorization.", "incorrect": "Each security product covers a distinct layer: identity, network, authorization.", "examTip": "Map product to security layer — this mapping is frequently tested.", "relatedTopics": ["Security products", "IAM", "Cloud Identity", "Cloud Armor"]},
+      "metadata": {"examObjective": "Match security products to capabilities", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-109",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does Google's default encryption model provide?",
+      "options": [
+        {"id": "A", "text": "Encryption at rest and in transit for customer data by default, with Google-managed keys at no additional cost", "isCorrect": true},
+        {"id": "B", "text": "No encryption unless purchased separately", "isCorrect": false},
+        {"id": "C", "text": "Encryption only for government customers", "isCorrect": false},
+        {"id": "D", "text": "Encryption only when users enable it per file", "isCorrect": false}
+      ],
+      "explanation": {"correct": "All data is encrypted at rest and in transit by default; CMEK/CSEK options add customer control.", "incorrect": "Encryption is default and automatic for all customers.", "examTip": "Default encryption is free; Cloud KMS adds customer-managed key control.", "relatedTopics": ["Encryption", "Cloud KMS"]},
+      "metadata": {"examObjective": "Describe Google Cloud data protection", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-110",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Cloud KMS used for?",
+      "options": [
+        {"id": "A", "text": "Managing cryptographic keys for encrypting data, including customer-managed encryption keys (CMEK)", "isCorrect": true},
+        {"id": "B", "text": "Managing user passwords", "isCorrect": false},
+        {"id": "C", "text": "Monitoring VM uptime", "isCorrect": false},
+        {"id": "D", "text": "Serving static web content", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud KMS centrally manages key creation, rotation, and use for encrypting cloud data.", "incorrect": "KMS manages keys, not identities or monitoring.", "examTip": "CMEK via KMS = customer control over encryption keys.", "relatedTopics": ["Cloud KMS", "Encryption"]},
+      "metadata": {"examObjective": "Identify Google Cloud data protection services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-111",
+      "type": "multiple-choice",
+      "topicId": "security-ops",
+      "difficulty": "hard",
+      "points": 1,
+      "scenarioText": "A security team needs to detect and respond to threats across their GCP environment. They require: aggregated security logs, detection of misconfigurations and anomalies, and investigation of incidents across cloud and on-premises sources.",
+      "questionText": "Which Google Cloud services address these needs? (Select two.)",
+      "options": [
+        {"id": "A", "text": "Security Command Center for asset inventory, misconfiguration detection, and vulnerability findings", "isCorrect": true},
+        {"id": "B", "text": "Chronicle for cloud-scale security analytics, log ingestion, and threat investigation", "isCorrect": true},
+        {"id": "C", "text": "Cloud CDN for log correlation", "isCorrect": false},
+        {"id": "D", "text": "Cloud Storage classes for incident response", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Security Command Center provides native posture management; Chronicle is the cloud-native SIEM for detection and investigation.", "incorrect": "CDN and storage classes are not security analytics tools.", "examTip": "SCC = posture/misconfigurations; Chronicle = SIEM/detection/investigation.", "relatedTopics": ["Security Command Center", "Chronicle", "SIEM"]},
+      "metadata": {"examObjective": "Apply cloud security and operations services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-112",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is Security Command Center (SCC)?",
+      "options": [
+        {"id": "A", "text": "Google Cloud's centralized security and risk management platform providing asset visibility, threat detection, and misconfiguration findings", "isCorrect": true},
+        {"id": "B", "text": "A CI/CD pipeline tool", "isCorrect": false},
+        {"id": "C", "text": "An object storage browser", "isCorrect": false},
+        {"id": "D", "text": "A Kubernetes cluster manager", "isCorrect": false}
+      ],
+      "explanation": {"correct": "SCC is the security posture hub: inventory, vulnerabilities, misconfigurations, and threats in one place.", "incorrect": "It is a security management plane, not a delivery or storage tool.", "examTip": "Think 'single pane of glass for cloud security posture' = SCC.", "relatedTopics": ["Security Command Center"]},
+      "metadata": {"examObjective": "Identify Google Cloud security services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-113",
+      "type": "yes-no-statements",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Indicate whether each statement about Google Cloud operations tooling is correct (Yes) or incorrect (No).",
+      "statements": [
+        {"id": "s1", "text": "Cloud Monitoring collects metrics, dashboards, and alerting for resources and applications.", "isCorrectYes": true},
+        {"id": "s2", "text": "Cloud Logging is used primarily for deploying container images.", "isCorrectYes": false},
+        {"id": "s3", "text": "Cloud Trace helps analyze latency in distributed applications.", "isCorrectYes": true}
+      ],
+      "options": [],
+      "explanation": {"correct": "Monitoring = metrics/alerts; Logging = log ingestion/analysis; Trace = distributed latency debugging.", "incorrect": "Logging stores and analyzes logs — deployment is Artifact Registry/Cloud Build territory.", "examTip": "Ops suite: Monitoring, Logging, Trace, Debugger, Profiler.", "relatedTopics": ["Cloud Operations Suite"]},
+      "metadata": {"examObjective": "Identify Google Cloud operations services", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-114",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "A DevOps engineer wants to visualize VM CPU utilization, set alerts when thresholds are exceeded, and create dashboards. Which product should they use?",
+      "options": [
+        {"id": "A", "text": "Cloud Monitoring", "isCorrect": true},
+        {"id": "B", "text": "Cloud Armor", "isCorrect": false},
+        {"id": "C", "text": "Cloud IAM", "isCorrect": false},
+        {"id": "D", "text": "Cloud Spanner", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Cloud Monitoring provides metrics collection, dashboards, and alerting policies.", "incorrect": "Armor secures apps, IAM controls access — neither monitors metrics.", "examTip": "Metrics + dashboards + alerts = Cloud Monitoring.", "relatedTopics": ["Cloud Monitoring", "Operations"]},
+      "metadata": {"examObjective": "Apply operations services to monitoring needs", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-115",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What does an SLO represent in Site Reliability Engineering (SRE)?",
+      "options": [
+        {"id": "A", "text": "A target level of reliability for a service, measured by indicators such as availability or latency", "isCorrect": true},
+        {"id": "B", "text": "A legal contract with penalties", "isCorrect": false},
+        {"id": "C", "text": "A hardware procurement checklist", "isCorrect": false},
+        {"id": "D", "text": "A marketing performance metric", "isCorrect": false}
+      ],
+      "explanation": {"correct": "An SLO is an internal reliability target (e.g., 99.9% availability over 30 days) defined from SLIs.", "incorrect": "An SLA is the contractual version with penalties; SLOs are internal targets.", "examTip": "SLI = measurement; SLO = target; SLA = contract with consequences.", "relatedTopics": ["SRE", "SLO", "SLI", "SLA"]},
+      "metadata": {"examObjective": "Describe SRE principles", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-116",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "What is an error budget in SRE?",
+      "options": [
+        {"id": "A", "text": "The tolerated amount of unreliability (100% minus the SLO) that can be spent on releases and experiments", "isCorrect": true},
+        {"id": "B", "text": "A financial budget for hardware repairs", "isCorrect": false},
+        {"id": "C", "text": "A log storage quota", "isCorrect": false},
+        {"id": "D", "text": "The number of allowed firewall rules", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Error budget = SLO headroom; if 99.9% availability, the 0.1% downtime is the budget for change and risk.", "incorrect": "It is a reliability concept, not money or quotas.", "examTip": "Error budget balances innovation speed against stability.", "relatedTopics": ["SRE", "Error budget"]},
+      "metadata": {"examObjective": "Describe SRE principles", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-117",
+      "type": "dropdown-select",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Choose the correct operations product for each task.",
+      "dropdowns": [
+        {"id": "d1", "prompt": "Centralize, search, and analyze application and audit logs:", "options": ["Cloud Logging", "Cloud Monitoring", "Cloud Trace"], "correctAnswer": "Cloud Logging"},
+        {"id": "d2", "prompt": "Track request latency across microservices:", "options": ["Cloud Logging", "Cloud Monitoring", "Cloud Trace"], "correctAnswer": "Cloud Trace"},
+        {"id": "d3", "prompt": "Alert when error rate exceeds 5%:", "options": ["Cloud Logging", "Cloud Monitoring", "Cloud Trace"], "correctAnswer": "Cloud Monitoring"}
+      ],
+      "options": [],
+      "explanation": {"correct": "Logging for logs, Trace for distributed latency, Monitoring for metrics and alerting.", "incorrect": "Each ops product has a focused purpose — don't mix them up.", "examTip": "Alerting on metrics = Monitoring; deep request analysis = Trace.", "relatedTopics": ["Cloud Operations Suite"]},
+      "metadata": {"examObjective": "Differentiate operations products", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-118",
+      "type": "multiple-choice",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Which practices are part of FinOps on Google Cloud? (Select two.)",
+      "options": [
+        {"id": "A", "text": "Using Cloud Billing reports and budgets to track and forecast spend", "isCorrect": true},
+        {"id": "B", "text": "Setting budget alerts to notify teams before overspending", "isCorrect": true},
+        {"id": "C", "text": "Provisioning maximum capacity at all times to avoid throttling", "isCorrect": false},
+        {"id": "D", "text": "Ignoring cost data until the annual audit", "isCorrect": false}
+      ],
+      "explanation": {"correct": "FinOps brings financial accountability to cloud: visibility, budgets, forecasts, and optimization.", "incorrect": "Over-provisioning and ignoring costs are anti-patterns.", "examTip": "Cloud Billing + Budgets + Recommender (right-sizing) = FinOps toolkit.", "relatedTopics": ["FinOps", "Cloud Billing", "Budgets"]},
+      "metadata": {"examObjective": "Describe cloud cost management practices", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-119",
+      "type": "single-choice",
+      "topicId": "security-ops",
+      "difficulty": "easy",
+      "points": 1,
+      "questionText": "What is a common first step to reduce unexpected cloud costs?",
+      "options": [
+        {"id": "A", "text": "Set budgets with alert thresholds and review Cloud Billing reports regularly", "isCorrect": true},
+        {"id": "B", "text": "Delete all logs", "isCorrect": false},
+        {"id": "C", "text": "Disable monitoring to save money", "isCorrect": false},
+        {"id": "D", "text": "Add more VMs so costs are easier to track", "isCorrect": false}
+      ],
+      "explanation": {"correct": "Budgets with alerts create visibility and notification before overspend happens.", "incorrect": "Deleting logs or disabling monitoring increases operational risk without real savings.", "examTip": "You can't optimize what you can't see — start with billing visibility.", "relatedTopics": ["FinOps", "Cloud Billing"]},
+      "metadata": {"examObjective": "Describe cloud cost management practices", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    },
+    {
+      "id": "gcdl-120",
+      "type": "ordering",
+      "topicId": "security-ops",
+      "difficulty": "medium",
+      "points": 1,
+      "questionText": "Order the incident response lifecycle steps as commonly practiced in cloud operations.",
+      "orderItems": [
+        {"id": "o1", "text": "Detect the incident via monitoring or alerting", "correctPosition": 1},
+        {"id": "o2", "text": "Respond and mitigate to reduce impact", "correctPosition": 2},
+        {"id": "o3", "text": "Investigate root cause using logs and traces", "correctPosition": 3},
+        {"id": "o4", "text": "Document and implement preventive fixes", "correctPosition": 4}
+      ],
+      "options": [],
+      "explanation": {"correct": "Detect → mitigate → investigate → prevent is the standard loop.", "incorrect": "Investigation usually follows mitigation; prevention closes the loop last.", "examTip": "Monitoring/alerting feeds detection — close the loop with prevention.", "relatedTopics": ["Incident response", "Operations"]},
+      "metadata": {"examObjective": "Describe cloud operations practices", "references": ["https://cloud.google.com/learn/certification/cloud-digital-leader"], "lastUpdated": "2024-01-15"}
+    }
+  ]
+}
